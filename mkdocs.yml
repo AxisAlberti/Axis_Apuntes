@@ -1,64 +1,221 @@
-site_name: Apuntes FP - Informatica
-theme:
-  name: material
-  language: es
-  features:
-  - navigation.tabs
-  - navigation.sections
-  - navigation.expand
-  - navigation.indexes
-  - navigation.top
+site_name: R Z O
+site_url: https://revilofe.github.io
+repo_url: https://github.com/revilofe/revilofe.github.io
+repo_name: GitHub
+edit_uri: edit/main/docs/
+site_author: Eduardo Fdez
 nav:
 - Principal: index.md
 - Montaje y Mantenimiento:
   - section1/index.md
-  - Unidad 00:
+  - Unidad 00 - Sistemas de numeracion:
     - section1/u00/index.md
-    - Teoria U00: section1/u00/teoria/MM-U00.1.-Sistemas-de-numeracion.md
-  - Unidad 01:
+    - MM U00.1. Sistemas de numeracion: section1/u00/teoria/MM-U00.1.-Sistemas-de-numeracion.md
+    - MM U00. Practica001: section1/u00/practica/MM-U00.-Practica001.md
+    - MM U00.1. Tema: section1/u00/gift/MM-U00.1.-Tema.gift
+  - Unidad 01 - Introduccion a los sistemas informaticos:
     - section1/u01/index.md
-    - Teoria U01: section1/u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos.md
-  - Unidad 02:
+    - MM U01.1. Introduccion a los sistemas informaticos: section1/u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos.md
+    - MM U01. Practica001: section1/u01/practica/MM-U01.-Practica001.md
+    - MM U01.1. Tema: section1/u01/gift/MM-U01.1.-Tema.gift
+  - Unidad 02 - Componentes internos del PC:
     - section1/u02/index.md
-    - Teoria U02: section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC.md
-  - Unidad 03:
+    - MM U02.1. Componentes internos del PC: section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC.md
+    - MM U02. Practica001: section1/u02/practica/MM-U02.-Practica001.md
+    - MM U02.1. Tema: section1/u02/gift/MM-U02.1.-Tema.gift
+  - Unidad 03 - Chipset:
     - section1/u03/index.md
-    - Teoria U03: section1/u03/teoria/MM-U03.1.-Chipset.md
-  - Unidad 04:
+    - MM U03.1. Chipset: section1/u03/teoria/MM-U03.1.-Chipset.md
+    - MM U03. Practica001: section1/u03/practica/MM-U03.-Practica001.md
+    - MM U03.1. Tema: section1/u03/gift/MM-U03.1.-Tema.gift
+  - Unidad 04 - Conexiones externas:
     - section1/u04/index.md
-    - Teoria U04: section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
-  - Unidad 05:
+    - MM U04.1. Conexiones externas: section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
+    - MM U04. Practica001: section1/u04/practica/MM-U04.-Practica001.md
+    - MM U04.1. Tema: section1/u04/gift/MM-U04.1.-Tema.gift
+  - Unidad 05 - Memoria RAM:
     - section1/u05/index.md
-    - Teoria U05: section1/u05/teoria/MM-U05.1.-Memoria-RAM.md
-  - Unidad 06:
+    - MM U05.1. Memoria RAM: section1/u05/teoria/MM-U05.1.-Memoria-RAM.md
+    - MM U05. Practica001: section1/u05/practica/MM-U05.-Practica001.md
+    - MM U05.1. Tema: section1/u05/gift/MM-U05.1.-Tema.gift
+  - Unidad 06 - CMOS y UEFI:
     - section1/u06/index.md
-    - Teoria U06: section1/u06/teoria/MM-U06.1.-CMOS-y-UEFI.md
-  - Unidad 07:
+    - MM U06.1. CMOS y UEFI: section1/u06/teoria/MM-U06.1.-CMOS-y-UEFI.md
+    - MM U06. Practica001: section1/u06/practica/MM-U06.-Practica001.md
+    - MM U06.1. Tema: section1/u06/gift/MM-U06.1.-Tema.gift
+  - Unidad 07 - Almacenamiento:
     - section1/u07/index.md
-    - Teoria U07: section1/u07/teoria/MM-U07.1.-Almacenamiento.md
-  - Unidad 08:
+    - MM U07.1. Almacenamiento: section1/u07/teoria/MM-U07.1.-Almacenamiento.md
+    - MM U07. Practica001: section1/u07/practica/MM-U07.-Practica001.md
+    - MM U07.1. Tema: section1/u07/gift/MM-U07.1.-Tema.gift
+  - Unidad 08 - Microprocesadores:
     - section1/u08/index.md
-    - Teoria U08: section1/u08/teoria/MM-U08.1.-Microprocesadores.md
-  - Unidad 09:
+    - MM U08.1. Microprocesadores: section1/u08/teoria/MM-U08.1.-Microprocesadores.md
+    - MM U08. Practica001: section1/u08/practica/MM-U08.-Practica001.md
+    - MM U08.1. Tema: section1/u08/gift/MM-U08.1.-Tema.gift
+  - Unidad 09 - Arquitecturas de procesadores:
     - section1/u09/index.md
-    - Teoria U09: section1/u09/teoria/MM-U09.1.-Arquitecturas-de-procesadores.md
-  - Unidad 10:
+    - MM U09.1. Arquitecturas de procesadores: section1/u09/teoria/MM-U09.1.-Arquitecturas-de-procesadores.md
+    - MM U09. Practica001: section1/u09/practica/MM-U09.-Practica001.md
+    - MM U09.1. Tema: section1/u09/gift/MM-U09.1.-Tema.gift
+  - Unidad 10 - Procesos e hilos:
     - section1/u10/index.md
-    - Teoria U10: section1/u10/teoria/MM-U10.1.-Procesos-e-hilos.md
-  - Unidad 11:
+    - MM U10.1. Procesos e hilos: section1/u10/teoria/MM-U10.1.-Procesos-e-hilos.md
+    - MM U10. Practica001: section1/u10/practica/MM-U10.-Practica001.md
+    - MM U10.1. Tema: section1/u10/gift/MM-U10.1.-Tema.gift
+  - Unidad 11 - Prevencion de riesgos laborales:
     - section1/u11/index.md
-    - Teoria U11: section1/u11/teoria/MM-U11.1.-Prevencion-de-riesgos-laborales.md
-  - Unidad 12:
+    - MM U11.1. Prevencion de riesgos laborales: section1/u11/teoria/MM-U11.1.-Prevencion-de-riesgos-laborales.md
+    - MM U11. Practica001: section1/u11/practica/MM-U11.-Practica001.md
+    - MM U11.1. Tema: section1/u11/gift/MM-U11.1.-Tema.gift
+  - Unidad 12 - Guia para elegir procesador:
     - section1/u12/index.md
-    - Teoria U12: section1/u12/teoria/MM-U12.1.-Guia-para-elegir-procesador.md
-  - Unidad 13:
+    - MM U12.1. Guia para elegir procesador: section1/u12/teoria/MM-U12.1.-Guia-para-elegir-procesador.md
+    - MM U12. Practica001: section1/u12/practica/MM-U12.-Practica001.md
+    - MM U12.1. Tema: section1/u12/gift/MM-U12.1.-Tema.gift
+  - Unidad 13 - Nomenclatura de procesadores:
     - section1/u13/index.md
-    - Teoria U13: section1/u13/teoria/MM-U13.1.-Nomenclatura-de-procesadores.md
+    - MM U13.1. Nomenclatura de procesadores: section1/u13/teoria/MM-U13.1.-Nomenclatura-de-procesadores.md
+    - MM U13. Practica001: section1/u13/practica/MM-U13.-Practica001.md
+    - MM U13.1. Tema: section1/u13/gift/MM-U13.1.-Tema.gift
 - Sistemas Informaticos:
   - section2/index.md
-  - Unidad 01:
+  - Unidad 01 - Redes:
     - section2/u01/index.md
-    - Teoria U01: section2/u01/teoria/SI-U01.1.-Redes.md
-  - Unidad 02:
+    - SI U01.1. Redes: section2/u01/teoria/SI-U01.1.-Redes.md
+    - SI U01. Practica001: section2/u01/practicas/SI-U01.-Practica001.md
+    - SI U01.1. Tema: section2/u01/gift/SI-U01.1.-Tema.gift
+  - Unidad 02 - Terminal:
     - section2/u02/index.md
-    - Teoria U02: section2/u02/teoria/SI-U02.1.-Terminal.md
+    - SI U02.1. Terminal: section2/u02/teoria/SI-U02.1.-Terminal.md
+    - SI U02. Practica001: section2/u02/practicas/SI-U02.-Practica001.md
+    - SI U02.1. Tema: section2/u02/gift/SI-U02.1.-Tema.gift
+- Blog: blog.md
+- Tags: tags.md
+- Acerca de: about.md
+theme:
+  name: material
+  language: es
+  logo: assets/ms-icon-144x144.png
+  favicon: assets/favicon.ico
+  font:
+    text: Roboto
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: white
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: black
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+  features:
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.sections
+  - navigation.tracking
+  - navigation.expand
+  - navigation.indexes
+  - navigation.top
+  - content.tooltips
+  - search.suggest
+  - search.highlight
+  - search.share
+  - content.code.annotate
+  icon:
+    tag:
+      etiqueta: octicons/tag-24
+extra_css:
+- stylesheets/extra.css
+markdown_extensions:
+- toc:
+    permalink: true
+    title: Contenidos
+- tables
+- meta
+- abbr
+- attr_list
+- md_in_html
+- admonition
+- def_list
+- footnotes
+- meta
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.superfences
+- pymdownx.snippets:
+    auto_append:
+    - includes/abbreviations.md
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.details
+- pymdownx.highlight
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tilde
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.blocks.caption
+plugins:
+- tags:
+    tags_file: tags.md
+- search:
+    lang: es
+- blogging:
+    locale: es
+    dirs:
+    - blog
+    size: 5
+    paging: true
+    show_total: true
+    theme:
+      name: card
+    features:
+      tags: {}
+extra:
+  social:
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/revilofe
+  - icon: fontawesome/solid/envelope
+    link: mailto:<efernandez@iesrafaelalberti.es>
+    name: e-mail
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/efoliver
+  version:
+    provider: mike
+  tags:
+    etiqueta: etiqueta
+  search:
+    language: es
+  analytics:
+    provider: google
+    property: G-GT5TGHD4YQ
+    feedback:
+      title: "\xBFTe ha sido \xFAtil la p\xE1gina?"
+      ratings:
+      - icon: material/emoticon-happy-outline
+        name: Me ha sido de utilidad.
+        data: 1
+        note: Gracias por tu feedback!
+      - icon: material/emoticon-sad-outline
+        name: "La p\xE1gina podr\xEDa mejorar."
+        data: 0
+        note: "Gracias por tu feedback! Ay\xFAdame a mejorarla usando este formulario.\
+          \ <a href=\"https://forms.gle/bBtzHfjb41unBb5o9\" target=_blank>feedback\
+          \ form</a>."
+  generator: false
+copyright: "2021-2022 Eduardo Fern\xE1ndez <a href=\"https://twitter.com/revilofe\"\
+  \ target=_blank>@revilofe</a> - Licencia CC BY-NC-SA"
