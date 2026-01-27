@@ -79,4 +79,4 @@ El módulo de **Sistemas Informáticos** está diseñado específicamente para e
 
 ---
 
-*Actualizado octubre 2025*
+*Actualizado Enero 2026*
