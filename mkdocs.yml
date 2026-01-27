@@ -1,9 +1,9 @@
-site_name: R Z O
-site_url: https://revilofe.github.io
-repo_url: https://github.com/revilofe/revilofe.github.io
+site_name: Axis_Apuntes
+site_url: https://axisalberti.github.io/Axis_Apuntes
+repo_url: https://github.com/AxisAlberti/Axis_Apuntes
 repo_name: GitHub
 edit_uri: edit/main/docs/
-site_author: Eduardo Fdez
+site_author: Jose Manuel Gonzalez Castillo
 nav:
 - Principal: index.md
 - Montaje y Mantenimiento:
@@ -186,14 +186,6 @@ plugins:
     features:
       tags: {}
 extra:
-  social:
-  - icon: fontawesome/brands/twitter
-    link: https://twitter.com/revilofe
-  - icon: fontawesome/solid/envelope
-    link: mailto:<efernandez@iesrafaelalberti.es>
-    name: e-mail
-  - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/in/efoliver
   version:
     provider: mike
   tags:
@@ -217,5 +209,4 @@ extra:
           \ <a href=\"https://forms.gle/bBtzHfjb41unBb5o9\" target=_blank>feedback\
           \ form</a>."
   generator: false
-copyright: "2021-2022 Eduardo Fern\xE1ndez <a href=\"https://twitter.com/revilofe\"\
-  \ target=_blank>@revilofe</a> - Licencia CC BY-NC-SA"
+copyright: "2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA"
