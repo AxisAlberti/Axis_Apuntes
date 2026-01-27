@@ -232,7 +232,7 @@ El rendimiento y la eficiencia de los sistemas informáticos modernos dependen d
 ---
 
 <div style="text-align: center;">
-  <img src="assets/memoria/piramide_memoria.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/memoria/piramide_memoria.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---

@@ -190,7 +190,7 @@ Un **HDD** almacena datos usando **magnetismo** sobre **platos** que **giran** a
 ---
 
 <div style="text-align: center;">
-  <img src="assets/almacenamiento/hdd_corte_fisico.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/almacenamiento/hdd_corte_fisico.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 
@@ -224,10 +224,10 @@ Un **HDD** almacena datos usando **magnetismo** sobre **platos** que **giran** a
 ---
 
 <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
-  <img src="assets/almacenamiento/magnetizacion-hdd-longitudinal.jpg"
+  <img src="../assets/almacenamiento/magnetizacion-hdd-longitudinal.jpg"
        alt="Magnetización longitudinal HDD"
        style="width:49%; height:auto; display:block;" loading="lazy">
-  <img src="assets/almacenamiento/magnetizacion-hdd-perpendicular.jpg"
+  <img src="../assets/almacenamiento/magnetizacion-hdd-perpendicular.jpg"
        alt="Magnetización perpendicular HDD"
        style="width:49%; height:auto; display:block;" loading="lazy">
 </div>
@@ -239,7 +239,7 @@ Un **HDD** almacena datos usando **magnetismo** sobre **platos** que **giran** a
 
 ---
 <div style="text-align: center;">
-  <img src="assets/almacenamiento/hdd_pistas_sectores_servo.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/almacenamiento/hdd_pistas_sectores_servo.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 ---
 
@@ -391,7 +391,7 @@ La memoria **flash NAND** empleada en las SSD almacena datos en matrices de celd
 ---
 
 <div style="text-align: center;">
-  <img src="assets/almacenamiento/slc.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/almacenamiento/slc.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -416,7 +416,7 @@ La escritura implica aplicar voltajes precisos para establecer la carga eléctri
 ---
 
 <div style="text-align: center;">
-  <img src="assets/almacenamiento/NAND-celda-acciones.svg.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/almacenamiento/NAND-celda-acciones.svg.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -504,7 +504,7 @@ En discos grabables (CD-R, DVD±R, HD DVD-R, BD-R), el láser modifica la capa p
 ---
 
 <div style="text-align: center;">
-  <img src="assets/almacenamiento/cd.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/almacenamiento/cd.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -600,10 +600,10 @@ La **memoria persistente** (PMem) es una tecnología que une la velocidad de la 
 ---
 
 <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
-  <img src="assets/almacenamiento/3DNAND1.png"
+  <img src="../assets/almacenamiento/3DNAND1.png"
        alt="VNand 3D"
        style="width:49%; height:auto; display:block;" loading="lazy">
-  <img src="assets/almacenamiento/3DNAND2.webp"
+  <img src="../assets/almacenamiento/3DNAND2.webp"
        alt="VNand 3D"
        style="width:49%; height:auto; display:block;" loading="lazy">
 </div>
