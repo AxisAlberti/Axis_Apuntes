@@ -17,5 +17,5 @@ El objetivo de este repositorio es fomentar un **aprendizaje técnico, colaborat
 
 ---
 
-📅 *Última actualización: Octubre 2025*  
+📅 *Última actualización: Enero 2026*  
 ✍️ *Profesor: José Manuel González Castillo*
