@@ -19,7 +19,7 @@ tags:
 ### Nomenclatura procesadores  [Sufijos](../../A5/teoria/A5-1-Nomenclatura-de-procesadores.md).
 ### Arquitectura [Arquitectura](../../A1/teoria/A1-1-Arquitecturas-de-procesadores.md)
 ### Procesos [Procesos](../../A2/teoria/A2-1-Procesos-e-hilos.md)
-## Índice
+
 
 
 ---
