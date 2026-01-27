@@ -1,17 +1,15 @@
 # Unidad 09 - Arquitecturas de procesadores
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+Esta unidad compara arquitecturas de procesadores y modelos de diseno, explicando como influyen en compatibilidad, consumo, rendimiento y ecosistema de software.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Diferenciar arquitecturas e instrucciones (ISA)
+- Entender implicaciones practicas de cada arquitectura
+- Relacionar arquitectura con sistema operativo y aplicaciones
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U09.1. Arquitecturas de procesadores](teoria/MM-U09.1.-Arquitecturas-de-procesadores.md)

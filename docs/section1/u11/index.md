@@ -1,17 +1,15 @@
 # Unidad 11 - Prevencion de riesgos laborales
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+Esta unidad aborda la prevencion de riesgos laborales aplicada al montaje y mantenimiento de equipos: normas, buenas practicas y medidas para trabajar con seguridad.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Identificar riesgos habituales en el taller
+- Aplicar medidas preventivas y procedimientos seguros
+- Incorporar la seguridad como parte del trabajo tecnico
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U11.1. Prevencion de riesgos laborales](teoria/MM-U11.1.-Prevencion-de-riesgos-laborales.md)

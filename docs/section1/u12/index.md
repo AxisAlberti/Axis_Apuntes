@@ -1,17 +1,15 @@
 # Unidad 12 - Guia para elegir procesador
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+En esta unidad se presenta un enfoque practico para elegir procesador segun necesidades reales. Se valoran criterios como rendimiento, consumo, compatibilidad y presupuesto.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Definir criterios claros para elegir CPU
+- Comparar procesadores con sentido tecnico
+- Evitar decisiones basadas solo en marketing
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U12.1. Guia para elegir procesador](teoria/MM-U12.1.-Guia-para-elegir-procesador.md)

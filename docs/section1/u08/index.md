@@ -1,17 +1,15 @@
 # Unidad 08 - Microprocesadores
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+En esta unidad se introducen los conceptos fundamentales de los microprocesadores: arquitectura basica, nucleos, frecuencias y otros factores que determinan el rendimiento de una CPU.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Identificar componentes y funciones basicas de una CPU
+- Entender nucleos, hilos y frecuencia
+- Relacionar especificaciones con casos de uso reales
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U08.1. Microprocesadores](teoria/MM-U08.1.-Microprocesadores.md)

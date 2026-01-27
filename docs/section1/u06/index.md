@@ -1,17 +1,15 @@
 # Unidad 06 - CMOS y UEFI
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+En esta unidad se estudian la memoria CMOS y el firmware (BIOS/UEFI), su relacion y su papel durante el arranque del equipo. Tambien se abordan ajustes comunes y situaciones de mantenimiento.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Diferenciar CMOS, BIOS y UEFI
+- Entender que configuraciones se guardan y por que
+- Aplicar acciones basicas de diagnostico y reseteo
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U06.1. CMOS y UEFI](teoria/MM-U06.1.-CMOS-y-UEFI.md)

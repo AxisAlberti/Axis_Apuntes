@@ -1,17 +1,15 @@
 # Unidad 02 - Terminal
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+Esta unidad introduce el trabajo con la terminal como herramienta esencial para administracion y diagnostico. Se practican comandos basicos, navegacion por el sistema de archivos y tareas comunes.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Moverte con soltura por la linea de comandos
+- Ejecutar comandos frecuentes de forma segura
+- Usar la terminal para resolver tareas reales
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [SI U02.1. Terminal](teoria/SI-U02.1.-Terminal.md)

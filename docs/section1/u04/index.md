@@ -1,17 +1,15 @@
 # Unidad 04 - Conexiones externas
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+En esta unidad se revisan los puertos y conexiones externas mas habituales, sus usos y sus diferencias. El objetivo es saber elegir, identificar y usar correctamente cada tipo de conexion.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Identificar puertos y conectores comunes
+- Diferenciar tipos de conexion y sus capacidades
+- Evitar errores frecuentes de conexion y compatibilidad
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U04.1. Conexiones externas](teoria/MM-U04.1.-Conexiones-externas.md)

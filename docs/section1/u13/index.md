@@ -1,17 +1,15 @@
 # Unidad 13 - Nomenclatura de procesadores
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+Esta unidad enseña a interpretar la nomenclatura comercial de los procesadores para extraer informacion util: generacion, gama, capacidades y posicionamiento.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Leer y descomponer nombres de procesadores
+- Inferir caracteristicas clave a partir del modelo
+- Tomar mejores decisiones de compra y compatibilidad
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U13.1. Nomenclatura de procesadores](teoria/MM-U13.1.-Nomenclatura-de-procesadores.md)

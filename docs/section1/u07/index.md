@@ -1,17 +1,15 @@
 # Unidad 07 - Almacenamiento
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+Esta unidad cubre las tecnologias de almacenamiento mas usadas (HDD, SSD y variantes), sus interfaces y sus diferencias clave. El objetivo es tomar buenas decisiones de montaje y mejora.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Comparar HDD, SSD SATA y SSD NVMe
+- Entender interfaces y formatos fisicos
+- Evaluar rendimiento, capacidad y coste
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U07.1. Almacenamiento](teoria/MM-U07.1.-Almacenamiento.md)

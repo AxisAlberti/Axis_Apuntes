@@ -1,17 +1,15 @@
 # Unidad 02 - Componentes internos del PC
 
-## Descripcion
+## Resumen de la unidad
 
-Descripcion general de la unidad.
+En esta unidad se estudian los componentes internos mas importantes de un PC y su funcion dentro del sistema: placa base, CPU, memoria, almacenamiento y otros elementos clave.
 
-## Teoria
+## Que aprenderas
 
-- Documento principal en teoria/.
+- Reconocer los componentes internos principales
+- Entender su funcion y como se conectan
+- Relacionar cada pieza con el rendimiento y la compatibilidad
 
-## Practica
+## Enlace principal
 
-- Pendiente.
-
-## Cuestionarios (GIFT)
-
-- Pendiente.
+- [MM U02.1. Componentes internos del PC](teoria/MM-U02.1.-Componentes-internos-del-PC.md)
