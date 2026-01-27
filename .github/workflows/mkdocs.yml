@@ -1,4 +1,4 @@
-name: Deploy MkDocs cojones
+name: Deploy MkDocs 
 
 on:
   push:
