@@ -10,59 +10,59 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ### 🎥 Canales y hardware
 - **Rincón de Varo** – Canal de YouTube de hardware y montaje de PC  
-  https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw
+  [Visitar canal](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw){:target="_blank" rel="noopener"}
 
 ### 🧰 Herramientas útiles
 - **Calculadora de Fuente de Alimentación (Geeknetic)** – Calculadora de potencia  
-  https://www.geeknetic.es/calculadora-fuente-alimentacion/
+  [Abrir herramienta](https://www.geeknetic.es/calculadora-fuente-alimentacion/){:target="_blank" rel="noopener"}
 
 ### 📰 Noticias y guías (España)
 - **GEEKNETIC** – Noticias y guías de hardware  
-  https://www.geeknetic.es/
+  [Abrir sitio](https://www.geeknetic.es/){:target="_blank" rel="noopener"}
 - **ProfesionalReview** – Análisis y guías de hardware  
-  https://www.profesionalreview.com/
+  [Abrir sitio](https://www.profesionalreview.com/){:target="_blank" rel="noopener"}
 - **Xataka** – Noticias y novedades de tecnología  
-  https://www.xataka.com/
+  [Abrir sitio](https://www.xataka.com/){:target="_blank" rel="noopener"}
 - **Computer Hoy** – Tecnología, análisis y tutoriales  
-  https://computerhoy.20minutos.es/
+  [Abrir sitio](https://computerhoy.20minutos.es/){:target="_blank" rel="noopener"}
 - **Genbeta** – Software, productividad e internet  
-  https://www.genbeta.com/
+  [Abrir sitio](https://www.genbeta.com/){:target="_blank" rel="noopener"}
 - **HardZone (Noticias)** – Noticias de hardware y PC  
-  https://hardzone.es/noticias/
+  [Abrir sitio](https://hardzone.es/noticias/){:target="_blank" rel="noopener"}
 - **Computerworld España** – Noticias TI para empresas  
-  https://www.computerworld.es/
+  [Abrir sitio](https://www.computerworld.es/){:target="_blank" rel="noopener"}
 - **Revista Byte TI** – Tecnología, informática y ciberseguridad  
-  https://revistabyte.es/
+  [Abrir sitio](https://revistabyte.es/){:target="_blank" rel="noopener"}
 - **20bits (20minutos)** – Tecnología general  
-  https://www.20minutos.es/tecnologia/
+  [Abrir sitio](https://www.20minutos.es/tecnologia/){:target="_blank" rel="noopener"}
 - **elhacker.NET** – Portal de seguridad informática y tecnología  
-  https://elhacker.net/
+  [Abrir sitio](https://elhacker.net/){:target="_blank" rel="noopener"}
 - **Blog elhacker.NET** – Noticias y artículos  
-  https://blog.elhacker.net/
+  [Abrir sitio](https://blog.elhacker.net/){:target="_blank" rel="noopener"}
 - **Foro elhacker.NET** – Comunidad técnica  
-  https://foro.elhacker.net/
+  [Abrir sitio](https://foro.elhacker.net/){:target="_blank" rel="noopener"}
 
 ### 🌍 Noticias y tecnología global
 - **TechCrunch** – Startups y tecnología global  
-  https://techcrunch.com/
+  [Abrir sitio](https://techcrunch.com/){:target="_blank" rel="noopener"}
 - **WIRED** – Tecnología, ciencia y cultura digital  
-  https://www.wired.com/
+  [Abrir sitio](https://www.wired.com/){:target="_blank" rel="noopener"}
 - **The Verge** – Noticias y análisis de tecnología  
-  https://www.theverge.com/
+  [Abrir sitio](https://www.theverge.com/){:target="_blank" rel="noopener"}
 - **Engadget** – Noticias y reseñas de gadgets  
-  https://www.engadget.com/
+  [Abrir sitio](https://www.engadget.com/){:target="_blank" rel="noopener"}
 - **TechRadar** – Noticias y reviews de consumo  
-  https://techradar.com/
+  [Abrir sitio](https://techradar.com/){:target="_blank" rel="noopener"}
 - **TechNewsWorld** – Noticias y análisis TI  
-  https://www.technewsworld.com/
+  [Abrir sitio](https://www.technewsworld.com/){:target="_blank" rel="noopener"}
 - **The Register** – Tecnología empresarial  
-  https://www.theregister.com/
+  [Abrir sitio](https://www.theregister.com/){:target="_blank" rel="noopener"}
 
 ### 📈 Agregadores
 - **Techmeme** – Agregador de noticias tecnológicas  
-  https://techmeme.com/
+  [Abrir sitio](https://techmeme.com/){:target="_blank" rel="noopener"}
 - **RSS Feeds Tecnología España (FeedSpot)** – Listado de feeds  
-  https://rss.feedspot.com/spain_technology_rss_feeds/
+  [Abrir sitio](https://rss.feedspot.com/spain_technology_rss_feeds/){:target="_blank" rel="noopener"}
 
 ---
 
