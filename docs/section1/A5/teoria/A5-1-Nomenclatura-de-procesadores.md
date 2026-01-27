@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/a5/13-1-nomenclatura-de-procesadores
 categories:
-    - "MON"
+    - "ANE"
 tags:
     - "nomenclatura"
 ---

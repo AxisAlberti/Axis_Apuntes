@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/a1/9-1-arquitecturas-de-procesadores
 categories:
-    - "MON"
+    - "ANE"
 tags:
     - "arquitecturas"
 ---

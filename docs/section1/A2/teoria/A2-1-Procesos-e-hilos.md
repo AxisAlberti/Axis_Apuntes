@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/a2/10-1-procesos-e-hilos
 categories:
-    - "MON"
+    - "ANE"
 tags:
     - "procesos"
 ---

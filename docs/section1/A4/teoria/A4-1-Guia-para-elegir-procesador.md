@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/a4/12-1-guia-para-elegir-procesador
 categories:
-    - "MON"
+    - "ANE"
 tags:
     - "guia"
 ---
