@@ -1,19 +1,10 @@
 # 🖥️ Montaje y Mantenimiento de Equipos Informáticos
 
-Bienvenidos al repositorio de **Montaje y Mantenimiento de Equipos Informáticos**, asignatura del ciclo formativo de **Grado Medio en Sistemas Microinformáticos y Redes (SMR)**.
+Repositorio del módulo **Montaje y Mantenimiento de Equipos Informáticos** del ciclo formativo de **Grado Medio en Sistemas Microinformáticos y Redes (SMR)**.
 
-En este espacio los alumnos encontrarán **apuntes, materiales y recursos didácticos** recopilados a partir de **fuentes públicas y técnicas disponibles en Internet**, junto con material propio elaborado para el desarrollo del módulo.
+Aquí encontrarás **materiales de estudio organizados por unidades**, con contenidos de teoría, resúmenes y recursos técnicos orientados a comprender el hardware, la arquitectura básica de los equipos y el mantenimiento de sistemas.
 
-> ⚙️ **Importante:**  
-> Estos apuntes constituyen una **guía de estudio dinámica**, sujeta a **mejoras y actualizaciones diarias**.  
-> El contenido no debe considerarse definitivo, sino un **punto de partida para la investigación y el aprendizaje activo**.
-
-Como parte del trabajo diario, los alumnos deberán:
-- **Ampliar y complementar** la información aquí recogida.  
-- **Aportar ejemplos, esquemas y ejercicios** que enriquezcan el contenido del repositorio.  
-- **Actualizar y revisar** conceptos conforme avancen los temas del curso.
-
-El objetivo de este repositorio es fomentar un **aprendizaje técnico, colaborativo y evolutivo**, alineado con las competencias del módulo.
+El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del módulo, con contenidos actualizados y alineados con las competencias profesionales.
 
 ---
 
