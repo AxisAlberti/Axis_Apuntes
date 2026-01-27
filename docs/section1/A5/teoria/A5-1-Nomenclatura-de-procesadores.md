@@ -1,12 +1,12 @@
 ---
-title: "UD 13 - 13.1 Nomenclatura de procesadores"
+title: "A5 - 13.1 Nomenclatura de procesadores"
 description: "Nomenclatura de procesadores"
 summary: "Nomenclatura de procesadores"
 authors:
     - Jose Manuel Gonzalez Castillo
 date: 2025-10-01
 icon: "material/file-document-outline"
-permalink: /mm/u13/13-1-nomenclatura-de-procesadores
+permalink: /mm/a5/13-1-nomenclatura-de-procesadores
 categories:
     - "MON"
 tags:

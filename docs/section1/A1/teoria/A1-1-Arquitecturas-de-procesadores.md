@@ -1,12 +1,12 @@
 ---
-title: "UD 09 - 9.1 Arquitecturas de procesadores"
+title: "A1 - 9.1 Arquitecturas de procesadores"
 description: "Arquitecturas de procesadores"
 summary: "Arquitecturas de procesadores"
 authors:
     - Jose Manuel Gonzalez Castillo
 date: 2025-10-01
 icon: "material/file-document-outline"
-permalink: /mm/u09/9-1-arquitecturas-de-procesadores
+permalink: /mm/a1/9-1-arquitecturas-de-procesadores
 categories:
     - "MON"
 tags:

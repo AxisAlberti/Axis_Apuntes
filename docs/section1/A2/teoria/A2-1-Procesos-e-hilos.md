@@ -1,12 +1,12 @@
 ---
-title: "UD 10 - 10.1 Procesos e hilos"
+title: "A2 - 10.1 Procesos e hilos"
 description: "Procesos e hilos"
 summary: "Procesos e hilos"
 authors:
     - Jose Manuel Gonzalez Castillo
 date: 2025-10-01
 icon: "material/file-document-outline"
-permalink: /mm/u10/10-1-procesos-e-hilos
+permalink: /mm/a2/10-1-procesos-e-hilos
 categories:
     - "MON"
 tags:

@@ -1,12 +1,12 @@
 ---
-title: "UD 11 - 11.1 Prevencion de riesgos laborales"
+title: "A3 - 11.1 Prevencion de riesgos laborales"
 description: "Prevencion de riesgos laborales"
 summary: "Prevencion de riesgos laborales"
 authors:
     - Jose Manuel Gonzalez Castillo
 date: 2025-10-01
 icon: "material/file-document-outline"
-permalink: /mm/u11/11-1-prevencion-de-riesgos-laborales
+permalink: /mm/a3/11-1-prevencion-de-riesgos-laborales
 categories:
     - "MON"
 tags:

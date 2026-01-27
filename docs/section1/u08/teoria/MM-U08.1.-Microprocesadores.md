@@ -15,10 +15,10 @@ tags:
 
 ## TEMA 8. MICROPROCESADOR
 
-### Consulta también  [Guia Eleccion](../../u12/teoria/MM-U12.1.-Guia-para-elegir-procesador.md).
-### Nomenclatura procesadores  [Sufijos](../../u13/teoria/MM-U13.1.-Nomenclatura-de-procesadores.md).
-### Arquitectura [Arquitectura](../../u09/teoria/MM-U09.1.-Arquitecturas-de-procesadores.md)
-### Procesos [Procesos](../../u10/teoria/MM-U10.1.-Procesos-e-hilos.md)
+### Consulta también  [Guia Eleccion](../../A4/teoria/A4-1-Guia-para-elegir-procesador.md).
+### Nomenclatura procesadores  [Sufijos](../../A5/teoria/A5-1-Nomenclatura-de-procesadores.md).
+### Arquitectura [Arquitectura](../../A1/teoria/A1-1-Arquitecturas-de-procesadores.md)
+### Procesos [Procesos](../../A2/teoria/A2-1-Procesos-e-hilos.md)
 ## Índice
 
 

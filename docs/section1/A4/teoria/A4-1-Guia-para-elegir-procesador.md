@@ -1,12 +1,12 @@
 ---
-title: "UD 12 - 12.1 Guia para elegir procesador"
+title: "A4 - 12.1 Guia para elegir procesador"
 description: "Guia para elegir procesador"
 summary: "Guia para elegir procesador"
 authors:
     - Jose Manuel Gonzalez Castillo
 date: 2025-10-01
 icon: "material/file-document-outline"
-permalink: /mm/u12/12-1-guia-para-elegir-procesador
+permalink: /mm/a4/12-1-guia-para-elegir-procesador
 categories:
     - "MON"
 tags:

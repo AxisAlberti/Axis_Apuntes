@@ -12,4 +12,4 @@ En esta unidad se presenta un enfoque practico para elegir procesador segun nece
 
 ## Enlace principal
 
-- [MM U12.1. Guia para elegir procesador](teoria/MM-U12.1.-Guia-para-elegir-procesador.md)
+- [A4.1 Guia para elegir procesador](teoria/A4-1-Guia-para-elegir-procesador.md)

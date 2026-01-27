@@ -12,4 +12,4 @@ En esta unidad se explican los conceptos de proceso e hilo y como el sistema ope
 
 ## Enlace principal
 
-- [MM U10.1. Procesos e hilos](teoria/MM-U10.1.-Procesos-e-hilos.md)
+- [A2.1 Procesos e hilos](teoria/A2-1-Procesos-e-hilos.md)

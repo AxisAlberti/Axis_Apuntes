@@ -12,4 +12,4 @@ Esta unidad enseña a interpretar la nomenclatura comercial de los procesadores 
 
 ## Enlace principal
 
-- [MM U13.1. Nomenclatura de procesadores](teoria/MM-U13.1.-Nomenclatura-de-procesadores.md)
+- [A5.1 Nomenclatura de procesadores](teoria/A5-1-Nomenclatura-de-procesadores.md)

@@ -12,4 +12,4 @@ Esta unidad aborda la prevencion de riesgos laborales aplicada al montaje y mant
 
 ## Enlace principal
 
-- [MM U11.1. Prevencion de riesgos laborales](teoria/MM-U11.1.-Prevencion-de-riesgos-laborales.md)
+- [A3.1 Prevencion de riesgos laborales](teoria/A3-1-Prevencion-de-riesgos-laborales.md)

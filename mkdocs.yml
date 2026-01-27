@@ -37,20 +37,20 @@ nav:
     - section1/u08/index.md
     - MM U08.1. Microprocesadores: section1/u08/teoria/MM-U08.1.-Microprocesadores.md
   - Anexo 1 - Arquitecturas de procesadores:
-    - section1/u09/index.md
-    - MM U09.1. Arquitecturas de procesadores: section1/u09/teoria/MM-U09.1.-Arquitecturas-de-procesadores.md
+    - section1/A1/index.md
+    - MM U09.1. Arquitecturas de procesadores: section1/A1/teoria/A1-1-Arquitecturas-de-procesadores.md
   - Anexo 2 - Procesos e hilos:
-    - section1/u10/index.md
-    - MM U10.1. Procesos e hilos: section1/u10/teoria/MM-U10.1.-Procesos-e-hilos.md
+    - section1/A2/index.md
+    - MM U10.1. Procesos e hilos: section1/A2/teoria/A2-1-Procesos-e-hilos.md
   - Anexo 3 - Prevencion de riesgos laborales:
-    - section1/u11/index.md
-    - MM U11.1. Prevencion de riesgos laborales: section1/u11/teoria/MM-U11.1.-Prevencion-de-riesgos-laborales.md
+    - section1/A3/index.md
+    - MM U11.1. Prevencion de riesgos laborales: section1/A3/teoria/A3-1-Prevencion-de-riesgos-laborales.md
   - Anexo 4 - Guia para elegir procesador:
-    - section1/u12/index.md
-    - MM U12.1. Guia para elegir procesador: section1/u12/teoria/MM-U12.1.-Guia-para-elegir-procesador.md
+    - section1/A4/index.md
+    - MM U12.1. Guia para elegir procesador: section1/A4/teoria/A4-1-Guia-para-elegir-procesador.md
   - Anexo 5 - Nomenclatura de procesadores:
-    - section1/u13/index.md
-    - MM U13.1. Nomenclatura de procesadores: section1/u13/teoria/MM-U13.1.-Nomenclatura-de-procesadores.md
+    - section1/A5/index.md
+    - MM U13.1. Nomenclatura de procesadores: section1/A5/teoria/A5-1-Nomenclatura-de-procesadores.md
 - Sistemas Informaticos:
   - section2/index.md
   - Unidad 01 - Redes:

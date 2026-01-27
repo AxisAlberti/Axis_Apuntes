@@ -12,4 +12,4 @@ Esta unidad compara arquitecturas de procesadores y modelos de diseno, explicand
 
 ## Enlace principal
 
-- [MM U09.1. Arquitecturas de procesadores](teoria/MM-U09.1.-Arquitecturas-de-procesadores.md)
+- [A1.1 Arquitecturas de procesadores](teoria/A1-1-Arquitecturas-de-procesadores.md)
