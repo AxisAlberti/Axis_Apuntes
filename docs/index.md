@@ -17,30 +17,30 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 ## Recursos
 
 ### Montaje y mantenimiento
-- [Rincón de Varo (YouTube)](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw)
-- [Geeknetic](https://www.geeknetic.es/)
-- [Calculadora de Fuente de Alimentación (Geeknetic)](https://www.geeknetic.es/calculadora-fuente-alimentacion/)
-- [ProfesionalReview](https://www.profesionalreview.com/)
-- [Xataka](https://www.xataka.com/)
-- [Computer Hoy](https://computerhoy.20minutos.es/)
-- [Genbeta](https://www.genbeta.com/)
-- [HardZone (Noticias)](https://hardzone.es/noticias/)
-- [Computerworld España](https://www.computerworld.es/)
-- [Revista Byte TI](https://revistabyte.es/)
-- [20bits (20minutos)](https://www.20minutos.es/tecnologia/)
-- [elhacker.NET](https://elhacker.net/)
-- [Blog elhacker.NET](https://blog.elhacker.net/)
-- [Foro elhacker.NET](https://foro.elhacker.net/)
+- [Rincón de Varo (YouTube)](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw){:target="_blank" rel="noopener"}
+- [Geeknetic](https://www.geeknetic.es/){:target="_blank" rel="noopener"}
+- [Calculadora de Fuente de Alimentación (Geeknetic)](https://www.geeknetic.es/calculadora-fuente-alimentacion/){:target="_blank" rel="noopener"}
+- [ProfesionalReview](https://www.profesionalreview.com/){:target="_blank" rel="noopener"}
+- [Xataka](https://www.xataka.com/){:target="_blank" rel="noopener"}
+- [Computer Hoy](https://computerhoy.20minutos.es/){:target="_blank" rel="noopener"}
+- [Genbeta](https://www.genbeta.com/){:target="_blank" rel="noopener"}
+- [HardZone (Noticias)](https://hardzone.es/noticias/){:target="_blank" rel="noopener"}
+- [Computerworld España](https://www.computerworld.es/){:target="_blank" rel="noopener"}
+- [Revista Byte TI](https://revistabyte.es/){:target="_blank" rel="noopener"}
+- [20bits (20minutos)](https://www.20minutos.es/tecnologia/){:target="_blank" rel="noopener"}
+- [elhacker.NET](https://elhacker.net/){:target="_blank" rel="noopener"}
+- [Blog elhacker.NET](https://blog.elhacker.net/){:target="_blank" rel="noopener"}
+- [Foro elhacker.NET](https://foro.elhacker.net/){:target="_blank" rel="noopener"}
 
 ### Noticias globales
-- [TechCrunch](https://techcrunch.com/)
-- [WIRED](https://www.wired.com/)
-- [The Verge](https://www.theverge.com/)
-- [Engadget](https://www.engadget.com/)
-- [TechRadar](https://techradar.com/)
-- [TechNewsWorld](https://www.technewsworld.com/)
-- [The Register](https://www.theregister.com/)
+- [TechCrunch](https://techcrunch.com/){:target="_blank" rel="noopener"}
+- [WIRED](https://www.wired.com/){:target="_blank" rel="noopener"}
+- [The Verge](https://www.theverge.com/){:target="_blank" rel="noopener"}
+- [Engadget](https://www.engadget.com/){:target="_blank" rel="noopener"}
+- [TechRadar](https://techradar.com/){:target="_blank" rel="noopener"}
+- [TechNewsWorld](https://www.technewsworld.com/){:target="_blank" rel="noopener"}
+- [The Register](https://www.theregister.com/){:target="_blank" rel="noopener"}
 
 ### Agregadores
-- [Techmeme](https://techmeme.com/)
-- [RSS Feeds Tecnología España (FeedSpot)](https://rss.feedspot.com/spain_technology_rss_feeds/)
+- [Techmeme](https://techmeme.com/){:target="_blank" rel="noopener"}
+- [RSS Feeds Tecnología España (FeedSpot)](https://rss.feedspot.com/spain_technology_rss_feeds/){:target="_blank" rel="noopener"}
