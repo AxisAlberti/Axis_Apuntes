@@ -1,4 +1,4 @@
-# Unidad 10 - Procesos e hilos
+# Anexo 2 - Procesos e hilos
 
 ## Resumen de la unidad
 
