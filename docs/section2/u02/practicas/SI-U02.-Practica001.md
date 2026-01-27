@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-edit"
 permalink: /si/u02/p1
 categories:
-    - "Sistemas Informaticos"
+    - "SIS"
 tags:
     - "practica"
 ---

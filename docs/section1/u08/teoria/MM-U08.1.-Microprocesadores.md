@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/u08/8-1-microprocesadores
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "microprocesadores"
 ---

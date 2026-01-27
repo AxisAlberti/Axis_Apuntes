@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/u11/11-1-prevencion-de-riesgos-laborales
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "prevencion"
 ---

@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/u01/1-1-introduccion-a-los-sistemas-informaticos
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "introduccion"
 ---

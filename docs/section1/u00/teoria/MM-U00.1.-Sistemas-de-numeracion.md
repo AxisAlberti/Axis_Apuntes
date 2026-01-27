@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/u00/0-1-sistemas-de-numeracion
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "sistemas"
 ---

@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /mm/u05/5-1-memoria-ram
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "memoria"
 ---

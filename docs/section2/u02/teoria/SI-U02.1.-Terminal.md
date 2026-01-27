@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /si/u02/2-1-terminal
 categories:
-    - "Sistemas Informaticos"
+    - "SIS"
 tags:
     - "terminal"
 ---

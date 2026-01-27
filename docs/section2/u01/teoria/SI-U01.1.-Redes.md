@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-outline"
 permalink: /si/u01/1-1-redes
 categories:
-    - "Sistemas Informaticos"
+    - "SIS"
 tags:
     - "redes"
 ---

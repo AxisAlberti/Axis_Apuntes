@@ -8,7 +8,7 @@ date: 2025-10-01
 icon: "material/file-document-edit"
 permalink: /mm/u08/p1
 categories:
-    - "Montaje y Mantenimiento de Equipos Informaticos"
+    - "MON"
 tags:
     - "practica"
 ---
