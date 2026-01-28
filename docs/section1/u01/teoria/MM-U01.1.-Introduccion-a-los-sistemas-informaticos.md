@@ -79,7 +79,7 @@ Actúa de intermediario haciendo posible la comunicación entre el usuario y el 
 # 4. La máquina de Von Neumann
 <br>
 
-<img src="../assets/vn.png" alt="Mi imagen"
+<img src="assets/vn.png" alt="Mi imagen"
      style="width:100%;height:auto;display:block;" />
 La **arquitectura de Von Neumann** es el modelo sobre el que se basan la mayoría de los PC modernos. Propone que tanto los datos como las instrucciones se almacenan en la misma memoria, permitiendo que el procesador ejecute diversos programas sin necesidad de modificar el hardware.
 

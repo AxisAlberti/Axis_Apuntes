@@ -9,6 +9,7 @@ nav:
 - Principal: index.md
 - Montaje y Mantenimiento:
   - section1/index.md
+  - Slides (Modulo): section1/slides/index.md
   - Unidad 00 - Sistemas de numeracion:
     - section1/u00/index.md
     - MM U00.1. Sistemas de numeracion: section1/u00/teoria/MM-U00.1.-Sistemas-de-numeracion.md
@@ -67,6 +68,7 @@ nav:
     - Presentacion: section1/slides/no-disponible.md
 - Sistemas Informaticos:
   - section2/index.md
+  - Slides (Modulo): section2/slides/index.md
   - Unidad 01 - Redes:
     - section2/u01/index.md
     - SI U01.1. Redes: section2/u01/teoria/SI-U01.1.-Redes.md

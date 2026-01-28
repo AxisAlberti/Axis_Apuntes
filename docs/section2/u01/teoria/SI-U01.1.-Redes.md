@@ -78,7 +78,7 @@ Una **red** es un conjunto de **dispositivos** (ordenadores, móviles, impresora
 
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/topologia.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/topologia.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -89,7 +89,7 @@ Una **red** es un conjunto de **dispositivos** (ordenadores, móviles, impresora
 - **Multicast:** uno-a-muchos interesados (streaming, videoconferencia).
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/broadcast.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/broadcast.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 ---
 
@@ -196,7 +196,7 @@ Es el cable **Ethernet** típico con conector **RJ-45**. Está formado por pares
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/utp.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/utp.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -230,7 +230,7 @@ Históricamente usado en redes locales (bus). Hoy se ve sobre todo en **operador
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/coaxial.jpeg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/coaxial.jpeg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -255,7 +255,7 @@ Transmite **luz** en lugar de electricidad. Permite **altísimas velocidades** y
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/fibra.jpeg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/fibra.jpeg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -267,7 +267,7 @@ Transmite **luz** en lugar de electricidad. Permite **altísimas velocidades** y
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/conectorfibra.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/conectorfibra.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -410,8 +410,8 @@ El modelo OSI (Open Systems Interconnection) es una referencia estándar que des
 ---
 
 <div class="fila-extremos">
-  <img src="../assets/imagenes/osi1.png" alt="Descripción 1">
-  <img src="../assets/imagenes/osi2.png" alt="Descripción 2">
+  <img src="assets/imagenes/osi1.png" alt="Descripción 1">
+  <img src="assets/imagenes/osi2.png" alt="Descripción 2">
 </div>
 
 ---
@@ -430,7 +430,7 @@ El modelo TCP/IP no describe implementaciones físicas concretas, sino que propo
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/tcp.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/tcp.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -451,7 +451,7 @@ El modelo TCP/IP presenta una serie de características que explican su adopció
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/imagenes/protocolo-TCP-IP-vs-OSI.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/imagenes/protocolo-TCP-IP-vs-OSI.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---

@@ -63,7 +63,7 @@ El sistema operativo mueve continuamente los procesos entre estos estados para r
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/micro/procesos1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/micro/procesos1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -105,7 +105,7 @@ Cada hilo tiene su propio:
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/micro/hilo1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/micro/hilo1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
