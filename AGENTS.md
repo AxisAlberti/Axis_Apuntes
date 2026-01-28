@@ -156,3 +156,9 @@ relacionada con el contenido del archivo de teoría al que acompaña. {
 ```gift
 $CATEGORY: SMR/Section1/Nombre de la unidad/Basico
 ```
+
+Para actualizar automáticamente el fichero de categorías tras añadir o renombrar unidades/anexos:
+
+```bash
+scripts/update_categories.py
+```
