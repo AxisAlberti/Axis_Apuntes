@@ -69,9 +69,23 @@ El módulo de **Sistemas Informáticos** está diseñado específicamente para e
 
 ---
 
+---
+
+## Competencias adquiridas
+
+- Capacidad para instalar y administrar sistemas operativos y aplicaciones.
+- Habilidad para gestionar recursos y seguridad en sistemas y redes.
+- **Visión holística para programar conociendo el contexto real de ejecución y despliegue de las aplicaciones.**
+- Preparación para diagnosticar y solucionar incidencias habituales.
+- Destrezas para mantener y preparar sistemas para el desarrollo web profesional.
+
+---
+
 ## Slides del modulo
 
 - [Slides generales del modulo](slides/index.md)
+
+---
 
 ## 🌐 Recursos
 
@@ -134,16 +148,6 @@ El módulo de **Sistemas Informáticos** está diseñado específicamente para e
   [Abrir sitio](https://techmeme.com/){:target="_blank" rel="noopener"}
 - **RSS Feeds Tecnología España (FeedSpot)** – Listado de feeds  
   [Abrir sitio](https://rss.feedspot.com/spain_technology_rss_feeds/){:target="_blank" rel="noopener"}
-
----
-
-## Competencias adquiridas
-
-- Capacidad para instalar y administrar sistemas operativos y aplicaciones.
-- Habilidad para gestionar recursos y seguridad en sistemas y redes.
-- **Visión holística para programar conociendo el contexto real de ejecución y despliegue de las aplicaciones.**
-- Preparación para diagnosticar y solucionar incidencias habituales.
-- Destrezas para mantener y preparar sistemas para el desarrollo web profesional.
 
 ---
 
