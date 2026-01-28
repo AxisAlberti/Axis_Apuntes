@@ -6,8 +6,39 @@
     <title>PRL - Anexo 3</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+    <style>
+      .slide-header {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+      }
+      .slide-header img {
+        height: 40px;
+        width: auto;
+      }
+      .back-button {
+        background: #111827;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+      .back-button:hover {
+        background: #374151;
+      }
+    </style>
   </head>
   <body>
+    <div class="slide-header">
+      <img src="../../../assets/axis.png" alt="Logo">
+      <a class="back-button" href="../../">Volver al módulo</a>
+    </div>
     <div class="reveal">
       <div class="slides">
         <section>

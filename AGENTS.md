@@ -86,6 +86,9 @@ Salida generada del sitio MkDocs. No editar manualmente.
   - **HTML Reveal.js** para visualización en navegador
 - En Markdown, usar separadores `---` por diapositiva y notas con `Note:`.
 - En HTML Reveal.js, incluir `<aside class="notes">...</aside>` para notas.
+- En HTML Reveal.js, incluir:
+  - Logo arriba a la izquierda (imagen del repo)
+  - Botón de retorno al módulo o repositorio
 - Ejemplo básico (Markdown):
 
 ```md
@@ -104,7 +107,8 @@ Note: Mensaje para el docente.
   - `docs/sectionX/index.md` (sección Slides del módulo)
   - `docs/sectionX/uXX/index.md` o `docs/section1/A#/index.md` si aplica
 - Si una unidad no tiene presentación, enlazar a:
-  - `docs/slides/no-disponible.md`
+  - `docs/section1/slides/no-disponible.md` (section1)
+  - `docs/section2/slides/no-disponible.md` (section2)
 
 ### 3.1. Rutas de imágenes
 
