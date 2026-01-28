@@ -17,11 +17,11 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **U06**: CMOS y UEFI
 - **U07**: Almacenamiento
 - **U08**: Microprocesadores
-- **U09**: Arquitecturas de procesadores
-- **U10**: Procesos e hilos
-- **U11**: Prevencion de riesgos laborales
-- **U12**: Guia para elegir procesador
-- **U13**: Nomenclatura de procesadores
+- **A1**: Arquitecturas de procesadores (Anexo)
+- **A2**: Procesos e hilos (Anexo)
+- **A3**: Prevencion de riesgos laborales (Anexo)
+- **A4**: Guia para elegir procesador (Anexo)
+- **A5**: Nomenclatura de procesadores (Anexo)
 
 ### 💻 Sistemas Informaticos (section2)
 Contenido base sobre redes, terminal y fundamentos de sistemas.
@@ -41,6 +41,11 @@ Contenido base sobre redes, terminal y fundamentos de sistemas.
 │   │   │   ├── teoria/            # Contenidos teoricos
 │   │   │   ├── practica/          # Practicas y ejercicios
 │   │   │   └── gift/              # Preguntas para cuestionarios
+│   │   ├── A1/                    # Anexos (antiguas u09..u13)
+│   │   │   ├── index.md
+│   │   │   ├── teoria/
+│   │   │   ├── practica/
+│   │   │   └── gift/
 │   │   └── ...
 │   ├── section2/                  # Sistemas informaticos
 │   │   ├── u01/
@@ -74,6 +79,7 @@ pip install mkdocs-blogging-plugin
 1. La documentacion principal esta en `/docs/`
 2. Se genera automaticamente con MkDocs
 3. Cada modulo tiene unidades didacticas con teoria, practica y cuestionarios
+4. Los anexos de `section1` estan en carpetas `A1..A5`
 
 ### Sitio generado
 1. El resultado de `mkdocs build` se genera en `/site/`
@@ -84,6 +90,11 @@ pip install mkdocs-blogging-plugin
 - **Practica/Practicas**: Ejercicios y actividades evaluables
 - **GIFT**: Preguntas para cuestionarios autoevaluables
 - **Recursos**: Material complementario por modulo
+- **Nota**: Practicas y GIFT no se muestran en el menu lateral
+
+### Branding y recursos globales
+- **Logo**: `docs/assets/axis.png`
+- **Favicon**: `docs/assets/favicon.ico`
 
 ## 🤝 Como Contribuir
 
@@ -115,6 +126,7 @@ pip install mkdocs-blogging-plugin
 
 4. **Convenciones de nomenclatura**
    - **Teoria**: `MM-UXX.Y.-Tema.md` o `SI-UXX.Y.-Tema.md`
+   - **Teoria anexos**: `A1-1-...`, `A2-1-...`, etc.
    - **Practicas**: `MM-UXX.-PracticaYYY.md` o `SI-UXX.-PracticaYYY.md`
    - **Cuestionarios**: `MM-UXX.Y.-Tema.gift` o `SI-UXX.Y.-Tema.gift`
 
