@@ -126,6 +126,11 @@ mkdocs gh-deploy --force
 
 Las preguntas tipo test para cuestionarios se generarán en **formato GIFT** de Moodle, con **una única respuesta correcta y varias incorrectas con penalización**.
 
+### 7.0. Fuentes para generar preguntas
+
+- Las preguntas deben basarse en los apuntes indicados.
+- Complementar siempre con información actualizada de Internet.
+
 ### 7.1. Estructura básica de la pregunta
 
 Cada pregunta seguirá esta estructura:
