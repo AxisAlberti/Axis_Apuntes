@@ -8,7 +8,7 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ## Slides del modulo
 
-- [Slides generales del modulo](slides/)
+- [Slides generales del modulo](slides/index.md)
 - [Anexo 3 - PRL (slide de prueba)](A3/slides/PRL-slide-prueba.md)
 
 ## 🌐 Recursos

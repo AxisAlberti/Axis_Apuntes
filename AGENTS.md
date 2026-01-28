@@ -100,6 +100,8 @@ Note: Mensaje para el docente.
   - `docs/index.md` (sección Slides)
   - `docs/sectionX/index.md` (sección Slides del módulo)
   - `docs/sectionX/uXX/index.md` o `docs/section1/A#/index.md` si aplica
+- Si una unidad no tiene presentación, enlazar a:
+  - `docs/slides/no-disponible.md`
 
 ### 3.1. Rutas de imágenes
 

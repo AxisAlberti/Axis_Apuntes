@@ -71,7 +71,7 @@ El módulo de **Sistemas Informáticos** está diseñado específicamente para e
 
 ## Slides del modulo
 
-- [Slides generales del modulo](slides/)
+- [Slides generales del modulo](slides/index.md)
 
 ---
 

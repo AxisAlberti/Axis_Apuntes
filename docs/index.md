@@ -16,8 +16,8 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 ## Slides
 
-- [Slides de Montaje y Mantenimiento](section1/slides/)
-- [Slides de Sistemas Informaticos](section2/slides/)
+- [Slides de Montaje y Mantenimiento](section1/slides/index.md)
+- [Slides de Sistemas Informaticos](section2/slides/index.md)
 
 ## Recursos
 

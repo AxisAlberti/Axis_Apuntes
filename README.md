@@ -94,6 +94,7 @@ pip install mkdocs-blogging-plugin
 - **Recursos**: Material complementario por modulo
 - **Nota**: Practicas y GIFT no se muestran en el menu lateral
 - **Slides**: Material de presentaciones en carpetas `slides/`
+- **Slides sin disponibilidad**: `docs/slides/no-disponible.md`
 
 ### Branding y recursos globales
 - **Logo**: `docs/assets/axis.png`
