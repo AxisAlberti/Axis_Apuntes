@@ -162,3 +162,14 @@ Para actualizar automáticamente el fichero de categorías tras añadir o renomb
 ```bash
 scripts/update_categories.py
 ```
+
+## 8. Preguntas tipo ensayo con editor HTML (formato GIFT Moodle)
+
+Las preguntas de **tipo ensayo** con editor HTML en Moodle se representan en GIFT siguiendo este patrón:
+
+```gift
+$CATEGORY: RUTA/CATEGORIA
+
+// question: ID_INTERNO  name: TÍTULO_VISIBLE_EN_MOODLE
+::TITULO_INTERNO::[html]ENUNCIADO_EN_HTML{}
+```
