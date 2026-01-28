@@ -46,6 +46,7 @@ Contenido base sobre redes, terminal y fundamentos de sistemas.
 │   │   │   ├── teoria/
 │   │   │   ├── practica/
 │   │   │   └── gift/
+│   │   ├── slides/                # Slides del modulo (si aplica)
 │   │   └── ...
 │   ├── section2/                  # Sistemas informaticos
 │   │   ├── u01/
@@ -53,6 +54,7 @@ Contenido base sobre redes, terminal y fundamentos de sistemas.
 │   │   │   ├── teoria/
 │   │   │   ├── practicas/
 │   │   │   └── gift/
+│   │   ├── slides/                # Slides del modulo (si aplica)
 │   │   └── ...
 │   ├── index.md                   # Pagina principal
 │   ├── blog.md                    # Indice del blog
@@ -91,6 +93,7 @@ pip install mkdocs-blogging-plugin
 - **GIFT**: Preguntas para cuestionarios autoevaluables
 - **Recursos**: Material complementario por modulo
 - **Nota**: Practicas y GIFT no se muestran en el menu lateral
+- **Slides**: Material de presentaciones en carpetas `slides/`
 
 ### Branding y recursos globales
 - **Logo**: `docs/assets/axis.png`

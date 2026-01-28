@@ -69,6 +69,12 @@ El módulo de **Sistemas Informáticos** está diseñado específicamente para e
 
 ---
 
+## Slides del modulo
+
+- [Slides generales del modulo](slides/)
+
+---
+
 ## Competencias adquiridas
 
 - Capacidad para instalar y administrar sistemas operativos y aplicaciones.

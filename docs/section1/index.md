@@ -6,6 +6,11 @@ Aquí encontrarás **materiales de estudio organizados por unidades**, con conte
 
 El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del módulo, con contenidos actualizados y alineados con las competencias profesionales.
 
+## Slides del modulo
+
+- [Slides generales del modulo](slides/)
+- [Anexo 3 - PRL (slide de prueba)](A3/slides/PRL-slide-prueba.md)
+
 ## 🌐 Recursos
 
 ### 🎥 Canales y hardware

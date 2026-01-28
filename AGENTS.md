@@ -38,6 +38,8 @@ docs/
 │   ├── index.md
 │   ├── recursos/
 │   └── u01..u02/
+├── section1/slides/             # Slides del módulo (si aplica)
+├── section2/slides/             # Slides del módulo (si aplica)
 ├── assets/                      # Recursos globales (logo, favicon, imágenes)
 ├── stylesheets/                 # CSS personalizado
 ├── includes/                    # Snippets y abreviaturas
@@ -56,6 +58,7 @@ sectionX/uXX/
 │   └── assets/                  # Imágenes y multimedia del tema
 ├── practica/                    # Prácticas (singular en section1)
 └── gift/                        # Cuestionarios (GIFT)
+└── slides/                      # Slides de la unidad (Markdown)
 ```
 
 **Nota:** en `section2` la carpeta de prácticas se llama `practicas/` (plural).
@@ -72,6 +75,31 @@ Salida generada del sitio MkDocs. No editar manualmente.
   - `exclude_docs: "**/*.gift"`
 
 ## 3. Convenciones y formatos
+
+### 3.0. Slides (Markdown)
+
+- Cada módulo y cada unidad/anexo tiene carpeta `slides/`.
+  - Módulo: `docs/sectionX/slides/`
+  - Unidad: `docs/sectionX/uXX/slides/` o `docs/section1/A#//slides/`
+- Las slides se escriben en **Markdown** con separadores `---` por diapositiva.
+- Incluir **notas del presentador** con líneas `Note:` al final de cada diapositiva.
+- Ejemplo básico:
+
+```md
+---
+marp: true
+paginate: true
+---
+
+# Título
+
+Note: Mensaje para el docente.
+```
+
+- Cuando se añadan slides nuevas, enlazarlas desde:
+  - `docs/index.md` (sección Slides)
+  - `docs/sectionX/index.md` (sección Slides del módulo)
+  - `docs/sectionX/uXX/index.md` o `docs/section1/A#/index.md` si aplica
 
 ### 3.1. Rutas de imágenes
 
