@@ -1,4 +1,4 @@
-# Axis_Apuntes
+
 
 Repositorio de material educativo para formacion profesional en sistemas informaticos y montaje y mantenimiento de equipos, publicado con MkDocs Material.
 
