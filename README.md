@@ -99,7 +99,7 @@ pip install mkdocs-blogging-plugin
   - `docs/section2/slides/no-disponible.md`
 
 ### Branding y recursos globales
-- **Logo**: `docs/assets/axis.png`
+- **Logo**: `docs/assets/logo.png`
 - **Favicon**: `docs/assets/favicon.ico`
 
 ## 🤝 Como Contribuir

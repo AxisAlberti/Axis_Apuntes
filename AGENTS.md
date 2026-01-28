@@ -143,7 +143,7 @@ Los ficheros de teoría siguen el formato:
 ## 4. Recursos y branding
 
 - Favicon: `docs/assets/favicon.ico`
-- Logo: `docs/assets/axis.png`
+- Logo: `docs/assets/logo.png`
 - Logo principal en portada: `docs/index.md` (imagen centrada)
 
 ## 5. Comandos útiles
