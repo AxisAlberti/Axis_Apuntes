@@ -76,14 +76,17 @@ Salida generada del sitio MkDocs. No editar manualmente.
 
 ## 3. Convenciones y formatos
 
-### 3.0. Slides (Markdown)
+### 3.0. Slides (Markdown y HTML)
 
 - Cada módulo y cada unidad/anexo tiene carpeta `slides/`.
   - Módulo: `docs/sectionX/slides/`
   - Unidad: `docs/sectionX/uXX/slides/` o `docs/section1/A#//slides/`
-- Las slides se escriben en **Markdown** con separadores `---` por diapositiva.
-- Incluir **notas del presentador** con líneas `Note:` al final de cada diapositiva.
-- Ejemplo básico:
+- Las slides se pueden publicar como:
+  - **Markdown** (borradores internos)
+  - **HTML Reveal.js** para visualización en navegador
+- En Markdown, usar separadores `---` por diapositiva y notas con `Note:`.
+- En HTML Reveal.js, incluir `<aside class="notes">...</aside>` para notas.
+- Ejemplo básico (Markdown):
 
 ```md
 ---
@@ -145,6 +148,15 @@ Los ficheros de teoría siguen el formato:
 mkdocs serve
 mkdocs build
 mkdocs gh-deploy --force
+```
+
+Ejemplo básico (Reveal.js HTML):
+
+```html
+<section>
+  <h2>Título</h2>
+  <aside class="notes">Notas para el docente.</aside>
+</section>
 ```
 
 ## 6. Publicación

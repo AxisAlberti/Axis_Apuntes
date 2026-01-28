@@ -93,7 +93,7 @@ pip install mkdocs-blogging-plugin
 - **GIFT**: Preguntas para cuestionarios autoevaluables
 - **Recursos**: Material complementario por modulo
 - **Nota**: Practicas y GIFT no se muestran en el menu lateral
-- **Slides**: Material de presentaciones en carpetas `slides/`
+- **Slides**: Material de presentaciones en carpetas `slides/` (Markdown y/o HTML Reveal.js)
 - **Slides sin disponibilidad**: `docs/slides/no-disponible.md`
 
 ### Branding y recursos globales
