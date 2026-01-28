@@ -196,12 +196,18 @@ relacionada con el contenido del archivo de teoría al que acompaña. {
 ### 7.2. Categorías Moodle (GIFT)
 
 - El fichero de categorías está en:
-  - `docs/section1/gift/SMR-categorias.gift`
+  - `scripts/SMR-categorias.gift`
 - Al generar cuestionarios, la **primera línea** del fichero debe ser la categoría correspondiente:
 
 ```gift
-$CATEGORY: SMR/Section1/Nombre de la unidad/Basico
+$CATEGORY: SMR/Section1/Nombre_de_la_unidad/Basico
 ```
+
+El nombre de la unidad en la categoría debe estar **normalizado**:
+
+- Sin tildes ni caracteres especiales
+- Espacios reemplazados por `_`
+- Solo letras, números, `_` y `-`
 
 Para actualizar automáticamente el fichero de categorías tras añadir o renombrar unidades/anexos:
 

@@ -98,6 +98,9 @@ pip install mkdocs-blogging-plugin
   - `docs/section1/slides/no-disponible.md`
   - `docs/section2/slides/no-disponible.md`
 
+### Categorias Moodle
+- Generadas en `scripts/SMR-categorias.gift` con `scripts/update_categories.py`
+
 ### Branding y recursos globales
 - **Logo**: `docs/assets/logo.png`
 - **Favicon**: `docs/assets/favicon.ico`
