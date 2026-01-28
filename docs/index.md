@@ -21,6 +21,9 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 ## Recursos
 
+### Sistemas operativos
+- [Kali Linux](https://www.kali.org/){:target="_blank" rel="noopener"}
+
 ### Montaje y mantenimiento
 - [Rincón de Varo (YouTube)](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw){:target="_blank" rel="noopener"}
 - [Geeknetic](https://www.geeknetic.es/){:target="_blank" rel="noopener"}

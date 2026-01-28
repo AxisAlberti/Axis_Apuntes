@@ -13,6 +13,10 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ## 🌐 Recursos
 
+### 🖥️ Sistemas operativos
+- **Kali Linux**  
+  [Abrir sitio](https://www.kali.org/){:target="_blank" rel="noopener"}
+
 ### 🎥 Canales y hardware
 - **Rincón de Varo** – Canal de YouTube de hardware y montaje de PC  
   [Visitar canal](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw){:target="_blank" rel="noopener"}
