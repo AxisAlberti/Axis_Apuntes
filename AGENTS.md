@@ -87,7 +87,7 @@ Salida generada del sitio MkDocs. No editar manualmente.
 - En Markdown, usar separadores `---` por diapositiva y notas con `Note:`.
 - En HTML Reveal.js, incluir `<aside class="notes">...</aside>` para notas.
 - En HTML Reveal.js, incluir:
-  - Logo arriba a la izquierda (imagen del repo)
+  - Logo arriba a la izquierda (usar `docs/assets/logo.png`)
   - Botón de retorno al módulo o repositorio
 - Ejemplo básico (Markdown):
 
