@@ -2,8 +2,9 @@
 import re
 from pathlib import Path
 
-mkdocs_path = Path('mkdocs.yml')
-output_path = Path('docs/section1/gift/SMR-categorias.gift')
+repo_root = Path(__file__).resolve().parents[1]
+mkdocs_path = repo_root / 'mkdocs.yml'
+output_path = repo_root / 'scripts/SMR-categorias.gift'
 
 text = mkdocs_path.read_text(encoding='utf-8')
 
@@ -34,9 +35,24 @@ if not units:
     raise SystemExit('No se encontraron unidades/anexos en section1')
 
 lines = []
+import unicodedata
+import re
+
+def sanitize_name(value: str) -> str:
+    # Remove accents and diacritics
+    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+    # Replace spaces with underscores
+    value = value.replace(' ', '_')
+    # Remove any character not alphanumeric, underscore or hyphen
+    value = re.sub(r'[^A-Za-z0-9_-]', '', value)
+    # Collapse multiple underscores
+    value = re.sub(r'_+', '_', value).strip('_')
+    return value
+
 for name in units:
+    safe_name = sanitize_name(name)
     for level in ('Basico', 'Medio', 'Alto'):
-        lines.append(f'$CATEGORY: SMR/Section1/{name}/{level}')
+        lines.append(f'$CATEGORY: SMR/Section1/{safe_name}/{level}')
     lines.append('')
 
 output_path.parent.mkdir(parents=True, exist_ok=True)
