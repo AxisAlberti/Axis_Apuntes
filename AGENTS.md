@@ -146,3 +146,13 @@ relacionada con el contenido del archivo de teoría al que acompaña. {
 ~%-33.3333%Respuesta incorrecta 3 #Feedback formativo: explica por qué NO es correcta.
 }
 ```
+
+### 7.2. Categorías Moodle (GIFT)
+
+- El fichero de categorías está en:
+  - `docs/section1/gift/SMR-categorias.gift`
+- Al generar cuestionarios, la **primera línea** del fichero debe ser la categoría correspondiente:
+
+```gift
+$CATEGORY: SMR/Section1/Nombre de la unidad/Basico
+```
