@@ -121,7 +121,7 @@ El **factor de forma** define las dimensiones físicas, el diseño de los conect
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/16.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/16.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -254,7 +254,7 @@ Usado en OEM y all-in-one, dificultad de actualización e intercambios.
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/6.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/6.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -276,7 +276,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/7.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/7.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -295,7 +295,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
   ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/8.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/8.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -312,7 +312,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
   ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/17.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/17.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -325,14 +325,14 @@ Los conectores internos conectan la placa base con todos los componentes crític
 ---
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="assets/componentes/18.png" alt="Imagen 1" width="45%">
-  <img src="assets/componentes/20.png" alt="Imagen 2" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/18.png" alt="Imagen 1" width="45%">
+  <img src="../assets/componentes/20.png" alt="Imagen 2" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/19.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/19.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -349,8 +349,8 @@ Los conectores internos conectan la placa base con todos los componentes crític
   ---
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="assets/componentes/21.png" alt="Imagen 1" width="45%">
-  <img src="assets/componentes/22.png" alt="Imagen 2" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/21.png" alt="Imagen 1" width="45%">
+  <img src="../assets/componentes/22.png" alt="Imagen 2" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -383,7 +383,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/25.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/25.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -398,13 +398,13 @@ Los conectores internos conectan la placa base con todos los componentes crític
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/23.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/23.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/24.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/24.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -418,7 +418,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 ---
 
 <div style="text-align: center;">
-  <img src="assets/componentes/26.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/26.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -469,16 +469,16 @@ La **memoria RAM** (Random Access Memory) se instala en ranuras específicas de 
 
 ---
 <div style="text-align: center;">
-  <img src="assets/componentes/28.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/28.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
 <div style="text-align: center;">
-  <img src="assets/componentes/29.avif" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/29.avif" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 ---
 <div style="text-align: center;">
-  <img src="assets/componentes/30.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/componentes/30.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---

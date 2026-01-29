@@ -212,7 +212,7 @@ Las tecnologías de multihilo permiten que **un único núcleo físico ejecute m
 
 ---
 <div style="text-align: center;">
-  <img src="assets/micro/ht1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="../assets/micro/ht1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 ---
 

@@ -43,7 +43,7 @@ Puede presentarse en dos formas:
 - **GPU dedicada**: tarjeta independiente con su propia memoria de vídeo (VRAM) y mayor potencia.
 
 <figure>
-  <img src="assets/gpu/rtx5090_fe.png" alt="Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <img src="../assets/gpu/rtx5090_fe.png" alt="Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50). Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ La **placa (PCB)** conecta todos los componentes. El **VBIOS** define parámetro
 La conexión más habitual es **PCI Express (PCIe)** en formato **x16**. PCIe es un estándar mantenido por PCI-SIG y evoluciona por versiones (4.0, 5.0, 6.0, 7.0), manteniendo compatibilidad hacia atrás.
 
 <figure>
-  <img src="assets/gpu/pcie5_trx50_slot.png" alt="Ranura PCI Express x16 en placa base reciente" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <img src="../assets/gpu/pcie5_trx50_slot.png" alt="Ranura PCI Express x16 en placa base reciente" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Ranura PCI Express x16 en placa base reciente. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
@@ -153,6 +153,11 @@ NVIDIA anunció la serie **GeForce RTX 50** basada en **Blackwell**, con mejoras
 ## 7.2 AMD (Radeon RX 9000 - RDNA 4)
 
 AMD presentó la arquitectura **RDNA 4** con la serie **Radeon RX 9000**, destacando mejoras en ray tracing y aceleradores de IA, junto con FSR 4.
+
+<figure>
+  <img src="../assets/gpu/amd_radeon_rx9060xt.png" alt="Tarjeta gráfica AMD reciente (ejemplo RX 9000)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Tarjeta gráfica AMD reciente (ejemplo RX 9000). Fuente: Wikimedia Commons.</figcaption>
+</figure>
 
 ## 7.3 Comparativa rápida (NVIDIA vs AMD, generación actual)
 
