@@ -113,6 +113,21 @@ La **VRAM** no es solo cantidad. También importa el **ancho de banda**, que dep
 - A mayor resolución y mayor calidad de texturas, más VRAM se necesita.
 - El ancho de banda afecta a la fluidez en escenarios con muchas texturas y efectos.
 
+## 4.1 GDDR frente a HBM (visión general)
+
+- **GDDR**: memoria rápida montada en chips alrededor de la GPU. Es común en tarjetas de consumo por su coste y disponibilidad.
+- **HBM (High Bandwidth Memory)**: memoria apilada (stack) muy cerca de la GPU, con gran ancho de banda y buena eficiencia energética; suele verse en tarjetas profesionales.
+
+<figure>
+  <img src="../assets/gpu/gddr5x_1080ti.jpg" alt="Chips de memoria GDDR en una GPU (ejemplo GeForce GTX 1080 Ti)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Chips de memoria GDDR en una GPU (ejemplo GeForce GTX 1080 Ti). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/gpu/hbm_stack_gp100.jpg" alt="Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
 ---
 
 # 5. Interfaces y estándares de vídeo
@@ -121,9 +136,19 @@ La **VRAM** no es solo cantidad. También importa el **ancho de banda**, que dep
 
 HDMI es el estándar más común en televisores y monitores domésticos. El HDMI Forum publica las versiones del estándar (HDMI 2.x), que van ampliando resolución, tasas de refresco y ancho de banda.
 
+<figure>
+  <img src="../assets/gpu/hdmi_connector.svg" alt="Conector HDMI (vista esquemática)" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Conector HDMI (vista esquemática). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
 ## 5.2 DisplayPort
 
 DisplayPort es el estándar de VESA para entornos PC. La versión 2.1 amplía el ancho de banda y la interoperabilidad con USB-C/USB4.
+
+<figure>
+  <img src="../assets/gpu/displayport_connector.svg" alt="Conector DisplayPort (vista esquemática)" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Conector DisplayPort (vista esquemática). Fuente: Wikimedia Commons.</figcaption>
+</figure>
 
 ## 5.3 Compatibilidad y cables
 
@@ -255,9 +280,17 @@ Comprobar longitud y grosor: algunas tarjetas ocupan 2 o 3 ranuras. Una mejor re
 - [Microsoft Learn - Direct3D](https://learn.microsoft.com/en-us/windows/win32/getting-started-with-direct3d)
 - [Khronos - OpenGL](https://www.khronos.org/opengl/)
 - [Khronos - Vulkan 1.4](https://www.vulkan.org/news/auto-23155-a676f167a3982c6a4f6d36a46284cad8)
+- [Wikimedia Commons - HDMI_Connector_2.svg](https://commons.wikimedia.org/wiki/File:HDMI_Connector_2.svg)
+- [Wikimedia Commons - DisplayPort_Connector.svg](https://commons.wikimedia.org/wiki/File:DisplayPort_Connector.svg)
+- [Wikimedia Commons - GDDR5X_1080ti.jpg](https://commons.wikimedia.org/wiki/File:GDDR5X_1080ti.jpg)
+- [Wikimedia Commons - HBM stack (GP100/Tesla P100)](https://commons.wikimedia.org/wiki/File:Nvidia@16nm@Pascal@GP100@Tesla_P100@T_Taiwan_1912A1_PN9G70.S6W_GP100-897-A1_DSCx11_HBM-Stack_notes.jpg)
 
 ## Créditos de imágenes
 
 - rtx5090_fe.png - ZMASLO, CC BY 3.0, Wikimedia Commons (captura de vídeo de Founders Edition).
 - amd_radeon_rx9060xt.png - Akb432, CC BY-SA 4.0, Wikimedia Commons.
 - pcie5_trx50_slot.png - PantheraLeo1359531, CC BY 4.0, Wikimedia Commons.
+- hdmi_connector.svg - Wyzzymoon, CC BY 4.0, Wikimedia Commons.
+- displayport_connector.svg - Wyzzymoon, CC BY 4.0, Wikimedia Commons.
+- gddr5x_1080ti.jpg - Geni (recorte) / Fritzchens Fritz (foto), CC0, Wikimedia Commons.
+- hbm_stack_gp100.jpg - FritzchensFritz, CC0, Wikimedia Commons.
