@@ -1,0 +1,211 @@
+$CATEGORY: SMR/Section1/Introduccion_a_los_sistemas_informaticos/Alto
+
+::U01_SI_Alto_01::Un sistema informático realiza una simulación científica compleja. ¿Qué elemento del sistema es responsable de coordinar el uso de CPU, memoria y periféricos durante la ejecución del programa? {
+=El sistema operativo #Correcto: el SO gestiona recursos y coordina procesos y dispositivos.
+~%-33.3333%La ALU #Incorrecto: la ALU solo ejecuta operaciones aritmético-lógicas dentro de la CPU.
+~%-33.3333%Los registros de la CPU #Incorrecto: los registros almacenan datos temporales, no coordinan recursos.
+~%-33.3333%El bus de direcciones #Incorrecto: el bus solo indica ubicaciones, no gestiona recursos.
+}
+
+::U01_SI_Alto_02::En un ciclo de instrucción, ¿qué componente garantiza que las señales de lectura/escritura se activen en el momento adecuado para mover datos entre CPU y memoria? {
+=La unidad de control #Correcto: coordina el flujo de datos y genera señales de control.
+~%-33.3333%La memoria RAM #Incorrecto: la RAM almacena datos, no coordina señales.
+~%-33.3333%La ALU #Incorrecto: la ALU calcula, no controla el flujo.
+~%-33.3333%El bus de datos #Incorrecto: transporta datos, pero no decide cuándo transferirlos.
+}
+
+::U01_SI_Alto_03::Un programador optimiza un bucle crítico. ¿Qué mecanismo de la CPU reduce más la latencia de acceso a operandos inmediatos usados repetidamente? {
+=Los registros #Correcto: son el almacenamiento más rápido dentro de la CPU.
+~%-33.3333%La memoria RAM #Incorrecto: es más lenta que los registros.
+~%-33.3333%El almacenamiento SSD #Incorrecto: es no volátil y mucho más lento.
+~%-33.3333%El bus de direcciones #Incorrecto: no almacena datos.
+}
+
+::U01_SI_Alto_04::En la arquitectura de Von Neumann, ¿cuál es la implicación clave de almacenar instrucciones y datos en la misma memoria? {
+=Que el programa puede tratar instrucciones como datos y viceversa #Correcto: esto habilita el concepto de programa almacenado.
+~%-33.3333%Que la CPU no necesita unidad de control #Incorrecto: sigue siendo imprescindible para decodificar instrucciones.
+~%-33.3333%Que los periféricos son parte de la CPU #Incorrecto: no forman parte del núcleo de la CPU.
+~%-33.3333%Que el bus de direcciones es innecesario #Incorrecto: sigue siendo necesario para localizar datos e instrucciones.
+}
+
+::U01_SI_Alto_05::En una lectura de memoria, ¿qué combinación de buses participa y en qué roles principales? {
+=Direcciones para seleccionar la celda, control para señalar lectura y datos para transportar el valor #Correcto: cada bus cumple su función específica.
+~%-33.3333%Datos para seleccionar la celda, direcciones para transportar el valor y control para almacenar #Incorrecto: los roles están invertidos.
+~%-33.3333%Control para transportar el valor, datos para señalar lectura y direcciones para confirmar #Incorrecto: el bus de control no transporta datos.
+~%-33.3333%Solo el bus de datos, porque la CPU ya sabe la dirección #Incorrecto: la dirección debe enviarse explícitamente.
+}
+
+::U01_SI_Alto_06::Si se incrementa el ancho del bus de datos de 32 a 64 bits, ¿qué efecto directo se consigue por ciclo de bus? {
+=Se duplica la cantidad de datos transferibles por ciclo #Correcto: más líneas de datos permiten transferir más bits simultáneamente.
+~%-33.3333%Se duplica el número de direcciones disponibles #Incorrecto: eso depende del bus de direcciones.
+~%-33.3333%Se reduce a la mitad la latencia de la RAM #Incorrecto: la latencia no depende solo del ancho.
+~%-33.3333%Se elimina la necesidad de caché #Incorrecto: la caché sigue siendo clave para rendimiento.
+}
+
+::U01_SI_Alto_07::Un equipo no puede instalar un módulo DDR5 en una placa base DDR4. ¿Cuál es la causa principal? {
+=Las muescas (key) y la disposición eléctrica son incompatibles #Correcto: el encaje y señales no coinciden.
+~%-33.3333%La DDR5 requiere un bus de direcciones de 128 bits #Incorrecto: no es el motivo de incompatibilidad física.
+~%-33.3333%La DDR5 solo funciona con CPUs ARM #Incorrecto: no es cierto.
+~%-33.3333%La DDR5 solo existe en formato SO-DIMM #Incorrecto: existen UDIMM y RDIMM.
+}
+
+::U01_SI_Alto_08::¿Cuál es una ventaja arquitectónica clave de DDR5 respecto a DDR4 a nivel de canales del módulo? {
+=Divide el módulo en dos subcanales de 32 bits para mejorar la concurrencia #Correcto: aumenta la eficiencia de acceso.
+~%-33.3333%Elimina el uso de direcciones en la memoria #Incorrecto: la memoria siempre necesita direccionamiento.
+~%-33.3333%Integra la CPU dentro del módulo #Incorrecto: la CPU no está en el DIMM.
+~%-33.3333%Solo permite acceso secuencial sin paralelismo #Incorrecto: ocurre lo contrario.
+}
+
+::U01_SI_Alto_09::¿Qué característica de DDR5 mejora la fiabilidad al corregir errores dentro del propio chip DRAM? {
+=On-die ECC #Correcto: corrige errores dentro del chip.
+~%-33.3333%Bus de control duplicado #Incorrecto: no existe como mecanismo de corrección.
+~%-33.3333%ALU integrada en el DIMM #Incorrecto: no hay ALU en la memoria.
+~%-33.3333%ROM de verificación #Incorrecto: no es un mecanismo estándar en DDR5.
+}
+
+::U01_SI_Alto_10::Un SSD NVMe se comunica con el sistema mediante un bus específico. ¿Cuál es el bus diseñado para este protocolo? {
+=PCI Express (PCIe) #Correcto: NVMe está diseñado para PCIe.
+~%-33.3333%SATA #Incorrecto: SATA es una interfaz anterior que no es el objetivo principal de NVMe.
+~%-33.3333%USB #Incorrecto: USB no es el bus nativo de NVMe.
+~%-33.3333%PATA #Incorrecto: PATA es una interfaz antigua y paralela.
+}
+
+::U01_SI_Alto_11::¿Qué afirmación describe mejor el papel del bus de direcciones? {
+=Selecciona la ubicación de memoria o el periférico con el que se quiere comunicar #Correcto: indica la dirección a acceder.
+~%-33.3333%Transporta el dato leído o escrito #Incorrecto: eso es función del bus de datos.
+~%-33.3333%Coordina señales de reloj y control #Incorrecto: esa es función del bus de control.
+~%-33.3333%Almacena temporalmente instrucciones #Incorrecto: eso lo hace la memoria o registros.
+}
+
+::U01_SI_Alto_12::Si un programa necesita acceso rápido a datos y baja latencia, ¿qué memoria es más adecuada para almacenar datos temporales inmediatos? {
+=Registros de la CPU #Correcto: son el acceso más rápido.
+~%-33.3333%SSD NVMe #Incorrecto: es más lento y no volátil.
+~%-33.3333%HDD #Incorrecto: es mucho más lento.
+~%-33.3333%Memoria USB #Incorrecto: es externa y lenta.
+}
+
+::U01_SI_Alto_13::Durante la ejecución de instrucciones, ¿qué función realiza la ALU principalmente? {
+=Operaciones aritméticas y lógicas sobre datos #Correcto: esa es su función central.
+~%-33.3333%Control del flujo de instrucciones #Incorrecto: lo hace la unidad de control.
+~%-33.3333%Gestión de archivos #Incorrecto: eso es función del SO.
+~%-33.3333%Direccionamiento de memoria #Incorrecto: se apoya en otros componentes.
+}
+
+::U01_SI_Alto_14::¿Cuál es la secuencia correcta del ciclo básico de funcionamiento de un PC? {
+=Entrada → Procesamiento → Almacenamiento → Salida #Correcto: es el flujo general de datos.
+~%-33.3333%Procesamiento → Entrada → Salida → Almacenamiento #Incorrecto: el orden no es correcto.
+~%-33.3333%Salida → Almacenamiento → Entrada → Procesamiento #Incorrecto: no refleja el flujo real.
+~%-33.3333%Entrada → Almacenamiento → Salida → Procesamiento #Incorrecto: el procesamiento debe ocurrir antes de la salida.
+}
+
+::U01_SI_Alto_15::Si una CPU necesita ejecutar una instrucción, ¿qué componente indica cuál es la siguiente instrucción a ejecutar? {
+=El contador de programa (registro) #Correcto: mantiene la dirección de la siguiente instrucción.
+~%-33.3333%El bus de datos #Incorrecto: solo transporta datos.
+~%-33.3333%La unidad aritmético-lógica #Incorrecto: no gestiona el flujo de instrucciones.
+~%-33.3333%El periférico de entrada #Incorrecto: no decide el flujo de ejecución.
+}
+
+::U01_SI_Alto_16::¿Qué justifica el papel de los buses en la arquitectura de Von Neumann? {
+=Permiten la comunicación coordinada entre CPU, memoria y periféricos #Correcto: sin buses no hay intercambio de datos.
+~%-33.3333%Sustituyen la memoria RAM #Incorrecto: no almacenan datos persistentes.
+~%-33.3333%Ejecutan operaciones lógicas #Incorrecto: esa es función de la ALU.
+~%-33.3333%Eliminan la necesidad de sistema operativo #Incorrecto: el SO sigue siendo esencial.
+}
+
+::U01_SI_Alto_17::¿Qué característica define a un periférico de entrada frente a uno de salida? {
+=Introduce datos al sistema para su procesamiento #Correcto: entrada captura datos.
+~%-33.3333%Presenta resultados procesados al usuario #Incorrecto: eso es salida.
+~%-33.3333%Solo almacena datos de forma permanente #Incorrecto: no es la función principal.
+~%-33.3333%Coordina señales de bus #Incorrecto: no coordina el bus.
+}
+
+::U01_SI_Alto_18::Cuando la CPU escribe datos en memoria, ¿qué señal debe emitir el bus de control? {
+=Señal de escritura #Correcto: indica operación de write.
+~%-33.3333%Señal de lectura #Incorrecto: sería para leer.
+~%-33.3333%Señal de reloj de la RAM #Incorrecto: no es una orden de acceso.
+~%-33.3333%Señal de interrupción externa #Incorrecto: no corresponde a una escritura directa.
+}
+
+::U01_SI_Alto_19::¿Cuál es la principal razón por la que los registros son más rápidos que la RAM? {
+=Están integrados en la CPU y usan tecnología de acceso inmediato #Correcto: proximidad y diseño los hace más rápidos.
+~%-33.3333%Tienen mayor capacidad que la RAM #Incorrecto: su capacidad es mucho menor.
+~%-33.3333%Son no volátiles #Incorrecto: son volátiles.
+~%-33.3333%Usan discos magnéticos internos #Incorrecto: no usan discos.
+}
+
+::U01_SI_Alto_20::¿Qué elemento del sistema transforma datos en información útil mediante procesamiento? {
+=La CPU en coordinación con el software #Correcto: el procesamiento depende de hardware y software.
+~%-33.3333%El bus de control #Incorrecto: solo coordina señales.
+~%-33.3333%Los periféricos de salida #Incorrecto: solo muestran resultados.
+~%-33.3333%El almacenamiento secundario #Incorrecto: almacena, no procesa.
+}
+
+::U01_SI_Alto_21::Una aplicación intensiva en cálculos necesita ejecutar muchas sumas y comparaciones. ¿Qué parte de la CPU es más crítica para su rendimiento inmediato? {
+=La ALU #Correcto: realiza operaciones aritméticas y lógicas.
+~%-33.3333%El bus de direcciones #Incorrecto: no calcula.
+~%-33.3333%El periférico de salida #Incorrecto: solo muestra resultados.
+~%-33.3333%El sistema operativo #Incorrecto: coordina, pero no realiza cálculos.
+}
+
+::U01_SI_Alto_22::¿Qué característica distingue a los dispositivos de almacenamiento frente a la memoria RAM? {
+=Conservan la información de forma permanente #Correcto: son no volátiles.
+~%-33.3333%Son más rápidos que los registros #Incorrecto: son más lentos.
+~%-33.3333%Están dentro de la CPU #Incorrecto: son externos al núcleo.
+~%-33.3333%No requieren controladores #Incorrecto: sí requieren controladores.
+}
+
+::U01_SI_Alto_23::En un PC, ¿qué componente intermedia entre el usuario y el hardware para gestionar archivos, procesos y periféricos? {
+=El sistema operativo #Correcto: es el intermediario principal.
+~%-33.3333%El bus de datos #Incorrecto: solo transporta información.
+~%-33.3333%La unidad de control #Incorrecto: solo coordina instrucciones dentro de la CPU.
+~%-33.3333%La ALU #Incorrecto: realiza cálculos.
+}
+
+::U01_SI_Alto_24::Una CPU necesita acceder a una ubicación concreta de RAM. ¿Qué determina cuántas posiciones distintas puede direccionar? {
+=El número de líneas del bus de direcciones #Correcto: define el espacio de direcciones.
+~%-33.3333%El ancho del bus de datos #Incorrecto: afecta al tamaño de transferencia, no al espacio direccionable.
+~%-33.3333%El tipo de periférico conectado #Incorrecto: no define el direccionamiento de RAM.
+~%-33.3333%La velocidad del reloj #Incorrecto: no cambia el número de direcciones.
+}
+
+::U01_SI_Alto_25::Según la evolución de PCIe, ¿qué característica distingue a PCIe 6.0 frente a PCIe 5.0? {
+=Duplica el ancho de banda respecto a PCIe 5.0 (32 GT/s) #Correcto: 6.0 dobla a 5.0.
+~%-33.3333%Reduce el ancho de banda a la mitad #Incorrecto: ocurre lo contrario.
+~%-33.3333%Elimina la compatibilidad hacia atrás #Incorrecto: mantiene compatibilidad con generaciones anteriores.
+~%-33.3333%Reemplaza los buses internos del CPU #Incorrecto: PCIe es un bus de expansión.
+}
+
+::U01_SI_Alto_26::Un técnico confunde el bus de control con el de datos. ¿Cuál es una diferencia correcta? {
+=El bus de control lleva señales de lectura/escritura, el de datos transporta la información #Correcto: roles distintos.
+~%-33.3333%Ambos transportan direcciones #Incorrecto: eso es del bus de direcciones.
+~%-33.3333%El bus de datos solo usa señales binarias y el de control no #Incorrecto: ambos usan señales binarias.
+~%-33.3333%El bus de control solo existe en periféricos externos #Incorrecto: existe en la placa base.
+}
+
+::U01_SI_Alto_27::¿Qué opción describe mejor el papel de los periféricos en el sistema informático? {
+=Facilitan la entrada y salida de información hacia/desde el usuario o el entorno #Correcto: ese es su propósito.
+~%-33.3333%Ejecutan instrucciones de la CPU #Incorrecto: no ejecutan instrucciones.
+~%-33.3333%Almacenan todos los datos permanentes #Incorrecto: no todos los periféricos almacenan.
+~%-33.3333%Sustituyen al sistema operativo #Incorrecto: no gestionan recursos.
+}
+
+::U01_SI_Alto_28::Una aplicación necesita transferencias rápidas entre SSD y CPU con baja latencia. ¿Qué protocolo es el más adecuado para SSD modernos según su diseño? {
+=NVMe sobre PCIe #Correcto: está diseñado para SSD con baja latencia y paralelismo.
+~%-33.3333%AHCI sobre SATA #Incorrecto: es un estándar anterior con más latencia.
+~%-33.3333%USB 2.0 #Incorrecto: es demasiado lento.
+~%-33.3333%PATA #Incorrecto: es un bus antiguo.
+}
+
+::U01_SI_Alto_29::¿Qué explica mejor por qué un bus de direcciones de 32 líneas puede direccionar 2^32 posiciones? {
+=Cada línea representa un bit de la dirección y las combinaciones posibles son 2^32 #Correcto: combinatoria binaria.
+~%-33.3333%Porque cada línea transporta 32 bits de datos #Incorrecto: eso sería bus de datos, no direcciones.
+~%-33.3333%Porque la RAM duplica su tamaño automáticamente #Incorrecto: no es automático.
+~%-33.3333%Porque el sistema operativo reserva 2^32 archivos #Incorrecto: no tiene relación.
+}
+
+::U01_SI_Alto_30::¿Qué componente garantiza que los periféricos se comuniquen correctamente con la CPU y memoria en la arquitectura de Von Neumann? {
+=Los controladores y el bus de E/S #Correcto: gestionan la transferencia con periféricos.
+~%-33.3333%La ALU #Incorrecto: no coordina periféricos.
+~%-33.3333%Los registros #Incorrecto: almacenan datos temporales.
+~%-33.3333%El contador de programa #Incorrecto: solo indica la instrucción siguiente.
+}

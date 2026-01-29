@@ -46,6 +46,10 @@ nav:
     - section1/u08/index.md
     - MM U08.1. Microprocesadores: section1/u08/teoria/MM-U08.1.-Microprocesadores.md
     - Presentacion: section1/slides/no-disponible.md
+  - Unidad 09 - Tarjetas gráficas:
+    - section1/u09/index.md
+    - MM U09.1. Tarjetas gráficas: section1/u09/teoria/MM-U09.1.-Tarjetas-graficas.md
+    - Presentacion: section1/slides/no-disponible.md
   - Anexo 1 - Arquitecturas de procesadores:
     - section1/A1/index.md
     - A1.1 Arquitecturas de procesadores: section1/A1/teoria/A1-1-Arquitecturas-de-procesadores.md
