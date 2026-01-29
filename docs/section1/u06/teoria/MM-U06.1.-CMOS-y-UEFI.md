@@ -42,7 +42,7 @@ Este equilibrio entre persistencia de configuraciones y eficiencia energética h
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/cmos/cmos.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/cmos/cmos.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -77,7 +77,7 @@ La batería más común es el modelo de pila de botón tipo CR2032 de 3V, ubicad
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/cmos/placa.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/cmos/placa.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -97,7 +97,7 @@ Mantener esta batería en buen estado es crucial para evitar problemas de config
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/cmos/pila.avif" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/cmos/pila.avif" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -150,7 +150,7 @@ El reseteo y la restauración de la memoria CMOS son procedimientos habituales p
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/cmos/reset_cmos_uefi.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/cmos/reset_cmos_uefi.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---
@@ -170,7 +170,7 @@ El reseteo y la restauración de la memoria CMOS son procedimientos habituales p
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/cmos/reset_cmos_jumper.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+  <img src="assets/cmos/reset_cmos_jumper.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 </div>
 
 ---

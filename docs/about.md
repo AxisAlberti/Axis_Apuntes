@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="../assets/logo.png" alt="Logo" style="max-width: 260px; height: auto;">
+  <img src="assets/logo.png" alt="Logo" style="max-width: 260px; height: auto;">
 </div>
 
 Este repositorio contiene materiales didácticos desarrollados para la enseñanza de contenidos relacionados con **Sistemas Microinformáticos y Redes**, **Montaje y Mantenimiento de Equipos Informáticos** y otras áreas de la **Formación Profesional en Informática**.
