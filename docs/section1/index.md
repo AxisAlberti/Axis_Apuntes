@@ -24,6 +24,8 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 ### 🧰 Herramientas útiles
 - **Calculadora de Fuente de Alimentación (Geeknetic)** – Calculadora de potencia  
   [Abrir herramienta](https://www.geeknetic.es/calculadora-fuente-alimentacion/){:target="_blank" rel="noopener"}
+- **iFixit (España)** – Guías de reparación y desmontaje  
+  [Abrir sitio](https://es.ifixit.com/){:target="_blank" rel="noopener"}
 
 ### 📰 Noticias y guías (España)
 - **GEEKNETIC** – Noticias y guías de hardware  
