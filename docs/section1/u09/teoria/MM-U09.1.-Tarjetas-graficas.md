@@ -41,6 +41,7 @@ Puede presentarse en dos formas:
 
 - **GPU integrada**: está dentro del procesador o la placa base y comparte la memoria RAM del sistema.
 - **GPU dedicada**: tarjeta independiente con su propia memoria de vídeo (VRAM) y mayor potencia.
+En algunas GPU integradas se emplea **UMA (Unified Memory Architecture)**, donde la RAM del sistema se reserva como memoria gráfica.
 
 <figure>
   <img src="../assets/gpu/rtx5090_fe.png" alt="Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
@@ -64,6 +65,7 @@ Almacena texturas, buffers y datos necesarios para el renderizado. Su rendimient
 - **Latencia y cachés** internas.
 
 Una GPU con menos VRAM puede rendir mejor si su memoria es más rápida y el bus es más ancho.
+El **frame buffer** (búfer de imagen) es la zona de VRAM donde se almacena el fotograma final antes de enviarlo al monitor.
 
 ## 2.3 VRM y alimentación
 
@@ -106,6 +108,42 @@ Además del renderizado tradicional, las GPUs modernas incorporan **trazado de r
 
 ---
 
+# 3.1 Conceptos fundamentales de imagen
+
+Para entender el rendimiento de una tarjeta gráfica es clave dominar estos conceptos:
+
+- **Píxel**: unidad mínima de información visual. Cada píxel tiene un color e intensidad propios.
+- **Resolución**: número total de píxeles mostrados (por ejemplo, 1920×1080). A mayor resolución, mayor calidad percibida, pero más carga de trabajo.
+- **Profundidad de color**: cantidad de colores que pueden mostrarse a la vez. A mayor profundidad, más memoria de vídeo requerida.
+- **Frecuencia de refresco**: cuántas veces por segundo se actualiza la imagen. Se mide en Hz y afecta a la fluidez y al parpadeo percibido.
+
+## 3.1.1 Resolución y número de píxeles (ejemplos)
+
+| Resolución | Nº de píxeles |
+|-----------|---------------|
+| 640×480   | 307.200       |
+| 800×600   | 480.000       |
+| 1024×768  | 786.432       |
+| 1280×1024 | 1.310.720     |
+| 1600×1200 | 1.920.000     |
+
+## 3.1.2 Profundidad de color (bits por píxel)
+
+| Profundidad | Nº de colores | Denominación habitual |
+|-------------|---------------|-----------------------|
+| 4 bits      | 16            | VGA estándar          |
+| 8 bits      | 256           | 256 colores           |
+| 16 bits     | 65.536        | High color            |
+| 32 bits     | 16.777.216    | True color            |
+
+A mayor profundidad de color, más memoria necesita el sistema para almacenar cada imagen.
+
+## 3.1.3 Frecuencia de refresco
+
+La frecuencia de refresco indica cuántas veces por segundo se actualiza la imagen (Hz). En pantallas antiguas era clave para evitar el parpadeo; en paneles modernos sigue siendo un factor de fluidez.
+
+---
+
 # 4. VRAM, ancho de banda y resolución
 
 La **VRAM** no es solo cantidad. También importa el **ancho de banda**, que depende de la velocidad de la memoria y del ancho del bus.
@@ -127,6 +165,28 @@ La **VRAM** no es solo cantidad. También importa el **ancho de banda**, que dep
   <img src="../assets/gpu/hbm_stack_gp100.jpg" alt="Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100). Fuente: Wikimedia Commons.</figcaption>
 </figure>
+
+## 4.2 Tipos históricos de memoria gráfica (visión histórica)
+
+Antes de la popularización de GDDR, se utilizaron distintos tipos de memoria:
+
+- **DRAM**: económica pero con menor rendimiento (lectura o escritura por ciclo).
+- **VRAM**: doble canal, permite leer y escribir de forma simultánea.
+- **EDO RAM**: reduce latencias respecto a DRAM.
+- **MDRAM**: organiza la memoria en bancos para acelerar accesos.
+- **SGRAM/SDRAM**: memorias síncronas usadas en etapas intermedias.
+- **WRAM**: memoria optimizada para gráficos.
+- **CDRAM/3D RAM**: integraban lógica para operaciones gráficas.
+
+Hoy estas tecnologías son principalmente parte de la historia: las GPUs actuales usan **GDDR** o **HBM**.
+
+## 4.3 Z-buffer (profundidad en 3D)
+
+El **Z-buffer** es una zona de memoria que almacena la **profundidad** de cada píxel en escenas 3D. Sirve para decidir qué objetos quedan delante de otros y evitar errores de dibujo.
+
+## 4.4 Ancho de banda de memoria (idea clave)
+
+El **ancho de banda** depende del **bus** (bits) y de la **velocidad** de la memoria. A más ancho de banda, más datos se pueden mover por segundo y mejor rendimiento en tareas intensivas de VRAM.
 
 ---
 
@@ -157,6 +217,19 @@ DisplayPort es el estándar de VESA para entornos PC. La versión 2.1 amplía el
 
 ---
 
+# 5.4 Conectores históricos: VGA y DVI
+
+- **VGA** (analógico) fue durante años el estándar clásico en monitores CRT.
+- **DVI** (digital) surgió para mejorar la calidad de imagen y preparar el paso a pantallas LCD, con versiones DVI-D y DVI-I.
+
+En tarjetas modernas estos conectores suelen aparecer solo mediante adaptadores.
+
+## 5.5 Otras salidas menos comunes (visión histórica)
+
+En generaciones anteriores se usaron **S-Video**, **vídeo compuesto** o **vídeo por componentes**. Hoy están en desuso y aparecen solo en hardware antiguo o adaptadores específicos.
+
+---
+
 # 6. APIs gráficas y drivers
 
 Las **APIs gráficas** son el “idioma” que usan los programas para comunicarse con la GPU:
@@ -166,6 +239,16 @@ Las **APIs gráficas** son el “idioma” que usan los programas para comunicar
 - **Vulkan**: API moderna de bajo nivel, también multiplataforma.
 
 Los **drivers** traducen las órdenes de la API a instrucciones que entiende la GPU. Por eso es clave mantenerlos actualizados.
+
+---
+
+# 6.1 RAMDAC (concepto clásico)
+
+El **RAMDAC** (convertidor digital‑analógico) era el circuito responsable de transformar la señal digital de la tarjeta en señal analógica para monitores VGA. Con la generalización de HDMI/DisplayPort, su importancia ha quedado en segundo plano.
+
+## 6.2 Aceleración 3D por hardware
+
+El **renderizado 3D por hardware** descarga trabajo de la CPU y mejora el rendimiento. Cuando una tarjeta no soporta una función, el software puede **emularla**, pero a costa de perder fluidez.
 
 ---
 
@@ -192,6 +275,49 @@ AMD presentó la arquitectura **RDNA 4** con la serie **Radeon RX 9000**, destac
 | AMD | RDNA 4 | Radeon RX 9000 | Rendimiento y valor en gaming con IA integrada | FSR 4, aceleradores de IA y ray tracing mejorado |
 
 **Nota:** las características y rendimiento exactos dependen del modelo concreto.
+
+---
+
+# 7.4 GPU y criptomonedas (contexto)
+
+Las GPU se han usado en **minería de criptomonedas** por su capacidad de procesamiento paralelo, capaz de ejecutar miles de operaciones simples a la vez. Esto ha provocado:
+
+- **Demanda elevada y picos de precios** en ciertas generaciones de GPU.
+- **Escasez temporal** en el mercado de consumo.
+- **Uso de “rigs”** (equipos dedicados con varias GPU) para maximizar rendimiento.
+
+También se señala que las GPU son más flexibles que los ASIC, ya que pueden reutilizarse para otros fines cuando cambia el algoritmo o la rentabilidad.
+
+## 7.4.1 GPU vs CPU vs ASIC
+
+- **CPU**: buena para tareas generales y lógicas complejas, pero menos eficiente en cálculo masivo repetitivo.
+- **GPU**: miles de núcleos simples permiten paralelismo masivo, ideal para hashing.
+- **ASIC**: chips especializados para un algoritmo concreto; muy eficientes, pero poco flexibles.
+
+## 7.4.2 Algoritmos y uso intensivo de memoria
+
+En **Proof‑of‑Work (PoW)** la GPU calcula hashes hasta cumplir una condición de dificultad. Algunos algoritmos son **memory‑hard**, es decir, obligan a usar mucha VRAM y ancho de banda. En algoritmos tipo Ethash se utiliza un **DAG** (archivo grande en VRAM) que crece con el tiempo.
+
+## 7.4.3 Requisitos técnicos típicos en minería
+
+- **VRAM suficiente** para el tamaño del DAG y futuras actualizaciones.
+- **Ancho de banda de memoria** elevado para accesos intensivos.
+- **Hash rate** como medida de potencia (MH/s o GH/s según algoritmo).
+- **Eficiencia energética** (J/MH o MH/W) para evaluar la rentabilidad.
+
+## 7.4.4 Configuraciones de hardware (rigs)
+
+Los **rigs** de minería suelen incluir varias GPU conectadas mediante risers, una placa con múltiples ranuras PCIe y una fuente de alimentación de alta potencia y eficiencia. La CPU y la RAM pueden ser modestas porque el trabajo lo hace la GPU.
+
+## 7.4.5 Optimización y mantenimiento en minería
+
+- **Undervolting** para reducir consumo y temperatura sin perder rendimiento.
+- **Overclock de memoria** para mejorar el hash rate en algoritmos memory‑hard.
+- **Control térmico** con buena ventilación y limpieza periódica.
+
+## 7.4.6 Impacto en el mercado de GPU
+
+Los periodos de alta rentabilidad en minería han generado **picos de demanda**, subidas de precios y escasez temporal, afectando a usuarios de gaming y profesionales.
 
 ---
 
@@ -228,6 +354,10 @@ Comprobar longitud y grosor: algunas tarjetas ocupan 2 o 3 ranuras. Una mejor re
 - Revisar temperaturas con software de monitorización.
 - Limpiar polvo de disipadores y ventiladores de forma periódica.
 
+## 9.1 Alimentación y conectores PCIe
+
+La ranura **PCIe** puede aportar una potencia limitada. Las tarjetas que superan ese consumo incluyen **conectores de alimentación** adicionales desde la fuente.
+
 ---
 
 # 10. Diagnóstico de fallos frecuentes
@@ -235,6 +365,12 @@ Comprobar longitud y grosor: algunas tarjetas ocupan 2 o 3 ranuras. Una mejor re
 - **Artefactos en pantalla**: posible sobrecalentamiento o VRAM inestable.
 - **Apagones o reinicios**: fuente insuficiente o conectores mal puestos.
 - **Bajo rendimiento**: drivers antiguos o modo de energía incorrecto.
+
+## 10.1 Errores comunes al evaluar una GPU
+
+- **Confundir GPU con tarjeta gráfica completa**: el chip es clave, pero también influyen VRAM, bus y refrigeración.
+- **Sobrevalorar la capacidad de VRAM**: no siempre más GB significa más rendimiento.
+- **Confundir fabricante de GPU con ensamblador**: NVIDIA/AMD diseñan el chip, otras marcas ensamblan la tarjeta.
 
 ---
 
@@ -284,6 +420,9 @@ Comprobar longitud y grosor: algunas tarjetas ocupan 2 o 3 ranuras. Una mejor re
 - [Wikimedia Commons - DisplayPort_Connector.svg](https://commons.wikimedia.org/wiki/File:DisplayPort_Connector.svg)
 - [Wikimedia Commons - GDDR5X_1080ti.jpg](https://commons.wikimedia.org/wiki/File:GDDR5X_1080ti.jpg)
 - [Wikimedia Commons - HBM stack (GP100/Tesla P100)](https://commons.wikimedia.org/wiki/File:Nvidia@16nm@Pascal@GP100@Tesla_P100@T_Taiwan_1912A1_PN9G70.S6W_GP100-897-A1_DSCx11_HBM-Stack_notes.jpg)
+- 16-tarjeta-grafica.pdf (Conrado Perea).
+- Tarjeta grafica.pdf (documento de referencia).
+- Gráficas en Criptomonedas - jrodrei0511 jmaccas0306.pdf.
 
 ## Créditos de imágenes
 
