@@ -147,6 +147,11 @@ La fracción  \frac{p}{q}  (reducida) es **finita** en base b **ssi** los factor
   Ej.: 1101\,0110\,1111\,1001₂ = D6F9₁₆.  
 - **Binario ↔ Octal (×3 bits):** p.ej. 111\,010\,101₂ = 725₈.
 
+<figure>
+  <img src="../assets/binary_to_hexadecimal_or_decimal.jpg" alt="Tabla de correspondencias entre binario, hexadecimal y decimal" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Tabla de correspondencias binario–hex–decimal. Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
 ---
 
 ## 7. Números con signo y complementos
@@ -188,6 +193,11 @@ Se fija cuántos bits corresponden a la fracción. Operaciones requieren reescal
 - **Signo (1 bit)**, **Exponente (8 bits, sesgo 127)**, **Fracción/Mantisa (23 bits)**.  
 - Valor normalizado: (-1)ˢ × 1.\text{mantisa} × 2ᵉ⁻¹²⁷.  
 - Casos especiales: subnormales (e=0,f≠0), ±∞ (e=255,f=0), NaN (e=255,f≠0).
+
+<figure>
+  <img src="../assets/ieee_754_single_precision.svg" alt="Formato IEEE 754 de precisión simple" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Distribución de bits en IEEE 754 de precisión simple. Fuente: Wikimedia Commons.</figcaption>
+</figure>
 
 ### 8.3 Ejemplos de conversión IEEE-754
 **A) 13.25₁₀ → binario IEEE-754 simple**  
@@ -257,15 +267,21 @@ Se fija cuántos bits corresponden a la fracción. Operaciones requieren reescal
 
 ### 11.3 Prefijos
 - **Decimal:** k=10³, M=10⁶, G=10⁹…  
-- **Binario:** Ki=2¹⁰, Mi=2²⁰, Gi=2³⁰…
+- **Binario (IEC):** Ki=2¹⁰, Mi=2²⁰, Gi=2³⁰…  
+  (Los prefijos binarios IEC se usan para distinguir 2¹⁰ de 10³).
 
 ---
 
 ## 12. Bibliografía y recursos
 - Knuth, D. E. *The Art of Computer Programming, Vol. 2*.  
 - Tanenbaum, A. S. *Structured Computer Organization*.  
-- IEEE 754-2008/2019 (resumenes docentes y notas de referencia).  
+- IEEE 754-2019 (estándar oficial de coma flotante).  
+  https://standards.ieee.org/standard/754-2019.html  
+- NIST - Prefixes for binary multiples (Ki, Mi, Gi...).  
+  https://www.physics.nist.gov/cuu/Units/binary.html  
 - [Markdown Guide](https://www.markdownguide.org/) para sintaxis y buenas prácticas.
+- [Wikimedia Commons - Binary to Hexadecimal or Decimal](https://commons.wikimedia.org/wiki/File:Binary_to_Hexadecimal_or_Decimal.jpg)
+- [Wikimedia Commons - IEEE 754 single precision](https://commons.wikimedia.org/wiki/File:IEEE_754_single_precision.svg)
 
 ---
 **Autor:** _(José Manuel González Castillo)_  
