@@ -1,0 +1,5162 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tarjetas gráficas">
+      
+      
+        <meta name="author" content="Jose Manuel Gonzalez Castillo">
+      
+      
+        <link rel="canonical" href="https://axisalberti.github.io/Axis_Apuntes/section1/u09/teoria/MM-U09.1.-Tarjetas-graficas/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../slides/no-disponible/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UD 09 - 9.1 Tarjetas gráficas - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+  
+  
+    
+      
+      
+        
+      
+      
+    
+  
+  
+  <style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-9-tarjetas-graficas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 09 - 9.1 Tarjetas gráficas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u00/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u03/teoria/MM-U03.1.-Chipset/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u04/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/MM-U04.1.-Conexiones-externas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u05/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u06/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u06/teoria/MM-U06.1.-CMOS-y-UEFI/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u07/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u07/teoria/MM-U07.1.-Almacenamiento/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u08/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u08/teoria/MM-U08.1.-Microprocesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-9-tarjetas-graficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 9. TARJETAS GRÁFICAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-una-tarjeta-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es una tarjeta gráfica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-componentes-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Componentes principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Componentes principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gpu-procesador-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 GPU (procesador gráfico)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-memoria-de-video-vram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Memoria de vídeo (VRAM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-vrm-y-alimentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 VRM y alimentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pcb-y-firmware-vbios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 PCB y firmware (VBIOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-interfaz-con-la-placa-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Interfaz con la placa base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-salidas-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Salidas de vídeo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-refrigeracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Refrigeración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento-basico-del-renderizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento básico del renderizado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-conceptos-fundamentales-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Conceptos fundamentales de imagen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Conceptos fundamentales de imagen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-resolucion-y-numero-de-pixeles-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Resolución y número de píxeles (ejemplos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-profundidad-de-color-bits-por-pixel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Profundidad de color (bits por píxel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-frecuencia-de-refresco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Frecuencia de refresco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vram-ancho-de-banda-y-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. VRAM, ancho de banda y resolución
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. VRAM, ancho de banda y resolución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-gddr-frente-a-hbm-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 GDDR frente a HBM (visión general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tipos-historicos-de-memoria-grafica-vision-historica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Tipos históricos de memoria gráfica (visión histórica)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-z-buffer-profundidad-en-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Z-buffer (profundidad en 3D)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ancho-de-banda-de-memoria-idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ancho de banda de memoria (idea clave)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-interfaces-y-estandares-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Interfaces y estándares de vídeo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Interfaces y estándares de vídeo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-hdmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 HDMI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-displayport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 DisplayPort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-compatibilidad-y-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Compatibilidad y cables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-conectores-historicos-vga-y-dvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Conectores históricos: VGA y DVI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Conectores históricos: VGA y DVI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#55-otras-salidas-menos-comunes-vision-historica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Otras salidas menos comunes (visión histórica)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-apis-graficas-y-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. APIs gráficas y drivers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-ramdac-concepto-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 RAMDAC (concepto clásico)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 RAMDAC (concepto clásico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62-aceleracion-3d-por-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Aceleración 3D por hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-panorama-actual-2025-2026-nvidia-y-amd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Panorama actual (2025-2026): NVIDIA y AMD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Panorama actual (2025-2026): NVIDIA y AMD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-nvidia-geforce-rtx-50-series-blackwell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 NVIDIA (GeForce RTX 50 Series - Blackwell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-amd-radeon-rx-9000-rdna-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 AMD (Radeon RX 9000 - RDNA 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-comparativa-rapida-nvidia-vs-amd-generacion-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Comparativa rápida (NVIDIA vs AMD, generación actual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-gpu-y-criptomonedas-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 GPU y criptomonedas (contexto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 GPU y criptomonedas (contexto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-gpu-vs-cpu-vs-asic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.1 GPU vs CPU vs ASIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-algoritmos-y-uso-intensivo-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.2 Algoritmos y uso intensivo de memoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743-requisitos-tecnicos-tipicos-en-mineria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.3 Requisitos técnicos típicos en minería
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#744-configuraciones-de-hardware-rigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.4 Configuraciones de hardware (rigs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#745-optimizacion-y-mantenimiento-en-mineria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.5 Optimización y mantenimiento en minería
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#746-impacto-en-el-mercado-de-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.6 Impacto en el mercado de GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-criterios-de-seleccion-de-una-tarjeta-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Criterios de selección de una tarjeta gráfica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Criterios de selección de una tarjeta gráfica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-uso-previsto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Uso previsto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-compatibilidad-y-conectividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Compatibilidad y conectividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-consumo-y-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Consumo y fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-tamano-fisico-y-refrigeracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Tamaño físico y refrigeración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-montaje-y-mantenimiento-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Montaje y mantenimiento básico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Montaje y mantenimiento básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-alimentacion-y-conectores-pcie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Alimentación y conectores PCIe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-diagnostico-de-fallos-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Diagnóstico de fallos frecuentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Diagnóstico de fallos frecuentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-errores-comunes-al-evaluar-una-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Errores comunes al evaluar una GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen (ideas clave)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-y-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias y enlaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referencias y enlaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creditos-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créditos de imágenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/slides/PRL-slide-prueba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/SI-U01.1.-Redes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-9-tarjetas-graficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 9. TARJETAS GRÁFICAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-una-tarjeta-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es una tarjeta gráfica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-componentes-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Componentes principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Componentes principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gpu-procesador-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 GPU (procesador gráfico)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-memoria-de-video-vram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Memoria de vídeo (VRAM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-vrm-y-alimentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 VRM y alimentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-pcb-y-firmware-vbios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 PCB y firmware (VBIOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-interfaz-con-la-placa-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Interfaz con la placa base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-salidas-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Salidas de vídeo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-refrigeracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Refrigeración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento-basico-del-renderizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento básico del renderizado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-conceptos-fundamentales-de-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Conceptos fundamentales de imagen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Conceptos fundamentales de imagen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-resolucion-y-numero-de-pixeles-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Resolución y número de píxeles (ejemplos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-profundidad-de-color-bits-por-pixel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Profundidad de color (bits por píxel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-frecuencia-de-refresco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Frecuencia de refresco
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vram-ancho-de-banda-y-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. VRAM, ancho de banda y resolución
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. VRAM, ancho de banda y resolución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-gddr-frente-a-hbm-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 GDDR frente a HBM (visión general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tipos-historicos-de-memoria-grafica-vision-historica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Tipos históricos de memoria gráfica (visión histórica)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-z-buffer-profundidad-en-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Z-buffer (profundidad en 3D)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ancho-de-banda-de-memoria-idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ancho de banda de memoria (idea clave)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-interfaces-y-estandares-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Interfaces y estándares de vídeo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Interfaces y estándares de vídeo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-hdmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 HDMI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-displayport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 DisplayPort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-compatibilidad-y-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Compatibilidad y cables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-conectores-historicos-vga-y-dvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Conectores históricos: VGA y DVI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Conectores históricos: VGA y DVI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#55-otras-salidas-menos-comunes-vision-historica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Otras salidas menos comunes (visión histórica)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-apis-graficas-y-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. APIs gráficas y drivers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-ramdac-concepto-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 RAMDAC (concepto clásico)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 RAMDAC (concepto clásico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62-aceleracion-3d-por-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Aceleración 3D por hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-panorama-actual-2025-2026-nvidia-y-amd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Panorama actual (2025-2026): NVIDIA y AMD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Panorama actual (2025-2026): NVIDIA y AMD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-nvidia-geforce-rtx-50-series-blackwell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 NVIDIA (GeForce RTX 50 Series - Blackwell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-amd-radeon-rx-9000-rdna-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 AMD (Radeon RX 9000 - RDNA 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-comparativa-rapida-nvidia-vs-amd-generacion-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Comparativa rápida (NVIDIA vs AMD, generación actual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-gpu-y-criptomonedas-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 GPU y criptomonedas (contexto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 GPU y criptomonedas (contexto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-gpu-vs-cpu-vs-asic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.1 GPU vs CPU vs ASIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-algoritmos-y-uso-intensivo-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.2 Algoritmos y uso intensivo de memoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743-requisitos-tecnicos-tipicos-en-mineria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.3 Requisitos técnicos típicos en minería
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#744-configuraciones-de-hardware-rigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.4 Configuraciones de hardware (rigs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#745-optimizacion-y-mantenimiento-en-mineria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.5 Optimización y mantenimiento en minería
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#746-impacto-en-el-mercado-de-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4.6 Impacto en el mercado de GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-criterios-de-seleccion-de-una-tarjeta-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Criterios de selección de una tarjeta gráfica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Criterios de selección de una tarjeta gráfica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-uso-previsto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Uso previsto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-compatibilidad-y-conectividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Compatibilidad y conectividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-consumo-y-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Consumo y fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-tamano-fisico-y-refrigeracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Tamaño físico y refrigeración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-montaje-y-mantenimiento-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Montaje y mantenimiento básico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Montaje y mantenimiento básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-alimentacion-y-conectores-pcie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Alimentación y conectores PCIe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-diagnostico-de-fallos-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Diagnóstico de fallos frecuentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Diagnóstico de fallos frecuentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-errores-comunes-al-evaluar-una-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Errores comunes al evaluar una GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen (ideas clave)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-y-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias y enlaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referencias y enlaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creditos-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créditos de imágenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:gpu" class="md-tag md-tag-icon">gpu</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:graficos" class="md-tag md-tag-icon">graficos</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:tarjeta-grafica" class="md-tag md-tag-icon">tarjeta-grafica</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h2 id="tema-9-tarjetas-graficas">TEMA 9. TARJETAS GRÁFICAS<a class="headerlink" href="#tema-9-tarjetas-graficas" title="Permanent link">&para;</a></h2>
+<hr />
+<h1 id="objetivos-de-aprendizaje">Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Comprender el papel de la GPU en un sistema informático.</li>
+<li>Identificar los componentes básicos de una tarjeta gráfica.</li>
+<li>Explicar el flujo general de renderizado 2D/3D.</li>
+<li>Diferenciar interfaces y salidas de vídeo habituales.</li>
+<li>Aplicar criterios de selección, montaje y mantenimiento.</li>
+</ul>
+<hr />
+<h1 id="1-que-es-una-tarjeta-grafica">1. Qué es una tarjeta gráfica<a class="headerlink" href="#1-que-es-una-tarjeta-grafica" title="Permanent link">&para;</a></h1>
+<p>La <strong>tarjeta gráfica</strong> es el componente encargado de <strong>procesar y generar imágenes</strong> para la pantalla. Está diseñada para ejecutar muchos cálculos en paralelo: dibuja píxeles, aplica texturas, calcula luces y sombras y muestra vídeo con fluidez.</p>
+<p>Es importante distinguir:</p>
+<ul>
+<li><strong>GPU (Graphics Processing Unit)</strong>: el procesador gráfico en sí.</li>
+<li><strong>Tarjeta gráfica</strong>: la placa completa que integra la GPU, la VRAM, el VRM, la refrigeración y las salidas de vídeo.</li>
+</ul>
+<p>Puede presentarse en dos formas:</p>
+<ul>
+<li><strong>GPU integrada</strong>: está dentro del procesador o la placa base y comparte la memoria RAM del sistema.</li>
+<li><strong>GPU dedicada</strong>: tarjeta independiente con su propia memoria de vídeo (VRAM) y mayor potencia.
+En algunas GPU integradas se emplea <strong>UMA (Unified Memory Architecture)</strong>, donde la RAM del sistema se reserva como memoria gráfica.</li>
+</ul>
+<figure>
+  <img src="../assets/gpu/rtx5090_fe.png" alt="Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Tarjeta gráfica NVIDIA reciente (ejemplo RTX 50). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<hr />
+<h1 id="2-componentes-principales">2. Componentes principales<a class="headerlink" href="#2-componentes-principales" title="Permanent link">&para;</a></h1>
+<h2 id="21-gpu-procesador-grafico">2.1 GPU (procesador gráfico)<a class="headerlink" href="#21-gpu-procesador-grafico" title="Permanent link">&para;</a></h2>
+<p>Es el chip principal. Contiene miles de unidades de ejecución en paralelo (núcleos de sombreado), además de <strong>cachés</strong>, <strong>unidades de textura</strong> y <strong>ROP</strong> (salida de render). Está optimizada para cálculos gráficos y de coma flotante.</p>
+<h2 id="22-memoria-de-video-vram">2.2 Memoria de vídeo (VRAM)<a class="headerlink" href="#22-memoria-de-video-vram" title="Permanent link">&para;</a></h2>
+<p>Almacena texturas, buffers y datos necesarios para el renderizado. Su rendimiento depende de:</p>
+<ul>
+<li><strong>Capacidad</strong> (GB).</li>
+<li><strong>Ancho de banda</strong> (bus de memoria y velocidad efectiva).</li>
+<li><strong>Latencia y cachés</strong> internas.</li>
+</ul>
+<p>Una GPU con menos VRAM puede rendir mejor si su memoria es más rápida y el bus es más ancho.
+El <strong>frame buffer</strong> (búfer de imagen) es la zona de VRAM donde se almacena el fotograma final antes de enviarlo al monitor.</p>
+<h2 id="23-vrm-y-alimentacion">2.3 VRM y alimentación<a class="headerlink" href="#23-vrm-y-alimentacion" title="Permanent link">&para;</a></h2>
+<p>El <strong>módulo regulador de voltaje (VRM)</strong> convierte la energía de la fuente a niveles estables para la GPU y la VRAM. Las tarjetas potentes requieren conectores de alimentación adicionales y una fuente adecuada.</p>
+<h2 id="24-pcb-y-firmware-vbios">2.4 PCB y firmware (VBIOS)<a class="headerlink" href="#24-pcb-y-firmware-vbios" title="Permanent link">&para;</a></h2>
+<p>La <strong>placa (PCB)</strong> conecta todos los componentes. El <strong>VBIOS</strong> define parámetros clave: frecuencias, límites de energía y curvas de ventilación.</p>
+<h2 id="25-interfaz-con-la-placa-base">2.5 Interfaz con la placa base<a class="headerlink" href="#25-interfaz-con-la-placa-base" title="Permanent link">&para;</a></h2>
+<p>La conexión más habitual es <strong>PCI Express (PCIe)</strong> en formato <strong>x16</strong>. PCIe es un estándar mantenido por PCI-SIG y evoluciona por versiones (4.0, 5.0, 6.0, 7.0), manteniendo compatibilidad hacia atrás.</p>
+<figure>
+  <img src="../assets/gpu/pcie5_trx50_slot.png" alt="Ranura PCI Express x16 en placa base reciente" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Ranura PCI Express x16 en placa base reciente. Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<h2 id="26-salidas-de-video">2.6 Salidas de vídeo<a class="headerlink" href="#26-salidas-de-video" title="Permanent link">&para;</a></h2>
+<p>Las más comunes son <strong>HDMI</strong> y <strong>DisplayPort</strong>. HDMI está muy extendido en televisores y monitores domésticos, mientras que DisplayPort es el estándar habitual en monitores de PC.</p>
+<h2 id="27-refrigeracion">2.7 Refrigeración<a class="headerlink" href="#27-refrigeracion" title="Permanent link">&para;</a></h2>
+<p>La GPU genera calor intenso. Por eso se usan disipadores, heatpipes y ventiladores; en equipos de alto rendimiento también hay refrigeración líquida. Una mala refrigeración provoca <strong>thermal throttling</strong> (bajada automática de rendimiento).</p>
+<hr />
+<h1 id="3-funcionamiento-basico-del-renderizado">3. Funcionamiento básico del renderizado<a class="headerlink" href="#3-funcionamiento-basico-del-renderizado" title="Permanent link">&para;</a></h1>
+<p>El proceso gráfico simplificado sigue estas fases:</p>
+<ol>
+<li><strong>Entrada de datos</strong>: la CPU envía geometría y comandos de dibujo a la GPU.</li>
+<li><strong>Procesado de vértices</strong>: transformación de modelos 3D al espacio de pantalla.</li>
+<li><strong>Rasterización</strong>: conversión de primitivas (triángulos) a píxeles.</li>
+<li><strong>Shaders de fragmento</strong>: cálculo de color, iluminación, sombras y efectos.</li>
+<li><strong>Frame buffer</strong>: el frame final se guarda en memoria y se presenta al monitor.</li>
+</ol>
+<p>Además del renderizado tradicional, las GPUs modernas incorporan <strong>trazado de rayos</strong> (ray tracing) para mejorar reflejos, sombras e iluminación con mayor realismo.</p>
+<hr />
+<h1 id="31-conceptos-fundamentales-de-imagen">3.1 Conceptos fundamentales de imagen<a class="headerlink" href="#31-conceptos-fundamentales-de-imagen" title="Permanent link">&para;</a></h1>
+<p>Para entender el rendimiento de una tarjeta gráfica es clave dominar estos conceptos:</p>
+<ul>
+<li><strong>Píxel</strong>: unidad mínima de información visual. Cada píxel tiene un color e intensidad propios.</li>
+<li><strong>Resolución</strong>: número total de píxeles mostrados (por ejemplo, 1920×1080). A mayor resolución, mayor calidad percibida, pero más carga de trabajo.</li>
+<li><strong>Profundidad de color</strong>: cantidad de colores que pueden mostrarse a la vez. A mayor profundidad, más memoria de vídeo requerida.</li>
+<li><strong>Frecuencia de refresco</strong>: cuántas veces por segundo se actualiza la imagen. Se mide en Hz y afecta a la fluidez y al parpadeo percibido.</li>
+</ul>
+<h2 id="311-resolucion-y-numero-de-pixeles-ejemplos">3.1.1 Resolución y número de píxeles (ejemplos)<a class="headerlink" href="#311-resolucion-y-numero-de-pixeles-ejemplos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resolución</th>
+<th>Nº de píxeles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>640×480</td>
+<td>307.200</td>
+</tr>
+<tr>
+<td>800×600</td>
+<td>480.000</td>
+</tr>
+<tr>
+<td>1024×768</td>
+<td>786.432</td>
+</tr>
+<tr>
+<td>1280×1024</td>
+<td>1.310.720</td>
+</tr>
+<tr>
+<td>1600×1200</td>
+<td>1.920.000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="312-profundidad-de-color-bits-por-pixel">3.1.2 Profundidad de color (bits por píxel)<a class="headerlink" href="#312-profundidad-de-color-bits-por-pixel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Profundidad</th>
+<th>Nº de colores</th>
+<th>Denominación habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 bits</td>
+<td>16</td>
+<td>VGA estándar</td>
+</tr>
+<tr>
+<td>8 bits</td>
+<td>256</td>
+<td>256 colores</td>
+</tr>
+<tr>
+<td>16 bits</td>
+<td>65.536</td>
+<td>High color</td>
+</tr>
+<tr>
+<td>32 bits</td>
+<td>16.777.216</td>
+<td>True color</td>
+</tr>
+</tbody>
+</table>
+<p>A mayor profundidad de color, más memoria necesita el sistema para almacenar cada imagen.</p>
+<h2 id="313-frecuencia-de-refresco">3.1.3 Frecuencia de refresco<a class="headerlink" href="#313-frecuencia-de-refresco" title="Permanent link">&para;</a></h2>
+<p>La frecuencia de refresco indica cuántas veces por segundo se actualiza la imagen (Hz). En pantallas antiguas era clave para evitar el parpadeo; en paneles modernos sigue siendo un factor de fluidez.</p>
+<hr />
+<h1 id="4-vram-ancho-de-banda-y-resolucion">4. VRAM, ancho de banda y resolución<a class="headerlink" href="#4-vram-ancho-de-banda-y-resolucion" title="Permanent link">&para;</a></h1>
+<p>La <strong>VRAM</strong> no es solo cantidad. También importa el <strong>ancho de banda</strong>, que depende de la velocidad de la memoria y del ancho del bus.</p>
+<ul>
+<li>A mayor resolución y mayor calidad de texturas, más VRAM se necesita.</li>
+<li>El ancho de banda afecta a la fluidez en escenarios con muchas texturas y efectos.</li>
+</ul>
+<h2 id="41-gddr-frente-a-hbm-vision-general">4.1 GDDR frente a HBM (visión general)<a class="headerlink" href="#41-gddr-frente-a-hbm-vision-general" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>GDDR</strong>: memoria rápida montada en chips alrededor de la GPU. Es común en tarjetas de consumo por su coste y disponibilidad.</li>
+<li><strong>HBM (High Bandwidth Memory)</strong>: memoria apilada (stack) muy cerca de la GPU, con gran ancho de banda y buena eficiencia energética; suele verse en tarjetas profesionales.</li>
+</ul>
+<figure>
+  <img src="../assets/gpu/gddr5x_1080ti.jpg" alt="Chips de memoria GDDR en una GPU (ejemplo GeForce GTX 1080 Ti)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Chips de memoria GDDR en una GPU (ejemplo GeForce GTX 1080 Ti). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/gpu/hbm_stack_gp100.jpg" alt="Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Memoria HBM apilada junto a la GPU (ejemplo GP100/Tesla P100). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<h2 id="42-tipos-historicos-de-memoria-grafica-vision-historica">4.2 Tipos históricos de memoria gráfica (visión histórica)<a class="headerlink" href="#42-tipos-historicos-de-memoria-grafica-vision-historica" title="Permanent link">&para;</a></h2>
+<p>Antes de la popularización de GDDR, se utilizaron distintos tipos de memoria:</p>
+<ul>
+<li><strong>DRAM</strong>: económica pero con menor rendimiento (lectura o escritura por ciclo).</li>
+<li><strong>VRAM</strong>: doble canal, permite leer y escribir de forma simultánea.</li>
+<li><strong>EDO RAM</strong>: reduce latencias respecto a DRAM.</li>
+<li><strong>MDRAM</strong>: organiza la memoria en bancos para acelerar accesos.</li>
+<li><strong>SGRAM/SDRAM</strong>: memorias síncronas usadas en etapas intermedias.</li>
+<li><strong>WRAM</strong>: memoria optimizada para gráficos.</li>
+<li><strong>CDRAM/3D RAM</strong>: integraban lógica para operaciones gráficas.</li>
+</ul>
+<p>Hoy estas tecnologías son principalmente parte de la historia: las GPUs actuales usan <strong>GDDR</strong> o <strong>HBM</strong>.</p>
+<h2 id="43-z-buffer-profundidad-en-3d">4.3 Z-buffer (profundidad en 3D)<a class="headerlink" href="#43-z-buffer-profundidad-en-3d" title="Permanent link">&para;</a></h2>
+<p>El <strong>Z-buffer</strong> es una zona de memoria que almacena la <strong>profundidad</strong> de cada píxel en escenas 3D. Sirve para decidir qué objetos quedan delante de otros y evitar errores de dibujo.</p>
+<h2 id="44-ancho-de-banda-de-memoria-idea-clave">4.4 Ancho de banda de memoria (idea clave)<a class="headerlink" href="#44-ancho-de-banda-de-memoria-idea-clave" title="Permanent link">&para;</a></h2>
+<p>El <strong>ancho de banda</strong> depende del <strong>bus</strong> (bits) y de la <strong>velocidad</strong> de la memoria. A más ancho de banda, más datos se pueden mover por segundo y mejor rendimiento en tareas intensivas de VRAM.</p>
+<hr />
+<h1 id="5-interfaces-y-estandares-de-video">5. Interfaces y estándares de vídeo<a class="headerlink" href="#5-interfaces-y-estandares-de-video" title="Permanent link">&para;</a></h1>
+<h2 id="51-hdmi">5.1 HDMI<a class="headerlink" href="#51-hdmi" title="Permanent link">&para;</a></h2>
+<p>HDMI es el estándar más común en televisores y monitores domésticos. El HDMI Forum publica las versiones del estándar (HDMI 2.x), que van ampliando resolución, tasas de refresco y ancho de banda.</p>
+<figure>
+  <img src="../assets/gpu/hdmi_connector.svg" alt="Conector HDMI (vista esquemática)" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Conector HDMI (vista esquemática). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<h2 id="52-displayport">5.2 DisplayPort<a class="headerlink" href="#52-displayport" title="Permanent link">&para;</a></h2>
+<p>DisplayPort es el estándar de VESA para entornos PC. La versión 2.1 amplía el ancho de banda y la interoperabilidad con USB-C/USB4.</p>
+<figure>
+  <img src="../assets/gpu/displayport_connector.svg" alt="Conector DisplayPort (vista esquemática)" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Conector DisplayPort (vista esquemática). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<h2 id="53-compatibilidad-y-cables">5.3 Compatibilidad y cables<a class="headerlink" href="#53-compatibilidad-y-cables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HDMI y DisplayPort son retrocompatibles entre versiones.</li>
+<li>Los cables certificados (DP40/DP80 en DisplayPort) garantizan el rendimiento declarado por el estándar.</li>
+</ul>
+<hr />
+<h1 id="54-conectores-historicos-vga-y-dvi">5.4 Conectores históricos: VGA y DVI<a class="headerlink" href="#54-conectores-historicos-vga-y-dvi" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>VGA</strong> (analógico) fue durante años el estándar clásico en monitores CRT.</li>
+<li><strong>DVI</strong> (digital) surgió para mejorar la calidad de imagen y preparar el paso a pantallas LCD, con versiones DVI-D y DVI-I.</li>
+</ul>
+<p>En tarjetas modernas estos conectores suelen aparecer solo mediante adaptadores.</p>
+<h2 id="55-otras-salidas-menos-comunes-vision-historica">5.5 Otras salidas menos comunes (visión histórica)<a class="headerlink" href="#55-otras-salidas-menos-comunes-vision-historica" title="Permanent link">&para;</a></h2>
+<p>En generaciones anteriores se usaron <strong>S-Video</strong>, <strong>vídeo compuesto</strong> o <strong>vídeo por componentes</strong>. Hoy están en desuso y aparecen solo en hardware antiguo o adaptadores específicos.</p>
+<hr />
+<h1 id="6-apis-graficas-y-drivers">6. APIs gráficas y drivers<a class="headerlink" href="#6-apis-graficas-y-drivers" title="Permanent link">&para;</a></h1>
+<p>Las <strong>APIs gráficas</strong> son el “idioma” que usan los programas para comunicarse con la GPU:</p>
+<ul>
+<li><strong>Direct3D (DirectX)</strong>: estándar en Windows para juegos y software multimedia.</li>
+<li><strong>OpenGL</strong>: API multiplataforma con largo recorrido.</li>
+<li><strong>Vulkan</strong>: API moderna de bajo nivel, también multiplataforma.</li>
+</ul>
+<p>Los <strong>drivers</strong> traducen las órdenes de la API a instrucciones que entiende la GPU. Por eso es clave mantenerlos actualizados.</p>
+<hr />
+<h1 id="61-ramdac-concepto-clasico">6.1 RAMDAC (concepto clásico)<a class="headerlink" href="#61-ramdac-concepto-clasico" title="Permanent link">&para;</a></h1>
+<p>El <strong>RAMDAC</strong> (convertidor digital‑analógico) era el circuito responsable de transformar la señal digital de la tarjeta en señal analógica para monitores VGA. Con la generalización de HDMI/DisplayPort, su importancia ha quedado en segundo plano.</p>
+<h2 id="62-aceleracion-3d-por-hardware">6.2 Aceleración 3D por hardware<a class="headerlink" href="#62-aceleracion-3d-por-hardware" title="Permanent link">&para;</a></h2>
+<p>El <strong>renderizado 3D por hardware</strong> descarga trabajo de la CPU y mejora el rendimiento. Cuando una tarjeta no soporta una función, el software puede <strong>emularla</strong>, pero a costa de perder fluidez.</p>
+<hr />
+<h1 id="7-panorama-actual-2025-2026-nvidia-y-amd">7. Panorama actual (2025-2026): NVIDIA y AMD<a class="headerlink" href="#7-panorama-actual-2025-2026-nvidia-y-amd" title="Permanent link">&para;</a></h1>
+<h2 id="71-nvidia-geforce-rtx-50-series-blackwell">7.1 NVIDIA (GeForce RTX 50 Series - Blackwell)<a class="headerlink" href="#71-nvidia-geforce-rtx-50-series-blackwell" title="Permanent link">&para;</a></h2>
+<p>NVIDIA anunció la serie <strong>GeForce RTX 50</strong> basada en <strong>Blackwell</strong>, con mejoras en renderizado asistido por IA, nuevas tecnologías de sombreado y DLSS 4.</p>
+<h2 id="72-amd-radeon-rx-9000-rdna-4">7.2 AMD (Radeon RX 9000 - RDNA 4)<a class="headerlink" href="#72-amd-radeon-rx-9000-rdna-4" title="Permanent link">&para;</a></h2>
+<p>AMD presentó la arquitectura <strong>RDNA 4</strong> con la serie <strong>Radeon RX 9000</strong>, destacando mejoras en ray tracing y aceleradores de IA, junto con FSR 4.</p>
+<figure>
+  <img src="../assets/gpu/amd_radeon_rx9060xt.png" alt="Tarjeta gráfica AMD reciente (ejemplo RX 9000)" style="width:100%;height:auto;max-width:800px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Tarjeta gráfica AMD reciente (ejemplo RX 9000). Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<h2 id="73-comparativa-rapida-nvidia-vs-amd-generacion-actual">7.3 Comparativa rápida (NVIDIA vs AMD, generación actual)<a class="headerlink" href="#73-comparativa-rapida-nvidia-vs-amd-generacion-actual" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fabricante</th>
+<th>Arquitectura (2025)</th>
+<th>Serie actual</th>
+<th>Enfoque principal</th>
+<th>Tecnologías destacadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVIDIA</td>
+<td>Blackwell</td>
+<td>GeForce RTX 50</td>
+<td>Renderizado neuronal e IA en juegos y creación</td>
+<td>DLSS 4, RT Cores y Tensor Cores avanzados</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>RDNA 4</td>
+<td>Radeon RX 9000</td>
+<td>Rendimiento y valor en gaming con IA integrada</td>
+<td>FSR 4, aceleradores de IA y ray tracing mejorado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> las características y rendimiento exactos dependen del modelo concreto.</p>
+<hr />
+<h1 id="74-gpu-y-criptomonedas-contexto">7.4 GPU y criptomonedas (contexto)<a class="headerlink" href="#74-gpu-y-criptomonedas-contexto" title="Permanent link">&para;</a></h1>
+<p>Las GPU se han usado en <strong>minería de criptomonedas</strong> por su capacidad de procesamiento paralelo, capaz de ejecutar miles de operaciones simples a la vez. Esto ha provocado:</p>
+<ul>
+<li><strong>Demanda elevada y picos de precios</strong> en ciertas generaciones de GPU.</li>
+<li><strong>Escasez temporal</strong> en el mercado de consumo.</li>
+<li><strong>Uso de “rigs”</strong> (equipos dedicados con varias GPU) para maximizar rendimiento.</li>
+</ul>
+<p>También se señala que las GPU son más flexibles que los ASIC, ya que pueden reutilizarse para otros fines cuando cambia el algoritmo o la rentabilidad.</p>
+<h2 id="741-gpu-vs-cpu-vs-asic">7.4.1 GPU vs CPU vs ASIC<a class="headerlink" href="#741-gpu-vs-cpu-vs-asic" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>CPU</strong>: buena para tareas generales y lógicas complejas, pero menos eficiente en cálculo masivo repetitivo.</li>
+<li><strong>GPU</strong>: miles de núcleos simples permiten paralelismo masivo, ideal para hashing.</li>
+<li><strong>ASIC</strong>: chips especializados para un algoritmo concreto; muy eficientes, pero poco flexibles.</li>
+</ul>
+<h2 id="742-algoritmos-y-uso-intensivo-de-memoria">7.4.2 Algoritmos y uso intensivo de memoria<a class="headerlink" href="#742-algoritmos-y-uso-intensivo-de-memoria" title="Permanent link">&para;</a></h2>
+<p>En <strong>Proof‑of‑Work (PoW)</strong> la GPU calcula hashes hasta cumplir una condición de dificultad. Algunos algoritmos son <strong>memory‑hard</strong>, es decir, obligan a usar mucha VRAM y ancho de banda. En algoritmos tipo Ethash se utiliza un <strong>DAG</strong> (archivo grande en VRAM) que crece con el tiempo.</p>
+<h2 id="743-requisitos-tecnicos-tipicos-en-mineria">7.4.3 Requisitos técnicos típicos en minería<a class="headerlink" href="#743-requisitos-tecnicos-tipicos-en-mineria" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>VRAM suficiente</strong> para el tamaño del DAG y futuras actualizaciones.</li>
+<li><strong>Ancho de banda de memoria</strong> elevado para accesos intensivos.</li>
+<li><strong>Hash rate</strong> como medida de potencia (MH/s o GH/s según algoritmo).</li>
+<li><strong>Eficiencia energética</strong> (J/MH o MH/W) para evaluar la rentabilidad.</li>
+</ul>
+<h2 id="744-configuraciones-de-hardware-rigs">7.4.4 Configuraciones de hardware (rigs)<a class="headerlink" href="#744-configuraciones-de-hardware-rigs" title="Permanent link">&para;</a></h2>
+<p>Los <strong>rigs</strong> de minería suelen incluir varias GPU conectadas mediante risers, una placa con múltiples ranuras PCIe y una fuente de alimentación de alta potencia y eficiencia. La CPU y la RAM pueden ser modestas porque el trabajo lo hace la GPU.</p>
+<h2 id="745-optimizacion-y-mantenimiento-en-mineria">7.4.5 Optimización y mantenimiento en minería<a class="headerlink" href="#745-optimizacion-y-mantenimiento-en-mineria" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Undervolting</strong> para reducir consumo y temperatura sin perder rendimiento.</li>
+<li><strong>Overclock de memoria</strong> para mejorar el hash rate en algoritmos memory‑hard.</li>
+<li><strong>Control térmico</strong> con buena ventilación y limpieza periódica.</li>
+</ul>
+<h2 id="746-impacto-en-el-mercado-de-gpu">7.4.6 Impacto en el mercado de GPU<a class="headerlink" href="#746-impacto-en-el-mercado-de-gpu" title="Permanent link">&para;</a></h2>
+<p>Los periodos de alta rentabilidad en minería han generado <strong>picos de demanda</strong>, subidas de precios y escasez temporal, afectando a usuarios de gaming y profesionales.</p>
+<hr />
+<h1 id="8-criterios-de-seleccion-de-una-tarjeta-grafica">8. Criterios de selección de una tarjeta gráfica<a class="headerlink" href="#8-criterios-de-seleccion-de-una-tarjeta-grafica" title="Permanent link">&para;</a></h1>
+<h2 id="81-uso-previsto">8.1 Uso previsto<a class="headerlink" href="#81-uso-previsto" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ofimática</strong>: integrada suele ser suficiente.</li>
+<li><strong>Gaming 1080p/1440p</strong>: GPU dedicada de gama media o alta.</li>
+<li><strong>Edición de vídeo/3D</strong>: GPU potente con buena VRAM y ancho de banda.</li>
+<li><strong>IA local y creación de contenido</strong>: GPU con buena VRAM y soporte de aceleración.</li>
+</ul>
+<h2 id="82-compatibilidad-y-conectividad">8.2 Compatibilidad y conectividad<a class="headerlink" href="#82-compatibilidad-y-conectividad" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Resolución y tasa de refresco del monitor.</li>
+<li>Puertos disponibles (HDMI/DisplayPort).</li>
+<li>Versión de PCIe compatible con la placa base.</li>
+</ul>
+<h2 id="83-consumo-y-fuente">8.3 Consumo y fuente<a class="headerlink" href="#83-consumo-y-fuente" title="Permanent link">&para;</a></h2>
+<p>Verificar la potencia de la fuente (PSU), el número de conectores necesarios y la eficiencia energética.</p>
+<h2 id="84-tamano-fisico-y-refrigeracion">8.4 Tamaño físico y refrigeración<a class="headerlink" href="#84-tamano-fisico-y-refrigeracion" title="Permanent link">&para;</a></h2>
+<p>Comprobar longitud y grosor: algunas tarjetas ocupan 2 o 3 ranuras. Una mejor refrigeración aumenta la vida útil y reduce el thermal throttling.</p>
+<hr />
+<h1 id="9-montaje-y-mantenimiento-basico">9. Montaje y mantenimiento básico<a class="headerlink" href="#9-montaje-y-mantenimiento-basico" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Descargar el driver más reciente antes de instalar.</li>
+<li>Instalar la tarjeta en la ranura PCIe x16 principal.</li>
+<li>Conectar correctamente los cables de alimentación.</li>
+<li>Revisar temperaturas con software de monitorización.</li>
+<li>Limpiar polvo de disipadores y ventiladores de forma periódica.</li>
+</ul>
+<h2 id="91-alimentacion-y-conectores-pcie">9.1 Alimentación y conectores PCIe<a class="headerlink" href="#91-alimentacion-y-conectores-pcie" title="Permanent link">&para;</a></h2>
+<p>La ranura <strong>PCIe</strong> puede aportar una potencia limitada. Las tarjetas que superan ese consumo incluyen <strong>conectores de alimentación</strong> adicionales desde la fuente.</p>
+<hr />
+<h1 id="10-diagnostico-de-fallos-frecuentes">10. Diagnóstico de fallos frecuentes<a class="headerlink" href="#10-diagnostico-de-fallos-frecuentes" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Artefactos en pantalla</strong>: posible sobrecalentamiento o VRAM inestable.</li>
+<li><strong>Apagones o reinicios</strong>: fuente insuficiente o conectores mal puestos.</li>
+<li><strong>Bajo rendimiento</strong>: drivers antiguos o modo de energía incorrecto.</li>
+</ul>
+<h2 id="101-errores-comunes-al-evaluar-una-gpu">10.1 Errores comunes al evaluar una GPU<a class="headerlink" href="#101-errores-comunes-al-evaluar-una-gpu" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Confundir GPU con tarjeta gráfica completa</strong>: el chip es clave, pero también influyen VRAM, bus y refrigeración.</li>
+<li><strong>Sobrevalorar la capacidad de VRAM</strong>: no siempre más GB significa más rendimiento.</li>
+<li><strong>Confundir fabricante de GPU con ensamblador</strong>: NVIDIA/AMD diseñan el chip, otras marcas ensamblan la tarjeta.</li>
+</ul>
+<hr />
+<h1 id="ejemplos-practicos">Ejemplos prácticos<a class="headerlink" href="#ejemplos-practicos" title="Permanent link">&para;</a></h1>
+<p><strong>Caso 1: Aula de ofimática</strong>
+- Requisitos: navegación web, ofimática, vídeo básico.
+- Solución: GPU integrada, bajo consumo y coste mínimo.</p>
+<p><strong>Caso 2: Taller de edición de vídeo</strong>
+- Requisitos: renderizado acelerado, filtros en tiempo real.
+- Solución: GPU dedicada con buena VRAM y soporte de APIs actuales.</p>
+<p><strong>Caso 3: Equipo gaming</strong>
+- Requisitos: 1080p/1440p, altas tasas de refresco.
+- Solución: GPU dedicada con salidas DisplayPort y buena refrigeración.</p>
+<p><strong>Caso 4: Laboratorio de IA básica</strong>
+- Requisitos: entrenamiento ligero y pruebas de modelos.
+- Solución: GPU dedicada con suficiente VRAM y drivers actualizados.</p>
+<hr />
+<h1 id="resumen-ideas-clave">Resumen (ideas clave)<a class="headerlink" href="#resumen-ideas-clave" title="Permanent link">&para;</a></h1>
+<ul>
+<li>La GPU es el motor del procesamiento gráfico y paralelo en el PC.</li>
+<li>Una tarjeta gráfica integra GPU, VRAM, VRM, interfaz PCIe y salidas de vídeo.</li>
+<li>El rendimiento depende de la potencia de la GPU y del ancho de banda de la VRAM.</li>
+<li>HDMI y DisplayPort son las interfaces digitales más habituales.</li>
+<li>Drivers y APIs gráficas son esenciales para el funcionamiento correcto.</li>
+</ul>
+<hr />
+<h1 id="referencias-y-enlaces">Referencias y enlaces<a class="headerlink" href="#referencias-y-enlaces" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://es.wikibooks.org/wiki/Mantenimiento_y_Montaje_de_Equipos_Inform%C3%A1ticos/Tema_2/La_tarjeta_gr%C3%A1fica">Wikibooks - Mantenimiento y Montaje de Equipos Informáticos (Tema 2: La tarjeta gráfica)</a></li>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Blackwell-GeForce-RTX-50-Series-Opens-New-World-of-AI-Computer-Graphics/default.aspx">NVIDIA - Blackwell GeForce RTX 50 Series (nota de prensa, 2025)</a></li>
+<li><a href="https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics">NVIDIA Newsroom - GeForce RTX 50 Series (2025)</a></li>
+<li><a href="https://www.amd.com/en/newsroom/press-releases/2025-2-28-amd-unveils-next-generation-amd-rdna-4-architectu.html">AMD - RDNA 4 y Radeon RX 9000 Series (nota de prensa, 2025)</a></li>
+<li><a href="https://pcisig.com/specification-overview/pci-express-base">PCI-SIG - PCI Express Base Specification</a></li>
+<li><a href="https://hdmi.org/spec/hdmi2_1">HDMI - HDMI Specification (HDMI 2.x)</a></li>
+<li><a href="https://www.displayport.org/pr/vesa-releases-displayport-2-1-specification/">VESA - DisplayPort 2.1 Specification</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/getting-started-with-direct3d">Microsoft Learn - Direct3D</a></li>
+<li><a href="https://www.khronos.org/opengl/">Khronos - OpenGL</a></li>
+<li><a href="https://www.vulkan.org/news/auto-23155-a676f167a3982c6a4f6d36a46284cad8">Khronos - Vulkan 1.4</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:HDMI_Connector_2.svg">Wikimedia Commons - HDMI_Connector_2.svg</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:DisplayPort_Connector.svg">Wikimedia Commons - DisplayPort_Connector.svg</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:GDDR5X_1080ti.jpg">Wikimedia Commons - GDDR5X_1080ti.jpg</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Nvidia@16nm@Pascal@GP100@Tesla_P100@T_Taiwan_1912A1_PN9G70.S6W_GP100-897-A1_DSCx11_HBM-Stack_notes.jpg">Wikimedia Commons - HBM stack (GP100/Tesla P100)</a></li>
+<li>16-tarjeta-grafica.pdf (Conrado Perea).</li>
+<li>Tarjeta grafica.pdf (documento de referencia).</li>
+<li>Gráficas en Criptomonedas - jrodrei0511 jmaccas0306.pdf.</li>
+</ul>
+<h2 id="creditos-de-imagenes">Créditos de imágenes<a class="headerlink" href="#creditos-de-imagenes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>rtx5090_fe.png - ZMASLO, CC BY 3.0, Wikimedia Commons (captura de vídeo de Founders Edition).</li>
+<li>amd_radeon_rx9060xt.png - Akb432, CC BY-SA 4.0, Wikimedia Commons.</li>
+<li>pcie5_trx50_slot.png - PantheraLeo1359531, CC BY 4.0, Wikimedia Commons.</li>
+<li>hdmi_connector.svg - Wyzzymoon, CC BY 4.0, Wikimedia Commons.</li>
+<li>displayport_connector.svg - Wyzzymoon, CC BY 4.0, Wikimedia Commons.</li>
+<li>gddr5x_1080ti.jpg - Geni (recorte) / Fritzchens Fritz (foto), CC0, Wikimedia Commons.</li>
+<li>hbm_stack_gp100.jpg - FritzchensFritz, CC0, Wikimedia Commons.</li>
+</ul>
+<p><strong>Fecha de actualización:</strong> 31/01/2026</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

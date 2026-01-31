@@ -1,0 +1,4797 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Conexiones externas">
+      
+      
+        <meta name="author" content="Jose Manuel Gonzalez Castillo">
+      
+      
+        <link rel="canonical" href="https://axisalberti.github.io/Axis_Apuntes/section1/u04/teoria/MM-U04.1.-Conexiones-externas/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../slides/no-disponible/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UD 04 - 4.1 Conexiones externas - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+  
+  
+    
+      
+      
+        
+      
+      
+    
+  
+  
+  <style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-4-conexiones-externas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 04 - 4.1 Conexiones externas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u00/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u03/teoria/MM-U03.1.-Chipset/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-4-conexiones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 4. CONEXIONES EXTERNAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vocabulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Vocabulario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-basicos-que-es-un-header-y-que-aporta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos básicos: qué es un header y qué aporta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-usb-en-placa-headers-y-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. USB en placa: headers y funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. USB en placa: headers y funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-recordatorio-rapido-como-funciona-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Recordatorio rápido: cómo funciona USB
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-comparativa-de-versiones-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa de versiones USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabla comparativa de versiones USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-header-usb-20-9-pines-25-con-guia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Header USB 2.0 (9 pines, 2×5 con guía)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-header-usb-3x-idc-1920-pines-para-2-usba-frontales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Header USB 3.x (IDC 19/20 pines) para 2× USB‑A frontales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-header-typee-keyakeyb-de-20-pines-para-usbc-frontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Header Type‑E (Key‑A/Key‑B) de 20 pines para USB‑C frontal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-usb-power-delivery-pd-en-puertos-frontales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 USB Power Delivery (PD) en puertos frontales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-longitud-de-cableado-interno-y-signal-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Longitud de cableado interno y signal integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-audio-frontal-header-hd-audioaafp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Audio frontal: header HD Audio/AAFP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Audio frontal: header HD Audio/AAFP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-como-funciona-deteccion-de-jack-muteo-y-rutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Cómo funciona (detección de jack, muteo y rutas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pinout-tipico-101-y-recomendaciones-de-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Pinout típico 10‑1 y recomendaciones de montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-front-panel-f_panelsys_panel-botones-y-leds-del-chasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Front Panel (F_PANEL/SYS_PANEL): botones y LEDs del chasis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Front Panel (F_PANEL/SYS_PANEL): botones y LEDs del chasis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-como-funciona-logica-ecpch-y-polaridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Cómo funciona (lógica, EC/PCH y polaridad)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-identificacion-del-pin-1-y-orden-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Identificación del pin 1 y orden típico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-com-serial-rs232-en-header-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. COM (serial RS‑232) en header interno
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. COM (serial RS‑232) en header interno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-como-funciona-y-niveles-electricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cómo funciona y niveles eléctricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-pinout-comun-25-9-pines-activos-y-correspondencia-db9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Pinout común (2×5, 9 pines activos) y correspondencia DB‑9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-cableado-recto-vs-nullmodem-y-handshaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Cableado recto vs null‑modem y handshaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-lptparallel-legado-en-header-26-pines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LPT/Parallel (legado) en header 26 pines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. LPT/Parallel (legado) en header 26 pines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-para-que-sirve-hoy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Para qué sirve hoy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-como-funciona-registros-y-lineas-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Cómo funciona (registros y líneas de control)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-thunderboltusb4-headers-para-tarjetas-aic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Thunderbolt/USB4 headers para tarjetas AIC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Thunderbolt/USB4 headers para tarjetas AIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-para-que-sirven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Para qué sirven
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-como-funcionan-no-son-usb-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Cómo funcionan (no son USB de datos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-usb4-v20-y-requisitos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 USB4 v2.0 y requisitos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-comparativa-de-versiones-thunderbolt-y-usb4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa de versiones Thunderbolt y USB4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-otros-headers-que-exponen-funciones-al-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Otros headers que exponen funciones al exterior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Otros headers que exponen funciones al exterior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-uart-debug-ttl-y-service-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 UART debug (TTL) y service headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-conectores-de-alimentacion-auxiliar-para-usbc-pd-alto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Conectores de alimentación auxiliar para USB‑C PD alto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-procedimiento-de-montaje-y-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Procedimiento de montaje y verificación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-diagnostico-de-fallos-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Diagnóstico de fallos frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u05/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u06/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u06/teoria/MM-U06.1.-CMOS-y-UEFI/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u07/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u07/teoria/MM-U07.1.-Almacenamiento/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u08/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u08/teoria/MM-U08.1.-Microprocesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u09/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u09/teoria/MM-U09.1.-Tarjetas-graficas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/slides/PRL-slide-prueba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/SI-U01.1.-Redes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-4-conexiones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 4. CONEXIONES EXTERNAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-vocabulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Vocabulario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-basicos-que-es-un-header-y-que-aporta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos básicos: qué es un header y qué aporta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-usb-en-placa-headers-y-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. USB en placa: headers y funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. USB en placa: headers y funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-recordatorio-rapido-como-funciona-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Recordatorio rápido: cómo funciona USB
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-comparativa-de-versiones-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa de versiones USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabla comparativa de versiones USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-header-usb-20-9-pines-25-con-guia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Header USB 2.0 (9 pines, 2×5 con guía)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-header-usb-3x-idc-1920-pines-para-2-usba-frontales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Header USB 3.x (IDC 19/20 pines) para 2× USB‑A frontales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-header-typee-keyakeyb-de-20-pines-para-usbc-frontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Header Type‑E (Key‑A/Key‑B) de 20 pines para USB‑C frontal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-usb-power-delivery-pd-en-puertos-frontales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 USB Power Delivery (PD) en puertos frontales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-longitud-de-cableado-interno-y-signal-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Longitud de cableado interno y signal integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-audio-frontal-header-hd-audioaafp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Audio frontal: header HD Audio/AAFP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Audio frontal: header HD Audio/AAFP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-como-funciona-deteccion-de-jack-muteo-y-rutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Cómo funciona (detección de jack, muteo y rutas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pinout-tipico-101-y-recomendaciones-de-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Pinout típico 10‑1 y recomendaciones de montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-front-panel-f_panelsys_panel-botones-y-leds-del-chasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Front Panel (F_PANEL/SYS_PANEL): botones y LEDs del chasis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Front Panel (F_PANEL/SYS_PANEL): botones y LEDs del chasis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-como-funciona-logica-ecpch-y-polaridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Cómo funciona (lógica, EC/PCH y polaridad)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-identificacion-del-pin-1-y-orden-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Identificación del pin 1 y orden típico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-com-serial-rs232-en-header-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. COM (serial RS‑232) en header interno
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. COM (serial RS‑232) en header interno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Para qué sirve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-como-funciona-y-niveles-electricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cómo funciona y niveles eléctricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-pinout-comun-25-9-pines-activos-y-correspondencia-db9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Pinout común (2×5, 9 pines activos) y correspondencia DB‑9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-cableado-recto-vs-nullmodem-y-handshaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Cableado recto vs null‑modem y handshaking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-lptparallel-legado-en-header-26-pines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LPT/Parallel (legado) en header 26 pines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. LPT/Parallel (legado) en header 26 pines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-para-que-sirve-hoy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Para qué sirve hoy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-como-funciona-registros-y-lineas-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Cómo funciona (registros y líneas de control)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-thunderboltusb4-headers-para-tarjetas-aic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Thunderbolt/USB4 headers para tarjetas AIC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Thunderbolt/USB4 headers para tarjetas AIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-para-que-sirven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Para qué sirven
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-como-funcionan-no-son-usb-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Cómo funcionan (no son USB de datos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-usb4-v20-y-requisitos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 USB4 v2.0 y requisitos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-comparativa-de-versiones-thunderbolt-y-usb4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa de versiones Thunderbolt y USB4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-otros-headers-que-exponen-funciones-al-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Otros headers que exponen funciones al exterior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Otros headers que exponen funciones al exterior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-uart-debug-ttl-y-service-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 UART debug (TTL) y service headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-conectores-de-alimentacion-auxiliar-para-usbc-pd-alto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Conectores de alimentación auxiliar para USB‑C PD alto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-procedimiento-de-montaje-y-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Procedimiento de montaje y verificación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-diagnostico-de-fallos-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Diagnóstico de fallos frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:conexiones" class="md-tag md-tag-icon">conexiones</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+  <h1>MM U04.1. Conexiones externas</h1>
+
+<h2 id="tema-4-conexiones-externas">TEMA 4. CONEXIONES EXTERNAS<a class="headerlink" href="#tema-4-conexiones-externas" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="1-vocabulario">1. Vocabulario<a class="headerlink" href="#1-vocabulario" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Bloque de pines en placa que expone señales a un módulo externo (frontal o bracket).</td>
+</tr>
+<tr>
+<td>Pin 1</td>
+<td>Primer pin de un header, señalado por triángulo/pad cuadrado/serigrafía.</td>
+</tr>
+<tr>
+<td>Clave/Key</td>
+<td>Posición sin pin o muesca que evita conectar al revés.</td>
+</tr>
+<tr>
+<td>SuperSpeed</td>
+<td>Familia de velocidades USB 3.x (5/10/20 Gb/s).</td>
+</tr>
+<tr>
+<td>Type‑E</td>
+<td>Conector interno diseñado para llevar USB‑C (o USB‑A) al frontal preservando señal de alta velocidad.</td>
+</tr>
+<tr>
+<td>AAFP / HD Audio</td>
+<td>Header de audio frontal con detección de jack y retornos de sense.</td>
+</tr>
+<tr>
+<td>F_PANEL</td>
+<td>Header de botones/LEDs del chasis (Power, Reset, HDD LED, Power LED, Speaker).</td>
+</tr>
+<tr>
+<td>AIC (Add‑In Card)</td>
+<td>Tarjeta PCIe adicional (p. ej., Thunderbolt/USB4) que requiere un header de control.</td>
+</tr>
+<tr>
+<td>PD (Power Delivery)</td>
+<td>Protocolo de negociación de potencia sobre USB‑C.</td>
+</tr>
+<tr>
+<td>Retimer/Redriver</td>
+<td>Chips para regenerar/amplificar señales de alta velocidad.</td>
+</tr>
+<tr>
+<td>RS‑232 / UART TTL</td>
+<td>Serie “clásica” a ±V (RS‑232) frente a lógica 3,&#8535; V (TTL); no son compatibles directos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-conceptos-basicos-que-es-un-header-y-que-aporta">2. Conceptos básicos: qué es un <em>header</em> y qué aporta<a class="headerlink" href="#2-conceptos-basicos-que-es-un-header-y-que-aporta" title="Permanent link">&para;</a></h2>
+<p>Un <strong>header</strong> es un conjunto de <strong>pines</strong> en la placa base que permite llevar <strong>señales y alimentación</strong> hacia el <strong>frontal del chasis</strong> o a <strong>brackets</strong> que salen al exterior (sin usar el panel trasero). Suelen estar:
+- <strong>Claveados</strong> (pin ausente o carcasa con muesca) para evitar inversión.
+- <strong>Serigrafiados</strong> con nombres como <em>F_USB1</em>, <em>AAFP</em>, <em>F_PANEL</em>, <em>COM1</em>, <em>TB_HEADER</em>…
+- Con <strong>pin 1</strong> marcado (triángulo, pad cuadrado o serigrafía).</p>
+<p><strong>Funcionamiento general</strong>: el header actúa como <strong>punto de transición</strong> entre el PCB de la placa y el <strong>cableado</strong> hacia el exterior. En enlaces de <strong>alta velocidad</strong> (USB 3.x/USB4), su diseño conserva <strong>impedancia</strong> y <strong>apantallado</strong>; en enlaces <strong>analógicos</strong> (audio) gestiona <strong>masas</strong> y <strong>retornos</strong> para minimizar ruido; en <strong>control</strong> (F_PANEL) expone <strong>entradas/salidas</strong> de la PCH/EC.</p>
+<hr />
+<h2 id="3-usb-en-placa-headers-y-funcionamiento">3. USB en placa: headers y funcionamiento<a class="headerlink" href="#3-usb-en-placa-headers-y-funcionamiento" title="Permanent link">&para;</a></h2>
+<h3 id="31-recordatorio-rapido-como-funciona-usb">3.1 Recordatorio rápido: cómo funciona USB<a class="headerlink" href="#31-recordatorio-rapido-como-funciona-usb" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>USB</strong> (Universal Serial Bus) es un estándar de conexión para la transmisión de datos y energía entre computadoras y periféricos. Su propósito es simplificar la conectividad y sustituir diversos puertos antiguos por uno universal, facilitando el intercambio y alimentación de dispositivos.</li>
+<li><strong>Topología</strong>: <strong>host</strong> (PC) → <strong>hubs</strong> → <strong>dispositivos</strong> (árbol). El host <strong>planifica</strong> el bus.</li>
+</ul>
+<h2 id="tabla-comparativa-de-versiones-usb">Tabla comparativa de versiones USB<a class="headerlink" href="#tabla-comparativa-de-versiones-usb" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión USB</th>
+<th>Año de lanzamiento</th>
+<th>Velocidad máxima teórica</th>
+<th>Nombre comercial</th>
+<th>Retrocompatible</th>
+<th>Características principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB 1.0/1.1</td>
+<td>1996 / 1998</td>
+<td>12 Mbps (Full Speed)</td>
+<td>USB Full Speed</td>
+<td>Sí</td>
+<td>Simplifica conexiones, reemplaza legacy</td>
+</tr>
+<tr>
+<td>USB 2.0</td>
+<td>2000</td>
+<td>480 Mbps (High Speed)</td>
+<td>USB High Speed</td>
+<td>Sí</td>
+<td>Muy extendida, mejora energía y velocidad</td>
+</tr>
+<tr>
+<td>USB 3.0</td>
+<td>2008</td>
+<td>5 Gbps (SuperSpeed)</td>
+<td>USB 3.1 Gen 1</td>
+<td>Sí</td>
+<td>Más potencia eléctrica, cable azul</td>
+</tr>
+<tr>
+<td>USB 3.1 Gen 2</td>
+<td>2013</td>
+<td>10 Gbps (SuperSpeed+)</td>
+<td>USB SuperSpeed+</td>
+<td>Sí</td>
+<td>Doble velocidad, mejor gestión de energía</td>
+</tr>
+<tr>
+<td>USB 3.2</td>
+<td>2017</td>
+<td>20 Gbps (SuperSpeed+)</td>
+<td>USB 3.2 Gen 2x2</td>
+<td>Sí</td>
+<td>Multiplica líneas en USB‑C, todavía cable azul/turquesa</td>
+</tr>
+<tr>
+<td>USB4</td>
+<td>2019</td>
+<td>40 Gbps</td>
+<td>USB4</td>
+<td>Parcialmente</td>
+<td>Basado en Thunderbolt 3, requiere USB‑C</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Las velocidades son máximas teóricas y dependen del cable y dispositivo.
+USB4 solo funciona con conector USB‑C y permite multitarea y mejor gestión de energía.</p>
+</blockquote>
+<h3 id="32-header-usb-20-9-pines-25-con-guia">3.2 Header <strong>USB 2.0 (9 pines, 2×5 con guía)</strong><a class="headerlink" href="#32-header-usb-20-9-pines-25-con-guia" title="Permanent link">&para;</a></h3>
+<p><strong>Para qué sirve</strong>: hasta <strong>2 puertos USB 2.0</strong> (dos USB‑A frontales o un USB interno + lector).<br />
+<strong>Cómo funciona (detalle)</strong>:
+- Cada puerto usa <strong>VBUS (5 V)</strong> con protección de <strong>sobre‑corriente</strong>, par <strong>D+/D−</strong> (diferencial) y <strong>GND</strong>.<br />
+- La <strong>guía</strong> (pin ausente) evita inversión; el pinout divide el header en <strong>Puerto 1</strong> y <strong>Puerto 2</strong>.<br />
+- La placa puede <strong>deshabilitar</strong> un puerto tras eventos OC# o en suspensión S3/S5.</p>
+<h3 id="33-header-usb-3x-idc-1920-pines-para-2-usba-frontales">3.3 Header <strong>USB 3.x (IDC 19/20 pines)</strong> para 2× USB‑A frontales<a class="headerlink" href="#33-header-usb-3x-idc-1920-pines-para-2-usba-frontales" title="Permanent link">&para;</a></h3>
+<p><strong>Para qué sirve</strong>: <strong>dos puertos</strong> frontales <strong>SuperSpeed</strong>.<br />
+<strong>Cómo funciona (detalle)</strong>:
+- Integra <strong>pares diferenciales SuperSpeed</strong> <strong>TX/RX</strong> por puerto y, además, las líneas <strong>USB 2.0</strong> (D+/D−) para compatibilidad.<br />
+- Añade señal de <strong>Over‑Current (OC#)</strong> y líneas de <strong>detect</strong> para presencia del módulo.<br />
+- Requiere <strong>cableado blindado</strong> de baja pérdida entre header y módulo frontal.</p>
+<h3 id="34-header-typee-keyakeyb-de-20-pines-para-usbc-frontal">3.4 Header <strong>Type‑E (Key‑A/Key‑B) de 20 pines</strong> para <strong>USB‑C</strong> frontal<a class="headerlink" href="#34-header-typee-keyakeyb-de-20-pines-para-usbc-frontal" title="Permanent link">&para;</a></h3>
+<p><strong>Para qué sirve</strong>: llevar <strong>USB‑C</strong> al frontal preservando integridad de señal.<br />
+<strong>Funcionamiento</strong>:
+- <strong>Key‑A</strong> normalmente alimenta <strong>1× USB‑C</strong> (SS 10 Gb/s; algunas placas ofrecen <strong>20 Gb/s</strong> Gen 2×2).<br />
+- <strong>Key‑B</strong> expone <strong>2× USB‑A</strong> (no USB‑C).<br />
+- El conector <strong>blindado</strong> y el cable <strong>de impedancia controlada</strong> minimizan pérdidas y <strong>diafonía</strong>.</p>
+<p><strong>Aclaración</strong>: <strong>Type‑C ≠ USB4</strong>. Para USB4/Alt Modes (DisplayPort/TB), la placa debe incluir <strong>controlador</strong> y, a menudo, <strong>retimers</strong>; si no, el Type‑C frontal será solo USB 3.x/2.0.</p>
+<h3 id="35-usb-power-delivery-pd-en-puertos-frontales">3.5 <strong>USB Power Delivery (PD)</strong> en puertos frontales<a class="headerlink" href="#35-usb-power-delivery-pd-en-puertos-frontales" title="Permanent link">&para;</a></h3>
+<p><strong>Conceptos clave</strong>:
+- En USB‑C sin PD, las resistencias <strong>Rp/Rd</strong> en <strong>CC1/CC2</strong> anuncian <strong>corriente</strong> disponible (Default/1,5 A/3 A a 5 V).
+- Con <strong>PD 3.0/3.1</strong>, <em>Source</em> y <em>Sink</em> negocian <strong>PDOs</strong> (Power Data Objects): <strong>tensión</strong> (5/9/15/20/28/36/48 V) y <strong>corriente</strong>.<br />
+- <strong>EPR</strong> (Extended Power Range) permite hasta <strong>240 W</strong> (48 V×5 A) con <strong>cable E‑Marker</strong> adecuado.</p>
+<p><strong>En la práctica en placas</strong>:
+- Algunas incluyen <strong>alimentación auxiliar</strong> (p. ej. conector PCIe 6‑pin en la placa) para sostener <strong>60–140 W</strong> en el <strong>Type‑C frontal</strong>.<br />
+- El módulo de la caja puede incorporar <strong>controlador PD</strong>; otros dependen del <strong>controlador de la placa</strong>.</p>
+<h3 id="36-longitud-de-cableado-interno-y-signal-integrity">3.6 Longitud de cableado interno y <em>signal integrity</em><a class="headerlink" href="#36-longitud-de-cableado-interno-y-signal-integrity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantén los latiguillos <strong>cortos</strong>, <strong>apantallados</strong>, con <strong>radio de curvatura</strong> generoso.  </li>
+<li>Evita <strong>extensores</strong> sin <strong>redriver/retimer</strong> a 10–20 Gb/s.  </li>
+<li>Asegura <strong>masa de chasis</strong> y <strong>tornillería</strong> para reducir EMI.</li>
+</ul>
+<hr />
+<h2 id="4-audio-frontal-header-hd-audioaafp">4. Audio frontal: header <strong>HD Audio/AAFP</strong><a class="headerlink" href="#4-audio-frontal-header-hd-audioaafp" title="Permanent link">&para;</a></h2>
+<h3 id="41-para-que-sirve">4.1 Para qué sirve<a class="headerlink" href="#41-para-que-sirve" title="Permanent link">&para;</a></h3>
+<p>Lleva <strong>micrófono</strong> y <strong>auriculares</strong> al frontal con <strong>detección de jack</strong> y <strong>conmutación</strong> entre salidas frontal/trasera.</p>
+<h3 id="42-como-funciona-deteccion-de-jack-muteo-y-rutas">4.2 Cómo funciona (detección de jack, muteo y rutas)<a class="headerlink" href="#42-como-funciona-deteccion-de-jack-muteo-y-rutas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>El códec (Realtek/otros) usa <strong>PRESENCE#</strong> y líneas <strong>SENSE_SEND/RETURN</strong> para saber si hay <strong>módulo</strong> y <strong>jack insertado</strong>.  </li>
+<li>Al detectar inserción, el driver puede <strong>mutear</strong> trasera, <strong>redirigir</strong> flujo a frontal o <strong>duplicar</strong> (según ajuste).  </li>
+<li>Señales de audio salen <strong>AC‑acopladas</strong> (condensadores) y con cuidado de <strong>masas</strong> para reducir <strong>hum</strong>.  </li>
+<li>Algunos códecs detectan <strong>impedancia</strong> de auriculares y ajustan <strong>ganancia</strong>.</li>
+</ul>
+<h3 id="43-pinout-tipico-101-y-recomendaciones-de-montaje">4.3 Pinout típico 10‑1 y recomendaciones de montaje<a class="headerlink" href="#43-pinout-tipico-101-y-recomendaciones-de-montaje" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Señal</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>MIC_L / PORT1L</td>
+<td>Micrófono L (o mono)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>GND</td>
+<td>Tierra analógica</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MIC_R / MIC_BIAS</td>
+<td>Micrófono R o polarización</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PRESENCE# / control</td>
+<td>Detección de módulo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>HP_R / FPOUT_R</td>
+<td>Auriculares R</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SENSE_R / RETURN_R</td>
+<td>Retorno/detección R</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SENSE_SEND</td>
+<td>Línea de sensado</td>
+</tr>
+<tr>
+<td>8</td>
+<td>KEY (sin pin)</td>
+<td>Clave mecánica</td>
+</tr>
+<tr>
+<td>9</td>
+<td>HP_L / FPOUT_L</td>
+<td>Auriculares L</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SENSE_L / RETURN_L</td>
+<td>Retorno/detección L</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Buenas prácticas</strong>: usar el cable <strong>HD Audio</strong> (no AC’97), rutear lejos de VRM y cables de alta corriente, fijar el conector sin tensión.</p>
+<hr />
+<h2 id="5-front-panel-f_panelsys_panel-botones-y-leds-del-chasis">5. <strong>Front Panel</strong> (F_PANEL/SYS_PANEL): botones y LEDs del chasis<a class="headerlink" href="#5-front-panel-f_panelsys_panel-botones-y-leds-del-chasis" title="Permanent link">&para;</a></h2>
+<h3 id="51-para-que-sirve">5.1 Para qué sirve<a class="headerlink" href="#51-para-que-sirve" title="Permanent link">&para;</a></h3>
+<p>Conectar <strong>PWR SW</strong>, <strong>RESET SW</strong>, <strong>HDD LED</strong>, <strong>PWR LED</strong>, <strong>SPEAKER</strong> (beeper) y, a veces, <strong>CHASSIS INTRUSION</strong> al sistema.</p>
+<h3 id="52-como-funciona-logica-ecpch-y-polaridad">5.2 Cómo funciona (lógica, EC/PCH y polaridad)<a class="headerlink" href="#52-como-funciona-logica-ecpch-y-polaridad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PWRBTN#</strong> y <strong>RESET#</strong> se leen por el <strong>EC</strong> (Embedded Controller) o la <strong>PCH</strong>; un pulso corto ordena <strong>S0↔S5</strong> o <strong>reset</strong>.  </li>
+<li><strong>Debounce</strong> por hardware/firmware evita rebotes.  </li>
+<li><strong>LEDs</strong>: respetan <strong>polaridad</strong>; si no lucen, invertir. <strong>HDD LED</strong> suele parpadear por actividad SATA/NVMe vía señal del chipset.</li>
+</ul>
+<h3 id="53-identificacion-del-pin-1-y-orden-tipico">5.3 Identificación del pin 1 y orden típico<a class="headerlink" href="#53-identificacion-del-pin-1-y-orden-tipico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Header <strong>2×5</strong> con <strong>pin 10</strong> a veces ausente (clave).  </li>
+<li>El <strong>pin 1</strong> se marca con triángulo/pad cuadrado; consulta el <strong>manual</strong> para el mapeo exacto (varía por fabricante/modelo).</li>
+</ul>
+<hr />
+<h2 id="6-com-serial-rs232-en-header-interno">6. <strong>COM</strong> (serial RS‑232) en header interno<a class="headerlink" href="#6-com-serial-rs232-en-header-interno" title="Permanent link">&para;</a></h2>
+<h3 id="61-para-que-sirve">6.1 Para qué sirve<a class="headerlink" href="#61-para-que-sirve" title="Permanent link">&para;</a></h3>
+<p>Exponer <strong>DB‑9</strong> en un <strong>bracket</strong> para equipos industriales, consolas serie, UPS, CNC, routers, etc.</p>
+<h3 id="62-como-funciona-y-niveles-electricos">6.2 Cómo funciona y niveles eléctricos<a class="headerlink" href="#62-como-funciona-y-niveles-electricos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>En placas con <strong>Super I/O</strong>, el header entrega <strong>RS‑232</strong> a ±3–15 V (no TTL).  </li>
+<li>Velocidades típicas <strong>9600–115200 baudios</strong> (8N1).  </li>
+<li>Señales de <strong><em>handshake</em></strong> (RTS/CTS, DTR/DSR) permiten control de flujo por hardware.</li>
+</ul>
+<h3 id="63-pinout-comun-25-9-pines-activos-y-correspondencia-db9">6.3 Pinout común (2×5, 9 pines activos) y correspondencia DB‑9<a class="headerlink" href="#63-pinout-comun-25-9-pines-activos-y-correspondencia-db9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin header</th>
+<th>Señal RS‑232</th>
+<th style="text-align: right;">DB‑9</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>DCD</td>
+<td style="text-align: right;">1</td>
+<td>Carrier Detect</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>RXD</td>
+<td style="text-align: right;">2</td>
+<td>Recibir</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>TXD</td>
+<td style="text-align: right;">3</td>
+<td>Transmitir</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>DTR</td>
+<td style="text-align: right;">4</td>
+<td>Data Terminal Ready</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>GND</td>
+<td style="text-align: right;">5</td>
+<td>Tierra</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>DSR</td>
+<td style="text-align: right;">6</td>
+<td>Data Set Ready</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>RTS</td>
+<td style="text-align: right;">7</td>
+<td>Request to Send</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>CTS</td>
+<td style="text-align: right;">8</td>
+<td>Clear to Send</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>RI</td>
+<td style="text-align: right;">9</td>
+<td>Ring Indicator</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>KEY (sin pin)</td>
+<td style="text-align: right;">—</td>
+<td>Clave/ausente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-cableado-recto-vs-nullmodem-y-handshaking">6.4 Cableado <strong>recto</strong> vs <strong>null‑modem</strong> y <em>handshaking</em><a class="headerlink" href="#64-cableado-recto-vs-nullmodem-y-handshaking" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Recto</strong>: PC ↔ equipo DCE (p. ej., módem).  </li>
+<li><strong>Null‑modem</strong>: PC ↔ PC (cruza TX/RX y líneas de control).  </li>
+<li>Si hay <strong>desbordes</strong>, activa <strong>RTS/CTS</strong> o usa <strong>XON/XOFF</strong> (software).</li>
+</ul>
+<hr />
+<h2 id="7-lptparallel-legado-en-header-26-pines">7. <strong>LPT/Parallel</strong> (legado) en header 26 pines<a class="headerlink" href="#7-lptparallel-legado-en-header-26-pines" title="Permanent link">&para;</a></h2>
+<h3 id="71-para-que-sirve-hoy">7.1 Para qué sirve hoy<a class="headerlink" href="#71-para-que-sirve-hoy" title="Permanent link">&para;</a></h3>
+<p>Entornos industriales/legado: impresoras antiguas, instrumentación, PLC. Se saca a <strong>DB‑25</strong> mediante <strong>bracket</strong>.</p>
+<h3 id="72-como-funciona-registros-y-lineas-de-control">7.2 Cómo funciona (registros y líneas de control)<a class="headerlink" href="#72-como-funciona-registros-y-lineas-de-control" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tres registros clásicos: <strong>DATA (8 bits)</strong>, <strong>STATUS</strong> y <strong>CONTROL</strong>.  </li>
+<li>Líneas <strong>STROBE</strong>, <strong>BUSY</strong>, <strong>ACK</strong>, <strong>AUTOFEED</strong>, <strong>INIT</strong>, <strong>SELECTIN</strong> coordinan la transferencia.  </li>
+<li>El header suele ser <strong>2×13</strong> con clave; usa cable plano apantallado.</li>
+</ul>
+<hr />
+<h2 id="8-thunderboltusb4-headers-para-tarjetas-aic">8. <strong>Thunderbolt/USB4 headers</strong> para tarjetas AIC<a class="headerlink" href="#8-thunderboltusb4-headers-para-tarjetas-aic" title="Permanent link">&para;</a></h2>
+<h3 id="81-para-que-sirven">8.1 Para qué sirven<a class="headerlink" href="#81-para-que-sirven" title="Permanent link">&para;</a></h3>
+<p>Thunderbolt es una interfaz de alta velocidad para la conexión de periféricos. Permite transferir datos, enviar señal de vídeo y suministrar energía a través de un único cable y conector, combinando los protocolos PCI Express y DisplayPort sobre USB‑C (desde Thunderbolt 3).
+Sincronizar/controlar una <strong>AIC Thunderbolt/USB4</strong>. El header (<strong>TB_HEADER/USB4_HEADER</strong>) <strong>no</strong> lleva datos USB: expone <strong>GPIO/sideband</strong> (p. ej., <strong>FORCE_PWR</strong>, <strong>WAKE#</strong>, señales de seguridad/permiso).</p>
+<h3 id="82-como-funcionan-no-son-usb-de-datos">8.2 Cómo funcionan (no son USB de datos)<a class="headerlink" href="#82-como-funcionan-no-son-usb-de-datos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La AIC se inserta en <strong>PCIe</strong> y puede enlazar <strong>DisplayPort</strong> desde la GPU para <em>Alt Mode</em>.  </li>
+<li>El header establece <strong>presencia</strong>, <strong>alimentación forzada</strong>, <strong>wake</strong> y estados S3/S4; sin AIC, el header <strong>no habilita</strong> USB4 por sí solo.</li>
+</ul>
+<h3 id="83-usb4-v20-y-requisitos-practicos">8.3 USB4 v2.0 y requisitos prácticos<a class="headerlink" href="#83-usb4-v20-y-requisitos-practicos" title="Permanent link">&para;</a></h3>
+<p>USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr hasta 40 Gbps de velocidad con conector USB‑C. Ofrece transmisión simultánea de datos y vídeo, además de carga eléctrica avanzada y compatibilidad con dispositivos Thunderbolt &frac34;.
+- Hasta <strong>80 Gb/s</strong> (simétrico) o <strong>120/40</strong> (asimétrico, PAM3).<br />
+- Requiere <strong>cables</strong> y <strong>retimers</strong> de alta calidad; longitudes internas <strong>mínimas</strong>.</p>
+<hr />
+<h2 id="tabla-comparativa-de-versiones-thunderbolt-y-usb4">Tabla comparativa de versiones Thunderbolt y USB4<a class="headerlink" href="#tabla-comparativa-de-versiones-thunderbolt-y-usb4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tecnología</th>
+<th>Año</th>
+<th>Velocidad máxima</th>
+<th>Conector</th>
+<th>Características principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thunderbolt 1</td>
+<td>2011</td>
+<td>10 Gbps</td>
+<td>Mini DisplayPort</td>
+<td>Datos + vídeo, cadena de dispositivos, cable óptico/cobre</td>
+</tr>
+<tr>
+<td>Thunderbolt 2</td>
+<td>2013</td>
+<td>20 Gbps</td>
+<td>Mini DisplayPort</td>
+<td>Doble canal de datos, mejora de protocolos</td>
+</tr>
+<tr>
+<td>Thunderbolt 3</td>
+<td>2015</td>
+<td>40 Gbps</td>
+<td>USB‑C</td>
+<td>Compatibilidad USB‑C, vídeo 4K, carga (100W), PCIe</td>
+</tr>
+<tr>
+<td>Thunderbolt 4</td>
+<td>2020</td>
+<td>40 Gbps</td>
+<td>USB‑C</td>
+<td>Núm. mínimo de requisitos, 2 pantallas 4K, 100W garantizado, cadena 6 dispositivos</td>
+</tr>
+<tr>
+<td>Thunderbolt 5</td>
+<td>2023</td>
+<td>80–120 Gbps</td>
+<td>USB‑C</td>
+<td>Banda ultra-ancha, vídeo 8K/16K, prestaciones superiores</td>
+</tr>
+<tr>
+<td>USB4</td>
+<td>2019</td>
+<td>40 Gbps (máx.)</td>
+<td>USB‑C</td>
+<td>Basado en Thunderbolt 3, velocidad variable según el equipo, transmisión simultánea de vídeo/datos, compatible Thunderbolt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Notas:</strong>
+- Thunderbolt 3, Thunderbolt 4 y USB4 usan conector USB‑C; Thunderbolt &frac12; usan Mini DisplayPort.
+- Thunderbolt 4 y USB4 (máx.) permiten 40 Gbps, pero TB4 garantiza esa velocidad y criterios mínimos de alimentación (hasta 100W).
+- Thunderbolt permite conectar (en cadena) hasta 6 dispositivos sobre el mismo cable.</p>
+<h2 id="9-otros-headers-que-exponen-funciones-al-exterior">9. Otros headers que exponen funciones al exterior<a class="headerlink" href="#9-otros-headers-que-exponen-funciones-al-exterior" title="Permanent link">&para;</a></h2>
+<h3 id="91-uart-debug-ttl-y-service-headers">9.1 <strong>UART debug</strong> (TTL) y <em>service headers</em><a class="headerlink" href="#91-uart-debug-ttl-y-service-headers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consola de servicio a <strong>3,3 V</strong>; conectar mediante <strong>adaptador USB‑TTL</strong> (no RS‑232 directo).  </li>
+<li>Útil para diagnóstico/recuperación en placas industriales/ITX.</li>
+</ul>
+<h3 id="92-conectores-de-alimentacion-auxiliar-para-usbc-pd-alto">9.2 <strong>Conectores de alimentación auxiliar</strong> para USB‑C PD alto<a class="headerlink" href="#92-conectores-de-alimentacion-auxiliar-para-usbc-pd-alto" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Algunas placas añaden <strong>PCIe 6‑pin/Molex</strong> en placa para sostener <strong>60–140 W</strong> en el <strong>Type‑C frontal</strong>.  </li>
+<li>Verifica <strong>calibre del cable</strong>, <strong>protecciones</strong> y <strong>límites</strong> del manual.</li>
+</ul>
+<hr />
+<h2 id="10-procedimiento-de-montaje-y-verificacion">10. Procedimiento de montaje y verificación<a class="headerlink" href="#10-procedimiento-de-montaje-y-verificacion" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Planifica</strong>: identifica <em>F_USB</em>, <em>TYPE‑E</em>, <em>AAFP</em>, <em>F_PANEL</em>, <em>COM</em>, <em>LPT</em>, <em>TB_HEADER</em>.  </li>
+<li><strong>Orientación</strong>: localiza <strong>pin 1</strong> o <strong>clave</strong> en header y conector.  </li>
+<li><strong>Conecta</strong> sin forzar; si no entra, revisa <strong>orientación</strong>.  </li>
+<li><strong>Asegura</strong> los cables (bridas/guías) sin tensiones ni dobleces cerradas.  </li>
+<li><strong>Pruebas</strong>:</li>
+<li><strong>USB</strong>: pendrive 2.0 y SSD/pendrive 3.x para validar HS y SuperSpeed; <em>benchmark</em>.</li>
+<li><strong>PD</strong>: wattímetro USB‑C; verifica que el cable admite la potencia.</li>
+<li><strong>Audio</strong>: mic y cascos; prueba <strong>jack‑detect</strong> y niveles.  </li>
+<li><strong>F_PANEL</strong>: encendido/reset/LEDs (invierte si no lucen).  </li>
+<li><strong>COM</strong>: terminal 115200 8N1; verifica <strong>RTS/CTS</strong> si procede.  </li>
+<li><strong>LPT</strong>: <em>loopback</em> o impresión de prueba (si aplica).  </li>
+<li><strong>TB/USB4</strong>: presencia de la AIC, <em>firmware</em> y <em>pass‑through</em> DP.</li>
+</ol>
+<hr />
+<h2 id="11-diagnostico-de-fallos-frecuentes">11. Diagnóstico de fallos frecuentes<a class="headerlink" href="#11-diagnostico-de-fallos-frecuentes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>USB frontal lento/no detecta SuperSpeed</strong>: cable Type‑E incorrecto, conectado a header <strong>Gen 1</strong>; ruta larga; falta <strong>retimer</strong>; interferencias/masa floja.  </li>
+<li><strong>USB‑C frontal sin PD/altos W</strong>: falta <strong>alimentación auxiliar</strong> o cable no <strong>E‑Marker</strong>; límite de la placa.</li>
+<li><strong>Sin audio frontal</strong>: conector <strong>AC’97</strong> en vez de <strong>HD Audio</strong>; jack‑detect desactivado; masa mal rutada.  </li>
+<li><strong>LED HDD no enciende</strong>: polaridad invertida o mapeo distinto al manual.  </li>
+<li><strong>COM mudo</strong>: confusión <strong>RS‑232 vs TTL</strong>; BIOS deshabilitado; necesitabas <strong>null‑modem</strong>.  </li>
+<li><strong>TB/USB4 sin funcionar</strong>: no hay <strong>AIC</strong> instalada, falta cable <strong>DP in</strong>, <em>drivers/firmware</em> desactualizados.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

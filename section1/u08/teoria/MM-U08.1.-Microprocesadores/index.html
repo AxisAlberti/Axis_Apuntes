@@ -1,0 +1,4968 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Microprocesadores">
+      
+      
+        <meta name="author" content="Jose Manuel Gonzalez Castillo">
+      
+      
+        <link rel="canonical" href="https://axisalberti.github.io/Axis_Apuntes/section1/u08/teoria/MM-U08.1.-Microprocesadores/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../slides/no-disponible/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UD 08 - 8.1 Microprocesadores - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+  
+  
+    
+      
+      
+        
+      
+      
+    
+  
+  
+  <style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-8-microprocesador" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 08 - 8.1 Microprocesadores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u00/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u03/teoria/MM-U03.1.-Chipset/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u04/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/MM-U04.1.-Conexiones-externas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u05/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u06/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u06/teoria/MM-U06.1.-CMOS-y-UEFI/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u07/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u07/teoria/MM-U07.1.-Almacenamiento/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-8-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 8. MICROPROCESADOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 8. MICROPROCESADOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consulta-tambien-guia-eleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta también Guia Eleccion.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomenclatura-procesadores-sufijos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nomenclatura procesadores Sufijos.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procesos Procesos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-el-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es el microprocesador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cpu-y-gpu-diferencias-y-complementariedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CPU y GPU: diferencias y complementariedad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento-interno-del-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento interno del microprocesador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funcionamiento interno del microprocesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-prefetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Prefetch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Fetch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-decodificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Decodificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lectura-de-operandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Lectura de operandos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-escritura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Escritura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unidad-aritmetico-logica-alu-y-unidad-de-coma-flotante-fpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Unidad aritmético-lógica (ALU) y unidad de coma flotante (FPU)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-memoria-cache-y-jerarquia-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Memoria caché y jerarquía de memoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Memoria caché y jerarquía de memoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cache-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Caché L1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cache-l2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Caché L2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-cache-l3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Caché L3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nucleos-hilos-y-tecnologias-de-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Núcleos, hilos y tecnologías de multihilo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Núcleos, hilos y tecnologías de multihilo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-nucleos-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Núcleos (cores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-hilos-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Hilos (threads)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-relacion-entre-nucleos-e-hilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Relación entre núcleos e hilos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-tecnologias-de-multihilo-hyper-threading-y-smt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Tecnologías de multihilo: Hyper-Threading y SMT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Tecnologías de multihilo: Hyper-Threading y SMT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-hyper-threading-intel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 Hyper-Threading (Intel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-smt-simultaneous-multithreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 SMT (Simultaneous Multithreading)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ventajas-del-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Ventajas del multihilo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-limitaciones-y-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Limitaciones y consideraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-integracion-de-controladoras-y-evolucion-del-northbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Integración de controladoras y evolución del northbridge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integración de controladoras y evolución del northbridge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-controladora-de-memoria-integrada-imc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Controladora de memoria integrada (IMC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-integracion-del-northbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Integración del northbridge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-graficos-entrada-y-salida-integrados-en-la-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Gráficos, entrada y salida integrados en la CPU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-mejoras-internas-de-rendimiento-en-procesadores-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Mejoras internas de rendimiento en procesadores modernos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-virtualizacion-asistida-por-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Virtualización asistida por hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-seguridad-y-confiabilidad-a-nivel-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Seguridad y confiabilidad a nivel hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-gestion-avanzada-de-energia-y-temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Gestión avanzada de energía y temperatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Gestión avanzada de energía y temperatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-ajuste-dinamico-de-frecuencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Ajuste dinámico de frecuencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-ajuste-dinamico-de-voltaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Ajuste dinámico de voltaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-estados-de-energia-p-states-y-c-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Estados de energía: P-states y C-states
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 Estados de energía: P-states y C-states">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-states-performance-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-states (Performance States)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-states-idle-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-states (Idle States)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-sensores-termicos-y-proteccion-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Sensores térmicos y protección del procesador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-consumo-energetico-y-vatios-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Consumo energético y vatios (W)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-que-es-el-tdp-y-que-significa-realmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Qué es el TDP y qué significa realmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127-importancia-actual-del-tdp-en-la-eleccion-de-procesadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 Importancia actual del TDP en la elección de procesadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-tecnologias-de-turbo-dinamico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8 Tecnologías de turbo dinámico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#129-importancia-para-el-montaje-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.9 Importancia para el montaje y mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-procesamiento-multinucleo-y-multiprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Procesamiento multinúcleo y multiprocesador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Procesamiento multinúcleo y multiprocesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u09/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u09/teoria/MM-U09.1.-Tarjetas-graficas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/slides/PRL-slide-prueba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/SI-U01.1.-Redes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-8-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 8. MICROPROCESADOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 8. MICROPROCESADOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consulta-tambien-guia-eleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta también Guia Eleccion.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomenclatura-procesadores-sufijos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nomenclatura procesadores Sufijos.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procesos Procesos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-el-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qué es el microprocesador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cpu-y-gpu-diferencias-y-complementariedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CPU y GPU: diferencias y complementariedad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento-interno-del-microprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento interno del microprocesador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funcionamiento interno del microprocesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-prefetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Prefetch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Fetch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-decodificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Decodificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lectura-de-operandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Lectura de operandos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-escritura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Escritura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unidad-aritmetico-logica-alu-y-unidad-de-coma-flotante-fpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Unidad aritmético-lógica (ALU) y unidad de coma flotante (FPU)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-memoria-cache-y-jerarquia-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Memoria caché y jerarquía de memoria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Memoria caché y jerarquía de memoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cache-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Caché L1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cache-l2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Caché L2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-cache-l3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Caché L3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nucleos-hilos-y-tecnologias-de-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Núcleos, hilos y tecnologías de multihilo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Núcleos, hilos y tecnologías de multihilo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-nucleos-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Núcleos (cores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-hilos-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Hilos (threads)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-relacion-entre-nucleos-e-hilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Relación entre núcleos e hilos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-tecnologias-de-multihilo-hyper-threading-y-smt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Tecnologías de multihilo: Hyper-Threading y SMT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Tecnologías de multihilo: Hyper-Threading y SMT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-hyper-threading-intel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 Hyper-Threading (Intel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-smt-simultaneous-multithreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 SMT (Simultaneous Multithreading)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ventajas-del-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Ventajas del multihilo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-limitaciones-y-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Limitaciones y consideraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-integracion-de-controladoras-y-evolucion-del-northbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Integración de controladoras y evolución del northbridge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integración de controladoras y evolución del northbridge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-controladora-de-memoria-integrada-imc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Controladora de memoria integrada (IMC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-integracion-del-northbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Integración del northbridge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-graficos-entrada-y-salida-integrados-en-la-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Gráficos, entrada y salida integrados en la CPU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-mejoras-internas-de-rendimiento-en-procesadores-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Mejoras internas de rendimiento en procesadores modernos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-virtualizacion-asistida-por-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Virtualización asistida por hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-seguridad-y-confiabilidad-a-nivel-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Seguridad y confiabilidad a nivel hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-gestion-avanzada-de-energia-y-temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Gestión avanzada de energía y temperatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Gestión avanzada de energía y temperatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-ajuste-dinamico-de-frecuencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Ajuste dinámico de frecuencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-ajuste-dinamico-de-voltaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Ajuste dinámico de voltaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-estados-de-energia-p-states-y-c-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Estados de energía: P-states y C-states
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 Estados de energía: P-states y C-states">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-states-performance-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P-states (Performance States)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-states-idle-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-states (Idle States)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-sensores-termicos-y-proteccion-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Sensores térmicos y protección del procesador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-consumo-energetico-y-vatios-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Consumo energético y vatios (W)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-que-es-el-tdp-y-que-significa-realmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Qué es el TDP y qué significa realmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127-importancia-actual-del-tdp-en-la-eleccion-de-procesadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 Importancia actual del TDP en la elección de procesadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-tecnologias-de-turbo-dinamico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8 Tecnologías de turbo dinámico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#129-importancia-para-el-montaje-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.9 Importancia para el montaje y mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-procesamiento-multinucleo-y-multiprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Procesamiento multinúcleo y multiprocesador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Procesamiento multinúcleo y multiprocesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:microprocesadores" class="md-tag md-tag-icon">microprocesadores</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h2 id="tema-8-microprocesador">TEMA 8. MICROPROCESADOR<a class="headerlink" href="#tema-8-microprocesador" title="Permanent link">&para;</a></h2>
+<h3 id="consulta-tambien-guia-eleccion">Consulta también  <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/">Guia Eleccion</a>.<a class="headerlink" href="#consulta-tambien-guia-eleccion" title="Permanent link">&para;</a></h3>
+<h3 id="nomenclatura-procesadores-sufijos">Nomenclatura procesadores  <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/">Sufijos</a>.<a class="headerlink" href="#nomenclatura-procesadores-sufijos" title="Permanent link">&para;</a></h3>
+<h3 id="arquitectura-arquitectura">Arquitectura <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/">Arquitectura</a><a class="headerlink" href="#arquitectura-arquitectura" title="Permanent link">&para;</a></h3>
+<h3 id="procesos-procesos">Procesos <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/">Procesos</a><a class="headerlink" href="#procesos-procesos" title="Permanent link">&para;</a></h3>
+<hr />
+<h1 id="1-que-es-el-microprocesador">1. Qué es el microprocesador<a class="headerlink" href="#1-que-es-el-microprocesador" title="Permanent link">&para;</a></h1>
+<p>El <strong>microprocesador</strong>, también conocido como <strong>CPU (Central Processing Unit)</strong>, es el componente fundamental de cualquier sistema informático moderno. Su función principal es <strong>interpretar, procesar y ejecutar instrucciones</strong>, que son las órdenes básicas que indican al ordenador qué operaciones debe realizar.</p>
+<p>Cada acción que realiza un ordenador —desde escribir una letra en un teclado hasta reproducir un vídeo o ejecutar un programa— pasa directa o indirectamente por el microprocesador. Por este motivo, se le suele llamar el <em>cerebro del ordenador</em>, ya que controla y coordina el funcionamiento del resto de componentes.</p>
+<p>Desde el punto de vista físico, el microprocesador es un <strong>circuito integrado</strong> fabricado sobre una oblea de silicio. En su interior contiene <strong>millones o miles de millones de transistores</strong>, que funcionan como interruptores electrónicos capaces de representar valores binarios (0 y 1). A partir de combinaciones de estos valores binarios, el procesador puede realizar cualquier cálculo lógico o matemático.</p>
+<p>El microprocesador no trabaja de forma aislada, sino que mantiene una comunicación constante con:
+- La <strong>memoria RAM</strong>, donde se almacenan los programas y datos en uso.
+- Los <strong>dispositivos de entrada</strong> (teclado, ratón, sensores).
+- Los <strong>dispositivos de salida</strong> (pantalla, impresora, altavoces).
+- Los sistemas de <strong>almacenamiento</strong> (SSD, HDD).
+- El resto de controladoras y buses del sistema.</p>
+<p>Sin microprocesador, un ordenador no puede arrancar ni ejecutar ninguna tarea.</p>
+<hr />
+<h1 id="2-cpu-y-gpu-diferencias-y-complementariedad">2. CPU y GPU: diferencias y complementariedad<a class="headerlink" href="#2-cpu-y-gpu-diferencias-y-complementariedad" title="Permanent link">&para;</a></h1>
+<p>Aunque tanto la <strong>CPU</strong> como la <strong>GPU</strong> son tipos de procesadores, su diseño interno y su finalidad son muy distintos.</p>
+<p>La <strong>CPU</strong> está diseñada para:
+- Ejecutar instrucciones complejas.
+- Tomar decisiones lógicas.
+- Controlar el flujo de ejecución de los programas.
+- Gestionar memoria, procesos y dispositivos.
+- Cambiar rápidamente de una tarea a otra.</p>
+<p>Por ello, la CPU suele tener <strong>pocos núcleos</strong>, pero cada núcleo es muy potente y flexible.</p>
+<p>La <strong>GPU</strong>, en cambio, está diseñada para:
+- Realizar una enorme cantidad de cálculos simples en paralelo.
+- Trabajar con grandes bloques de datos.
+- Procesar gráficos, vídeo, aprendizaje automático e inteligencia artificial.</p>
+<p>Una GPU puede tener <strong>cientos o miles de núcleos simples</strong>, capaces de ejecutar la misma operación sobre muchos datos al mismo tiempo.</p>
+<p>En los sistemas actuales, CPU y GPU trabajan juntas:
+- La CPU coordina y gestiona.
+- La GPU acelera tareas altamente paralelizables.</p>
+<hr />
+<h1 id="3-funcionamiento-interno-del-microprocesador">3. Funcionamiento interno del microprocesador<a class="headerlink" href="#3-funcionamiento-interno-del-microprocesador" title="Permanent link">&para;</a></h1>
+<p>El microprocesador funciona siguiendo un <strong>ciclo de instrucción</strong>, que se repite millones o miles de millones de veces por segundo.</p>
+<p>Este ciclo consta de varias fases bien definidas:</p>
+<h2 id="31-prefetch">3.1 Prefetch<a class="headerlink" href="#31-prefetch" title="Permanent link">&para;</a></h2>
+<p>El procesador intenta anticiparse a las necesidades futuras, cargando instrucciones antes de que sean necesarias. Esto reduce tiempos de espera.</p>
+<h2 id="32-fetch">3.2 Fetch<a class="headerlink" href="#32-fetch" title="Permanent link">&para;</a></h2>
+<p>La instrucción se obtiene desde la memoria, normalmente desde la caché, y se introduce en el procesador.</p>
+<h2 id="33-decodificacion">3.3 Decodificación<a class="headerlink" href="#33-decodificacion" title="Permanent link">&para;</a></h2>
+<p>La unidad de control interpreta la instrucción, determina qué operación se debe realizar y qué unidades internas se deben utilizar.</p>
+<h2 id="34-lectura-de-operandos">3.4 Lectura de operandos<a class="headerlink" href="#34-lectura-de-operandos" title="Permanent link">&para;</a></h2>
+<p>Se obtienen los datos necesarios para ejecutar la instrucción, ya sea desde registros internos, caché o memoria RAM.</p>
+<h2 id="35-ejecucion">3.5 Ejecución<a class="headerlink" href="#35-ejecucion" title="Permanent link">&para;</a></h2>
+<p>Las unidades de ejecución (ALU, FPU, unidades vectoriales, etc.) realizan la operación correspondiente.</p>
+<h2 id="36-escritura">3.6 Escritura<a class="headerlink" href="#36-escritura" title="Permanent link">&para;</a></h2>
+<p>El resultado se almacena en un registro o se escribe de nuevo en memoria.</p>
+<p>Este proceso se sincroniza con el <strong>reloj del procesador</strong>, cuya frecuencia se mide en <strong>GHz</strong>. Sin embargo, el rendimiento real depende más de la arquitectura que de la frecuencia bruta.</p>
+<hr />
+<h1 id="4-unidad-aritmetico-logica-alu-y-unidad-de-coma-flotante-fpu">4. Unidad aritmético-lógica (ALU) y unidad de coma flotante (FPU)<a class="headerlink" href="#4-unidad-aritmetico-logica-alu-y-unidad-de-coma-flotante-fpu" title="Permanent link">&para;</a></h1>
+<p>La <strong>ALU (Arithmetic Logic Unit)</strong> es la unidad encargada de realizar operaciones matemáticas básicas (suma, resta, multiplicación, división) y operaciones lógicas (AND, OR, NOT, comparaciones).</p>
+<p>La <strong>FPU (Floating Point Unit)</strong> es una unidad especializada que realiza cálculos con <strong>números en coma flotante</strong>, es decir, números con decimales. Estos cálculos son mucho más complejos y requieren una precisión especial.</p>
+<p>Las operaciones en coma flotante son fundamentales en:
+- Ingeniería y ciencia.
+- Gráficos 3D.
+- Simulación física.
+- Edición de vídeo y audio.
+- Inteligencia artificial.</p>
+<p>En procesadores modernos, la FPU está integrada dentro de cada núcleo, permitiendo ejecutar varias operaciones de coma flotante en paralelo y con gran precisión.</p>
+<hr />
+<h1 id="5-memoria-cache-y-jerarquia-de-memoria">5. Memoria caché y jerarquía de memoria<a class="headerlink" href="#5-memoria-cache-y-jerarquia-de-memoria" title="Permanent link">&para;</a></h1>
+<p>La <strong>memoria caché</strong> existe porque hay una enorme diferencia de velocidad entre el microprocesador y la memoria RAM. Si la CPU tuviera que esperar siempre a la RAM, gran parte de su potencia se desperdiciaría.</p>
+<p>La caché actúa como un <strong>almacén intermedio ultrarrápido</strong>, donde se guardan datos e instrucciones que se usan con frecuencia.</p>
+<h2 id="51-cache-l1">5.1 Caché L1<a class="headerlink" href="#51-cache-l1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Extremadamente rápida.</li>
+<li>Muy pequeña.</li>
+<li>Situada dentro del núcleo.</li>
+<li>Contiene datos e instrucciones inmediatas.</li>
+</ul>
+<h2 id="52-cache-l2">5.2 Caché L2<a class="headerlink" href="#52-cache-l2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Más grande que la L1.</li>
+<li>Algo más lenta.</li>
+<li>Reduce accesos a RAM cuando la L1 falla.</li>
+</ul>
+<h2 id="53-cache-l3">5.3 Caché L3<a class="headerlink" href="#53-cache-l3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Compartida entre varios núcleos.</li>
+<li>Gran tamaño.</li>
+<li>Fundamental en procesadores multinúcleo.</li>
+</ul>
+<p>La correcta gestión de la caché es clave para el rendimiento real del sistema.</p>
+<hr />
+<h1 id="6-nucleos-hilos-y-tecnologias-de-multihilo">6. Núcleos, hilos y tecnologías de multihilo<a class="headerlink" href="#6-nucleos-hilos-y-tecnologias-de-multihilo" title="Permanent link">&para;</a></h1>
+<p>El rendimiento de un microprocesador moderno no depende únicamente de su frecuencia de reloj. Uno de los factores más importantes es la forma en la que el procesador <strong>divide y ejecuta el trabajo en paralelo</strong>, lo cual se consigue mediante el uso de <strong>núcleos</strong>, <strong>hilos</strong> y <strong>tecnologías de multihilo</strong>.</p>
+<p>Comprender correctamente estos conceptos es fundamental para entender cómo funcionan los sistemas actuales, por qué ciertos programas se ejecutan más rápido que otros y cómo se aprovecha realmente la potencia de una CPU.</p>
+<hr />
+<h2 id="61-nucleos-cores">6.1 Núcleos (cores)<a class="headerlink" href="#61-nucleos-cores" title="Permanent link">&para;</a></h2>
+<p>Un <strong>núcleo</strong> es una <strong>unidad de procesamiento física independiente</strong> dentro de un microprocesador. Cada núcleo dispone de sus propias unidades de ejecución (ALU, FPU, registros, etc.) y puede ejecutar instrucciones de forma autónoma.</p>
+<p>En los primeros ordenadores personales, los procesadores eran <strong>mononúcleo</strong>, es decir, solo podían ejecutar una tarea de forma real en cada instante. La multitarea se conseguía mediante cambios rápidos de contexto, dando la sensación de que varias aplicaciones se ejecutaban a la vez.</p>
+<p>Con la aparición de los <strong>procesadores multinúcleo</strong>, un mismo chip puede contener varios núcleos físicos, lo que permite:
+- Ejecutar varios programas al mismo tiempo.
+- Repartir la carga de trabajo entre núcleos.
+- Mejorar el rendimiento en aplicaciones paralelas.
+- Aumentar la eficiencia energética frente a subir únicamente la frecuencia.</p>
+<p>Ejemplos habituales:
+- Doble núcleo (dual-core)
+- Cuádruple núcleo (quad-core)
+- Seis, ocho o más núcleos en CPUs modernas</p>
+<p>Cada núcleo puede ejecutar un proceso o hilo distinto, lo que permite un verdadero paralelismo.</p>
+<hr />
+<h2 id="62-hilos-threads">6.2 Hilos (threads)<a class="headerlink" href="#62-hilos-threads" title="Permanent link">&para;</a></h2>
+<p>Un <strong>hilo (thread)</strong> es una <strong>línea de ejecución dentro de un proceso</strong>. Un proceso (por ejemplo, un navegador web) puede dividir su trabajo en varios hilos para ejecutarse de forma más eficiente.</p>
+<p>Ejemplos de uso de hilos:
+- Un navegador puede usar un hilo por pestaña.
+- Un juego puede usar hilos separados para gráficos, física, sonido e inteligencia artificial.
+- Un servidor puede usar un hilo por cada cliente conectado.</p>
+<p>El <strong>sistema operativo</strong> es el encargado de:
+- Crear los hilos.
+- Asignarlos a los núcleos disponibles.
+- Cambiar entre hilos cuando es necesario.</p>
+<p>Si hay más hilos que núcleos físicos, el procesador alterna rápidamente entre ellos mediante <strong>cambio de contexto</strong>, dando la sensación de ejecución simultánea.</p>
+<p>Cuantos más hilos pueda gestionar eficientemente un procesador, mejor será su capacidad de multitarea.</p>
+<hr />
+<h2 id="63-relacion-entre-nucleos-e-hilos">6.3 Relación entre núcleos e hilos<a class="headerlink" href="#63-relacion-entre-nucleos-e-hilos" title="Permanent link">&para;</a></h2>
+<p>La relación entre núcleos e hilos es clave para entender el rendimiento real de un procesador.</p>
+<ul>
+<li>Un procesador <strong>sin multihilo</strong> ejecuta un hilo por núcleo.</li>
+<li>Un procesador <strong>con multihilo</strong> puede ejecutar varios hilos por núcleo.</li>
+</ul>
+<p>Ejemplo sencillo:
+- CPU de 4 núcleos sin multihilo → 4 hilos simultáneos
+- CPU de 4 núcleos con multihilo → 8 hilos simultáneos (dependiendo de la tecnología)</p>
+<p>Es importante entender que <strong>un hilo no es un núcleo físico</strong>. Los hilos comparten recursos internos del núcleo, por lo que su rendimiento depende de cómo se aprovechen dichos recursos.</p>
+<hr />
+<h2 id="64-tecnologias-de-multihilo-hyper-threading-y-smt">6.4 Tecnologías de multihilo: Hyper-Threading y SMT<a class="headerlink" href="#64-tecnologias-de-multihilo-hyper-threading-y-smt" title="Permanent link">&para;</a></h2>
+<p>**VIDEO EXPLICATIVO https://www.youtube.com/watch?v=A621YkxaejY **</p>
+<p>Las tecnologías de multihilo permiten que <strong>un único núcleo físico ejecute más de un hilo al mismo tiempo</strong>.</p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/micro/ht1.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+<hr />
+<h3 id="641-hyper-threading-intel">6.4.1 Hyper-Threading (Intel)<a class="headerlink" href="#641-hyper-threading-intel" title="Permanent link">&para;</a></h3>
+<p><strong>Hyper-Threading</strong> es una tecnología desarrollada por Intel que permite que cada núcleo físico se comporte como <strong>dos núcleos lógicos</strong> desde el punto de vista del sistema operativo.</p>
+<p>Esto se consigue duplicando ciertos elementos internos del núcleo (como registros y contadores), mientras que otros recursos se comparten (ALU, FPU, caché, etc.).</p>
+<p>Ejemplo:
+- CPU con 4 núcleos físicos y Hyper-Threading activado
+- El sistema operativo detecta 8 procesadores lógicos</p>
+<p>Ventajas:
+- Mejor aprovechamiento de los recursos internos.
+- Aumento del rendimiento en aplicaciones multihilo.
+- Mejora de la multitarea.</p>
+<p>Limitaciones:
+- No duplica la potencia del núcleo.
+- El aumento de rendimiento depende del tipo de aplicación.
+- En tareas muy intensivas puede no haber mejora significativa.</p>
+<hr />
+<h3 id="642-smt-simultaneous-multithreading">6.4.2 SMT (Simultaneous Multithreading)<a class="headerlink" href="#642-smt-simultaneous-multithreading" title="Permanent link">&para;</a></h3>
+<p><strong>SMT</strong> es el nombre genérico de esta técnica y es utilizado por otros fabricantes, como AMD.</p>
+<p>El principio es el mismo:
+- Ejecutar varios hilos de forma simultánea en un mismo núcleo.
+- Aprovechar ciclos de ejecución que quedarían desaprovechados.</p>
+<p>En algunos procesadores avanzados, un núcleo puede manejar más de dos hilos simultáneos, aunque lo habitual en equipos de sobremesa es <strong>2 hilos por núcleo</strong>.</p>
+<hr />
+<h2 id="65-ventajas-del-multihilo">6.5 Ventajas del multihilo<a class="headerlink" href="#65-ventajas-del-multihilo" title="Permanent link">&para;</a></h2>
+<p>El uso de núcleos múltiples y tecnologías de multihilo ofrece numerosas ventajas:</p>
+<ul>
+<li>Mayor rendimiento en aplicaciones paralelas.</li>
+<li>Mejor respuesta del sistema bajo carga.</li>
+<li>Mejor aprovechamiento del hardware.</li>
+<li>Mayor eficiencia energética comparada con aumentar solo la frecuencia.</li>
+</ul>
+<p>Estas ventajas son especialmente importantes en:
+- Servidores.
+- Estaciones de trabajo.
+- Edición de vídeo.
+- Virtualización.
+- Compilación de software.</p>
+<hr />
+<h2 id="66-limitaciones-y-consideraciones">6.6 Limitaciones y consideraciones<a class="headerlink" href="#66-limitaciones-y-consideraciones" title="Permanent link">&para;</a></h2>
+<p>Aunque el multihilo ofrece muchas ventajas, también tiene limitaciones:</p>
+<ul>
+<li>No todas las aplicaciones están programadas para usar múltiples hilos.</li>
+<li>Algunos programas solo pueden ejecutarse de forma secuencial.</li>
+<li>Los hilos comparten recursos, lo que puede generar cuellos de botella.</li>
+<li>El rendimiento depende del sistema operativo y del software.</li>
+</ul>
+<p>Por este motivo, un procesador con muchos hilos no siempre es más rápido en todas las tareas que uno con menos núcleos pero mayor rendimiento por núcleo.</p>
+<hr />
+<h1 id="7-integracion-de-controladoras-y-evolucion-del-northbridge">7. Integración de controladoras y evolución del northbridge<a class="headerlink" href="#7-integracion-de-controladoras-y-evolucion-del-northbridge" title="Permanent link">&para;</a></h1>
+<p>En arquitecturas antiguas, funciones clave como la controladora de memoria estaban en el <strong>northbridge</strong>, un chip separado.</p>
+<p>En las CPUs modernas, estas funciones se han <strong>integrado directamente en el procesador</strong>, lo que ha supuesto una gran mejora de rendimiento.</p>
+<h2 id="71-controladora-de-memoria-integrada-imc">7.1 Controladora de memoria integrada (IMC)<a class="headerlink" href="#71-controladora-de-memoria-integrada-imc" title="Permanent link">&para;</a></h2>
+<p>La IMC permite que la CPU se comunique directamente con la RAM:
+- Reduce latencia.
+- Aumenta ancho de banda.
+- Mejora rendimiento multinúcleo.</p>
+<h2 id="72-integracion-del-northbridge">7.2 Integración del northbridge<a class="headerlink" href="#72-integracion-del-northbridge" title="Permanent link">&para;</a></h2>
+<p>La CPU moderna integra:
+- Controlador de memoria.
+- Líneas PCI Express.
+- Comunicación con GPU integrada.</p>
+<p>Esto simplifica el diseño y mejora la eficiencia.</p>
+<hr />
+<h1 id="8-graficos-entrada-y-salida-integrados-en-la-cpu">8. Gráficos, entrada y salida integrados en la CPU<a class="headerlink" href="#8-graficos-entrada-y-salida-integrados-en-la-cpu" title="Permanent link">&para;</a></h1>
+<p>Muchas CPUs incluyen una <strong>GPU integrada</strong>, lo que permite:
+- Reducir costes.
+- Reducir consumo.
+- Simplificar equipos.</p>
+<p>Además, la CPU gestiona directamente buses de alta velocidad como <strong>PCIe</strong>, <strong>NVMe</strong>, <strong>DMI</strong> o <strong>Infinity Fabric</strong>, reduciendo cuellos de botella.</p>
+<hr />
+<h1 id="9-mejoras-internas-de-rendimiento-en-procesadores-modernos">9. Mejoras internas de rendimiento en procesadores modernos<a class="headerlink" href="#9-mejoras-internas-de-rendimiento-en-procesadores-modernos" title="Permanent link">&para;</a></h1>
+<p>Las CPUs actuales incluyen técnicas como:
+- Ejecución fuera de orden.
+- Predicción de saltos avanzada.
+- Prefetching inteligente.
+- Cachés compartidas.
+- Políticas dinámicas de ejecución.</p>
+<p>Estas técnicas permiten hacer más trabajo por ciclo sin aumentar excesivamente la frecuencia.</p>
+<hr />
+<h1 id="10-virtualizacion-asistida-por-hardware">10. Virtualización asistida por hardware<a class="headerlink" href="#10-virtualizacion-asistida-por-hardware" title="Permanent link">&para;</a></h1>
+<p>Las extensiones <strong>Intel VT-x</strong> y <strong>AMD-V</strong> permiten ejecutar máquinas virtuales con menor sobrecarga.</p>
+<p>Las tecnologías <strong>VT-d</strong> e <strong>IOMMU</strong> permiten asignar dispositivos físicos a máquinas virtuales, mejorando rendimiento y seguridad.</p>
+<hr />
+<h1 id="11-seguridad-y-confiabilidad-a-nivel-hardware">11. Seguridad y confiabilidad a nivel hardware<a class="headerlink" href="#11-seguridad-y-confiabilidad-a-nivel-hardware" title="Permanent link">&para;</a></h1>
+<p>Las CPUs modernas incluyen:
+- Bit NX/DEP.
+- Arranque seguro.
+- Cifrado de memoria.
+- Enclaves seguros.</p>
+<p>En entornos profesionales:
+- Soporte ECC.
+- Corrección de errores.
+- Scrubbing de memoria.</p>
+<hr />
+<h1 id="12-gestion-avanzada-de-energia-y-temperatura">12. Gestión avanzada de energía y temperatura<a class="headerlink" href="#12-gestion-avanzada-de-energia-y-temperatura" title="Permanent link">&para;</a></h1>
+<p>En los microprocesadores modernos, el rendimiento ya no se basa únicamente en ejecutar instrucciones lo más rápido posible, sino en <strong>hacerlo de forma eficiente</strong>, controlando cuidadosamente el <strong>consumo energético</strong> y la <strong>temperatura</strong>. Por este motivo, las CPUs actuales incorporan sistemas avanzados de <strong>gestión dinámica de energía y temperatura</strong>, que ajustan su funcionamiento en tiempo real según la carga de trabajo.</p>
+<p>Esta gestión es fundamental para:
+- Evitar daños físicos en el procesador.
+- Reducir el consumo eléctrico.
+- Mejorar la eficiencia energética.
+- Aumentar la vida útil del equipo.
+- Mantener un equilibrio entre rendimiento y ruido (ventiladores).</p>
+<hr />
+<h2 id="121-ajuste-dinamico-de-frecuencia">12.1 Ajuste dinámico de frecuencia<a class="headerlink" href="#121-ajuste-dinamico-de-frecuencia" title="Permanent link">&para;</a></h2>
+<p>La <strong>frecuencia de reloj</strong> de una CPU indica cuántos ciclos puede ejecutar por segundo y se mide en <strong>GHz</strong>. Tradicionalmente, los procesadores funcionaban siempre a una frecuencia fija, pero esto resultaba ineficiente cuando el equipo estaba en reposo o realizando tareas ligeras.</p>
+<p>Las CPUs modernas pueden:
+- <strong>Aumentar la frecuencia</strong> cuando se necesita más rendimiento.
+- <strong>Reducir la frecuencia</strong> cuando la carga es baja.</p>
+<p>Este ajuste dinámico permite ahorrar energía y reducir la temperatura sin sacrificar rendimiento cuando realmente se necesita.</p>
+<p>Ejemplo:
+- Navegar por Internet → frecuencia baja.
+- Compilar un programa o jugar → frecuencia alta (modo turbo).</p>
+<hr />
+<h2 id="122-ajuste-dinamico-de-voltaje">12.2 Ajuste dinámico de voltaje<a class="headerlink" href="#122-ajuste-dinamico-de-voltaje" title="Permanent link">&para;</a></h2>
+<p>El <strong>voltaje</strong> es la energía eléctrica que alimenta al microprocesador. A mayor voltaje:
+- Mayor consumo eléctrico.
+- Mayor generación de calor.</p>
+<p>Las CPUs actuales ajustan el voltaje <strong>junto con la frecuencia</strong>, ya que ambos están estrechamente relacionados. Si la frecuencia baja, el voltaje también puede reducirse, lo que disminuye significativamente el consumo energético.</p>
+<p>Este ajuste dinámico es clave para:
+- Mejorar la eficiencia.
+- Reducir el calentamiento.
+- Evitar un consumo innecesario en tareas simples.</p>
+<hr />
+<h2 id="123-estados-de-energia-p-states-y-c-states">12.3 Estados de energía: P-states y C-states<a class="headerlink" href="#123-estados-de-energia-p-states-y-c-states" title="Permanent link">&para;</a></h2>
+<p>Los procesadores utilizan <strong>estados de energía</strong> para adaptarse a la carga de trabajo del sistema.</p>
+<h3 id="p-states-performance-states">P-states (Performance States)<a class="headerlink" href="#p-states-performance-states" title="Permanent link">&para;</a></h3>
+<p>Los <strong>P-states</strong> controlan el <strong>nivel de rendimiento del procesador</strong>:
+- Frecuencia.
+- Voltaje.</p>
+<p>Ejemplo:
+- P0 → máximo rendimiento.
+- P1, P2, P3… → rendimiento progresivamente menor.</p>
+<p>Cuando el sistema necesita potencia, la CPU sube a un P-state alto. Cuando la carga baja, desciende a estados más eficientes.</p>
+<hr />
+<h3 id="c-states-idle-states">C-states (Idle States)<a class="headerlink" href="#c-states-idle-states" title="Permanent link">&para;</a></h3>
+<p>Los <strong>C-states</strong> controlan el comportamiento del procesador cuando <strong>no está ejecutando instrucciones</strong>.</p>
+<ul>
+<li>C0 → el núcleo está activo.</li>
+<li>C1 → reposo ligero.</li>
+<li>C6, C7… → reposo profundo, con partes del núcleo apagadas.</li>
+</ul>
+<p>Cuanto más profundo es el C-state:
+- Menor consumo.
+- Mayor ahorro energético.
+- Mayor latencia al volver a estar activo.</p>
+<p>Estos estados son especialmente importantes en:
+- Portátiles.
+- Servidores.
+- Equipos encendidos muchas horas.</p>
+<hr />
+<h2 id="124-sensores-termicos-y-proteccion-del-procesador">12.4 Sensores térmicos y protección del procesador<a class="headerlink" href="#124-sensores-termicos-y-proteccion-del-procesador" title="Permanent link">&para;</a></h2>
+<p>Las CPUs modernas incorporan <strong>sensores térmicos internos</strong> distribuidos por todo el chip. Estos sensores:
+- Miden la temperatura en tiempo real.
+- Detectan puntos calientes.
+- Informan al sistema de control energético.</p>
+<p>Si la temperatura supera ciertos límites:
+- Se reduce automáticamente la frecuencia (thermal throttling).
+- Se limita el voltaje.
+- En casos extremos, el sistema se apaga para evitar daños.</p>
+<p>Estas protecciones evitan:
+- Daños permanentes en el silicio.
+- Fallos del sistema.
+- Reducción drástica de la vida útil del procesador.</p>
+<hr />
+<h2 id="125-consumo-energetico-y-vatios-w">12.5 Consumo energético y vatios (W)<a class="headerlink" href="#125-consumo-energetico-y-vatios-w" title="Permanent link">&para;</a></h2>
+<p>El <strong>consumo energético</strong> de un procesador se mide en <strong>vatios (W)</strong> y representa la cantidad de energía que utiliza durante su funcionamiento.</p>
+<p>Es importante entender que:
+- Un procesador no consume siempre la misma cantidad de vatios.
+- El consumo varía según la carga, la frecuencia y el voltaje.
+- En reposo, el consumo puede ser muy bajo.
+- En carga máxima, el consumo puede aumentar considerablemente.</p>
+<p>Por ejemplo:
+- Un procesador puede consumir 10–15 W en reposo.
+- Bajo carga intensa, puede superar ampliamente los 100 W.</p>
+<hr />
+<h2 id="126-que-es-el-tdp-y-que-significa-realmente">12.6 Qué es el TDP y qué significa realmente<a class="headerlink" href="#126-que-es-el-tdp-y-que-significa-realmente" title="Permanent link">&para;</a></h2>
+<p>El <strong>TDP (Thermal Design Power)</strong> es uno de los conceptos más importantes —y a la vez más malinterpretados— en los procesadores.</p>
+<p>El TDP:
+- Se expresa en vatios (W).
+- Indica el <strong>calor máximo que el sistema de refrigeración debe ser capaz de disipar</strong>.
+- No es exactamente el consumo real máximo, sino una <strong>referencia térmica</strong>.</p>
+<p>Ejemplo:
+- Un procesador con TDP de 65 W necesita un sistema de refrigeración capaz de disipar al menos esa cantidad de calor.</p>
+<p>En procesadores modernos:
+- El consumo real puede superar el TDP durante picos de rendimiento (modo turbo).
+- Esto es normal y está previsto por el fabricante.</p>
+<hr />
+<h2 id="127-importancia-actual-del-tdp-en-la-eleccion-de-procesadores">12.7 Importancia actual del TDP en la elección de procesadores<a class="headerlink" href="#127-importancia-actual-del-tdp-en-la-eleccion-de-procesadores" title="Permanent link">&para;</a></h2>
+<p>Hoy en día, el TDP es clave para:
+- Elegir correctamente el sistema de refrigeración.
+- Diseñar equipos silenciosos.
+- Montar equipos compactos o portátiles.
+- Optimizar consumo energético en servidores.</p>
+<p>Un procesador con alto TDP:
+- Ofrece más rendimiento sostenido.
+- Genera más calor.
+- Requiere mejor refrigeración.
+- Consume más energía eléctrica.</p>
+<p>Un procesador con bajo TDP:
+- Consume menos.
+- Genera menos calor.
+- Es ideal para equipos pequeños, portátiles o de bajo ruido.</p>
+<hr />
+<h2 id="128-tecnologias-de-turbo-dinamico">12.8 Tecnologías de turbo dinámico<a class="headerlink" href="#128-tecnologias-de-turbo-dinamico" title="Permanent link">&para;</a></h2>
+<p>Los fabricantes incluyen tecnologías como:
+- <strong>Intel Turbo Boost</strong>
+- <strong>AMD Precision Boost</strong></p>
+<p>Estas tecnologías permiten que la CPU:
+- Supere su frecuencia base.
+- Aumente el consumo y la temperatura temporalmente.
+- Aproveche el margen térmico disponible.</p>
+<p>El sistema decide automáticamente:
+- Cuándo subir la frecuencia.
+- Cuánto tiempo mantenerla.
+- Cuándo reducirla para proteger el procesador.</p>
+<hr />
+<h2 id="129-importancia-para-el-montaje-y-mantenimiento">12.9 Importancia para el montaje y mantenimiento<a class="headerlink" href="#129-importancia-para-el-montaje-y-mantenimiento" title="Permanent link">&para;</a></h2>
+<p>Para el alumnado de montaje y mantenimiento, comprender la gestión energética es esencial para:
+- Elegir una fuente de alimentación adecuada.
+- Seleccionar un disipador correcto.
+- Diagnosticar problemas de sobrecalentamiento.
+- Entender por qué un procesador baja su rendimiento (throttling).
+- Optimizar equipos según su uso.</p>
+<hr />
+<h1 id="13-procesamiento-multinucleo-y-multiprocesador">13. Procesamiento multinúcleo y multiprocesador<a class="headerlink" href="#13-procesamiento-multinucleo-y-multiprocesador" title="Permanent link">&para;</a></h1>
+<p>Los sistemas modernos utilizan:
+- Múltiples núcleos.
+- Varias CPUs físicas en servidores.</p>
+<p>Esto permite ejecutar múltiples tareas simultáneamente y mejorar rendimiento y disponibilidad.</p>
+<hr />
+<h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>El microprocesador moderno es un sistema extremadamente complejo que integra cálculo, memoria, gráficos, entrada/salida, seguridad, virtualización y gestión energética. Comprender su funcionamiento interno es fundamental para cualquier estudiante de informática, sistemas o mantenimiento de equipos.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

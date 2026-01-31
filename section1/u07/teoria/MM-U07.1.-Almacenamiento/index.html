@@ -1,0 +1,5938 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Almacenamiento">
+      
+      
+        <meta name="author" content="Jose Manuel Gonzalez Castillo">
+      
+      
+        <link rel="canonical" href="https://axisalberti.github.io/Axis_Apuntes/section1/u07/teoria/MM-U07.1.-Almacenamiento/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../slides/no-disponible/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UD 07 - 7.1 Almacenamiento - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+  
+  
+    
+      
+      
+        
+      
+      
+    
+  
+  
+  <style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-7-dispositivos-almacenamiento" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 07 - 7.1 Almacenamiento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u00/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u03/teoria/MM-U03.1.-Chipset/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u04/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/MM-U04.1.-Conexiones-externas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u05/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u06/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u06/teoria/MM-U06.1.-CMOS-y-UEFI/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-7-dispositivos-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 7. DISPOSITIVOS ALMACENAMIENTO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulario-clave-almacenamiento-sata-nvme-m2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vocabulario clave — Almacenamiento (SATA, NVMe, M.2…)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-los-dispositivos-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción a los dispositivos de almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a los dispositivos de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-que-debes-saber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas que debes saber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion-y-tipos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Definición y tipos principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Definición y tipos principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por tecnología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-interfazprotocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por interfaz/protocolo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-formato-fisico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por formato físico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-importancia-en-la-informatica-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Importancia en la informática actual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Importancia en la informática actual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rendimiento-percibido-por-el-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Rendimiento percibido por el usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-productividad-del-desarrollador-y-del-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Productividad del desarrollador y del aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-datos-copias-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Datos, copias y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguridad-y-cumplimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Seguridad y cumplimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tecnologias-tradicionales-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías tradicionales de almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnologías tradicionales de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-importa-de-verdad-mapa-mental-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué importa de verdad (mapa mental rápido)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-rapidas-de-eleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas rápidas de elección
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-hdd-discos-duros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HDD (Discos Duros)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 HDD (Discos Duros)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Visión general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-componentes-y-mecanica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Componentes y mecánica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lectura-y-escritura-magnetica-como-nacen-los-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Lectura y escritura magnética (cómo “nacen” los bits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-organizacion-fisica-y-logica-de-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Organización física y lógica de los datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-rendimiento-por-que-un-hdd-se-siente-lento-en-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Rendimiento: por qué un HDD “se siente” lento en aleatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-modos-de-grabacion-y-densidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Modos de grabación y densidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-fiabilidad-correccion-y-gestion-de-defectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Fiabilidad, corrección y gestión de defectos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-sistema-de-ficheros-y-fragmentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Sistema de ficheros y fragmentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-buenas-practicas-de-uso-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Buenas prácticas de uso y montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-resumen-comparativo-hdd-vs-ssd-enfoque-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) Resumen comparativo (HDD vs SSD, enfoque rendimiento)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronologia-de-la-evolucion-de-las-memorias-rom-a-vnand-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cronología de la evolución de las memorias ROM a vNAND (NVMe)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cronología de la evolución de las memorias ROM a vNAND (NVMe)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anos-1950-1960-inicios-de-la-memoria-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1950-1960: Inicios de la Memoria ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-1970-aparicion-de-prom-eprom-y-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1970: Aparición de PROM, EPROM y EEPROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-1980-1990-primeras-memorias-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1980-1990: Primeras memorias Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-2000-expansion-de-ssd-y-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 2000: Expansión de SSD y NAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-2010-llega-la-3d-nand-y-la-vnand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 2010: Llega la 3D NAND y la vNAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presente-nvme-y-almacenamiento-ultra-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presente: NVMe y almacenamiento ultra-rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ssd-unidades-de-estado-solido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 SSD (Unidades de Estado Sólido)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 SSD (Unidades de Estado Sólido)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivacion-para-el-desarrollo-de-los-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivación para el desarrollo de los SSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-las-celdas-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnología de las celdas de memoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-escritura-y-lectura-en-las-celdas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento: Escritura y lectura en las celdas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-comparativa-ssd-vs-hdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa: SSD vs HDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-memorias-flash-y-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Memorias Flash y USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Memorias Flash y USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-las-memorias-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnología de las memorias Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia y evolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-comparativa-memoria-flashusb-vs-otras-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa: Memoria flash/USB vs. otras tecnologías
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-tecnologia-optica-cd-dvd-hd-dvd-y-blu-ray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Tecnología óptica: CD, DVD, HD DVD y Blu-ray
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Tecnología óptica: CD, DVD, HD DVD y Blu-ray">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia y evolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas y limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ultimas-tecnologias-en-almacenamiento-de-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Últimas tecnologías en almacenamiento de 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Últimas tecnologías en almacenamiento de 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-almacenamiento-basado-en-memoria-persistente-pmem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Almacenamiento basado en memoria persistente (PMem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unidades-nvme-nvme-over-fabrics-y-tecnologias-asociadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Unidades NVMe, NVMe over Fabrics y tecnologías asociadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Unidades NVMe, NVMe over Fabrics y tecnologías asociadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-introduccion-a-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Introducción a NVMe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-protocolo-pcie-peripheral-component-interconnect-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Protocolo PCIe (Peripheral Component Interconnect Express)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-arquitectura-de-celdas-de-almacenamiento-v-nand-y-3d-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Arquitectura de celdas de almacenamiento: V-NAND y 3D NAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-concepto-de-bancos-de-almacenamiento-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Concepto de bancos de almacenamiento 3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-ventajas-sobre-tecnologias-anteriores-satasas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        e) Ventajas sobre tecnologías anteriores (SATA/SAS):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-nvme-over-fabrics-nvme-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        f) NVMe over Fabrics (NVMe-oF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-aplicaciones-y-escenarios-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        g) Aplicaciones y escenarios actuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-futuro-de-nvme-y-memoria-flash-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        h) Futuro de NVMe y memoria flash 3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whitepapers-y-documentacion-tecnica-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Whitepapers y documentación técnica recomendada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u08/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u08/teoria/MM-U08.1.-Microprocesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u09/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u09/teoria/MM-U09.1.-Tarjetas-graficas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/slides/PRL-slide-prueba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/SI-U01.1.-Redes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-7-dispositivos-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 7. DISPOSITIVOS ALMACENAMIENTO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulario-clave-almacenamiento-sata-nvme-m2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vocabulario clave — Almacenamiento (SATA, NVMe, M.2…)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-los-dispositivos-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción a los dispositivos de almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a los dispositivos de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-que-debes-saber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas que debes saber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion-y-tipos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Definición y tipos principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Definición y tipos principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por tecnología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-interfazprotocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por interfaz/protocolo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-por-formato-fisico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos por formato físico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-importancia-en-la-informatica-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Importancia en la informática actual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Importancia en la informática actual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rendimiento-percibido-por-el-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Rendimiento percibido por el usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-productividad-del-desarrollador-y-del-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Productividad del desarrollador y del aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-datos-copias-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Datos, copias y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguridad-y-cumplimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Seguridad y cumplimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tecnologias-tradicionales-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías tradicionales de almacenamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnologías tradicionales de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-importa-de-verdad-mapa-mental-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué importa de verdad (mapa mental rápido)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-rapidas-de-eleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas rápidas de elección
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-hdd-discos-duros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HDD (Discos Duros)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 HDD (Discos Duros)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Visión general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-componentes-y-mecanica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Componentes y mecánica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lectura-y-escritura-magnetica-como-nacen-los-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Lectura y escritura magnética (cómo “nacen” los bits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-organizacion-fisica-y-logica-de-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Organización física y lógica de los datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-rendimiento-por-que-un-hdd-se-siente-lento-en-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Rendimiento: por qué un HDD “se siente” lento en aleatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-modos-de-grabacion-y-densidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Modos de grabación y densidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-fiabilidad-correccion-y-gestion-de-defectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Fiabilidad, corrección y gestión de defectos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-sistema-de-ficheros-y-fragmentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Sistema de ficheros y fragmentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-buenas-practicas-de-uso-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Buenas prácticas de uso y montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-resumen-comparativo-hdd-vs-ssd-enfoque-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) Resumen comparativo (HDD vs SSD, enfoque rendimiento)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronologia-de-la-evolucion-de-las-memorias-rom-a-vnand-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cronología de la evolución de las memorias ROM a vNAND (NVMe)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cronología de la evolución de las memorias ROM a vNAND (NVMe)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anos-1950-1960-inicios-de-la-memoria-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1950-1960: Inicios de la Memoria ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-1970-aparicion-de-prom-eprom-y-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1970: Aparición de PROM, EPROM y EEPROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-1980-1990-primeras-memorias-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 1980-1990: Primeras memorias Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-2000-expansion-de-ssd-y-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 2000: Expansión de SSD y NAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anos-2010-llega-la-3d-nand-y-la-vnand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Años 2010: Llega la 3D NAND y la vNAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presente-nvme-y-almacenamiento-ultra-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presente: NVMe y almacenamiento ultra-rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ssd-unidades-de-estado-solido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 SSD (Unidades de Estado Sólido)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 SSD (Unidades de Estado Sólido)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivacion-para-el-desarrollo-de-los-ssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivación para el desarrollo de los SSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-las-celdas-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnología de las celdas de memoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-escritura-y-lectura-en-las-celdas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento: Escritura y lectura en las celdas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-comparativa-ssd-vs-hdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa: SSD vs HDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-memorias-flash-y-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Memorias Flash y USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Memorias Flash y USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-las-memorias-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnología de las memorias Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia y evolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-comparativa-memoria-flashusb-vs-otras-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla comparativa: Memoria flash/USB vs. otras tecnologías
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-tecnologia-optica-cd-dvd-hd-dvd-y-blu-ray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Tecnología óptica: CD, DVD, HD DVD y Blu-ray
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Tecnología óptica: CD, DVD, HD DVD y Blu-ray">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia y evolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas y limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ultimas-tecnologias-en-almacenamiento-de-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Últimas tecnologías en almacenamiento de 2025
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Últimas tecnologías en almacenamiento de 2025">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-almacenamiento-basado-en-memoria-persistente-pmem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Almacenamiento basado en memoria persistente (PMem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-unidades-nvme-nvme-over-fabrics-y-tecnologias-asociadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Unidades NVMe, NVMe over Fabrics y tecnologías asociadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Unidades NVMe, NVMe over Fabrics y tecnologías asociadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-introduccion-a-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Introducción a NVMe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-protocolo-pcie-peripheral-component-interconnect-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Protocolo PCIe (Peripheral Component Interconnect Express)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-arquitectura-de-celdas-de-almacenamiento-v-nand-y-3d-nand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Arquitectura de celdas de almacenamiento: V-NAND y 3D NAND
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-concepto-de-bancos-de-almacenamiento-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Concepto de bancos de almacenamiento 3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-ventajas-sobre-tecnologias-anteriores-satasas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        e) Ventajas sobre tecnologías anteriores (SATA/SAS):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-nvme-over-fabrics-nvme-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        f) NVMe over Fabrics (NVMe-oF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-aplicaciones-y-escenarios-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        g) Aplicaciones y escenarios actuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-futuro-de-nvme-y-memoria-flash-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        h) Futuro de NVMe y memoria flash 3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whitepapers-y-documentacion-tecnica-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Whitepapers y documentación técnica recomendada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:almacenamiento" class="md-tag md-tag-icon">almacenamiento</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h2 id="tema-7-dispositivos-almacenamiento">TEMA 7. DISPOSITIVOS ALMACENAMIENTO<a class="headerlink" href="#tema-7-dispositivos-almacenamiento" title="Permanent link">&para;</a></h2>
+<hr />
+<h1 id="vocabulario-clave-almacenamiento-sata-nvme-m2">Vocabulario clave — Almacenamiento (SATA, NVMe, M.2…)<a class="headerlink" href="#vocabulario-clave-almacenamiento-sata-nvme-m2" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Término</th>
+<th>Definición breve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interfaz/Protocolo</td>
+<td><strong>SATA 3</strong></td>
+<td>Bus para discos/SSD con tope ~600 MB/s; latencia mayor que NVMe.</td>
+</tr>
+<tr>
+<td>Interfaz/Protocolo</td>
+<td><strong>AHCI</strong></td>
+<td>Protocolo de control para SATA; pensado para HDD, menos eficiente en SSD.</td>
+</tr>
+<tr>
+<td>Interfaz/Protocolo</td>
+<td><strong>PCI Express (PCIe)</strong></td>
+<td>Bus de alta velocidad por “líneas” (x1/x2/x4/x8/x16).</td>
+</tr>
+<tr>
+<td>Interfaz/Protocolo</td>
+<td><strong>NVMe</strong></td>
+<td>Protocolo para SSD sobre PCIe con baja latencia y alto paralelismo.</td>
+</tr>
+<tr>
+<td>Formato físico</td>
+<td><strong>M.2</strong></td>
+<td>Tarjeta delgada (2230/2242/2260/2280/22110); puede ser <strong>SATA</strong> o <strong>NVMe</strong>.</td>
+</tr>
+<tr>
+<td>Formato físico</td>
+<td><strong>Key M / Key B / B+M</strong></td>
+<td>Muescas de M.2 que indican compatibilidad: M (NVMe x4), B/B+M (SATA o NVMe x2).</td>
+</tr>
+<tr>
+<td>Formato físico</td>
+<td><strong>2.5"</strong></td>
+<td>Caja fina usada por SSD/HDD SATA (datos + alimentación).</td>
+</tr>
+<tr>
+<td>Formato físico</td>
+<td><strong>3.5"</strong></td>
+<td>Tamaño típico de HDD de alta capacidad.</td>
+</tr>
+<tr>
+<td>Formato físico</td>
+<td><strong>U.2</strong></td>
+<td>Formato 2.5" que usa NVMe por cable; común en servidores.</td>
+</tr>
+<tr>
+<td>Métricas</td>
+<td><strong>Secuencial (MB/s)</strong></td>
+<td>Velocidad al copiar archivos grandes (vídeo/ISO).</td>
+</tr>
+<tr>
+<td>Métricas</td>
+<td><strong>Aleatorio 4K / IOPS</strong></td>
+<td>Operaciones pequeñas por segundo; clave para SO y apps.</td>
+</tr>
+<tr>
+<td>Métricas</td>
+<td><strong>Latencia</strong></td>
+<td>Tiempo por operación; cuanto menor, más “ágil” se percibe.</td>
+</tr>
+<tr>
+<td>Métricas</td>
+<td><strong>4K Q1T1</strong></td>
+<td>Prueba de lectura/escritura aleatoria 4 KiB, cola 1; muy representativa de uso real.</td>
+</tr>
+<tr>
+<td>Componentes SSD</td>
+<td><strong>Controlador</strong></td>
+<td>“Cerebro” del SSD: gestiona colas, cachés, wear-leveling.</td>
+</tr>
+<tr>
+<td>Componentes SSD</td>
+<td><strong>DRAM (en SSD)</strong></td>
+<td>Caché rápida para mapear direcciones; mejora estabilidad y rendimiento.</td>
+</tr>
+<tr>
+<td>Componentes SSD</td>
+<td><strong>DRAMless / HMB</strong></td>
+<td>SSD sin DRAM propia; puede usar RAM del host (HMB) pero rinde menos en carga.</td>
+</tr>
+<tr>
+<td>NAND</td>
+<td><strong>SLC / MLC / TLC / QLC</strong></td>
+<td>Tipos de celdas: de más rápida/durable (SLC) a más densa/barata (QLC).</td>
+</tr>
+<tr>
+<td>Resistencia</td>
+<td><strong>TBW / DWPD</strong></td>
+<td>Terabytes escritos / escrituras por día; estiman vida útil de un SSD.</td>
+</tr>
+<tr>
+<td>Mantenimiento</td>
+<td><strong>TRIM</strong></td>
+<td>El SO marca bloques libres para que el SSD optimice futuras escrituras.</td>
+</tr>
+<tr>
+<td>Mantenimiento</td>
+<td><strong>Garbage Collection</strong></td>
+<td>Limpieza/compactación interna de bloques en el SSD.</td>
+</tr>
+<tr>
+<td>Mantenimiento</td>
+<td><strong>S.M.A.R.T.</strong></td>
+<td>Indicadores de salud (temperatura, errores, desgaste).</td>
+</tr>
+<tr>
+<td>Térmica</td>
+<td><strong>Throttling</strong></td>
+<td>El SSD se frena por temperatura alta para protegerse.</td>
+</tr>
+<tr>
+<td>Térmica</td>
+<td><strong>Disipador M.2</strong></td>
+<td>Placa/“heatsink” que ayuda a mantener rendimiento sostenido.</td>
+</tr>
+<tr>
+<td>Placa base</td>
+<td><strong>Líneas PCIe (lanes)</strong></td>
+<td>Canales de datos; un NVMe suele usar <strong>x4</strong>.</td>
+</tr>
+<tr>
+<td>Placa base</td>
+<td><strong>CPU vs Chipset</strong></td>
+<td>Origen de las líneas: desde <strong>CPU</strong> (mejor) o desde <strong>chipset</strong> (más contención).</td>
+</tr>
+<tr>
+<td>Placa base</td>
+<td><strong>Bifurcación x16→x8/x8</strong></td>
+<td>Reparto de líneas de la ranura de GPU al poblar otros dispositivos.</td>
+</tr>
+<tr>
+<td>Placa base</td>
+<td><strong>Deshabilitación SATA</strong></td>
+<td>Al usar ciertos M.2, algunos puertos SATA pueden apagarse (ver manual).</td>
+</tr>
+<tr>
+<td>Arranque</td>
+<td><strong>UEFI / BIOS (Legacy)</strong></td>
+<td>Firmware moderno (UEFI) vs legado (BIOS); UEFI soporta NVMe nativo.</td>
+</tr>
+<tr>
+<td>Particionado</td>
+<td><strong>GPT / MBR</strong></td>
+<td>Esquemas de particiones: GPT (moderno, &gt;2 TB), MBR (legado).</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td><strong>Cifrado en reposo</strong></td>
+<td>Protección de datos en disco (BitLocker, LUKS, FileVault).</td>
+</tr>
+<tr>
+<td>Copias</td>
+<td><strong>Regla 3-2-1</strong></td>
+<td>3 copias, 2 medios, 1 fuera de ubicación (backup real).</td>
+</tr>
+<tr>
+<td>Copias</td>
+<td><strong>RAID ≠ Backup</strong></td>
+<td>RAID da disponibilidad; <strong>no</strong> sustituye a las copias de seguridad.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="1-introduccion-a-los-dispositivos-de-almacenamiento">1. Introducción a los dispositivos de almacenamiento<a class="headerlink" href="#1-introduccion-a-los-dispositivos-de-almacenamiento" title="Permanent link">&para;</a></h1>
+<p>Los <strong>dispositivos de almacenamiento</strong> guardan datos de forma <strong>persistente</strong> (no se pierden al apagar). Son la base para instalar el <strong>sistema operativo</strong>, aplicaciones y mantener <strong>archivos</strong> (documentos, fotos, bases de datos…). Se diferencian de la <strong>memoria</strong> (RAM), que es <strong>volátil</strong> y mucho más rápida, pero se borra al apagar.</p>
+<h3 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Persistencia</strong>: conservan los datos sin energía.</li>
+<li><strong>Velocidad vs capacidad vs precio</strong>: no existe el “mejor absoluto”; se elige por <strong>equilibrio</strong> (rendimiento/coste/fiabilidad).</li>
+<li><strong>Interfaz ≠ formato</strong>: “cómo habla” (SATA, NVMe/PCIe, USB…) no es lo mismo que “la forma física” (M.2, 2.5”, 3.5”).</li>
+<li><strong>Capas de la jerarquía</strong>: CPU/cache → RAM → <strong>almacenamiento</strong> (SSD/HDD/tape). Cuanto más cerca de la CPU, más rápido y caro; cuanto más lejos, más lento y barato.</li>
+</ul>
+<h3 id="metricas-que-debes-saber">Métricas que debes saber<a class="headerlink" href="#metricas-que-debes-saber" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capacidad</strong>: GB/TB (1 TB ≈ 1000 GB).</li>
+<li><strong>Rendimiento</strong>:</li>
+<li><strong>Secuencial (MB/s)</strong>: copiar archivos grandes.</li>
+<li><strong>Aleatorio (IOPS/latencia)</strong>: abrir apps, cargar páginas, BBDD (lo que “se siente rápido”).</li>
+<li><strong>Latencia</strong>: tiempo por operación (ms/µs). <strong>Menos es mejor</strong>.</li>
+<li><strong>Resistencia</strong> (SSD): <strong>TBW/DWPD</strong> (cuánto puedes escribir sin agotar el disco).</li>
+<li><strong>Fiabilidad</strong>: tasas de error, <strong>SMART</strong>, <strong>MTBF</strong>; copias/RAID/redundancia están para <strong>mitigar</strong> fallos, no para evitarlos por completo.</li>
+</ul>
+<hr />
+<h2 id="11-definicion-y-tipos-principales">1.1 Definición y tipos principales<a class="headerlink" href="#11-definicion-y-tipos-principales" title="Permanent link">&para;</a></h2>
+<h3 id="definicion">Definición<a class="headerlink" href="#definicion" title="Permanent link">&para;</a></h3>
+<p>Dispositivo capaz de <strong>registrar</strong>, <strong>conservar</strong> y <strong>recuperar</strong> información digital. La mayoría son <strong>no volátiles</strong> (siguen guardando datos sin energía).</p>
+<h3 id="tipos-por-tecnologia">Tipos por <strong>tecnología</strong><a class="headerlink" href="#tipos-por-tecnologia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HDD (magnéticos)</strong><br />
+  Platos giratorios + cabezales.  </li>
+<li><strong>Pros</strong>: <strong>muchos TB</strong> a bajo coste/GB.  </li>
+<li><strong>Contras</strong>: más <strong>lentos</strong> (alta latencia), sensibles a golpes, consumo y ruido.  </li>
+<li>Conceptos: <strong>RPM</strong> (5400/7200/10000), <strong>tiempo de búsqueda</strong>, <strong>SMR vs CMR</strong> (SMR más denso pero peor en escrituras sostenidas).</li>
+<li><strong>SSD (estado sólido, NAND)</strong><br />
+  Chips NAND + controlador (sin partes móviles).  </li>
+<li><strong>Pros</strong>: <strong>baja latencia</strong>, gran rendimiento aleatorio, silenciosos, menor consumo.  </li>
+<li><strong>Contras</strong>: más <strong>caros/GB</strong>, <strong>desgaste</strong> (mitigado con wear-leveling).  </li>
+<li>Conceptos: <strong>TLC/QLC</strong> (densidad vs rendimiento), <strong>DRAM vs DRAMless (HMB)</strong>, <strong>TRIM</strong> y <strong>garbage collection</strong>.</li>
+<li><strong>Ópticos (CD/DVD/BD)</strong><br />
+  Lectura láser. Uso hoy: archivado puntual, distribución antigua de software.</li>
+<li><strong>Cinta magnética (LTO)</strong><br />
+  Muy alta capacidad y bajo coste por TB para <strong>archivos y copias</strong> a largo plazo (empresas).</li>
+<li><strong>Flash extraíble</strong> (USB, <strong>SD/microSD</strong>)<br />
+  Portabilidad; rendimiento y fiabilidad <strong>muy variables</strong> según gama.</li>
+</ul>
+<h3 id="tipos-por-interfazprotocolo">Tipos por <strong>interfaz/protocolo</strong><a class="headerlink" href="#tipos-por-interfazprotocolo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SATA + AHCI</strong>: clásico de HDD/SSD 2.5”; límite práctico ~600 MB/s, latencia mayor.  </li>
+<li><strong>NVMe sobre PCIe (x2/x4)</strong>: protocolo moderno para SSD; <strong>GB/s</strong> y baja latencia. Puede ir en <strong>M.2</strong>, <strong>U.2</strong> o tarjetas PCIe.  </li>
+<li><strong>USB/Thunderbolt</strong> (externo): discos y SSD portátiles; el rendimiento depende del estándar (USB 3.x, TB&frac34;).  </li>
+<li><strong>SAS</strong> (servidor): similar a SATA pero más robusto y con doble puerto para redundancia.</li>
+</ul>
+<h3 id="tipos-por-formato-fisico">Tipos por <strong>formato físico</strong><a class="headerlink" href="#tipos-por-formato-fisico" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>3.5"</strong>: HDD de gran capacidad (sobremesa/servidor).  </li>
+<li><strong>2.5"</strong>: SSD/HDD compactos (portátiles/servidores).  </li>
+<li><strong>M.2</strong> (2230/2242/2260/2280/22110): <strong>formato</strong> de tarjeta; puede ser <strong>SATA o NVMe</strong> (ojo a las <strong>keys</strong>: <strong>M</strong>, <strong>B</strong>, <strong>B+M</strong>).  </li>
+<li><strong>U.2</strong>: 2.5" con conector para <strong>NVMe</strong> por cable (entornos profesionales).  </li>
+<li><strong>mSATA</strong> (legado): antecesor del M.2.</li>
+</ul>
+<blockquote>
+<p><strong>Regla de oro</strong>: “la <strong>placa manda</strong>”. Revisa en el <strong>manual</strong> de la placa qué acepta cada zócalo: <strong>NVMe</strong>, <strong>SATA</strong> o <strong>ambos</strong>, y qué <strong>puertos SATA</strong> se desactivan cuando pueblas ciertos <strong>M.2</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="12-importancia-en-la-informatica-actual">1.2 Importancia en la informática actual<a class="headerlink" href="#12-importancia-en-la-informatica-actual" title="Permanent link">&para;</a></h2>
+<h3 id="1-rendimiento-percibido-por-el-usuario">1) Rendimiento percibido por el usuario<a class="headerlink" href="#1-rendimiento-percibido-por-el-usuario" title="Permanent link">&para;</a></h3>
+<ul>
+<li>El salto <strong>HDD → SSD</strong> reduce drásticamente <strong>latencias</strong>: el sistema <strong>arranca</strong> más rápido, las apps se <strong>abren</strong> antes y la multitarea mejora.  </li>
+<li>Entre <strong>SSD SATA</strong> y <strong>SSD NVMe</strong>, la mejora visible aparece en tareas <strong>aleatorias</strong> o con <strong>mucha concurrencia</strong> (proyectos grandes, BBDD, VMs).</li>
+</ul>
+<h3 id="2-productividad-del-desarrollador-y-del-aula">2) Productividad del desarrollador y del aula<a class="headerlink" href="#2-productividad-del-desarrollador-y-del-aula" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Compilaciones, instalación de dependencias, contenedores, VMs y bases de datos <strong>leen/escriben miles de ficheros pequeños</strong>. Aquí NVMe brilla (IOPS/latencia).  </li>
+<li>En aulas y talleres, un buen SSD reduce tiempos muertos y <strong>aumenta el tiempo efectivo de práctica</strong>.</li>
+</ul>
+<h3 id="3-datos-copias-y-recuperacion">3) Datos, copias y recuperación<a class="headerlink" href="#3-datos-copias-y-recuperacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>El almacenamiento es donde “<strong>vive</strong>” la información: sin copias, <strong>se pierde</strong>.  </li>
+<li>Estrategia mínima: <strong>3–2–1</strong> (3 copias, 2 medios, 1 fuera de ubicación).  </li>
+<li><strong>RAID ≠ backup</strong>: RAID aporta disponibilidad; el <strong>backup</strong> protege de borrados, ransomware o corrupción.</li>
+</ul>
+<h3 id="4-seguridad-y-cumplimiento">4) Seguridad y cumplimiento<a class="headerlink" href="#4-seguridad-y-cumplimiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cifrado en reposo</strong>: BitLocker, LUKS, FileVault. Imprescindible en portátiles con datos sensibles.  </li>
+<li><strong>Borrado seguro</strong>: <code>secure erase</code>, destrucción física cuando procede.  </li>
+<li><strong>SMART/monitorización</strong>: anticipa fallos, planifica reemplazos.</li>
+</ul>
+<hr />
+<h2 id="2-tecnologias-tradicionales-de-almacenamiento">2. Tecnologías tradicionales de almacenamiento<a class="headerlink" href="#2-tecnologias-tradicionales-de-almacenamiento" title="Permanent link">&para;</a></h2>
+<p>En este bloque vas a entender <strong>cómo guardan los datos</strong> los soportes “clásicos” que todavía encuentras en PCs, portátiles y laboratorios: <strong>HDD</strong> (discos duros mecánicos), <strong>SSD</strong> (estado sólido), <strong>memorias flash/USB</strong> y <strong>ópticos</strong> (CD/DVD). No es solo “cuánto caben” o “cuántos MB/s dicen”; el <strong>cómo funcionan por dentro</strong> explica <strong>por qué rinden</strong> como rinden, <strong>cuándo elegir</strong> cada uno y <strong>qué precauciones</strong> tomar.</p>
+<h3 id="que-importa-de-verdad-mapa-mental-rapido">Qué importa de verdad (mapa mental rápido)<a class="headerlink" href="#que-importa-de-verdad-mapa-mental-rapido" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Persistencia</strong>: conservan los datos sin energía (a diferencia de la RAM).</li>
+<li><strong>Patrón de acceso</strong>:  </li>
+<li><em>Secuencial</em> (copiar vídeos/ISOs) → importa el <strong>ancho</strong> (MB/s).  </li>
+<li><em>Aleatorio</em> (abrir apps/OS, compilar, BBDD) → manda la <strong>latencia/IOPS</strong>.</li>
+<li><strong>Tecnología interna</strong>:</li>
+<li><strong>HDD (mecánico + magnético)</strong> → cabezal se mueve + disco gira → <strong>latencia alta</strong> en aleatorio.</li>
+<li><strong>SSD/Flash (electrónico + NAND)</strong> → sin partes móviles → <strong>latencia muy baja</strong>, gestión interna (FTL, TRIM).</li>
+<li><strong>Óptico (láser + pits/lands)</strong> → lectura secuencial, <strong>lento</strong> pero barato para distribución/archivo puntual.</li>
+<li><strong>Interfaz ≠ Formato</strong>:</li>
+<li><strong>SATA/AHCI</strong> vs <strong>NVMe/PCIe</strong> (protocolo/interfaz).  </li>
+<li><strong>2.5"</strong>, <strong>M.2</strong>, <strong>3.5"</strong>, <strong>U.2</strong> (forma física).  </li>
+<li>Un <strong>M.2</strong> puede ser <strong>SATA</strong> <em>o</em> <strong>NVMe</strong>: la <strong>placa manda</strong> (compatibilidad).</li>
+<li><strong>Coste/GB y resistencia</strong>:</li>
+<li>HDD → <strong>muy barato/GB</strong>, muchos TB.  </li>
+<li>SSD SATA → equilibrio precio/rendimiento.  </li>
+<li>SSD NVMe → <strong>máximo rendimiento</strong> (sobre todo en aleatorio).  </li>
+<li>Flash/USB → portable, calidad muy variable.  </li>
+<li>Métricas SSD: <strong>TBW/DWPD</strong>, <strong>temperatura</strong> y <strong>throttling</strong>.</li>
+<li><strong>Fiabilidad y mantenimiento</strong>: <strong>SMART</strong>, <strong>TRIM</strong>, copias <strong>3-2-1</strong>, y recordar que <strong>RAID ≠ backup</strong>.</li>
+</ul>
+<h3 id="reglas-rapidas-de-eleccion">Reglas rápidas de elección<a class="headerlink" href="#reglas-rapidas-de-eleccion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SO + apps / desarrollo / VMs</strong> → <strong>SSD NVMe</strong> si la placa lo permite.  </li>
+<li><strong>Equipo antiguo o presupuesto ajustado</strong> → <strong>SSD SATA</strong> (gran salto respecto a HDD).  </li>
+<li><strong>Muchos TB baratos</strong> (multimedia, copias) → <strong>HDD</strong>.  </li>
+<li><strong>Transporte</strong> / cámaras → <strong>USB/SD</strong> (elige bien por normas A1/A2, V30+ si grabas vídeo).  </li>
+<li><strong>Distribución/archivo puntual</strong> → <strong>óptico</strong> o <strong>cloud</strong> económico.</li>
+</ul>
+<hr />
+<h2 id="21-hdd-discos-duros">2.1 HDD (Discos Duros)<a class="headerlink" href="#21-hdd-discos-duros" title="Permanent link">&para;</a></h2>
+<h3 id="1-vision-general">1) Visión general<a class="headerlink" href="#1-vision-general" title="Permanent link">&para;</a></h3>
+<p>Un <strong>HDD</strong> almacena datos usando <strong>magnetismo</strong> sobre <strong>platos</strong> que <strong>giran</strong> a alta velocidad. Un <strong>brazo actuador</strong> posiciona un <strong>cabezal</strong> a micras de la superficie para <strong>escribir</strong> (magnetizar dominios) y <strong>leer</strong> (medir variaciones de campo). Al ser un sistema <strong>mecánico + magnético</strong>, su <strong>latencia</strong> es mucho mayor que la de un SSD, especialmente en accesos <strong>aleatorios</strong>.</p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/almacenamiento/hdd_corte_fisico.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h3 id="2-componentes-y-mecanica">2) Componentes y mecánica<a class="headerlink" href="#2-componentes-y-mecanica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Platos (platters)</strong>: discos recubiertos de material magnético; cada <strong>cara</strong> tiene un cabezal propio.  </li>
+<li><strong>Spindle + RPM</strong>: motor que hace girar los platos (p. ej., <strong>5400/7200/10.000 RPM</strong>).  </li>
+<li><strong>Brazo actuador (voice-coil)</strong>: mueve todos los cabezales a la vez radialmente.  </li>
+<li><strong>Cabezales MR/TMR</strong>: sensores magnetorresistivos para lectura y elementos de escritura.  </li>
+<li><strong>Preamplificador</strong> (en el conjunto de cabezales) y <strong>controlador</strong> (en la PCB).  </li>
+<li><strong>Filtros</strong> y <strong>carcasa sellada</strong>: el aire interno aporta el “colchón” de vuelo del cabezal.</li>
+</ul>
+<p><strong>Tiempos fundamentales</strong>
+- <strong>Seek</strong> (búsqueda): movimiento del brazo hasta la pista deseada.<br />
+- <strong>Latencia rotacional</strong>: lo que tarda en <strong>pasar el sector</strong> bajo el cabezal.<br />
+- <strong>Transferencia</strong>: lectura/escritura una vez alineado el sector.</p>
+<blockquote>
+<p><strong>Latencia rotacional media</strong> ≈ ½ vuelta = <code>0,5 × 60 / RPM</code> segundos<br />
+En <strong>7200 RPM</strong> ≈ <code>0,5 × 60/7200 × 1000</code> = <strong>~4,17 ms</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="3-lectura-y-escritura-magnetica-como-nacen-los-bits">3) Lectura y escritura magnética (cómo “nacen” los bits)<a class="headerlink" href="#3-lectura-y-escritura-magnetica-como-nacen-los-bits" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Escritura</strong>: una bobina en el cabezal genera un campo que <strong>orienta dominios</strong> magnéticos (0/1) en la capa del plato.  </li>
+<li><strong>Lectura</strong>: el paso por un dominio provoca una <strong>pequeña variación</strong> de campo que el elemento <strong>MR/TMR</strong> convierte en señal eléctrica.  </li>
+<li><strong>Procesado de señal</strong>: técnicas modernas (<strong>PRML/LDPC</strong>, etc.) permiten recuperar datos con densidades muy altas tolerando ruido.  </li>
+<li><strong>Servo</strong>: la posición fina del cabezal se corrige leyendo <strong>marcas de servo</strong> grabadas a lo largo de los platos (mantiene el “seguimiento de pista”).</li>
+</ul>
+<hr />
+<div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+  <img src="../assets/almacenamiento/magnetizacion-hdd-longitudinal.jpg"
+       alt="Magnetización longitudinal HDD"
+       style="width:49%; height:auto; display:block;" loading="lazy">
+  <img src="../assets/almacenamiento/magnetizacion-hdd-perpendicular.jpg"
+       alt="Magnetización perpendicular HDD"
+       style="width:49%; height:auto; display:block;" loading="lazy">
+</div>
+
+<hr />
+<blockquote>
+<p>ESTRUCTURA LOGICA HDD</p>
+</blockquote>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/almacenamiento/hdd_pistas_sectores_servo.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+<hr />
+<h3 id="4-organizacion-fisica-y-logica-de-los-datos">4) Organización física y lógica de los datos<a class="headerlink" href="#4-organizacion-fisica-y-logica-de-los-datos" title="Permanent link">&para;</a></h3>
+<p><strong>4.1 De lo físico a lo lógico</strong>
+- <strong>Pistas</strong>: circunferencias concéntricas en cada cara.<br />
+- <strong>Sectores</strong>: porciones dentro de la pista (típicamente <strong>512 B</strong> o <strong>4096 B</strong> de <strong>datos útiles</strong>).<br />
+- <strong>Cilindro</strong>: conjunto de pistas a la misma “altura” en <strong>todas las caras</strong> (todos los cabezales).</p>
+<p><strong>4.2 ZBR (Zoned Bit Recording)</strong>
+- Las pistas <strong>externas</strong> son más largas (mayor perímetro) ⇒ pueden almacenar <strong>más sectores por vuelta</strong>.<br />
+- El disco se divide en <strong>zonas</strong>; cada zona tiene un número fijo de sectores por pista.<br />
+- Resultado: el <strong>rendimiento secuencial</strong> es <strong>mayor</strong> en las zonas <strong>externas</strong> que en las <strong>internas</strong>.</p>
+<blockquote>
+<p>Dónde poner imagen 3 (ZBR: zonas externas vs internas):<br />
+<code>![ZBR: más sectores en pistas externas](imagen-no-disponible.jpg)</code><br />
+<em>Figura 2.3 — Zoned Bit Recording: más sectores por pista en la periferia.</em></p>
+</blockquote>
+<p><strong>4.3 CHS vs LBA</strong>
+- <strong>CHS</strong> (Cylinder-Head-Sector): direccionamiento antiguo (geometría “ficticia” hacia el SO).<br />
+- <strong>LBA</strong> (Logical Block Addressing): hoy se <strong>abstrae</strong> todo como bloques lineales numerados (<strong>0..N</strong>). El firmware traduce <strong>LBA → zona/pista/sector</strong> reales.</p>
+<p><strong>4.4 Advanced Format (512e / 4Kn)</strong>
+- Físicamente muchos HDD usan <strong>sectores de 4096 B</strong> (<strong>4K</strong>).<br />
+- <strong>512e</strong> (512 emulado): presentan 512 B lógicos para compatibilidad, empaquetados en <strong>4K físicos</strong> → importante <strong>alinear particiones a 4K</strong>.<br />
+- <strong>4Kn</strong>: exponen <strong>4096 B</strong> lógicos y físicos.</p>
+<p><strong>4.5 Estructura de un sector (simplificada)</strong>
+- <strong>Datos de usuario</strong> (512 B o 4096 B) + <strong>metadatos</strong> (cabeceras, sincronización) + <strong>ECC</strong>.<br />
+- El <strong>ECC</strong> corrige errores de lectura <strong>sin</strong> intervención del usuario.</p>
+<hr />
+<h3 id="5-rendimiento-por-que-un-hdd-se-siente-lento-en-aleatorio">5) Rendimiento: por qué un HDD “se siente” lento en aleatorio<a class="headerlink" href="#5-rendimiento-por-que-un-hdd-se-siente-lento-en-aleatorio" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Accesos secuenciales</strong>: el cabezal <strong>no salta</strong> de pista → solo cuenta latencia rotacional + transferencia ⇒ <strong>MB/s decentes</strong>.  </li>
+<li><strong>Accesos aleatorios</strong>: múltiples <strong>seeks</strong> + rotaciones ⇒ <strong>tiempos de espera</strong> constantes en cada operación ⇒ <strong>IOPS muy bajos</strong>.</li>
+</ul>
+<p><strong>Métricas típicas</strong>
+- <strong>Tiempo de acceso</strong> (seek + rotacional) en <strong>ms</strong>.<br />
+- <strong>Velocidad secuencial</strong> (MB/s), mayor en <strong>zonas externas</strong>.<br />
+- <strong>NCQ (Native Command Queuing)</strong> en SATA: reordena peticiones para <strong>reducir movimientos</strong> del cabezal (mejora multiusuario).</p>
+<blockquote>
+<p>Regla práctica: si tu carga son <strong>muchos ficheros pequeños</strong> (SO, apps, compilaciones), un HDD sufrirá; un SSD <strong>vuela</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="6-modos-de-grabacion-y-densidad">6) Modos de grabación y densidad<a class="headerlink" href="#6-modos-de-grabacion-y-densidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PMR/CMR (Conventional Magnetic Recording)</strong>: pistas “normales”. Buen rendimiento <strong>general</strong>.  </li>
+<li><strong>SMR (Shingled Magnetic Recording)</strong>: pistas <strong>solapadas</strong> como tejas; <strong>más densidad</strong>, pero <strong>reescrituras</strong> implican mover datos de una “banda” ⇒ <strong>mal</strong> para cargas de <strong>escritura aleatoria</strong> sostenida (salvo con caché y gestión cuidadosa).  </li>
+<li><strong>HAMR/MAMR</strong> (nuevas técnicas): calentar/ayudar la grabación para <strong>aumentar densidad</strong> (usado en modelos de gran capacidad).  </li>
+<li><strong>Helio</strong>: discos llenos de <strong>helio</strong> reducen fricción y permiten <strong>más platos</strong> con menor consumo/vibración.</li>
+</ul>
+<hr />
+<h3 id="7-fiabilidad-correccion-y-gestion-de-defectos">7) Fiabilidad, corrección y gestión de defectos<a class="headerlink" href="#7-fiabilidad-correccion-y-gestion-de-defectos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>En fábrica se crea una <strong>P-list</strong> (defectos de fabricación) y durante la vida del disco una <strong>G-list</strong> (defectos “crecidos”).  </li>
+<li>Cuando un sector se degrada, el firmware lo <strong>remapea</strong> a un <strong>repuesto</strong> (spare) transparente para el sistema.  </li>
+<li><strong>S.M.A.R.T.</strong>: monitoriza salud (atributos importantes:<br />
+<strong>5</strong> Reallocated Sectors, <strong>197</strong> Current Pending Sector, <strong>198</strong> Uncorrectable, <strong>194</strong> Temperatura, <strong>9</strong> Power-On Hours, <strong>193</strong> Load/Unload Cycle).  </li>
+<li>En entornos RAID, funciones tipo <strong>TLER/ERC</strong> limitan el tiempo de recuperación para no “expulsar” discos por tardar demasiado en reparar un sector.</li>
+</ul>
+<hr />
+<h3 id="8-sistema-de-ficheros-y-fragmentacion">8) Sistema de ficheros y fragmentación<a class="headerlink" href="#8-sistema-de-ficheros-y-fragmentacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Un <strong>cluster</strong> del sistema de archivos agrupa sectores (p. ej., 4 KiB).  </li>
+<li>En HDD, la <strong>fragmentación</strong> dispersa clusters de un mismo fichero ⇒ <strong>más seeks</strong> ⇒ <strong>peor</strong> rendimiento.  </li>
+<li><strong>Desfragmentar</strong> puede <strong>mejorar</strong> (solo HDD). <strong>No</strong> desfragmentes SSD.  </li>
+<li>Importa la <strong>alineación a 4K</strong> en discos <strong>512e/4Kn</strong> para evitar lecturas-modificaciones-reescrituras innecesarias.</li>
+</ul>
+<hr />
+<h3 id="9-buenas-practicas-de-uso-y-montaje">9) Buenas prácticas de uso y montaje<a class="headerlink" href="#9-buenas-practicas-de-uso-y-montaje" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Evita golpes</strong> y vibraciones; no muevas el equipo con el disco en acceso.  </li>
+<li><strong>Fija</strong> el HDD con tornillos y, si hay varios, usa bahías anti-vibración.  </li>
+<li><strong>Ventilación</strong>: mantener temperatura moderada.  </li>
+<li><strong>Backups</strong>: los fallos pueden ser bruscos (mecánica).  </li>
+<li>Elige <strong>CMR</strong> para cargas de <strong>escritura</strong> exigentes; <strong>SMR</strong> solo para archivo/lectura.  </li>
+<li>Para <strong>rendimiento</strong>: usa <strong>NCQ</strong>, evita fragmentación y coloca datos secuenciales en la <strong>zona externa</strong> si el software lo permite (algunas herramientas de clonación/particionado).</li>
+</ul>
+<hr />
+<h3 id="10-resumen-comparativo-hdd-vs-ssd-enfoque-rendimiento">10) Resumen comparativo (HDD vs SSD, enfoque rendimiento)<a class="headerlink" href="#10-resumen-comparativo-hdd-vs-ssd-enfoque-rendimiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HDD</strong>: mecánico; <strong>seek + rotación</strong> = cuello de botella; <strong>barato/GB</strong> y <strong>muchos TB</strong>; ideal para <strong>almacenamiento masivo</strong>.  </li>
+<li><strong>SSD</strong>: electrónico; <strong>latencia muy baja</strong> y alto <strong>IOPS</strong>; mejor para <strong>SO, apps, BBDD, VMs</strong>.</li>
+</ul>
+<blockquote>
+<p>Dónde poner imagen 4 (comparativa tiempos):<br />
+<code>![Acceso secuencial vs aleatorio en HDD](imagen-no-disponible.jpg)</code><br />
+<em>Figura 2.4 — En aleatorio, los seeks y la rotación dominan el tiempo total.</em></p>
+</blockquote>
+<hr />
+<h1 id="cronologia-de-la-evolucion-de-las-memorias-rom-a-vnand-nvme">Cronología de la evolución de las memorias ROM a vNAND (NVMe)<a class="headerlink" href="#cronologia-de-la-evolucion-de-las-memorias-rom-a-vnand-nvme" title="Permanent link">&para;</a></h1>
+<h2 id="anos-1950-1960-inicios-de-la-memoria-rom">Años 1950-1960: Inicios de la Memoria ROM<a class="headerlink" href="#anos-1950-1960-inicios-de-la-memoria-rom" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1956:</strong> Primeras memorias ROM (Read Only Memory)</li>
+<li>Usadas para almacenar instrucciones básicas de arranque.</li>
+<li>Solo lectura, programadas de fábrica, no modificables.</li>
+</ul>
+<h2 id="anos-1970-aparicion-de-prom-eprom-y-eeprom">Años 1970: Aparición de PROM, EPROM y EEPROM<a class="headerlink" href="#anos-1970-aparicion-de-prom-eprom-y-eeprom" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1971:</strong> <strong>PROM</strong> (Programmable ROM)</li>
+<li>Programable una única vez por el usuario.</li>
+<li><strong>1972:</strong> <strong>EPROM</strong> (Erasable Programmable ROM)</li>
+<li>Puede borrarse con luz ultravioleta y reprogramarse varias veces.</li>
+<li><strong>1978:</strong> <strong>EEPROM</strong> (Electrically Erasable Programmable ROM)</li>
+<li>Permite borrado y reprogramación eléctricamente, más flexible.</li>
+</ul>
+<h2 id="anos-1980-1990-primeras-memorias-flash">Años 1980-1990: Primeras memorias Flash<a class="headerlink" href="#anos-1980-1990-primeras-memorias-flash" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>1984:</strong> Invento de la memoria <strong>Flash</strong> (Toshiba)</li>
+<li>Permite borrado/escritura de bloques grandes más rápido.</li>
+<li><strong>Finales de los 80:</strong> Desarrollo de memorias <strong>NOR</strong> y <strong>NAND Flash</strong></li>
+<li><strong>Flash NOR</strong> para código de ejecución rápido.</li>
+<li><strong>Flash NAND</strong> para almacenamiento de datos masivo (base para USB y SSD).</li>
+</ul>
+<h2 id="anos-2000-expansion-de-ssd-y-nand">Años 2000: Expansión de SSD y NAND<a class="headerlink" href="#anos-2000-expansion-de-ssd-y-nand" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>2003:</strong> Primeras SSD comerciales basadas en <strong>NAND Flash</strong></li>
+<li>Rápidas, sin partes móviles, resistente a golpes y vibraciones.</li>
+<li>Empiezan a popularizarse en servidores y PCs.</li>
+</ul>
+<h2 id="anos-2010-llega-la-3d-nand-y-la-vnand">Años 2010: Llega la 3D NAND y la vNAND<a class="headerlink" href="#anos-2010-llega-la-3d-nand-y-la-vnand" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>2013:</strong> Samsung lanza la primera <strong>3D V-NAND</strong></li>
+<li>Apilamiento vertical de celdas, mayor densidad y velocidad.</li>
+<li>Mejor rendimiento y durabilidad frente a NAND tradicional.</li>
+<li><strong>2014-2017:</strong> SSDs con 3D NAND/vNAND accesibles en mercado masivo.</li>
+</ul>
+<h2 id="presente-nvme-y-almacenamiento-ultra-rapido">Presente: NVMe y almacenamiento ultra-rápido<a class="headerlink" href="#presente-nvme-y-almacenamiento-ultra-rapido" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>2016 en adelante:</strong> Explosión de NVMe</li>
+<li>Memorias <strong>vNAND</strong> y <strong>3D NAND</strong> aprovechando el protocolo NVMe (Non-Volatile Memory Express).</li>
+<li>Conexión directa a PCIe, superando SATA en velocidad y latencia.</li>
+<li>Implantación en estaciones de trabajo, portátiles y servidores modernos.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Resumen:</strong><br />
+La memoria ROM ha evolucionado desde ser solo lectura rígida hasta convertirse en la memoria vNAND/NVMe ultra flexible, apilada, de enorme velocidad y durabilidad, clave en el  &gt; almacenamiento sólido contemporáneo.</p>
+</blockquote>
+<h2 id="22-ssd-unidades-de-estado-solido">2.2 SSD (Unidades de Estado Sólido)<a class="headerlink" href="#22-ssd-unidades-de-estado-solido" title="Permanent link">&para;</a></h2>
+<p>Las <strong>Unidades de Estado Sólido</strong> (SSD, por sus siglas en inglés) representan una de las mayores revoluciones en almacenamiento de datos moderno. Surgieron para superar varias limitaciones de los discos duros mecánicos (HDD), como la lentitud de acceso, el desgaste mecánico, el ruido y la fragilidad ante impactos físicos.</p>
+<h3 id="motivacion-para-el-desarrollo-de-los-ssd">Motivación para el desarrollo de los SSD<a class="headerlink" href="#motivacion-para-el-desarrollo-de-los-ssd" title="Permanent link">&para;</a></h3>
+<p>El almacenamiento magnético tradicional (HDD) utiliza platos giratorios y cabezales móviles para ubicar físicamente los datos, lo que limita la velocidad y fiabilidad. A medida que la demanda de sistemas más rápidos y resistentes creció, especialmente en portátiles y centros de datos, se impulsó la investigación en tecnologías basadas en memoria flash: chips sin partes móviles, más eficientes y duraderos.</p>
+<h3 id="tecnologia-de-las-celdas-de-memoria">Tecnología de las celdas de memoria<a class="headerlink" href="#tecnologia-de-las-celdas-de-memoria" title="Permanent link">&para;</a></h3>
+<p>La memoria <strong>flash NAND</strong> empleada en las SSD almacena datos en matrices de celdas de memoria, construidas con transistores de puerta flotante. Cada celda es capaz de retener una carga eléctrica, representando así distintos valores binarios según la cantidad de carga.</p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/almacenamiento/slc.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<p>Existen varios tipos de celdas según la cantidad de bits almacenados:
+- <strong>SLC (Single Level Cell):</strong> almacena 1 bit por celda (más rápida, duradera y cara).
+- <strong>MLC (Multi Level Cell):</strong> almacena 2 bits por celda (compromiso entre coste, capacidad y durabilidad).
+- <strong>TLC (Triple Level Cell):</strong> almacena 3 bits por celda (más capacidad y menor coste, pero menor durabilidad).
+- <strong>QLC (Quad Level Cell):</strong> almacena 4 bits por celda (máxima densidad y bajo coste, menos ciclos de escritura).</p>
+<blockquote>
+<p><a href="https://www.kingston.com/es/blog/pc-performance/difference-between-slc-mlc-tlc-3d-nand" title="Documentación oficial">Diferencia entre SLC, MLC, TLC y NAND 3D en unidades flash USB, SSD y tarjetas de memoria</a></p>
+</blockquote>
+<h3 id="funcionamiento-escritura-y-lectura-en-las-celdas">Funcionamiento: Escritura y lectura en las celdas<a class="headerlink" href="#funcionamiento-escritura-y-lectura-en-las-celdas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lectura:</strong><br />
+Para leer datos, el controlador del SSD aplica distintos niveles de voltaje a las celdas. Según la resistencia encontrada (o el nivel de carga), se determina el valor almacenado en la celda (0 o 1, o más bits según el tipo).</li>
+<li><strong>Escritura:</strong><br />
+La escritura implica aplicar voltajes precisos para establecer la carga eléctrica en la puerta flotante de cada celda. Es importante destacar que las celdas deben borrarse previamente antes de ser reescritas, bloque por bloque, lo que influye en la gestión interna y la durabilidad del SSD.</li>
+</ul>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/almacenamiento/NAND-celda-acciones.svg.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h3 id="tabla-comparativa-ssd-vs-hdd">Tabla comparativa: SSD vs HDD<a class="headerlink" href="#tabla-comparativa-ssd-vs-hdd" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>SSD</strong></th>
+<th><strong>HDD</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Memoria flash NAND (sin partes móviles)</td>
+<td>Platos magnéticos + cabezales móviles</td>
+</tr>
+<tr>
+<td><strong>Velocidad de lectura secuencial</strong></td>
+<td>400 - 7,000 MB/s</td>
+<td>80 - 200 MB/s</td>
+</tr>
+<tr>
+<td><strong>Velocidad de escritura secuencial</strong></td>
+<td>300 - 6,500 MB/s</td>
+<td>80 - 200 MB/s</td>
+</tr>
+<tr>
+<td><strong>Acceso aleatorio (latencia)</strong></td>
+<td>0.02 ms - 0.2 ms</td>
+<td>5 - 15 ms</td>
+</tr>
+<tr>
+<td><strong>Ruido</strong></td>
+<td>Nulo (sin partes móviles)</td>
+<td>Notable (por movimiento mecánico)</td>
+</tr>
+<tr>
+<td><strong>Resistencia a golpes</strong></td>
+<td>Muy alta</td>
+<td>Baja</td>
+</tr>
+<tr>
+<td><strong>Consumo energético</strong></td>
+<td>Bajo</td>
+<td>Superior a SSD</td>
+</tr>
+<tr>
+<td><strong>Durabilidad (escrituras por celda)</strong></td>
+<td>1,000 - 100,000 ciclos (según tipo)</td>
+<td>Sin desgaste por escritura, pero partes móviles sujetas a fallo</td>
+</tr>
+<tr>
+<td><strong>Precio/GB</strong></td>
+<td>Más alto (bajando rápidamente)</td>
+<td>Más bajo (aunque en declive)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resumen">Resumen:<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>Los SSD ofrecen velocidades de acceso y transferencia de datos muy superiores, muy baja latencia, silencio, máxima resistencia a vibraciones y menor consumo.</li>
+<li>Su funcionamiento se basa en celdas de memoria NAND que retienen carga eléctrica para almacenar datos binarios, sin recurrir a partes móviles.</li>
+<li>Gracias a estas ventajas, las SSD han reemplazado a los HDD en multitud de dispositivos y escenarios críticos de rendimiento.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="23-memorias-flash-y-usb">2.3 Memorias Flash y USB<a class="headerlink" href="#23-memorias-flash-y-usb" title="Permanent link">&para;</a></h2>
+<p>Las <strong>memorias Flash</strong> y las <strong>unidades USB</strong> han revolucionado el acceso, la portabilidad y almacenamiento de datos, permitiendo dispositivos compactos, resistentes y de alta capacidad a precios cada vez más competitivos.</p>
+<h3 id="tecnologia-de-las-memorias-flash">Tecnología de las memorias Flash<a class="headerlink" href="#tecnologia-de-las-memorias-flash" title="Permanent link">&para;</a></h3>
+<p>Las memorias flash son dispositivos de almacenamiento no volátil basados en tecnología NAND, similares a los SSD, pero optimizados para portabilidad y consumo reducido. Almacenan información en matrices de celdas que retienen carga eléctrica, permitiendo acceso rápido y seguro sin necesidad de alimentación continua.</p>
+<ul>
+<li>Se utilizan transistores de <strong>puerta flotante</strong>, donde cada celda conserva o descarga electrones para guardar bits de información.</li>
+<li>Existen memorias flash <strong>SLC, MLC, TLC y QLC</strong>, igual que en los SSD, cada una con distinta capacidad, durabilidad y velocidad.</li>
+</ul>
+<h3 id="funcionamiento">Funcionamiento<a class="headerlink" href="#funcionamiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lectura:</strong> El controlador inserta voltajes en las celdas para identificar el nivel de carga y decodificar el valor binario almacenado.</li>
+<li><strong>Escritura y borrado:</strong> Para escribir nuevos datos, cada celda se carga eléctricamente. El borrado solo puede hacerse por bloques enteros, lo que afecta la gestión y la vida útil del dispositivo.</li>
+<li>Las memorias flash USB suelen usar la arquitectura NAND TLC o QLC, equilibrando capacidad y coste. <strong>¿Por qué?</strong></li>
+</ul>
+<h3 id="historia-y-evolucion">Historia y evolución<a class="headerlink" href="#historia-y-evolucion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>1984:</strong> Invento de la memoria flash (Toshiba), primero utilizada en tarjetas y pequeños módulos.</li>
+<li><strong>Finales de los 90:</strong> Popularización de los <strong>pendrives USB</strong> (llamados también unidades flash USB o "memorias USB"), que combinan memoria flash NAND con un controlador y conectividad USB.</li>
+<li><strong>Siglo XXI:</strong> Incremento exponencial de capacidad y velocidad; aparición de USB 3.0, 3.1 y 3.2, permitiendo transferencias comparables a unidades SSD externas.</li>
+</ul>
+<h3 id="tabla-comparativa-memoria-flashusb-vs-otras-tecnologias">Tabla comparativa: Memoria flash/USB vs. otras tecnologías<a class="headerlink" href="#tabla-comparativa-memoria-flashusb-vs-otras-tecnologias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Memoria Flash/USB</strong></th>
+<th><strong>HDD</strong></th>
+<th><strong>SD Card</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Flash NAND, sin partes móviles</td>
+<td>Platos magnéticos</td>
+<td>Flash NAND, formato SD</td>
+</tr>
+<tr>
+<td><strong>Velocidad lectura/escritura</strong></td>
+<td>20-500 MB/s (USB 3.x)</td>
+<td>80-200 MB/s</td>
+<td>10-300 MB/s</td>
+</tr>
+<tr>
+<td><strong>Portabilidad</strong></td>
+<td>Muy alta</td>
+<td>Baja</td>
+<td>Muy alta</td>
+</tr>
+<tr>
+<td><strong>Durabilidad</strong></td>
+<td>Alta, resistente a golpes</td>
+<td>Baja, sensible a impactos</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Capacidad típica</strong></td>
+<td>8 GB – 2 TB</td>
+<td>500 GB – 20 TB</td>
+<td>8 GB – 1 TB</td>
+</tr>
+<tr>
+<td><strong>Consumo energético</strong></td>
+<td>Muy bajo</td>
+<td>Superior</td>
+<td>Muy bajo</td>
+</tr>
+<tr>
+<td><strong>Costo/GB</strong></td>
+<td>Medio</td>
+<td>Bajo</td>
+<td>Medio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="resumen_1">Resumen<a class="headerlink" href="#resumen_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Las memorias Flash y las unidades USB destacan por su versatilidad y comodidad. Ofrecen almacenamiento robusto, resistente y rápido para aplicaciones diarias, portabilidad y
+transferencia rápida de datos entre sistemas. Su tecnología basada en NAND flash permite ciclos amplios de escritura y borrado, aunque con ciertas limitaciones frente a los
+discos duros tradicionales en cuanto a durabilidad total y velocidad máxima.</p>
+</blockquote>
+<hr />
+<h2 id="24-tecnologia-optica-cd-dvd-hd-dvd-y-blu-ray">2.4 Tecnología óptica: CD, DVD, HD DVD y Blu-ray<a class="headerlink" href="#24-tecnologia-optica-cd-dvd-hd-dvd-y-blu-ray" title="Permanent link">&para;</a></h2>
+<p>Las tecnologías ópticas como <strong>CD</strong>, <strong>DVD</strong>, <strong>HD DVD</strong> y <strong>Blu-ray</strong> marcaron sucesivas etapas en el almacenamiento y distribución de datos, música y vídeo, ofreciendo capacidades crecientes y mejor calidad frente a los formatos magnéticos y analógicos previos.</p>
+<h3 id="principios-de-funcionamiento">Principios de funcionamiento<a class="headerlink" href="#principios-de-funcionamiento" title="Permanent link">&para;</a></h3>
+<p>Todos estos soportes emplean un <strong>láser</strong> para leer (y en algunos casos escribir) información en la superficie del disco, interpretando las marcas microscópicas (pits y lands) en la capa reflectante del disco.</p>
+<ul>
+<li><strong>Lectura:</strong><br />
+El haz láser incide sobre la superficie; las diferencias de reflexión identifican los datos binarios.</li>
+<li><strong>Escritura:</strong><br />
+En discos grabables (CD-R, DVD±R, HD DVD-R, BD-R), el láser modifica la capa para representar datos, mientras que los discos regrabables (CD-RW, DVD±RW, BD-RE) permiten múltiples ciclos de escritura y borrado con una vida útil limitada.</li>
+</ul>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/almacenamiento/cd.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h3 id="historia-y-evolucion_1">Historia y evolución<a class="headerlink" href="#historia-y-evolucion_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>1982:</strong> Lanzamiento comercial del <strong>CD Audio</strong>.</li>
+<li><strong>1995:</strong> Aparición del <strong>DVD</strong>, que multiplica por más de 6 la capacidad del CD, adoptado en cine y distribución de datos.</li>
+<li><strong>2006:</strong> Salen al mercado <strong>HD DVD</strong> y <strong>Blu-ray</strong>. Ambos compiten por el estándar de alta definición:  </li>
+<li><strong>HD DVD</strong> (Toshiba) ofrecía hasta 30 GB de capacidad, con láser azul; perdió la batalla comercial frente al Blu-ray.  </li>
+<li><strong>Blu-ray</strong> (Sony/Philips) se impone como estándar, con capacidades iniciales de 25 GB (simple capa) hasta 100 GB (triple capa). Su láser azul-violeta de menor longitud de onda permite almacenar más información por área.</li>
+</ul>
+<h3 id="caracteristicas-principales">Características principales<a class="headerlink" href="#caracteristicas-principales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>CD</strong></th>
+<th><strong>DVD</strong></th>
+<th><strong>HD DVD</strong></th>
+<th><strong>Blu-ray</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Capacidad</strong></td>
+<td>700 MB</td>
+<td>4.7 GB (1 capa)</td>
+<td>15-30 GB</td>
+<td>25 GB (1 capa), 50 GB (2), 100 GB (triple)</td>
+</tr>
+<tr>
+<td><strong>Diámetro</strong></td>
+<td>12 cm</td>
+<td>12 cm</td>
+<td>12 cm</td>
+<td>12 cm</td>
+</tr>
+<tr>
+<td><strong>Longitud de onda láser</strong></td>
+<td>780 nm (rojo)</td>
+<td>650 nm (rojo)</td>
+<td>405 nm (azul)</td>
+<td>405 nm (azul-violeta)</td>
+</tr>
+<tr>
+<td><strong>Velocidad de lectura/escritura</strong></td>
+<td>150 KB/s - 7.2 MB/s</td>
+<td>1.3 MB/s - 16 MB/s</td>
+<td>~36 MB/s</td>
+<td>36 MB/s (1x), hasta 128 MB/s (4x)</td>
+</tr>
+<tr>
+<td><strong>Tipos</strong></td>
+<td>CD-ROM, CD-R, CD-RW</td>
+<td>DVD-ROM, DVD±R, DVD±RW, DVD-RAM</td>
+<td>HD DVD-ROM, HD DVD-R, HD DVD-RW</td>
+<td>BD-ROM, BD-R, BD-RE</td>
+</tr>
+<tr>
+<td><strong>Durabilidad</strong></td>
+<td>Alta (si tratan bien)</td>
+<td>Alta, sensible a rayaduras</td>
+<td>Alta, sensible</td>
+<td>Alta, sensible a rayaduras</td>
+</tr>
+<tr>
+<td><strong>Portabilidad</strong></td>
+<td>Muy alta</td>
+<td>Muy alta</td>
+<td>Muy alta</td>
+<td>Muy alta</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Música, datos, backups</td>
+<td>Video, datos, backups</td>
+<td>Video HD, datos HD</td>
+<td>Video HD/4K, datos, backups</td>
+</tr>
+<tr>
+<td><strong>Costo/GB</strong></td>
+<td>Muy bajo</td>
+<td>Bajo</td>
+<td>Medio (cada vez menos presente)</td>
+<td>Bajo (reciente bajada de precio)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ventajas-y-limitaciones">Ventajas y limitaciones<a class="headerlink" href="#ventajas-y-limitaciones" title="Permanent link">&para;</a></h3>
+<p><strong>Ventajas:</strong>
+- Gran capacidad relativa según generación
+- Bajo coste por unidad
+- Portabilidad y compatibilidad general
+- Soporte para contenidos multimedia de alta calidad (HD DVD y Blu-ray)</p>
+<p><strong>Limitaciones:</strong>
+- Vulnerables a polvo, ralladuras y calor
+- Velocidad de acceso limitada frente a memorias flash y SSD
+- Requieren lector/grabador óptico compatible con formato
+- HD DVD tuvo escasa adopción y fue abandonado</p>
+<hr />
+<h3 id="resumen_2">Resumen<a class="headerlink" href="#resumen_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>La tecnología óptica evolucionó desde el CD para audio y datos, pasando por el DVD (video digital) y las ofertas de alta definición como HD DVD y Blu-ray. Estos últimos
+permitieron distribución de vídeo en HD y 4K y almacenamiento de grandes volúmenes de datos. Hoy, Blu-ray se mantiene vigente en nichos de vídeo y backup profesional, mientras
+que CD, DVD y HD DVD han dado paso a tecnologías más rápidas y compactas, aunque siguen siendo útiles en determinadas tareas de archivo y multimedia.</p>
+</blockquote>
+<h2 id="3-ultimas-tecnologias-en-almacenamiento-de-2025">3. Últimas tecnologías en almacenamiento de 2025<a class="headerlink" href="#3-ultimas-tecnologias-en-almacenamiento-de-2025" title="Permanent link">&para;</a></h2>
+<h3 id="31-almacenamiento-basado-en-memoria-persistente-pmem">3.1. Almacenamiento basado en memoria persistente (PMem)<a class="headerlink" href="#31-almacenamiento-basado-en-memoria-persistente-pmem" title="Permanent link">&para;</a></h3>
+<p>La <strong>memoria persistente</strong> (PMem) es una tecnología que une la velocidad de la RAM con la capacidad de guardar datos tras apagado, como ocurre en discos duros. Esto se logra gracias a módulos de memoria especiales (ej. Intel Optane), capaces de acceder a la información de forma muy rápida, casi igual que la RAM tradicional, pero manteniéndola incluso si el sistema se apaga.<br />
+<strong>Ventajas</strong>:
+- Lectura/escritura ultrarrápidas.
+- Menor latencia respecto a SSD tradicionales.
+- Persistencia ante interrupción de energía.
+<strong>Aplicaciones</strong>:
+- Servidores con alta carga de trabajo.
+- Bases de datos transaccionales.
+- Virtualización, permitiendo migración rápida de máquinas sin perder datos.</p>
+<p><em>Ejemplo práctico</em>: Un servidor con PMem puede restaurar el estado de una base de datos tras un reinicio en segundos, evitando largos procesos de recuperación.</p>
+<h3 id="32-unidades-nvme-nvme-over-fabrics-y-tecnologias-asociadas">3.2. Unidades NVMe, NVMe over Fabrics y tecnologías asociadas<a class="headerlink" href="#32-unidades-nvme-nvme-over-fabrics-y-tecnologias-asociadas" title="Permanent link">&para;</a></h3>
+<h4 id="a-introduccion-a-nvme">a) Introducción a NVMe<a class="headerlink" href="#a-introduccion-a-nvme" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>NVMe (Non-Volatile Memory Express)</strong> es un protocolo de comunicación optimizado específicamente para unidades de estado sólido (SSD) modernas. Aprovecha la alta velocidad del bus PCI Express (PCIe) para transferir datos mucho más rápido que los antiguos protocolos para discos duros como SATA o SAS.</li>
+<li>NVMe soporta múltiples colas de comandos (hasta 64,000 por cola) y operaciones simultáneas, lo que mejora la eficiencia en entornos multitarea, virtualización y uso intensivo de datos.</li>
+</ul>
+<h4 id="b-protocolo-pcie-peripheral-component-interconnect-express">b) Protocolo PCIe (Peripheral Component Interconnect Express)<a class="headerlink" href="#b-protocolo-pcie-peripheral-component-interconnect-express" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>PCIe</strong> es la interfaz de alto rendimiento que conecta los SSD NVMe directamente a la placa base y al procesador, evitando los cuellos de botella de las interfaces tradicionales.</li>
+<li>Cada generación de PCIe duplica el ancho de banda del anterior (por ejemplo, PCIe 4.0 puede alcanzar 16 GT/s por lane; PCIe 5.0 y 6.0 continúan aumentando la velocidad).</li>
+<li>Los SSD NVMe pueden usar varios "lanes" en paralelo (x1, x2, x4, x8, x16) para lograr velocidades de transferencia que hoy superan los 7 GB/s por unidad.</li>
+</ul>
+<h4 id="c-arquitectura-de-celdas-de-almacenamiento-v-nand-y-3d-nand">c) Arquitectura de celdas de almacenamiento: V-NAND y 3D NAND<a class="headerlink" href="#c-arquitectura-de-celdas-de-almacenamiento-v-nand-y-3d-nand" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Las memorias flash tradicionales (NAND plano) tenían limitaciones físicas al miniaturizar, ya que todas las celdas se disponían sobre una sola superficie.</li>
+<li><strong>V-NAND</strong> o <strong>Vertical NAND</strong> (también llamada <strong>3D NAND</strong>) soluciona este problema apilando las celdas de memoria en múltiples capas verticales, formando una especie de rascacielos de celdas.<ul>
+<li>En 2025 se comercializan chips con más de 200 capas, lo que permite aumentar drásticamente la capacidad y la durabilidad sin aumentar el tamaño físico del chip.</li>
+<li>Esto reduce el coste por GB y mejora la eficiencia energética y la longevidad del dispositivo (menos desgaste por escritura).</li>
+</ul>
+</li>
+<li>La disposición en 3D también permite mejorar el paralelismo interno de los discos, ya que varios canales pueden operar de manera independiente entre capas.</li>
+</ul>
+<h4 id="d-concepto-de-bancos-de-almacenamiento-3d">d) Concepto de bancos de almacenamiento 3D<a class="headerlink" href="#d-concepto-de-bancos-de-almacenamiento-3d" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Los avances en 3D NAND permiten crear <strong>bancos</strong> o "pools" de almacenamiento compactos y de alta densidad en servidores, centros de datos y hasta en dispositivos personales.</li>
+<li>Los fabricantes combinan varios chips de 3D NAND/ V-NAND en un solo módulo para ofrecer terabytes de capacidad ocupando muy poco espacio físico.</li>
+<li>Los controladores modernos reparten las operaciones de lectura/escritura de manera óptima entre bancos/dispositivos, equilibrando carga y maximizando la vida útil (tecnología <em>wear leveling</em>).</li>
+</ul>
+<hr />
+<div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+  <img src="../assets/almacenamiento/3DNAND1.png"
+       alt="VNand 3D"
+       style="width:49%; height:auto; display:block;" loading="lazy">
+  <img src="../assets/almacenamiento/3DNAND2.webp"
+       alt="VNand 3D"
+       style="width:49%; height:auto; display:block;" loading="lazy">
+</div>
+
+<hr />
+<h4 id="e-ventajas-sobre-tecnologias-anteriores-satasas">e) Ventajas sobre tecnologías anteriores (SATA/SAS):<a class="headerlink" href="#e-ventajas-sobre-tecnologias-anteriores-satasas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>SATA</strong> fue diseñado para discos duros mecánicos (HDD), con un ancho de banda máximo teórico de 600 MB/s (SATA III). Incluso los SSD más básicos superan este límite.</li>
+<li><strong>NVMe/PCIe</strong> elimina las limitaciones de los buses antiguos y el cuello de botella del controlador AHCI:<ul>
+<li>Mayor número de operaciones de entrada/salida por segundo (IOPS).</li>
+<li>Menor latencia de acceso.</li>
+<li>Mejor soporte para cargas de trabajo concurrentes y virtualización.</li>
+</ul>
+</li>
+<li><strong>SAS</strong> (Serial Attached SCSI) sigue siendo útil en entornos empresariales, pero NVMe ofrece mejor rendimiento y menor consumo en la mayoría de escenarios.</li>
+</ul>
+<h4 id="f-nvme-over-fabrics-nvme-of">f) NVMe over Fabrics (NVMe-oF)<a class="headerlink" href="#f-nvme-over-fabrics-nvme-of" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Permite extender la velocidad de NVMe a través de redes de alta velocidad (Ethernet, Fibre Channel, InfiniBand), logrando almacenamiento compartido ultra rápido en centros de datos modernos.</li>
+<li>NVMe-oF puede conectarse a decenas o cientos de servidores a la vez, obteniendo almacenamiento escalable, tolerante a fallos y con acceso remoto casi tan rápido como el acceso local.</li>
+</ul>
+<h4 id="g-aplicaciones-y-escenarios-actuales">g) Aplicaciones y escenarios actuales<a class="headerlink" href="#g-aplicaciones-y-escenarios-actuales" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Centros de datos, servicios en la nube, virtualización de escritorios (VDI), procesamiento intensivo de datos (IA, ML, Big Data).</li>
+<li>Equipos de alto rendimiento (workstations, servidores HPC).</li>
+<li>Dispositivos de consumo profesional (laptops, estaciones de trabajo portátiles).</li>
+</ul>
+<h4 id="h-futuro-de-nvme-y-memoria-flash-3d">h) Futuro de NVMe y memoria flash 3D<a class="headerlink" href="#h-futuro-de-nvme-y-memoria-flash-3d" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nuevas tecnologías como <strong>QLC NAND</strong> (cuatro bits por celda) permiten aún más capacidad a menor costo por GB, aunque con menor durabilidad que TLC.</li>
+<li>Tendencias en refrigeración avanzada, firmware especializado y optimización por software para explotar al máximo el potencial de 3D NAND y NVMe.</li>
+<li>Integración de inteligencia artificial para gestionar la distribución de datos, mantenimiento predictivo y aprendizaje de patrones de acceso.</li>
+</ul>
+<hr />
+<p><strong>Resumen visual</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>NVMe (Non-Volatile Memory Express)</th>
+<th>SATA (Serial ATA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protocolo</td>
+<td>NVMe (diseñado para SSD)</td>
+<td>AHCI/SATA (diseñado para HDD)</td>
+</tr>
+<tr>
+<td>Interfaz física</td>
+<td>PCI Express (PCIe)</td>
+<td>SATA (cable y puerto específico)</td>
+</tr>
+<tr>
+<td>Velocidad de transferencia</td>
+<td>3.500 MB/s – 7.000 MB/s (o más)</td>
+<td>Máx. 600 MB/s (SATA III)</td>
+</tr>
+<tr>
+<td>Latencia</td>
+<td>Muy baja (decenas de microsegundos)</td>
+<td>Superior (cientos de microsegundos)</td>
+</tr>
+<tr>
+<td>Número de colas</td>
+<td>Hasta 64.000 colas</td>
+<td>1 cola</td>
+</tr>
+<tr>
+<td>Comandos por cola</td>
+<td>64.000</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Paralelismo</td>
+<td>Alto (aprovecha CPUs multinúcleo)</td>
+<td>Limitado</td>
+</tr>
+<tr>
+<td>Instalación</td>
+<td>Directo en placa base o ranura M.2</td>
+<td>SATA tradicional, cableado</td>
+</tr>
+<tr>
+<td>Uso principal</td>
+<td>SSD de alto rendimiento, servidores</td>
+<td>SSD básicos y discos duros mecánicos</td>
+</tr>
+<tr>
+<td>Consumo energético</td>
+<td>Mejor eficiencia por operación</td>
+<td>Más consumo relativo</td>
+</tr>
+<tr>
+<td>Actualidad/Futuro</td>
+<td>Estándar en equipos modernos</td>
+<td>En desuso para almacenamiento rápido</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="whitepapers-y-documentacion-tecnica-recomendada">Whitepapers y documentación técnica recomendada<a class="headerlink" href="#whitepapers-y-documentacion-tecnica-recomendada" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://shop.sandisk.com/es-es/blog/ssd-nvme-conoce-las-ventajas-y-los-casos-de-uso">SSD NVMe: conoce las ventajas y los casos de uso - SanDisk/Western Digital</a></li>
+<li><a href="https://www.kingston.com/es/blog/pc-performance/ssd-difference-nvme-vs-sata-vs-m2">Descubrimos la tecnología SSD: NVMe, SATA, M.2 - Kingston</a></li>
+<li><a href="https://www.netapp.com/es/data-storage/nvme/">¿Qué es NVMe? Ventajas y casos de uso - NetApp</a></li>
+<li><a href="https://gocarelectronic.com/actualidad/avances-tecnologia-v-nand-samsung">Avances en tecnología V-NAND de Samsung (2025)</a></li>
+<li><a href="https://zoostock.com/blogs/news/las-diferencias-entre-nand-y-v-nand-de-las-que-todo-el-mundo-habla">Las diferencias entre NAND y V-NAND de las que todo el mundo habla - Zoostock</a></li>
+<li><a href="https://www.intel.la/content/www/xl/es/products/docs/memory-storage/solid-state-drives/consumer/what-are-pcie-4-0-and-5-0.html">¿Qué son PCIe 4.0 y 5.0? - Intel Latinoamérica</a></li>
+<li><a href="https://www.purestorage.com/es/knowledge/what-is-3d-nand.html">¿Qué es la 3D NAND y cómo funciona? - Pure Storage</a></li>
+<li><a href="https://www.pccomponentes.com/ssd-pci-express-que-es-y-por-que-es-lo-mejor-para-los-ssd">PCI express, qué es y por qué es lo mejor para los SSD - PCComponentes</a> </li>
+<li><a href="https://www.crucial.es/ssd-nvme-m2-pcie">SSD NVMe M.2 PCIe - Transferencias rápidas - Crucial</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4260 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CMOS y UEFI">
+      
+      
+        <meta name="author" content="Jose Manuel Gonzalez Castillo">
+      
+      
+        <link rel="canonical" href="https://axisalberti.github.io/Axis_Apuntes/section1/u06/teoria/MM-U06.1.-CMOS-y-UEFI/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../../slides/no-disponible/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UD 06 - 6.1 CMOS y UEFI - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+  
+  
+    
+      
+      
+        
+      
+      
+    
+  
+  
+  <style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-6-cmos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 06 - 6.1 CMOS y UEFI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u00/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u03/teoria/MM-U03.1.-Chipset/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u04/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/MM-U04.1.-Conexiones-externas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u05/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-6-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 6. CMOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-la-memoria-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción a la memoria CMOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vocabulario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vocabulario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-y-conceptos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición y conceptos clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breve-historia-de-la-tecnologia-cmos-en-pcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breve historia de la tecnología CMOS en PCs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tecnologia-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnología CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnología CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-principales-y-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones principales y características
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-con-otros-tipos-de-memoria-ram-y-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación con otros tipos de memoria (RAM y ROM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-entre-cmos-bios-y-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación entre CMOS, BIOS y UEFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ubicacion-fisica-y-alimentacion-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ubicación física y alimentación de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ubicación física y alimentación de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chip-y-pila-en-la-placa-base-tipos-y-vida-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chip y pila en la placa base: tipos y vida útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#papel-de-la-bateria-cr2032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel de la batería CR2032
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-uso-de-la-memoria-cmos-en-un-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Uso de la memoria CMOS en un PC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Uso de la memoria CMOS en un PC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-la-configuracion-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de la configuración del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-guardados-fecha-hora-configuracion-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros guardados: fecha, hora, configuración de hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccion-con-el-bios-al-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interacción con el BIOS al arranque
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reseteo-y-restauracion-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reseteo y restauración de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reseteo y restauración de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-principales-para-resetear-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos principales para resetear la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-problemas-y-mantenimiento-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Problemas y mantenimiento de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Problemas y mantenimiento de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-frecuentes-relacionados-con-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas frecuentes relacionados con la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantenimiento de la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones adicionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consideraciones importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situaciones-en-las-que-es-util-el-reseteo-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situaciones en las que es útil el reseteo de la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u07/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u07/teoria/MM-U07.1.-Almacenamiento/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u08/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u08/teoria/MM-U08.1.-Microprocesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u09/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u09/teoria/MM-U09.1.-Tarjetas-graficas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A2/teoria/A2-1-Procesos-e-hilos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A3/slides/PRL-slide-prueba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../A5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/SI-U01.1.-Redes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/slides/no-disponible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-6-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEMA 6. CMOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-la-memoria-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción a la memoria CMOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vocabulario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vocabulario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-y-conceptos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición y conceptos clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breve-historia-de-la-tecnologia-cmos-en-pcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breve historia de la tecnología CMOS en PCs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tecnologia-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnología CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tecnología CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-principales-y-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones principales y características
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-con-otros-tipos-de-memoria-ram-y-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación con otros tipos de memoria (RAM y ROM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-entre-cmos-bios-y-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación entre CMOS, BIOS y UEFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ubicacion-fisica-y-alimentacion-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ubicación física y alimentación de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ubicación física y alimentación de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chip-y-pila-en-la-placa-base-tipos-y-vida-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chip y pila en la placa base: tipos y vida útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#papel-de-la-bateria-cr2032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel de la batería CR2032
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-uso-de-la-memoria-cmos-en-un-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Uso de la memoria CMOS en un PC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Uso de la memoria CMOS en un PC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-la-configuracion-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento de la configuración del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-guardados-fecha-hora-configuracion-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros guardados: fecha, hora, configuración de hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccion-con-el-bios-al-arranque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interacción con el BIOS al arranque
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reseteo-y-restauracion-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Reseteo y restauración de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Reseteo y restauración de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-principales-para-resetear-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos principales para resetear la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-problemas-y-mantenimiento-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Problemas y mantenimiento de la CMOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Problemas y mantenimiento de la CMOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-frecuentes-relacionados-con-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas frecuentes relacionados con la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantenimiento de la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones adicionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consideraciones importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situaciones-en-las-que-es-util-el-reseteo-de-la-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situaciones en las que es útil el reseteo de la CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:cmos" class="md-tag md-tag-icon">cmos</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h2 id="tema-6-cmos">TEMA 6. CMOS<a class="headerlink" href="#tema-6-cmos" title="Permanent link">&para;</a></h2>
+<h2 id="1-introduccion-a-la-memoria-cmos">1. Introducción a la memoria CMOS<a class="headerlink" href="#1-introduccion-a-la-memoria-cmos" title="Permanent link">&para;</a></h2>
+<h1 id="vocabulario">Vocabulario<a class="headerlink" href="#vocabulario" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMOS</td>
+<td>Complementary Metal-Oxide-Semiconductor; tecnología de bajo consumo usada en chips de memoria y circuitos electrónicos en PC.</td>
+</tr>
+<tr>
+<td>Memoria CMOS</td>
+<td>Pequeña memoria RAM volátil que almacena la configuración del sistema, como hora, fecha y ajustes de BIOS, alimentada por una pila.</td>
+</tr>
+<tr>
+<td>Batería CMOS</td>
+<td>Pila (normalmente CR2032) de la placa base que suministra energía para mantener la memoria CMOS activa cuando el PC está apagado.</td>
+</tr>
+<tr>
+<td>BIOS</td>
+<td>Firmware almacenado en memoria ROM que inicializa y prueba el hardware del PC, usando datos guardados en la memoria CMOS.</td>
+</tr>
+<tr>
+<td>Reseteo CMOS</td>
+<td>Proceso de borrar la configuración guardada en CMOS para restaurar valores por defecto, mediante botón, puente de pines o extracción de pila.</td>
+</tr>
+<tr>
+<td>Configuración BIOS</td>
+<td>Ajustes almacenados en la memoria CMOS que controlan hardware, secuencia de arranque, contraseñas y otras opciones de sistema.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definicion-y-conceptos-clave">Definición y conceptos clave<a class="headerlink" href="#definicion-y-conceptos-clave" title="Permanent link">&para;</a></h3>
+<p>La memoria CMOS (Complementary Metal-Oxide-Semiconductor) es un tipo de memoria RAM de bajo consumo utilizada en las placas base de los PCs para almacenar la configuración del sistema, incluyendo parámetros como la fecha y hora, el orden de arranque, contraseñas y configuraciones de hardware esenciales. Esta memoria es volátil y requiere energía constante suministrada por una batería, comúnmente una pila tipo botón CR2032, que permite conservar los datos cuando el PC está apagado. A diferencia del BIOS, que es el firmware almacenado en memoria ROM, la memoria CMOS almacena los valores modificables por el usuario que son usados por el BIOS durante el arranque del sistema para configurar el hardware y el sistema operativo. Un fallo o pérdida de energía en esta batería provoca que la configuración CMOS se resetee, lo que puede generar errores al arrancar el equipo.</p>
+<h3 id="breve-historia-de-la-tecnologia-cmos-en-pcs">Breve historia de la tecnología CMOS en PCs<a class="headerlink" href="#breve-historia-de-la-tecnologia-cmos-en-pcs" title="Permanent link">&para;</a></h3>
+<p>La tecnología CMOS se comenzó a usar ampliamente en PCs desde finales de los años 70 y principios de los 80 como una solución más eficiente energéticamente para mantener la configuración del sistema sin necesidad de fuentes externas o recargas frecuentes, a diferencia de las tecnologías previas como baterías recargables internas. A medida que las placas base y el firmware BIOS evolucionaban, la memoria CMOS se convirtió en un componente estándar para almacenar las configuraciones personalizadas del usuario y facilitar la funcionalidad del sistema. Con el paso del tiempo, el CMOS continuó utilizándose por su bajo consumo y alta fiabilidad, aunque muchas funciones han ido integrándose con tecnologías más modernas como la memoria flash para BIOS/UEFI, que permite actualizar el firmware sin perder la configuración almacenada.</p>
+<p>Este equilibrio entre persistencia de configuraciones y eficiencia energética hace que la memoria CMOS siga siendo un elemento clave en el diseño y mantenimiento de PCs modernos.  </p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/cmos/cmos.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h2 id="2-tecnologia-cmos">2. Tecnología CMOS<a class="headerlink" href="#2-tecnologia-cmos" title="Permanent link">&para;</a></h2>
+<h3 id="funciones-principales-y-caracteristicas">Funciones principales y características<a class="headerlink" href="#funciones-principales-y-caracteristicas" title="Permanent link">&para;</a></h3>
+<p>La memoria CMOS es un chip de bajo consumo energético presente en la mayoría de placas base de PCs, encargado de almacenar información esencial del sistema, como la configuración del BIOS, fecha, hora, secuencia de arranque, contraseñas y parámetros de hardware. Esta memoria es volátil, por lo que requiere una batería (normalmente una pila CR2032) que le suministre energía aún cuando el PC está apagado. Su función principal es conservar la configuración del sistema para que al encender el equipo, éste pueda arrancar con los ajustes definidos y reconocer el hardware conectado. La tecnología CMOS destaca por su bajo consumo, alta fiabilidad y capacidad para mantener la información crítica sin requerir una fuente de energía principal.</p>
+<h3 id="comparacion-con-otros-tipos-de-memoria-ram-y-rom">Comparación con otros tipos de memoria (RAM y ROM)<a class="headerlink" href="#comparacion-con-otros-tipos-de-memoria-ram-y-rom" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>RAM:</strong> La memoria RAM es volátil y se utiliza para almacenar datos y programas en ejecución; al apagar el PC, su contenido se pierde totalmente. La CMOS también es volátil, pero su función es mantener configuraciones específicas mediante alimentación de batería.</li>
+<li><strong>ROM:</strong> La memoria ROM almacena firmware, como el BIOS o UEFI, de forma permanente y no se borra al apagar el equipo. La CMOS, en cambio, almacena datos modificables por el usuario que afectan el arranque y configuración del sistema.</li>
+<li>La CMOS es más permanente que la RAM para configuraciones, pero menos que la ROM, ya que depende de la pila para mantener su contenido.</li>
+</ul>
+<h3 id="relacion-entre-cmos-bios-y-uefi">Relación entre CMOS, BIOS y UEFI<a class="headerlink" href="#relacion-entre-cmos-bios-y-uefi" title="Permanent link">&para;</a></h3>
+<p><strong>El BIOS (Basic Input Output System) o su sucesor UEFI, son firmware almacenados en memoria no volátil (ROM/Flash) que controlan el proceso de arranque del PC y la inicialización del hardware.</strong> El CMOS almacena los parámetros de configuración que el BIOS/UEFI utiliza durante el arranque para saber cómo debe configurarse el sistema, como el orden de dispositivos de arranque, la hora, y las opciones de seguridad. Aunque CMOS y BIOS trabajan estrechamente, son componentes diferentes: la CMOS solo guarda la configuración, mientras que el BIOS/UEFI ejecuta las instrucciones necesarias para el inicio del sistema.</p>
+<p>Esta relación permite modificar configuraciones persistentes sin alterar el firmware y facilita la gestión del hardware y la personalización del arranque del sistema. En sistemas modernos, muchas funciones tradicionales de la CMOS están siendo transferidas al firmware UEFI, pero su principio y función básica se mantienen.</p>
+<h2 id="3-ubicacion-fisica-y-alimentacion-de-la-cmos">3. Ubicación física y alimentación de la CMOS<a class="headerlink" href="#3-ubicacion-fisica-y-alimentacion-de-la-cmos" title="Permanent link">&para;</a></h2>
+<h3 id="chip-y-pila-en-la-placa-base-tipos-y-vida-util">Chip y pila en la placa base: tipos y vida útil<a class="headerlink" href="#chip-y-pila-en-la-placa-base-tipos-y-vida-util" title="Permanent link">&para;</a></h3>
+<p>La memoria CMOS está contenida en un chip específico dentro de la placa base del PC. Tradicionalmente, esta memoria se encuentra cerca de la batería que la alimenta, y es identificable como un pequeño chip de memoria RAM volátil de bajo consumo. La CMOS depende de una batería interna para mantener los datos almacenados cuando el equipo está apagado.</p>
+<p>La batería más común es el modelo de pila de botón tipo CR2032 de 3V, ubicada generalmente en un soporte visible en la placa base, frecuentemente cerca de las ranuras de expansión o en la parte inferior de la placa. La vida útil típica de esta batería oscila entre 3 y 10 años, dependiendo del uso del PC y la calidad de la batería. Cuando esta pila se agota, la memoria CMOS pierde alimentación y con ella la configuración guardada, lo que provoca que el PC pueda perder la fecha, hora y los ajustes del BIOS, además de dificultar o impedir el arranque correcto del sistema.</p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/cmos/placa.webp" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<p>En placas Z790 la “CMOS” no es un chip aparte: el RTC/CMOS está integrado en el PCH (chipset Intel Z790) y los ajustes de UEFI se guardan en la flash SPI. En la foto (Gigabyte Z790 AERO G, con el disipador quitado) la CMOS/RTC reside en el PCH.</p>
+<h3 id="papel-de-la-bateria-cr2032">Papel de la batería CR2032<a class="headerlink" href="#papel-de-la-bateria-cr2032" title="Permanent link">&para;</a></h3>
+<p>Esta pila CR2032 es fundamental para el funcionamiento continuo de la memoria CMOS, pues suministra la energía necesaria para que la configuración del sistema se mantenga activa y no se borre al apagar el PC. Es una batería de litio con capacidad suficiente para alimentar la memoria durante años en condiciones normales. Cuando la batería comienza a fallar, es habitual notar mensajes de error al encender el PC, como advertencias relacionadas con la fecha y hora, o la imposibilidad de almacenar los parámetros de configuración.</p>
+<p>El reemplazo de la batería CR2032 es sencillo, generalmente solo es necesario liberar un pequeño clip o pestillo que la sujeta y colocar una nueva batería del mismo tipo respetando la polaridad indicada. Es recomendable realizar este cambio con el equipo apagado y desconectado para evitar daños.</p>
+<p>Mantener esta batería en buen estado es crucial para evitar problemas de configuración y garantizar un arranque estable y confiable del PC.</p>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/cmos/pila.avif" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h2 id="4-uso-de-la-memoria-cmos-en-un-pc">4. Uso de la memoria CMOS en un PC<a class="headerlink" href="#4-uso-de-la-memoria-cmos-en-un-pc" title="Permanent link">&para;</a></h2>
+<h3 id="almacenamiento-de-la-configuracion-del-sistema">Almacenamiento de la configuración del sistema<a class="headerlink" href="#almacenamiento-de-la-configuracion-del-sistema" title="Permanent link">&para;</a></h3>
+<p>La memoria CMOS almacena de forma temporal pero persistente, mediante alimentación por batería, la configuración esencial del sistema que el BIOS utiliza para la puesta en marcha del PC. Estos datos definen cómo el hardware y el firmware interactúan, preservando ajustes específicos establecidos por el usuario o el fabricante. Al apagar el PC, la CMOS mantiene esta información intacta gracias a la batería interna, evitando que se pierdan los parámetros que permiten un arranque correcto y personalizado.</p>
+<h3 id="parametros-guardados-fecha-hora-configuracion-de-hardware">Parámetros guardados: fecha, hora, configuración de hardware<a class="headerlink" href="#parametros-guardados-fecha-hora-configuracion-de-hardware" title="Permanent link">&para;</a></h3>
+<p>Entre los parámetros que se almacenan en la memoria CMOS se encuentran la fecha y hora del sistema, que permiten que el reloj del sistema operativo mantenga la sincronía correcta. Además, se guardan configuraciones relevantes de hardware, como la secuencia de arranque (orden en que se reconocen los dispositivos), perfiles de overclocking, opciones de activación o desactivación de componentes, y contraseñas de seguridad para el acceso a la BIOS o al sistema. Esto facilita la personalización y control del funcionamiento del PC.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fecha y Hora</td>
+<td>Mantiene la fecha y hora del sistema para el reloj interno</td>
+</tr>
+<tr>
+<td>Secuencia de Arranque</td>
+<td>Define el orden de los dispositivos desde donde se carga el sistema operativo</td>
+</tr>
+<tr>
+<td>Frecuencia y Voltaje CPU</td>
+<td>Configuraciones relacionadas con el reloj y voltajes del procesador, esenciales para overclock</td>
+</tr>
+<tr>
+<td>Configuración de Memoria</td>
+<td>Velocidades, timings y perfiles XMP/DOCP para la RAM</td>
+</tr>
+<tr>
+<td>Control de Energía</td>
+<td>Ajustes de gestión energética, estados C y modos turbo</td>
+</tr>
+<tr>
+<td>Control de Ventiladores</td>
+<td>Velocidad y perfiles de los ventiladores del sistema</td>
+</tr>
+<tr>
+<td>Opciones de Seguridad</td>
+<td>Contraseñas BIOS, bloqueo de arranque y control de puertos</td>
+</tr>
+<tr>
+<td>Periféricos Integrados</td>
+<td>Estado y configuración de audio, red, gráficos y otros dispositivos integrados</td>
+</tr>
+<tr>
+<td>Opciones de Virtualización</td>
+<td>Habilitación o deshabilitación de tecnologías de virtualización como Intel VT-x</td>
+</tr>
+<tr>
+<td>Configuraciones PCIe</td>
+<td>Velocidad y modo de las ranuras PCIe</td>
+</tr>
+<tr>
+<td>Control de Dispositivos</td>
+<td>Habilitación o deshabilitación de puertos USB, puertos SATA, redes, etc.</td>
+</tr>
+<tr>
+<td>Estado de la batería CMOS</td>
+<td>Almacenamiento del estado o alertas sobre la batería que alimenta la CMOS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="interaccion-con-el-bios-al-arranque">Interacción con el BIOS al arranque<a class="headerlink" href="#interaccion-con-el-bios-al-arranque" title="Permanent link">&para;</a></h3>
+<p>Durante el encendido del PC, el BIOS lee los datos almacenados en la memoria CMOS para aplicar los ajustes establecidos antes del arranque del sistema operativo. Esto incluye inicializar dispositivos, configurar buses y velocidades, cargar configuraciones específicas y verificar la integridad del hardware. Si la CMOS está desconfigurada o la batería agotada, el BIOS detecta esta situación y puede mostrar mensajes de error o solicitar al usuario que ingrese a la configuración para corregir los parámetros antes de continuar. Esta interacción es crucial para el correcto funcionamiento y estabilidad del PC desde el primer momento.</p>
+<h2 id="5-reseteo-y-restauracion-de-la-cmos">5. Reseteo y restauración de la CMOS<a class="headerlink" href="#5-reseteo-y-restauracion-de-la-cmos" title="Permanent link">&para;</a></h2>
+<p>El reseteo y la restauración de la memoria CMOS son procedimientos habituales para solucionar problemas de configuración, recuperar el acceso si se olvida una contraseña o asegurar el funcionamiento correcto del sistema. Estos procesos devuelven la CMOS a sus valores predeterminados de fábrica.</p>
+<h3 id="metodos-principales-para-resetear-la-cmos">Métodos principales para resetear la CMOS<a class="headerlink" href="#metodos-principales-para-resetear-la-cmos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Mediante el menú BIOS/UEFI:</strong>  </li>
+<li>Accede al menú presionando la tecla correspondiente (F2, SUPR, ESC) durante el arranque.</li>
+<li>Busca la opción <code>Load Setup Defaults</code>, <code>Restore Defaults</code> o similar.</li>
+<li>Guarda los cambios y reinicia el PC (generalmente con F10).</li>
+</ul>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/cmos/reset_cmos_uefi.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<ul>
+<li><strong>Retirando la pila de la placa base:</strong>  </li>
+<li>Apaga el PC y desconéctalo de la corriente.</li>
+<li>Abre la caja y localiza la pila (tipo CR2032) en la placa base.</li>
+<li>Extráela durante al menos 5 minutos (este tiempo es estimado, ya que hay CMOS que pueden necesitar más tiempo).</li>
+<li>
+<p>Vuelve a colocar la pila y enciende el PC.<br />
+  Esto borra cualquier configuración almacenada en la CMOS.</p>
+</li>
+<li>
+<p><strong>Utilizando el jumper de reseteo:</strong>  </p>
+</li>
+<li>Apaga el PC y localiza lo pines “CLR_CMOS”, “CLEAR” o similar en la placa base (consulta el manual).</li>
+<li>Usando un jumper, conecta los dos pines. (tambien se realiza con un destornillador, pero es un proceso que entraña ciertos riesgos para el equipo)</li>
+<li>Arranca el sistema. </li>
+</ul>
+<hr />
+<div style="text-align: center;">
+  <img src="../assets/cmos/reset_cmos_jumper.jpg" alt="Descripción de la imagen" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+<hr />
+<h2 id="6-problemas-y-mantenimiento-de-la-cmos">6. Problemas y mantenimiento de la CMOS<a class="headerlink" href="#6-problemas-y-mantenimiento-de-la-cmos" title="Permanent link">&para;</a></h2>
+<p>La memoria CMOS, aunque pequeña y resistente, puede presentar ciertos problemas que afectan el correcto funcionamiento del PC. Diagnosticar y mantener la CMOS ayuda a evitar fallos relacionados con la configuración del sistema.</p>
+<h3 id="problemas-frecuentes-relacionados-con-la-cmos">Problemas frecuentes relacionados con la CMOS<a class="headerlink" href="#problemas-frecuentes-relacionados-con-la-cmos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Fallo de la pila:</strong><br />
+  Si la pila de la placa base está agotada o presenta fallo, el PC puede mostrar mensajes de error como “CMOS Checksum Error” al encender. También pueden perderse la fecha/hora y la configuración BIOS cada vez que se apaga el equipo.</p>
+</li>
+<li>
+<p><strong>Configuraciones corruptas:</strong><br />
+  Cambios incorrectos en la BIOS/UEFI, cortes eléctricos o incompatibilidades pueden corromper la información almacenada en la CMOS. Esto provoca errores de arranque o inestabilidad.</p>
+</li>
+<li>
+<p><strong>Mensaje de error al iniciar:</strong><br />
+  Aparecen avisos del tipo “CMOS Battery Failure”, “CMOS Settings Wrong” o similares. Suelen indicar problemas de hardware o configuraciones erróneas.</p>
+</li>
+<li>
+<p><strong>Imposibilidad de guardar cambios:</strong><br />
+  Si no se guardan los ajustes realizados en la BIOS, puede ser señal de que la pila está descargada o la CMOS dañada.</p>
+</li>
+</ul>
+<h3 id="mantenimiento-de-la-cmos">Mantenimiento de la CMOS<a class="headerlink" href="#mantenimiento-de-la-cmos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Sustitución periódica de la pila:</strong><br />
+  Cambiar la pila CR2032 cada 2-4 años —o cuando se perciban síntomas de fallo— garantiza la conservación de la configuración.</p>
+</li>
+<li>
+<p><strong>Revisar y actualizar configuraciones:</strong><br />
+  Es recomendable comprobar y actualizar los parámetros de BIOS/UEFI después de cambios de hardware o actualizaciones importantes.</p>
+</li>
+<li>
+<p><strong>Limpiar contactos y evitar la acumulación de polvo:</strong><br />
+  Mantener la zona de la placa base limpia ayuda a prevenir problemas de conexión eléctrica que podrían afectar la memoria CMOS.</p>
+</li>
+<li>
+<p><strong>Actualizar la BIOS/UEFI de forma segura:</strong><br />
+  Las actualizaciones solventan errores de funcionamiento, pero deben hacerse siguiendo instrucciones del fabricante y comprobando compatibilidad con el modelo de la placa base.</p>
+</li>
+</ul>
+<h3 id="recomendaciones-adicionales">Recomendaciones adicionales<a class="headerlink" href="#recomendaciones-adicionales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Realiza comprobaciones periódicas de la fecha y hora del sistema; desajustes pueden indicar fallo en la pila.</li>
+<li>Guarda una copia de la configuración óptima de la BIOS/UEFI para poder restaurarla en caso de problemas.</li>
+<li>Consulta el manual técnico de la placa base ante cualquier duda o anomalía detectada.</li>
+</ul>
+<hr />
+<h3 id="consideraciones-importantes">Consideraciones importantes<a class="headerlink" href="#consideraciones-importantes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Después del reseteo, será necesario reconfigurar parámetros como orden de arranque, fecha/hora, contraseñas y ajustes específicos para el sistema.</li>
+<li>Es recomendable consultar el manual de la placa base para identificar correctamente la ubicación del jumper y de la pila.</li>
+<li>Un reseteo incorrecto puede provocar la pérdida de la configuración necesaria para arrancar el sistema operativo.</li>
+</ul>
+<h3 id="situaciones-en-las-que-es-util-el-reseteo-de-la-cmos">Situaciones en las que es útil el reseteo de la CMOS<a class="headerlink" href="#situaciones-en-las-que-es-util-el-reseteo-de-la-cmos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Olvido o bloqueo por contraseña de BIOS.</li>
+<li>Corrupción de configuración tras un fallo de hardware.</li>
+<li>Problemas de incompatibilidad después de actualizar componentes.</li>
+<li>Restablecimiento durante el mantenimiento preventivo.</li>
+</ul>
+<p><strong>RECOMENDABLE DIRÍA CASI OBLIGATORIO RESETEAR CMOS CUANDO SE MANIPULE ALGÚN COMPONENTE</strong></p>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
