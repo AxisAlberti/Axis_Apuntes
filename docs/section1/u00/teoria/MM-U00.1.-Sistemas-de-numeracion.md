@@ -236,6 +236,64 @@ Se fija cuántos bits corresponden a la fracción. Operaciones requieren reescal
    1000010   (= 66)
 ```
 
+## 9.1 Suma binaria (paso a paso)
+
+Reglas básicas:
+- 0+0=0, 0+1=1, 1+0=1, 1+1=10 (lleva 1).
+
+**Ejemplo:** 101101₂ + 011011₂  
+```
+  101101
++ 011011
+-------
+ 1001000
+```
+
+## 9.2 Resta binaria (con préstamo)
+
+Reglas básicas:
+- 0−0=0, 1−0=1, 1−1=0, 0−1=1 con préstamo (equivale a 2−1).
+
+**Ejemplo:** 101001₂ − 011110₂  
+```
+  101001
+- 011110
+--------
+ 001011
+```
+
+## 9.3 Multiplicación binaria
+
+Se multiplican por cada bit del multiplicador y se **desplaza** según la posición.
+
+**Ejemplo:** 1101₂ × 101₂  
+```
+    1101
+  × 0101
+  -------
+    1101    (1)
+   0000     (0) << 1
+  1101      (1) << 2
+  -------
+ 1000001
+```
+
+## 9.4 División binaria (por restas sucesivas)
+
+Es similar a la división decimal: se compara, se resta y se baja el siguiente bit.
+
+**Ejemplo:** 11010₂ ÷ 101₂  
+```
+    11010 ÷ 101 = 101
+    101
+    ---
+     010 (se baja el siguiente bit)
+     101
+     ---
+     001 (resto)
+```
+**Resultado:** cociente **101₂**, resto **1₂**.
+
 ---
 
 ## 10. Aplicaciones
@@ -286,3 +344,5 @@ Se fija cuántos bits corresponden a la fracción. Operaciones requieren reescal
 ---
 **Autor:** _(José Manuel González Castillo)_  
 **Fecha:** _(13/09/2025)_
+
+**Fecha de actualización:** 31/01/2026

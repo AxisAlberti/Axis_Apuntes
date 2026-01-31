@@ -433,3 +433,5 @@ La ranura **PCIe** puede aportar una potencia limitada. Las tarjetas que superan
 - displayport_connector.svg - Wyzzymoon, CC BY 4.0, Wikimedia Commons.
 - gddr5x_1080ti.jpg - Geni (recorte) / Fritzchens Fritz (foto), CC0, Wikimedia Commons.
 - hbm_stack_gp100.jpg - FritzchensFritz, CC0, Wikimedia Commons.
+
+**Fecha de actualización:** 31/01/2026

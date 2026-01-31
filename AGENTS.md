@@ -5,6 +5,7 @@ Este repositorio contiene material educativo para módulos de formación profesi
 ## Normas de redacción de apuntes
 
 - Los apuntes deben ser claros, didácticos y orientados al aprendizaje del alumnado.
+- Cada vez que se edite un fichero `.md`, se añadirá al final una línea con la fecha de actualización, con el formato: `**Fecha de actualización:** 31/01/2026`.
 
 ## Formato recomendado para apuntes
 
