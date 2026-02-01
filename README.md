@@ -24,6 +24,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **A3**: Prevencion de riesgos laborales (Anexo)
 - **A4**: Guia para elegir procesador (Anexo)
 - **A5**: Nomenclatura de procesadores (Anexo)
+- **A6**: BIOS, UEFI y proceso de encendido (Anexo)
 
 ### 💻 Sistemas Informaticos (section2)
 Contenido base sobre redes, terminal y fundamentos de sistemas.

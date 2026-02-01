@@ -72,6 +72,9 @@ nav:
   - Anexo 5 - Nomenclatura de procesadores:
     - section1/A5/index.md
     - A5.1 Nomenclatura de procesadores: section1/A5/teoria/A5-1-Nomenclatura-de-procesadores.md
+  - Anexo 6 - BIOS, UEFI y proceso de encendido:
+    - section1/A6/index.md
+    - A6.1 BIOS, UEFI y proceso de encendido: section1/A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido.md
     - Presentacion: section1/slides/no-disponible.md
 - Sistemas Informaticos:
   - section2/index.md

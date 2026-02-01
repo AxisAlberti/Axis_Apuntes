@@ -195,4 +195,5 @@ El tecnico debe relacionar sintoma y causa probable antes de sustituir piezas.
 - https://commons.wikimedia.org/wiki/File:Elitegroup_761GX-M754_-_AMIBIOS_(American_Megatrends)_in_a_Winbond_W39V040APZ-5491.jpg
 - https://commons.wikimedia.org/wiki/File:Award_BIOS_setup_utility.png
 
+
 **Fecha de actualización:** 01/02/2026
