@@ -17,6 +17,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **U06**: CMOS y UEFI
 - **U07**: Almacenamiento
 - **U08**: Microprocesadores
+- **U09**: Tarjetas graficas
 - **A1**: Arquitecturas de procesadores (Anexo)
 - **A2**: Procesos e hilos (Anexo)
 - **A3**: Prevencion de riesgos laborales (Anexo)
@@ -180,3 +181,5 @@ pip install mkdocs-blogging-plugin
 Para preguntas o sugerencias:
 - Crear un Issue en GitHub
 - Revisar `AGENTS.md` para guias detalladas de colaboracion
+
+**Fecha de actualización:** 01/02/2026
