@@ -159,7 +159,22 @@ En la practica, UEFI es mas flexible y seguro, pero requiere configuracion adecu
 
 ### 5.1 MBR (Master Boot Record)
 
-El MBR es el esquema clasico de particionado. Guarda la tabla de particiones y el cargador de arranque en el primer sector del disco. Sus limites principales son el numero de particiones primarias y el tamano maximo de disco (aprox. 2 TB). En mantenimiento, MBR suele aparecer en equipos antiguos o en instalaciones hechas en modo BIOS.
+El MBR es el esquema clasico de particionado y arranque en equipos con BIOS tradicional. El MBR ocupa el primer sector del disco y contiene dos partes clave: el **codigo de arranque** y la **tabla de particiones**. La BIOS lee ese sector y transfiere el control al cargador, que a su vez inicia el sistema operativo. Por eso el MBR es esencial en el arranque: si ese sector se corrompe, el equipo no puede iniciar aunque el resto del disco este bien.
+
+Peculiaridades y limites principales:
+
+- **Tamano maximo**: con sectores de 512 bytes, el MBR no puede gestionar discos mayores de aproximadamente 2 TB.
+- **Numero de particiones**: admite hasta **4 particiones primarias**. Para mas, se usa una particion extendida con particiones logicas dentro.
+- **Punto unico de fallo**: la informacion de arranque y particiones esta en un solo lugar.
+- **Compatibilidad**: es muy compatible con equipos antiguos y sistemas heredados.
+
+Detalles tecnicos utiles:
+
+- El MBR ocupa **512 bytes**: 446 de codigo, 64 de tabla (4 entradas de 16 bytes) y una firma final **0x55AA**.
+- El limite de 2 TB proviene del direccionamiento de 32 bits con sectores de 512 bytes.
+- La firma 0x55AA permite que el BIOS identifique un sector arrancable.
+
+En mantenimiento, MBR aparece en equipos antiguos o cuando el disco se ha inicializado en modo BIOS. Si se pasa un disco MBR a un equipo configurado solo en UEFI, el arranque puede fallar.
 
 <figure>
   <img src="../assets/mbr_partition_table_scheme.png" alt="Esquema de particiones MBR" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
@@ -168,12 +183,41 @@ El MBR es el esquema clasico de particionado. Guarda la tabla de particiones y e
 
 ### 5.2 GPT (GUID Partition Table)
 
-GPT es el esquema moderno asociado a UEFI. Permite muchos mas registros de particion, soporta discos grandes y guarda copias de seguridad de la tabla. En entornos actuales es el estandar recomendado por seguridad y escalabilidad.
+GPT es el esquema moderno asociado a UEFI. Fue diseñado para superar las limitaciones del MBR y mejorar la fiabilidad. GPT usa direcciones de 64 bits, lo que permite discos muy grandes, y guarda **una tabla primaria y una de respaldo** al final del disco. Ademas, emplea **CRC32** para detectar corrupciones en la cabecera y en la tabla de particiones.
+
+Peculiaridades y ventajas:
+
+- **Gran capacidad**: el limite practico es enorme (muy superior a 2 TB).
+- **Muchas particiones**: permite muchas mas entradas de particion (por ejemplo, 128 en Windows).
+- **Redundancia**: copia de seguridad de la tabla al final del disco.
+- **Integridad**: comprobacion CRC32 para detectar errores.
+- **Identificadores unicos (GUID)**: cada particion tiene un identificador unico.
+- **Arranque UEFI**: usa la particion ESP con archivos EFI para iniciar el sistema.
+
+Detalles tecnicos utiles:
+
+- En GPT hay un **MBR protector** en el LBA 0 para evitar que herramientas antiguas sobrescriban el disco.
+- La cabecera primaria se guarda en **LBA 1** y la cabecera de respaldo en el **ultimo LBA**.
+- GPT usa **CRC32** para validar cabecera y tabla de particiones.
+- La **ESP (EFI System Partition)** almacena cargadores de arranque y utilidades del firmware.
+
+En mantenimiento actual, GPT es el estandar recomendado cuando el equipo usa UEFI, especialmente en discos grandes o configuraciones con varias particiones. Si el equipo esta en modo BIOS heredado, GPT puede no arrancar salvo que se active compatibilidad CSM.
 
 <figure>
   <img src="../assets/gpt_partition_table_scheme.png" alt="Esquema de particiones GPT" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado GPT. Fuente: Wikimedia Commons (GUID Partition Table).</figcaption>
 </figure>
+
+### 5.3 Comparativa rapida MBR vs GPT
+
+| Aspecto | MBR | GPT |
+|---|---|---|
+| Tamano maximo tipico | ~2 TB | Muy superior a 2 TB |
+| Numero de particiones | 4 primarias (o extendida) | Muchas (p. ej. 128) |
+| Redundancia | No | Si (tabla primaria y copia) |
+| Integridad | No | CRC32 en cabecera y tabla |
+| Arranque | BIOS | UEFI (con ESP) |
+| Compatibilidad | Muy alta con equipos antiguos | Recomendada en equipos modernos |
 
 ---
 
@@ -236,11 +280,14 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://www.pccomponentes.com/bios-uefi-que-es
 - https://www.corsair.com/es/es/explorer/diy-builder/memory/what-are-cmos-bios-and-uefi/
 - https://www.profesionalreview.com/guias/bios/
+- https://www.ntfs.com/mbr-damaged.htm
+- https://www.ibm.com/support/pages/operating-systems-using-mbr-have-2-terabyte-2-tb-disk-limitation-ibm-bladecenter-and-system-x
+- https://uefi.org/specs/UEFI/2.9_A/05_GUID_Partition_Table_Format.html
+- https://en.wikipedia.org/wiki/Master_boot_record
+- https://en.wikipedia.org/wiki/GUID_Partition_Table
+- https://en.wikipedia.org/wiki/EFI_system_partition
 - https://commons.wikimedia.org/wiki/File:GNU_GRUB_on_MBR_partitioned_hard_disk_drives.svg
 - https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
-
-
-
 
 
 
