@@ -367,11 +367,4 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://commons.wikimedia.org/wiki/File:GRUB_2%27s_boot_menu.png
 
 
-
-
-
-
-
-
-
 **Fecha de actualización:** 01/02/2026
