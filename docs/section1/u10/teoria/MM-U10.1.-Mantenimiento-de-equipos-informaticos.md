@@ -59,6 +59,8 @@ El BIOS (Basic Input/Output System) es el firmware tradicional que inicia el har
 
 La memoria CMOS almacena los ajustes del BIOS/UEFI (fecha, hora, orden de arranque, configuraciones basicas). Se mantiene gracias a una bateria de boton; si esta se agota, el equipo puede perder la configuracion y mostrar errores al iniciar.
 
+**Anexo 6 (A6):** Para ampliar sobre BIOS/UEFI, POST, pitidos y secuencia de arranque, consulta el anexo: [A6.1 BIOS, UEFI y proceso de encendido](../../A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido.md).
+
 <figure>
   <img src="../assets/amibios_chip.jpg" alt="Chip BIOS en placa base" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Chip BIOS en placa base. Fuente: Wikimedia Commons.</figcaption>
@@ -194,6 +196,7 @@ El tecnico debe relacionar sintoma y causa probable antes de sustituir piezas.
 - https://www.profesionalreview.com/guias/bios/
 - https://commons.wikimedia.org/wiki/File:Elitegroup_761GX-M754_-_AMIBIOS_(American_Megatrends)_in_a_Winbond_W39V040APZ-5491.jpg
 - https://commons.wikimedia.org/wiki/File:Award_BIOS_setup_utility.png
+
 
 
 **Fecha de actualización:** 01/02/2026

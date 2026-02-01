@@ -163,7 +163,7 @@ El MBR es el esquema clasico de particionado. Guarda la tabla de particiones y e
 
 <figure>
   <img src="../assets/mbr_partition_table_scheme.svg" alt="Esquema de particiones MBR" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
-  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado MBR. Fuente: Wikimedia Commons.</figcaption>
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado MBR. Fuente: Wikimedia Commons (GNU GRUB on MBR).</figcaption>
 </figure>
 
 ### 5.2 GPT (GUID Partition Table)
@@ -172,7 +172,7 @@ GPT es el esquema moderno asociado a UEFI. Permite muchos mas registros de parti
 
 <figure>
   <img src="../assets/gpt_partition_table_scheme.svg" alt="Esquema de particiones GPT" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
-  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado GPT. Fuente: Wikimedia Commons.</figcaption>
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado GPT. Fuente: Wikimedia Commons (GUID Partition Table).</figcaption>
 </figure>
 
 ---
@@ -236,8 +236,9 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://www.pccomponentes.com/bios-uefi-que-es
 - https://www.corsair.com/es/es/explorer/diy-builder/memory/what-are-cmos-bios-and-uefi/
 - https://www.profesionalreview.com/guias/bios/
-- https://commons.wikimedia.org/wiki/File:MBR_partition_table_scheme.svg
-- https://commons.wikimedia.org/wiki/File:GPT_Partition_Table_Scheme.svg
+- https://commons.wikimedia.org/wiki/File:GNU_GRUB_on_MBR_partitioned_hard_disk_drives.svg
+- https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
+
 
 
 
