@@ -241,6 +241,60 @@ En estos casos, el tecnico debe comprobar el orden de arranque, el estado del di
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Menu de configuracion de arranque. Fuente: PCComponentes.</figcaption>
 </figure>
 
+### 6.1 Que ocurre cuando se encuentra un dispositivo arrancable
+
+Una vez que el firmware encuentra un dispositivo con una particion arrancable, cambia el control de la ejecucion al **cargador de arranque (bootloader)**. Ese cargador es el responsable de preparar el entorno del sistema operativo y cargarlo en memoria.
+
+- **En BIOS + MBR**: la BIOS lee el sector 0 (MBR) y ejecuta el codigo que hay en ese sector. Ese codigo localiza el cargador principal en la particion activa y le pasa el control.\n- **En UEFI + GPT**: el firmware busca la **ESP (EFI System Partition)**, monta esa particion y ejecuta un archivo `.EFI` (bootloader). El archivo EFI se encuentra mediante entradas del gestor de arranque UEFI (Boot Manager).
+
+En ambos casos, el firmware **no carga directamente el sistema operativo**, sino que delega en el bootloader. Este decide que sistema iniciar, carga el kernel y transfiere el control definitivo al sistema operativo.
+
+### 6.2 Rol del bootloader
+
+El bootloader (por ejemplo, Windows Boot Manager o GRUB en Linux) se encarga de:
+
+- Leer la configuracion de arranque.\n- Permitir seleccionar entre varios sistemas (si existen).\n- Cargar el kernel y los modulos iniciales.\n- Pasar parametros de arranque al sistema operativo.\n
+Cuando el bootloader termina su trabajo, el sistema operativo toma el control total del hardware.
+
+### 6.3 Ejemplos de bootloaders
+
+- **Windows Boot Manager**: carga el cargador de Windows desde la particion EFI y permite recuperar el sistema.
+- **GRUB**: permite seleccionar entre varios sistemas y es muy comun en Linux.
+
+<figure>
+  <img src="../assets/windows_boot_manager.png" alt="Windows Boot Manager" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Windows Boot Manager: aparece tras UEFI cuando elige el cargador de Windows. Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/grub_boot_menu.png" alt="Menu de arranque GRUB" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
+  <figcaption style="font-size:0.85em;color:#666;text-align:center;">Menu de arranque GRUB: permite elegir sistema antes de cargar el kernel. Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+### 6.4 Diagrama simple del arranque
+
+```text
+Boton de encendido
+       │
+       ▼
+BIOS/UEFI inicia hardware
+       │
+       ▼
+POST (autocomprobacion)
+       │
+       ▼
+Seleccion de dispositivo de arranque
+       │
+       ▼
+Bootloader (GRUB / Windows Boot Manager)
+       │
+       ▼
+Kernel del sistema operativo
+       │
+       ▼
+Sistema operativo en ejecucion
+```
+
 ---
 
 ## 7. Errores frecuentes en el arranque
@@ -288,6 +342,12 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://en.wikipedia.org/wiki/EFI_system_partition
 - https://commons.wikimedia.org/wiki/File:GNU_GRUB_on_MBR_partitioned_hard_disk_drives.svg
 - https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
+- https://commons.wikimedia.org/wiki/File:Windows_Boot_Manager.png
+- https://commons.wikimedia.org/wiki/File:GRUB_2%27s_boot_menu.png
+
+
+
+
 
 
 
