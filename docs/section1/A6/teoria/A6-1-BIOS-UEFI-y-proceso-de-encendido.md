@@ -140,10 +140,10 @@ Ademas de los pitidos, hoy existen varias ayudas para identificar el fallo de fo
 
 ### 4.2 Uso basico de una tarjeta POST PCIe
 
-1) Insertar la tarjeta POST en una ranura PCIe disponible.
-2) Encender el equipo y observar el codigo mostrado.
-3) Consultar la tabla de codigos del fabricante para interpretar el fallo.
-4) Corregir el componente o la configuracion indicada.
+1. Insertar la tarjeta POST en una ranura PCIe disponible.
+2. Encender el equipo y observar el codigo mostrado.
+3. Consultar la tabla de codigos del fabricante para interpretar el fallo.
+4. Corregir el componente o la configuracion indicada.
 
 Estas tarjetas son especialmente utiles cuando el fallo impide acceder a la pantalla o cuando los pitidos no son claros.
 
@@ -365,6 +365,7 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
 - https://commons.wikimedia.org/wiki/File:Windows_Boot_Manager.png
 - https://commons.wikimedia.org/wiki/File:GRUB_2%27s_boot_menu.png
+
 
 
 
