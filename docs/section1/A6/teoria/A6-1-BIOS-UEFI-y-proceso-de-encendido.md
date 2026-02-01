@@ -29,30 +29,30 @@ Comprender estas fases ayuda a diagnosticar fallos, interpretar mensajes y reduc
 
 ## 2. Secuencia de encendido paso a paso
 
-1) **Señal de encendido (Power On)**
-- La fuente de alimentacion entrega energia a la placa base.
-- El chipset y la CPU reciben energia y se activan.
+1. **Señal de encendido (Power On)**
+   - La fuente de alimentacion entrega energia a la placa base.
+   - El chipset y la CPU reciben energia y se activan.
 
-2) **Ejecucion del firmware (BIOS/UEFI)**
-- Se inicializa el microcodigo del procesador.
-- Se detecta la memoria RAM, controladoras y dispositivos basicos.
+2. **Ejecucion del firmware (BIOS/UEFI)**
+   - Se inicializa el microcodigo del procesador.
+   - Se detecta la memoria RAM, controladoras y dispositivos basicos.
 
-3) **POST (Power-On Self Test)**
-- El firmware realiza pruebas basicas de hardware.
-- Si detecta errores criticos, detiene el arranque y emite pitidos o mensajes.
+3. **POST (Power-On Self Test)**
+   - El firmware realiza pruebas basicas de hardware.
+   - Si detecta errores criticos, detiene el arranque y emite pitidos o mensajes.
 
-4) **Inicializacion de dispositivos**
-- Se preparan buses, controladoras SATA/NVMe, USB y GPU.
-- Se activa la salida de video para mostrar mensajes o interfaz UEFI.
+4. **Inicializacion de dispositivos**
+   - Se preparan buses, controladoras SATA/NVMe, USB y GPU.
+   - Se activa la salida de video para mostrar mensajes o interfaz UEFI.
 
-5) **Seleccion de dispositivo de arranque**
-- El firmware consulta el orden de arranque configurado.
-- Busca un dispositivo con un cargador valido (bootable).
+5. **Seleccion de dispositivo de arranque**
+   - El firmware consulta el orden de arranque configurado.
+   - Busca un dispositivo con un cargador valido (bootable).
 
-6) **Carga del sistema operativo**
-- BIOS carga el cargador desde el MBR.
-- UEFI carga un archivo EFI desde la particion ESP.
-- El sistema operativo toma el control del hardware.
+6. **Carga del sistema operativo**
+   - BIOS carga el cargador desde el MBR.
+   - UEFI carga un archivo EFI desde la particion ESP.
+   - El sistema operativo toma el control del hardware.
 
 <figure>
   <img src="../assets/pccomponentes_uefi_bios.jpg" alt="Interfaz UEFI moderna durante el arranque" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
@@ -75,19 +75,19 @@ Si el POST falla, el equipo no inicia y suele mostrar **pitidos** o codigos de e
 
 ### 3.1 Fases tipicas dentro del POST
 
-1) **Inicializacion del procesador**  
+1. **Inicializacion del procesador**  
 Se comprueba que la CPU responde, se carga el microcodigo y se activan funciones basicas.
 
-2) **Comprobacion de RAM**  
+2. **Comprobacion de RAM**  
 Se detecta la memoria instalada y se realiza un conteo. Si hay un modulo mal colocado o defectuoso, el POST suele detenerse aqui.
 
-3) **Inicializacion de video**  
+3. **Inicializacion de video**  
 Se activa la salida grafica para mostrar mensajes. Si falla la GPU, es habitual que aparezcan pitidos y no haya imagen.
 
-4) **Deteccion de periféricos basicos**  
+4. **Deteccion de periféricos basicos**  
 Teclado, dispositivos USB y buses principales (PCIe, SATA/NVMe) se inicializan para permitir el arranque.
 
-5) **Resumen y paso al cargador**  
+5. **Resumen y paso al cargador**  
 Si no hay errores criticos, se guarda el estado y se pasa a la fase de arranque del sistema operativo.
 
 ### 3.2 Que indica un POST correcto
@@ -241,9 +241,9 @@ En mantenimiento actual, GPT es el estandar recomendado cuando el equipo usa UEF
 
 El firmware sigue el **orden de arranque** configurado. El proceso habitual es:
 
-1) Revisar dispositivos internos (SSD/HDD).
-2) Revisar unidades externas o USB.
-3) Revisar red (PXE), si esta habilitado.
+1. Revisar dispositivos internos (SSD/HDD).
+2. Revisar unidades externas o USB.
+3. Revisar red (PXE), si esta habilitado.
 
 Si no se encuentra un cargador valido, el firmware muestra un error como:
 
