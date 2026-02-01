@@ -92,15 +92,24 @@ Si no hay errores criticos, se guarda el estado y se pasa a la fase de arranque 
 
 ### 3.2 Que indica un POST correcto
 
-- Se escucha el pitido corto de inicio (si esta habilitado).\n- Aparece logo o texto de la placa base.\n- Se muestra el conteo de memoria o la pantalla UEFI.\n- El sistema continua hacia el cargador del sistema operativo.
+- Se escucha el pitido corto de inicio (si esta habilitado).
+- Aparece logo o texto de la placa base.
+- Se muestra el conteo de memoria o la pantalla UEFI.
+- El sistema continua hacia el cargador del sistema operativo.
 
 ### 3.3 Errores tipicos detectados por el POST
 
-- **RAM mal instalada o defectuosa**: pitidos largos repetidos y detencion del arranque.\n- **GPU no detectada**: pitido largo y varios cortos, pantalla en negro.\n- **Teclado no detectado**: mensaje de error y posibilidad de continuar con F1.\n- **Dispositivo de arranque no encontrado**: se completa el POST pero no se encuentra un disco arrancable.
+- **RAM mal instalada o defectuosa**: pitidos largos repetidos y detencion del arranque.
+- **GPU no detectada**: pitido largo y varios cortos, pantalla en negro.
+- **Teclado no detectado**: mensaje de error y posibilidad de continuar con F1.
+- **Dispositivo de arranque no encontrado**: se completa el POST pero no se encuentra un disco arrancable.
 
 ### 3.4 Buenas practicas al diagnosticar con POST
 
-- Verificar primero la RAM: extraer y volver a colocar los modulos.\n- Probar con otra salida de video o con otra tarjeta grafica.\n- Revisar conexiones de alimentacion principales (ATX y CPU).\n- Consultar el manual de la placa para interpretar el codigo de pitidos o LEDs de diagnostico.
+- Verificar primero la RAM: extraer y volver a colocar los modulos.
+- Probar con otra salida de video o con otra tarjeta grafica.
+- Revisar conexiones de alimentacion principales (ATX y CPU).
+- Consultar el manual de la placa para interpretar el codigo de pitidos o LEDs de diagnostico.
 
 <figure>
   <img src="../assets/profesionalreview_bios_setup.jpg" alt="Pantalla BIOS durante comprobaciones" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
@@ -124,10 +133,17 @@ En mantenimiento, siempre se debe consultar la tabla especifica del fabricante p
 
 Ademas de los pitidos, hoy existen varias ayudas para identificar el fallo de forma mas precisa:
 
-- **LEDs de diagnostico en la placa base**: algunas placas tienen indicadores para CPU, RAM, GPU o BOOT. Si queda fijo en uno, apunta al componente afectado.\n- **Display de codigos POST**: muchas placas incluyen un display de dos digitos (hexadecimal) que muestra el codigo del POST. Ese codigo se interpreta con la tabla del fabricante.\n- **Tarjetas POST PCIe**: se insertan en una ranura PCIe y muestran el codigo POST aunque no haya video. Son muy utiles cuando el equipo no da imagen.\n- **Altavoz interno (speaker)**: si la placa no trae altavoz, conectar uno permite escuchar los pitidos.\n
+- **LEDs de diagnostico en la placa base**: algunas placas tienen indicadores para CPU, RAM, GPU o BOOT. Si queda fijo en uno, apunta al componente afectado.
+- **Display de codigos POST**: muchas placas incluyen un display de dos digitos (hexadecimal) que muestra el codigo del POST. Ese codigo se interpreta con la tabla del fabricante.
+- **Tarjetas POST PCIe**: se insertan en una ranura PCIe y muestran el codigo POST aunque no haya video. Son muy utiles cuando el equipo no da imagen.
+- **Altavoz interno (speaker)**: si la placa no trae altavoz, conectar uno permite escuchar los pitidos.
+
 ### 4.2 Uso basico de una tarjeta POST PCIe
 
-1) Insertar la tarjeta POST en una ranura PCIe disponible.\n2) Encender el equipo y observar el codigo mostrado.\n3) Consultar la tabla de codigos del fabricante para interpretar el fallo.\n4) Corregir el componente o la configuracion indicada.
+1) Insertar la tarjeta POST en una ranura PCIe disponible.
+2) Encender el equipo y observar el codigo mostrado.
+3) Consultar la tabla de codigos del fabricante para interpretar el fallo.
+4) Corregir el componente o la configuracion indicada.
 
 Estas tarjetas son especialmente utiles cuando el fallo impide acceder a la pantalla o cuando los pitidos no son claros.
 
@@ -245,7 +261,8 @@ En estos casos, el tecnico debe comprobar el orden de arranque, el estado del di
 
 Una vez que el firmware encuentra un dispositivo con una particion arrancable, cambia el control de la ejecucion al **cargador de arranque (bootloader)**. Ese cargador es el responsable de preparar el entorno del sistema operativo y cargarlo en memoria.
 
-- **En BIOS + MBR**: la BIOS lee el sector 0 (MBR) y ejecuta el codigo que hay en ese sector. Ese codigo localiza el cargador principal en la particion activa y le pasa el control.\n- **En UEFI + GPT**: el firmware busca la **ESP (EFI System Partition)**, monta esa particion y ejecuta un archivo `.EFI` (bootloader). El archivo EFI se encuentra mediante entradas del gestor de arranque UEFI (Boot Manager).
+- **En BIOS + MBR**: la BIOS lee el sector 0 (MBR) y ejecuta el codigo que hay en ese sector. Ese codigo localiza el cargador principal en la particion activa y le pasa el control.
+- **En UEFI + GPT**: el firmware busca la **ESP (EFI System Partition)**, monta esa particion y ejecuta un archivo `.EFI` (bootloader). El archivo EFI se encuentra mediante entradas del gestor de arranque UEFI (Boot Manager).
 
 En ambos casos, el firmware **no carga directamente el sistema operativo**, sino que delega en el bootloader. Este decide que sistema iniciar, carga el kernel y transfiere el control definitivo al sistema operativo.
 
@@ -253,7 +270,11 @@ En ambos casos, el firmware **no carga directamente el sistema operativo**, sino
 
 El bootloader (por ejemplo, Windows Boot Manager o GRUB en Linux) se encarga de:
 
-- Leer la configuracion de arranque.\n- Permitir seleccionar entre varios sistemas (si existen).\n- Cargar el kernel y los modulos iniciales.\n- Pasar parametros de arranque al sistema operativo.\n
+- Leer la configuracion de arranque.
+- Permitir seleccionar entre varios sistemas (si existen).
+- Cargar el kernel y los modulos iniciales.
+- Pasar parametros de arranque al sistema operativo.
+
 Cuando el bootloader termina su trabajo, el sistema operativo toma el control total del hardware.
 
 ### 6.3 Ejemplos de bootloaders
@@ -344,6 +365,7 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
 - https://commons.wikimedia.org/wiki/File:Windows_Boot_Manager.png
 - https://commons.wikimedia.org/wiki/File:GRUB_2%27s_boot_menu.png
+
 
 
 
