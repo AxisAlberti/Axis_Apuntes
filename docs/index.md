@@ -18,6 +18,7 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 - [Slides de Montaje y Mantenimiento](section1/slides/index.md)
 - [Slides de Sistemas Informaticos](section2/slides/index.md)
+- [Anexo 6 - BIOS/UEFI (slide de prueba)](section1/A6/slides/A6-slide-prueba.html)
 
 ## Recursos
 
@@ -52,3 +53,7 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 ### Agregadores
 - [Techmeme](https://techmeme.com/){:target="_blank" rel="noopener"}
 - [RSS Feeds Tecnología España (FeedSpot)](https://rss.feedspot.com/spain_technology_rss_feeds/){:target="_blank" rel="noopener"}
+
+
+
+**Fecha de actualización:** 01/02/2026

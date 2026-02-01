@@ -17,6 +17,8 @@ Este anexo explica el proceso de encendido del PC, el POST, los pitidos de error
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [A6 - Slide de prueba](slides/A6-slide-prueba.html)
+
+
 
 **Fecha de actualización:** 01/02/2026

@@ -10,6 +10,7 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 - [Slides generales del modulo](slides/index.md)
 - [Anexo 3 - PRL (slide de prueba)](A3/slides/PRL-slide-prueba.html)
+- [Anexo 6 - BIOS/UEFI (slide de prueba)](A6/slides/A6-slide-prueba.html)
 
 ## 🌐 Recursos
 
@@ -79,3 +80,7 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 📅 *Última actualización: Enero 2026*  
 ✍️ *Profesor: José Manuel González Castillo*
+
+
+
+**Fecha de actualización:** 01/02/2026
