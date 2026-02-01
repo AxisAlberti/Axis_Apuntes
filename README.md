@@ -18,6 +18,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **U07**: Almacenamiento
 - **U08**: Microprocesadores
 - **U09**: Tarjetas graficas
+- **U10**: Mantenimiento de equipos informaticos
 - **A1**: Arquitecturas de procesadores (Anexo)
 - **A2**: Procesos e hilos (Anexo)
 - **A3**: Prevencion de riesgos laborales (Anexo)
