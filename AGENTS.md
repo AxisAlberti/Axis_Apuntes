@@ -6,6 +6,9 @@ Este repositorio contiene material educativo para módulos de formación profesi
 
 - Los apuntes deben ser claros, didácticos y orientados al aprendizaje del alumnado.
 - Cada vez que se edite un fichero `.md`, se añadirá al final una línea con la fecha de actualización, con el formato: `**Fecha de actualización:** 31/01/2026`.
+- Las cuestiones generadas se guardarán en un fichero en la raíz del repositorio. El nombre del fichero debe incluir el nombre del módulo y el nivel de dificultad.
+- Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
+- Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
 
 ## Formato recomendado para apuntes
 
@@ -215,6 +218,32 @@ Para actualizar automáticamente el fichero de categorías tras añadir o renomb
 ```bash
 scripts/update_categories.py
 ```
+### 7.3 Obligatorio cuestiones (GIFT)
+
+- Siempre has de generar minimo 30 cuestiones.
+
+- Cualquier caracter usado en el formato GIFT que pueda generar conflicto, como los símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
+
+- En la retroalimentacion de las cuestiones si se usan  símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
+
+- Estas dos reglas de escape deben comprobarse siempre al generar un fichero de cuestiones. Es obligatorio validar que se cumplen.
+
+- El fichero con las cuestiones se almacena en el raiz del repositorio.
+
+### 7.4 Notación de bases en preguntas
+
+- En las cuestiones de numeración, usar subíndice para indicar la base (por ejemplo: 1010₂, 3A₁₆, 725₈, 37₁₀).
+
+### 7.5 Checklist de validación obligatoria (GIFT)
+
+- 30 cuestiones exactamente.
+- Primera línea con `$CATEGORY` correcto.
+- Una única respuesta correcta y varias incorrectas con penalización.
+- Fichero en la raíz del repositorio y nombre con módulo + dificultad.
+- Escape de caracteres especiales en enunciados.
+- Escape de caracteres especiales en retroalimentación.
+- Subíndice para bases en numeración.
+
 
 ## 8. Preguntas tipo ensayo con editor HTML (formato GIFT Moodle)
 
@@ -226,3 +255,8 @@ $CATEGORY: RUTA/CATEGORIA
 // question: ID_INTERNO  name: TÍTULO_VISIBLE_EN_MOODLE
 ::TITULO_INTERNO::[html]ENUNCIADO_EN_HTML{}
 ```
+
+
+
+
+**Fecha de actualización:** 01/02/2026
