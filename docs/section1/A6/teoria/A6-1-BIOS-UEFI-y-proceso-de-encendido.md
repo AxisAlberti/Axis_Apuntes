@@ -162,7 +162,7 @@ En la practica, UEFI es mas flexible y seguro, pero requiere configuracion adecu
 El MBR es el esquema clasico de particionado. Guarda la tabla de particiones y el cargador de arranque en el primer sector del disco. Sus limites principales son el numero de particiones primarias y el tamano maximo de disco (aprox. 2 TB). En mantenimiento, MBR suele aparecer en equipos antiguos o en instalaciones hechas en modo BIOS.
 
 <figure>
-  <img src="../assets/mbr_partition_table_scheme.svg" alt="Esquema de particiones MBR" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
+  <img src="../assets/mbr_partition_table_scheme.png" alt="Esquema de particiones MBR" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado MBR. Fuente: Wikimedia Commons (GNU GRUB on MBR).</figcaption>
 </figure>
 
@@ -171,7 +171,7 @@ El MBR es el esquema clasico de particionado. Guarda la tabla de particiones y e
 GPT es el esquema moderno asociado a UEFI. Permite muchos mas registros de particion, soporta discos grandes y guarda copias de seguridad de la tabla. En entornos actuales es el estandar recomendado por seguridad y escalabilidad.
 
 <figure>
-  <img src="../assets/gpt_partition_table_scheme.svg" alt="Esquema de particiones GPT" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
+  <img src="../assets/gpt_partition_table_scheme.png" alt="Esquema de particiones GPT" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Esquema de particionado GPT. Fuente: Wikimedia Commons (GUID Partition Table).</figcaption>
 </figure>
 
@@ -238,6 +238,7 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://www.profesionalreview.com/guias/bios/
 - https://commons.wikimedia.org/wiki/File:GNU_GRUB_on_MBR_partitioned_hard_disk_drives.svg
 - https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg
+
 
 
 
