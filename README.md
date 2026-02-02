@@ -25,6 +25,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **A4**: Guia para elegir procesador (Anexo)
 - **A5**: Nomenclatura de procesadores (Anexo)
 - **A6**: BIOS, UEFI y proceso de encendido (Anexo)
+- **A7**: Intel vs AMD (Anexo)
 
 ### 💻 Sistemas Informaticos (section2)
 Contenido base sobre redes, terminal y fundamentos de sistemas.
@@ -184,4 +185,4 @@ Para preguntas o sugerencias:
 - Crear un Issue en GitHub
 - Revisar `AGENTS.md` para guias detalladas de colaboracion
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 02/02/2026

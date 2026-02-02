@@ -256,7 +256,23 @@ $CATEGORY: RUTA/CATEGORIA
 ::TITULO_INTERNO::[html]ENUNCIADO_EN_HTML{}
 ```
 
+### 8.1 Categoría en cuestiones de ensayo
+
+- Esta regla se aplicará **a partir de ahora** a todas las nuevas cuestiones de **ensayo** (no aplica a tipo test).
+- La cabecera `$CATEGORY` debe ser siempre: `SMR/Section1/Desarrollo/Titulo_del_tema`.
+- El `Titulo_del_tema` debe corresponder al título del tema sobre el que se hacen las cuestiones.
+- Normalizar el título del tema:
+  - Sin tildes ni caracteres especiales.
+  - Espacios reemplazados por `_`.
+  - Solo letras, números, `_` y `-`.
+
+Ejemplo para U10 (Tarjetas Gráficas):
+
+```gift
+$CATEGORY: SMR/Section1/Desarrollo/Tarjetas_Graficas
+```
 
 
 
-**Fecha de actualización:** 01/02/2026
+
+**Fecha de actualización:** 02/02/2026

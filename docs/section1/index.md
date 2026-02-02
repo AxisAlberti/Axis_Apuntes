@@ -11,6 +11,11 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 - [Slides generales del modulo](slides/index.md)
 - [Anexo 3 - PRL (slide de prueba)](A3/slides/PRL-slide-prueba.html)
 
+## Anexos
+
+- [Anexo 6 - BIOS, UEFI y proceso de encendido](A6/index.md)
+- [Anexo 7 - Intel vs AMD](A7/index.md)
+
 ## 🌐 Recursos
 
 ### 🖥️ Sistemas operativos
@@ -83,4 +88,4 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 02/02/2026

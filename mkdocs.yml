@@ -75,6 +75,9 @@ nav:
   - Anexo 6 - BIOS, UEFI y proceso de encendido:
     - section1/A6/index.md
     - A6.1 BIOS, UEFI y proceso de encendido: section1/A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido.md
+  - Anexo 7 - Intel vs AMD:
+    - section1/A7/index.md
+    - A7.1 Intel vs AMD: section1/A7/teoria/A7-1-Intel-vs-AMD.md
     - Presentacion: section1/slides/no-disponible.md
 - Sistemas Informaticos:
   - section2/index.md

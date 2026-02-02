@@ -19,6 +19,11 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 - [Slides de Montaje y Mantenimiento](section1/slides/index.md)
 - [Slides de Sistemas Informaticos](section2/slides/index.md)
 
+## Anexos
+
+- [Anexo 6 - BIOS, UEFI y proceso de encendido](section1/A6/index.md)
+- [Anexo 7 - Intel vs AMD](section1/A7/index.md)
+
 ## Recursos
 
 ### Sistemas operativos
@@ -56,4 +61,4 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 02/02/2026
