@@ -36,6 +36,7 @@ Actúa como el **núcleo de interconexión** entre todos los dispositivos del si
 La placa base es un **circuito impreso multicapa (PCB)** sobre el que se integran **zocalos, ranuras, puertos y chips** que permiten la comunicación entre los diferentes elementos del sistema informático.
 
 Su diseño y arquitectura determinan:
+
 - Qué **procesadores** y **memorias** son compatibles.  
 - Qué tipo y número de **conexiones de expansión** (PCIe, M.2, SATA) soporta.  
 - Qué **funciones integradas** (red, audio, gráficos, USB) incorpora.  
@@ -812,6 +813,7 @@ Una placa base limpia y bien refrigerada mantiene su rendimiento óptimo durante
 - Reemplaza cables dañados o doblados (especialmente SATA o EPS).
 
 ### Recomendaciones generales:
+
 - Mantén una **temperatura ambiente entre 20 y 25 °C** en la zona de trabajo.  
 - Evita acumular polvo con filtros antipolvo y flujo de aire positivo.  
 - Documenta las **intervenciones realizadas** (fecha, componentes y observaciones).
@@ -821,6 +823,7 @@ Una placa base limpia y bien refrigerada mantiene su rendimiento óptimo durante
 ### Conclusión
 
 Una buena práctica de instalación y mantenimiento garantiza:
+
 - **Menor tasa de fallos.**  
 - **Mayor vida útil de los equipos.**  
 - **Reducción de incidencias en entornos profesionales o educativos.**
