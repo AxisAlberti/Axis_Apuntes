@@ -37,20 +37,20 @@ En un taller real, la comparativa **Intel vs AMD** no se reduce a "que es mas ra
 
 ### 2.1 Arrow Lake (Intel)
 
-Arrow Lake es el **nombre en clave** de una familia de procesadores de Intel. En el entorno de taller, se asocia a plataformas recientes, con foco en rendimiento y eficiencia. Segun la revision de GEEKOM, Arrow Lake aparece ligado a la serie **Core Ultra 200S** y a una plataforma con **DDR5** y **PCIe 5.0**, lo que condiciona la compatibilidad de placa y memoria. citeturn0view2
+Arrow Lake es el **nombre en clave** de una familia de procesadores de Intel. En el entorno de taller, se asocia a plataformas recientes, con foco en rendimiento y eficiencia. Segun la revision de GEEKOM, Arrow Lake aparece ligado a la serie **Core Ultra 200S** y a una plataforma con **DDR5** y **PCIe 5.0**, lo que condiciona la compatibilidad de placa y memoria.
 
-![Procesadores Intel (referencia Arrow Lake en Wikipedia)](../assets/arrow_lake_wiki.png)
-*Fuente de la imagen: Wikipedia (Arrow Lake).* citeturn0view0
+![Arrow Lake (die shot, alta resolucion)](../assets/arrow_lake_die.png)
+*Fuente de la imagen: Wikimedia Commons (Arrow Lake die shot).*
 
 ![Imagen de Arrow Lake en una revision (GEEKOM)](../assets/geekom_arrow_lake.webp)
-*Fuente de la imagen: GEEKOM (revision Arrow Lake).* citeturn0view2
+*Fuente de la imagen: GEEKOM (revision Arrow Lake).*
 
 ### 2.2 Raptor Lake (Intel)
 
-Raptor Lake es la **13.ª generacion de Intel Core** y sucesora de Alder Lake. En la practica, se encuentra en muchos equipos de escritorio recientes y convive con DDR5 o DDR4 segun la placa base utilizada, lo que obliga a validar bien la compatibilidad antes de vender o montar un kit de memoria. citeturn2view0
+Raptor Lake es la **13.ª generacion de Intel Core** y sucesora de Alder Lake. En la practica, se encuentra en muchos equipos de escritorio recientes y convive con DDR5 o DDR4 segun la placa base utilizada, lo que obliga a validar bien la compatibilidad antes de vender o montar un kit de memoria.
 
-![Imagen de cabecera en articulo sobre Raptor Lake (IONOS)](../assets/ionos_raptor_lake.webp)
-*Fuente de la imagen: IONOS (articulo sobre Raptor Lake).* citeturn2view0
+![Procesador Intel de escritorio (ejemplo de CPU reciente)](../assets/intel_i9_14900kf_cpu.jpg)
+*Fuente de la imagen: Wikimedia Commons (Intel i9-14900KF).*
 
 ---
 
@@ -58,24 +58,24 @@ Raptor Lake es la **13.ª generacion de Intel Core** y sucesora de Alder Lake. E
 
 ### 3.1 Zen (microarquitectura)
 
-Zen es una **microarquitectura de CPU** de AMD que da soporte a la familia Ryzen. En un taller, es relevante porque marca generaciones, compatibilidades y el salto en rendimiento frente a arquitecturas anteriores. citeturn0view1
+Zen es una **microarquitectura de CPU** de AMD que da soporte a la familia Ryzen. En un taller, es relevante porque marca generaciones, compatibilidades y el salto en rendimiento frente a arquitecturas anteriores.
 
 ![Chip AMD Ryzen asociado a la arquitectura Zen](../assets/zen_ryzen_chip.jpg)
-*Fuente de la imagen: Wikipedia (Zen).* citeturn0view1
+*Fuente de la imagen: Wikipedia (Zen).*
 
 ### 3.2 Gamas Ryzen segun uso
 
-En el mercado, AMD segmenta Ryzen por gamas **Ryzen 3, Ryzen 5, Ryzen 7 y Ryzen 9**, con diferencias de rendimiento y orientacion de uso. Esta segmentacion es clave para recomendar un procesador a un cliente segun presupuesto y necesidades. citeturn2view2
+En el mercado, AMD segmenta Ryzen por gamas **Ryzen 3, Ryzen 5, Ryzen 7 y Ryzen 9**, con diferencias de rendimiento y orientacion de uso. Esta segmentacion es clave para recomendar un procesador a un cliente segun presupuesto y necesidades.
 
 ![Imagen de catalogo Ryzen (Hiraoka)](../assets/hiraoka_ryzen.jpg)
-*Fuente de la imagen: Hiraoka (articulo sobre Ryzen).* citeturn3view0
+*Fuente de la imagen: Hiraoka (articulo sobre Ryzen).*
 
 ### 3.3 Zen 5 y mejoras anunciadas
 
-En medios especializados se menciona que **Zen 5** apunta a mejoras internas como **mas operaciones por ciclo** y cambios en el decode, lo que anticipa avances en rendimiento por nucleo. Esto ayuda a explicar por que una generacion nueva puede rendir mas incluso sin subir demasiado la frecuencia. citeturn0view3
+En medios especializados se menciona que **Zen 5** apunta a mejoras internas como **mas operaciones por ciclo** y cambios en el decode, lo que anticipa avances en rendimiento por nucleo. Esto ayuda a explicar por que una generacion nueva puede rendir mas incluso sin subir demasiado la frecuencia.
 
-![Diapositiva sobre Zen 5 (El Chapuzas Informatico)](../assets/elchapuzas_zen5.jpg)
-*Fuente de la imagen: El Chapuzas Informatico (Zen 5).* citeturn0view3
+![Diagrama de la microarquitectura Zen (esquema)](../assets/zen_microarchitecture.png)
+*Fuente de la imagen: Wikimedia Commons (Zen microarchitecture).*
 
 ---
 
@@ -147,21 +147,21 @@ En medios especializados se menciona que **Zen 5** apunta a mejoras internas com
 
 ### Intel (escritorio)
 
-- **Intel Core Ultra 200S (desktop)**: familia presentada el **10/10/2024** como su gama de escritorio mas reciente con NPU integrada para PCs AI. citeturn0search0
+- **Intel Core Ultra 200S (desktop)**: familia presentada el **10/10/2024** como su gama de escritorio mas reciente con NPU integrada para PCs AI.
 
 ### Intel (portatil)
 
-- **Intel Core Ultra 200V (mobile)**: familia anunciada el **03/09/2024** para portatiles, con foco en eficiencia y AI PC. citeturn0search1
-- **Intel Core Ultra 200HX / 200H (mobile)**: familia presentada en **CES 2025** para creadores y gaming en portatil. citeturn1search2
+- **Intel Core Ultra 200V (mobile)**: familia anunciada el **03/09/2024** para portatiles, con foco en eficiencia y AI PC.
+- **Intel Core Ultra 200HX / 200H (mobile)**: familia presentada en **CES 2025** para creadores y gaming en portatil.
 
 ### AMD (escritorio)
 
-- **AMD Ryzen 9000 Series (Zen 5)**: familia anunciada el **02/06/2024** para escritorio, con modelos 9950X/9900X/9700X/9600X. citeturn1search1
-- **AMD Ryzen 7 9850X3D (Zen 5, 3D V-Cache)**: presentado el **05/01/2026** como tope gaming en la linea Ryzen 9000X3D. citeturn1search0
+- **AMD Ryzen 9000 Series (Zen 5)**: familia anunciada el **02/06/2024** para escritorio, con modelos 9950X/9900X/9700X/9600X.
+- **AMD Ryzen 7 9850X3D (Zen 5, 3D V-Cache)**: presentado el **05/01/2026** como tope gaming en la linea Ryzen 9000X3D.
 
 ### AMD (portatil)
 
-- **AMD Ryzen AI 300 Series (Zen 5)**: familia anunciada el **02/06/2024** para portatiles con NPU dedicada. citeturn1search1
+- **AMD Ryzen AI 300 Series (Zen 5)**: familia anunciada el **02/06/2024** para portatiles con NPU dedicada.
 
 ---
 
@@ -183,6 +183,9 @@ En medios especializados se menciona que **Zen 5** apunta a mejoras internas com
 - Intel CES 2025 (Core Ultra 200HX/H) - Intel Newsroom: https://newsroom.intel.com/client-computing/2025-ces-client-computing-news
 - Intel Raptor Lake (IONOS): https://www.ionos.mx/digitalguide/servidores/know-how/intel-raptor-lake/
 - Zen (microarquitectura) - Wikipedia: https://es.wikipedia.org/wiki/Zen_(microarquitectura)
+- Arrow Lake die shot (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Arrow_Lake_die_shot.png
+- Intel i9-14900KF (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Intel_i9-14900KF_CPU.jpg
+- Zen microarchitecture (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Zen_microarchitecture.svg
 - Procesadores AMD Ryzen (Hiraoka): https://hiraoka.com.pe/blog/post/procesadores-amd-ryzen-caracteristicas-rendimiento-gamas
 - AMD Zen 5 (El Chapuzas Informatico): https://elchapuzasinformatico.com/2024/03/amd-zen-5-8-operaciones-por-ciclo-doble-decode/
 - AMD Zen 5 Ryzen 9000 y Ryzen AI 300 - AMD Newsroom: https://www.amd.com/en/newsroom/press-releases/2024-6-2-amd-unveils-next-gen-zen-5-ryzen-processors-to-p.html
