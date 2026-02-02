@@ -40,8 +40,8 @@ En un taller real, la comparativa **Intel vs AMD** no se reduce a "que es mas ra
 Arrow Lake es el **nombre en clave** de una familia de procesadores de Intel. En el entorno de taller, se asocia a plataformas recientes, con foco en rendimiento y eficiencia. Segun la revision de GEEKOM, Arrow Lake aparece ligado a la serie **Core Ultra 200S** y a una plataforma con **DDR5** y **PCIe 5.0**, lo que condiciona la compatibilidad de placa y memoria.
 
 <figure style="text-align: center;">
-  <img src="../assets/arrow_lake_die.png" alt="Arrow Lake (die shot, alta resolucion)" />
-  <figcaption>Fuente de la imagen: Wikimedia Commons (Arrow Lake die shot).</figcaption>
+  <img src="../assets/arrow_lake_layout.png" alt="Arrow Lake (layout de nucleos, alta resolucion)" />
+  <figcaption>Fuente de la imagen: Wikimedia Commons (Intel ARL Core Layout).</figcaption>
 </figure>
 
 <figure style="text-align: center;">
@@ -195,7 +195,7 @@ En medios especializados se menciona que **Zen 5** apunta a mejoras internas com
 - Intel CES 2025 (Core Ultra 200HX/H) - Intel Newsroom: https://newsroom.intel.com/client-computing/2025-ces-client-computing-news
 - Intel Raptor Lake (IONOS): https://www.ionos.mx/digitalguide/servidores/know-how/intel-raptor-lake/
 - Zen (microarquitectura) - Wikipedia: https://es.wikipedia.org/wiki/Zen_(microarquitectura)
-- Arrow Lake die shot (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Arrow_Lake_die_shot.png
+- Intel ARL Core Layout (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Intel-ARL-Core-Layout.png
 - Intel i9-14900KF (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Intel_i9-14900KF_CPU.jpg
 - Zen microarchitecture (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Zen_microarchitecture.svg
 - Procesadores AMD Ryzen (Hiraoka): https://hiraoka.com.pe/blog/post/procesadores-amd-ryzen-caracteristicas-rendimiento-gamas
