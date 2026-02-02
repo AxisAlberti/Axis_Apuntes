@@ -39,18 +39,24 @@ En un taller real, la comparativa **Intel vs AMD** no se reduce a "que es mas ra
 
 Arrow Lake es el **nombre en clave** de una familia de procesadores de Intel. En el entorno de taller, se asocia a plataformas recientes, con foco en rendimiento y eficiencia. Segun la revision de GEEKOM, Arrow Lake aparece ligado a la serie **Core Ultra 200S** y a una plataforma con **DDR5** y **PCIe 5.0**, lo que condiciona la compatibilidad de placa y memoria.
 
-![Arrow Lake (die shot, alta resolucion)](../assets/arrow_lake_die.png)
-*Fuente de la imagen: Wikimedia Commons (Arrow Lake die shot).*
+<figure style="text-align: center;">
+  <img src="../assets/arrow_lake_die.png" alt="Arrow Lake (die shot, alta resolucion)" />
+  <figcaption>Fuente de la imagen: Wikimedia Commons (Arrow Lake die shot).</figcaption>
+</figure>
 
-![Imagen de Arrow Lake en una revision (GEEKOM)](../assets/geekom_arrow_lake.webp)
-*Fuente de la imagen: GEEKOM (revision Arrow Lake).*
+<figure style="text-align: center;">
+  <img src="../assets/geekom_arrow_lake.webp" alt="Imagen de Arrow Lake en una revision (GEEKOM)" />
+  <figcaption>Fuente de la imagen: GEEKOM (revision Arrow Lake).</figcaption>
+</figure>
 
 ### 2.2 Raptor Lake (Intel)
 
 Raptor Lake es la **13.ª generacion de Intel Core** y sucesora de Alder Lake. En la practica, se encuentra en muchos equipos de escritorio recientes y convive con DDR5 o DDR4 segun la placa base utilizada, lo que obliga a validar bien la compatibilidad antes de vender o montar un kit de memoria.
 
-![Procesador Intel de escritorio (ejemplo de CPU reciente)](../assets/intel_i9_14900kf_cpu.jpg)
-*Fuente de la imagen: Wikimedia Commons (Intel i9-14900KF).*
+<figure style="text-align: center;">
+  <img src="../assets/intel_i9_14900kf_cpu.jpg" alt="Procesador Intel de escritorio (ejemplo de CPU reciente)" />
+  <figcaption>Fuente de la imagen: Wikimedia Commons (Intel i9-14900KF).</figcaption>
+</figure>
 
 ---
 
@@ -60,22 +66,28 @@ Raptor Lake es la **13.ª generacion de Intel Core** y sucesora de Alder Lake. E
 
 Zen es una **microarquitectura de CPU** de AMD que da soporte a la familia Ryzen. En un taller, es relevante porque marca generaciones, compatibilidades y el salto en rendimiento frente a arquitecturas anteriores.
 
-![Chip AMD Ryzen asociado a la arquitectura Zen](../assets/zen_ryzen_chip.jpg)
-*Fuente de la imagen: Wikipedia (Zen).*
+<figure style="text-align: center;">
+  <img src="../assets/zen_ryzen_chip.jpg" alt="Chip AMD Ryzen asociado a la arquitectura Zen" />
+  <figcaption>Fuente de la imagen: Wikipedia (Zen).</figcaption>
+</figure>
 
 ### 3.2 Gamas Ryzen segun uso
 
 En el mercado, AMD segmenta Ryzen por gamas **Ryzen 3, Ryzen 5, Ryzen 7 y Ryzen 9**, con diferencias de rendimiento y orientacion de uso. Esta segmentacion es clave para recomendar un procesador a un cliente segun presupuesto y necesidades.
 
-![Imagen de catalogo Ryzen (Hiraoka)](../assets/hiraoka_ryzen.jpg)
-*Fuente de la imagen: Hiraoka (articulo sobre Ryzen).*
+<figure style="text-align: center;">
+  <img src="../assets/hiraoka_ryzen.jpg" alt="Imagen de catalogo Ryzen (Hiraoka)" />
+  <figcaption>Fuente de la imagen: Hiraoka (articulo sobre Ryzen).</figcaption>
+</figure>
 
 ### 3.3 Zen 5 y mejoras anunciadas
 
 En medios especializados se menciona que **Zen 5** apunta a mejoras internas como **mas operaciones por ciclo** y cambios en el decode, lo que anticipa avances en rendimiento por nucleo. Esto ayuda a explicar por que una generacion nueva puede rendir mas incluso sin subir demasiado la frecuencia.
 
-![Diagrama de la microarquitectura Zen (esquema)](../assets/zen_microarchitecture.png)
-*Fuente de la imagen: Wikimedia Commons (Zen microarchitecture).*
+<figure style="text-align: center;">
+  <img src="../assets/zen_microarchitecture.png" alt="Diagrama de la microarquitectura Zen (esquema)" />
+  <figcaption>Fuente de la imagen: Wikimedia Commons (Zen microarchitecture).</figcaption>
+</figure>
 
 ---
 
