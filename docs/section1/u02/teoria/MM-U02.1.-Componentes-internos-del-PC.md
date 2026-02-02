@@ -277,6 +277,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 
 - **Definición**: Conector para discos HDD, SSD y unidades ópticas.
 - **Características**:
+
   - Velocidad: **6 Gbps** máx.
   - Conexión punto a punto, con cables diferenciados para datos y alimentación (SATA power).
   - Persisten en placas modernas por compatibilidad, aunque pierden peso frente a M.2/NVMe.
@@ -294,6 +295,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 
 - **Definición**: Ranura compacta multifunción (SSD NVMe/SATA, Wi-Fi, Bluetooth, expansión).
 - **Características**:
+
   - Protocolos: **NVMe PCIe x4/x5/x8** o **SATA**.
   - Velocidad: Hasta **16 GB/s** (PCIe 5.0); PCIe 6.0 en sector servidor.
   - Longitudes: 2242, 2260, 2280, 22110 (nomenclatura: ancho-largo en mm).
@@ -313,6 +315,7 @@ Los conectores internos conectan la placa base con todos los componentes crític
 
 - **Definición**: Bus de expansión para GPU, red, sonido, capturadoras, almacenamiento avanzado.
 - **Características**:
+
   - Ranuras: x1, x4, x8, x16, seleccionable según componente.
   - Velocidades: PCIe 4.0/5.0 mainstream; PCIe 6.0 (128 GB/s, x16) ya en workstation y servidores.
   - Modularidad y máxima velocidad para tarjetas gráficas y periféricos de alto caudal.
@@ -791,10 +794,11 @@ Una placa base limpia y bien refrigerada mantiene su rendimiento óptimo durante
 #### 2. Limpieza física
 
 - **Frecuencia:** cada 6 a 12 meses, según el entorno (más frecuente en zonas con polvo o humedad).  
-- **Materiales recomendados:**
-  - Aire comprimido o soplador antiestático.
-  - Brochas suaves antiestáticas.
-  - Alcohol isopropílico (≥90%) para contactos o restos de pasta térmica.  
+**Materiales recomendados:**
+
+- Aire comprimido o soplador antiestático.
+- Brochas suaves antiestáticas.
+- Alcohol isopropílico (≥90%) para contactos o restos de pasta térmica.  
 - **Procedimiento:**
   - Desconecta la corriente y extrae los componentes.
   - Sopla el polvo de ventiladores, ranuras y disipadores.
