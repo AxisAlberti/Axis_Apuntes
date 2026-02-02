@@ -15,8 +15,13 @@ tags:
 
 ## TEMA 1. INTRODUCCIÓN
 
+## Objetivos de aprendizaje
 
-
+- Identificar los componentes basicos de un sistema informatico.
+- Distinguir entre hardware, software, datos y usuarios.
+- Comprender el ciclo de entrada, procesamiento, almacenamiento y salida.
+- Reconocer el papel de la CPU, la memoria y los buses en el funcionamiento del PC.
+- Aplicar criterios basicos para describir un equipo en un contexto real.
 
 ---
 
@@ -87,6 +92,11 @@ La **arquitectura de Von Neumann** es el modelo sobre el que se basan la mayorí
 
 La CPU es el “cerebro” del PC, encargada de interpretar y ejecutar instrucciones. Está compuesta por varios subsistemas clave:
 
+<figure style="text-align: center;">
+  <img src="../assets/cpu_block_diagram.png" alt="Diagrama basico de bloques de una CPU" />
+  <figcaption>Fuente de la imagen: Wikimedia Commons (CPU block diagram).</figcaption>
+</figure>
+
 ### 4.1.1 Unidad de control
 
 - Lee y decodifica las instrucciones almacenadas en memoria.
@@ -142,25 +152,37 @@ Los buses integran la arquitectura, asegurando la comunicación efectiva y el fu
 
 ---
 
-# 5. Tipos de buses en el PC
+# 5. Software del sistema y de aplicación
+
+El **software** se clasifica en grandes grupos segun su funcion:
+
+- **Software de sistema:** incluye el sistema operativo, los controladores de dispositivo y las utilidades basicas. Es imprescindible para que el hardware funcione y para gestionar recursos.
+- **Software de aplicación:** programas usados por el usuario para tareas concretas (ofimatica, navegadores, edicion, CAD, juegos, etc.).
+- **Firmware:** software integrado en hardware (BIOS/UEFI, controladores de dispositivos) que inicia y controla componentes esenciales.
+
+Conocer estas capas ayuda a diagnosticar problemas: un fallo puede ser **hardware**, **software**, **configuracion** o **compatibilidad**.
+
+---
+
+# 6. Tipos de buses en el PC
 
 Los **buses** son sistemas de líneas de comunicación que conectan los diferentes componentes internos del PC, permitiendo la transferencia de información.
 
-## 5.1 Bus de datos
+## 6.1 Bus de datos
 
 El **bus de datos** se encarga de transportar la información (datos binarios) entre la CPU, la memoria y los periféricos.  
 Su ancho (normalmente en bits) determina cuántos datos pueden transferirse simultáneamente. Por ejemplo, un bus de 8 bits permite transferir 8 bits en paralelo; uno de 64 bits, 64 bits a la vez.
 
-## 5.2 Bus de direcciones
+## 6.2 Bus de direcciones
 
 El **bus de direcciones** indica la posición de memoria o periférico a la que la CPU quiere acceder.  
 Esto permite seleccionar un lugar concreto para leer o escribir datos. La cantidad de líneas de direcciones determina el número máximo de ubicaciones accesibles. Por ejemplo, un bus de direcciones de 32 líneas puede direccionar \(2^{32}\) posiciones de memoria.
 
-## 5.3 Bus de control
+## 6.3 Bus de control
 
 El **bus de control** transporta señales que coordinan y regulan el funcionamiento interno del PC, gestionando órdenes de lectura/escritura, interrupciones, selección de dispositivos, señalización del reloj y otras tareas de sincronización.
 
-## 5.4 Interacciones
+## 6.4 Interacciones
 
 Estos tres tipos de buses trabajan de forma coordinada:
 
@@ -170,3 +192,29 @@ Estos tres tipos de buses trabajan de forma coordinada:
 Además, los buses permiten la expansión y actualización de sistemas mediante la incorporación de periféricos, tarjetas de expansión, y otros componentes.
 
 ---
+
+# 7. Ejemplos practicos o casos reales
+
+1. **Montaje de un PC basico de ofimatica:** elegir CPU con grafica integrada, 16 GB de RAM y SSD para un arranque rapido y trabajo fluido.
+2. **Equipo para edicion multimedia:** priorizar CPU con mas nucleos, 32 GB de RAM y almacenamiento rapido para proyectos grandes.
+3. **Diagnostico basico en taller:** si el PC enciende pero no da imagen, revisar RAM, conexiones de video y compatibilidad de GPU.
+
+---
+
+# 8. Resumen final (ideas clave)
+
+- Un sistema informatico combina **hardware, software, usuarios y datos**.
+- El PC sigue el ciclo **entrada-procesamiento-almacenamiento-salida**.
+- La **CPU** coordina la ejecucion, apoyada por memoria y buses.
+- El software se divide en **sistema, aplicacion y firmware**.
+- Conocer estos conceptos ayuda a entender y diagnosticar equipos reales.
+
+---
+
+# 9. Referencias y enlaces
+
+- CPU block diagram (imagen) - Wikimedia Commons: https://commons.wikimedia.org/wiki/File:CPU_block_diagram.svg
+
+
+
+**Fecha de actualización:** 02/02/2026
