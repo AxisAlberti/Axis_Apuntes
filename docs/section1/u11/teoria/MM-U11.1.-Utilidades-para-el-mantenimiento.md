@@ -52,6 +52,28 @@ Herramientas actuales y recomendadas:
 - Ejecuta la version portable si no necesitas instalar.
 - Guarda un informe del estado para el cliente.
 
+#### 2.1 MemTest86 (errores de memoria)
+
+MemTest86 permite detectar errores de RAM. Si aparecen errores, **la memoria no es fiable** y el equipo puede sufrir reinicios, cuelgues o corrupcion de datos.
+
+**Salida correcta (ejemplo sin errores):**
+
+```text
+Pass complete, no errors, press Esc to exit
+```
+
+**Salida con problemas (ejemplo con errores):**
+
+```text
+Errors: 12
+Test: 7  Address: 0003f2a8c  Expected: ffffffff  Actual: fff7ffff
+```
+
+<figure markdown>
+  ![](../assets/memtest86_errors.png)
+  <figcaption>Ejemplo de MemTest con errores: los campos "Errors" y la lista de direcciones con valores "Expected/Actual" indican fallos de memoria.</figcaption>
+</figure>
+
 ### 3. Almacenamiento, backup y arranque
 
 Utilidades actuales para taller:
@@ -74,6 +96,36 @@ sudo smartctl -a /dev/sda
 sudo dd if=imagen.iso of=/dev/sdX bs=4M status=progress
 ```
 
+**Salida correcta (ejemplo SMART sin problemas):**
+
+```text
+SMART overall-health self-assessment test result: PASSED
+Reallocated_Sector_Ct: 0
+Current_Pending_Sector: 0
+Offline_Uncorrectable: 0
+```
+
+**Salida con problemas (ejemplo SMART):**
+
+```text
+SMART overall-health self-assessment test result: FAILED
+Reallocated_Sector_Ct: 124
+Current_Pending_Sector: 8
+Offline_Uncorrectable: 3
+```
+
+**Salida correcta (ejemplo dd):**
+
+```text
+104857600 bytes (105 MB, 100 MiB) copied, 1.2 s, 87.4 MB/s
+```
+
+**Salida con problemas (ejemplo dd):**
+
+```text
+dd: failed to open '/dev/sdX': Permission denied
+```
+
 <figure markdown>
   ![](../assets/7ziplogo.svg)
   <figcaption>Logo de 7-Zip (software libre de compresion).</figcaption>
@@ -90,12 +142,37 @@ Clonezilla permite crear **imagenes completas** o **clonar discos** sector a sec
 3. Elegir disco origen y destino (verificar con cuidado).
 4. Ejecutar clonacion y comprobar el arranque en el nuevo disco.
 
+**Salida correcta (ejemplo de resumen de clonacion):**
+
+```text
+Clonezilla: Clone finished successfully.
+Copied 512000 MB from /dev/sda to /dev/sdb.
+```
+
+**Salida con problemas (ejemplo):**
+
+```text
+Clonezilla: Failed to read sector 2048 on /dev/sda.
+```
+
 **Ejemplo de uso (imagen):**
 
 1. Arrancar con Clonezilla.
 2. Seleccionar **device-image** para crear imagen.
 3. Guardar la imagen en un disco USB externo o red.
 4. Restaurar la imagen en caso de fallo.
+
+**Salida correcta (ejemplo de imagen creada):**
+
+```text
+Image saved to /home/partimag/PC_Cliente_2026-02-04
+```
+
+**Salida con problemas (ejemplo):**
+
+```text
+No space left on device while writing image.
+```
 
 <figure markdown>
   ![](../assets/clonezilla_logo.png)
@@ -130,6 +207,32 @@ Clonezilla permite crear **imagenes completas** o **clonar discos** sector a sec
 2. Revisar SMART y rendimiento con CrystalDiskMark.
 3. Ajustar particiones con GParted.
 4. Clonar o restaurar con Rescuezilla si es necesario.
+
+**Salida correcta (ejemplo CrystalDiskMark):**
+
+```text
+SEQ1M Q8T1 Read: 3500 MB/s  Write: 3000 MB/s
+RND4K Q1T1 Read: 55 MB/s    Write: 180 MB/s
+```
+
+**Salida con problemas (ejemplo CrystalDiskMark):**
+
+```text
+SEQ1M Q8T1 Read: 120 MB/s  Write: 90 MB/s
+Warning: Performance below expected range for NVMe.
+```
+
+**Salida correcta (ejemplo GParted):**
+
+```text
+Applied pending operations successfully.
+```
+
+**Salida con problemas (ejemplo GParted):**
+
+```text
+Error: Unable to apply operation. The drive is busy or mounted.
+```
 
 <figure markdown>
   ![](../assets/gparted_logo.svg)
@@ -167,6 +270,22 @@ Clonezilla permite crear **imagenes completas** o **clonar discos** sector a sec
 nmap -sV 192.168.1.0/24
 ```
 
+**Salida correcta (ejemplo resumen):**
+
+```text
+Nmap scan report for 192.168.1.25
+Host is up (0.0030s latency).
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1
+80/tcp open  http    Apache httpd 2.4.57
+```
+
+**Salida con problemas (ejemplo):**
+
+```text
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+```
+
 <figure markdown>
   ![](../assets/logo_wireshark.jpg)
   <figcaption>Logo de Wireshark (analisis de trafico).</figcaption>
@@ -195,6 +314,45 @@ En muchas incidencias, las herramientas integradas son suficientes:
 sfc /scannow
 DISM /Online /Cleanup-Image /RestoreHealth
 chkdsk C: /f
+```
+
+**Salida correcta (ejemplo sfc):**
+
+```text
+Beginning system scan. This process will take some time.
+Windows Resource Protection did not find any integrity violations.
+```
+
+**Salida con problemas (ejemplo sfc):**
+
+```text
+Windows Resource Protection found corrupt files and was unable to fix some of them.
+```
+
+**Salida correcta (ejemplo DISM):**
+
+```text
+The restore operation completed successfully.
+The component store corruption was repaired.
+```
+
+**Salida con problemas (ejemplo DISM):**
+
+```text
+Error: 0x800f081f
+The source files could not be found.
+```
+
+**Salida correcta (ejemplo chkdsk):**
+
+```text
+Windows has scanned the file system and found no problems.
+```
+
+**Salida con problemas (ejemplo chkdsk):**
+
+```text
+Windows has made corrections to the file system.
 ```
 
 ### 9. Criterios de seleccion en un taller
@@ -242,6 +400,7 @@ A la hora de elegir software, se recomienda:
 - 7-Zip: https://www.7-zip.org/
 - Malwarebytes: https://www.malwarebytes.com/
 - Logo 7-Zip (imagen): https://commons.wikimedia.org/wiki/File:7ziplogo.svg
+- MemTest86+ errores (imagen): https://commons.wikimedia.org/wiki/File:Memtest86%2B_memory_errors.png
 - Logo Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:CZLogo2.png
 - Captura Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:Clonezilla.png
 - Logo Rufus (imagen): https://commons.wikimedia.org/wiki/File:Rufus-logo.png
