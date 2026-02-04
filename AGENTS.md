@@ -10,6 +10,91 @@ Este repositorio contiene material educativo para módulos de formación profesi
 - Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
 - Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
 
+## Estructura de documentos teóricos (teoria/)
+
+Los archivos de teoría (teoria/) deben seguir esta estructura:
+
+```
+---
+title: "UD X - X.Y Título del tema"
+description: Breve descripción
+summary: Resumen corto
+authors:
+    - Eduardo Fdez
+date: YYYY-MM-DD
+icon: "material/file-document-outline"
+permalink: /modulo/unidadX/X.Y
+categories:
+    - MODULO
+tags:
+    - Tag1
+    - Tag2
+---
+
+## X.Y. Título del tema
+
+[Introducción al tema que explique el contexto y objetivo]
+
+### 1. Primer concepto
+
+[Explicación clara del concepto]
+
+#### 1.1. Subconcepto o ejemplo práctico
+
+[Explicación detallada del subconcepto]
+
+### 2. Segundo concepto
+
+[Continuar con estructura similar]
+```
+
+Además, este texto representa un patrón a seguir y explica cómo generar la documentación siguiendo este patrón. Es **muy importante** respetar los saltos de línea y el número de espacios de indentación (4 espacios):
+
+Aconsejamos una lista de cosas, deben seguirse para generar documentos claros y didácticos:
+
+- Ser claro y concisos.
+  
+    - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque identado.
+    - La identación será de 4 espacios.
+    - Usar listas para organizar ideas, pero no abusar de ellas.
+  
+        - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque.
+        - Asegurarse de que cada punto aporta valor.
+        - Dividir el contenido en secciones lógicas.
+        
+    - Incluir definiciones cuando sea necesario.
+    
+- Incluir ejemplos visuales.
+- Usar subtítulos para organizar la información.
+
+También se pueden incluir listas de numeradas, en este formato y es **importante** respetar los saltos de línea y número de espacios de indentación (4 espacios):
+
+A continuación un listado: 
+
+1. Primer punto importante
+2. Segundo punto relevante
+   
+    - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque identado.
+    - Y anidar las viñetas si es necesario
+    
+3. Tercer punto clave
+
+Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
+
+> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
+
+Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
+
+También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
+[Ejemplos si procede]
+
+```
+<figure markdown>   
+  ![](assets/nombre-imagen.png)   
+  <figcaption>Descripción de la imagen</figcaption>   
+</figure>
+```
+
 ## Formato recomendado para apuntes
 
 - Título principal con el nombre de la unidad y tema
@@ -275,4 +360,4 @@ $CATEGORY: SMR/Section1/Desarrollo/Tarjetas_Graficas
 
 
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 04/02/2026
