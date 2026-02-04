@@ -74,6 +74,47 @@ Test: 7  Address: 0003f2a8c  Expected: ffffffff  Actual: fff7ffff
   <figcaption>Ejemplo de MemTest con errores: los campos "Errors" y la lista de direcciones con valores "Expected/Actual" indican fallos de memoria.</figcaption>
 </figure>
 
+#### 2.2 Tarjetas POST (PCIe y mini-PCIe en portatiles)
+
+Las **tarjetas POST** muestran codigos de avance o error durante el **Power-On Self Test**. En equipos que no arrancan, ayudan a localizar en que fase se detiene el sistema. Los codigos suelen mostrarse como **dos digitos hexadecimales** enviados al **puerto 80h**.
+
+**Pasos basicos de uso (taller):**
+
+1. Apagar el equipo y descargar electricidad estatica.
+2. Insertar la tarjeta POST en una ranura PCIe o mini-PCIe compatible.
+3. Encender el equipo y observar el codigo en el display.
+4. Consultar la tabla de codigos del fabricante de la placa o del equipo.
+
+Estos pasos y advertencias de ESD aparecen en guias de uso profesional.
+
+**Interpretacion de codigos y LEDs:**
+
+- El **codigo** mostrado corresponde al valor en el puerto 80h y debe consultarse en la tabla del fabricante.
+- Algunos modelos indican actividad del bus con LEDs (clock, reset, activity, config, idle).
+- Las **lineas de voltaje** (3.3V, 5V, 12V, -12V, 3.3Vaux) suelen mostrarse con LEDs de estado.
+
+**Nota sobre el chip interno:** no existe un unico chip estandar en estas tarjetas. En algunos modelos se observa el **IT8892E** como ejemplo; depende del fabricante.
+
+<figure markdown>
+  ![](../assets/post_card_pcie.jpg)
+  <figcaption>Tarjeta POST para PCI, PCIe y LPC (ejemplo de hardware real).</figcaption>
+</figure>
+
+<figure markdown>
+  ![](../assets/post_card_7segment.jpg)
+  <figcaption>Displays de 7 segmentos donde se muestran los codigos POST.</figcaption>
+</figure>
+
+<figure markdown>
+  ![](../assets/minipci_minipcie.jpg)
+  <figcaption>Comparativa de tarjetas MiniPCI y MiniPCIe (portatiles).</figcaption>
+</figure>
+
+<figure markdown>
+  ![](../assets/post_card_it8892e.jpg)
+  <figcaption>Ejemplo de chip IT8892E en una tarjeta POST (depende del modelo).</figcaption>
+</figure>
+
 ### 3. Almacenamiento, backup y arranque
 
 Utilidades actuales para taller:
@@ -388,6 +429,9 @@ A la hora de elegir software, se recomienda:
 - HWiNFO: https://www.hwinfo.com/
 - CPU-Z: https://www.cpuid.com/softwares/cpu-z.html
 - CrystalDiskInfo: https://crystalmark.info/en/software/crystaldiskinfo/
+- POST card (definicion y puerto 80h): https://en.wikipedia.org/wiki/POST_card
+- Guia de uso PCI/miniPCI POST (PC-Doctor): https://www.pc-doctor.com/support/view-article/33%3Ahow-to-use-the-pci-and-minipci-post-cards
+- PCI POST Card FAQ (PassMark): https://www.passmark.com/support/pci-post-card-professional-faq.php
 - CrystalDiskMark: https://crystalmark.info/en/software/crystaldiskmark/
 - GParted: https://gparted.org/
 - Rescuezilla: https://rescuezilla.com/
@@ -401,6 +445,10 @@ A la hora de elegir software, se recomienda:
 - Malwarebytes: https://www.malwarebytes.com/
 - Logo 7-Zip (imagen): https://commons.wikimedia.org/wiki/File:7ziplogo.svg
 - MemTest86+ errores (imagen): https://commons.wikimedia.org/wiki/File:Memtest86%2B_memory_errors.png
+- POST card PCIe (imagen): https://commons.wikimedia.org/wiki/File:BIOS_POST_card_for_PCI,_PCIe_and_LPC_bus.jpg
+- POST card 7 segmentos (imagen): https://commons.wikimedia.org/wiki/File:BIOS_POST_card_for_PCI,_PCIe_and_LPC_bus_7segment.jpg
+- Chip IT8892E (imagen): https://commons.wikimedia.org/wiki/File:BIOS_POST_card_for_PCI,_PCIe_and_LPC_bus_IT8892E.jpg
+- MiniPCI vs MiniPCIe (imagen): https://commons.wikimedia.org/wiki/File:MiniPCI_and_MiniPCI_Express_cards.jpg
 - Logo Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:CZLogo2.png
 - Captura Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:Clonezilla.png
 - Logo Rufus (imagen): https://commons.wikimedia.org/wiki/File:Rufus-logo.png
