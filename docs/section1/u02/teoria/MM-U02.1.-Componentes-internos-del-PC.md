@@ -852,4 +852,4 @@ El técnico debe aplicar siempre **protocolos ESD**, realizar **pruebas en banco
 
 
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 04/02/2026

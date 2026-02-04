@@ -14,6 +14,10 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 - [Montaje y Mantenimiento](section1/index.md)
 - [Sistemas Informaticos](section2/index.md)
 
+## Novedades
+
+- [Unidad 11 - Utilidades para el mantenimiento](section1/u11/index.md)
+
 ## Slides
 
 - [Slides de Montaje y Mantenimiento](section1/slides/index.md)
@@ -61,4 +65,4 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 04/02/2026

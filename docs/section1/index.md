@@ -6,6 +6,10 @@ Aquí encontrarás **materiales de estudio organizados por unidades**, con conte
 
 El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del módulo, con contenidos actualizados y alineados con las competencias profesionales.
 
+## Unidades destacadas
+
+- [Unidad 11 - Utilidades para el mantenimiento](u11/index.md)
+
 ## Slides del modulo
 
 - [Slides generales del modulo](slides/index.md)
@@ -88,4 +92,4 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 04/02/2026

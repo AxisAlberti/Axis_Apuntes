@@ -19,6 +19,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **U08**: Microprocesadores
 - **U09**: Tarjetas graficas
 - **U10**: Mantenimiento de equipos informaticos
+- **U11**: Utilidades para el mantenimiento
 - **A1**: Arquitecturas de procesadores (Anexo)
 - **A2**: Procesos e hilos (Anexo)
 - **A3**: Prevencion de riesgos laborales (Anexo)
@@ -185,4 +186,4 @@ Para preguntas o sugerencias:
 - Crear un Issue en GitHub
 - Revisar `AGENTS.md` para guias detalladas de colaboracion
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 04/02/2026
