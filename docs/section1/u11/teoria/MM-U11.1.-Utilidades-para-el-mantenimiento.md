@@ -93,6 +93,19 @@ Estos pasos y advertencias de ESD aparecen en guias de uso profesional.
 - Algunos modelos indican actividad del bus con LEDs (clock, reset, activity, config, idle).
 - Las **lineas de voltaje** (3.3V, 5V, 12V, -12V, 3.3Vaux) suelen mostrarse con LEDs de estado.
 
+**Mini-tabla de codigos POST comunes (ejemplo AMI/Supermicro):**
+
+| Codigo | Fase aproximada | Interpretacion practica |
+|---|---|---|
+| 0x32 | Inicio CPU post-memoria | La CPU sigue el POST despues de detectar RAM |
+| 0x55 | Memoria | No se detecta memoria o la RAM falla |
+| 0x92 | PCI Bus | Inicio de inicializacion del bus PCI |
+| 0xA9 | Setup | Entrada en BIOS/UEFI |
+| 0xAE | Boot | Evento de arranque legacy |
+| 0xB2 | OpROM | Inicializacion de Option ROM |
+| 0xD6 | Consola salida | No hay dispositivo de salida de video |
+| 0xD7 | Consola entrada | No hay dispositivo de entrada (teclado) |
+
 **Nota sobre el chip interno:** no existe un unico chip estandar en estas tarjetas. En algunos modelos se observa el **IT8892E** como ejemplo; depende del fabricante.
 
 <figure markdown>
@@ -113,6 +126,28 @@ Estos pasos y advertencias de ESD aparecen en guias de uso profesional.
 <figure markdown>
   ![](../assets/post_card_it8892e.jpg)
   <figcaption>Ejemplo de chip IT8892E en una tarjeta POST (depende del modelo).</figcaption>
+</figure>
+
+#### 2.3 Tarjetas POST LPC (placas base modernas)
+
+En placas base actuales, el diagnostico POST tambien puede salir por **LPC** y se expone a traves de un **header TPM/Port 80**. Estas tarjetas se conectan a ese conector y muestran el codigo en 7 segmentos. En algunos modelos profesionales se especifica que el header **JTPM1** sirve como **TPM/Port 80**. 
+
+**Uso basico:**
+
+1. Localizar el **header TPM/LPC** en la placa base (manual del fabricante).
+2. Conectar la tarjeta LPC con el cable adecuado (2x5, 2x7, 2x9 o 2x10 segun fabricante).
+3. Encender el equipo y leer el codigo en el display.
+
+**Chip interno habitual:** algunas tarjetas LPC modernas usan **CPLD (Intel/Altera Max V)** para decodificar el bus LPC y mostrar el codigo en el display. 
+
+<figure markdown>
+  ![](../assets/post_card_pcie.jpg)
+  <figcaption>Tarjeta POST con conector compatible PCIe/LPC (ejemplo).</figcaption>
+</figure>
+
+<figure markdown>
+  ![](../assets/tpm_asus_header.jpg)
+  <figcaption>Header TPM en placa base (usado como TPM/Port 80 en algunos modelos).</figcaption>
 </figure>
 
 ### 3. Almacenamiento, backup y arranque
@@ -432,6 +467,10 @@ A la hora de elegir software, se recomienda:
 - POST card (definicion y puerto 80h): https://en.wikipedia.org/wiki/POST_card
 - Guia de uso PCI/miniPCI POST (PC-Doctor): https://www.pc-doctor.com/support/view-article/33%3Ahow-to-use-the-pci-and-minipci-post-cards
 - PCI POST Card FAQ (PassMark): https://www.passmark.com/support/pci-post-card-professional-faq.php
+- AMI BIOS POST Codes (Supermicro QRG): https://www.supermicro.com/QuickRefs/motherboard/C242/QRG-2097.pdf
+- AMI BIOS POST Codes (Supermicro Grantley): https://www.supermicro.org.cn/manuals/other/AMI_BIOS_POST_Codes_for_Grantley_Motherboards.pdf
+- LPC Debug Card (ElmorLabs, CPLD Max V): https://www.elmorlabs.com/product/p80db2-lpc-debug-card/
+- TPM/Port 80 Header (Supermicro X14SBH): https://www.supermicro.com/support/manuals/product/motherboard/X14SBH/Content/connections/headers/tpm-port-80-header-x14sbh.htm
 - CrystalDiskMark: https://crystalmark.info/en/software/crystaldiskmark/
 - GParted: https://gparted.org/
 - Rescuezilla: https://rescuezilla.com/
@@ -449,6 +488,7 @@ A la hora de elegir software, se recomienda:
 - POST card 7 segmentos (imagen): https://commons.wikimedia.org/wiki/File:BIOS_POST_card_for_PCI,_PCIe_and_LPC_bus_7segment.jpg
 - Chip IT8892E (imagen): https://commons.wikimedia.org/wiki/File:BIOS_POST_card_for_PCI,_PCIe_and_LPC_bus_IT8892E.jpg
 - MiniPCI vs MiniPCIe (imagen): https://commons.wikimedia.org/wiki/File:MiniPCI_and_MiniPCI_Express_cards.jpg
+- TPM Asus (imagen): https://commons.wikimedia.org/wiki/File:TPM_Asus.jpg
 - Logo Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:CZLogo2.png
 - Captura Clonezilla (imagen): https://commons.wikimedia.org/wiki/File:Clonezilla.png
 - Logo Rufus (imagen): https://commons.wikimedia.org/wiki/File:Rufus-logo.png
