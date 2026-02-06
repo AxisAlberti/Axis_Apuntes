@@ -9,6 +9,7 @@ Este repositorio contiene material educativo para módulos de formación profesi
 - Las cuestiones generadas se guardarán en un fichero en la raíz del repositorio. El nombre del fichero debe incluir el nombre del módulo y el nivel de dificultad.
 - Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
 - Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
+- En cuestiones tipo test y de desarrollo, no se incluirán preguntas que obliguen a memorizar datos numéricos concretos (por ejemplo, nº de núcleos, tasas, latencias u otros valores específicos de dispositivos o conceptos).
 
 ## Estructura de documentos teóricos (teoria/)
 
