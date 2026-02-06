@@ -289,7 +289,7 @@ relacionada con el contenido del archivo de teoría al que acompaña. {
 - Al generar cuestionarios, la **primera línea** del fichero debe ser la categoría correspondiente:
 
 ```gift
-$CATEGORY: SMR/Section1/Nombre_de_la_unidad/Basico
+$CATEGORY: SMR/Test/Nombre_de_la_unidad/Basico
 ```
 
 El nombre de la unidad en la categoría debe estar **normalizado**:
@@ -344,7 +344,7 @@ $CATEGORY: RUTA/CATEGORIA
 ### 8.1 Categoría en cuestiones de ensayo
 
 - Esta regla se aplicará **a partir de ahora** a todas las nuevas cuestiones de **ensayo** (no aplica a tipo test).
-- La cabecera `$CATEGORY` debe ser siempre: `SMR/Section1/Desarrollo/Titulo_del_tema`.
+- La cabecera `$CATEGORY` debe ser siempre: `SMR/Desarrollo/Titulo_del_tema`.
 - El `Titulo_del_tema` debe corresponder al título del tema sobre el que se hacen las cuestiones.
 - Normalizar el título del tema:
   - Sin tildes ni caracteres especiales.
@@ -354,10 +354,10 @@ $CATEGORY: RUTA/CATEGORIA
 Ejemplo para U10 (Tarjetas Gráficas):
 
 ```gift
-$CATEGORY: SMR/Section1/Desarrollo/Tarjetas_Graficas
+$CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 ```
 
 
 
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 06/02/2026
