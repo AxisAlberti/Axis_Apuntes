@@ -28,10 +28,18 @@ La **memoria RAM** es la **memoria principal** del sistema. Es **rápida** y **v
 | **RAM** | Memoria temporal de trabajo del sistema. |
 | **DRAM** | Tipo de RAM basada en condensadores que necesita refresco. |
 | **DDR** | Memoria DRAM que transfiere datos en ambos flancos del reloj. |
+| **MT/s** | Mega transferencias por segundo (medida habitual en DDR). |
+| **Timings / Latencias** | Tiempos de acceso (CL, tRCD, tRP, tRAS) que afectan al rendimiento. |
+| **Prefetch** | Cantidad de datos que se preparan internamente por cada acceso. |
 | **SPD** | Chip con parámetros del módulo para configuración automática. |
 | **XMP / EXPO** | Perfiles de memoria preconfigurados para ajustar parámetros en BIOS. |
 | **Canal de memoria** | Camino de datos entre la CPU y la RAM. |
+| **Rank** | Conjunto lógico de chips que se accede como una unidad. |
+| **Bank / Bank Group** | Subdivisiones internas que permiten paralelismo de accesos. |
+| **ECC** | Memoria con corrección de errores (reducen fallos en servidores). |
+| **UDIMM / RDIMM** | Módulos sin/ con registro (buffer) para estabilidad en servidores. |
 | **DIMM / SO-DIMM** | Formatos físicos de módulos de memoria. |
+| **QVL** | Lista de compatibilidad validada por el fabricante de la placa. |
 
 ---
 
@@ -40,17 +48,22 @@ La **memoria RAM** es la **memoria principal** del sistema. Es **rápida** y **v
 Los módulos de RAM se fabrican en distintos formatos. En sobremesa se usan **DIMM** y en portátiles **SO-DIMM**. Cada generación tiene muescas y pines específicos para evitar incompatibilidades.
 
 <figure markdown>
-  ![](../assets/ram/ram_slots_motherboard.jpg)
+  ![](assets/ram/ram_slots_motherboard.jpg)
   <figcaption>Ranuras DIMM en una placa base. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
 <figure markdown>
- ![](../assets/ram/ddr4_dimm.jpg)
+ ![](assets/ram/ddr4_dimm.jpg)
  <figcaption>Módulo DIMM DDR4. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
 <figure markdown>
- ![](../assets/ram/sodimm_modules.jpg)
+ ![](assets/ram/ddr5_module.jpg)
+ <figcaption>Módulo DDR5 UDIMM. Fuente: Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown>
+ ![](assets/ram/sodimm_modules.jpg)
  <figcaption>Ejemplos de módulos SO-DIMM. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
@@ -59,6 +72,18 @@ Los módulos de RAM se fabrican en distintos formatos. En sobremesa se usan **DI
 ## 3. Cómo trabaja la RAM: bancos, filas y ráfagas
 
 La DRAM se organiza internamente en **bancos**, **filas** y **columnas**. Para acceder a un dato, primero se activa una fila y luego se lee o escribe en una columna. Para mejorar eficiencia, la RAM usa **prefetch** y envía datos en **ráfagas** (burst). Esto permite mover más información por cada acceso.
+
+### 3.1. Tabla comparativa de generaciones DDR
+
+La siguiente tabla resume datos clave de **todas las generaciones DDR**. Los valores son **estándares o rangos habituales** (pueden variar por fabricante o plataforma).
+
+| Generación | Pines DIMM | Voltaje estándar | Tasa de transferencia JEDEC (MT/s) | Capacidad habitual por módulo (ejemplos) |
+|---|---:|---:|---:|---|
+| DDR (DDR1) | 184 | 2,5 V | 200–400 | hasta 1 GB |
+| DDR2 | 240 | 1,8 V | 400–1066 | 512 MB–4 GB |
+| DDR3 | 240 | 1,5 V / 1,35 V | 800–2133 | hasta 16 GB |
+| DDR4 | 288 | 1,2 V | 1600–3200 | 2–32 GB (UDIMM) |
+| DDR5 | 288 | 1,1 V | 4800–6400 | 8–48 GB (UDIMM) |
 
 ---
 
@@ -83,9 +108,16 @@ El rendimiento real no depende solo de la velocidad, sino de tres factores princ
 - **Perfiles (XMP/EXPO):** permiten aplicar ajustes validados desde BIOS.
 
 <figure markdown>
-  ![](../assets/ram/dual_channel_slots.jpg)
+  ![](assets/ram/dual_channel_slots.jpg)
   <figcaption>Ejemplo de ranuras para doble canal. Fuente: Wikimedia Commons.</figcaption>
 </figure>
+
+### 5.1. Dual, triple y quad channel (explicación práctica)
+
+- **Single channel:** la memoria trabaja en un solo canal. Suele ser la configuración base con un único módulo.
+- **Dual channel:** al instalar dos módulos iguales en ranuras específicas, se duplica el ancho de banda efectivo (la CPU accede a dos canales a la vez).
+- **Triple/quad channel:** se usan en plataformas avanzadas (HEDT/servidor). Al aumentar el número de canales, se incrementa el ancho de banda total para tareas exigentes.
+- **Recomendación:** usar módulos **idénticos en capacidad y velocidad** y respetar el orden de ranuras indicado por la placa para asegurar el modo multicanal.
 
 ---
 
@@ -106,7 +138,7 @@ La memoria **ECC** detecta y corrige errores de datos. Se usa sobre todo en serv
 La RAM se sitúa entre la caché de la CPU y el almacenamiento. Es un punto de equilibrio entre **velocidad** y **capacidad**.
 
 <figure markdown>
- ![](../assets/memoria/piramide_memoria.webp)
+ ![](assets/memoria/piramide_memoria.webp)
  <figcaption>Jerarquía de memorias: caché, RAM y almacenamiento.</figcaption>
 </figure>
 
@@ -151,7 +183,14 @@ Pasos típicos:
 - JEDEC – SPD (Serial Presence Detect) announcement: https://www.businesswire.com/news/home/20200302005918/en/JEDEC-Announces-Publication-of-a-New-Serial-Presence-Detect-Device
 - Intel – XMP (Extreme Memory Profile): https://www.intel.com/content/www/us/en/gaming/extreme-memory-profile-xmp.html
 - AMD – EXPO (Extended Profiles for Overclocking): https://www.amd.com/en/products/processors/technologies/expo.html
+- Wikipedia – DDR‑SDRAM (tabla comparativa de generaciones DDR): https://de.wikipedia.org/wiki/DDR-SDRAM
+- Wikipedia – DDR SDRAM (pines y capacidad máxima por módulo): https://es.wikipedia.org/wiki/DDR_SDRAM
+- Wikipedia – DDR3 SDRAM (DIMM 240 pines y módulos hasta 16 GiB): https://es.wikipedia.org/wiki/DDR3_SDRAM
+- Intelligent Memory – DDR2 módulos (capacidades típicas): https://www.intelligentmemory.com/products/dram-modules/ddr2
+- Intelligent Memory – DDR4 módulos (capacidades típicas UDIMM): https://www.intelligentmemory.com/products/dram-modules/ddr4
+- Silicon Power – DDR5 UDIMM (capacidades típicas): https://www.silicon-power.com/web/us/product-DDR5_UDIMM
 - Wikimedia Commons – RAM Module (DDR4): https://commons.wikimedia.org/wiki/File:RAM_Module_(SDRAM-DDR4).jpg
+- Wikimedia Commons – DDR5 SDRAM module: https://commons.wikimedia.org/wiki/File:DDR5_SDRAM_IMGP6295_smial_wp.jpg
 - Wikimedia Commons – Assorted SO-DIMM Modules: https://commons.wikimedia.org/wiki/File:Assorted_SO-DIMM_Modules.jpg
 - Wikimedia Commons – Four SDRAM DIMM slots on motherboard: https://commons.wikimedia.org/wiki/File:Four_SDRAM_DIMM_slots_on_a_computer_motherboard.jpg
 - Wikimedia Commons – Dual channel slots: https://commons.wikimedia.org/wiki/File:Dual_channel_slots.jpg
