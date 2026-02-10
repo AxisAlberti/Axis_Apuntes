@@ -105,6 +105,8 @@ También es importante incluir imágenes o diagramas para ilustrar conceptos com
 - Ejemplos prácticos o casos reales
 - Resumen final en 3-5 ideas clave
 - Referencias y enlaces (si aplica)
+- Incluye todas las imagenes que consideres oportunas para complementar adecuadamente los apuntes.
+- Estas autorizado a descargar todas las imagenes que consideres oportunas.
 
 ## 1. Estructura del repositorio
 
@@ -309,6 +311,8 @@ scripts/update_categories.py
 
 - Siempre has de generar minimo 30 cuestiones.
 
+- Evita enunciados del tipo ¿Qué describe mejor... y ¿Qué decisión es adecuada...
+
 - Cualquier caracter usado en el formato GIFT que pueda generar conflicto, como los símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
 
 - En la retroalimentacion de las cuestiones si se usan  símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
@@ -316,6 +320,8 @@ scripts/update_categories.py
 - Estas dos reglas de escape deben comprobarse siempre al generar un fichero de cuestiones. Es obligatorio validar que se cumplen.
 
 - El fichero con las cuestiones se almacena en el raiz del repositorio.
+
+- Estas autorizado a buscar informacion en fuentes externas como internet.
 
 ### 7.4 Notación de bases en preguntas
 
