@@ -71,7 +71,20 @@ Los módulos de RAM se fabrican en distintos formatos. En sobremesa se usan **DI
 
 ## 3. Cómo trabaja la RAM: bancos, filas y ráfagas
 
-La DRAM se organiza internamente en **bancos**, **filas** y **columnas**. Para acceder a un dato, primero se activa una fila y luego se lee o escribe en una columna. Para mejorar eficiencia, la RAM usa **prefetch** y envía datos en **ráfagas** (burst). Esto permite mover más información por cada acceso.
+La DRAM se organiza internamente en una matriz de **bancos**, **filas** y **columnas**. Cada banco es como un “bloque” independiente de memoria, y dentro de cada banco hay miles de filas y columnas. Para acceder a un dato, la RAM realiza un proceso en dos pasos:
+
+1. **Activar una fila (row activation):** se carga el contenido de una fila completa en un pequeño buffer interno.
+2. **Acceder a la columna:** una vez la fila está activa, se lee o escribe la columna concreta que se necesita.
+
+Este proceso explica por qué **repetir accesos dentro de la misma fila** es más rápido que saltar entre filas distintas: abrir y cerrar filas tiene coste de tiempo (latencias como tRCD o tRP).
+
+Para mejorar la eficiencia, la RAM usa:
+
+- **Prefetch:** trae más datos de los que se piden en un solo acceso. Por ejemplo, DDR4 y DDR5 trabajan con bloques de datos que facilitan lecturas continuas.
+- **Ráfagas (burst):** una vez abierta la fila, se envían varios datos consecutivos sin necesidad de reabrir la fila, aprovechando el acceso ya activado.
+- **Paralelismo entre bancos:** mientras un banco se prepara, otro puede estar leyendo, lo que reduce tiempos de espera.
+
+En resumen, la RAM es rápida cuando **se accede a datos cercanos** (misma fila/banco) y más lenta cuando hay muchos saltos entre filas. Por eso el rendimiento real depende tanto de cómo el sistema operativo y los programas organizan los datos en memoria.
 
 ### 3.1. Tabla comparativa de generaciones DDR
 
