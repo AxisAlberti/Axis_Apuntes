@@ -105,7 +105,17 @@ El rendimiento real no depende solo de la velocidad, sino de tres factores princ
 
 - **Capacidad:** cuanto mayor es, menos depende el sistema del disco.
 - **Canales:** usar dos módulos compatibles en **dual channel** mejora el ancho de banda.
-- **Perfiles (XMP/EXPO):** permiten aplicar ajustes validados desde BIOS.
+- **Perfiles (XMP/EXPO):** permiten aplicar ajustes validados desde BIOS. En la práctica son **perfiles preconfigurados** que guardan frecuencias, latencias y voltajes probados por el fabricante del módulo. Activarlos en BIOS/UEFI evita tener que introducir manualmente cada parámetro y reduce errores de configuración. En equipos de sobremesa es común ver varios perfiles (por ejemplo, uno “básico” y otro de mayor rendimiento), y conviene elegir el que sea compatible con la placa y el procesador. Si el sistema no es estable, se recomienda volver al perfil estándar (JEDEC) o bajar a un perfil intermedio.
+
+**Ejemplo práctico (pasos generales en BIOS/UEFI):**
+
+1. Entrar en BIOS/UEFI (tecla típica: Supr, F2 o F10 al arrancar).
+2. Ir a la sección **AI Tweaker / OC / Memory** (el nombre varía según el fabricante).
+3. Localizar la opción **XMP** (Intel) o **EXPO** (AMD).
+4. Seleccionar **Perfil 1** (o el recomendado por el fabricante del módulo).
+5. Guardar cambios y reiniciar.
+
+Si al reiniciar aparecen inestabilidades o reinicios, volver a BIOS y seleccionar **perfil estándar JEDEC** o reducir el perfil a uno inferior.
 
 <figure markdown>
   ![](assets/ram/dual_channel_slots.jpg)
@@ -114,10 +124,19 @@ El rendimiento real no depende solo de la velocidad, sino de tres factores princ
 
 ### 5.1. Dual, triple y quad channel (explicación práctica)
 
-- **Single channel:** la memoria trabaja en un solo canal. Suele ser la configuración base con un único módulo.
-- **Dual channel:** al instalar dos módulos iguales en ranuras específicas, se duplica el ancho de banda efectivo (la CPU accede a dos canales a la vez).
-- **Triple/quad channel:** se usan en plataformas avanzadas (HEDT/servidor). Al aumentar el número de canales, se incrementa el ancho de banda total para tareas exigentes.
-- **Recomendación:** usar módulos **idénticos en capacidad y velocidad** y respetar el orden de ranuras indicado por la placa para asegurar el modo multicanal.
+El **modo multicanal** aumenta el ancho de banda de la memoria al permitir que la CPU acceda a **varios canales en paralelo**. Esto es especialmente útil en cargas intensivas (juegos, edición de vídeo, virtualización o análisis de datos).
+
+- **Single channel:** la memoria trabaja en un solo canal. Es la situación típica con un único módulo. El rendimiento es correcto, pero el ancho de banda es el mínimo disponible.
+- **Dual channel:** al instalar dos módulos iguales en ranuras específicas, la controladora accede a **dos canales simultáneos**. En muchos casos se observa una mejora real en tareas que usan mucha RAM.
+- **Triple channel:** usado en algunas plataformas antiguas de alto rendimiento. Requiere tres módulos iguales y un chipset/controladora compatible. Su ventaja es aumentar el ancho de banda frente a dual.
+- **Quad channel:** habitual en estaciones de trabajo y servidores. Requiere cuatro módulos compatibles y ofrece el mayor ancho de banda del grupo, ideal para tareas profesionales o científicas.
+
+**Recomendaciones prácticas:**
+
+- Instala módulos **idénticos** en capacidad y velocidad (por ejemplo, 2x16 GB) para asegurar el modo multicanal.
+- Respeta el **orden de ranuras** indicado por la placa (suelen venir marcadas con colores o manual).
+- Si mezclas módulos distintos, la placa puede bajar la velocidad a la del módulo más lento o desactivar el multicanal.
+- En portátiles, el modo dual puede activarse con **dos módulos** o con módulos “soldados + ampliación” si la plataforma lo soporta.
 
 ---
 
