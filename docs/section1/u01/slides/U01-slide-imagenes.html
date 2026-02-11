@@ -23,13 +23,14 @@
       }
       .slide-header {
         position: fixed;
-        top: 12px;
-        left: 12px;
-        right: 12px;
+        top: 10px;
+        left: 10px;
+        right: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         z-index: 1000;
+        pointer-events: none;
       }
       .slide-header .brand {
         display: flex;
@@ -37,7 +38,7 @@
         gap: 12px;
       }
       .slide-header img {
-        height: 96px;
+        height: 64px;
         width: auto;
       }
       .back-button {
@@ -47,13 +48,14 @@
         padding: 8px 12px;
         border-radius: 6px;
         font-size: 14px;
+        pointer-events: auto;
       }
       .back-button:hover {
         background: #1f2937;
       }
       .media-img {
-        max-width: min(90%, 900px);
-        max-height: 55vh;
+        max-width: min(88%, 920px);
+        max-height: 45vh;
         height: auto;
         width: auto;
         display: block;
@@ -81,19 +83,40 @@
         border-radius: 14px;
       }
       .lead {
-        font-size: 1.05em;
+        font-size: 1.08em;
         line-height: 1.45;
         opacity: 0.95;
       }
+      .summary {
+        max-width: 980px;
+        margin: 12px auto 0;
+        text-align: left;
+      }
+      .summary ul {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0;
+      }
+      .summary li {
+        margin: 8px 0;
+        padding-left: 18px;
+        position: relative;
+      }
+      .summary li::before {
+        content: "▸";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
       @media (max-width: 960px) {
         .slide-header img {
-          height: 72px;
+          height: 52px;
         }
         .grid {
           grid-template-columns: 1fr;
         }
         .media-img {
-          max-height: 45vh;
+          max-height: 38vh;
         }
       }
       @media (max-width: 640px) {
@@ -109,10 +132,10 @@
           padding: 6px 10px;
         }
         .slide-header img {
-          height: 56px;
+          height: 48px;
         }
         .media-img {
-          max-height: 40vh;
+          max-height: 34vh;
         }
       }
     </style>
@@ -130,23 +153,42 @@
           <p class="tagline">U01 · Sistemas Informáticos</p>
           <h1>Introducción a los sistemas informáticos</h1>
           <p class="lead"><strong>Resumen visual de los bloques clave</strong></p>
-          <p class="lead">Veremos cómo se conectan hardware, software y firmware, y cómo fluye la información entre CPU, memoria y dispositivos.</p>
+          <div class="summary">
+            <p class="lead">Un sistema informático es un conjunto coordinado de componentes físicos y lógicos que transforman datos en información útil.</p>
+            <ul>
+              <li>El <strong>hardware</strong> ejecuta operaciones: CPU, memoria, almacenamiento y periféricos.</li>
+              <li>El <strong>software</strong> organiza el trabajo: sistema operativo, aplicaciones y utilidades.</li>
+              <li>El <strong>firmware</strong> inicia y configura el equipo: BIOS/UEFI y controladores básicos.</li>
+            </ul>
+          </div>
           <aside class="notes">Presenta la unidad y explica que se verán dos imágenes clave.</aside>
         </section>
 
         <section>
           <h2>Vista general del sistema</h2>
           <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
-          <p class="lead">Este esquema resume el “camino” de la información: entrada de datos, procesamiento y salida.</p>
-          <p class="lead">También ayuda a ubicar los componentes físicos y lógicos en el conjunto.</p>
+          <div class="summary">
+            <p class="lead">Este esquema resume el “camino” de la información: entrada de datos, procesamiento y salida.</p>
+            <ul>
+              <li>Los <strong>dispositivos de entrada</strong> capturan datos del usuario o del entorno.</li>
+              <li>La <strong>CPU</strong> y la <strong>RAM</strong> procesan y mantienen los datos activos.</li>
+              <li>La <strong>salida</strong> presenta resultados y el <strong>almacenamiento</strong> conserva la información.</li>
+            </ul>
+          </div>
           <aside class="notes">Explica que la imagen resume las partes principales del sistema.</aside>
         </section>
 
         <section>
           <h2>Diagrama básico de CPU</h2>
           <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
-          <p class="lead">La CPU coordina instrucciones, mueve datos entre registros y ejecuta operaciones en la ALU.</p>
-          <p class="lead">Entender estos bloques ayuda a explicar el rendimiento y los cuellos de botella.</p>
+          <div class="summary">
+            <p class="lead">La CPU coordina instrucciones, mueve datos entre registros y ejecuta operaciones en la ALU.</p>
+            <ul>
+              <li><strong>Unidad de control</strong>: interpreta instrucciones y dirige el trabajo.</li>
+              <li><strong>ALU</strong>: realiza operaciones lógicas y aritméticas.</li>
+              <li><strong>Registros</strong>: almacenan datos inmediatos para acelerar el procesamiento.</li>
+            </ul>
+          </div>
           <aside class="notes">Señala la ALU, la unidad de control y los registros.</aside>
         </section>
 
@@ -156,7 +198,7 @@
               <h2>Hardware, software y firmware</h2>
               <p class="lead">El hardware ejecuta, el software ordena y el firmware coordina el arranque.</p>
               <p class="lead">Si falla uno de estos niveles, el sistema no puede iniciar o funcionar con normalidad.</p>
-              <p class="lead">Por eso se estudian juntos desde el inicio de la unidad.</p>
+              <p class="lead">El objetivo de la unidad es reconocerlos y entender su relación.</p>
             </div>
             <img class="media-img" src="../teoria/assets/cpu_block_diagram.svg" alt="Diagrama de CPU en formato vectorial">
           </div>
@@ -166,8 +208,14 @@
         <section>
           <h2>Mapa rápido de componentes</h2>
           <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
-          <p class="lead">Repaso rápido: CPU, memoria, almacenamiento y E/S.</p>
-          <p class="lead">La idea clave es que todo componente cumple una función y se comunica mediante buses.</p>
+          <div class="summary">
+            <p class="lead">Repaso rápido: CPU, memoria, almacenamiento y E/S.</p>
+            <ul>
+              <li>La <strong>memoria</strong> sostiene los datos en uso.</li>
+              <li>El <strong>almacenamiento</strong> conserva información a largo plazo.</li>
+              <li>Los <strong>buses</strong> conectan y coordinan los componentes.</li>
+            </ul>
+          </div>
           <aside class="notes">Cierra con un repaso rápido de los componentes clave.</aside>
         </section>
       </div>
