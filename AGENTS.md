@@ -182,6 +182,12 @@ Salida generada del sitio MkDocs. No editar manualmente.
 - En HTML Reveal.js, incluir:
   - Logo arriba a la izquierda (usar `docs/assets/logo.png`)
   - Botón de retorno al módulo o repositorio
+  - Diseño **responsive obligatorio**:
+    - Usar imágenes con `max-width`, `max-height` y `object-fit: contain` para adaptarse a distintas resoluciones.
+    - Ajustar tipografías con `clamp()` o tamaños escalables para móviles/tablets/escritorio.
+    - Incluir `Reveal.initialize` con `width: "100%"`, `height: "100%"`, `margin` y escalado (`minScale`, `maxScale`).
+    - Añadir `@media` para reorganizar columnas a una sola en pantallas estrechas.
+    - Header adaptable: reducir el logo y apilar el botón de retorno en pantallas pequeñas para liberar espacio.
 - Ejemplo básico (Markdown):
 
 ```md
@@ -202,6 +208,8 @@ Note: Mensaje para el docente.
 - Si una unidad no tiene presentación, enlazar a:
   - `docs/section1/slides/no-disponible.md` (section1)
   - `docs/section2/slides/no-disponible.md` (section2)
+
+**Fecha de actualización:** 11/02/2026
 
 ### 3.1. Rutas de imágenes
 
