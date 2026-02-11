@@ -14,6 +14,8 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 - [Slides generales del modulo](slides/index.md)
 - [Anexo 3 - PRL (slide de prueba)](A3/slides/PRL-slide-prueba.html)
+- [U01 - Introducción a los sistemas informáticos](u01/slides/U01-slide-imagenes.html)
+- [U02 - Componentes internos del PC](u02/slides/U02-slide-componentes.html)
 
 ## Anexos
 
@@ -86,10 +88,10 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ---
 
-📅 *Última actualización: Enero 2026*  
+📅 *Última actualización: Febrero 2026*  
 ✍️ *Profesor: José Manuel González Castillo*
 
 
 
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 11/02/2026
