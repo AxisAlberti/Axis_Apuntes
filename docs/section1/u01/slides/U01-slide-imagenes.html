@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U01 - Introducción a los sistemas informáticos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+    <style>
+      :root {
+        --accent: #f97316;
+        --ink: #f8fafc;
+      }
+      .reveal {
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        color: var(--ink);
+      }
+      .reveal h1, .reveal h2, .reveal h3 {
+        letter-spacing: 0.5px;
+      }
+      .slide-header {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+      }
+      .slide-header img {
+        height: 96px;
+        width: auto;
+      }
+      .back-button {
+        background: #0f172a;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+      .back-button:hover {
+        background: #1f2937;
+      }
+      .media-img {
+        max-width: 85%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+      }
+      .tagline {
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9em;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.7);
+        padding: 18px 22px;
+        border-radius: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-header">
+      <img src="../../../assets/logo.png" alt="Logo">
+      <a class="back-button" href="../">Volver a la unidad</a>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <p class="tagline">U01 · Sistemas Informáticos</p>
+          <h1>Introducción a los sistemas informáticos</h1>
+          <p><strong>Resumen visual de los bloques clave</strong></p>
+          <aside class="notes">Presenta la unidad y explica que se verán dos imágenes clave.</aside>
+        </section>
+
+        <section>
+          <h2>Vista general del sistema</h2>
+          <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
+          <aside class="notes">Explica que la imagen resume las partes principales del sistema.</aside>
+        </section>
+
+        <section>
+          <h2>Diagrama básico de CPU</h2>
+          <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
+          <aside class="notes">Señala la ALU, la unidad de control y los registros.</aside>
+        </section>
+
+        <section>
+          <div class="grid">
+            <div class="card">
+              <h2>Hardware, software y firmware</h2>
+              <p>El hardware ejecuta, el software ordena y el firmware coordina el arranque.</p>
+              <p>Estos tres niveles trabajan juntos para que el sistema funcione.</p>
+            </div>
+            <img class="media-img" src="../teoria/assets/cpu_block_diagram.svg" alt="Diagrama de CPU en formato vectorial">
+          </div>
+          <aside class="notes">Relaciona el diagrama con el rol del software y firmware.</aside>
+        </section>
+
+        <section>
+          <h2>Mapa rápido de componentes</h2>
+          <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
+          <p>Repaso rápido: CPU, memoria, almacenamiento y E/S.</p>
+          <aside class="notes">Cierra con un repaso rápido de los componentes clave.</aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true
+      });
+    </script>
+  </body>
+</html>

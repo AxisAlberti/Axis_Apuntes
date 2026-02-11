@@ -13,3 +13,9 @@ Esta unidad presenta una vision global de un sistema informatico: sus componente
 ## Enlace principal
 
 - [MM U01.1. Introduccion a los sistemas informaticos](teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos.md)
+
+## Slides
+
+- [U01 - Introducción a los sistemas informáticos (imágenes)](slides/U01-slide-imagenes.html)
+
+**Fecha de actualización:** 11/02/2026
