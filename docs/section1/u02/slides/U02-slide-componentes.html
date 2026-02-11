@@ -124,7 +124,16 @@
         flex-wrap: wrap;
       }
       .image-row .media-img {
-        max-width: 46%;
+        max-width: 44%;
+        max-height: 28vh;
+      }
+      .image-row.tight .media-img {
+        max-width: 40%;
+        max-height: 24vh;
+      }
+      .image-row.stack .media-img {
+        max-width: 92%;
+        max-height: 26vh;
       }
       @media (max-width: 960px) {
         .slide-header img {
@@ -138,6 +147,15 @@
         }
         .slide-image {
           min-height: 36vh;
+        }
+        .image-row .media-img {
+          max-height: 24vh;
+        }
+        .image-row.tight .media-img {
+          max-height: 22vh;
+        }
+        .image-row.stack .media-img {
+          max-height: 22vh;
         }
       }
       @media (max-width: 640px) {
@@ -163,6 +181,13 @@
         }
         .image-row .media-img {
           max-width: 92%;
+          max-height: 22vh;
+        }
+        .image-row.tight .media-img {
+          max-height: 20vh;
+        }
+        .image-row.stack .media-img {
+          max-height: 20vh;
         }
       }
     </style>
@@ -276,7 +301,7 @@
 
         <section>
           <h2>Panel trasero y E/S</h2>
-          <div class="image-row">
+          <div class="image-row tight">
             <img class="media-img" src="../teoria/assets/componentes/5.png" alt="Panel trasero de placa base">
             <img class="media-img" src="../teoria/assets/componentes/4.png" alt="Puertos de salida y entradas">
           </div>
@@ -337,7 +362,7 @@
 
         <section>
           <h2>Conectores de alimentación</h2>
-          <div class="image-row">
+          <div class="image-row tight">
             <img class="media-img" src="../teoria/assets/componentes/18.png" alt="Conector ATX 24 pines">
             <img class="media-img" src="../teoria/assets/componentes/20.png" alt="Conector EPS CPU">
           </div>
@@ -354,7 +379,7 @@
 
         <section>
           <h2>Alimentación y distribución</h2>
-          <div class="image-row">
+          <div class="image-row stack">
             <img class="media-img" src="../teoria/assets/componentes/24.jpg" alt="Conectores en placa base">
             <img class="media-img" src="../teoria/assets/componentes/30.jpg" alt="Cableado interno en chasis">
           </div>
@@ -368,7 +393,7 @@
 
         <section>
           <h2>Headers del panel frontal</h2>
-          <div class="image-row">
+          <div class="image-row tight">
             <img class="media-img" src="../teoria/assets/componentes/21.png" alt="Header frontal">
             <img class="media-img" src="../teoria/assets/componentes/22.png" alt="Conectores USB internos">
           </div>
@@ -427,7 +452,7 @@
               <p class="lead">Gestiona buses, puertos y enlaces internos.</p>
               <p class="lead">Define expansión, conectividad y soporte de CPU/RAM.</p>
             </div>
-            <img class="media-img" src="../teoria/assets/componentes/27.png" alt="Chipset y disipadores">
+            <img class="media-img" src="../teoria/assets/componentes/26.jpg" alt="Chipset y disipadores">
           </div>
         </section>
 
