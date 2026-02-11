@@ -273,9 +273,17 @@
         root.setProperty("--img-max-h-large", imgMaxHLarge.toFixed(1) + "vh");
         root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
         root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
+
+        if (window.Reveal && typeof Reveal.layout === "function") {
+          Reveal.layout();
+        }
       }
 
-      window.addEventListener("resize", actualizarVariablesResponsive);
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(actualizarVariablesResponsive, 120);
+      });
       window.addEventListener("load", actualizarVariablesResponsive);
 
       Reveal.initialize({
@@ -287,6 +295,10 @@
         minScale: 0.4,
         maxScale: 1.2
       });
+      if (window.Reveal && typeof Reveal.on === "function") {
+        Reveal.on("ready", actualizarVariablesResponsive);
+        Reveal.on("slidechanged", actualizarVariablesResponsive);
+      }
     </script>
   </body>
 </html>
