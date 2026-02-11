@@ -16,7 +16,11 @@
         color: var(--ink);
       }
       .reveal .slides {
-        font-size: clamp(20px, 2.2vw, 34px);
+        font-size: calc(clamp(18px, 2.2vw, 32px) * var(--text-scale, 1));
+      }
+      .reveal .slides section {
+        box-sizing: border-box;
+        padding: 8px 6vw 12px;
       }
       .reveal h1, .reveal h2, .reveal h3 {
         letter-spacing: 0.5px;
@@ -99,22 +103,22 @@
         border-radius: 14px;
       }
       .lead {
-        font-size: 1.08em;
-        line-height: 1.45;
+        font-size: calc(1.02em * var(--text-scale, 1));
+        line-height: 1.38;
         opacity: 0.95;
       }
       .summary {
-        max-width: 980px;
-        margin: 12px auto 0;
+        max-width: 92%;
+        margin: 8px auto 0;
         text-align: left;
       }
       .summary ul {
         list-style: none;
         padding: 0;
-        margin: 12px 0 0;
+        margin: 8px 0 0;
       }
       .summary li {
-        margin: 8px 0;
+        margin: 6px 0;
         padding-left: 18px;
         position: relative;
       }
@@ -268,6 +272,7 @@
         const imgMaxHLarge = Math.max(0.26, Math.min(0.42, (h - 220) / 900)) * 100;
         const imgMaxHLogo = Math.max(0.18, Math.min(0.28, h / 1200)) * 100;
         const imgMaxWLogo = Math.max(45, Math.min(70, (corto / 12)));
+        const textScale = Math.max(0.82, Math.min(1.05, h / 900));
 
         const root = document.documentElement.style;
         root.setProperty("--img-max-h", imgMaxH.toFixed(1) + "vh");
@@ -275,6 +280,7 @@
         root.setProperty("--img-max-h-large", imgMaxHLarge.toFixed(1) + "vh");
         root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
         root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
+        root.setProperty("--text-scale", textScale.toFixed(2));
 
         if (window.Reveal) {
           if (typeof Reveal.configure === "function") {
