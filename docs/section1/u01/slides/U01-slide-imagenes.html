@@ -257,6 +257,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
     <script>
+      let lastW = 0;
+      let lastH = 0;
       function actualizarVariablesResponsive() {
         const w = window.innerWidth || 1280;
         const h = window.innerHeight || 720;
@@ -274,9 +276,19 @@
         root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
         root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
 
-        if (window.Reveal && typeof Reveal.layout === "function") {
-          Reveal.layout();
+        if (window.Reveal) {
+          if (typeof Reveal.configure === "function") {
+            Reveal.configure({
+              width: w,
+              height: h
+            });
+          }
+          if (typeof Reveal.layout === "function") {
+            Reveal.layout();
+          }
         }
+        lastW = w;
+        lastH = h;
       }
 
       let resizeTimer;
@@ -310,8 +322,8 @@
       Reveal.initialize({
         hash: true,
         slideNumber: true,
-        width: "100%",
-        height: "100%",
+        width: window.innerWidth,
+        height: window.innerHeight,
         margin: 0.08,
         minScale: 0.4,
         maxScale: 1.2
@@ -321,6 +333,16 @@
         Reveal.on("slidechanged", recalculoMultipaso);
         Reveal.on("resize", recalculoMultipaso);
       }
+
+      function vigilarCambiosDimension() {
+        const w = window.innerWidth || 1280;
+        const h = window.innerHeight || 720;
+        if (w !== lastW || h !== lastH) {
+          recalculoMultipaso();
+        }
+        requestAnimationFrame(vigilarCambiosDimension);
+      }
+      requestAnimationFrame(vigilarCambiosDimension);
     </script>
   </body>
 </html>
