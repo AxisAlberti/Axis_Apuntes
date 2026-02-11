@@ -182,12 +182,26 @@ Salida generada del sitio MkDocs. No editar manualmente.
 - En HTML Reveal.js, incluir:
   - Logo arriba a la izquierda (usar `docs/assets/logo.png`)
   - Botón de retorno al módulo o repositorio
+  - Incluir **imágenes** relevantes del tema.
+  - Añadir **texto explicativo** para los puntos clave.
+  - Resumir las **ideas clave** del tema en cada slide.
   - Diseño **responsive obligatorio**:
     - Usar imágenes con `max-width`, `max-height` y `object-fit: contain` para adaptarse a distintas resoluciones.
     - Ajustar tipografías con `clamp()` o tamaños escalables para móviles/tablets/escritorio.
     - Incluir `Reveal.initialize` con `width: "100%"`, `height: "100%"`, `margin` y escalado (`minScale`, `maxScale`).
     - Añadir `@media` para reorganizar columnas a una sola en pantallas estrechas.
     - Header adaptable: reducir el logo y apilar el botón de retorno en pantallas pequeñas para liberar espacio.
+    - Ajuste dinámico en JS:
+        - Calcular variables CSS (`--img-max-h`, `--img-wrap-h`, `--text-scale`) según `window.innerWidth/innerHeight`.
+        - Recalcular en `resize`, `fullscreenchange`, `visibilitychange` y `orientationchange`.
+        - Forzar `Reveal.configure({ width, height })` y `Reveal.layout()` tras cada recalculo.
+        - Usar `requestAnimationFrame` para asegurar el cambio al salir de fullscreen o minimizar.
+    - Imagen centrada cuando está sola:
+        - Envolver en contenedor `.slide-image` con `display: flex` y `justify-content: center`.
+        - Limitar altura con `vh` para evitar desbordes en resoluciones bajas.
+    - Texto responsive:
+        - Escalar tamaño con CSS variables y límites (ej. 0.78–1.0).
+        - Añadir `padding-bottom` y margen inferior para evitar texto pegado al borde.
 - Ejemplo básico (Markdown):
 
 ```md
