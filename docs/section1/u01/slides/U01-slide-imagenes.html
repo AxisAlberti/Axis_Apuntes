@@ -54,8 +54,8 @@
         background: #1f2937;
       }
       .media-img {
-        max-width: 100%;
-        max-height: 48vh;
+        max-width: 92%;
+        max-height: 40vh;
         height: auto;
         width: auto;
         display: block;
@@ -65,12 +65,20 @@
         border-radius: 12px;
       }
       .slide-image {
-        display: grid;
-        place-items: center;
-        min-height: 52vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42vh;
       }
       .slide-image .media-img {
-        max-height: 52vh;
+        max-height: 40vh;
+      }
+      .slide-image.large .media-img {
+        max-height: 34vh;
+      }
+      .slide-image.logo .media-img {
+        max-height: 26vh;
+        max-width: 60vw;
       }
       .tagline {
         color: var(--accent);
@@ -124,13 +132,13 @@
           grid-template-columns: 1fr;
         }
         .media-img {
-          max-height: 40vh;
+          max-height: 34vh;
         }
         .slide-image {
-          min-height: 46vh;
+          min-height: 36vh;
         }
         .slide-image .media-img {
-          max-height: 46vh;
+          max-height: 34vh;
         }
       }
       @media (max-width: 640px) {
@@ -149,13 +157,13 @@
           height: 48px;
         }
         .media-img {
-          max-height: 36vh;
+          max-height: 30vh;
         }
         .slide-image {
-          min-height: 42vh;
+          min-height: 32vh;
         }
         .slide-image .media-img {
-          max-height: 42vh;
+          max-height: 30vh;
         }
       }
     </style>
@@ -186,7 +194,7 @@
 
         <section>
           <h2>Vista general del sistema</h2>
-          <div class="slide-image">
+          <div class="slide-image large">
             <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
           </div>
           <div class="summary">
@@ -202,7 +210,7 @@
 
         <section>
           <h2>Diagrama básico de CPU</h2>
-          <div class="slide-image">
+          <div class="slide-image large">
             <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
           </div>
           <div class="summary">
@@ -231,7 +239,7 @@
 
         <section>
           <h2>Mapa rápido de componentes</h2>
-          <div class="slide-image">
+          <div class="slide-image logo">
             <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
           </div>
           <div class="summary">
