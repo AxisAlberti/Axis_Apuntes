@@ -21,7 +21,7 @@ nav:
   - Unidad 02 - Componentes internos del PC:
     - section1/u02/index.md
     - MM U02.1. Componentes internos del PC: section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC.md
-    - Presentacion: section1/slides/no-disponible.md
+    - Presentacion: section1/u02/slides/U02-slide-componentes.html
   - Unidad 03 - Chipset:
     - section1/u03/index.md
     - MM U03.1. Chipset: section1/u03/teoria/MM-U03.1.-Chipset.md
