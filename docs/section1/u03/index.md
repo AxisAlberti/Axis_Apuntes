@@ -13,3 +13,9 @@ Esta unidad se centra en el chipset y su papel como coordinador de comunicacione
 ## Enlace principal
 
 - [MM U03.1. Chipset](teoria/MM-U03.1.-Chipset.md)
+
+## Slides
+
+- [U03 - Chipset](slides/U03-slide-chipset.html)
+
+**Fecha de actualización:** 11/02/2026

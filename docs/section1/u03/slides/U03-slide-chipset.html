@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03 - Chipset</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+    <style>
+      :root {
+        --accent: #f59e0b;
+        --ink: #f8fafc;
+      }
+      .reveal {
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        color: var(--ink);
+      }
+      .reveal .slides {
+        font-size: calc(clamp(18px, 2.2vw, 32px) * var(--text-scale, 1));
+      }
+      .reveal .slides section {
+        box-sizing: border-box;
+        padding: 8px 6vw clamp(16px, 6vh, 48px);
+      }
+      .slide-header {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        pointer-events: none;
+      }
+      .slide-header img {
+        height: 64px;
+        width: auto;
+      }
+      .back-button {
+        background: #0f172a;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        pointer-events: auto;
+      }
+      .back-button:hover {
+        background: #1f2937;
+      }
+      .tagline {
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9em;
+      }
+      .lead {
+        font-size: calc(1.02em * var(--text-scale, 1));
+        line-height: 1.38;
+        opacity: 0.95;
+      }
+      .summary {
+        max-width: 92%;
+        margin: 8px auto 0;
+        text-align: left;
+      }
+      .summary ul {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0;
+      }
+      .summary li {
+        margin: 6px 0;
+        padding-left: 18px;
+        position: relative;
+      }
+      .summary li::before {
+        content: "▸";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
+      .media-img {
+        max-width: 92%;
+        max-height: var(--img-max-h, 40vh);
+        height: auto;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        border-radius: 12px;
+        background: #0b1220;
+      }
+      .slide-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: var(--img-wrap-h, 42vh);
+      }
+      .slide-image .media-img {
+        max-height: var(--img-max-h, 40vh);
+      }
+      .slide-image.large .media-img {
+        max-height: var(--img-max-h-large, 34vh);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.7);
+        padding: 18px 22px;
+        border-radius: 14px;
+      }
+      .image-row {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .image-row .media-img {
+        max-width: 46%;
+        max-height: 28vh;
+      }
+      @media (max-width: 960px) {
+        .slide-header img {
+          height: 52px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .media-img {
+          max-height: 34vh;
+        }
+        .slide-image {
+          min-height: 36vh;
+        }
+        .image-row .media-img {
+          max-height: 24vh;
+        }
+      }
+      @media (max-width: 640px) {
+        .slide-header {
+          position: static;
+          margin-bottom: 10px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        .back-button {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
+        .slide-header img {
+          height: 48px;
+        }
+        .media-img {
+          max-height: 30vh;
+        }
+        .slide-image {
+          min-height: 32vh;
+        }
+        .image-row .media-img {
+          max-width: 92%;
+          max-height: 22vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-header">
+      <img src="../../../assets/logo.png" alt="Logo">
+      <a class="back-button" href="../">Volver a la unidad</a>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <p class="tagline">U03 · Chipset</p>
+          <h1>Chipset: el coordinador del sistema</h1>
+          <div class="summary">
+            <p class="lead">El chipset conecta CPU, memoria, almacenamiento y periféricos, y define la expansión del equipo.</p>
+            <ul>
+              <li>Qué es y qué funciones controla.</li>
+              <li>Evolución: northbridge/southbridge → PCH.</li>
+              <li>Impacto en compatibilidad y rendimiento.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="grid">
+            <div class="card">
+              <h2>¿Qué es el chipset?</h2>
+              <p class="lead">Conjunto de circuitos que gestionan la comunicación entre CPU y el resto de dispositivos.</p>
+              <p class="lead">Define puertos, líneas PCIe, SATA, USB y soporte de memoria.</p>
+            </div>
+            <img class="media-img" src="../teoria/assets/typical_intel_chipset.jpg" alt="Chipset en placa base">
+          </div>
+        </section>
+
+        <section>
+          <h2>Modelo clásico: Northbridge y Southbridge</h2>
+          <div class="slide-image large">
+            <img class="media-img" src="../teoria/assets/northsouthbridge_es.png" alt="Diagrama Northbridge y Southbridge">
+          </div>
+          <div class="summary">
+            <ul>
+              <li>Northbridge: memoria y gráficos (alta velocidad).</li>
+              <li>Southbridge: puertos y E/S (baja/mediana velocidad).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Evolución moderna: PCH</h2>
+          <div class="slide-image">
+            <img class="media-img" src="../teoria/assets/cpu_nb_sb.svg" alt="Evolución hacia PCH">
+          </div>
+          <div class="summary">
+            <ul>
+              <li>La CPU integra funciones del antiguo Northbridge.</li>
+              <li>El PCH gestiona puertos, almacenamiento y periféricos.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="grid">
+            <div class="card">
+              <h2>Funciones clave del chipset</h2>
+              <p class="lead">Control de buses, puertos y líneas PCIe disponibles.</p>
+              <p class="lead">Soporte de USB, SATA, NVMe, redes y audio.</p>
+            </div>
+            <img class="media-img" src="../teoria/assets/amd_b450_chipset.jpg" alt="Chipset AMD en placa base">
+          </div>
+        </section>
+
+        <section>
+          <h2>Compatibilidad y elección</h2>
+          <div class="summary">
+            <ul>
+              <li>El chipset determina qué CPU y RAM puedes usar.</li>
+              <li>También limita cantidad de líneas PCIe y puertos.</li>
+              <li>Elegir mal puede bloquear futuras ampliaciones.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Errores y diagnóstico</h2>
+          <div class="summary">
+            <ul>
+              <li>Puertos que no funcionan: revisar drivers y BIOS.</li>
+              <li>Inestabilidad: revisar temperaturas y VRM.</li>
+              <li>Actualizaciones de BIOS mejoran compatibilidad.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Resumen final</h2>
+          <div class="summary">
+            <ul>
+              <li>El chipset es el “gestor” de la conectividad del PC.</li>
+              <li>Su evolución mejora rendimiento y simplifica la placa.</li>
+              <li>Define expansión, compatibilidad y posibilidades futuras.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+      let lastW = 0;
+      let lastH = 0;
+      function actualizarVariablesResponsive() {
+        const w = window.innerWidth || 1280;
+        const h = window.innerHeight || 720;
+        const corto = Math.min(w, h);
+        const imgMaxH = Math.max(0.28, Math.min(0.48, h / 1000)) * 100;
+        const imgWrapH = Math.max(0.34, Math.min(0.55, h / 900)) * 100;
+        const imgMaxHLarge = Math.max(0.26, Math.min(0.42, (h - 220) / 900)) * 100;
+        const imgMaxHLogo = Math.max(0.18, Math.min(0.28, h / 1200)) * 100;
+        const imgMaxWLogo = Math.max(45, Math.min(70, (corto / 12)));
+        let textScale = h / 900;
+        if (h < 700) {
+          textScale = 0.78;
+        }
+        textScale = Math.max(0.78, Math.min(1.0, textScale));
+
+        const root = document.documentElement.style;
+        root.setProperty("--img-max-h", imgMaxH.toFixed(1) + "vh");
+        root.setProperty("--img-wrap-h", imgWrapH.toFixed(1) + "vh");
+        root.setProperty("--img-max-h-large", imgMaxHLarge.toFixed(1) + "vh");
+        root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
+        root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
+        root.setProperty("--text-scale", textScale.toFixed(2));
+
+        if (window.Reveal) {
+          if (typeof Reveal.configure === "function") {
+            Reveal.configure({
+              width: w,
+              height: h
+            });
+          }
+          if (typeof Reveal.layout === "function") {
+            Reveal.layout();
+          }
+        }
+        lastW = w;
+        lastH = h;
+      }
+
+      let resizeTimer;
+      function programarRecalculo() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(actualizarVariablesResponsive, 120);
+      }
+      function recalculoMultipaso() {
+        programarRecalculo();
+        requestAnimationFrame(() => {
+          actualizarVariablesResponsive();
+          requestAnimationFrame(() => {
+            actualizarVariablesResponsive();
+          });
+        });
+      }
+
+      window.addEventListener("resize", recalculoMultipaso);
+      window.addEventListener("orientationchange", recalculoMultipaso);
+      document.addEventListener("fullscreenchange", recalculoMultipaso);
+      document.addEventListener("webkitfullscreenchange", recalculoMultipaso);
+      document.addEventListener("mozfullscreenchange", recalculoMultipaso);
+      document.addEventListener("MSFullscreenChange", recalculoMultipaso);
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+          recalculoMultipaso();
+        }
+      });
+      window.addEventListener("load", actualizarVariablesResponsive);
+
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        margin: 0.08,
+        minScale: 0.4,
+        maxScale: 1.2
+      });
+      if (window.Reveal && typeof Reveal.on === "function") {
+        Reveal.on("ready", recalculoMultipaso);
+        Reveal.on("slidechanged", recalculoMultipaso);
+        Reveal.on("resize", recalculoMultipaso);
+      }
+
+      function vigilarCambiosDimension() {
+        const w = window.innerWidth || 1280;
+        const h = window.innerHeight || 720;
+        if (w !== lastW || h !== lastH) {
+          recalculoMultipaso();
+        }
+        requestAnimationFrame(vigilarCambiosDimension);
+      }
+      requestAnimationFrame(vigilarCambiosDimension);
+    </script>
+  </body>
+</html>
