@@ -54,8 +54,8 @@
         background: #1f2937;
       }
       .media-img {
-        max-width: min(88%, 920px);
-        max-height: 45vh;
+        max-width: 100%;
+        max-height: 48vh;
         height: auto;
         width: auto;
         display: block;
@@ -63,6 +63,14 @@
         object-fit: contain;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         border-radius: 12px;
+      }
+      .slide-image {
+        display: grid;
+        place-items: center;
+        min-height: 52vh;
+      }
+      .slide-image .media-img {
+        max-height: 52vh;
       }
       .tagline {
         color: var(--accent);
@@ -116,7 +124,13 @@
           grid-template-columns: 1fr;
         }
         .media-img {
-          max-height: 38vh;
+          max-height: 40vh;
+        }
+        .slide-image {
+          min-height: 46vh;
+        }
+        .slide-image .media-img {
+          max-height: 46vh;
         }
       }
       @media (max-width: 640px) {
@@ -135,7 +149,13 @@
           height: 48px;
         }
         .media-img {
-          max-height: 34vh;
+          max-height: 36vh;
+        }
+        .slide-image {
+          min-height: 42vh;
+        }
+        .slide-image .media-img {
+          max-height: 42vh;
         }
       }
     </style>
@@ -166,7 +186,9 @@
 
         <section>
           <h2>Vista general del sistema</h2>
-          <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
+          <div class="slide-image">
+            <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
+          </div>
           <div class="summary">
             <p class="lead">Este esquema resume el “camino” de la información: entrada de datos, procesamiento y salida.</p>
             <ul>
@@ -180,7 +202,9 @@
 
         <section>
           <h2>Diagrama básico de CPU</h2>
-          <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
+          <div class="slide-image">
+            <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
+          </div>
           <div class="summary">
             <p class="lead">La CPU coordina instrucciones, mueve datos entre registros y ejecuta operaciones en la ALU.</p>
             <ul>
@@ -207,7 +231,9 @@
 
         <section>
           <h2>Mapa rápido de componentes</h2>
-          <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
+          <div class="slide-image">
+            <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
+          </div>
           <div class="summary">
             <p class="lead">Repaso rápido: CPU, memoria, almacenamiento y E/S.</p>
             <ul>
