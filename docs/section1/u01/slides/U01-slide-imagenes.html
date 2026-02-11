@@ -20,7 +20,7 @@
       }
       .reveal .slides section {
         box-sizing: border-box;
-        padding: 8px 6vw 12px;
+        padding: 8px 6vw clamp(16px, 6vh, 48px);
       }
       .reveal h1, .reveal h2, .reveal h3 {
         letter-spacing: 0.5px;
@@ -111,6 +111,9 @@
         max-width: 92%;
         margin: 8px auto 0;
         text-align: left;
+      }
+      .summary:last-child {
+        margin-bottom: 2vh;
       }
       .summary ul {
         list-style: none;
@@ -272,7 +275,11 @@
         const imgMaxHLarge = Math.max(0.26, Math.min(0.42, (h - 220) / 900)) * 100;
         const imgMaxHLogo = Math.max(0.18, Math.min(0.28, h / 1200)) * 100;
         const imgMaxWLogo = Math.max(45, Math.min(70, (corto / 12)));
-        const textScale = Math.max(0.82, Math.min(1.05, h / 900));
+        let textScale = h / 900;
+        if (h < 700) {
+          textScale = 0.78;
+        }
+        textScale = Math.max(0.78, Math.min(1.0, textScale));
 
         const root = document.documentElement.style;
         root.setProperty("--img-max-h", imgMaxH.toFixed(1) + "vh");
