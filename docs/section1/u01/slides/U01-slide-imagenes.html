@@ -280,10 +280,17 @@
       }
 
       let resizeTimer;
-      window.addEventListener("resize", () => {
+      function programarRecalculo() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(actualizarVariablesResponsive, 120);
-      });
+      }
+
+      window.addEventListener("resize", programarRecalculo);
+      window.addEventListener("orientationchange", programarRecalculo);
+      document.addEventListener("fullscreenchange", programarRecalculo);
+      document.addEventListener("webkitfullscreenchange", programarRecalculo);
+      document.addEventListener("mozfullscreenchange", programarRecalculo);
+      document.addEventListener("MSFullscreenChange", programarRecalculo);
       window.addEventListener("load", actualizarVariablesResponsive);
 
       Reveal.initialize({
