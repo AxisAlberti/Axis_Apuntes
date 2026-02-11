@@ -17,7 +17,7 @@ nav:
   - Unidad 01 - Introduccion a los sistemas informaticos:
     - section1/u01/index.md
     - MM U01.1. Introduccion a los sistemas informaticos: section1/u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos.md
-    - Presentacion: section1/slides/no-disponible.md
+    - Presentacion: section1/u01/slides/U01-slide-imagenes.html
   - Unidad 02 - Componentes internos del PC:
     - section1/u02/index.md
     - MM U02.1. Componentes internos del PC: section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC.md
