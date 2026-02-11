@@ -284,13 +284,27 @@
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(actualizarVariablesResponsive, 120);
       }
+      function recalculoMultipaso() {
+        programarRecalculo();
+        requestAnimationFrame(() => {
+          actualizarVariablesResponsive();
+          requestAnimationFrame(() => {
+            actualizarVariablesResponsive();
+          });
+        });
+      }
 
-      window.addEventListener("resize", programarRecalculo);
-      window.addEventListener("orientationchange", programarRecalculo);
-      document.addEventListener("fullscreenchange", programarRecalculo);
-      document.addEventListener("webkitfullscreenchange", programarRecalculo);
-      document.addEventListener("mozfullscreenchange", programarRecalculo);
-      document.addEventListener("MSFullscreenChange", programarRecalculo);
+      window.addEventListener("resize", recalculoMultipaso);
+      window.addEventListener("orientationchange", recalculoMultipaso);
+      document.addEventListener("fullscreenchange", recalculoMultipaso);
+      document.addEventListener("webkitfullscreenchange", recalculoMultipaso);
+      document.addEventListener("mozfullscreenchange", recalculoMultipaso);
+      document.addEventListener("MSFullscreenChange", recalculoMultipaso);
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+          recalculoMultipaso();
+        }
+      });
       window.addEventListener("load", actualizarVariablesResponsive);
 
       Reveal.initialize({
@@ -303,8 +317,9 @@
         maxScale: 1.2
       });
       if (window.Reveal && typeof Reveal.on === "function") {
-        Reveal.on("ready", actualizarVariablesResponsive);
-        Reveal.on("slidechanged", actualizarVariablesResponsive);
+        Reveal.on("ready", recalculoMultipaso);
+        Reveal.on("slidechanged", recalculoMultipaso);
+        Reveal.on("resize", recalculoMultipaso);
       }
     </script>
   </body>
