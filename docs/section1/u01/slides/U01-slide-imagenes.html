@@ -55,7 +55,7 @@
       }
       .media-img {
         max-width: 92%;
-        max-height: 40vh;
+        max-height: var(--img-max-h, 40vh);
         height: auto;
         width: auto;
         display: block;
@@ -68,17 +68,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 42vh;
+        min-height: var(--img-wrap-h, 42vh);
       }
       .slide-image .media-img {
-        max-height: 40vh;
+        max-height: var(--img-max-h, 40vh);
       }
       .slide-image.large .media-img {
-        max-height: 34vh;
+        max-height: var(--img-max-h-large, 34vh);
       }
       .slide-image.logo .media-img {
-        max-height: 26vh;
-        max-width: 60vw;
+        max-height: var(--img-max-h-logo, 26vh);
+        max-width: var(--img-max-w-logo, 60vw);
       }
       .tagline {
         color: var(--accent);
@@ -257,6 +257,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
     <script>
+      function actualizarVariablesResponsive() {
+        const w = window.innerWidth || 1280;
+        const h = window.innerHeight || 720;
+        const corto = Math.min(w, h);
+        const imgMaxH = Math.max(0.28, Math.min(0.48, h / 1000)) * 100;
+        const imgWrapH = Math.max(0.34, Math.min(0.55, h / 900)) * 100;
+        const imgMaxHLarge = Math.max(0.26, Math.min(0.42, (h - 220) / 900)) * 100;
+        const imgMaxHLogo = Math.max(0.18, Math.min(0.28, h / 1200)) * 100;
+        const imgMaxWLogo = Math.max(45, Math.min(70, (corto / 12)));
+
+        const root = document.documentElement.style;
+        root.setProperty("--img-max-h", imgMaxH.toFixed(1) + "vh");
+        root.setProperty("--img-wrap-h", imgWrapH.toFixed(1) + "vh");
+        root.setProperty("--img-max-h-large", imgMaxHLarge.toFixed(1) + "vh");
+        root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
+        root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
+      }
+
+      window.addEventListener("resize", actualizarVariablesResponsive);
+      window.addEventListener("load", actualizarVariablesResponsive);
+
       Reveal.initialize({
         hash: true,
         slideNumber: true,
