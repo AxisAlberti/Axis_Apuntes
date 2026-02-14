@@ -69,7 +69,7 @@ Errors: 12
 Test: 7  Address: 0003f2a8c  Expected: ffffffff  Actual: fff7ffff
 ```
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/memtest86_errors.png)
   <figcaption>Ejemplo de MemTest con errores: los campos "Errors" y la lista de direcciones con valores "Expected/Actual" indican fallos de memoria.</figcaption>
 </figure>
@@ -108,22 +108,22 @@ Estos pasos y advertencias de ESD aparecen en guias de uso profesional.
 
 **Nota sobre el chip interno:** no existe un unico chip estandar en estas tarjetas. En algunos modelos se observa el **IT8892E** como ejemplo; depende del fabricante.
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/post_card_pcie.jpg)
   <figcaption>Tarjeta POST para PCI, PCIe y LPC (ejemplo de hardware real).</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/post_card_7segment.jpg)
   <figcaption>Displays de 7 segmentos donde se muestran los codigos POST.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/minipci_minipcie.jpg)
   <figcaption>Comparativa de tarjetas MiniPCI y MiniPCIe (portatiles).</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/post_card_it8892e.jpg)
   <figcaption>Ejemplo de chip IT8892E en una tarjeta POST (depende del modelo).</figcaption>
 </figure>
@@ -140,12 +140,12 @@ En placas base actuales, el diagnostico POST tambien puede salir por **LPC** y s
 
 **Chip interno habitual:** algunas tarjetas LPC modernas usan **CPLD (Intel/Altera Max V)** para decodificar el bus LPC y mostrar el codigo en el display. 
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/post_card_pcie.jpg)
   <figcaption>Tarjeta POST con conector compatible PCIe/LPC (ejemplo).</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/tpm_asus_header.jpg)
   <figcaption>Header TPM en placa base (usado como TPM/Port 80 en algunos modelos).</figcaption>
 </figure>
@@ -202,7 +202,7 @@ Offline_Uncorrectable: 3
 dd: failed to open '/dev/sdX': Permission denied
 ```
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/7ziplogo.svg)
   <figcaption>Logo de 7-Zip (software libre de compresion).</figcaption>
 </figure>
@@ -250,22 +250,22 @@ Image saved to /home/partimag/PC_Cliente_2026-02-04
 No space left on device while writing image.
 ```
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/clonezilla_logo.png)
   <figcaption>Logo de Clonezilla.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/clonezilla_screenshot.png)
   <figcaption>Interfaz de Clonezilla en modo texto.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/clonezilla_flujo.png)
   <figcaption>Flujo basico: origen -> imagen -> destino. Leyenda: azul = origen, verde = imagen, naranja = destino, morado = almacen externo.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/rufus_logo.png)
   <figcaption>Logo de Rufus (creacion de USB booteables).</figcaption>
 </figure>
@@ -310,12 +310,12 @@ Applied pending operations successfully.
 Error: Unable to apply operation. The drive is busy or mounted.
 ```
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/gparted_logo.svg)
   <figcaption>Logo de GParted (particionado de discos).</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/hirens_logo.jpg)
   <figcaption>Logo de Hiren's BootCD PE (entorno de rescate).</figcaption>
 </figure>
@@ -330,7 +330,7 @@ Error: Unable to apply operation. The drive is busy or mounted.
 - Usar versiones oficiales y actualizadas.
 - Explicar al cliente que los gestores de contraseñas requieren una clave maestra segura.
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/bitwarden_logo.svg)
   <figcaption>Logo de Bitwarden (gestor de contraseñas).</figcaption>
 </figure>
@@ -362,7 +362,7 @@ PORT   STATE SERVICE VERSION
 Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
 ```
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/logo_wireshark.jpg)
   <figcaption>Logo de Wireshark (analisis de trafico).</figcaption>
 </figure>
@@ -372,7 +372,7 @@ Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
 - **LibreOffice**: documentacion de informes y presupuestos.
 - **GIMP**: edicion de imagenes para informes o manuales.
 
-<figure markdown>
+<figure markdown="1">
   ![](../assets/libreoffice_logo.svg)
   <figcaption>Logo de LibreOffice (suite ofimatica libre).</figcaption>
 </figure>
@@ -500,4 +500,4 @@ A la hora de elegir software, se recomienda:
 
 
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 14/02/2026

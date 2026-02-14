@@ -47,22 +47,22 @@ La **memoria RAM** es la **memoria principal** del sistema. Es **rápida** y **v
 
 Los módulos de RAM se fabrican en distintos formatos. En sobremesa se usan **DIMM** y en portátiles **SO-DIMM**. Cada generación tiene muescas y pines específicos para evitar incompatibilidades.
 
-<figure markdown>
+<figure markdown="1">
   ![](assets/ram/ram_slots_motherboard.jpg)
   <figcaption>Ranuras DIMM en una placa base. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
  ![](assets/ram/ddr4_dimm.jpg)
  <figcaption>Módulo DIMM DDR4. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
  ![](assets/ram/ddr5_module.jpg)
  <figcaption>Módulo DDR5 UDIMM. Fuente: Wikimedia Commons.</figcaption>
 </figure>
 
-<figure markdown>
+<figure markdown="1">
  ![](assets/ram/sodimm_modules.jpg)
  <figcaption>Ejemplos de módulos SO-DIMM. Fuente: Wikimedia Commons.</figcaption>
 </figure>
@@ -130,7 +130,7 @@ El rendimiento real no depende solo de la velocidad, sino de tres factores princ
 
 Si al reiniciar aparecen inestabilidades o reinicios, volver a BIOS y seleccionar **perfil estándar JEDEC** o reducir el perfil a uno inferior.
 
-<figure markdown>
+<figure markdown="1">
   ![](assets/ram/dual_channel_slots.jpg)
   <figcaption>Ejemplo de ranuras para doble canal. Fuente: Wikimedia Commons.</figcaption>
 </figure>
@@ -169,7 +169,7 @@ La memoria **ECC** detecta y corrige errores de datos. Se usa sobre todo en serv
 
 La RAM se sitúa entre la caché de la CPU y el almacenamiento. Es un punto de equilibrio entre **velocidad** y **capacidad**.
 
-<figure markdown>
+<figure markdown="1">
  ![](assets/memoria/piramide_memoria.webp)
  <figcaption>Jerarquía de memorias: caché, RAM y almacenamiento.</figcaption>
 </figure>
@@ -227,4 +227,4 @@ Pasos típicos:
 - Wikimedia Commons – Four SDRAM DIMM slots on motherboard: https://commons.wikimedia.org/wiki/File:Four_SDRAM_DIMM_slots_on_a_computer_motherboard.jpg
 - Wikimedia Commons – Dual channel slots: https://commons.wikimedia.org/wiki/File:Dual_channel_slots.jpg
 
-**Fecha de actualización:** 10/02/2026
+**Fecha de actualización:** 14/02/2026
