@@ -9,6 +9,7 @@ nav:
 - Principal: index.md
 - Montaje y Mantenimiento:
   - section1/index.md
+  - Recursos - Manual OCCT (PSU): section1/recursos/manual-occt-fuente.md
   - Slides (Modulo): section1/slides/index.md
   - Unidad 00 - Sistemas de numeracion:
     - section1/u00/index.md
@@ -151,7 +152,11 @@ markdown_extensions:
 - pymdownx.highlight:
     anchor_linenums: true
 - pymdownx.inlinehilite
-- pymdownx.superfences
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
 - pymdownx.snippets:
     auto_append:
     - includes/abbreviations.md
@@ -166,7 +171,6 @@ markdown_extensions:
 - pymdownx.keys
 - pymdownx.mark
 - pymdownx.smartsymbols
-- pymdownx.superfences
 - pymdownx.tilde
 - pymdownx.tabbed:
     alternate_style: true
@@ -174,6 +178,9 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.blocks.caption
 plugins:
+
+- mermaid2
+
 - tags:
     tags_file: tags.md
 - search:

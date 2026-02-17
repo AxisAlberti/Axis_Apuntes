@@ -54,6 +54,47 @@ Comprender estas fases ayuda a diagnosticar fallos, interpretar mensajes y reduc
    - UEFI carga un archivo EFI desde la particion ESP.
    - El sistema operativo toma el control del hardware.
 
+### 2.1 Diagrama de flujo del arranque (con decisiones y errores)
+
+```mermaid
+%%{init: {'theme': 'base'}}%%
+flowchart TD
+
+    P[⚡ Power On]:::power
+    F[🧠 UEFI Firmware Init]:::firmware
+    POST[🔍 POST Check]:::process
+    HWOK{¿Hardware OK?}:::decision
+    ERRHW[❌ Error Hardware<br>Beep Code / LED]:::error
+    BOOTMGR[📂 Boot Manager]:::process
+    DEVFOUND{¿Dispositivo Boot<br>Detectado?}:::decision
+    NOBOOT[❌ No Boot Device<br>BIOS Setup]:::error
+    SECURE{¿Secure Boot OK?}:::decision
+    SECERR[❌ Secure Boot Error]:::error
+    LOADER[📦 OS Loader]:::process
+    KERNEL[🐧 Kernel Init]:::process
+    PANIC{¿Kernel Error?}:::decision
+    KPANIC[💥 Kernel Panic]:::error
+    LOGIN[🔐 Login / Sistema Operativo]:::success
+
+    P --> F --> POST --> HWOK
+    HWOK -- No --> ERRHW
+    HWOK -- Sí --> BOOTMGR
+    BOOTMGR --> DEVFOUND
+    DEVFOUND -- No --> NOBOOT
+    DEVFOUND -- Sí --> SECURE
+    SECURE -- No --> SECERR
+    SECURE -- Sí --> LOADER --> KERNEL --> PANIC
+    PANIC -- Sí --> KPANIC
+    PANIC -- No --> LOGIN
+
+    classDef power fill:#ff6b6b,color:#fff,stroke:#c92a2a,stroke-width:3px;
+    classDef firmware fill:#4dabf7,color:#fff,stroke:#1864ab,stroke-width:3px;
+    classDef process fill:#74c69d,color:#fff,stroke:#2b8a3e,stroke-width:2px;
+    classDef decision fill:#f1c40f,color:#000,stroke:#d4ac0d,stroke-width:2px;
+    classDef error fill:#e74c3c,color:#fff,stroke:#922b21,stroke-width:2px;
+    classDef success fill:#2ecc71,color:#fff,stroke:#1e8449,stroke-width:2px;
+```
+
 <figure>
   <img src="../assets/pccomponentes_uefi_bios.jpg" alt="Interfaz UEFI moderna durante el arranque" style="width:100%;height:auto;max-width:700px;display:block;margin:0 auto;" />
   <figcaption style="font-size:0.85em;color:#666;text-align:center;">Interfaz UEFI moderna. Fuente: PCComponentes.</figcaption>
@@ -367,4 +408,4 @@ Una buena practica es revisar primero lo basico: alimentacion, memoria y conexio
 - https://commons.wikimedia.org/wiki/File:GRUB_2%27s_boot_menu.png
 
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 17/02/2026
