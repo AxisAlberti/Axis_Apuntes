@@ -32,13 +32,41 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 - **Rincón de Varo** – Canal de YouTube de hardware y montaje de PC  
   [Visitar canal](https://www.youtube.com/channel/UCnxubBCPlg0hHdZw_UehrTw){:target="_blank" rel="noopener"}
 
-### 🧰 Herramientas útiles
+### 🧰 Herramientas útiles (por componente)
+
+#### 🧠 CPU (procesador)
+- **Intel Processor Diagnostic Tool** – Diagnóstico oficial para procesadores Intel  
+  [Abrir sitio](https://www.intel.com/content/www/us/en/download/15951/intel-processor-diagnostic-tool.html){:target="_blank" rel="noopener"}
+- **OCCT (Personal)** – Pruebas de estabilidad y estrés para CPU, GPU y PSU  
+  [Abrir sitio](https://www.ocbase.com/occt/personal){:target="_blank" rel="noopener"}
+- **AMD Ryzen Master** – Ajuste y monitorización para procesadores AMD Ryzen  
+  [Abrir sitio](https://www.amd.com/en/products/software/ryzen-master.html){:target="_blank" rel="noopener"}
+
+#### 🧠 RAM (memoria)
+- **MemTest86 (descarga oficial)** – Diagnóstico de memoria RAM  
+  [Abrir sitio](https://www.memtest86.com/){:target="_blank" rel="noopener"}
+
+#### 💾 Discos y almacenamiento
+- **Samsung Magician** – Software de gestión y diagnóstico para SSD Samsung  
+  [Abrir sitio](https://www.samsung.com/us/memory-storage/magician-software/){:target="_blank" rel="noopener"}
+- **CrystalDiskInfo / CrystalDiskMark (descargas)** – Salud SMART y rendimiento de discos  
+  [Abrir sitio](https://crystalmark.info/en/download/){:target="_blank" rel="noopener"}
+- **Smartmontools (guía en español)** – Monitorización SMART de almacenamiento  
+  [Abrir guía](https://weblinus.com/smartmontools-herramientas-de-monitoreo-smart-para-dispositivos-de-almacenamiento/){:target="_blank" rel="noopener"}
+- **Clonezilla (descarga oficial)** – Clonado e imagen de discos  
+  [Abrir descargas](https://clonezilla.org/downloads.php){:target="_blank" rel="noopener"}
+
+#### 🛟 Rescate y recuperación
+- **Hiren's BootCD PE (v15.2)** – Entorno de rescate y utilidades  
+  [Abrir sitio](https://www.hirensbootcd.org/hbcd-v152/){:target="_blank" rel="noopener"}
+- **Medicat USB** – Suite de herramientas de rescate en USB  
+  [Abrir sitio](https://medicatusb.com/){:target="_blank" rel="noopener"}
+
+#### 🔧 Diagnóstico y soporte general
 - **Calculadora de Fuente de Alimentación (Geeknetic)** – Calculadora de potencia  
   [Abrir herramienta](https://www.geeknetic.es/calculadora-fuente-alimentacion/){:target="_blank" rel="noopener"}
 - **iFixit (España)** – Guías de reparación y desmontaje  
   [Abrir sitio](https://es.ifixit.com/){:target="_blank" rel="noopener"}
-- **Clonezilla (descarga oficial)** – Clonado e imagen de discos  
-  [Abrir descargas](https://clonezilla.org/downloads.php){:target="_blank" rel="noopener"}
 
 ### 📰 Noticias y guías (España)
 - **GEEKNETIC** – Noticias y guías de hardware  
