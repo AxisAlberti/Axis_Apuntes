@@ -37,6 +37,8 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
   [Abrir herramienta](https://www.geeknetic.es/calculadora-fuente-alimentacion/){:target="_blank" rel="noopener"}
 - **iFixit (España)** – Guías de reparación y desmontaje  
   [Abrir sitio](https://es.ifixit.com/){:target="_blank" rel="noopener"}
+- **Clonezilla (descarga oficial)** – Clonado e imagen de discos  
+  [Abrir descargas](https://clonezilla.org/downloads.php){:target="_blank" rel="noopener"}
 
 ### 📰 Noticias y guías (España)
 - **GEEKNETIC** – Noticias y guías de hardware  
@@ -94,4 +96,4 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 
 
-**Fecha de actualización:** 11/02/2026
+**Fecha de actualización:** 17/02/2026
