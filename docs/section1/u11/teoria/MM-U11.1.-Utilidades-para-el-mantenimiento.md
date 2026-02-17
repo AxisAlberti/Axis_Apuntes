@@ -460,6 +460,7 @@ A la hora de elegir software, se recomienda:
 - Rufus: https://rufus.ie/
 - Ventoy: https://www.ventoy.net/
 - Clonezilla: https://clonezilla.org/
+- Clonezilla (descarga oficial): https://clonezilla.org/downloads.php
 - MemTest86: https://www.memtest86.com/
 - HWiNFO: https://www.hwinfo.com/
 - CPU-Z: https://www.cpuid.com/softwares/cpu-z.html
@@ -500,4 +501,4 @@ A la hora de elegir software, se recomienda:
 
 
 
-**Fecha de actualización:** 14/02/2026
+**Fecha de actualización:** 17/02/2026
