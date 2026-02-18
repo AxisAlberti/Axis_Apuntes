@@ -108,6 +108,23 @@ También es importante incluir imágenes o diagramas para ilustrar conceptos com
 - Incluye todas las imagenes que consideres oportunas para complementar adecuadamente los apuntes.
 - Estas autorizado a descargar todas las imagenes que consideres oportunas.
 
+## Normas para diagramas en apuntes
+
+- Cuando un concepto lo requiera, incluir diagramas explicativos en los apuntes (flujo, decisiones, relaciones entre componentes o procesos).
+- Priorizar siempre diagramas e imágenes en español. Si un diagrama o imagen está en otro idioma, no incluirlo.
+- Las búsquedas de imágenes/diagramas y fuentes para apuntes deben hacerse en español.
+- Si ayuda a clarificar, usar diagramas Mermaid dentro del propio `.md` con bloques:
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Proceso]
+```
+
+- En temas de diagnóstico o secuencias técnicas, incluir decisiones y rutas de error cuando aporte valor didáctico.
+- Insertar el diagrama en el punto temático que corresponda (no dejarlo como prueba aislada fuera del contenido final).
+- Si se crea una prueba temporal de diagrama, eliminar después el fichero de prueba y cualquier enlace en `mkdocs.yml` o índices.
+- Validar siempre visualización final con `mkdocs build` y/o `mkdocs serve` para comprobar que el diagrama renderiza y no queda como bloque de código.
+
 ## 1. Estructura del repositorio
 
 ### 1.1. Carpeta `docs/`
@@ -391,3 +408,5 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 
 
 **Fecha de actualización:** 06/02/2026
+
+**Fecha de actualización:** 18/02/2026

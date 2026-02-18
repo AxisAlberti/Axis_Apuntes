@@ -19,6 +19,76 @@ tags:
 
 En un taller real, el software de mantenimiento es tan importante como las herramientas fisicas. Esta unidad recopila utilidades actuales, tanto libres como con licencia, y explica cuando usarlas y como instalarlas de forma segura.
 
+### Esquema a seguir antes de realizar una practica/resolucion problemas taller
+
+**Protocolo Técnico Universal (con Documentación Previa)**
+
+Este protocolo aplica a:
+
+- 🧪 Practica
+- 🔧 Incidencia
+- 🖥 Diagnostico
+- 🌐 Problema de red
+- 💾 Error de sistema
+
+```mermaid
+%%{init: {'theme': 'base'}}%%
+flowchart TD
+
+    START[📄 Leer enunciado / Descripción del problema]:::main
+
+    ANALISIS{🧠 ¿Comprendo la situación?}:::decision
+    ACLARAR[❓ Identificar qué se pide<br>o qué está fallando]:::action
+    INFO[📚 Consultar documentación técnica]:::action
+
+    OBJ{🎯 ¿Está claro el objetivo o síntoma?}:::decision
+
+    PLAN[📝 Diseñar plan de actuación]:::action
+    DOCPLAN[📋 Documentar qué se va a hacer<br>antes de intervenir]:::action
+
+    RIESGO{⚠️ ¿Hay riesgo para datos o hardware?}:::decision
+    BACKUP[💾 Realizar copia / Medidas preventivas]:::action
+
+    EJEC[⚙️ Ejecutar intervención controlada]:::action
+
+    RESULT{🔍 ¿Resultado esperado?}:::decision
+    DIAG[🧪 Diagnosticar causa del error]:::action
+    REGISTRO[📸 Registrar pasos y resultados]:::action
+
+    VALIDAR{✔️ ¿Problema resuelto<br>o práctica completada?}:::decision
+    AJUSTE[🔄 Revisar plan y ajustar]:::action
+
+    INFORME[📑 Elaborar informe técnico final]:::success
+
+    START --> ANALISIS
+
+    ANALISIS -- No --> ACLARAR --> INFO --> OBJ
+    ANALISIS -- Sí --> OBJ
+
+    OBJ -- No --> ACLARAR
+    OBJ -- Sí --> PLAN
+
+    PLAN --> DOCPLAN --> RIESGO
+
+    RIESGO -- Sí --> BACKUP --> EJEC
+    RIESGO -- No --> EJEC
+
+    EJEC --> RESULT
+
+    RESULT -- No --> DIAG --> AJUSTE --> DOCPLAN
+    RESULT -- Sí --> REGISTRO
+
+    REGISTRO --> VALIDAR
+
+    VALIDAR -- No --> AJUSTE
+    VALIDAR -- Sí --> INFORME
+
+    classDef main fill:#4dabf7,color:#fff,stroke:#1864ab,stroke-width:3px;
+    classDef decision fill:#f1c40f,color:#000,stroke:#d4ac0d,stroke-width:2px;
+    classDef action fill:#74c69d,color:#fff,stroke:#2b8a3e,stroke-width:2px;
+    classDef success fill:#2ecc71,color:#fff,stroke:#1e8449,stroke-width:2px;
+```
+
 ### 1. Concepto y objetivo
 
 Las utilidades de mantenimiento permiten:
@@ -501,4 +571,4 @@ A la hora de elegir software, se recomienda:
 
 
 
-**Fecha de actualización:** 17/02/2026
+**Fecha de actualización:** 18/02/2026
