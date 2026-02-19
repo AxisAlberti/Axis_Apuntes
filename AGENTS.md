@@ -11,6 +11,7 @@ Este repositorio contiene material educativo para módulos de formación profesi
 - Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
 - En cuestiones tipo test y de desarrollo, no se incluirán preguntas que obliguen a memorizar datos numéricos concretos (por ejemplo, nº de núcleos, tasas, latencias u otros valores específicos de dispositivos o conceptos).
 - En preguntas tipo test y de desarrollo, los enunciados deben empezar por ¿ y terminar en ? y respetar tildes y ortografía correcta.
+- En preguntas tipo test no se incluirán casos de taller. Si excepcionalmente se incluyen, deberán ser menos del 10% del total de preguntas del fichero.
 
 ## Estructura de documentos teóricos (teoria/)
 
@@ -410,3 +411,5 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 **Fecha de actualización:** 06/02/2026
 
 **Fecha de actualización:** 18/02/2026
+
+**Fecha de actualización:** 19/02/2026

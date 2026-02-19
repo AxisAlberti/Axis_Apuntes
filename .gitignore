@@ -1,3 +1,6 @@
 site/
-**/gift/
-!docs/section1/gift/SMR-categorias.gift
+/scripts
+
+# Permitir versionado de cuestionarios GIFT
+!*.gift
+!**/*.gift

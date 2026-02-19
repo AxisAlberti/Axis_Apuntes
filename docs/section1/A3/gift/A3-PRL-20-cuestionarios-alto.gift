@@ -1,0 +1,143 @@
+$CATEGORY: SMR/Section1/Anexo 3 - Prevencion de riesgos laborales/Alto
+
+// Cuestionario PRL - Anexo 3 (Nivel alto) | Formato GIFT con penalizacion
+
+::PRL-A1:: En PRL, ¿qué obligación legal recae sobre el empresario según la Ley 31/1995 respecto a la seguridad y salud en el trabajo? {
+=Garantizar la seguridad y salud de los trabajadores en todos los aspectos relacionados con el trabajo #Correcto: la Ley 31/1995 establece esta obligación general.
+~%-33.3333%Solo informar si hay accidentes #Incorrecto: la obligación es preventiva y continua.
+~%-33.3333%Delegar totalmente en el trabajador #Incorrecto: la responsabilidad principal es del empresario.
+~%-33.3333%Limitarse a entregar EPIs sin evaluar riesgos #Incorrecto: la evaluación y planificación son obligatorias.
+}
+
+::PRL-A2:: Según la Ley 31/1995, la vigilancia de la salud: {
+=Debe garantizarse periódicamente en función de los riesgos y con consentimiento del trabajador #Correcto: obligación del empresario con consentimiento.
+~%-33.3333%Solo aplica a trabajos con maquinaria pesada #Incorrecto: aplica a todos los riesgos.
+~%-33.3333%Es voluntaria para la empresa #Incorrecto: es obligatoria con matices.
+~%-33.3333%Se sustituye por cartelería preventiva #Incorrecto: no sustituye la vigilancia.
+}
+
+::PRL-A3:: ¿Qué documento exige la Ley 31/1995 dentro de la planificación preventiva? {
+=Evaluación de riesgos y planificación de la actividad preventiva #Correcto: son documentos clave.
+~%-33.3333%Solo un registro de accidentes #Incorrecto: es insuficiente.
+~%-33.3333%Un inventario de hardware #Incorrecto: no es un requisito de PRL.
+~%-33.3333%Un calendario de vacaciones #Incorrecto: no es documentación preventiva.
+}
+
+::PRL-A4:: En trabajos con pantallas de visualización, el RD 488/1997 establece que: {
+=Deben cumplirse disposiciones mínimas sobre equipo, entorno y organización #Correcto: el anexo regula condiciones mínimas.
+~%-33.3333%Solo aplica a portátiles #Incorrecto: aplica a equipos con PVD en general.
+~%-33.3333%No requiere evaluación de riesgos #Incorrecto: sí requiere evaluación específica.
+~%-33.3333%El trabajador asume toda la responsabilidad #Incorrecto: hay obligación empresarial.
+}
+
+::PRL-A5:: El RD 486/1997 regula principalmente: {
+=Condiciones mínimas de seguridad y salud en los lugares de trabajo #Correcto: es su objeto.
+~%-33.3333%Uso seguro de equipos de trabajo #Incorrecto: eso es RD 1215/1997.
+~%-33.3333%Trabajos con pantallas de visualización #Incorrecto: eso es RD 488/1997.
+~%-33.3333%Riesgos psicosociales de forma exclusiva #Incorrecto: es más amplio.
+}
+
+::PRL-A6:: En el RD 1215/1997, “equipo de trabajo” se define como: {
+=Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo #Correcto: definición legal.
+~%-33.3333%Solo maquinaria pesada #Incorrecto: es mucho más amplio.
+~%-33.3333%Solo herramientas eléctricas #Incorrecto: no se limita a eléctricas.
+~%-33.3333%Solo equipos informáticos #Incorrecto: abarca todo equipo de trabajo.
+}
+
+::PRL-A7:: Según el RD 1215/1997, una “zona peligrosa” es: {
+=Cualquier zona alrededor del equipo donde la presencia del trabajador entrañe riesgo #Correcto: definición legal.
+~%-33.3333%Solo el interior del equipo #Incorrecto: incluye interior y alrededor.
+~%-33.3333%Solo zonas con señalización roja #Incorrecto: no depende del color.
+~%-33.3333%Solo zonas con electricidad #Incorrecto: el riesgo puede ser de cualquier tipo.
+}
+
+::PRL-A8:: ¿Qué implica “utilización de un equipo de trabajo” según el RD 1215/1997? {
+=Acciones como puesta en marcha, uso, transporte, mantenimiento y limpieza #Correcto: definición completa.
+~%-33.3333%Solo encender y apagar #Incorrecto: es más amplio.
+~%-33.3333%Solo mantenimiento técnico #Incorrecto: incluye uso ordinario.
+~%-33.3333%Solo cuando hay reparación #Incorrecto: incluye toda actividad.
+}
+
+::PRL-A9:: En PRL, identificar riesgos eléctricos en montaje implica: {
+=Valorar descargas por equipos conectados, cables dañados y electricidad estática #Correcto: riesgos típicos.
+~%-33.3333%Centrarse solo en ergonomía #Incorrecto: no cubre el riesgo eléctrico.
+~%-33.3333%Ignorar electricidad estática #Incorrecto: es relevante en hardware.
+~%-33.3333%Eliminar la conexión a tierra #Incorrecto: aumenta el riesgo.
+}
+
+::PRL-A10:: Una medida preventiva prioritaria ante riesgo por pantallas es: {
+=Adecuar iluminación, postura y pausas según evaluación #Correcto: coherente con RD 488/1997.
+~%-33.3333%Aumentar brillo máximo #Incorrecto: puede aumentar fatiga.
+~%-33.3333%Eliminar pausas #Incorrecto: empeora el riesgo.
+~%-33.3333%Trabajar a oscuras #Incorrecto: no es seguro.
+}
+
+::PRL-A11:: En evaluación de riesgos, el orden correcto es: {
+=Identificar peligros, valorar riesgos y planificar medidas #Correcto: secuencia básica.
+~%-33.3333%Planificar primero y evaluar después #Incorrecto: no es correcto.
+~%-33.3333%Solo identificar peligros #Incorrecto: falta valoración y planificación.
+~%-33.3333%Hacer encuestas sin análisis técnico #Incorrecto: insuficiente.
+}
+
+::PRL-A12:: Un ejemplo de riesgo psicosocial en el área informática es: {
+=Estrés por sobrecarga y presión de plazos #Correcto: riesgo psicosocial.
+~%-33.3333%Caídas por cables #Incorrecto: riesgo físico.
+~%-33.3333%Descargas por cables pelados #Incorrecto: riesgo eléctrico.
+~%-33.3333%Cortes por carcasas #Incorrecto: riesgo físico.
+}
+
+::PRL-A13:: La organización preventiva debe incluir: {
+=Documentación, coordinación y comunicación eficaz entre equipos #Correcto: gestión preventiva.
+~%-33.3333%Solo carteles informativos #Incorrecto: insuficiente.
+~%-33.3333%Solo EPIs sin formación #Incorrecto: incompleto.
+~%-33.3333%Solo revisiones médicas aisladas #Incorrecto: la prevención es integral.
+}
+
+::PRL-A14:: En el RD 486/1997, las condiciones ambientales buscan: {
+=Evitar riesgos y molestias por temperaturas, corrientes y radiación #Correcto: criterio general.
+~%-33.3333%Maximizar calor para confort #Incorrecto: evita extremos.
+~%-33.3333%Permitir humedades extremas #Incorrecto: deben evitarse.
+~%-33.3333%Eliminar toda ventilación #Incorrecto: la ventilación es necesaria.
+}
+
+::PRL-A15:: En PRL, la formación de los trabajadores debe ser: {
+=Específica al puesto y a los riesgos existentes #Correcto: obligación legal.
+~%-33.3333%Genérica y opcional #Incorrecto: debe ser específica y obligatoria.
+~%-33.3333%Solo al inicio del contrato #Incorrecto: debe actualizarse.
+~%-33.3333%Sustituida por manuales sin explicación #Incorrecto: no es suficiente.
+}
+
+::PRL-A16:: Una acción adecuada ante riesgos de caídas en el taller es: {
+=Mantener pasillos despejados y cables ordenados #Correcto: reduce tropiezos.
+~%-33.3333%Apilar cajas en zonas de paso #Incorrecto: aumenta el riesgo.
+~%-33.3333%Trabajar con el suelo mojado #Incorrecto: incrementa caídas.
+~%-33.3333%Anular señalización #Incorrecto: empeora la seguridad.
+}
+
+::PRL-A17:: En el entorno informático, la electricidad estática puede: {
+=Dańar componentes electrónicos y generar riesgo en manipulación #Correcto: riesgo típico.
+~%-33.3333%No tiene relevancia práctica #Incorrecto: sí afecta componentes.
+~%-33.3333%Sustituir la necesidad de tierra #Incorrecto: no es cierto.
+~%-33.3333%Eliminarse solo con ventilación #Incorrecto: requiere medidas específicas.
+}
+
+::PRL-A18:: El concepto de “cultura preventiva” implica: {
+=Integrar la prevención en la organización y en las rutinas de trabajo #Correcto: objetivo de PRL.
+~%-33.3333%Actuar solo tras un accidente #Incorrecto: es reactivo.
+~%-33.3333%Delegar la prevención solo en un técnico #Incorrecto: es de toda la organización.
+~%-33.3333%Reducir la prevención a carteles #Incorrecto: es insuficiente.
+}
+
+::PRL-A19:: En PRL, el orden y limpieza del puesto contribuye a: {
+=Reducir riesgos físicos y mejorar la seguridad #Correcto: previene caídas y golpes.
+~%-33.3333%Aumentar la fatiga visual #Incorrecto: no es su efecto.
+~%-33.3333%Incrementar la carga mental #Incorrecto: suele reducirla.
+~%-33.3333%Eliminar la necesidad de evaluación #Incorrecto: no la sustituye.
+}
+
+::PRL-A20:: En la gestión preventiva, la documentación exigida por la Ley 31/1995 incluye: {
+=Plan de prevención y evaluación de riesgos #Correcto: documentación básica.
+~%-33.3333%Solo registros de asistencia #Incorrecto: no es documentación preventiva.
+~%-33.3333%Solo inventarios de equipos #Incorrecto: no es requisito legal de PRL.
+~%-33.3333%Solo partes de accidentes #Incorrecto: no es suficiente.
+}
