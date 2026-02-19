@@ -5,6 +5,9 @@ Este repositorio contiene material educativo para módulos de formación profesi
 ## Normas de redacción de apuntes
 
 - Los apuntes deben ser claros, didácticos y orientados al aprendizaje del alumnado.
+- No se permitirán faltas de ortografía en ningún contenido generado o editado.
+- Todas las frases y todas las preguntas deben comenzar por mayúscula.
+- Se deben seguir las reglas ortográficas del español (acentuación, puntuación y uso correcto de signos de interrogación y exclamación de apertura y cierre).
 - Cada vez que se edite un fichero `.md`, se añadirá al final una línea con la fecha de actualización, con el formato: `**Fecha de actualización:** 31/01/2026`.
 - Las cuestiones generadas se guardarán en un fichero en la raíz del repositorio. El nombre del fichero debe incluir el nombre del módulo y el nivel de dificultad.
 - Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
