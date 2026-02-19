@@ -1,0 +1,243 @@
+$CATEGORY: SMR/Test/Conexiones_externas/Basico
+// UD04 Conexiones externas Nivel Bajo V8
+// Fuente única: docs/section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
+
+::UD04_Bajo_V8_001::
+¿Qué se consigue al identificar correctamente la etiqueta del header en placa? {
+=Conectar cada cable en su función correspondiente con menor riesgo de error # Correcta.
+~%-33.3333%Aumentar el rendimiento del procesador automáticamente # Incorrecta.
+~%-33.3333%Duplicar la capacidad de almacenamiento instalada # Incorrecta.
+~%-33.3333%Eliminar la necesidad de pruebas finales # Incorrecta.
+}
+
+::UD04_Bajo_V8_002::
+¿Qué se consigue al identificar correctamente la etiqueta del header en placa durante una comprobación profesional? {
+=Conectar cada cable en su función correspondiente con menor riesgo de error # Correcta.
+~%-33.3333%Aumentar el rendimiento del procesador automáticamente # Incorrecta.
+~%-33.3333%Duplicar la capacidad de almacenamiento instalada # Incorrecta.
+~%-33.3333%Eliminar la necesidad de pruebas finales # Incorrecta.
+}
+
+::UD04_Bajo_V8_003::
+¿Qué se consigue al identificar correctamente la etiqueta del header en placa en una validación final de la unidad? {
+=Conectar cada cable en su función correspondiente con menor riesgo de error # Correcta.
+~%-33.3333%Aumentar el rendimiento del procesador automáticamente # Incorrecta.
+~%-33.3333%Duplicar la capacidad de almacenamiento instalada # Incorrecta.
+~%-33.3333%Eliminar la necesidad de pruebas finales # Incorrecta.
+}
+
+::UD04_Bajo_V8_004::
+¿Qué importancia tiene respetar la orientación del conector interno? {
+=Evitar inversión y posibles fallos de funcionamiento # Correcta.
+~%-33.3333%Activar características avanzadas ocultas # Incorrecta.
+~%-33.3333%Mejorar por sí solo la refrigeración del equipo # Incorrecta.
+~%-33.3333%Reemplazar el manual de la placa base # Incorrecta.
+}
+
+::UD04_Bajo_V8_005::
+¿Qué importancia tiene respetar la orientación del conector interno durante una comprobación profesional? {
+=Evitar inversión y posibles fallos de funcionamiento # Correcta.
+~%-33.3333%Activar características avanzadas ocultas # Incorrecta.
+~%-33.3333%Mejorar por sí solo la refrigeración del equipo # Incorrecta.
+~%-33.3333%Reemplazar el manual de la placa base # Incorrecta.
+}
+
+::UD04_Bajo_V8_006::
+¿Qué importancia tiene respetar la orientación del conector interno en una validación final de la unidad? {
+=Evitar inversión y posibles fallos de funcionamiento # Correcta.
+~%-33.3333%Activar características avanzadas ocultas # Incorrecta.
+~%-33.3333%Mejorar por sí solo la refrigeración del equipo # Incorrecta.
+~%-33.3333%Reemplazar el manual de la placa base # Incorrecta.
+}
+
+::UD04_Bajo_V8_007::
+¿Qué elemento del frontal se asocia al reset del equipo? {
+=El pulsador conectado al bloque F_PANEL # Correcta.
+~%-33.3333%El puerto USB interno de datos # Incorrecta.
+~%-33.3333%La conexión de audio frontal # Incorrecta.
+~%-33.3333%El conector del ventilador de CPU # Incorrecta.
+}
+
+::UD04_Bajo_V8_008::
+¿Qué elemento del frontal se asocia al reset del equipo durante una comprobación profesional? {
+=El pulsador conectado al bloque F_PANEL # Correcta.
+~%-33.3333%El puerto USB interno de datos # Incorrecta.
+~%-33.3333%La conexión de audio frontal # Incorrecta.
+~%-33.3333%El conector del ventilador de CPU # Incorrecta.
+}
+
+::UD04_Bajo_V8_009::
+¿Qué elemento del frontal se asocia al reset del equipo en una validación final de la unidad? {
+=El pulsador conectado al bloque F_PANEL # Correcta.
+~%-33.3333%El puerto USB interno de datos # Incorrecta.
+~%-33.3333%La conexión de audio frontal # Incorrecta.
+~%-33.3333%El conector del ventilador de CPU # Incorrecta.
+}
+
+::UD04_Bajo_V8_010::
+¿Qué debe revisarse cuando un led frontal no se ilumina? {
+=Polaridad y posición de conexión en el F_PANEL # Correcta.
+~%-33.3333%Ancho de banda de la red local # Incorrecta.
+~%-33.3333%Resolución de pantalla en BIOS # Incorrecta.
+~%-33.3333%Velocidad del ventilador trasero # Incorrecta.
+}
+
+::UD04_Bajo_V8_011::
+¿Qué debe revisarse cuando un led frontal no se ilumina durante una comprobación profesional? {
+=Polaridad y posición de conexión en el F_PANEL # Correcta.
+~%-33.3333%Ancho de banda de la red local # Incorrecta.
+~%-33.3333%Resolución de pantalla en BIOS # Incorrecta.
+~%-33.3333%Velocidad del ventilador trasero # Incorrecta.
+}
+
+::UD04_Bajo_V8_012::
+¿Qué debe revisarse cuando un led frontal no se ilumina en una validación final de la unidad? {
+=Polaridad y posición de conexión en el F_PANEL # Correcta.
+~%-33.3333%Ancho de banda de la red local # Incorrecta.
+~%-33.3333%Resolución de pantalla en BIOS # Incorrecta.
+~%-33.3333%Velocidad del ventilador trasero # Incorrecta.
+}
+
+::UD04_Bajo_V8_013::
+¿Qué describe un header USB 3.x interno según el tema? {
+=Un enlace interno para puertos frontales con señal de alta velocidad # Correcta.
+~%-33.3333%Un sistema de alimentación para la CPU # Incorrecta.
+~%-33.3333%Un puerto dedicado a memoria RAM # Incorrecta.
+~%-33.3333%Una interfaz exclusiva para impresoras antiguas # Incorrecta.
+}
+
+::UD04_Bajo_V8_014::
+¿Qué describe un header USB 3.x interno según el tema durante una comprobación profesional? {
+=Un enlace interno para puertos frontales con señal de alta velocidad # Correcta.
+~%-33.3333%Un sistema de alimentación para la CPU # Incorrecta.
+~%-33.3333%Un puerto dedicado a memoria RAM # Incorrecta.
+~%-33.3333%Una interfaz exclusiva para impresoras antiguas # Incorrecta.
+}
+
+::UD04_Bajo_V8_015::
+¿Qué describe un header USB 3.x interno según el tema en una validación final de la unidad? {
+=Un enlace interno para puertos frontales con señal de alta velocidad # Correcta.
+~%-33.3333%Un sistema de alimentación para la CPU # Incorrecta.
+~%-33.3333%Un puerto dedicado a memoria RAM # Incorrecta.
+~%-33.3333%Una interfaz exclusiva para impresoras antiguas # Incorrecta.
+}
+
+::UD04_Bajo_V8_016::
+¿Qué diferencia simple hay entre HD Audio y un conector no equivalente? {
+=HD Audio sigue un pinout y funciones de detección definidos para frontal # Correcta.
+~%-33.3333%HD Audio solo transporta señal digital de vídeo # Incorrecta.
+~%-33.3333%HD Audio no requiere cableado interno # Incorrecta.
+~%-33.3333%HD Audio sustituye la controladora USB # Incorrecta.
+}
+
+::UD04_Bajo_V8_017::
+¿Qué diferencia simple hay entre HD Audio y un conector no equivalente durante una comprobación profesional? {
+=HD Audio sigue un pinout y funciones de detección definidos para frontal # Correcta.
+~%-33.3333%HD Audio solo transporta señal digital de vídeo # Incorrecta.
+~%-33.3333%HD Audio no requiere cableado interno # Incorrecta.
+~%-33.3333%HD Audio sustituye la controladora USB # Incorrecta.
+}
+
+::UD04_Bajo_V8_018::
+¿Qué diferencia simple hay entre HD Audio y un conector no equivalente en una validación final de la unidad? {
+=HD Audio sigue un pinout y funciones de detección definidos para frontal # Correcta.
+~%-33.3333%HD Audio solo transporta señal digital de vídeo # Incorrecta.
+~%-33.3333%HD Audio no requiere cableado interno # Incorrecta.
+~%-33.3333%HD Audio sustituye la controladora USB # Incorrecta.
+}
+
+::UD04_Bajo_V8_019::
+¿Qué afirma correctamente la relación entre host y dispositivos USB? {
+=El host organiza el bus y los dispositivos responden dentro de esa estructura # Correcta.
+~%-33.3333%Cada periférico coordina al host principal # Incorrecta.
+~%-33.3333%No existe topología en USB moderno # Incorrecta.
+~%-33.3333%La topología depende de la caja del ordenador # Incorrecta.
+}
+
+::UD04_Bajo_V8_020::
+¿Qué afirma correctamente la relación entre host y dispositivos USB durante una comprobación profesional? {
+=El host organiza el bus y los dispositivos responden dentro de esa estructura # Correcta.
+~%-33.3333%Cada periférico coordina al host principal # Incorrecta.
+~%-33.3333%No existe topología en USB moderno # Incorrecta.
+~%-33.3333%La topología depende de la caja del ordenador # Incorrecta.
+}
+
+::UD04_Bajo_V8_021::
+¿Qué afirma correctamente la relación entre host y dispositivos USB en una validación final de la unidad? {
+=El host organiza el bus y los dispositivos responden dentro de esa estructura # Correcta.
+~%-33.3333%Cada periférico coordina al host principal # Incorrecta.
+~%-33.3333%No existe topología en USB moderno # Incorrecta.
+~%-33.3333%La topología depende de la caja del ordenador # Incorrecta.
+}
+
+::UD04_Bajo_V8_022::
+¿Qué evita consultar el manual de placa al montar conexiones externas? {
+=Errores de pinout y conexiones en cabeceras equivocadas # Correcta.
+~%-33.3333%La necesidad de apagar el equipo para intervenir # Incorrecta.
+~%-33.3333%La existencia de controladores de sistema # Incorrecta.
+~%-33.3333%La verificación de puertos tras montaje # Incorrecta.
+}
+
+::UD04_Bajo_V8_023::
+¿Qué evita consultar el manual de placa al montar conexiones externas durante una comprobación profesional? {
+=Errores de pinout y conexiones en cabeceras equivocadas # Correcta.
+~%-33.3333%La necesidad de apagar el equipo para intervenir # Incorrecta.
+~%-33.3333%La existencia de controladores de sistema # Incorrecta.
+~%-33.3333%La verificación de puertos tras montaje # Incorrecta.
+}
+
+::UD04_Bajo_V8_024::
+¿Qué evita consultar el manual de placa al montar conexiones externas en una validación final de la unidad? {
+=Errores de pinout y conexiones en cabeceras equivocadas # Correcta.
+~%-33.3333%La necesidad de apagar el equipo para intervenir # Incorrecta.
+~%-33.3333%La existencia de controladores de sistema # Incorrecta.
+~%-33.3333%La verificación de puertos tras montaje # Incorrecta.
+}
+
+::UD04_Bajo_V8_025::
+¿Qué se recomienda al terminar el cableado interno del frontal? {
+=Realizar comprobaciones funcionales antes de cerrar el equipo # Correcta.
+~%-33.3333%Forzar todos los puertos al modo máximo sin pruebas # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas de placa # Incorrecta.
+~%-33.3333%Ignorar síntomas intermitentes de conexión # Incorrecta.
+}
+
+::UD04_Bajo_V8_026::
+¿Qué se recomienda al terminar el cableado interno del frontal durante una comprobación profesional? {
+=Realizar comprobaciones funcionales antes de cerrar el equipo # Correcta.
+~%-33.3333%Forzar todos los puertos al modo máximo sin pruebas # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas de placa # Incorrecta.
+~%-33.3333%Ignorar síntomas intermitentes de conexión # Incorrecta.
+}
+
+::UD04_Bajo_V8_027::
+¿Qué se recomienda al terminar el cableado interno del frontal en una validación final de la unidad? {
+=Realizar comprobaciones funcionales antes de cerrar el equipo # Correcta.
+~%-33.3333%Forzar todos los puertos al modo máximo sin pruebas # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas de placa # Incorrecta.
+~%-33.3333%Ignorar síntomas intermitentes de conexión # Incorrecta.
+}
+
+::UD04_Bajo_V8_028::
+¿Qué enfoque general mejora la fiabilidad de montaje en UD04? {
+=Documentar, conectar según manual y verificar cada interfaz # Correcta.
+~%-33.3333%Montar por intuición sin esquema # Incorrecta.
+~%-33.3333%Priorizar rapidez sobre comprobación técnica # Incorrecta.
+~%-33.3333%Asumir compatibilidad universal de conectores # Incorrecta.
+}
+
+::UD04_Bajo_V8_029::
+¿Qué enfoque general mejora la fiabilidad de montaje en UD04 durante una comprobación profesional? {
+=Documentar, conectar según manual y verificar cada interfaz # Correcta.
+~%-33.3333%Montar por intuición sin esquema # Incorrecta.
+~%-33.3333%Priorizar rapidez sobre comprobación técnica # Incorrecta.
+~%-33.3333%Asumir compatibilidad universal de conectores # Incorrecta.
+}
+
+::UD04_Bajo_V8_030::
+¿Qué enfoque general mejora la fiabilidad de montaje en UD04 en una validación final de la unidad? {
+=Documentar, conectar según manual y verificar cada interfaz # Correcta.
+~%-33.3333%Montar por intuición sin esquema # Incorrecta.
+~%-33.3333%Priorizar rapidez sobre comprobación técnica # Incorrecta.
+~%-33.3333%Asumir compatibilidad universal de conectores # Incorrecta.
+}

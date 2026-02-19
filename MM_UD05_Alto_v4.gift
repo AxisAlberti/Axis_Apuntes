@@ -1,0 +1,243 @@
+$CATEGORY: SMR/Test/Memoria_RAM/Alto
+// UD05 Memoria RAM Nivel Alto V4
+// Fuentes: Apuntes U05 + Intel XMP + AMD EXPO + Crucial RAM.
+
+::UD05_Alto_V4_001::
+¿Qué criterio técnico es más sólido para seleccionar un kit de memoria en un proyecto profesional? {
+=Equilibrar compatibilidad, estabilidad sostenida y rendimiento según la carga real # Correcta.
+~%-33.3333%Elegir solo el valor más alto de marketing # Incorrecta.
+~%-33.3333%Priorizar únicamente la estética del módulo # Incorrecta.
+~%-33.3333%Descartar pruebas de validación por falta de tiempo # Incorrecta.
+}
+
+::UD05_Alto_V4_002::
+¿Qué criterio técnico es más sólido para seleccionar un kit de memoria en un proyecto profesional en una revisión técnica? {
+=Equilibrar compatibilidad, estabilidad sostenida y rendimiento según la carga real # Correcta.
+~%-33.3333%Elegir solo el valor más alto de marketing # Incorrecta.
+~%-33.3333%Priorizar únicamente la estética del módulo # Incorrecta.
+~%-33.3333%Descartar pruebas de validación por falta de tiempo # Incorrecta.
+}
+
+::UD05_Alto_V4_003::
+¿Qué criterio técnico es más sólido para seleccionar un kit de memoria en un proyecto profesional para reducir incidencias de configuración? {
+=Equilibrar compatibilidad, estabilidad sostenida y rendimiento según la carga real # Correcta.
+~%-33.3333%Elegir solo el valor más alto de marketing # Incorrecta.
+~%-33.3333%Priorizar únicamente la estética del módulo # Incorrecta.
+~%-33.3333%Descartar pruebas de validación por falta de tiempo # Incorrecta.
+}
+
+::UD05_Alto_V4_004::
+¿Qué decisión es más rigurosa cuando dos configuraciones muestran resultados similares en pruebas rápidas? {
+=Comparar estabilidad a medio plazo y comportamiento en cargas representativas # Correcta.
+~%-33.3333%Seleccionar la primera que complete un arranque # Incorrecta.
+~%-33.3333%Usar solo una prueba aislada para decidir # Incorrecta.
+~%-33.3333%Cambiar parámetros aleatoriamente para desempatar # Incorrecta.
+}
+
+::UD05_Alto_V4_005::
+¿Qué decisión es más rigurosa cuando dos configuraciones muestran resultados similares en pruebas rápidas en una revisión técnica? {
+=Comparar estabilidad a medio plazo y comportamiento en cargas representativas # Correcta.
+~%-33.3333%Seleccionar la primera que complete un arranque # Incorrecta.
+~%-33.3333%Usar solo una prueba aislada para decidir # Incorrecta.
+~%-33.3333%Cambiar parámetros aleatoriamente para desempatar # Incorrecta.
+}
+
+::UD05_Alto_V4_006::
+¿Qué decisión es más rigurosa cuando dos configuraciones muestran resultados similares en pruebas rápidas para reducir incidencias de configuración? {
+=Comparar estabilidad a medio plazo y comportamiento en cargas representativas # Correcta.
+~%-33.3333%Seleccionar la primera que complete un arranque # Incorrecta.
+~%-33.3333%Usar solo una prueba aislada para decidir # Incorrecta.
+~%-33.3333%Cambiar parámetros aleatoriamente para desempatar # Incorrecta.
+}
+
+::UD05_Alto_V4_007::
+¿Qué enfoque reduce mejor el riesgo de regresiones al ajustar memoria? {
+=Aplicar cambios incrementales con control de versiones y plan de reversión # Correcta.
+~%-33.3333%Modificar muchos parámetros simultáneamente # Incorrecta.
+~%-33.3333%Eliminar la configuración base de referencia # Incorrecta.
+~%-33.3333%Ajustar en caliente sin pruebas repetibles # Incorrecta.
+}
+
+::UD05_Alto_V4_008::
+¿Qué enfoque reduce mejor el riesgo de regresiones al ajustar memoria en una revisión técnica? {
+=Aplicar cambios incrementales con control de versiones y plan de reversión # Correcta.
+~%-33.3333%Modificar muchos parámetros simultáneamente # Incorrecta.
+~%-33.3333%Eliminar la configuración base de referencia # Incorrecta.
+~%-33.3333%Ajustar en caliente sin pruebas repetibles # Incorrecta.
+}
+
+::UD05_Alto_V4_009::
+¿Qué enfoque reduce mejor el riesgo de regresiones al ajustar memoria para reducir incidencias de configuración? {
+=Aplicar cambios incrementales con control de versiones y plan de reversión # Correcta.
+~%-33.3333%Modificar muchos parámetros simultáneamente # Incorrecta.
+~%-33.3333%Eliminar la configuración base de referencia # Incorrecta.
+~%-33.3333%Ajustar en caliente sin pruebas repetibles # Incorrecta.
+}
+
+::UD05_Alto_V4_010::
+¿Qué interpretación es correcta sobre la relación entre perfiles de memoria y garantía de estabilidad? {
+=Los perfiles facilitan configuración, pero la estabilidad final depende de la plataforma concreta # Correcta.
+~%-33.3333%Un perfil avanzado garantiza estabilidad universal # Incorrecta.
+~%-33.3333%Los perfiles sustituyen cualquier comprobación técnica # Incorrecta.
+~%-33.3333%Todos los módulos responden igual en cualquier placa # Incorrecta.
+}
+
+::UD05_Alto_V4_011::
+¿Qué interpretación es correcta sobre la relación entre perfiles de memoria y garantía de estabilidad en una revisión técnica? {
+=Los perfiles facilitan configuración, pero la estabilidad final depende de la plataforma concreta # Correcta.
+~%-33.3333%Un perfil avanzado garantiza estabilidad universal # Incorrecta.
+~%-33.3333%Los perfiles sustituyen cualquier comprobación técnica # Incorrecta.
+~%-33.3333%Todos los módulos responden igual en cualquier placa # Incorrecta.
+}
+
+::UD05_Alto_V4_012::
+¿Qué interpretación es correcta sobre la relación entre perfiles de memoria y garantía de estabilidad para reducir incidencias de configuración? {
+=Los perfiles facilitan configuración, pero la estabilidad final depende de la plataforma concreta # Correcta.
+~%-33.3333%Un perfil avanzado garantiza estabilidad universal # Incorrecta.
+~%-33.3333%Los perfiles sustituyen cualquier comprobación técnica # Incorrecta.
+~%-33.3333%Todos los módulos responden igual en cualquier placa # Incorrecta.
+}
+
+::UD05_Alto_V4_013::
+¿Qué valor aporta mantener una línea base de pruebas antes de optimizar memoria? {
+=Permitir comparar mejoras reales y detectar regresiones con evidencia # Correcta.
+~%-33.3333%Evitar por completo la necesidad de monitorización # Incorrecta.
+~%-33.3333%Garantizar máximo rendimiento sin validación # Incorrecta.
+~%-33.3333%Eliminar diferencias entre módulos distintos # Incorrecta.
+}
+
+::UD05_Alto_V4_014::
+¿Qué valor aporta mantener una línea base de pruebas antes de optimizar memoria en una revisión técnica? {
+=Permitir comparar mejoras reales y detectar regresiones con evidencia # Correcta.
+~%-33.3333%Evitar por completo la necesidad de monitorización # Incorrecta.
+~%-33.3333%Garantizar máximo rendimiento sin validación # Incorrecta.
+~%-33.3333%Eliminar diferencias entre módulos distintos # Incorrecta.
+}
+
+::UD05_Alto_V4_015::
+¿Qué valor aporta mantener una línea base de pruebas antes de optimizar memoria para reducir incidencias de configuración? {
+=Permitir comparar mejoras reales y detectar regresiones con evidencia # Correcta.
+~%-33.3333%Evitar por completo la necesidad de monitorización # Incorrecta.
+~%-33.3333%Garantizar máximo rendimiento sin validación # Incorrecta.
+~%-33.3333%Eliminar diferencias entre módulos distintos # Incorrecta.
+}
+
+::UD05_Alto_V4_016::
+¿Qué estrategia es más robusta ante errores intermitentes relacionados con memoria? {
+=Aislar variables de hardware y configuración mediante pruebas controladas # Correcta.
+~%-33.3333%Aumentar ajustes de forma agresiva sin diagnóstico # Incorrecta.
+~%-33.3333%Culpar al sistema operativo sin medir # Incorrecta.
+~%-33.3333%Aceptar el fallo como comportamiento normal # Incorrecta.
+}
+
+::UD05_Alto_V4_017::
+¿Qué estrategia es más robusta ante errores intermitentes relacionados con memoria en una revisión técnica? {
+=Aislar variables de hardware y configuración mediante pruebas controladas # Correcta.
+~%-33.3333%Aumentar ajustes de forma agresiva sin diagnóstico # Incorrecta.
+~%-33.3333%Culpar al sistema operativo sin medir # Incorrecta.
+~%-33.3333%Aceptar el fallo como comportamiento normal # Incorrecta.
+}
+
+::UD05_Alto_V4_018::
+¿Qué estrategia es más robusta ante errores intermitentes relacionados con memoria para reducir incidencias de configuración? {
+=Aislar variables de hardware y configuración mediante pruebas controladas # Correcta.
+~%-33.3333%Aumentar ajustes de forma agresiva sin diagnóstico # Incorrecta.
+~%-33.3333%Culpar al sistema operativo sin medir # Incorrecta.
+~%-33.3333%Aceptar el fallo como comportamiento normal # Incorrecta.
+}
+
+::UD05_Alto_V4_019::
+¿Qué enfoque técnico es más defendible al planificar ampliación de RAM en equipos heterogéneos? {
+=Definir requisitos de uso, validar compatibilidad y elegir kits homogéneos # Correcta.
+~%-33.3333%Comprar módulos por disponibilidad sin revisión previa # Incorrecta.
+~%-33.3333%Mezclar configuraciones por conveniencia inmediata # Incorrecta.
+~%-33.3333%Priorizar solo el precio mínimo sin criterios técnicos # Incorrecta.
+}
+
+::UD05_Alto_V4_020::
+¿Qué enfoque técnico es más defendible al planificar ampliación de RAM en equipos heterogéneos en una revisión técnica? {
+=Definir requisitos de uso, validar compatibilidad y elegir kits homogéneos # Correcta.
+~%-33.3333%Comprar módulos por disponibilidad sin revisión previa # Incorrecta.
+~%-33.3333%Mezclar configuraciones por conveniencia inmediata # Incorrecta.
+~%-33.3333%Priorizar solo el precio mínimo sin criterios técnicos # Incorrecta.
+}
+
+::UD05_Alto_V4_021::
+¿Qué enfoque técnico es más defendible al planificar ampliación de RAM en equipos heterogéneos para reducir incidencias de configuración? {
+=Definir requisitos de uso, validar compatibilidad y elegir kits homogéneos # Correcta.
+~%-33.3333%Comprar módulos por disponibilidad sin revisión previa # Incorrecta.
+~%-33.3333%Mezclar configuraciones por conveniencia inmediata # Incorrecta.
+~%-33.3333%Priorizar solo el precio mínimo sin criterios técnicos # Incorrecta.
+}
+
+::UD05_Alto_V4_022::
+¿Qué práctica mejora la trazabilidad en informes de ajuste de memoria? {
+=Registrar versión de firmware, parámetros aplicados y resultado de pruebas # Correcta.
+~%-33.3333%Guardar solo la configuración final sin historial # Incorrecta.
+~%-33.3333%Omitir evidencias para simplificar el informe # Incorrecta.
+~%-33.3333%Basar conclusiones en percepción subjetiva # Incorrecta.
+}
+
+::UD05_Alto_V4_023::
+¿Qué práctica mejora la trazabilidad en informes de ajuste de memoria en una revisión técnica? {
+=Registrar versión de firmware, parámetros aplicados y resultado de pruebas # Correcta.
+~%-33.3333%Guardar solo la configuración final sin historial # Incorrecta.
+~%-33.3333%Omitir evidencias para simplificar el informe # Incorrecta.
+~%-33.3333%Basar conclusiones en percepción subjetiva # Incorrecta.
+}
+
+::UD05_Alto_V4_024::
+¿Qué práctica mejora la trazabilidad en informes de ajuste de memoria para reducir incidencias de configuración? {
+=Registrar versión de firmware, parámetros aplicados y resultado de pruebas # Correcta.
+~%-33.3333%Guardar solo la configuración final sin historial # Incorrecta.
+~%-33.3333%Omitir evidencias para simplificar el informe # Incorrecta.
+~%-33.3333%Basar conclusiones en percepción subjetiva # Incorrecta.
+}
+
+::UD05_Alto_V4_025::
+¿Qué criterio debe priorizarse en entornos donde la integridad de datos es crítica? {
+=Fiabilidad de plataforma y políticas de validación por encima del ajuste agresivo # Correcta.
+~%-33.3333%Máxima transferencia sin comprobar estabilidad # Incorrecta.
+~%-33.3333%Perfil más exigente aunque aparezcan errores # Incorrecta.
+~%-33.3333%Cambios continuos sin procedimiento de control # Incorrecta.
+}
+
+::UD05_Alto_V4_026::
+¿Qué criterio debe priorizarse en entornos donde la integridad de datos es crítica en una revisión técnica? {
+=Fiabilidad de plataforma y políticas de validación por encima del ajuste agresivo # Correcta.
+~%-33.3333%Máxima transferencia sin comprobar estabilidad # Incorrecta.
+~%-33.3333%Perfil más exigente aunque aparezcan errores # Incorrecta.
+~%-33.3333%Cambios continuos sin procedimiento de control # Incorrecta.
+}
+
+::UD05_Alto_V4_027::
+¿Qué criterio debe priorizarse en entornos donde la integridad de datos es crítica para reducir incidencias de configuración? {
+=Fiabilidad de plataforma y políticas de validación por encima del ajuste agresivo # Correcta.
+~%-33.3333%Máxima transferencia sin comprobar estabilidad # Incorrecta.
+~%-33.3333%Perfil más exigente aunque aparezcan errores # Incorrecta.
+~%-33.3333%Cambios continuos sin procedimiento de control # Incorrecta.
+}
+
+::UD05_Alto_V4_028::
+¿Qué combinación define una gestión de memoria madura en un entorno profesional? {
+=Diseño compatible, configuración estable y verificación documentada de resultados # Correcta.
+~%-33.3333%Ajustes improvisados sin respaldo técnico # Incorrecta.
+~%-33.3333%Validación mínima con entrega inmediata # Incorrecta.
+~%-33.3333%Dependencia exclusiva de una única prueba rápida # Incorrecta.
+}
+
+::UD05_Alto_V4_029::
+¿Qué combinación define una gestión de memoria madura en un entorno profesional en una revisión técnica? {
+=Diseño compatible, configuración estable y verificación documentada de resultados # Correcta.
+~%-33.3333%Ajustes improvisados sin respaldo técnico # Incorrecta.
+~%-33.3333%Validación mínima con entrega inmediata # Incorrecta.
+~%-33.3333%Dependencia exclusiva de una única prueba rápida # Incorrecta.
+}
+
+::UD05_Alto_V4_030::
+¿Qué combinación define una gestión de memoria madura en un entorno profesional para reducir incidencias de configuración? {
+=Diseño compatible, configuración estable y verificación documentada de resultados # Correcta.
+~%-33.3333%Ajustes improvisados sin respaldo técnico # Incorrecta.
+~%-33.3333%Validación mínima con entrega inmediata # Incorrecta.
+~%-33.3333%Dependencia exclusiva de una única prueba rápida # Incorrecta.
+}

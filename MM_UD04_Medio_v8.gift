@@ -1,0 +1,243 @@
+$CATEGORY: SMR/Test/Conexiones_externas/Medio
+// UD04 Conexiones externas Nivel Medio V8
+// Fuente única: docs/section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
+
+::UD04_Medio_V8_001::
+¿Qué comprobación técnica debe priorizarse en un Type-E frontal? {
+=Compatibilidad real de placa, caja y cableado para la función esperada # Correcta.
+~%-33.3333%Solo que el conector tenga forma USB-C # Incorrecta.
+~%-33.3333%Solo que el sistema operativo detecte un dispositivo # Incorrecta.
+~%-33.3333%Solo que la caja tenga iluminación frontal # Incorrecta.
+}
+
+::UD04_Medio_V8_002::
+¿Qué comprobación técnica debe priorizarse en un Type-E frontal durante una comprobación profesional? {
+=Compatibilidad real de placa, caja y cableado para la función esperada # Correcta.
+~%-33.3333%Solo que el conector tenga forma USB-C # Incorrecta.
+~%-33.3333%Solo que el sistema operativo detecte un dispositivo # Incorrecta.
+~%-33.3333%Solo que la caja tenga iluminación frontal # Incorrecta.
+}
+
+::UD04_Medio_V8_003::
+¿Qué comprobación técnica debe priorizarse en un Type-E frontal en una validación final de la unidad? {
+=Compatibilidad real de placa, caja y cableado para la función esperada # Correcta.
+~%-33.3333%Solo que el conector tenga forma USB-C # Incorrecta.
+~%-33.3333%Solo que el sistema operativo detecte un dispositivo # Incorrecta.
+~%-33.3333%Solo que la caja tenga iluminación frontal # Incorrecta.
+}
+
+::UD04_Medio_V8_004::
+¿Qué impacto tiene una ruta interna mal gestionada en alta velocidad? {
+=Puede degradar señal y provocar errores de enlace # Correcta.
+~%-33.3333%Aumenta automáticamente la robustez de transmisión # Incorrecta.
+~%-33.3333%Elimina la influencia del cable utilizado # Incorrecta.
+~%-33.3333%Convierte cualquier puerto en modo avanzado # Incorrecta.
+}
+
+::UD04_Medio_V8_005::
+¿Qué impacto tiene una ruta interna mal gestionada en alta velocidad durante una comprobación profesional? {
+=Puede degradar señal y provocar errores de enlace # Correcta.
+~%-33.3333%Aumenta automáticamente la robustez de transmisión # Incorrecta.
+~%-33.3333%Elimina la influencia del cable utilizado # Incorrecta.
+~%-33.3333%Convierte cualquier puerto en modo avanzado # Incorrecta.
+}
+
+::UD04_Medio_V8_006::
+¿Qué impacto tiene una ruta interna mal gestionada en alta velocidad en una validación final de la unidad? {
+=Puede degradar señal y provocar errores de enlace # Correcta.
+~%-33.3333%Aumenta automáticamente la robustez de transmisión # Incorrecta.
+~%-33.3333%Elimina la influencia del cable utilizado # Incorrecta.
+~%-33.3333%Convierte cualquier puerto en modo avanzado # Incorrecta.
+}
+
+::UD04_Medio_V8_007::
+¿Qué valor aporta separar diagnóstico de hardware y configuración? {
+=Permite aislar causas y evitar cambios innecesarios # Correcta.
+~%-33.3333%Duplica el número de puertos disponibles # Incorrecta.
+~%-33.3333%Hace innecesarias pruebas reproducibles # Incorrecta.
+~%-33.3333%Sustituye el registro de evidencias técnicas # Incorrecta.
+}
+
+::UD04_Medio_V8_008::
+¿Qué valor aporta separar diagnóstico de hardware y configuración durante una comprobación profesional? {
+=Permite aislar causas y evitar cambios innecesarios # Correcta.
+~%-33.3333%Duplica el número de puertos disponibles # Incorrecta.
+~%-33.3333%Hace innecesarias pruebas reproducibles # Incorrecta.
+~%-33.3333%Sustituye el registro de evidencias técnicas # Incorrecta.
+}
+
+::UD04_Medio_V8_009::
+¿Qué valor aporta separar diagnóstico de hardware y configuración en una validación final de la unidad? {
+=Permite aislar causas y evitar cambios innecesarios # Correcta.
+~%-33.3333%Duplica el número de puertos disponibles # Incorrecta.
+~%-33.3333%Hace innecesarias pruebas reproducibles # Incorrecta.
+~%-33.3333%Sustituye el registro de evidencias técnicas # Incorrecta.
+}
+
+::UD04_Medio_V8_010::
+¿Qué papel tiene la señalización de presencia en audio frontal? {
+=Informar al códec para gestionar detección y enrutado de audio # Correcta.
+~%-33.3333%Negociar potencia de carga USB # Incorrecta.
+~%-33.3333%Controlar estados de energía del procesador # Incorrecta.
+~%-33.3333%Reemplazar la salida de audio trasera # Incorrecta.
+}
+
+::UD04_Medio_V8_011::
+¿Qué papel tiene la señalización de presencia en audio frontal durante una comprobación profesional? {
+=Informar al códec para gestionar detección y enrutado de audio # Correcta.
+~%-33.3333%Negociar potencia de carga USB # Incorrecta.
+~%-33.3333%Controlar estados de energía del procesador # Incorrecta.
+~%-33.3333%Reemplazar la salida de audio trasera # Incorrecta.
+}
+
+::UD04_Medio_V8_012::
+¿Qué papel tiene la señalización de presencia en audio frontal en una validación final de la unidad? {
+=Informar al códec para gestionar detección y enrutado de audio # Correcta.
+~%-33.3333%Negociar potencia de carga USB # Incorrecta.
+~%-33.3333%Controlar estados de energía del procesador # Incorrecta.
+~%-33.3333%Reemplazar la salida de audio trasera # Incorrecta.
+}
+
+::UD04_Medio_V8_013::
+¿Qué lectura correcta tiene el header de control de una AIC? {
+=Coordina estados y control, pero no reemplaza enlace principal de datos # Correcta.
+~%-33.3333%Actúa como bus de datos completo por sí solo # Incorrecta.
+~%-33.3333%Solo aporta función estética en el chasis # Incorrecta.
+~%-33.3333%Convierte automáticamente cualquier ranura en compatible # Incorrecta.
+}
+
+::UD04_Medio_V8_014::
+¿Qué lectura correcta tiene el header de control de una AIC durante una comprobación profesional? {
+=Coordina estados y control, pero no reemplaza enlace principal de datos # Correcta.
+~%-33.3333%Actúa como bus de datos completo por sí solo # Incorrecta.
+~%-33.3333%Solo aporta función estética en el chasis # Incorrecta.
+~%-33.3333%Convierte automáticamente cualquier ranura en compatible # Incorrecta.
+}
+
+::UD04_Medio_V8_015::
+¿Qué lectura correcta tiene el header de control de una AIC en una validación final de la unidad? {
+=Coordina estados y control, pero no reemplaza enlace principal de datos # Correcta.
+~%-33.3333%Actúa como bus de datos completo por sí solo # Incorrecta.
+~%-33.3333%Solo aporta función estética en el chasis # Incorrecta.
+~%-33.3333%Convierte automáticamente cualquier ranura en compatible # Incorrecta.
+}
+
+::UD04_Medio_V8_016::
+¿Qué riesgo existe al omitir masa y fijación correctas en chasis? {
+=Mayor susceptibilidad a ruido e inestabilidad de señal # Correcta.
+~%-33.3333%Incremento automático de calidad de enlace # Incorrecta.
+~%-33.3333%Eliminación de cualquier diafonía por software # Incorrecta.
+~%-33.3333%Compatibilidad asegurada entre todos los cables # Incorrecta.
+}
+
+::UD04_Medio_V8_017::
+¿Qué riesgo existe al omitir masa y fijación correctas en chasis durante una comprobación profesional? {
+=Mayor susceptibilidad a ruido e inestabilidad de señal # Correcta.
+~%-33.3333%Incremento automático de calidad de enlace # Incorrecta.
+~%-33.3333%Eliminación de cualquier diafonía por software # Incorrecta.
+~%-33.3333%Compatibilidad asegurada entre todos los cables # Incorrecta.
+}
+
+::UD04_Medio_V8_018::
+¿Qué riesgo existe al omitir masa y fijación correctas en chasis en una validación final de la unidad? {
+=Mayor susceptibilidad a ruido e inestabilidad de señal # Correcta.
+~%-33.3333%Incremento automático de calidad de enlace # Incorrecta.
+~%-33.3333%Eliminación de cualquier diafonía por software # Incorrecta.
+~%-33.3333%Compatibilidad asegurada entre todos los cables # Incorrecta.
+}
+
+::UD04_Medio_V8_019::
+¿Qué proceso mejora la resolución de fallos en puertos frontales? {
+=Pruebas por etapas con control de cambios y registro de resultados # Correcta.
+~%-33.3333%Modificar múltiples variables sin seguimiento # Incorrecta.
+~%-33.3333%Culpar siempre al periférico conectado # Incorrecta.
+~%-33.3333%Desactivar avisos para evitar interrupciones # Incorrecta.
+}
+
+::UD04_Medio_V8_020::
+¿Qué proceso mejora la resolución de fallos en puertos frontales durante una comprobación profesional? {
+=Pruebas por etapas con control de cambios y registro de resultados # Correcta.
+~%-33.3333%Modificar múltiples variables sin seguimiento # Incorrecta.
+~%-33.3333%Culpar siempre al periférico conectado # Incorrecta.
+~%-33.3333%Desactivar avisos para evitar interrupciones # Incorrecta.
+}
+
+::UD04_Medio_V8_021::
+¿Qué proceso mejora la resolución de fallos en puertos frontales en una validación final de la unidad? {
+=Pruebas por etapas con control de cambios y registro de resultados # Correcta.
+~%-33.3333%Modificar múltiples variables sin seguimiento # Incorrecta.
+~%-33.3333%Culpar siempre al periférico conectado # Incorrecta.
+~%-33.3333%Desactivar avisos para evitar interrupciones # Incorrecta.
+}
+
+::UD04_Medio_V8_022::
+¿Qué criterio ayuda a decidir si un cable extensor es adecuado? {
+=Verificar especificación, calidad y compatibilidad con el enlace objetivo # Correcta.
+~%-33.3333%Elegir por longitud máxima sin más datos # Incorrecta.
+~%-33.3333%Elegir por color del recubrimiento # Incorrecta.
+~%-33.3333%Asumir rendimiento idéntico en todos los casos # Incorrecta.
+}
+
+::UD04_Medio_V8_023::
+¿Qué criterio ayuda a decidir si un cable extensor es adecuado durante una comprobación profesional? {
+=Verificar especificación, calidad y compatibilidad con el enlace objetivo # Correcta.
+~%-33.3333%Elegir por longitud máxima sin más datos # Incorrecta.
+~%-33.3333%Elegir por color del recubrimiento # Incorrecta.
+~%-33.3333%Asumir rendimiento idéntico en todos los casos # Incorrecta.
+}
+
+::UD04_Medio_V8_024::
+¿Qué criterio ayuda a decidir si un cable extensor es adecuado en una validación final de la unidad? {
+=Verificar especificación, calidad y compatibilidad con el enlace objetivo # Correcta.
+~%-33.3333%Elegir por longitud máxima sin más datos # Incorrecta.
+~%-33.3333%Elegir por color del recubrimiento # Incorrecta.
+~%-33.3333%Asumir rendimiento idéntico en todos los casos # Incorrecta.
+}
+
+::UD04_Medio_V8_025::
+¿Qué práctica mejora el mantenimiento futuro de la instalación? {
+=Etiquetar y documentar conexiones internas y pruebas de validación # Correcta.
+~%-33.3333%Quitar referencias tras confirmar arranque inicial # Incorrecta.
+~%-33.3333%Evitar registros para reducir tiempo de trabajo # Incorrecta.
+~%-33.3333%Confiar únicamente en memoria del técnico # Incorrecta.
+}
+
+::UD04_Medio_V8_026::
+¿Qué práctica mejora el mantenimiento futuro de la instalación durante una comprobación profesional? {
+=Etiquetar y documentar conexiones internas y pruebas de validación # Correcta.
+~%-33.3333%Quitar referencias tras confirmar arranque inicial # Incorrecta.
+~%-33.3333%Evitar registros para reducir tiempo de trabajo # Incorrecta.
+~%-33.3333%Confiar únicamente en memoria del técnico # Incorrecta.
+}
+
+::UD04_Medio_V8_027::
+¿Qué práctica mejora el mantenimiento futuro de la instalación en una validación final de la unidad? {
+=Etiquetar y documentar conexiones internas y pruebas de validación # Correcta.
+~%-33.3333%Quitar referencias tras confirmar arranque inicial # Incorrecta.
+~%-33.3333%Evitar registros para reducir tiempo de trabajo # Incorrecta.
+~%-33.3333%Confiar únicamente en memoria del técnico # Incorrecta.
+}
+
+::UD04_Medio_V8_028::
+¿Qué enfoque técnico general define un montaje medio bien resuelto? {
+=Compatibilidad validada, cableado correcto y verificación funcional completa # Correcta.
+~%-33.3333%Montaje rápido sin diagnóstico posterior # Incorrecta.
+~%-33.3333%Conectores forzados cuando no encajan # Incorrecta.
+~%-33.3333%Validación limitada a una única prueba # Incorrecta.
+}
+
+::UD04_Medio_V8_029::
+¿Qué enfoque técnico general define un montaje medio bien resuelto durante una comprobación profesional? {
+=Compatibilidad validada, cableado correcto y verificación funcional completa # Correcta.
+~%-33.3333%Montaje rápido sin diagnóstico posterior # Incorrecta.
+~%-33.3333%Conectores forzados cuando no encajan # Incorrecta.
+~%-33.3333%Validación limitada a una única prueba # Incorrecta.
+}
+
+::UD04_Medio_V8_030::
+¿Qué enfoque técnico general define un montaje medio bien resuelto en una validación final de la unidad? {
+=Compatibilidad validada, cableado correcto y verificación funcional completa # Correcta.
+~%-33.3333%Montaje rápido sin diagnóstico posterior # Incorrecta.
+~%-33.3333%Conectores forzados cuando no encajan # Incorrecta.
+~%-33.3333%Validación limitada a una única prueba # Incorrecta.
+}

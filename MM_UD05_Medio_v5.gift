@@ -1,0 +1,243 @@
+$CATEGORY: SMR/Test/Memoria_RAM/Medio
+// UD05 Memoria RAM Nivel Medio V5
+// Fuente: Apuntes U05 del repositorio + contraste técnico previo.
+
+::UD05_Medio_V5_001::
+¿Qué criterio es más correcto para comparar dos kits de RAM? {
+=Valorar capacidad, transferencia, latencias y estabilidad # Correcta.
+~%-33.3333%Mirar solo el mayor MT/s # Incorrecta.
+~%-33.3333%Mirar solo el menor CL # Incorrecta.
+~%-33.3333%Elegir por estética # Incorrecta.
+}
+
+::UD05_Medio_V5_002::
+¿Qué criterio es más correcto para comparar dos kits de RAM en una comprobación de aula taller? {
+=Valorar capacidad, transferencia, latencias y estabilidad # Correcta.
+~%-33.3333%Mirar solo el mayor MT/s # Incorrecta.
+~%-33.3333%Mirar solo el menor CL # Incorrecta.
+~%-33.3333%Elegir por estética # Incorrecta.
+}
+
+::UD05_Medio_V5_003::
+¿Qué criterio es más correcto para comparar dos kits de RAM para mejorar la estabilidad del equipo? {
+=Valorar capacidad, transferencia, latencias y estabilidad # Correcta.
+~%-33.3333%Mirar solo el mayor MT/s # Incorrecta.
+~%-33.3333%Mirar solo el menor CL # Incorrecta.
+~%-33.3333%Elegir por estética # Incorrecta.
+}
+
+::UD05_Medio_V5_004::
+¿Qué aporta la QVL de una placa base al seleccionar memoria? {
+=Referencia de módulos validados para reducir riesgos # Correcta.
+~%-33.3333%Garantía absoluta sin pruebas # Incorrecta.
+~%-33.3333%Aumento de capacidad por firmware # Incorrecta.
+~%-33.3333%Compatibilidad universal entre generaciones # Incorrecta.
+}
+
+::UD05_Medio_V5_005::
+¿Qué aporta la QVL de una placa base al seleccionar memoria en una comprobación de aula taller? {
+=Referencia de módulos validados para reducir riesgos # Correcta.
+~%-33.3333%Garantía absoluta sin pruebas # Incorrecta.
+~%-33.3333%Aumento de capacidad por firmware # Incorrecta.
+~%-33.3333%Compatibilidad universal entre generaciones # Incorrecta.
+}
+
+::UD05_Medio_V5_006::
+¿Qué aporta la QVL de una placa base al seleccionar memoria para mejorar la estabilidad del equipo? {
+=Referencia de módulos validados para reducir riesgos # Correcta.
+~%-33.3333%Garantía absoluta sin pruebas # Incorrecta.
+~%-33.3333%Aumento de capacidad por firmware # Incorrecta.
+~%-33.3333%Compatibilidad universal entre generaciones # Incorrecta.
+}
+
+::UD05_Medio_V5_007::
+¿Qué puede pasar al mezclar módulos diferentes? {
+=El sistema puede ajustar parámetros más conservadores # Correcta.
+~%-33.3333%Siempre usa el perfil más rápido # Incorrecta.
+~%-33.3333%Activa ECC automáticamente # Incorrecta.
+~%-33.3333%Elimina diferencias de latencia # Incorrecta.
+}
+
+::UD05_Medio_V5_008::
+¿Qué puede pasar al mezclar módulos diferentes en una comprobación de aula taller? {
+=El sistema puede ajustar parámetros más conservadores # Correcta.
+~%-33.3333%Siempre usa el perfil más rápido # Incorrecta.
+~%-33.3333%Activa ECC automáticamente # Incorrecta.
+~%-33.3333%Elimina diferencias de latencia # Incorrecta.
+}
+
+::UD05_Medio_V5_009::
+¿Qué puede pasar al mezclar módulos diferentes para mejorar la estabilidad del equipo? {
+=El sistema puede ajustar parámetros más conservadores # Correcta.
+~%-33.3333%Siempre usa el perfil más rápido # Incorrecta.
+~%-33.3333%Activa ECC automáticamente # Incorrecta.
+~%-33.3333%Elimina diferencias de latencia # Incorrecta.
+}
+
+::UD05_Medio_V5_010::
+¿Qué acción inicial ayuda si se detecta menos RAM de la instalada? {
+=Probar módulos y ranuras de forma aislada # Correcta.
+~%-33.3333%Subir voltajes sin medir # Incorrecta.
+~%-33.3333%Cambiar CPU directamente # Incorrecta.
+~%-33.3333%Reinstalar todo sin diagnóstico # Incorrecta.
+}
+
+::UD05_Medio_V5_011::
+¿Qué acción inicial ayuda si se detecta menos RAM de la instalada en una comprobación de aula taller? {
+=Probar módulos y ranuras de forma aislada # Correcta.
+~%-33.3333%Subir voltajes sin medir # Incorrecta.
+~%-33.3333%Cambiar CPU directamente # Incorrecta.
+~%-33.3333%Reinstalar todo sin diagnóstico # Incorrecta.
+}
+
+::UD05_Medio_V5_012::
+¿Qué acción inicial ayuda si se detecta menos RAM de la instalada para mejorar la estabilidad del equipo? {
+=Probar módulos y ranuras de forma aislada # Correcta.
+~%-33.3333%Subir voltajes sin medir # Incorrecta.
+~%-33.3333%Cambiar CPU directamente # Incorrecta.
+~%-33.3333%Reinstalar todo sin diagnóstico # Incorrecta.
+}
+
+::UD05_Medio_V5_013::
+¿Qué describe mejor el término rank en memoria? {
+=Conjunto lógico de chips accesible como una unidad # Correcta.
+~%-33.3333%Tipo de ventilador de RAM # Incorrecta.
+~%-33.3333%Nivel de brillo del módulo # Incorrecta.
+~%-33.3333%Versión de BIOS # Incorrecta.
+}
+
+::UD05_Medio_V5_014::
+¿Qué describe mejor el término rank en memoria en una comprobación de aula taller? {
+=Conjunto lógico de chips accesible como una unidad # Correcta.
+~%-33.3333%Tipo de ventilador de RAM # Incorrecta.
+~%-33.3333%Nivel de brillo del módulo # Incorrecta.
+~%-33.3333%Versión de BIOS # Incorrecta.
+}
+
+::UD05_Medio_V5_015::
+¿Qué describe mejor el término rank en memoria para mejorar la estabilidad del equipo? {
+=Conjunto lógico de chips accesible como una unidad # Correcta.
+~%-33.3333%Tipo de ventilador de RAM # Incorrecta.
+~%-33.3333%Nivel de brillo del módulo # Incorrecta.
+~%-33.3333%Versión de BIOS # Incorrecta.
+}
+
+::UD05_Medio_V5_016::
+¿Qué diferencia clave hay entre JEDEC y perfiles avanzados? {
+=JEDEC prioriza base estable y perfiles avanzados aplican ajustes validados # Correcta.
+~%-33.3333%JEDEC solo sirve en servidores # Incorrecta.
+~%-33.3333%Perfiles avanzados siempre son estables en cualquier equipo # Incorrecta.
+~%-33.3333%No existe diferencia real # Incorrecta.
+}
+
+::UD05_Medio_V5_017::
+¿Qué diferencia clave hay entre JEDEC y perfiles avanzados en una comprobación de aula taller? {
+=JEDEC prioriza base estable y perfiles avanzados aplican ajustes validados # Correcta.
+~%-33.3333%JEDEC solo sirve en servidores # Incorrecta.
+~%-33.3333%Perfiles avanzados siempre son estables en cualquier equipo # Incorrecta.
+~%-33.3333%No existe diferencia real # Incorrecta.
+}
+
+::UD05_Medio_V5_018::
+¿Qué diferencia clave hay entre JEDEC y perfiles avanzados para mejorar la estabilidad del equipo? {
+=JEDEC prioriza base estable y perfiles avanzados aplican ajustes validados # Correcta.
+~%-33.3333%JEDEC solo sirve en servidores # Incorrecta.
+~%-33.3333%Perfiles avanzados siempre son estables en cualquier equipo # Incorrecta.
+~%-33.3333%No existe diferencia real # Incorrecta.
+}
+
+::UD05_Medio_V5_019::
+¿Qué requisito debe cumplirse para usar ECC correctamente? {
+=Compatibilidad de CPU, placa y módulos ECC # Correcta.
+~%-33.3333%Solo activar perfil en BIOS # Incorrecta.
+~%-33.3333%Usar doble canal obligatoriamente # Incorrecta.
+~%-33.3333%Actualizar sistema operativo # Incorrecta.
+}
+
+::UD05_Medio_V5_020::
+¿Qué requisito debe cumplirse para usar ECC correctamente en una comprobación de aula taller? {
+=Compatibilidad de CPU, placa y módulos ECC # Correcta.
+~%-33.3333%Solo activar perfil en BIOS # Incorrecta.
+~%-33.3333%Usar doble canal obligatoriamente # Incorrecta.
+~%-33.3333%Actualizar sistema operativo # Incorrecta.
+}
+
+::UD05_Medio_V5_021::
+¿Qué requisito debe cumplirse para usar ECC correctamente para mejorar la estabilidad del equipo? {
+=Compatibilidad de CPU, placa y módulos ECC # Correcta.
+~%-33.3333%Solo activar perfil en BIOS # Incorrecta.
+~%-33.3333%Usar doble canal obligatoriamente # Incorrecta.
+~%-33.3333%Actualizar sistema operativo # Incorrecta.
+}
+
+::UD05_Medio_V5_022::
+¿Qué efecto tiene normalmente una RAM insuficiente en carga alta? {
+=Mayor uso de memoria virtual y pérdida de rendimiento # Correcta.
+~%-33.3333%Aumento automático de RAM física # Incorrecta.
+~%-33.3333%Desactivación de la BIOS # Incorrecta.
+~%-33.3333%Incremento de núcleos del procesador # Incorrecta.
+}
+
+::UD05_Medio_V5_023::
+¿Qué efecto tiene normalmente una RAM insuficiente en carga alta en una comprobación de aula taller? {
+=Mayor uso de memoria virtual y pérdida de rendimiento # Correcta.
+~%-33.3333%Aumento automático de RAM física # Incorrecta.
+~%-33.3333%Desactivación de la BIOS # Incorrecta.
+~%-33.3333%Incremento de núcleos del procesador # Incorrecta.
+}
+
+::UD05_Medio_V5_024::
+¿Qué efecto tiene normalmente una RAM insuficiente en carga alta para mejorar la estabilidad del equipo? {
+=Mayor uso de memoria virtual y pérdida de rendimiento # Correcta.
+~%-33.3333%Aumento automático de RAM física # Incorrecta.
+~%-33.3333%Desactivación de la BIOS # Incorrecta.
+~%-33.3333%Incremento de núcleos del procesador # Incorrecta.
+}
+
+::UD05_Medio_V5_025::
+¿Qué práctica mejora la calidad del ajuste de memoria? {
+=Cambios graduales con pruebas y registro de resultados # Correcta.
+~%-33.3333%Cambiar muchos parámetros a la vez # Incorrecta.
+~%-33.3333%No documentar resultados # Incorrecta.
+~%-33.3333%Aceptar inestabilidad leve # Incorrecta.
+}
+
+::UD05_Medio_V5_026::
+¿Qué práctica mejora la calidad del ajuste de memoria en una comprobación de aula taller? {
+=Cambios graduales con pruebas y registro de resultados # Correcta.
+~%-33.3333%Cambiar muchos parámetros a la vez # Incorrecta.
+~%-33.3333%No documentar resultados # Incorrecta.
+~%-33.3333%Aceptar inestabilidad leve # Incorrecta.
+}
+
+::UD05_Medio_V5_027::
+¿Qué práctica mejora la calidad del ajuste de memoria para mejorar la estabilidad del equipo? {
+=Cambios graduales con pruebas y registro de resultados # Correcta.
+~%-33.3333%Cambiar muchos parámetros a la vez # Incorrecta.
+~%-33.3333%No documentar resultados # Incorrecta.
+~%-33.3333%Aceptar inestabilidad leve # Incorrecta.
+}
+
+::UD05_Medio_V5_028::
+¿Qué objetivo tiene una configuración equilibrada en doble canal? {
+=Mejorar rendimiento en tareas sensibles a ancho de banda # Correcta.
+~%-33.3333%Sustituir almacenamiento secundario # Incorrecta.
+~%-33.3333%Evitar cualquier latencia # Incorrecta.
+~%-33.3333%Eliminar necesidad de controladores # Incorrecta.
+}
+
+::UD05_Medio_V5_029::
+¿Qué objetivo tiene una configuración equilibrada en doble canal en una comprobación de aula taller? {
+=Mejorar rendimiento en tareas sensibles a ancho de banda # Correcta.
+~%-33.3333%Sustituir almacenamiento secundario # Incorrecta.
+~%-33.3333%Evitar cualquier latencia # Incorrecta.
+~%-33.3333%Eliminar necesidad de controladores # Incorrecta.
+}
+
+::UD05_Medio_V5_030::
+¿Qué objetivo tiene una configuración equilibrada en doble canal para mejorar la estabilidad del equipo? {
+=Mejorar rendimiento en tareas sensibles a ancho de banda # Correcta.
+~%-33.3333%Sustituir almacenamiento secundario # Incorrecta.
+~%-33.3333%Evitar cualquier latencia # Incorrecta.
+~%-33.3333%Eliminar necesidad de controladores # Incorrecta.
+}

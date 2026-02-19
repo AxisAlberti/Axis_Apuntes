@@ -1,0 +1,243 @@
+$CATEGORY: SMR/Test/Conexiones_externas/Medio
+// UD04 Conexiones externas Nivel Medio V7
+// Fuente única: docs/section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
+
+::UD04_Medio_V7_001::
+¿Qué validación es más fiable para compatibilidad entre módulo frontal y header? {
+=Comprobar función eléctrica y mapeo de pines en documentación oficial # Correcta.
+~%-33.3333%Verificar solo que el conector entra físicamente # Incorrecta.
+~%-33.3333%Copiar cableado de otra placa similar # Incorrecta.
+~%-33.3333%Ignorar diferencias entre revisiones de modelo # Incorrecta.
+}
+
+::UD04_Medio_V7_002::
+¿Qué validación es más fiable para compatibilidad entre módulo frontal y header en el montaje del equipo? {
+=Comprobar función eléctrica y mapeo de pines en documentación oficial # Correcta.
+~%-33.3333%Verificar solo que el conector entra físicamente # Incorrecta.
+~%-33.3333%Copiar cableado de otra placa similar # Incorrecta.
+~%-33.3333%Ignorar diferencias entre revisiones de modelo # Incorrecta.
+}
+
+::UD04_Medio_V7_003::
+¿Qué validación es más fiable para compatibilidad entre módulo frontal y header para evitar incidencias técnicas? {
+=Comprobar función eléctrica y mapeo de pines en documentación oficial # Correcta.
+~%-33.3333%Verificar solo que el conector entra físicamente # Incorrecta.
+~%-33.3333%Copiar cableado de otra placa similar # Incorrecta.
+~%-33.3333%Ignorar diferencias entre revisiones de modelo # Incorrecta.
+}
+
+::UD04_Medio_V7_004::
+¿Qué papel tienen las líneas de control en USB-C con entrega de energía? {
+=Permitir negociación de capacidades entre fuente y dispositivo # Correcta.
+~%-33.3333%Sustituir las líneas de datos de alta velocidad # Incorrecta.
+~%-33.3333%Transportar audio analógico del panel frontal # Incorrecta.
+~%-33.3333%Evitar cualquier limitación de cableado # Incorrecta.
+}
+
+::UD04_Medio_V7_005::
+¿Qué papel tienen las líneas de control en USB-C con entrega de energía en el montaje del equipo? {
+=Permitir negociación de capacidades entre fuente y dispositivo # Correcta.
+~%-33.3333%Sustituir las líneas de datos de alta velocidad # Incorrecta.
+~%-33.3333%Transportar audio analógico del panel frontal # Incorrecta.
+~%-33.3333%Evitar cualquier limitación de cableado # Incorrecta.
+}
+
+::UD04_Medio_V7_006::
+¿Qué papel tienen las líneas de control en USB-C con entrega de energía para evitar incidencias técnicas? {
+=Permitir negociación de capacidades entre fuente y dispositivo # Correcta.
+~%-33.3333%Sustituir las líneas de datos de alta velocidad # Incorrecta.
+~%-33.3333%Transportar audio analógico del panel frontal # Incorrecta.
+~%-33.3333%Evitar cualquier limitación de cableado # Incorrecta.
+}
+
+::UD04_Medio_V7_007::
+¿Por qué no debe asumirse que Type-E implica todas las funciones avanzadas? {
+=Porque depende de controladores y soporte real de la plataforma # Correcta.
+~%-33.3333%Porque Type-E solo existe en placas antiguas # Incorrecta.
+~%-33.3333%Porque Type-E sirve únicamente para audio # Incorrecta.
+~%-33.3333%Porque Type-E anula la retrocompatibilidad USB # Incorrecta.
+}
+
+::UD04_Medio_V7_008::
+¿Por qué no debe asumirse que Type-E implica todas las funciones avanzadas en el montaje del equipo? {
+=Porque depende de controladores y soporte real de la plataforma # Correcta.
+~%-33.3333%Porque Type-E solo existe en placas antiguas # Incorrecta.
+~%-33.3333%Porque Type-E sirve únicamente para audio # Incorrecta.
+~%-33.3333%Porque Type-E anula la retrocompatibilidad USB # Incorrecta.
+}
+
+::UD04_Medio_V7_009::
+¿Por qué no debe asumirse que Type-E implica todas las funciones avanzadas para evitar incidencias técnicas? {
+=Porque depende de controladores y soporte real de la plataforma # Correcta.
+~%-33.3333%Porque Type-E solo existe en placas antiguas # Incorrecta.
+~%-33.3333%Porque Type-E sirve únicamente para audio # Incorrecta.
+~%-33.3333%Porque Type-E anula la retrocompatibilidad USB # Incorrecta.
+}
+
+::UD04_Medio_V7_010::
+¿Qué ventaja aporta un cableado interno corto y apantallado? {
+=Mejorar integridad de señal y reducir interferencias # Correcta.
+~%-33.3333%Aumentar la memoria del sistema # Incorrecta.
+~%-33.3333%Eliminar la necesidad de masa de chasis # Incorrecta.
+~%-33.3333%Corregir pinouts equivocados automáticamente # Incorrecta.
+}
+
+::UD04_Medio_V7_011::
+¿Qué ventaja aporta un cableado interno corto y apantallado en el montaje del equipo? {
+=Mejorar integridad de señal y reducir interferencias # Correcta.
+~%-33.3333%Aumentar la memoria del sistema # Incorrecta.
+~%-33.3333%Eliminar la necesidad de masa de chasis # Incorrecta.
+~%-33.3333%Corregir pinouts equivocados automáticamente # Incorrecta.
+}
+
+::UD04_Medio_V7_012::
+¿Qué ventaja aporta un cableado interno corto y apantallado para evitar incidencias técnicas? {
+=Mejorar integridad de señal y reducir interferencias # Correcta.
+~%-33.3333%Aumentar la memoria del sistema # Incorrecta.
+~%-33.3333%Eliminar la necesidad de masa de chasis # Incorrecta.
+~%-33.3333%Corregir pinouts equivocados automáticamente # Incorrecta.
+}
+
+::UD04_Medio_V7_013::
+¿Qué criterio ayuda a diagnosticar fallos intermitentes en USB frontal? {
+=Aislar variables entre cableado, módulo frontal y ajuste de firmware # Correcta.
+~%-33.3333%Cambiar varios componentes sin control # Incorrecta.
+~%-33.3333%Atribuir siempre el fallo al sistema operativo # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas del puerto # Incorrecta.
+}
+
+::UD04_Medio_V7_014::
+¿Qué criterio ayuda a diagnosticar fallos intermitentes en USB frontal en el montaje del equipo? {
+=Aislar variables entre cableado, módulo frontal y ajuste de firmware # Correcta.
+~%-33.3333%Cambiar varios componentes sin control # Incorrecta.
+~%-33.3333%Atribuir siempre el fallo al sistema operativo # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas del puerto # Incorrecta.
+}
+
+::UD04_Medio_V7_015::
+¿Qué criterio ayuda a diagnosticar fallos intermitentes en USB frontal para evitar incidencias técnicas? {
+=Aislar variables entre cableado, módulo frontal y ajuste de firmware # Correcta.
+~%-33.3333%Cambiar varios componentes sin control # Incorrecta.
+~%-33.3333%Atribuir siempre el fallo al sistema operativo # Incorrecta.
+~%-33.3333%Desactivar protecciones eléctricas del puerto # Incorrecta.
+}
+
+::UD04_Medio_V7_016::
+¿Qué función cumple la detección de jack en HD Audio? {
+=Permitir al sistema redirigir o ajustar audio según inserción # Correcta.
+~%-33.3333%Incrementar potencia de puertos USB # Incorrecta.
+~%-33.3333%Configurar puertos serie del equipo # Incorrecta.
+~%-33.3333%Actualizar automáticamente el firmware # Incorrecta.
+}
+
+::UD04_Medio_V7_017::
+¿Qué función cumple la detección de jack en HD Audio en el montaje del equipo? {
+=Permitir al sistema redirigir o ajustar audio según inserción # Correcta.
+~%-33.3333%Incrementar potencia de puertos USB # Incorrecta.
+~%-33.3333%Configurar puertos serie del equipo # Incorrecta.
+~%-33.3333%Actualizar automáticamente el firmware # Incorrecta.
+}
+
+::UD04_Medio_V7_018::
+¿Qué función cumple la detección de jack en HD Audio para evitar incidencias técnicas? {
+=Permitir al sistema redirigir o ajustar audio según inserción # Correcta.
+~%-33.3333%Incrementar potencia de puertos USB # Incorrecta.
+~%-33.3333%Configurar puertos serie del equipo # Incorrecta.
+~%-33.3333%Actualizar automáticamente el firmware # Incorrecta.
+}
+
+::UD04_Medio_V7_019::
+¿Qué interpretación correcta tiene un header Thunderbolt o USB4 para AIC? {
+=Gestiona señales de coordinación y estado, no todo el tráfico principal # Correcta.
+~%-33.3333%Es un puerto de datos completo por sí solo # Incorrecta.
+~%-33.3333%Sustituye la ranura de expansión # Incorrecta.
+~%-33.3333%Solo sirve para iluminación del chasis # Incorrecta.
+}
+
+::UD04_Medio_V7_020::
+¿Qué interpretación correcta tiene un header Thunderbolt o USB4 para AIC en el montaje del equipo? {
+=Gestiona señales de coordinación y estado, no todo el tráfico principal # Correcta.
+~%-33.3333%Es un puerto de datos completo por sí solo # Incorrecta.
+~%-33.3333%Sustituye la ranura de expansión # Incorrecta.
+~%-33.3333%Solo sirve para iluminación del chasis # Incorrecta.
+}
+
+::UD04_Medio_V7_021::
+¿Qué interpretación correcta tiene un header Thunderbolt o USB4 para AIC para evitar incidencias técnicas? {
+=Gestiona señales de coordinación y estado, no todo el tráfico principal # Correcta.
+~%-33.3333%Es un puerto de datos completo por sí solo # Incorrecta.
+~%-33.3333%Sustituye la ranura de expansión # Incorrecta.
+~%-33.3333%Solo sirve para iluminación del chasis # Incorrecta.
+}
+
+::UD04_Medio_V7_022::
+¿Qué riesgo puede aparecer con extensores internos no adecuados? {
+=Pérdida de estabilidad y degradación de enlace # Correcta.
+~%-33.3333%Aumento garantizado de prestaciones # Incorrecta.
+~%-33.3333%Corrección automática de ruido # Incorrecta.
+~%-33.3333%Compatibilidad universal sin validación # Incorrecta.
+}
+
+::UD04_Medio_V7_023::
+¿Qué riesgo puede aparecer con extensores internos no adecuados en el montaje del equipo? {
+=Pérdida de estabilidad y degradación de enlace # Correcta.
+~%-33.3333%Aumento garantizado de prestaciones # Incorrecta.
+~%-33.3333%Corrección automática de ruido # Incorrecta.
+~%-33.3333%Compatibilidad universal sin validación # Incorrecta.
+}
+
+::UD04_Medio_V7_024::
+¿Qué riesgo puede aparecer con extensores internos no adecuados para evitar incidencias técnicas? {
+=Pérdida de estabilidad y degradación de enlace # Correcta.
+~%-33.3333%Aumento garantizado de prestaciones # Incorrecta.
+~%-33.3333%Corrección automática de ruido # Incorrecta.
+~%-33.3333%Compatibilidad universal sin validación # Incorrecta.
+}
+
+::UD04_Medio_V7_025::
+¿Qué práctica mejora la entrega final de un montaje de conectividad externa? {
+=Documentar conexiones y validar puertos de forma repetible # Correcta.
+~%-33.3333%Cerrar la caja sin pruebas funcionales # Incorrecta.
+~%-33.3333%Depender solo del primer arranque # Incorrecta.
+~%-33.3333%Omitir registro de cambios realizados # Incorrecta.
+}
+
+::UD04_Medio_V7_026::
+¿Qué práctica mejora la entrega final de un montaje de conectividad externa en el montaje del equipo? {
+=Documentar conexiones y validar puertos de forma repetible # Correcta.
+~%-33.3333%Cerrar la caja sin pruebas funcionales # Incorrecta.
+~%-33.3333%Depender solo del primer arranque # Incorrecta.
+~%-33.3333%Omitir registro de cambios realizados # Incorrecta.
+}
+
+::UD04_Medio_V7_027::
+¿Qué práctica mejora la entrega final de un montaje de conectividad externa para evitar incidencias técnicas? {
+=Documentar conexiones y validar puertos de forma repetible # Correcta.
+~%-33.3333%Cerrar la caja sin pruebas funcionales # Incorrecta.
+~%-33.3333%Depender solo del primer arranque # Incorrecta.
+~%-33.3333%Omitir registro de cambios realizados # Incorrecta.
+}
+
+::UD04_Medio_V7_028::
+¿Qué ventaja aporta respetar el diseño de masas y rutas en audio frontal? {
+=Reducir ruido y mejorar calidad de señal # Correcta.
+~%-33.3333%Activar puertos extra en firmware # Incorrecta.
+~%-33.3333%Evitar cualquier dependencia del códec # Incorrecta.
+~%-33.3333%Eliminar necesidad de controlador de audio # Incorrecta.
+}
+
+::UD04_Medio_V7_029::
+¿Qué ventaja aporta respetar el diseño de masas y rutas en audio frontal en el montaje del equipo? {
+=Reducir ruido y mejorar calidad de señal # Correcta.
+~%-33.3333%Activar puertos extra en firmware # Incorrecta.
+~%-33.3333%Evitar cualquier dependencia del códec # Incorrecta.
+~%-33.3333%Eliminar necesidad de controlador de audio # Incorrecta.
+}
+
+::UD04_Medio_V7_030::
+¿Qué ventaja aporta respetar el diseño de masas y rutas en audio frontal para evitar incidencias técnicas? {
+=Reducir ruido y mejorar calidad de señal # Correcta.
+~%-33.3333%Activar puertos extra en firmware # Incorrecta.
+~%-33.3333%Evitar cualquier dependencia del códec # Incorrecta.
+~%-33.3333%Eliminar necesidad de controlador de audio # Incorrecta.
+}

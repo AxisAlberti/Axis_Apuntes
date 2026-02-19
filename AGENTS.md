@@ -10,6 +10,7 @@ Este repositorio contiene material educativo para módulos de formación profesi
 - Se deben seguir las reglas ortográficas del español (acentuación, puntuación y uso correcto de signos de interrogación y exclamación de apertura y cierre).
 - Cada vez que se edite un fichero `.md`, se añadirá al final una línea con la fecha de actualización, con el formato: `**Fecha de actualización:** 31/01/2026`.
 - Las cuestiones generadas se guardarán en un fichero en la raíz del repositorio. El nombre del fichero debe incluir el nombre del módulo y el nivel de dificultad.
+- Cuando se solicite generar cuestiones, se generará directamente el fichero `.gift` final; no se crearán módulos ni scripts en Python para esa tarea.
 - Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
 - Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
 - En cuestiones tipo test y de desarrollo, no se incluirán preguntas que obliguen a memorizar datos numéricos concretos (por ejemplo, nº de núcleos, tasas, latencias u otros valores específicos de dispositivos o conceptos).
@@ -331,9 +332,8 @@ relacionada con el contenido del archivo de teoría al que acompaña. {
 
 ### 7.2. Categorías Moodle (GIFT)
 
-- El fichero de categorías está en:
-  - `scripts/SMR-categorias.gift`
 - Al generar cuestionarios, la **primera línea** del fichero debe ser la categoría correspondiente:
+- Cada vez que se genere una unidad nueva, se deberá crear también su entrada de categoría en `scripts/SMR-categorias.gift` con el nombre normalizado de la unidad para Moodle.
 
 ```gift
 $CATEGORY: SMR/Test/Nombre_de_la_unidad/Basico
@@ -344,15 +344,10 @@ El nombre de la unidad en la categoría debe estar **normalizado**:
 - Sin tildes ni caracteres especiales
 - Espacios reemplazados por `_`
 - Solo letras, números, `_` y `-`
-
-Para actualizar automáticamente el fichero de categorías tras añadir o renombrar unidades/anexos:
-
-```bash
-scripts/update_categories.py
-```
 ### 7.3 Obligatorio cuestiones (GIFT)
 
 - Siempre has de generar minimo 30 cuestiones.
+- Cuando se pidan cuestiones, se entregará únicamente el fichero `.gift`; no se generarán scripts ni módulos de apoyo en Python.
 
 - Evita enunciados del tipo ¿Qué describe mejor... y ¿Qué decisión es adecuada...
 
@@ -414,5 +409,7 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 **Fecha de actualización:** 06/02/2026
 
 **Fecha de actualización:** 18/02/2026
+
+**Fecha de actualización:** 19/02/2026
 
 **Fecha de actualización:** 19/02/2026
