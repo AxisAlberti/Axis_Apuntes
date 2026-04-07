@@ -398,6 +398,92 @@ Este sistema es habitual en etiquetas de almacen, codigos de barras, identificac
 - Los tickets termicos pueden deteriorarse con calor, roce o luz.
 - La transferencia termica necesita cinta y consumibles especificos.
 
+### 6. Impresoras de sublimacion
+
+Las impresoras de sublimacion son impresoras de **no impacto** que transfieren color al soporte mediante calor. En este sistema, el colorante pasa a estado gaseoso y se fija sobre el material de impresion. Se utilizan sobre todo en fotografia, personalizacion de objetos, carnets, merchandising y ciertos trabajos textiles.
+
+#### 6.1. Como funciona la sublimacion
+
+El funcionamiento general puede resumirse asi:
+
+1. La impresora trabaja con un consumible de color organizado en paneles o capas.
+2. El cabezal aplica calor con distinta intensidad.
+3. El colorante se vaporiza o se transfiere en forma muy fina.
+4. El soporte absorbe el color y se forman imagenes con transiciones suaves.
+
+Este sistema destaca porque puede generar degradados y colores continuos con muy buen acabado visual.
+
+<figure markdown="1">
+  ![](assets/samsung_spp_2040_dye_sub_printer.jpg)
+  <figcaption>Ejemplo de impresora fotográfica de sublimación, orientada a copias pequeñas con buen acabado de color.</figcaption>
+</figure>
+
+#### 6.2. Consumibles y color
+
+En muchas impresoras de sublimacion fotografica, el color se aplica por paneles sucesivos, normalmente **amarillo, magenta y cian**, y a veces una capa final de proteccion.
+
+<figure markdown="1">
+  ![](assets/rgb_dye_sublimation_panels.jpg)
+  <figcaption>Paneles de color utilizados en sublimación. La impresión suele construirse por capas sucesivas de color.</figcaption>
+</figure>
+
+#### 6.3. Usos habituales
+
+Las impresoras de sublimacion son frecuentes en:
+
+- Impresion fotografica de pequeño formato.
+- Carnets y tarjetas identificativas.
+- Personalizacion de tazas, camisetas y objetos.
+- Produccion grafica sobre soportes preparados para sublimacion.
+
+<figure markdown="1">
+  ![](assets/fabric_printing_machine.jpg)
+  <figcaption>Ejemplo de aplicación de sublimación en impresión sobre tejido o materiales preparados para personalización.</figcaption>
+</figure>
+
+#### 6.4. Ventajas y limitaciones
+
+**Ventajas**
+
+- Muy buena calidad en color y degradados.
+- Acabado atractivo para fotografia y personalizacion.
+- Resultado uniforme en soportes preparados para este sistema.
+
+**Limitaciones**
+
+- Requieren consumibles y soportes especificos.
+- No son la opcion habitual para grandes volumenes de oficina.
+- Su uso suele estar mas especializado que el de una laser o una de inyeccion domestica.
+
+### 7. Comparacion final de las principales tecnologias de impresion
+
+La siguiente tabla resume de forma global las tecnologias estudiadas en esta unidad:
+
+| Tecnologia | Tipo | Consumible principal | Punto fuerte | Limitacion principal | Uso habitual |
+|---|---|---|---|---|---|
+| Agujas | Impacto | Cinta entintada | Formularios multicopia | Ruido y baja calidad grafica | Administracion, industria |
+| Margarita | Impacto | Cinta entintada | Texto muy definido | Muy poca flexibilidad | Uso residual |
+| Inyeccion de tinta | No impacto | Tinta liquida | Color y versatilidad | Mantenimiento del cabezal | Hogar, educacion |
+| Laser monocromo | No impacto | Toner negro | Velocidad y texto nitido | Sin color | Oficina y centros educativos |
+| Laser color | No impacto | Toner CMYK | Documentos con graficos | Mayor coste y complejidad | Oficina, presentaciones |
+| Termica directa | No impacto | Papel termico | Rapidez y simplicidad | Menor durabilidad del soporte | Tickets y recibos |
+| Transferencia termica | No impacto | Cinta y soporte | Etiquetas resistentes | Consumibles especificos | Logistica e industria |
+| Sublimacion | No impacto | Paneles de color o consumibles especificos | Muy buen acabado visual | Uso mas especializado | Fotografia y personalizacion |
+
+### 8. Conclusion
+
+No existe una impresora perfecta para todos los casos. La eleccion depende del tipo de documento, del volumen de trabajo, del coste por impresion, del nivel de calidad necesario y del soporte sobre el que se va a imprimir.
+
+De forma general:
+
+- Las **impresoras de impacto** son utiles cuando importa la resistencia mecanica o la impresion sobre formularios multicopia.
+- Las **impresoras de inyeccion** destacan por su versatilidad y su buena calidad en color.
+- Las **impresoras laser** son muy adecuadas para imprimir mucho texto con rapidez.
+- Las **impresoras termicas** dominan en tickets, etiquetas y sistemas de punto de venta.
+- Las **impresoras de sublimacion** se reservan para trabajos donde el acabado visual y la personalizacion son prioritarios.
+
+Conocer estas tecnologias ayuda a elegir el equipo adecuado y a comprender mejor por que cada impresora incorpora unos componentes, unos consumibles y un mantenimiento distintos.
+
 ### Ideas clave
 
 - Las **impresoras de impacto** golpean una cinta entintada contra el papel.
@@ -406,6 +492,7 @@ Este sistema es habitual en etiquetas de almacen, codigos de barras, identificac
 - Las **impresoras de inyeccion de tinta** expulsan microgotas de tinta mediante boquillas muy precisas.
 - Las **impresoras laser** usan toner, tambor fotoconductor y fusor para fijar la imagen al papel.
 - Las **impresoras termicas** imprimen aplicando calor, bien sobre papel termico o bien mediante transferencia desde una cinta.
+- Las **impresoras de sublimacion** transfieren color mediante calor y destacan en fotografia y personalizacion.
 - Las tecnologias de **no impacto** dominan hoy el mercado por su silencio, velocidad y calidad grafica.
 
 ### Fuentes consultadas
@@ -433,5 +520,8 @@ Este sistema es habitual en etiquetas de almacen, codigos de barras, identificac
 - [Wikimedia Commons. Twitter receipt printer](https://commons.wikimedia.org/wiki/File:Twitter_receipt_printer.jpg)
 - [Wikimedia Commons. Thermal printhead](https://commons.wikimedia.org/wiki/File:Thermal_printhead.jpg)
 - [Wikimedia Commons. Thermal transfer](https://commons.wikimedia.org/wiki/File:Thermal_transfer_(9598971195).jpg)
+- [Wikimedia Commons. Samsung SPP-2040](https://commons.wikimedia.org/wiki/File:Samsung_SPP-2040.jpg)
+- [Wikimedia Commons. RGB dye sublimation panels](https://commons.wikimedia.org/wiki/File:RGB_dye_sublimation_panels.jpg)
+- [Wikimedia Commons. Fabric Printing machine](https://commons.wikimedia.org/wiki/File:Fabric_Printing_machine.jpg)
 
 **Fecha de actualización:** 07/04/2026
