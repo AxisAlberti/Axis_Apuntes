@@ -129,22 +129,78 @@ El resultado es un texto de gran calidad para su epoca, pero con una limitacion 
 - Tienen poca versatilidad para simbolos, diseños o imagenes.
 - Han quedado desplazadas por impresoras laser e inyeccion, mucho mas practicas para uso general.
 
-### Comparacion rapida entre agujas y margarita
+### 3. Impresoras de inyeccion de tinta
 
-| Aspecto | Agujas | Margarita |
-|---|---|---|
-| Tipo de impresion | Matriz de puntos | Caracteres prefijados |
-| Calidad de texto | Media | Alta |
-| Graficos | Basicos | Muy limitados |
-| Formularios multicopia | Muy adecuada | Adecuada |
-| Ruido | Alto | Alto |
-| Uso actual | Nichos administrativos e industriales | Muy residual |
+Las impresoras de inyeccion de tinta pertenecen al grupo de **no impacto**. No golpean el papel, sino que **expulsan microgotas de tinta** a traves de boquillas muy pequeñas situadas en el cabezal de impresion. Gracias a ello pueden trabajar con mas silencio y ofrecer buena calidad en texto, color e imagen.
+
+#### 3.1. Elementos principales
+
+En una impresora de inyeccion de tinta suelen intervenir estos elementos:
+
+- **Cartuchos o depositos** de tinta.
+- **Cabezal de impresion**, donde se encuentran las boquillas.
+- **Carro**, que desplaza el cabezal de lado a lado.
+- **Rodillos**, que avanzan el papel.
+- **Electronica de control**, que decide cuando y donde expulsar cada gota.
+
+<figure markdown="1">
+  ![](assets/canon_ip3500_print_head.jpg)
+  <figcaption>Cabezal real de una impresora de inyección de tinta Canon. En el cabezal se concentran las boquillas por las que sale la tinta.</figcaption>
+</figure>
+
+#### 3.2. Como funciona el sistema de inyeccion
+
+El funcionamiento general puede resumirse asi:
+
+1. El papel avanza una pequeña distancia.
+2. El carro mueve el cabezal a gran velocidad de un lado a otro.
+3. Las boquillas expulsan gotas diminutas en posiciones muy precisas.
+4. La combinacion de miles de gotas forma letras, lineas, sombras y colores.
+
+La precision del sistema depende del tamaño de las gotas, del numero de boquillas y del control electronico del disparo. Por eso estas impresoras pueden producir documentos a color y fotografias con mucho mas detalle que una impresora de impacto.
+
+#### 3.3. Dos tecnologias habituales del cabezal
+
+Las dos formas mas conocidas de expulsar la tinta son:
+
+- **Sistema termico**: una resistencia calienta rapidamente la tinta y genera una burbuja que empuja la gota hacia fuera.
+- **Sistema piezoelectrico**: un cristal piezoelectrico cambia ligeramente de forma al recibir corriente y presiona la tinta para expulsarla por la boquilla.
+
+<figure markdown="1">
+  ![](assets/epson_piezo_nozzle.jpg)
+  <figcaption>Ejemplo de boquilla piezoeléctrica de Epson. El cambio de forma del actuador ayuda a expulsar la gota de tinta con gran precisión.</figcaption>
+</figure>
+
+#### 3.4. Ventajas y limitaciones
+
+**Ventajas**
+
+- Permiten imprimir en color con buena calidad.
+- Son silenciosas comparadas con las impresoras de impacto.
+- Resultan adecuadas para texto, apuntes, graficos y fotografia domestica.
+
+**Limitaciones**
+
+- Los cartuchos y cabezales requieren mantenimiento para evitar secados y obstrucciones.
+- El coste por pagina puede ser alto si se imprime mucho.
+- La velocidad suele ser menor que en muchas impresoras laser de oficina.
+
+### Comparacion rapida entre agujas, margarita e inyeccion
+| Aspecto | Agujas | Margarita | Inyeccion |
+|---|---|---|---|
+| Tipo de impresion | Matriz de puntos | Caracteres prefijados | Microgotas de tinta |
+| Calidad de texto | Media | Alta | Alta |
+| Graficos | Basicos | Muy limitados | Buenos |
+| Formularios multicopia | Muy adecuada | Adecuada | No adecuada |
+| Ruido | Alto | Alto | Bajo |
+| Uso actual | Nichos administrativos e industriales | Muy residual | Hogar, educacion y pequeña oficina |
 
 ### Ideas clave
 
 - Las **impresoras de impacto** golpean una cinta entintada contra el papel.
 - Las **impresoras de agujas** crean caracteres a partir de puntos.
 - Las **impresoras de margarita** imprimen caracteres completos con una rueda de letras.
+- Las **impresoras de inyeccion de tinta** expulsan microgotas de tinta mediante boquillas muy precisas.
 - Las tecnologias de **no impacto** dominan hoy el mercado por su silencio, velocidad y calidad grafica.
 
 ### Fuentes consultadas
@@ -153,9 +209,12 @@ El resultado es un texto de gran calidad para su epoca, pero con una limitacion 
 - [Encyclopaedia Britannica. Ink-jet printer](https://www.britannica.com/technology/ink-jet-printer)
 - [Wikipedia. Dot matrix printing](https://en.wikipedia.org/wiki/Dot_matrix_printing)
 - [Wikipedia. Daisy wheel printing](https://en.wikipedia.org/wiki/Daisy_wheel_printing)
+- [Wikipedia. Inkjet printing](https://en.wikipedia.org/wiki/Inkjet_printing)
 - [Wikimedia Commons. Epson dot matrix printer](https://commons.wikimedia.org/wiki/File:Epson_dot_matrix_printer.jpg)
 - [Wikimedia Commons. Dot matrix print head](https://commons.wikimedia.org/wiki/File:9_nadel_druckkopf-star_nl10--hinnerk_ruemenapf_vs01-p50.jpg)
 - [Wikimedia Commons. Daisy wheel printer](https://commons.wikimedia.org/wiki/File:Daisy_Wheel_printer.JPG)
 - [Wikimedia Commons. Daisy wheel print wheel](https://commons.wikimedia.org/wiki/File:Daisy_Wheel_Printer_Print_Wheel.jpg)
+- [Wikimedia Commons. Canon iP3500 Print Head](https://commons.wikimedia.org/wiki/File:Canon_iP3500_Print_Head.jpg)
+- [Wikimedia Commons. EPSON Piezoelectric InkJet Print Nozzle](https://commons.wikimedia.org/wiki/File:EPSON_Piezoelectric_InkJet_Print_Nozzle.jpg)
 
 **Fecha de actualización:** 07/04/2026
