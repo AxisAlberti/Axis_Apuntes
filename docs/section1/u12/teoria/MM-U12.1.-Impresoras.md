@@ -320,6 +320,89 @@ Frente a una monocromo, la laser color:
 - No suelen ser la mejor opcion para fotografia domestica.
 - El fusor trabaja con calor, por lo que consume energia y requiere componentes internos especificos.
 
+### 5. Impresoras termicas
+
+Las impresoras termicas son impresoras de **no impacto** que generan la impresion aplicando calor. Son muy frecuentes en comercios, TPV, cajeros, logistica, etiquetado y sistemas de tickets. Dentro de este grupo conviene distinguir dos sistemas principales: la **impresion termica directa** y la **transferencia termica**.
+
+#### 5.1. Elementos principales
+
+En una impresora termica suelen intervenir estos elementos:
+
+- **Cabezal termico**, que calienta puntos concretos.
+- **Rodillo de arrastre**, que mueve el papel o la etiqueta.
+- **Papel termico** o **cinta de transferencia**, segun el sistema.
+- **Electronica de control**, que decide que zonas deben calentarse.
+
+<figure markdown="1">
+  ![](assets/thermal_printhead.jpg)
+  <figcaption>Cabezal térmico. Este componente aplica calor en puntos muy concretos para formar texto, códigos o gráficos sencillos.</figcaption>
+</figure>
+
+#### 5.2. Impresion termica directa
+
+En la impresion termica directa no se utiliza tinta ni toner. El cabezal calienta directamente un **papel termico especial**, que se oscurece en las zonas donde recibe calor.
+
+El proceso es sencillo:
+
+1. El papel termico avanza.
+2. El cabezal calienta puntos concretos.
+3. El recubrimiento del papel reacciona al calor.
+4. Aparecen letras, numeros, codigos o graficos simples.
+
+Este sistema se utiliza mucho en tickets de compra, recibos, turnos y comprobantes breves.
+
+<figure markdown="1">
+  ![](assets/thermal_paper.jpg)
+  <figcaption>Rollos de papel térmico, utilizados en tickets, recibos y terminales de punto de venta.</figcaption>
+</figure>
+
+<figure markdown="1">
+  ![](assets/twitter_receipt_printer.jpg)
+  <figcaption>Ejemplo de impresora térmica de tickets. Es un formato muy habitual en comercios y sistemas TPV.</figcaption>
+</figure>
+
+#### 5.3. Transferencia termica
+
+En la transferencia termica tampoco se imprime por impacto, pero aqui el calor no actua directamente sobre el papel. El cabezal calienta una **cinta entintada** y esa tinta se transfiere al soporte, que puede ser papel, plastico o material para etiquetas.
+
+El proceso general es este:
+
+1. El cabezal termico calienta zonas concretas.
+2. La cinta de transferencia libera tinta en esas zonas.
+3. La tinta pasa al soporte.
+4. Se obtiene una impresion mas estable y duradera.
+
+Este sistema es habitual en etiquetas de almacen, codigos de barras, identificacion de productos y entornos industriales.
+
+<figure markdown="1">
+  ![](assets/thermal_transfer.jpg)
+  <figcaption>Ejemplo de transferencia térmica, donde una cinta transmite la tinta al soporte mediante calor.</figcaption>
+</figure>
+
+#### 5.4. Diferencias entre termica directa y transferencia termica
+
+| Aspecto | Termica directa | Transferencia termica |
+|---|---|---|
+| Consumible principal | Papel termico | Cinta de transferencia y soporte |
+| Uso de tinta | No | Si, mediante cinta |
+| Durabilidad | Menor | Mayor |
+| Uso habitual | Tickets y recibos | Etiquetas y entornos industriales |
+| Resistencia | Mas limitada | Mas alta |
+
+#### 5.5. Ventajas y limitaciones
+
+**Ventajas**
+
+- Son silenciosas y rapidas.
+- Tienen mecanismos sencillos.
+- Resultan muy utiles para tickets, etiquetas y codigos de barras.
+
+**Limitaciones**
+
+- La termica directa depende de papel especial.
+- Los tickets termicos pueden deteriorarse con calor, roce o luz.
+- La transferencia termica necesita cinta y consumibles especificos.
+
 ### Ideas clave
 
 - Las **impresoras de impacto** golpean una cinta entintada contra el papel.
@@ -327,6 +410,7 @@ Frente a una monocromo, la laser color:
 - Las **impresoras de margarita** imprimen caracteres completos con una rueda de letras.
 - Las **impresoras de inyeccion de tinta** expulsan microgotas de tinta mediante boquillas muy precisas.
 - Las **impresoras laser** usan toner, tambor fotoconductor y fusor para fijar la imagen al papel.
+- Las **impresoras termicas** imprimen aplicando calor, bien sobre papel termico o bien mediante transferencia desde una cinta.
 - Las tecnologias de **no impacto** dominan hoy el mercado por su silencio, velocidad y calidad grafica.
 
 ### Fuentes consultadas
@@ -350,5 +434,9 @@ Frente a una monocromo, la laser color:
 - [Wikimedia Commons. Samsung ML-2010 (monochrome laser printer)](https://commons.wikimedia.org/wiki/File:Samsung_ML-2010_(monochrome_laser_printer).jpg)
 - [Wikimedia Commons. HP Color LaserJet CM1312nfi Multifunction Printer](https://commons.wikimedia.org/wiki/File:HP_Color_LaserJet_CM1312nfi_Multifunction_Printer.jpg)
 - [Wikimedia Commons. Four Samsung laser toner cartridges front view](https://commons.wikimedia.org/wiki/File:Four_Samsung_laser_toner_cartridges_front_view.jpg)
+- [Wikimedia Commons. Thermal paper](https://commons.wikimedia.org/wiki/File:Thermal_paper.jpg)
+- [Wikimedia Commons. Twitter receipt printer](https://commons.wikimedia.org/wiki/File:Twitter_receipt_printer.jpg)
+- [Wikimedia Commons. Thermal printhead](https://commons.wikimedia.org/wiki/File:Thermal_printhead.jpg)
+- [Wikimedia Commons. Thermal transfer](https://commons.wikimedia.org/wiki/File:Thermal_transfer_(9598971195).jpg)
 
 **Fecha de actualización:** 07/04/2026
