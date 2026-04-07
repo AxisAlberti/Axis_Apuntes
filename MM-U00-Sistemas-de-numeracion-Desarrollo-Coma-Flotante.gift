@@ -1,0 +1,91 @@
+$CATEGORY: SMR/Desarrollo/Sistemas_de_numeracion
+
+// question: U00CF001  name: Decimal a coma flotante 12,12
+::U00CF001::[html]<p>¿Convierte el número decimal 12,12 a coma flotante IEEE 754 de 32 bits y muestra de forma ordenada el signo, la conversión binaria, la normalización, el exponente sesgado, la mantisa y el resultado final en binario?</p>{}
+
+// question: U00CF002  name: Decimal a coma flotante 13,25
+::U00CF002::[html]<p>¿Convierte el número decimal 13,25 a coma flotante IEEE 754 de 32 bits indicando cada paso intermedio hasta obtener la palabra final completa?</p>{}
+
+// question: U00CF003  name: Decimal a coma flotante 5,5
+::U00CF003::[html]<p>¿Convierte el número decimal 5,5 a representación de coma flotante IEEE 754 simple precisión y explica cómo obtienes signo, exponente y fracción?</p>{}
+
+// question: U00CF004  name: Decimal a coma flotante 18,75
+::U00CF004::[html]<p>¿Convierte 18,75 decimal a IEEE 754 de 32 bits y expresa también el resultado separado en signo, exponente y mantisa?</p>{}
+
+// question: U00CF005  name: Decimal a coma flotante 0,625
+::U00CF005::[html]<p>¿Convierte 0,625 decimal a coma flotante IEEE 754 simple y justifica cómo se normaliza el número antes de formar el exponente sesgado?</p>{}
+
+// question: U00CF006  name: Decimal a coma flotante 2,5
+::U00CF006::[html]<p>¿Convierte 2,5 decimal a coma flotante de 32 bits y muestra con claridad la transformación desde binario normalizado hasta la palabra IEEE final?</p>{}
+
+// question: U00CF007  name: Decimal a coma flotante -7,25
+::U00CF007::[html]<p>¿Convierte el número decimal -7,25 a IEEE 754 simple precisión indicando cómo cambia el bit de signo y cómo quedan exponente y mantisa?</p>{}
+
+// question: U00CF008  name: Decimal a coma flotante -10,5
+::U00CF008::[html]<p>¿Convierte -10,5 decimal a coma flotante IEEE 754 de 32 bits mostrando la conversión paso a paso desde su valor binario hasta la representación final?</p>{}
+
+// question: U00CF009  name: Decimal a coma flotante 0,1
+::U00CF009::[html]<p>¿Convierte 0,1 decimal a IEEE 754 simple precisión y explica por qué puede aparecer aproximación al trabajar con coma flotante?</p>{}
+
+// question: U00CF010  name: Decimal a coma flotante 0,2
+::U00CF010::[html]<p>¿Convierte 0,2 decimal a representación IEEE 754 de 32 bits y comenta brevemente si el valor se representa de forma exacta o aproximada?</p>{}
+
+// question: U00CF011  name: Decimal a coma flotante 45,625
+::U00CF011::[html]<p>¿Convierte 45,625 decimal a coma flotante IEEE 754 simple y escribe el resultado final como 32 bits agrupados por campos?</p>{}
+
+// question: U00CF012  name: Decimal a coma flotante 100,5
+::U00CF012::[html]<p>¿Convierte 100,5 decimal a IEEE 754 de 32 bits detallando la normalización del número y la construcción de la mantisa?</p>{}
+
+// question: U00CF013  name: Decimal a coma flotante -0,75
+::U00CF013::[html]<p>¿Convierte -0,75 decimal a coma flotante IEEE 754 simple precisión e identifica claramente el signo, el exponente y la fracción binaria resultante?</p>{}
+
+// question: U00CF014  name: Decimal a coma flotante 31,5
+::U00CF014::[html]<p>¿Convierte 31,5 decimal a representación IEEE 754 simple mostrando la secuencia completa de cálculo hasta la palabra de 32 bits?</p>{}
+
+// question: U00CF015  name: Decimal a coma flotante 64,125
+::U00CF015::[html]<p>¿Convierte 64,125 decimal a coma flotante IEEE 754 de 32 bits y escribe el resultado final tanto por campos como en binario continuo?</p>{}
+
+// question: U00CF016  name: Coma flotante a decimal positiva sencilla
+::U00CF016::[html]<p>¿Dada la representación IEEE 754 simple <code>0 10000010 10101000000000000000000</code>, convierte el valor a decimal mostrando cómo obtienes el signo, el exponente real y la mantisa normalizada?</p>{}
+
+// question: U00CF017  name: Coma flotante a decimal negativa sencilla
+::U00CF017::[html]<p>¿Dada la palabra de 32 bits <code>1 10000001 11010000000000000000000</code>, conviértela a decimal y explica cada fase del proceso?</p>{}
+
+// question: U00CF018  name: Coma flotante a decimal 5,5
+::U00CF018::[html]<p>¿Convierte a decimal la representación IEEE 754 simple <code>0 10000001 01100000000000000000000</code> indicando cómo reconstruyes el valor numérico?</p>{}
+
+// question: U00CF019  name: Coma flotante a decimal -10,5
+::U00CF019::[html]<p>¿Dada la representación <code>1 10000010 01010000000000000000000</code>, conviértela a decimal y razona el efecto del signo sobre el resultado final?</p>{}
+
+// question: U00CF020  name: Coma flotante a decimal fraccion menor que uno
+::U00CF020::[html]<p>¿Convierte a decimal el valor IEEE 754 de 32 bits <code>0 01111110 01000000000000000000000</code> explicando por qué el exponente real es negativo?</p>{}
+
+// question: U00CF021  name: Coma flotante a decimal -0,75
+::U00CF021::[html]<p>¿Dada la palabra IEEE 754 simple <code>1 01111110 10000000000000000000000</code>, obtén su valor decimal y describe la reconstrucción paso a paso?</p>{}
+
+// question: U00CF022  name: Coma flotante a decimal 18,75
+::U00CF022::[html]<p>¿Convierte a decimal la representación <code>0 10000011 00101100000000000000000</code> mostrando el exponente sin sesgo y la mantisa efectiva?</p>{}
+
+// question: U00CF023  name: Coma flotante a decimal 45,625
+::U00CF023::[html]<p>¿Dada la coma flotante de 32 bits <code>0 10000100 01101101000000000000000</code>, conviértela a decimal y explica el cálculo final?</p>{}
+
+// question: U00CF024  name: Coma flotante a decimal 64,125
+::U00CF024::[html]<p>¿Convierte a decimal la palabra IEEE 754 simple <code>0 10000101 00000000100000000000000</code> justificando la normalización implícita de la mantisa?</p>{}
+
+// question: U00CF025  name: Coma flotante a decimal 2,5
+::U00CF025::[html]<p>¿Dada la representación <code>0 10000000 01000000000000000000000</code>, conviértela a decimal mostrando el desarrollo desde la mantisa normalizada?</p>{}
+
+// question: U00CF026  name: Coma flotante a decimal -7,25
+::U00CF026::[html]<p>¿Convierte a decimal el número IEEE 754 simple <code>1 10000001 11010000000000000000000</code> y explica cómo afecta el bit de signo al valor reconstruido?</p>{}
+
+// question: U00CF027  name: Coma flotante a decimal con palabra completa
+::U00CF027::[html]<p>¿Dada la palabra completa <code>01000001010101000000000000000000</code>, sepárala en campos IEEE 754 y conviértela a decimal justificando cada paso?</p>{}
+
+// question: U00CF028  name: Coma flotante a decimal con palabra completa negativa
+::U00CF028::[html]<p>¿Dada la palabra IEEE 754 de 32 bits <code>11000001001010000000000000000000</code>, conviértela a decimal separando primero signo, exponente y mantisa?</p>{}
+
+// question: U00CF029  name: Decimal a flotante con aproximacion explicada
+::U00CF029::[html]<p>¿Convierte 3,2 decimal a coma flotante IEEE 754 simple precisión y comenta si la parte fraccionaria puede representarse de forma exacta o aproximada?</p>{}
+
+// question: U00CF030  name: Coma flotante a decimal con aproximacion
+::U00CF030::[html]<p>¿Dada la representación IEEE 754 simple <code>00111101110011001100110011001101</code>, conviértela a decimal y comenta brevemente por qué ese valor puede relacionarse con una fracción decimal no exacta en binario?</p>{}
