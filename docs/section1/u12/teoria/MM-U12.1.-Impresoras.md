@@ -159,19 +159,44 @@ El funcionamiento general puede resumirse asi:
 
 La precision del sistema depende del tamaño de las gotas, del numero de boquillas y del control electronico del disparo. Por eso estas impresoras pueden producir documentos a color y fotografias con mucho mas detalle que una impresora de impacto.
 
-#### 3.3. Dos tecnologias habituales del cabezal
+#### 3.3. Principales sistemas de inyeccion
 
-Las dos formas mas conocidas de expulsar la tinta son:
+Las impresoras de inyeccion no trabajan todas del mismo modo. Existen **tres sistemas principales** para controlar la salida y el recorrido de la tinta:
 
 - **Sistema termico**: una resistencia calienta rapidamente la tinta y genera una burbuja que empuja la gota hacia fuera.
 - **Sistema piezoelectrico**: un cristal piezoelectrico cambia ligeramente de forma al recibir corriente y presiona la tinta para expulsarla por la boquilla.
+- **Sistema con carga electrica**: la tinta puede salir como un chorro continuo, dividirse en gotas, cargarse electricamente y desviarse mediante un campo electrico hacia el papel o hacia un sistema de recuperacion.
 
 <figure markdown="1">
   ![](assets/epson_piezo_nozzle.jpg)
   <figcaption>Ejemplo de boquilla piezoeléctrica de Epson. El cambio de forma del actuador ayuda a expulsar la gota de tinta con gran precisión.</figcaption>
 </figure>
 
-#### 3.4. Ventajas y limitaciones
+#### 3.4. Sistema con carga electrica
+
+El sistema con carga electrica se emplea sobre todo en equipos de **inyeccion continua de tinta**. En este caso, la tinta no sale gota a gota desde el principio, sino como un **chorro continuo** que despues se fragmenta.
+
+<figure markdown="1">
+  ![](assets/continuous_inkjet_diagram.png)
+  <figcaption>Esquema de inyección continua de tinta. El chorro se divide en gotas y un campo eléctrico ayuda a dirigirlas hacia el soporte o hacia el circuito de recuperación.</figcaption>
+</figure>
+
+El proceso puede resumirse asi:
+
+1. La tinta sale en un chorro continuo.
+2. Ese chorro se divide en gotas muy pequeñas.
+3. Las gotas se cargan electricamente.
+4. Un campo electrico desvía cada gota.
+5. Algunas gotas se dirigen hacia el papel y otras se desvían para ser recogidas o descartadas.
+
+Este sistema permite un control muy preciso del recorrido de las gotas y se emplea especialmente en entornos industriales, codificacion de productos, embalajes y lineas de produccion.
+
+<figure markdown="1">
+  ![](assets/hp_continuous_ink_system_interior.jpg)
+  <figcaption>Vista interna de un sistema de tinta continua, útil para entender que la gestión de la tinta y su circulación forman parte del mecanismo completo de impresión.</figcaption>
+</figure>
+
+#### 3.5. Ventajas y limitaciones
 
 **Ventajas**
 
@@ -195,12 +220,113 @@ Las dos formas mas conocidas de expulsar la tinta son:
 | Ruido | Alto | Alto | Bajo |
 | Uso actual | Nichos administrativos e industriales | Muy residual | Hogar, educacion y pequeña oficina |
 
+### 4. Impresoras laser
+
+Las impresoras laser tambien pertenecen al grupo de **no impacto**. En lugar de tinta liquida, emplean **toner**, un polvo muy fino que se adhiere al papel gracias a procesos electrostaticos y que despues se fija por calor. Son muy utilizadas en oficinas, centros educativos y entornos donde se imprimen grandes cantidades de documentos.
+
+#### 4.1. Elementos principales
+
+Los componentes mas importantes de una impresora laser son:
+
+- **Tambor fotoconductor**, donde se forma la imagen electrostatica.
+- **Laser o sistema LED**, que dibuja la informacion sobre el tambor.
+- **Toner**, polvo fino que se adhiere a las zonas activadas del tambor.
+- **Rodillo de transferencia**, que lleva el toner al papel.
+- **Fusor**, conjunto que aplica calor y presion para fijar el toner.
+
+<figure markdown="1">
+  ![](assets/laser_printer_operation.svg)
+  <figcaption>Esquema general del funcionamiento de una impresora láser: carga del tambor, escritura de la imagen, atracción del tóner, transferencia al papel y fijación.</figcaption>
+</figure>
+
+#### 4.2. Como funciona una impresora laser
+
+El proceso se puede resumir en estas fases:
+
+1. El tambor fotoconductor recibe una carga electrica uniforme.
+2. El laser descarga selectivamente ciertas zonas del tambor y dibuja la imagen.
+3. El toner se adhiere a esas zonas marcadas.
+4. El papel pasa junto al tambor y recoge el toner.
+5. El fusor aplica calor y presion para fijar definitivamente el polvo al papel.
+
+Gracias a este sistema, las impresoras laser ofrecen texto nitido, buena velocidad y un rendimiento alto en trabajos repetitivos.
+
+<figure markdown="1">
+  ![](assets/xerox_photoconductor_drum.jpg)
+  <figcaption>Tambor fotoconductor de una impresora láser. Sobre esta pieza se crea la imagen electrostática que atraerá el tóner.</figcaption>
+</figure>
+
+<figure markdown="1">
+  ![](assets/laser_toner_cartridge.svg)
+  <figcaption>Esquema simplificado de un cartucho de tóner. El tóner es el material en polvo que se deposita sobre el papel.</figcaption>
+</figure>
+
+#### 4.3. Impresora laser monocromo
+
+La impresora laser monocromo trabaja normalmente con **un solo toner negro**. Esta solucion se centra en imprimir texto y documentos con rapidez, nitidez y menor coste por pagina.
+
+Suele ser la opcion mas adecuada cuando:
+
+- Se imprimen apuntes, examenes o documentos administrativos.
+- No se necesita color.
+- Se busca un equipo rapido y sencillo de mantener.
+
+<figure markdown="1">
+  ![](assets/samsung_ml2010_monochrome_laser_printer.jpg)
+  <figcaption>Ejemplo de impresora láser monocromo. Está orientada sobre todo a documentos en blanco y negro.</figcaption>
+</figure>
+
+#### 4.4. Impresora laser a color
+
+La impresora laser a color utiliza normalmente **cuatro toner**: cian, magenta, amarillo y negro. Al combinar esos colores puede producir materiales con graficos, esquemas, portadas o presentaciones.
+
+Frente a una monocromo, la laser color:
+
+- Tiene un mecanismo interno mas complejo.
+- Requiere mas consumibles.
+- Resulta mas adecuada para documentos mixtos con texto e imagen.
+
+<figure markdown="1">
+  ![](assets/hp_color_laserjet_cm1312nfi.jpg)
+  <figcaption>Ejemplo de impresora láser a color multifunción. Este tipo de equipo es habitual en oficinas y centros donde se imprimen documentos con texto y gráficos.</figcaption>
+</figure>
+
+<figure markdown="1">
+  ![](assets/four_samsung_laser_toner_cartridges.jpg)
+  <figcaption>Juego de tóner CMYK para impresora láser color. La combinación de cian, magenta, amarillo y negro permite formar imágenes a color.</figcaption>
+</figure>
+
+#### 4.5. Diferencias entre laser monocromo y laser color
+
+| Aspecto | Laser monocromo | Laser color |
+|---|---|---|
+| Toner | Negro | Cian, magenta, amarillo y negro |
+| Coste por pagina | Menor | Mayor |
+| Complejidad interna | Menor | Mayor |
+| Uso habitual | Texto y documentos | Texto, graficos y presentaciones |
+| Mantenimiento | Mas simple | Mas exigente |
+
+#### 4.6. Ventajas y limitaciones
+
+**Ventajas**
+
+- Muy buena calidad en texto.
+- Alta velocidad en documentos largos.
+- Menor riesgo de secado que en la inyeccion de tinta.
+
+**Limitaciones**
+
+- Los equipos color son mas caros y complejos.
+- No suelen ser la mejor opcion para fotografia domestica.
+- El fusor trabaja con calor, por lo que consume energia y requiere componentes internos especificos.
+
 ### Ideas clave
 
 - Las **impresoras de impacto** golpean una cinta entintada contra el papel.
 - Las **impresoras de agujas** crean caracteres a partir de puntos.
 - Las **impresoras de margarita** imprimen caracteres completos con una rueda de letras.
 - Las **impresoras de inyeccion de tinta** expulsan microgotas de tinta mediante boquillas muy precisas.
+- Las **impresoras laser** usan toner, tambor fotoconductor y fusor para fijar la imagen al papel.
 - Las tecnologias de **no impacto** dominan hoy el mercado por su silencio, velocidad y calidad grafica.
 
 ### Fuentes consultadas
@@ -216,5 +342,13 @@ Las dos formas mas conocidas de expulsar la tinta son:
 - [Wikimedia Commons. Daisy wheel print wheel](https://commons.wikimedia.org/wiki/File:Daisy_Wheel_Printer_Print_Wheel.jpg)
 - [Wikimedia Commons. Canon iP3500 Print Head](https://commons.wikimedia.org/wiki/File:Canon_iP3500_Print_Head.jpg)
 - [Wikimedia Commons. EPSON Piezoelectric InkJet Print Nozzle](https://commons.wikimedia.org/wiki/File:EPSON_Piezoelectric_InkJet_Print_Nozzle.jpg)
+- [Wikimedia Commons. Ij continuous](https://commons.wikimedia.org/wiki/File:Ij_continuous.png)
+- [Wikimedia Commons. HP Business Inkjet 1200n - Continuous Ink System - Interior overview](https://commons.wikimedia.org/wiki/File:HP_Business_Inkjet_1200n_-_Continuous_Ink_System_-_Interior_overview.jpg)
+- [Wikimedia Commons. Aufbau Laserdrucker](https://commons.wikimedia.org/wiki/File:Aufbau_Laserdrucker.svg)
+- [Wikimedia Commons. Laser toner cartridge](https://commons.wikimedia.org/wiki/File:Laser_toner_cartridge.svg)
+- [Wikimedia Commons. Xerox WorkCentre 6605 - photoconductor drum](https://commons.wikimedia.org/wiki/File:Xerox_WorkCentre_6605_-_photoconductor_drum-8998.jpg)
+- [Wikimedia Commons. Samsung ML-2010 (monochrome laser printer)](https://commons.wikimedia.org/wiki/File:Samsung_ML-2010_(monochrome_laser_printer).jpg)
+- [Wikimedia Commons. HP Color LaserJet CM1312nfi Multifunction Printer](https://commons.wikimedia.org/wiki/File:HP_Color_LaserJet_CM1312nfi_Multifunction_Printer.jpg)
+- [Wikimedia Commons. Four Samsung laser toner cartridges front view](https://commons.wikimedia.org/wiki/File:Four_Samsung_laser_toner_cartridges_front_view.jpg)
 
 **Fecha de actualización:** 07/04/2026
