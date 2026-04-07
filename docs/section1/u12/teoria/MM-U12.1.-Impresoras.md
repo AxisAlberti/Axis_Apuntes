@@ -374,11 +374,6 @@ El proceso general es este:
 
 Este sistema es habitual en etiquetas de almacen, codigos de barras, identificacion de productos y entornos industriales.
 
-<figure markdown="1">
-  ![](assets/thermal_transfer.jpg)
-  <figcaption>Ejemplo de transferencia térmica, donde una cinta transmite la tinta al soporte mediante calor.</figcaption>
-</figure>
-
 #### 5.4. Diferencias entre termica directa y transferencia termica
 
 | Aspecto | Termica directa | Transferencia termica |
