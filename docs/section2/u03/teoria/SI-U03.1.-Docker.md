@@ -644,6 +644,20 @@ Ademas, al trabajar con Docker conviene recordar siempre en que plataforma estam
 
 Pero en ambos casos el concepto esencial no cambia: **Docker ayuda a ejecutar aplicaciones de forma consistente usando contenedores**.
 
+### 16. Practicas recomendadas
+
+Para reforzar los contenidos de esta unidad, se proponen estas practicas:
+
+1. [Practica 1 - Docker con Apache y carpeta compartida](../practicas/SI-U03.-Practica001.md)
+2. [Practica 2 - Docker Compose con Apache y carpeta compartida](../practicas/SI-U03.-Practica002.md)
+3. [Practica 3 - Docker Compose con Apache, PHP y MariaDB](../practicas/SI-U03.-Practica003.md)
+
+Estas practicas permiten avanzar de forma gradual:
+
+- Primero, un contenedor Apache sencillo con carpeta compartida.
+- Despues, el mismo caso usando `docker compose`.
+- Finalmente, un entorno multicontenedor mas cercano a un caso real.
+
 ### Fuentes consultadas
 
 - [Docker Docs. What is Docker?](https://docs.docker.com/engine/docker-overview/)
