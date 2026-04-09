@@ -361,10 +361,10 @@ Conviene distinguir:
 
 ```mermaid
 flowchart LR
-    A[Carpeta local ./web] --> B[Servicio web]
-    B --> C[/var/www/html]
-    D[Volumen Docker datos_db] --> E[Servicio db]
-    E --> F[/var/lib/mysql]
+    A["Carpeta local web"] --> B["Servicio web"]
+    B --> C["Directorio web del contenedor"]
+    D["Volumen Docker datos_db"] --> E["Servicio db"]
+    E --> F["Directorio de datos de MariaDB"]
 ```
 
 #### 7.2. Regla practica
