@@ -11,13 +11,15 @@ Esta unidad introduce Docker como tecnologia de contenedores. El objetivo princi
 - Comparar un contenedor con una maquina virtual.
 - Entender el flujo basico de trabajo con Docker.
 - Reconocer diferencias practicas entre Linux y Windows al usar Docker.
+- Entender para que sirve Docker Compose y como se estructura un fichero `compose.yaml`.
 
 ## Enlace principal
 
 - [SI U03.1. Docker](teoria/SI-U03.1.-Docker.md)
+- [SI U03.2. Docker Compose](teoria/SI-U03.2.-Docker-Compose.md)
 
 ## Slides
 
 - [No disponible](../slides/no-disponible.md)
 
-**Fecha de actualización:** 07/04/2026
+**Fecha de actualización:** 09/04/2026

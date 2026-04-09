@@ -102,6 +102,7 @@ nav:
   - Unidad 03 - Docker:
     - section2/u03/index.md
     - SI U03.1. Docker: section2/u03/teoria/SI-U03.1.-Docker.md
+    - SI U03.2. Docker Compose: section2/u03/teoria/SI-U03.2.-Docker-Compose.md
     - Presentacion: section2/slides/no-disponible.md
 - Blog: blog.md
 - Tags: tags.md

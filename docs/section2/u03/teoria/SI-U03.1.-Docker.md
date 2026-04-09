@@ -566,15 +566,13 @@ Si estan en la misma red, un contenedor puede localizar al otro usando su nombre
 
 Los conceptos de red son comunes, pero en **Windows con Docker Desktop** hay que recordar que parte del trafico pasa por la capa de integracion de Docker Desktop y su maquina virtual Linux ligera. Esto no cambia el concepto, pero ayuda a entender por que algunas configuraciones de red o firewall pueden comportarse de forma distinta respecto a Linux.
 
-### 13. Docker Compose
+### 13. Introduccion a Docker Compose
 
 Cuando una aplicacion necesita varios contenedores, escribir comandos `docker run` uno a uno puede resultar incomodo. Para eso existe **Docker Compose**.
 
-#### 13.1. Que es Docker Compose
+Docker Compose permite definir servicios, redes, volumenes y variables dentro de un archivo `compose.yaml`, de forma que el entorno quede guardado como configuracion y pueda levantarse de manera repetible.
 
-Docker Compose permite definir y arrancar aplicaciones multicontenedor mediante un archivo YAML, normalmente llamado `compose.yaml` o `docker-compose.yml`.
-
-#### 13.2. Ejemplo sencillo
+Ejemplo minimo:
 
 ```yaml
 services:
@@ -582,39 +580,17 @@ services:
     image: nginx:latest
     ports:
       - "8080:80"
-
-  bd:
-    image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: secreto
 ```
 
-Con este archivo, los servicios se levantan con:
+Con esta configuracion el servicio se levanta con:
 
 ```bash
 docker compose up -d
 ```
 
-#### 13.3. Ventajas de Compose
+Como este tema merece una explicacion detallada, el desarrollo completo se ha separado en:
 
-- Reune la configuracion en un solo archivo.
-- Facilita trabajar con varios servicios a la vez.
-- Hace mas reproducible el entorno.
-- Resulta muy util en desarrollo y pruebas.
-
-#### 13.4. Linux y Windows con Compose
-
-El uso conceptual es igual en ambos sistemas. Lo que suele cambiar es:
-
-- La terminal desde la que se ejecuta.
-- Las rutas montadas en volumenes.
-- Algunas diferencias del sistema de archivos anfitrion.
-
-En ambos casos, el comando moderno es:
-
-```bash
-docker compose up -d
-```
+- [SI U03.2. Docker Compose](SI-U03.2.-Docker-Compose.md)
 
 ### 14. Ideas clave para no confundirse
 
@@ -627,7 +603,7 @@ docker compose up -d
 - Un `Dockerfile` sirve para **construir imagenes**.
 - Los **volumenes** permiten guardar datos persistentes.
 - Las **redes** permiten comunicar contenedores.
-- `docker compose` ayuda a gestionar varios servicios a la vez.
+- `docker compose` ayuda a gestionar varios servicios a la vez y se apoya en un fichero `compose.yaml`.
 
 ### 15. Conclusion
 
@@ -668,7 +644,5 @@ Estas practicas permiten avanzar de forma gradual:
 - [Docker Docs. Dockerfile overview](https://docs.docker.com/build/concepts/dockerfile/)
 - [Docker Docs. Volumes](https://docs.docker.com/engine/storage/volumes/)
 - [Docker Docs. Networking](https://docs.docker.com/desktop/features/networking/)
-- [Docker Docs. Docker Compose](https://docs.docker.com/compose/)
 - [R Z O. UD 2 - 2.1 Introducción a los contenedores Docker](https://revilofe.github.io/section4/u02/teoria/DAW-U2.1.-IntroduccionDocker/)
-
-**Fecha de actualización:** 07/04/2026
+**Fecha de actualización:** 09/04/2026
