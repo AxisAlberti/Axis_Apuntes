@@ -16,6 +16,8 @@ tags:
     - "contenedores"
 ---
 
+<div class="u03-destacados" markdown="1">
+
 ## 3.2. Docker Compose
 
 Cuando una aplicacion necesita varios contenedores, trabajar solo con comandos `docker run` puede resultar poco comodo y dificil de mantener. Docker Compose resuelve este problema permitiendo definir el entorno completo en un solo archivo.
@@ -561,3 +563,5 @@ Si el alumnado sabe leer un Compose por servicios, puertos, volumenes y redes, y
 - [Docker Docs. Define and run multi-container applications](https://docs.docker.com/compose/intro/features-uses/)
 
 **Fecha de actualización:** 09/04/2026
+
+</div>

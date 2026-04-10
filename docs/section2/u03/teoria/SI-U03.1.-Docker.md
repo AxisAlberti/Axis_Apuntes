@@ -15,6 +15,8 @@ tags:
     - "virtualizacion"
 ---
 
+<div class="u03-destacados" markdown="1">
+
 ## 3.1. Docker
 
 Docker es una tecnologia muy usada en administracion de sistemas, desarrollo de aplicaciones y despliegue de servicios. Su importancia no esta solo en los comandos, sino en la idea que hay detras: **empaquetar una aplicacion con todo lo necesario para ejecutarse siempre de forma parecida**.
@@ -646,3 +648,5 @@ Estas practicas permiten avanzar de forma gradual:
 - [Docker Docs. Networking](https://docs.docker.com/desktop/features/networking/)
 - [R Z O. UD 2 - 2.1 Introducción a los contenedores Docker](https://revilofe.github.io/section4/u02/teoria/DAW-U2.1.-IntroduccionDocker/)
 **Fecha de actualización:** 09/04/2026
+
+</div>

@@ -51,3 +51,13 @@
 .left {
   float: left;
 }
+
+/* Resalte visual para ejemplos y fragmentos de codigo destacados */
+.u03-destacados .highlight,
+.u03-destacados pre {
+  border: 2px solid #1f6feb;
+  border-left-width: 0.5rem;
+  border-radius: 0.7rem;
+  background: #eef6ff;
+  box-shadow: 0 0.2rem 0.8rem rgba(31, 111, 235, 0.08);
+}
