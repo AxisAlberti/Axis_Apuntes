@@ -110,6 +110,11 @@ El tamaño de una pantalla se mide en pulgadas, tomando la diagonal del panel. L
 - **21:9**: frecuente en monitores panorámicos.
 - **3:2**: habitual en algunos portátiles orientados a trabajo con documentos.
 
+<figure markdown>
+  ![Comparación de resoluciones y relaciones de aspecto](assets/resoluciones-relacion-aspecto.svg)
+  <figcaption>Comparación visual de resoluciones y relaciones de aspecto habituales. Ayuda a ver que dos pantallas pueden tener el mismo tamaño físico, pero distinta cantidad de píxeles y proporción. Fuente: Wikimedia Commons, autores Landen99 y Stannered, licencia CC BY 3.0.</figcaption>
+</figure>
+
 #### 1.5. Brillo
 
 El **brillo** indica la cantidad de luz que puede emitir una pantalla. Suele expresarse en nits. Un brillo alto ayuda en espacios iluminados, pero también puede aumentar el consumo y cansar la vista si se usa sin ajustar.
@@ -138,9 +143,19 @@ Un **espacio de color** define el conjunto de colores que una pantalla puede rep
 
 No siempre interesa el espacio de color más amplio. Para un aula o una oficina, puede ser más importante que el color sea estable y cómodo. Para edición gráfica, sí importa que el monitor cubra bien el espacio de color necesario.
 
+<figure markdown>
+  ![Diagrama CIE 1931 con gamas sRGB, DCI-P3, Rec. 2020 y Adobe RGB](assets/gamas-color-cie1931.svg)
+  <figcaption>Diagrama de cromaticidad CIE 1931 con varias gamas de color superpuestas. Permite comparar de forma visual qué parte del color visible cubren espacios como sRGB, DCI-P3, Adobe RGB o Rec. 2020. Fuente: Wikimedia Commons, autor Myndex / Andrew Somers, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+
 #### 2.3. Calibración
 
 La **calibración** ajusta la pantalla para que los colores, el brillo y el punto blanco se parezcan lo máximo posible a un estándar. En tareas de diseño, fotografía o impresión, una pantalla sin calibrar puede mostrar colores distintos a los que luego aparecen en otro monitor o en papel.
+
+<figure markdown>
+  ![Colorímetro colocado sobre un monitor durante la calibración](assets/calibracion-monitor-colorimetro.jpg)
+  <figcaption>Colorímetro colocado sobre un monitor durante una calibración. Este tipo de herramienta mide la respuesta real de la pantalla para ajustar brillo, color y punto blanco. Fuente: Wikimedia Commons, autor Ra Boe / Wikipedia, licencia CC BY-SA 3.0.</figcaption>
+</figure>
 
 ### 3. Refresco, respuesta y fluidez
 
@@ -168,6 +183,11 @@ Tecnologías como **FreeSync** o **G-Sync** ajustan la frecuencia del monitor a 
 
 También existen certificaciones y estándares de sincronización adaptativa que intentan comprobar que el comportamiento real del monitor es estable en diferentes frecuencias.
 
+<figure markdown>
+  ![Diagrama que compara frecuencia de refresco del monitor y FPS del vídeo](assets/refresco-vs-fps.png)
+  <figcaption>Diagrama sobre la relación entre frecuencia de refresco del monitor y FPS del contenido. Es útil para distinguir lo que actualiza la pantalla de lo que genera la GPU o el reproductor. Fuente: Wikimedia Commons, autor Rotocoasa, licencia CC BY 4.0.</figcaption>
+</figure>
+
 ### 4. Tecnologías de pantalla
 
 Las tecnologías de panel se diferencian por la forma en que generan la imagen y la luz. Algunas necesitan una luz de fondo; otras producen luz en cada píxel.
@@ -184,8 +204,8 @@ El funcionamiento básico es:
 4. Los filtros de color forman la imagen final.
 
 <figure markdown>
-  ![Panel LCD parcialmente desmontado visto con aumento](assets/lcd-display.jpg)
-  <figcaption>Panel LCD parcialmente desmontado visto con aumento; se aprecian capas del panel y filtros de color. Fuente: Wikimedia Commons, autor Sdk16420, licencia CC BY-SA 4.0.</figcaption>
+  ![Diagrama de capas de una pantalla LCD](assets/lcd-capas.svg)
+  <figcaption>Diagrama de capas de una pantalla LCD de cristal líquido: filtros polarizadores, electrodos, cristales líquidos y superficie reflectante o fuente de luz. Fuente: Wikimedia Commons, autor Ed g2s, licencia CC BY-SA 3.0.</figcaption>
 </figure>
 
 Las pantallas LCD sustituyeron a los monitores CRT por ser más delgadas, ligeras y eficientes.
@@ -249,8 +269,8 @@ Sus ventajas más destacadas son:
 Sus limitaciones principales son el precio y el posible desgaste diferencial de píxeles si se muestran imágenes estáticas durante mucho tiempo.
 
 <figure markdown>
-  ![Esquema en español de la estructura de una pantalla OLED](assets/oled-estructura-es.jpg)
-  <figcaption>Esquema simplificado de una estructura OLED. Fuente: Wikimedia Commons, autor Xferreca, dominio público.</figcaption>
+  ![Diagrama de capas y emisión de luz en una pantalla OLED](assets/oled-schematic.svg)
+  <figcaption>Esquema de funcionamiento OLED: cátodo, capa emisiva, capa conductora, ánodo y emisión de luz. A diferencia de LCD, el píxel produce luz propia. Fuente: Wikimedia Commons, autores Krakers y Phreneticc, licencia CC BY-SA 3.0.</figcaption>
 </figure>
 
 #### 4.6. AMOLED
@@ -278,8 +298,19 @@ Puntos fuertes habituales:
 - Adecuada para espacios iluminados.
 
 <figure markdown>
-  ![Soluciones de puntos cuánticos iluminadas con luz ultravioleta](assets/puntos-cuanticos-qled.jpg)
-  <figcaption>Soluciones de puntos cuánticos emitiendo distintos colores bajo iluminación ultravioleta. En QLED, los puntos cuánticos se usan para mejorar la conversión y reproducción del color. Fuente: Wikimedia Commons, autor Lab mol (Ilia Litvinov), licencia CC BY 4.0.</figcaption>
+  ![Comparación de estructura entre OLED y QLED](assets/oled-vs-qled.jpg)
+  <figcaption>Comparación simplificada entre OLED y QLED. La idea clave es que OLED es autoemisiva, mientras que QLED suele apoyarse en retroiluminación y una capa de puntos cuánticos. Fuente: Wikimedia Commons, autor 힐즈너, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+
+#### 4.8. Plasma
+
+Las pantallas de **plasma** fueron importantes en televisores de gran formato, aunque hoy apenas se usan en monitores actuales. Cada celda contiene gas ionizado que emite luz al recibir una señal eléctrica.
+
+Aunque no sea una tecnología habitual en equipos nuevos, resulta útil conocerla para comparar cómo distintas generaciones de pantallas han resuelto el mismo problema: generar luz, color y contraste.
+
+<figure markdown>
+  ![Diagrama de composición de una pantalla de plasma](assets/plasma-display-composition.svg)
+  <figcaption>Composición simplificada de una pantalla de plasma con electrodos, capas dieléctricas, gas y fósforos de color. Fuente: Wikimedia Commons, autor Jari Laamanen, licencia Free Art License.</figcaption>
 </figure>
 
 ### 5. Comparación de tecnologías
@@ -293,6 +324,7 @@ Puntos fuertes habituales:
 | OLED | Cada píxel emite luz propia | Negros profundos, contraste alto, buena respuesta | Riesgo de retención o desgaste en usos concretos |
 | AMOLED | OLED con matriz activa | Muy usada en móviles, colores vivos, buena eficiencia | Coste y posible desgaste diferencial |
 | QLED | LCD LED con puntos cuánticos | Alto brillo y color intenso | El negro depende de la retroiluminación |
+| Plasma | Celdas con gas ionizado y fósforos | Buen contraste en su época, útil para gran formato | Alto consumo, peso y tecnología en desuso |
 
 ### 6. Tecnologías táctiles
 
@@ -312,8 +344,8 @@ Características:
 Se han usado mucho en TPV, dispositivos industriales, cajeros antiguos y equipos donde importa más la resistencia que la precisión multitáctil.
 
 <figure markdown>
-  ![Panel táctil resistivo separado de la pantalla](assets/pantalla-resistiva.jpg)
-  <figcaption>Panel táctil resistivo separado de la pantalla. Fuente: Wikimedia Commons, autor René Bretz, uso libre indicado en la página del archivo.</figcaption>
+  ![Diagrama de capas de una pantalla táctil resistiva](assets/resistive-touchscreen-capas.jpg)
+  <figcaption>Diagrama de una pantalla táctil resistiva: superficie flexible, capas conductoras, separadores, espacio de aire, vidrio y pantalla LCD. Fuente: Wikimedia Commons, autor Szente, licencia CC BY-SA 3.0.</figcaption>
 </figure>
 
 #### 6.2. Pantallas capacitivas
@@ -330,8 +362,8 @@ Características:
 Dentro de esta familia destacan las pantallas capacitivas proyectadas, muy usadas en dispositivos actuales.
 
 <figure markdown>
-  ![Pantalla táctil capacitiva con pistas conductoras visibles](assets/pantalla-capacitiva.jpg)
-  <figcaption>Pantalla táctil capacitiva de un teléfono móvil con pistas conductoras visibles. Fuente: Wikimedia Commons, autor Medvedev, licencia CC BY 3.0.</figcaption>
+  ![Patrón de pistas de una pantalla táctil capacitiva proyectada](assets/capacitiva-proyectada-pistas.png)
+  <figcaption>Ejemplo de patrón de pistas para una pantalla táctil capacitiva proyectada. La electrónica detecta cambios eléctricos en una matriz de conductores transparentes o pistas equivalentes. Fuente: Wikimedia Commons, autor Ron Binstead, licencia CC BY-SA 4.0.</figcaption>
 </figure>
 
 #### 6.3. Infrarrojos
@@ -419,6 +451,7 @@ Para alargar la vida útil de una pantalla conviene:
 - Resolución, densidad, brillo, contraste, color, refresco, FPS, tiempo de respuesta y latencia son datos clave para valorar una pantalla.
 - LCD, TFT, TN, IPS, VA, LED y Mini-LED están relacionados con paneles de cristal líquido y su forma de control o iluminación.
 - OLED y AMOLED usan píxeles autoemisivos, mientras que QLED suele combinar LCD LED con puntos cuánticos.
+- Plasma es una tecnología histórica que permite comparar otro enfoque de generación de imagen mediante celdas de gas y fósforos.
 - Las tecnologías táctiles convierten la pantalla en dispositivo de entrada, y cada una encaja mejor en un entorno distinto.
 
 ### Fuentes consultadas
@@ -431,15 +464,20 @@ Para alargar la vida útil de una pantalla conviene:
 
 ### Fuentes de imágenes
 
-- [LCD display](https://commons.wikimedia.org/wiki/File:LCD_display.jpg). Autor: Sdk16420. Licencia: CC BY-SA 4.0.
+- [Aspect Ratios and Resolutions](https://commons.wikimedia.org/wiki/File:Aspect_Ratios_and_Resolutions.svg). Autores: Landen99 y Stannered. Licencia: CC BY 3.0.
 - [LCD RGB subpixel](https://commons.wikimedia.org/wiki/File:LCD_RGB_subpixel.jpg). Autoría: obra derivada de Marvin Raaijmakers y ed g2s por Angelo La Spina. Licencia: CC BY-SA 2.5.
+- [CIE1931xy gamut comparison of sRGB P3 Rec2020](https://commons.wikimedia.org/wiki/File:CIE1931xy_gamut_comparison_of_sRGB_P3_Rec2020.svg). Autor: Myndex / Andrew Somers. Licencia: CC BY-SA 4.0.
+- [Monitor Calibration 2010-by-RaBoe-20](https://commons.wikimedia.org/wiki/File:Monitor_Calibration_2010-by-RaBoe-20.jpg). Autor: Ra Boe / Wikipedia. Licencia: CC BY-SA 3.0.
+- [Display refresh rate vs video FPS](https://commons.wikimedia.org/wiki/File:Display_refresh_rate_vs_video_FPS.png). Autor: Rotocoasa. Licencia: CC BY 4.0.
+- [LCD layers](https://commons.wikimedia.org/wiki/File:LCD_layers.svg). Autor: Ed g2s. Licencia: CC BY-SA 3.0.
 - [IPS LCD panel](https://commons.wikimedia.org/wiki/File:IPS_LCD_panel.jpg). Autor: Jack Whittaker. Licencia: dominio público.
 - [Direct and edge LED backlight](https://commons.wikimedia.org/wiki/File:Direct_and_edge_LED_backlight.JPG). Autora: Dalia Svander. Licencia: CC BY-SA 3.0.
-- [Estructura es OLED](https://commons.wikimedia.org/wiki/File:Estructura_es_OLED.jpg). Autor: Xferreca. Licencia: dominio público.
+- [OLED schematic](https://commons.wikimedia.org/wiki/File:OLED_schematic.svg). Autores: Krakers y Phreneticc. Licencia: CC BY-SA 3.0.
 - [AMOLED-es](https://commons.wikimedia.org/wiki/File:AMOLED-es.svg). Autor: Spoladore. Licencia: CC BY-SA 3.0.
-- [Lab Mol Colloidal quantum dots 01](https://commons.wikimedia.org/wiki/File:Lab_Mol_Colloidal_quantum_dots_01.jpg). Autor: Lab mol (Ilia Litvinov). Licencia: CC BY 4.0.
-- [Resistive touchpanel](https://commons.wikimedia.org/wiki/File:Resistive_touchpanel.jpg). Autor: René Bretz. Licencia: uso libre indicado en Wikimedia Commons.
-- [Capacitive touchscreen](https://commons.wikimedia.org/wiki/File:Capacitive_touchscreen.jpg). Autor: Medvedev. Licencia: CC BY 3.0.
+- [OLED vs.QLED](https://commons.wikimedia.org/wiki/File:OLED_vs.QLED.jpg). Autor: 힐즈너. Licencia: CC BY-SA 4.0.
+- [Plasma-display-composition](https://commons.wikimedia.org/wiki/File:Plasma-display-composition.svg). Autor: Jari Laamanen. Licencia: Free Art License.
+- [Resistive touchscreen2](https://commons.wikimedia.org/wiki/File:Resistive_touchscreen2.jpg). Autor: Szente. Licencia: CC BY-SA 3.0.
+- [Keypad-Touchscreen](https://commons.wikimedia.org/wiki/File:Keypad-Touchscreen.png). Autor: Ron Binstead. Licencia: CC BY-SA 4.0.
 - [Infrared touchscreen pcb](https://commons.wikimedia.org/wiki/File:Infrared_touchscreen_pcb.jpg). Autor: Jrw01. Licencia: CC BY 4.0.
 - [SAW device](https://commons.wikimedia.org/wiki/File:SAW_device.png). Autor: Matthias Buchmeier. Licencia: dominio público.
 - [Interactive Displays](https://commons.wikimedia.org/wiki/File:Interactive_Displays.jpg). Autor: FlyingKites. Licencia: CC BY-SA 4.0.
