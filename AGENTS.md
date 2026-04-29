@@ -2,6 +2,17 @@
 
 Este repositorio contiene material educativo para módulos de formación profesional. La documentación está dirigida a **alumnado** y debe ser **didáctica, clara y pedagógica**.
 
+## Skills útiles para este proyecto
+
+Este repositorio está orientado a la generación de contenido educativo. Solo se consideran útiles las skills que ayudan a crear, mejorar o enriquecer materiales didácticos.
+
+- **imagegen**: Usar cuando se necesiten imágenes rasterizadas para apuntes, portadas, recursos visuales, mockups o ilustraciones educativas.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/.system/imagegen/SKILL.md`
+- **openai-docs**: Usar únicamente cuando se creen contenidos educativos relacionados con productos, APIs o modelos de OpenAI y sea necesario consultar documentación oficial actualizada.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/.system/openai-docs/SKILL.md`
+- **clonezilla-helper**: Usar cuando se generen apuntes, prácticas o guías educativas sobre Clonezilla, clonación de discos, creación de imágenes, restauración o despliegue en laboratorio.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/clonezilla-helper/SKILL.md`
+
 ## Normas de redacción de apuntes
 
 - Los apuntes deben ser claros, didácticos y orientados al aprendizaje del alumnado.
@@ -218,6 +229,7 @@ Salida generada del sitio MkDocs. No editar manualmente.
         - Recalcular en `resize`, `fullscreenchange`, `visibilitychange` y `orientationchange`.
         - Forzar `Reveal.configure({ width, height })` y `Reveal.layout()` tras cada recalculo.
         - Usar `requestAnimationFrame` para asegurar el cambio al salir de fullscreen o minimizar.
+
     - Imagen centrada cuando está sola:
         - Envolver en contenedor `.slide-image` con `display: flex` y `justify-content: center`.
         - Limitar altura con `vh` para evitar desbordes en resoluciones bajas.
@@ -413,3 +425,5 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 **Fecha de actualización:** 19/02/2026
 
 **Fecha de actualización:** 19/02/2026
+
+**Fecha de actualización:** 29/04/2026

@@ -8,6 +8,7 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ## Unidades destacadas
 
+- [Unidad 13 - Pantallas-Monitores](u13/index.md)
 - [Unidad 11 - Utilidades para el mantenimiento](u11/index.md)
 
 ## Slides del modulo
@@ -122,10 +123,10 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 
 ---
 
-📅 *Última actualización: Febrero 2026*  
+📅 *Última actualización: Abril 2026*  
 ✍️ *Profesor: José Manuel González Castillo*
 
 
 
 
-**Fecha de actualización:** 17/02/2026
+**Fecha de actualización:** 29/04/2026

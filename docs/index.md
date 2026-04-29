@@ -21,6 +21,7 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 ## Novedades
 
+- [Unidad 13 - Pantallas-Monitores](section1/u13/index.md)
 - [Unidad 11 - Utilidades para el mantenimiento](section1/u11/index.md)
 
 ## Slides

@@ -62,6 +62,10 @@ nav:
     - section1/u12/index.md
     - MM U12.1. Impresoras: section1/u12/teoria/MM-U12.1.-Impresoras.md
     - Presentacion: section1/slides/no-disponible.md
+  - Unidad 13 - Pantallas-Monitores:
+    - section1/u13/index.md
+    - MM U13.1. Pantallas y monitores: section1/u13/teoria/MM-U13.1.-Pantallas-Monitores.md
+    - Presentacion: section1/slides/no-disponible.md
   - Anexo 1 - Arquitecturas de procesadores:
     - section1/A1/index.md
     - A1.1 Arquitecturas de procesadores: section1/A1/teoria/A1-1-Arquitecturas-de-procesadores.md
