@@ -1,5 +1,10 @@
 # Objetivo del repositorio
 
+<figure markdown="span" class="home-cover">
+  ![Portada educativa de montaje y mantenimiento de ordenadores](assets/portada-montaje-mantenimiento.webp)
+  <figcaption>Materiales didácticos de Montaje y Mantenimiento de Equipos Informáticos.</figcaption>
+</figure>
+
 <div style="text-align: center;">
   <img src="assets/logo.png" alt="Logo" style="max-width: 240px; height: auto;">
 </div>
@@ -65,4 +70,4 @@ recursos y ejemplos para apoyar el estudio y la practica en el aula.
 
 
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 29/04/2026
