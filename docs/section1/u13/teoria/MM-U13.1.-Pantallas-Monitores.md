@@ -72,6 +72,11 @@ En una pantalla en color, cada píxel suele estar formado por subpíxeles de col
 
 Al variar la intensidad de cada subpíxel, el monitor puede generar muchos colores diferentes. Por ejemplo, si los tres subpíxeles emiten mucha luz, se obtiene un tono cercano al blanco; si emiten poca o ninguna luz, se obtiene negro o una zona muy oscura.
 
+<figure markdown>
+  ![Detalle de subpíxeles RGB en una pantalla LCD](assets/lcd-rgb-subpixel.jpg)
+  <figcaption>Detalle ampliado de subpíxeles RGB en una pantalla LCD. Fuente: Wikimedia Commons, obra derivada de Marvin Raaijmakers y ed g2s por Angelo La Spina, licencia CC BY-SA 2.5.</figcaption>
+</figure>
+
 ```mermaid
 flowchart LR
     A["Imagen digital"] --> B["Matriz de píxeles"]
@@ -178,6 +183,11 @@ El funcionamiento básico es:
 3. Esa orientación deja pasar más o menos luz.
 4. Los filtros de color forman la imagen final.
 
+<figure markdown>
+  ![Panel LCD parcialmente desmontado visto con aumento](assets/lcd-display.jpg)
+  <figcaption>Panel LCD parcialmente desmontado visto con aumento; se aprecian capas del panel y filtros de color. Fuente: Wikimedia Commons, autor Sdk16420, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+
 Las pantallas LCD sustituyeron a los monitores CRT por ser más delgadas, ligeras y eficientes.
 
 #### 4.2. TFT
@@ -187,6 +197,11 @@ Las pantallas LCD sustituyeron a los monitores CRT por ser más delgadas, ligera
 En una pantalla **LCD TFT**, cada píxel tiene un control más preciso. Esto mejora la nitidez, la estabilidad de la imagen y la respuesta frente a sistemas LCD más antiguos.
 
 En la práctica, muchos monitores LCD modernos son TFT, aunque el usuario no siempre vea ese dato destacado.
+
+<figure markdown>
+  ![Detalle de un panel IPS LCD con celdas RGB y líneas de control](assets/ips-lcd-panel.jpg)
+  <figcaption>Detalle de un panel IPS LCD con celdas RGB y líneas de control, ejemplo práctico de panel LCD moderno con matriz activa. Fuente: Wikimedia Commons, autor Jack Whittaker, dominio público.</figcaption>
+</figure>
 
 #### 4.3. Tipos habituales de panel LCD
 
@@ -215,6 +230,11 @@ Hay distintos sistemas de retroiluminación LED, como iluminación en los bordes
 
 También puede aparecer el término **Mini-LED**, que usa muchos LED pequeños para controlar mejor zonas de iluminación. No convierte automáticamente la pantalla en OLED: sigue siendo una pantalla con retroiluminación, pero con más capacidad para mejorar contraste y brillo por zonas.
 
+<figure markdown>
+  ![Esquema de retroiluminación LED directa y en los bordes](assets/led-retroiluminacion-directa-borde.jpg)
+  <figcaption>Esquema de retroiluminación LED directa y en los bordes. Mini-LED mantiene el principio de retroiluminación, pero emplea LED más pequeños y más zonas de control. Fuente: Wikimedia Commons, autora Dalia Svander, licencia CC BY-SA 3.0.</figcaption>
+</figure>
+
 #### 4.5. OLED
 
 **OLED** significa *Organic Light Emitting Diode*. En una pantalla OLED, cada píxel emite su propia luz. No necesita una luz trasera común como ocurre en LCD.
@@ -228,11 +248,21 @@ Sus ventajas más destacadas son:
 
 Sus limitaciones principales son el precio y el posible desgaste diferencial de píxeles si se muestran imágenes estáticas durante mucho tiempo.
 
+<figure markdown>
+  ![Esquema en español de la estructura de una pantalla OLED](assets/oled-estructura-es.jpg)
+  <figcaption>Esquema simplificado de una estructura OLED. Fuente: Wikimedia Commons, autor Xferreca, dominio público.</figcaption>
+</figure>
+
 #### 4.6. AMOLED
 
 **AMOLED** significa *Active Matrix Organic Light Emitting Diode*. Es una variante de OLED con matriz activa, en la que cada píxel se controla mediante una electrónica que permite manejar la imagen con precisión y rapidez.
 
 Es muy habitual en teléfonos, relojes inteligentes y algunas tabletas. Ofrece colores vivos, negros profundos y buen consumo cuando se muestran interfaces oscuras.
+
+<figure markdown>
+  ![Esquema en español de las capas de una pantalla AMOLED](assets/amoled-es.svg)
+  <figcaption>Esquema en español de las capas de una pantalla AMOLED. Fuente: Wikimedia Commons, autor Spoladore, licencia CC BY-SA 3.0.</figcaption>
+</figure>
 
 #### 4.7. QLED
 
@@ -246,6 +276,11 @@ Puntos fuertes habituales:
 - Colores intensos.
 - Buena resistencia frente a imágenes estáticas.
 - Adecuada para espacios iluminados.
+
+<figure markdown>
+  ![Soluciones de puntos cuánticos iluminadas con luz ultravioleta](assets/puntos-cuanticos-qled.jpg)
+  <figcaption>Soluciones de puntos cuánticos emitiendo distintos colores bajo iluminación ultravioleta. En QLED, los puntos cuánticos se usan para mejorar la conversión y reproducción del color. Fuente: Wikimedia Commons, autor Lab mol (Ilia Litvinov), licencia CC BY 4.0.</figcaption>
+</figure>
 
 ### 5. Comparación de tecnologías
 
@@ -276,6 +311,11 @@ Características:
 
 Se han usado mucho en TPV, dispositivos industriales, cajeros antiguos y equipos donde importa más la resistencia que la precisión multitáctil.
 
+<figure markdown>
+  ![Panel táctil resistivo separado de la pantalla](assets/pantalla-resistiva.jpg)
+  <figcaption>Panel táctil resistivo separado de la pantalla. Fuente: Wikimedia Commons, autor René Bretz, uso libre indicado en la página del archivo.</figcaption>
+</figure>
+
 #### 6.2. Pantallas capacitivas
 
 Las pantallas **capacitivas** detectan cambios eléctricos provocados por el contacto del dedo. Son habituales en teléfonos, tabletas, portátiles táctiles y monitores interactivos.
@@ -288,6 +328,11 @@ Características:
 - Pueden requerir guantes especiales o punteros capacitivos.
 
 Dentro de esta familia destacan las pantallas capacitivas proyectadas, muy usadas en dispositivos actuales.
+
+<figure markdown>
+  ![Pantalla táctil capacitiva con pistas conductoras visibles](assets/pantalla-capacitiva.jpg)
+  <figcaption>Pantalla táctil capacitiva de un teléfono móvil con pistas conductoras visibles. Fuente: Wikimedia Commons, autor Medvedev, licencia CC BY 3.0.</figcaption>
+</figure>
 
 #### 6.3. Infrarrojos
 
@@ -304,15 +349,30 @@ Limitaciones:
 - El marco puede ensuciarse o bloquearse.
 - Pueden ser menos adecuadas para dispositivos muy finos.
 
+<figure markdown>
+  ![Placa de una pantalla táctil por infrarrojos con emisores y receptores](assets/pantalla-infrarroja-pcb.jpg)
+  <figcaption>Placa de control de una pantalla táctil por infrarrojos, con matrices de LED infrarrojos y fotodiodos. Fuente: Wikimedia Commons, autor Jrw01, licencia CC BY 4.0.</figcaption>
+</figure>
+
 #### 6.4. Onda acústica superficial
 
 La tecnología **SAW** usa ondas ultrasónicas que recorren la superficie del cristal. Al tocar la pantalla, se altera la onda y se calcula la posición.
 
 Puede ofrecer buena claridad de imagen, pero es sensible a suciedad, líquidos o golpes en la superficie. Por eso se ha utilizado más en determinados quioscos, terminales o aplicaciones específicas.
 
+<figure markdown>
+  ![Esquema de un dispositivo de onda acústica superficial](assets/dispositivo-saw.png)
+  <figcaption>Esquema de un dispositivo de onda acústica superficial. No es una pantalla táctil completa, pero ilustra el principio físico usado por la tecnología SAW. Fuente: Wikimedia Commons, autor Matthias Buchmeier, dominio público.</figcaption>
+</figure>
+
 #### 6.5. Táctil óptica
 
 En las pantallas táctiles ópticas se emplean cámaras o sensores situados en el marco para detectar el punto de contacto. Son interesantes en pantallas grandes, pizarras digitales y soluciones interactivas.
+
+<figure markdown>
+  ![Pantallas interactivas de gran formato en un museo](assets/pantallas-interactivas.jpg)
+  <figcaption>Pantallas interactivas de gran formato, un entorno habitual para tecnologías táctiles basadas en sensores situados en el marco, como soluciones ópticas o infrarrojas. Fuente: Wikimedia Commons, autor FlyingKites, licencia CC BY-SA 4.0.</figcaption>
+</figure>
 
 ### 7. Comparación de tecnologías táctiles
 
@@ -336,6 +396,11 @@ La elección de una pantalla depende del uso:
 - **Portátiles**: equilibrio entre consumo, brillo, resolución y peso del equipo.
 
 Antes de comprar o sustituir un monitor conviene revisar también la conectividad disponible: HDMI, DisplayPort, USB-C con vídeo, alimentación por USB-C, altavoces integrados, concentrador USB o soporte VESA para brazo articulado.
+
+<figure markdown>
+  ![Conectores DisplayPort y USB en un equipo informático](assets/conectores-displayport-usb.jpg)
+  <figcaption>Conectores DisplayPort y USB en un equipo informático. Fuente: Wikimedia Commons, autor Peter Fiskerstrand, licencia CC BY-SA 4.0.</figcaption>
+</figure>
 
 ### 9. Mantenimiento y buenas prácticas
 
@@ -363,5 +428,21 @@ Para alargar la vida útil de una pantalla conviene:
 - [VESA - Adaptive-Sync Display Standard](https://vesa.org/featured-articles/vesa-updates-adaptive-sync-display-standard-with-tighter-specifications/)
 - [ViewSonic - What Is Response Time for Monitors?](https://www.viewsonic.com/library/tech/what-is-response-time-for-monitors/)
 - [Elo - Touchscreen Technologies Overview](https://elosupport.elotouch.com/hc/en-us/articles/31648610437655-Where-can-I-find-an-Elo-Touchscreen-Technologies-Overview)
+
+### Fuentes de imágenes
+
+- [LCD display](https://commons.wikimedia.org/wiki/File:LCD_display.jpg). Autor: Sdk16420. Licencia: CC BY-SA 4.0.
+- [LCD RGB subpixel](https://commons.wikimedia.org/wiki/File:LCD_RGB_subpixel.jpg). Autoría: obra derivada de Marvin Raaijmakers y ed g2s por Angelo La Spina. Licencia: CC BY-SA 2.5.
+- [IPS LCD panel](https://commons.wikimedia.org/wiki/File:IPS_LCD_panel.jpg). Autor: Jack Whittaker. Licencia: dominio público.
+- [Direct and edge LED backlight](https://commons.wikimedia.org/wiki/File:Direct_and_edge_LED_backlight.JPG). Autora: Dalia Svander. Licencia: CC BY-SA 3.0.
+- [Estructura es OLED](https://commons.wikimedia.org/wiki/File:Estructura_es_OLED.jpg). Autor: Xferreca. Licencia: dominio público.
+- [AMOLED-es](https://commons.wikimedia.org/wiki/File:AMOLED-es.svg). Autor: Spoladore. Licencia: CC BY-SA 3.0.
+- [Lab Mol Colloidal quantum dots 01](https://commons.wikimedia.org/wiki/File:Lab_Mol_Colloidal_quantum_dots_01.jpg). Autor: Lab mol (Ilia Litvinov). Licencia: CC BY 4.0.
+- [Resistive touchpanel](https://commons.wikimedia.org/wiki/File:Resistive_touchpanel.jpg). Autor: René Bretz. Licencia: uso libre indicado en Wikimedia Commons.
+- [Capacitive touchscreen](https://commons.wikimedia.org/wiki/File:Capacitive_touchscreen.jpg). Autor: Medvedev. Licencia: CC BY 3.0.
+- [Infrared touchscreen pcb](https://commons.wikimedia.org/wiki/File:Infrared_touchscreen_pcb.jpg). Autor: Jrw01. Licencia: CC BY 4.0.
+- [SAW device](https://commons.wikimedia.org/wiki/File:SAW_device.png). Autor: Matthias Buchmeier. Licencia: dominio público.
+- [Interactive Displays](https://commons.wikimedia.org/wiki/File:Interactive_Displays.jpg). Autor: FlyingKites. Licencia: CC BY-SA 4.0.
+- [Jack DisplayPort USB](https://commons.wikimedia.org/wiki/File:Jack_DisplayPort_USB.jpg). Autor: Peter Fiskerstrand. Licencia: CC BY-SA 4.0.
 
 **Fecha de actualización:** 29/04/2026

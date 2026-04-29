@@ -12,6 +12,8 @@ Este repositorio está orientado a la generación de contenido educativo. Solo s
   Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/.system/openai-docs/SKILL.md`
 - **clonezilla-helper**: Usar cuando se generen apuntes, prácticas o guías educativas sobre Clonezilla, clonación de discos, creación de imágenes, restauración o despliegue en laboratorio.  
   Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/clonezilla-helper/SKILL.md`
+- **images-search**: Usar cuando se necesiten buscar imágenes reales en la web para incluirlas en documentación educativa. Requiere `BRAVE_SEARCH_API_KEY`.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/images-search/SKILL.md`
 
 ## Normas de redacción de apuntes
 
@@ -129,6 +131,10 @@ También es importante incluir imágenes o diagramas para ilustrar conceptos com
 - Cuando un concepto lo requiera, incluir diagramas explicativos en los apuntes (flujo, decisiones, relaciones entre componentes o procesos).
 - Priorizar siempre diagramas e imágenes en español. Si un diagrama o imagen está en otro idioma, no incluirlo.
 - Las búsquedas de imágenes/diagramas y fuentes para apuntes deben hacerse en español.
+- Al buscar imágenes web para documentación educativa, usar imágenes con fuente clara y preferiblemente licencia Creative Commons, Wikimedia Commons o documentación oficial.
+- Guardar siempre la URL original, el autor si aparece y la licencia indicada por la fuente.
+- Insertar las imágenes en Markdown con `alt` descriptivo y `figcaption`.
+- Evitar imágenes visualmente atractivas pero sin procedencia verificable, autoría clara o licencia compatible.
 - Si ayuda a clarificar, usar diagramas Mermaid dentro del propio `.md` con bloques:
 
 ```mermaid
