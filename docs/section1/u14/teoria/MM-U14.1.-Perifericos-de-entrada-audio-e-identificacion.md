@@ -142,13 +142,13 @@ El **ratón** permite mover el puntero, seleccionar elementos y ejecutar accione
 | **Polling rate** | Frecuencia con la que el ratón informa al equipo de su posición. |
 | **Ergonomía** | Forma, tamaño y peso adecuados para evitar molestias en uso prolongado. |
 
-El ratón no mide una distancia real como una regla. Su sensor toma muchas capturas de la superficie por segundo y compara pequeñas variaciones para deducir el desplazamiento. Por eso la alfombrilla, el brillo de la mesa, la suciedad del sensor o una superficie transparente pueden provocar saltos o movimientos imprecisos.
+El ratón no mide una distancia real como una regla ni funciona como un radar que calcule solo el punto exacto donde vuelve un rayo. Su sensor recibe luz reflejada por la superficie y, a partir de ese reflejo, obtiene patrones de textura que cambian cuando movemos el ratón. Por eso la alfombrilla, el brillo de la mesa, la suciedad del sensor o una superficie transparente pueden provocar saltos o movimientos imprecisos.
 
 El valor de **DPI** debe interpretarse con cuidado. Un DPI alto permite mover el puntero más distancia con menos movimiento físico, pero no siempre mejora la precisión. Para diseño o trabajo fino puede interesar una sensibilidad moderada y estable; para videojuegos o varios monitores puede ser útil ajustar perfiles.
 
 #### 3.2. Funcionamiento óptico y láser: luz, reflexión y sensor
 
-El funcionamiento de un ratón óptico se basa en una idea sencilla de óptica: **emitir luz sobre una superficie, recoger la luz reflejada y comparar imágenes consecutivas**. La parte inferior del ratón no “ve” la mesa como una cámara normal, pero sí captura patrones microscópicos de textura, polvo, fibras o pequeñas irregularidades.
+El funcionamiento de un ratón óptico se basa en una idea sencilla de óptica: **emitir luz sobre una superficie y recoger el reflejo con un sensor**. Ese reflejo no se usa solo para saber “dónde ha caído” el haz de luz, sino para formar un patrón de la superficie. El chip interno analiza cómo cambia ese patrón cuando movemos el ratón y, con esos cambios, calcula el desplazamiento.
 
 <figure markdown>
   ![Comparación del funcionamiento de un ratón óptico infrarrojo y un ratón óptico láser](assets/raton-optico-vs-laser.webp)
@@ -159,15 +159,16 @@ La imagen permite relacionar el funcionamiento del ratón con tres conceptos de 
 
 - **Emisión**: Un LED infrarrojo, LED rojo o láser emite un haz de luz hacia la superficie.
 - **Reflexión**: La luz rebota en la mesa o alfombrilla. Si la superficie es mate y tiene textura, el sensor recibe patrones claros; si es cristal o muy brillante, puede perder referencias.
-- **Enfoque**: Una lente concentra la luz reflejada sobre el sensor para que el procesador interno pueda comparar las imágenes.
+- **Enfoque**: Una lente concentra la luz reflejada sobre el sensor para que el procesador interno pueda interpretar el patrón recibido.
 
 El funcionamiento básico puede resumirse así:
 
 1. Un LED o láser ilumina la superficie.
-2. Una lente concentra la imagen sobre un pequeño sensor.
-3. El procesador interno compara imágenes consecutivas.
-4. El ratón calcula el desplazamiento en los ejes X e Y.
-5. El sistema operativo transforma ese desplazamiento en movimiento del puntero.
+2. La luz rebota en la superficie y vuelve hacia el interior del ratón.
+3. Una lente concentra ese reflejo sobre un pequeño sensor.
+4. El procesador interno analiza cómo cambia el patrón recibido entre lecturas consecutivas.
+5. El ratón calcula el desplazamiento en los ejes X e Y.
+6. El sistema operativo transforma ese desplazamiento en movimiento del puntero.
 
 La diferencia principal entre un ratón óptico infrarrojo y uno láser no está en que uno “mida mejor” por norma general, sino en **cómo ilumina la superficie**. El óptico infrarrojo suele iluminar una zona más amplia y funciona muy bien sobre alfombrillas y superficies mates. El láser concentra más la luz y puede detectar más detalle en superficies lisas o brillantes, pero ese exceso de detalle también puede provocar lecturas menos estables en algunos casos.
 
