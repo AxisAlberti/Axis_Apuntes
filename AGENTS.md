@@ -14,6 +14,8 @@ Este repositorio está orientado a la generación de contenido educativo. Solo s
   Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/clonezilla-helper/SKILL.md`
 - **images-search**: Usar cuando se necesiten buscar imágenes reales en la web para incluirlas en documentación educativa. Requiere `BRAVE_SEARCH_API_KEY`.  
   Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/images-search/SKILL.md`
+- **html-ppt**: Usar cuando se necesiten crear presentaciones HTML estáticas tipo PPT para contenidos educativos, con temas, plantillas, animaciones, navegación por teclado y modo presentador. Es especialmente útil para generar slides de unidades didácticas, exposiciones de aula o materiales de apoyo visual.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/html-ppt/SKILL.md`
 
 ## Normas de redacción de apuntes
 

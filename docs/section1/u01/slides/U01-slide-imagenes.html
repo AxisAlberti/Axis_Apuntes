@@ -1,361 +1,459 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U01 - Introducción a los sistemas informáticos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
-    <style>
-      :root {
-        --accent: #f97316;
-        --ink: #f8fafc;
-      }
-      .reveal {
-        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-        color: var(--ink);
-      }
-      .reveal .slides {
-        font-size: calc(clamp(18px, 2.2vw, 32px) * var(--text-scale, 1));
-      }
-      .reveal .slides section {
-        box-sizing: border-box;
-        padding: 8px 6vw clamp(16px, 6vh, 48px);
-      }
-      .reveal h1, .reveal h2, .reveal h3 {
-        letter-spacing: 0.5px;
-      }
-      .slide-header {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 1000;
-        pointer-events: none;
-      }
-      .slide-header .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .slide-header img {
-        height: 64px;
-        width: auto;
-      }
-      .back-button {
-        background: #0f172a;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 14px;
-        pointer-events: auto;
-      }
-      .back-button:hover {
-        background: #1f2937;
-      }
-      .media-img {
-        max-width: 92%;
-        max-height: var(--img-max-h, 40vh);
-        height: auto;
-        width: auto;
-        display: block;
-        margin: 0 auto;
-        object-fit: contain;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-        border-radius: 12px;
-      }
-      .slide-image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: var(--img-wrap-h, 42vh);
-      }
-      .slide-image .media-img {
-        max-height: var(--img-max-h, 40vh);
-      }
-      .slide-image.large .media-img {
-        max-height: var(--img-max-h-large, 34vh);
-      }
-      .slide-image.logo .media-img {
-        max-height: var(--img-max-h-logo, 26vh);
-        max-width: var(--img-max-w-logo, 60vw);
-      }
-      .tagline {
-        color: var(--accent);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.9em;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        align-items: center;
-      }
-      .card {
-        background: rgba(15, 23, 42, 0.7);
-        padding: 18px 22px;
-        border-radius: 14px;
-      }
-      .lead {
-        font-size: calc(1.02em * var(--text-scale, 1));
-        line-height: 1.38;
-        opacity: 0.95;
-      }
-      .summary {
-        max-width: 92%;
-        margin: 8px auto 0;
-        text-align: left;
-      }
-      .summary:last-child {
-        margin-bottom: 2vh;
-      }
-      .summary ul {
-        list-style: none;
-        padding: 0;
-        margin: 8px 0 0;
-      }
-      .summary li {
-        margin: 6px 0;
-        padding-left: 18px;
-        position: relative;
-      }
-      .summary li::before {
-        content: "▸";
-        color: var(--accent);
-        position: absolute;
-        left: 0;
-      }
-      @media (max-width: 960px) {
-        .slide-header img {
-          height: 52px;
-        }
-        .grid {
-          grid-template-columns: 1fr;
-        }
-        .media-img {
-          max-height: 34vh;
-        }
-        .slide-image {
-          min-height: 36vh;
-        }
-        .slide-image .media-img {
-          max-height: 34vh;
-        }
-      }
-      @media (max-width: 640px) {
-        .slide-header {
-          position: static;
-          margin-bottom: 10px;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 8px;
-        }
-        .back-button {
-          font-size: 12px;
-          padding: 6px 10px;
-        }
-        .slide-header img {
-          height: 48px;
-        }
-        .media-img {
-          max-height: 30vh;
-        }
-        .slide-image {
-          min-height: 32vh;
-        }
-        .slide-image .media-img {
-          max-height: 30vh;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slide-header">
-      <div class="brand">
-        <img src="../../../assets/logo.png" alt="Logo">
-      </div>
-      <a class="back-button" href="../">Volver a la unidad</a>
+<!DOCTYPE html>
+<html lang="es" data-theme="engineering-whiteprint">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UD 01 · Introducción a los sistemas informáticos</title>
+<link rel="stylesheet" href="html-ppt-assets/fonts.css">
+<link rel="stylesheet" href="html-ppt-assets/base.css">
+<link rel="stylesheet" href="html-ppt-assets/animations/animations.css">
+<link rel="stylesheet" id="theme-link" href="html-ppt-assets/themes/engineering-whiteprint.css">
+<style>
+  body.u01-deck {
+    background:
+      radial-gradient(circle at 12% 18%, rgba(30, 90, 196, .14), transparent 30%),
+      radial-gradient(circle at 88% 82%, rgba(196, 42, 16, .10), transparent 28%),
+      var(--bg);
+  }
+
+  .u01-deck .slide {
+    padding: 64px 84px 58px;
+  }
+
+  .unit-mark {
+    position: absolute;
+    top: 26px;
+    left: 38px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .unit-mark img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .back-link {
+    position: absolute;
+    top: 28px;
+    right: 38px;
+    z-index: 20;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-1);
+    border: 1px solid var(--border-strong);
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, .82);
+  }
+
+  .back-link:hover {
+    text-decoration: none;
+    background: var(--surface-2);
+  }
+
+  .slide.with-sidebar {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 38px;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    border-right: 1px solid var(--border-strong);
+    padding: 48px 24px 24px 0;
+  }
+
+  .sidebar .brand {
+    font-family: var(--font-mono);
+    color: var(--accent-2);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .sidebar h5 {
+    margin: 24px 0 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .obj-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-2);
+  }
+
+  .obj-list li {
+    padding: 7px 0 7px 22px;
+    position: relative;
+  }
+
+  .obj-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+  }
+
+  .obj-list li.current {
+    color: var(--text-1);
+    font-weight: 700;
+  }
+
+  .obj-list li.current::before {
+    background: var(--accent-2);
+  }
+
+  .obj-list li.done::before {
+    background: var(--good);
+  }
+
+  .main {
+    min-width: 0;
+    padding-top: 36px;
+  }
+
+  .blueprint-card {
+    border: 1px solid var(--border-strong);
+    background: rgba(255, 255, 255, .86);
+    padding: 22px;
+    box-shadow: 8px 8px 0 rgba(10, 30, 70, .08);
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .cycle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .cycle-step {
+    border: 1px solid var(--border-strong);
+    padding: 20px;
+    min-height: 180px;
+    background: var(--surface);
+    position: relative;
+  }
+
+  .cycle-step .num {
+    font-family: var(--font-mono);
+    color: var(--accent-2);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .image-panel {
+    border: 1px solid var(--border-strong);
+    background: rgba(255, 255, 255, .9);
+    padding: 18px;
+    display: grid;
+    place-items: center;
+    min-height: 340px;
+  }
+
+  .image-panel img {
+    max-height: 310px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .vn-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: 26px;
+    align-items: center;
+  }
+
+  .cpu-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 28px;
+    align-items: center;
+  }
+
+  .bus-lines {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bus-line {
+    border: 1px solid var(--border-strong);
+    padding: 16px 18px;
+    background: var(--surface);
+  }
+
+  .bus-line strong {
+    font-family: var(--font-mono);
+    color: var(--accent-2);
+  }
+
+  .summary-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .summary-strip .blueprint-card {
+    min-height: 160px;
+  }
+
+  .big-number {
+    font-family: var(--font-mono);
+    font-size: clamp(54px, 9vw, 118px);
+    color: var(--accent-2);
+    font-weight: 900;
+    line-height: .9;
+  }
+
+  .notes {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    .u01-deck .slide {
+      padding: 54px 42px;
+    }
+
+    .slide.with-sidebar {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .concept-grid,
+    .cycle-grid,
+    .summary-strip,
+    .vn-grid,
+    .cpu-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .image-panel {
+      min-height: 240px;
+    }
+
+    .image-panel img {
+      max-height: 230px;
+    }
+  }
+</style>
+</head>
+<body class="u01-deck" data-themes="engineering-whiteprint,academic-paper,blueprint,corporate-clean" data-theme-base="html-ppt-assets/themes/">
+<a class="back-link" href="../">Volver a la unidad</a>
+<div class="deck">
+
+  <section class="slide" data-title="Portada">
+    <div class="unit-mark">
+      <img src="../../../assets/logo.png" alt="Logo del módulo">
+      <span>Montaje y mantenimiento · UD 01</span>
     </div>
-    <div class="reveal">
-      <div class="slides">
-        <section>
-          <p class="tagline">U01 · Sistemas Informáticos</p>
-          <h1>Introducción a los sistemas informáticos</h1>
-          <p class="lead"><strong>Resumen visual de los bloques clave</strong></p>
-          <div class="summary">
-            <p class="lead">Un sistema informático es un conjunto coordinado de componentes físicos y lógicos que transforman datos en información útil.</p>
-            <ul>
-              <li>El <strong>hardware</strong> ejecuta operaciones: CPU, memoria, almacenamiento y periféricos.</li>
-              <li>El <strong>software</strong> organiza el trabajo: sistema operativo, aplicaciones y utilidades.</li>
-              <li>El <strong>firmware</strong> inicia y configura el equipo: BIOS/UEFI y controladores básicos.</li>
-            </ul>
-          </div>
-          <aside class="notes">Presenta la unidad y explica que se verán dos imágenes clave.</aside>
-        </section>
+    <p class="kicker">Introducción a los sistemas informáticos</p>
+    <h1 class="h1 anim-fade-up" data-anim="fade-up">El ordenador como sistema: piezas, datos y coordinación.</h1>
+    <p class="lede mt-l" style="max-width: 66ch;">Una primera mirada para entender qué hace cada parte del PC y cómo colaboran hardware, software, firmware, memoria, buses y periféricos.</p>
+    <div class="row wrap mt-l">
+      <span class="pill">Hardware</span>
+      <span class="pill">Software</span>
+      <span class="pill">CPU</span>
+      <span class="pill">Memoria</span>
+      <span class="pill">Entrada/Salida</span>
+    </div>
+    <div class="deck-footer"><span>IES Rafael Alberti · Sistemas informáticos</span><span class="slide-number" data-current="1" data-total="8"></span></div>
+    <div class="notes">Presenta la unidad como una visión global del PC. La idea principal es que no vamos a memorizar piezas sueltas, sino entender cómo cooperan para transformar datos en información útil.</div>
+  </section>
 
-        <section>
-          <h2>Vista general del sistema</h2>
-          <div class="slide-image large">
-            <img class="media-img" src="../teoria/assets/vn.png" alt="Vista general de un sistema informático">
-          </div>
-          <div class="summary">
-            <p class="lead">Este esquema resume el “camino” de la información: entrada de datos, procesamiento y salida.</p>
-            <ul>
-              <li>Los <strong>dispositivos de entrada</strong> capturan datos del usuario o del entorno.</li>
-              <li>La <strong>CPU</strong> y la <strong>RAM</strong> procesan y mantienen los datos activos.</li>
-              <li>La <strong>salida</strong> presenta resultados y el <strong>almacenamiento</strong> conserva la información.</li>
-            </ul>
-          </div>
-          <aside class="notes">Explica que la imagen resume las partes principales del sistema.</aside>
-        </section>
-
-        <section>
-          <h2>Diagrama básico de CPU</h2>
-          <div class="slide-image large">
-            <img class="media-img" src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
-          </div>
-          <div class="summary">
-            <p class="lead">La CPU coordina instrucciones, mueve datos entre registros y ejecuta operaciones en la ALU.</p>
-            <ul>
-              <li><strong>Unidad de control</strong>: interpreta instrucciones y dirige el trabajo.</li>
-              <li><strong>ALU</strong>: realiza operaciones lógicas y aritméticas.</li>
-              <li><strong>Registros</strong>: almacenan datos inmediatos para acelerar el procesamiento.</li>
-            </ul>
-          </div>
-          <aside class="notes">Señala la ALU, la unidad de control y los registros.</aside>
-        </section>
-
-        <section>
-          <div class="grid">
-            <div class="card">
-              <h2>Hardware, software y firmware</h2>
-              <p class="lead">El hardware ejecuta, el software ordena y el firmware coordina el arranque.</p>
-              <p class="lead">Si falla uno de estos niveles, el sistema no puede iniciar o funcionar con normalidad.</p>
-              <p class="lead">El objetivo de la unidad es reconocerlos y entender su relación.</p>
-            </div>
-            <img class="media-img" src="../teoria/assets/cpu_block_diagram.svg" alt="Diagrama de CPU en formato vectorial">
-          </div>
-          <aside class="notes">Relaciona el diagrama con el rol del software y firmware.</aside>
-        </section>
-
-        <section>
-          <h2>Mapa rápido de componentes</h2>
-          <div class="slide-image logo">
-            <img class="media-img" src="../../../assets/logo.png" alt="Logo del módulo">
-          </div>
-          <div class="summary">
-            <p class="lead">Repaso rápido: CPU, memoria, almacenamiento y E/S.</p>
-            <ul>
-              <li>La <strong>memoria</strong> sostiene los datos en uso.</li>
-              <li>El <strong>almacenamiento</strong> conserva información a largo plazo.</li>
-              <li>Los <strong>buses</strong> conectan y coordinan los componentes.</li>
-            </ul>
-          </div>
-          <aside class="notes">Cierra con un repaso rápido de los componentes clave.</aside>
-        </section>
+  <section class="slide with-sidebar" data-title="Objetivos">
+    <aside class="sidebar">
+      <div class="brand">UD 01</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list">
+        <li class="current">Sistema informático</li>
+        <li>Componentes</li>
+        <li>Ciclo de trabajo</li>
+        <li>Von Neumann</li>
+        <li>Diagnóstico</li>
+      </ul>
+    </aside>
+    <div class="main">
+      <p class="kicker">Objetivos de aprendizaje</p>
+      <h2 class="h2">Al terminar, deberías poder explicar el PC sin abrir todavía la caja.</h2>
+      <div class="concept-grid mt-l anim-stagger-list" data-anim-target>
+        <div class="blueprint-card"><h4>1. Identificar</h4><p class="dim">Hardware, software, datos, usuarios y firmware.</p></div>
+        <div class="blueprint-card"><h4>2. Relacionar</h4><p class="dim">Entrada, procesamiento, almacenamiento y salida.</p></div>
+        <div class="blueprint-card"><h4>3. Interpretar</h4><p class="dim">CPU, memoria y buses como elementos coordinados.</p></div>
+        <div class="blueprint-card"><h4>4. Diagnosticar</h4><p class="dim">Separar fallos físicos, lógicos y de configuración.</p></div>
       </div>
     </div>
+    <div class="deck-footer"><span>Objetivos</span><span class="slide-number" data-current="2" data-total="8"></span></div>
+    <div class="notes">Recalca que estos objetivos son prácticos. No basta con decir qué es la CPU: el alumnado debe relacionarla con memoria, software, periféricos y diagnóstico.</div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-    <script>
-      let lastW = 0;
-      let lastH = 0;
-      function actualizarVariablesResponsive() {
-        const w = window.innerWidth || 1280;
-        const h = window.innerHeight || 720;
-        const corto = Math.min(w, h);
-        const imgMaxH = Math.max(0.28, Math.min(0.48, h / 1000)) * 100;
-        const imgWrapH = Math.max(0.34, Math.min(0.55, h / 900)) * 100;
-        const imgMaxHLarge = Math.max(0.26, Math.min(0.42, (h - 220) / 900)) * 100;
-        const imgMaxHLogo = Math.max(0.18, Math.min(0.28, h / 1200)) * 100;
-        const imgMaxWLogo = Math.max(45, Math.min(70, (corto / 12)));
-        let textScale = h / 900;
-        if (h < 700) {
-          textScale = 0.78;
-        }
-        textScale = Math.max(0.78, Math.min(1.0, textScale));
+  <section class="slide with-sidebar" data-title="Sistema">
+    <aside class="sidebar">
+      <div class="brand">UD 01</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list">
+        <li class="done">Sistema informático</li>
+        <li class="current">Componentes</li>
+        <li>Ciclo de trabajo</li>
+        <li>Von Neumann</li>
+        <li>Diagnóstico</li>
+      </ul>
+    </aside>
+    <div class="main">
+      <p class="kicker">Idea clave</p>
+      <h2 class="h2">Un sistema informático no es solo una torre.</h2>
+      <div class="grid g2 mt-l">
+        <div class="blueprint-card">
+          <h4>Hardware</h4>
+          <p class="dim">Componentes físicos: placa base, CPU, RAM, almacenamiento, fuente, tarjetas y periféricos.</p>
+        </div>
+        <div class="blueprint-card">
+          <h4>Software</h4>
+          <p class="dim">Programas que indican al hardware qué debe hacer: sistema operativo, aplicaciones y utilidades.</p>
+        </div>
+        <div class="blueprint-card">
+          <h4>Datos</h4>
+          <p class="dim">Información que entra, se procesa, se almacena y se muestra como resultado útil.</p>
+        </div>
+        <div class="blueprint-card">
+          <h4>Usuarios</h4>
+          <p class="dim">Personas que usan el sistema y dan sentido al proceso: estudiar, crear, comunicar o resolver problemas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="deck-footer"><span>Componentes de un sistema</span><span class="slide-number" data-current="3" data-total="8"></span></div>
+    <div class="notes">Explica que un fallo puede estar en cualquiera de estas capas. Si una app no imprime, no siempre es culpa de la impresora: puede ser driver, permisos, cola o configuración.</div>
+  </section>
 
-        const root = document.documentElement.style;
-        root.setProperty("--img-max-h", imgMaxH.toFixed(1) + "vh");
-        root.setProperty("--img-wrap-h", imgWrapH.toFixed(1) + "vh");
-        root.setProperty("--img-max-h-large", imgMaxHLarge.toFixed(1) + "vh");
-        root.setProperty("--img-max-h-logo", imgMaxHLogo.toFixed(1) + "vh");
-        root.setProperty("--img-max-w-logo", imgMaxWLogo.toFixed(0) + "vw");
-        root.setProperty("--text-scale", textScale.toFixed(2));
+  <section class="slide" data-title="Ciclo">
+    <p class="kicker">Ciclo básico de funcionamiento</p>
+    <h2 class="h2">Todo sistema informático sigue un recorrido de información.</h2>
+    <div class="cycle-grid mt-l">
+      <div class="cycle-step">
+        <div class="num">01</div>
+        <h4>Entrada</h4>
+        <p class="dim">El usuario o un dispositivo introduce datos: teclado, ratón, sensor, escáner o red.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="num">02</div>
+        <h4>Procesamiento</h4>
+        <p class="dim">La CPU interpreta instrucciones y transforma datos con ayuda de la RAM.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="num">03</div>
+        <h4>Almacenamiento</h4>
+        <p class="dim">Los resultados pueden guardarse de forma temporal o permanente.</p>
+      </div>
+      <div class="cycle-step">
+        <div class="num">04</div>
+        <h4>Salida</h4>
+        <p class="dim">La información vuelve al usuario como imagen, sonido, impresión, archivo o respuesta.</p>
+      </div>
+    </div>
+    <div class="deck-footer"><span>Entrada · Proceso · Almacenamiento · Salida</span><span class="slide-number" data-current="4" data-total="8"></span></div>
+    <div class="notes">Usa un ejemplo simple: escribir una frase en un procesador de texto. El teclado introduce datos, el sistema los procesa, la RAM mantiene el documento activo, el SSD lo guarda y la pantalla muestra el resultado.</div>
+  </section>
 
-        if (window.Reveal) {
-          if (typeof Reveal.configure === "function") {
-            Reveal.configure({
-              width: w,
-              height: h
-            });
-          }
-          if (typeof Reveal.layout === "function") {
-            Reveal.layout();
-          }
-        }
-        lastW = w;
-        lastH = h;
-      }
+  <section class="slide" data-title="Von Neumann">
+    <p class="kicker">Arquitectura base</p>
+    <h2 class="h2">Von Neumann: datos e instrucciones comparten memoria.</h2>
+    <div class="vn-grid mt-l">
+      <div class="image-panel">
+        <img src="../teoria/assets/vn.png" alt="Esquema de arquitectura de Von Neumann">
+      </div>
+      <div class="blueprint-card">
+        <h4>La idea potente</h4>
+        <p class="dim">El ordenador no se recablea para cada tarea. Carga instrucciones en memoria y la CPU las ejecuta una tras otra.</p>
+        <div class="divider mt-m mb-m"></div>
+        <p><strong>CPU</strong> ejecuta instrucciones.</p>
+        <p><strong>Memoria</strong> guarda datos y programas activos.</p>
+        <p><strong>Entrada/Salida</strong> conecta el sistema con el exterior.</p>
+      </div>
+    </div>
+    <div class="deck-footer"><span>Modelo de Von Neumann</span><span class="slide-number" data-current="5" data-total="8"></span></div>
+    <div class="notes">Aclara que este modelo es una simplificación, pero muy útil para entender los PCs actuales. Menciona que tanto instrucciones como datos viven en memoria, y que la CPU los va buscando, decodificando y ejecutando.</div>
+  </section>
 
-      let resizeTimer;
-      function programarRecalculo() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(actualizarVariablesResponsive, 120);
-      }
-      function recalculoMultipaso() {
-        programarRecalculo();
-        requestAnimationFrame(() => {
-          actualizarVariablesResponsive();
-          requestAnimationFrame(() => {
-            actualizarVariablesResponsive();
-          });
-        });
-      }
+  <section class="slide" data-title="CPU">
+    <p class="kicker">Dentro de la CPU</p>
+    <h2 class="h2">La CPU coordina, calcula y guarda resultados inmediatos.</h2>
+    <div class="cpu-grid mt-l">
+      <div class="blueprint-card">
+        <h4>Unidad de control</h4>
+        <p class="dim">Lee instrucciones, las decodifica y genera señales para coordinar el resto del sistema.</p>
+        <h4>ALU</h4>
+        <p class="dim">Realiza operaciones aritméticas y lógicas: sumar, comparar, desplazar o evaluar condiciones.</p>
+        <h4>Registros</h4>
+        <p class="dim">Memorias internas muy rápidas que guardan datos de uso inmediato.</p>
+      </div>
+      <div class="image-panel">
+        <img src="../teoria/assets/cpu_block_diagram.png" alt="Diagrama básico de bloques de una CPU">
+      </div>
+    </div>
+    <div class="deck-footer"><span>CPU · Unidad de control · ALU · Registros</span><span class="slide-number" data-current="6" data-total="8"></span></div>
+    <div class="notes">Conecta esta diapositiva con el ciclo de instrucción: buscar instrucción, decodificar, ejecutar y guardar resultado. No hace falta entrar aún en microarquitectura, solo fijar el mapa mental.</div>
+  </section>
 
-      window.addEventListener("resize", recalculoMultipaso);
-      window.addEventListener("orientationchange", recalculoMultipaso);
-      document.addEventListener("fullscreenchange", recalculoMultipaso);
-      document.addEventListener("webkitfullscreenchange", recalculoMultipaso);
-      document.addEventListener("mozfullscreenchange", recalculoMultipaso);
-      document.addEventListener("MSFullscreenChange", recalculoMultipaso);
-      document.addEventListener("visibilitychange", () => {
-        if (!document.hidden) {
-          recalculoMultipaso();
-        }
-      });
-      window.addEventListener("load", actualizarVariablesResponsive);
+  <section class="slide" data-title="Buses">
+    <p class="kicker">Comunicación interna</p>
+    <h2 class="h2">Los buses son las carreteras del sistema.</h2>
+    <div class="grid g2 mt-l">
+      <div class="bus-lines">
+        <div class="bus-line"><strong>Bus de datos</strong><p class="dim">Transporta la información que se lee o escribe.</p></div>
+        <div class="bus-line"><strong>Bus de direcciones</strong><p class="dim">Indica dónde está la memoria o dispositivo que se quiere usar.</p></div>
+        <div class="bus-line"><strong>Bus de control</strong><p class="dim">Coordina señales como lectura, escritura, reloj e interrupciones.</p></div>
+      </div>
+      <div class="blueprint-card">
+        <div class="big-number">3</div>
+        <h4>Una operación, tres tipos de señales</h4>
+        <p class="dim">Para leer un dato, la CPU necesita indicar una dirección, activar una señal de lectura y recibir los datos por el canal correspondiente.</p>
+      </div>
+    </div>
+    <div class="deck-footer"><span>Buses del PC</span><span class="slide-number" data-current="7" data-total="8"></span></div>
+    <div class="notes">Cuenta un ejemplo: la CPU quiere leer una celda de memoria. Primero pone la dirección, luego envía la señal de lectura y finalmente recibe el dato. Así se entiende por qué los buses no son “un cable” sino un conjunto de líneas con funciones diferentes.</div>
+  </section>
 
-      Reveal.initialize({
-        hash: true,
-        slideNumber: true,
-        width: window.innerWidth,
-        height: window.innerHeight,
-        margin: 0.08,
-        minScale: 0.4,
-        maxScale: 1.2
-      });
-      if (window.Reveal && typeof Reveal.on === "function") {
-        Reveal.on("ready", recalculoMultipaso);
-        Reveal.on("slidechanged", recalculoMultipaso);
-        Reveal.on("resize", recalculoMultipaso);
-      }
-
-      function vigilarCambiosDimension() {
-        const w = window.innerWidth || 1280;
-        const h = window.innerHeight || 720;
-        if (w !== lastW || h !== lastH) {
-          recalculoMultipaso();
-        }
-        requestAnimationFrame(vigilarCambiosDimension);
-      }
-      requestAnimationFrame(vigilarCambiosDimension);
-    </script>
-  </body>
+  <section class="slide" data-title="Cierre">
+    <p class="kicker">Resumen final</p>
+    <h1 class="h1">Cinco ideas para llevarse.</h1>
+    <div class="summary-strip mt-l">
+      <div class="blueprint-card"><h4>1</h4><p class="dim">Hardware y software trabajan juntos.</p></div>
+      <div class="blueprint-card"><h4>2</h4><p class="dim">El PC transforma datos en información útil.</p></div>
+      <div class="blueprint-card"><h4>3</h4><p class="dim">La CPU coordina instrucciones y operaciones.</p></div>
+      <div class="blueprint-card"><h4>4</h4><p class="dim">La memoria sostiene lo que está en uso.</p></div>
+      <div class="blueprint-card"><h4>5</h4><p class="dim">Los buses permiten que todo se comunique.</p></div>
+    </div>
+    <div class="callout mt-l"><strong>Pregunta de cierre:</strong> Si un equipo enciende pero no muestra imagen, ¿en qué capas empezarías a revisar?</div>
+    <div class="deck-footer"><span>Fin · UD 01</span><span class="slide-number" data-current="8" data-total="8"></span></div>
+    <div class="notes">Cierra invitando a pensar como técnico: pantalla, cable, salida de vídeo, GPU integrada o dedicada, RAM, POST, BIOS/UEFI. Lo importante es razonar por capas.</div>
+  </section>
+</div>
+<script src="html-ppt-assets/runtime.js"></script>
+</body>
 </html>
