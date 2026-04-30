@@ -66,6 +66,10 @@ nav:
     - section1/u13/index.md
     - MM U13.1. Pantallas y monitores: section1/u13/teoria/MM-U13.1.-Pantallas-Monitores.md
     - Presentacion: section1/slides/no-disponible.md
+  - Unidad 14 - Perifericos de entrada, audio e identificacion:
+    - section1/u14/index.md
+    - MM U14.1. Perifericos de entrada, audio e identificacion: section1/u14/teoria/MM-U14.1.-Perifericos-de-entrada-audio-e-identificacion.md
+    - Presentacion: section1/slides/no-disponible.md
   - Anexo 1 - Arquitecturas de procesadores:
     - section1/A1/index.md
     - A1.1 Arquitecturas de procesadores: section1/A1/teoria/A1-1-Arquitecturas-de-procesadores.md
