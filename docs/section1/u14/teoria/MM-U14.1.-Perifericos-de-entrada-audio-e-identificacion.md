@@ -146,7 +146,22 @@ El ratón no mide una distancia real como una regla. Su sensor toma muchas captu
 
 El valor de **DPI** debe interpretarse con cuidado. Un DPI alto permite mover el puntero más distancia con menos movimiento físico, pero no siempre mejora la precisión. Para diseño o trabajo fino puede interesar una sensibilidad moderada y estable; para videojuegos o varios monitores puede ser útil ajustar perfiles.
 
-El funcionamiento básico de un ratón óptico puede resumirse así:
+#### 3.2. Funcionamiento óptico y láser: luz, reflexión y sensor
+
+El funcionamiento de un ratón óptico se basa en una idea sencilla de óptica: **emitir luz sobre una superficie, recoger la luz reflejada y comparar imágenes consecutivas**. La parte inferior del ratón no “ve” la mesa como una cámara normal, pero sí captura patrones microscópicos de textura, polvo, fibras o pequeñas irregularidades.
+
+<figure markdown>
+  ![Comparación del funcionamiento de un ratón óptico infrarrojo y un ratón óptico láser](assets/raton-optico-vs-laser.webp)
+  <figcaption>Comparación entre ratón óptico infrarrojo y ratón óptico láser. En ambos casos la luz se emite hacia la superficie, se refleja, atraviesa una lente y llega al sensor. Fuente: Profesional Review, imagen proporcionada para uso educativo en esta unidad.</figcaption>
+</figure>
+
+La imagen permite relacionar el funcionamiento del ratón con tres conceptos de la teoría de la luz:
+
+- **Emisión**: Un LED infrarrojo, LED rojo o láser emite un haz de luz hacia la superficie.
+- **Reflexión**: La luz rebota en la mesa o alfombrilla. Si la superficie es mate y tiene textura, el sensor recibe patrones claros; si es cristal o muy brillante, puede perder referencias.
+- **Enfoque**: Una lente concentra la luz reflejada sobre el sensor para que el procesador interno pueda comparar las imágenes.
+
+El funcionamiento básico puede resumirse así:
 
 1. Un LED o láser ilumina la superficie.
 2. Una lente concentra la imagen sobre un pequeño sensor.
@@ -154,9 +169,18 @@ El funcionamiento básico de un ratón óptico puede resumirse así:
 4. El ratón calcula el desplazamiento en los ejes X e Y.
 5. El sistema operativo transforma ese desplazamiento en movimiento del puntero.
 
+La diferencia principal entre un ratón óptico infrarrojo y uno láser no está en que uno “mida mejor” por norma general, sino en **cómo ilumina la superficie**. El óptico infrarrojo suele iluminar una zona más amplia y funciona muy bien sobre alfombrillas y superficies mates. El láser concentra más la luz y puede detectar más detalle en superficies lisas o brillantes, pero ese exceso de detalle también puede provocar lecturas menos estables en algunos casos.
+
+Desde el punto de vista del mantenimiento, esto explica varios síntomas habituales:
+
+- Si el cursor salta, conviene limpiar la lente y probar una alfombrilla mate.
+- Si el ratón falla sobre cristal o una mesa brillante, no siempre está averiado: puede ser un problema de reflexión.
+- Si un ratón láser parece moverse de forma irregular, puede estar leyendo microdetalles de la superficie que no aportan movimiento útil.
+- Si el sensor está tapado por polvo, pelo o grasa, la luz reflejada llega peor al sensor y el seguimiento empeora.
+
 En un touchpad, el principio es distinto: la superficie detecta cambios eléctricos producidos por el dedo. El controlador interpreta esos cambios como posición, movimiento o gesto. Por eso un touchpad puede detectar varios dedos, pero también puede fallar si hay humedad, grasa o una configuración de sensibilidad inadecuada.
 
-#### 3.2. Touchpad
+#### 3.3. Touchpad
 
 El touchpad detecta el movimiento de los dedos sobre una superficie, normalmente mediante tecnología capacitiva. Permite gestos como desplazamiento con dos dedos, zoom o cambio de escritorio.
 
@@ -560,6 +584,7 @@ En un centro educativo es útil definir un pequeño protocolo: etiquetar perifé
 - [Rubber dome over membrane, exploded](https://commons.wikimedia.org/wiki/File:Rubber_dome_over_membrane,_exploded.svg). Autor: Daniel Beardsmore. Licencia: dominio público.
 - [Cherry MX Brown switch disassembled](https://commons.wikimedia.org/wiki/File:Cherry_MX_Brown_switch_(disassembled).jpg). Autor: Multicherry. Licencia: CC BY-SA 4.0.
 - [Optical mouse sensor](https://commons.wikimedia.org/wiki/File:Optical_mouse_sensor.jpg). Autor: Harikrishnanskt. Licencia: CC BY-SA 4.0.
+- [Cómo funciona un ratón óptico](https://www.profesionalreview.com/2019/12/01/como-funciona-un-raton-optico/). Autora: Ana Alejandra Romero. Fuente de la imagen comparativa óptico infrarrojo frente a óptico láser: Profesional Review.
 - [Inside a flatbed scanner](https://commons.wikimedia.org/wiki/File:Inside_a_flatbed_scanner.jpg). Autor: Jstapko. Licencia: CC BY-SA 3.0.
 - [Flatbed scanner CIS sensor bar](https://commons.wikimedia.org/wiki/File:Flatbed_scanner_CIS_sensor_bar.jpg). Autor: Michele M. F. Licencia: CC BY-SA 2.0.
 - [USB-Microphone](https://commons.wikimedia.org/wiki/File:USB-Microphone.jpg). Autor: Evan-Amos. Licencia: dominio público.
