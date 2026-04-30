@@ -18,6 +18,6 @@ Esta unidad introduce el funcionamiento básico de las pantallas y monitores uti
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U13 - Pantallas y monitores](slides/U13-slides.html)
 
-**Fecha de actualización:** 29/04/2026
+**Fecha de actualización:** 30/04/2026

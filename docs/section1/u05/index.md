@@ -13,3 +13,9 @@ Esta unidad explica que es la memoria RAM, como funciona y que parametros import
 ## Enlace principal
 
 - [MM U05.1. Memoria RAM](teoria/MM-U05.1.-Memoria-RAM.md)
+
+## Presentación
+
+- [U05 - Memoria RAM](slides/U05-slides.html)
+
+**Fecha de actualización:** 30/04/2026

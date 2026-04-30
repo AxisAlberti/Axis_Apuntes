@@ -16,6 +16,6 @@ En esta unidad se estudian los componentes internos mas importantes de un PC y s
 
 ## Slides
 
-- [U02 - Componentes internos del PC](slides/U02-slide-componentes.html)
+- [U02 - Componentes internos del PC](slides/U02-slides.html)
 
-**Fecha de actualización:** 11/02/2026
+**Fecha de actualización:** 30/04/2026

@@ -13,3 +13,9 @@ En esta unidad se introducen los conceptos fundamentales de los microprocesadore
 ## Enlace principal
 
 - [MM U08.1. Microprocesadores](teoria/MM-U08.1.-Microprocesadores.md)
+
+## Presentación
+
+- [U08 - Microprocesadores](slides/U08-slides.html)
+
+**Fecha de actualización:** 30/04/2026

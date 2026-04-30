@@ -13,3 +13,9 @@ Esta unidad compara arquitecturas de procesadores y modelos de diseno, explicand
 ## Enlace principal
 
 - [A1.1 Arquitecturas de procesadores](teoria/A1-1-Arquitecturas-de-procesadores.md)
+
+## Presentación
+
+- [A1 - Arquitecturas de procesadores](slides/A1-slides.html)
+
+**Fecha de actualización:** 30/04/2026

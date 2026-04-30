@@ -13,3 +13,9 @@ Esta unidad aborda la prevencion de riesgos laborales aplicada al montaje y mant
 ## Enlace principal
 
 - [A3.1 Prevencion de riesgos laborales](teoria/A3-1-Prevencion-de-riesgos-laborales.md)
+
+## Presentación
+
+- [A3 - Prevención de riesgos laborales](slides/A3-slides.html)
+
+**Fecha de actualización:** 30/04/2026

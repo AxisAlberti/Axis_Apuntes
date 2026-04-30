@@ -16,6 +16,6 @@ Esta unidad se centra en el chipset y su papel como coordinador de comunicacione
 
 ## Slides
 
-- [U03 - Chipset](slides/U03-slide-chipset.html)
+- [U03 - Chipset](slides/U03-slides.html)
 
-**Fecha de actualización:** 11/02/2026
+**Fecha de actualización:** 30/04/2026

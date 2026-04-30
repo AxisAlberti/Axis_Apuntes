@@ -18,4 +18,6 @@ Esta unidad explica qué es una tarjeta gráfica, cómo funciona y cómo se inte
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U09 - Tarjetas gráficas](slides/U09-slides.html)
+
+**Fecha de actualización:** 30/04/2026

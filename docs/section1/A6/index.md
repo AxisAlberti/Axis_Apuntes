@@ -17,9 +17,9 @@ Este anexo explica el proceso de encendido del PC, el POST, los pitidos de error
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [A6 - BIOS, UEFI y proceso de encendido](slides/A6-slides.html)
 
 
 
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 30/04/2026

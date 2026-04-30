@@ -17,6 +17,6 @@ Esta unidad introduce los principales tipos de impresoras y se centra en dos tec
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U12 - Impresoras](slides/U12-slides.html)
 
-**Fecha de actualización:** 07/04/2026
+**Fecha de actualización:** 30/04/2026

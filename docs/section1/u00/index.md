@@ -19,6 +19,6 @@ En esta unidad se trabajan los sistemas de numeración más usados en informáti
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U00 - Sistemas de numeración](slides/U00-slides.html)
 
 **Fecha de actualización:** 30/04/2026

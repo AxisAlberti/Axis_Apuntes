@@ -18,6 +18,6 @@ Esta unidad aborda el mantenimiento de equipos informaticos desde una perspectiv
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U10 - Mantenimiento de equipos informáticos](slides/U10-slides.html)
 
-**Fecha de actualización:** 01/02/2026
+**Fecha de actualización:** 30/04/2026

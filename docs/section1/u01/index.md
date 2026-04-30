@@ -16,6 +16,6 @@ Esta unidad presenta una vision global de un sistema informatico: sus componente
 
 ## Slides
 
-- [U01 - Introducción a los sistemas informáticos (imágenes)](slides/U01-slide-imagenes.html)
+- [U01 - Introducción a los sistemas informáticos](slides/U01-slides.html)
 
-**Fecha de actualización:** 11/02/2026
+**Fecha de actualización:** 30/04/2026

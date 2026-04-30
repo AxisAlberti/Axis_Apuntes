@@ -13,3 +13,9 @@ En esta unidad se revisan los puertos y conexiones externas mas habituales, sus 
 ## Enlace principal
 
 - [MM U04.1. Conexiones externas](teoria/MM-U04.1.-Conexiones-externas.md)
+
+## Presentación
+
+- [U04 - Conexiones externas](slides/U04-slides.html)
+
+**Fecha de actualización:** 30/04/2026

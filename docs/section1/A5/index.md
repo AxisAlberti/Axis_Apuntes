@@ -13,3 +13,9 @@ Esta unidad enseña a interpretar la nomenclatura comercial de los procesadores 
 ## Enlace principal
 
 - [A5.1 Nomenclatura de procesadores](teoria/A5-1-Nomenclatura-de-procesadores.md)
+
+## Presentación
+
+- [A5 - Nomenclatura de procesadores](slides/A5-slides.html)
+
+**Fecha de actualización:** 30/04/2026

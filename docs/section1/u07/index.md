@@ -13,3 +13,9 @@ Esta unidad cubre las tecnologias de almacenamiento mas usadas (HDD, SSD y varia
 ## Enlace principal
 
 - [MM U07.1. Almacenamiento](teoria/MM-U07.1.-Almacenamiento.md)
+
+## Presentación
+
+- [U07 - Almacenamiento](slides/U07-slides.html)
+
+**Fecha de actualización:** 30/04/2026

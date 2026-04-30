@@ -17,6 +17,6 @@ Esta unidad presenta las utilidades mas usadas en un taller para diagnosticar, m
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U11 - Utilidades para el mantenimiento](slides/U11-slides.html)
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 30/04/2026

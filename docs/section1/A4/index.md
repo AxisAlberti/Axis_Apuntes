@@ -13,3 +13,9 @@ En esta unidad se presenta un enfoque practico para elegir procesador segun nece
 ## Enlace principal
 
 - [A4.1 Guia para elegir procesador](teoria/A4-1-Guia-para-elegir-procesador.md)
+
+## Presentación
+
+- [A4 - Guía para elegir procesador](slides/A4-slides.html)
+
+**Fecha de actualización:** 30/04/2026

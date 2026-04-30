@@ -17,9 +17,9 @@ Este anexo compara las plataformas de **Intel** y **AMD** desde la perspectiva d
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [A7 - Intel vs AMD](slides/A7-slides.html)
 
 
 
 
-**Fecha de actualización:** 02/02/2026
+**Fecha de actualización:** 30/04/2026

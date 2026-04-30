@@ -13,3 +13,9 @@ En esta unidad se estudian la memoria CMOS y el firmware (BIOS/UEFI), su relacio
 ## Enlace principal
 
 - [MM U06.1. CMOS y UEFI](teoria/MM-U06.1.-CMOS-y-UEFI.md)
+
+## Presentación
+
+- [U06 - CMOS y UEFI](slides/U06-slides.html)
+
+**Fecha de actualización:** 30/04/2026

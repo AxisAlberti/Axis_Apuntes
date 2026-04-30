@@ -18,6 +18,6 @@ Esta unidad estudia periféricos que permiten introducir información, capturar 
 
 ## Slides
 
-- [No disponible](../slides/no-disponible.md)
+- [U14 - Periféricos de entrada, audio e identificación](slides/U14-slides.html)
 
 **Fecha de actualización:** 30/04/2026
