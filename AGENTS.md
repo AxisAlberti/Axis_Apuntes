@@ -12,8 +12,22 @@ Este repositorio está orientado a la generación de contenido educativo. Solo s
   Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/.system/openai-docs/SKILL.md`
 - **clonezilla-helper**: Usar cuando se generen apuntes, prácticas o guías educativas sobre Clonezilla, clonación de discos, creación de imágenes, restauración o despliegue en laboratorio.  
   Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/clonezilla-helper/SKILL.md`
+- **content-research-writer**: Usar cuando se necesite crear, ampliar o revisar contenidos educativos con estructura didáctica, mejores introducciones, citas, esquemas y revisión por secciones.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/content-research-writer/SKILL.md`
+- **research**: Usar cuando se necesite investigación estructurada con validación en varias fuentes y referencias completas para apuntes, unidades o recursos técnicos.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/research/SKILL.md`
 - **images-search**: Usar cuando se necesiten buscar imágenes reales en la web para incluirlas en documentación educativa. Requiere `BRAVE_SEARCH_API_KEY`.  
   Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/images-search/SKILL.md`
+- **web-search**: Usar cuando se necesite buscar, contrastar o extraer información web actualizada para enriquecer contenidos educativos, verificar conceptos técnicos o recopilar fuentes de referencia.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/web-search/SKILL.md`
+- **scrape**: Usar cuando se necesite extraer contenido de páginas concretas o listas de URLs para convertirlo en Markdown, HTML o JSON reutilizable en documentación educativa.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/scrape/SKILL.md`
+- **mkdocs**: Usar cuando se modifique la estructura del sitio, navegación, configuración, tema Material, plugins, búsqueda o publicación de la documentación MkDocs.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.codex/skills/mkdocs/SKILL.md`
+- **frontend-design**: Usar cuando se creen o mejoren recursos visuales web del proyecto, páginas HTML, componentes, portadas o interfaces educativas con diseño cuidado y responsive.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/frontend-design/SKILL.md`
+- **navigation-menu-generator**: Usar cuando se reorganice la navegación del sitio, menús, estructura de unidades, accesos a recursos o enlaces principales del módulo.  
+  Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/navigation-menu-generator/SKILL.md`
 - **html-ppt**: Usar cuando se necesiten crear presentaciones HTML estáticas tipo PPT para contenidos educativos, con temas, plantillas, animaciones, navegación por teclado y modo presentador. Es especialmente útil para generar slides de unidades didácticas, exposiciones de aula o materiales de apoyo visual.  
   Ruta: `/Users/josemanuelgonzalezcastillo/.agents/skills/html-ppt/SKILL.md`
 
@@ -434,4 +448,4 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 
 **Fecha de actualización:** 19/02/2026
 
-**Fecha de actualización:** 29/04/2026
+**Fecha de actualización:** 04/05/2026
