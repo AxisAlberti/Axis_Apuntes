@@ -1,0 +1,3159 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Docker Compose y estructura del fichero compose.yaml" name="description"/>
+<meta content="Jose Manuel Gonzalez Castillo" name="author"/>
+<link href="https://axisalberti.github.io/Axis_Apuntes/section2/u03/teoria/SI-U03.2.-Docker-Compose/" rel="canonical"/>
+<link href="../SI-U03.1.-Docker/" rel="prev"/>
+<link href="../../../slides/no-disponible/" rel="next"/>
+<link href="../../../../assets/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>UD 03 - 3.2 Docker Compose - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#32-docker-compose">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              UD 03 - 3.2 Docker Compose
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<a aria-label="Compartir" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Compartir">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Pestañas" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../section1/">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../blog/">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tags/">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/">
+<span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/recursos/manual-occt-fuente/">
+<span class="md-ellipsis">
+    
+  
+    Recursos - Manual OCCT (PSU)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u00/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u00/teoria/MM-U00.1.-Sistemas-de-numeracion/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u00/slides/U00-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u01/slides/U01-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u02/slides/U02-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u03/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u03/teoria/MM-U03.1.-Chipset/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u03/slides/U03-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u04/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u04/teoria/MM-U04.1.-Conexiones-externas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u04/slides/U04-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u05/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u05/teoria/MM-U05.1.-Memoria-RAM/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u05/slides/U05-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u06/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u06/teoria/MM-U06.1.-CMOS-y-UEFI/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u06/slides/U06-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u07/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u07/teoria/MM-U07.1.-Almacenamiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u07/slides/U07-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_12" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u08/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_12_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u08/teoria/MM-U08.1.-Microprocesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u08/slides/U08-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u09/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_13_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u09/teoria/MM-U09.1.-Tarjetas-graficas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u09/slides/U09-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_14" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u10/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_14_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u10/teoria/MM-U10.1.-Mantenimiento-de-equipos-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U10.1. Mantenimiento de equipos informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u10/slides/U10-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u11/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_15_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_15">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u11/teoria/MM-U11.1.-Utilidades-para-el-mantenimiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U11.1. Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u11/slides/U11-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_16" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u12/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 12 - Impresoras
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_16_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_16">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 12 - Impresoras
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u12/teoria/MM-U12.1.-Impresoras/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U12.1. Impresoras
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u12/slides/U12-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_17" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u13/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_17" id="__nav_2_17_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_17_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_17">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u13/teoria/MM-U13.1.-Pantallas-Monitores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U13.1. Pantallas y monitores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u13/slides/U13-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_18" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u14/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_18_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_18">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u14/teoria/MM-U14.1.-Perifericos-de-entrada-audio-e-identificacion/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U14.1. Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u14/slides/U14-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_19" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A1/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_19" id="__nav_2_19_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_19_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_19">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A1/teoria/A1-1-Arquitecturas-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A1/slides/A1-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_20" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A2/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_20">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A2/teoria/A2-1-Procesos-e-hilos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A2/slides/A2-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_21" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A3/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_21_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_21">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A3/teoria/A3-1-Prevencion-de-riesgos-laborales/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A3/slides/A3-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_22" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A4/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_22" id="__nav_2_22_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_22_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_22">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A4/teoria/A4-1-Guia-para-elegir-procesador/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A4/slides/A4-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_23" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A5/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_23_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_23">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A5/teoria/A5-1-Nomenclatura-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A5/slides/A5-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_24" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A6/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_24" id="__nav_2_24_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_24_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_24">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A6.1 BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A6/slides/A6-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_25" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A7/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 7 - Intel vs AMD
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_25" id="__nav_2_25_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_25_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_25">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 7 - Intel vs AMD
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A7/teoria/A7-1-Intel-vs-AMD/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A7.1 Intel vs AMD
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A7/slides/A7-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u01/teoria/SI-U01.1.-Redes/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u02/teoria/SI-U02.1.-Terminal/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Docker
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Docker
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SI-U03.1.-Docker/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.1. Docker
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.2. Docker Compose
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.2. Docker Compose
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-docker-compose">
+<span class="md-ellipsis">
+      
+        3.2. Docker Compose
+      
+    </span>
+</a>
+<nav aria-label="3.2. Docker Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+<span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-que-es-docker-compose">
+<span class="md-ellipsis">
+      
+        1. Que es Docker Compose
+      
+    </span>
+</a>
+<nav aria-label="1. Que es Docker Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-idea-practica">
+<span class="md-ellipsis">
+      
+        1.1. Idea practica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-comando-principal">
+<span class="md-ellipsis">
+      
+        1.2. Comando principal
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-estructura-general-de-un-fichero-composeyaml">
+<span class="md-ellipsis">
+      
+        2. Estructura general de un fichero compose.yaml
+      
+    </span>
+</a>
+<nav aria-label="2. Estructura general de un fichero compose.yaml" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-como-leer-el-fichero-de-arriba-abajo">
+<span class="md-ellipsis">
+      
+        2.1. Como leer el fichero de arriba abajo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-seccion-services">
+<span class="md-ellipsis">
+      
+        3. Seccion services
+      
+    </span>
+</a>
+<nav aria-label="3. Seccion services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-nombre-del-servicio">
+<span class="md-ellipsis">
+      
+        3.1. Nombre del servicio
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-claves-principales-dentro-de-un-servicio">
+<span class="md-ellipsis">
+      
+        4. Claves principales dentro de un servicio
+      
+    </span>
+</a>
+<nav aria-label="4. Claves principales dentro de un servicio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-image">
+<span class="md-ellipsis">
+      
+        4.1. image
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-build">
+<span class="md-ellipsis">
+      
+        4.2. build
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-container_name">
+<span class="md-ellipsis">
+      
+        4.3. container_name
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#44-ports">
+<span class="md-ellipsis">
+      
+        4.4. ports
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#45-volumes">
+<span class="md-ellipsis">
+      
+        4.5. volumes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#46-environment">
+<span class="md-ellipsis">
+      
+        4.6. environment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#47-depends_on">
+<span class="md-ellipsis">
+      
+        4.7. depends_on
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#48-restart">
+<span class="md-ellipsis">
+      
+        4.8. restart
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#49-command">
+<span class="md-ellipsis">
+      
+        4.9. command
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#410-working_dir">
+<span class="md-ellipsis">
+      
+        4.10. working_dir
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#411-stdin_open-y-tty">
+<span class="md-ellipsis">
+      
+        4.11. stdin_open y tty
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-resumen-rapido-de-claves-habituales">
+<span class="md-ellipsis">
+      
+        5. Resumen rapido de claves habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-primer-ejemplo-progresivo">
+<span class="md-ellipsis">
+      
+        6. Primer ejemplo progresivo
+      
+    </span>
+</a>
+<nav aria-label="6. Primer ejemplo progresivo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-un-solo-servicio">
+<span class="md-ellipsis">
+      
+        6.1. Un solo servicio
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-que-aprender-de-este-ejemplo">
+<span class="md-ellipsis">
+      
+        6.2. Que aprender de este ejemplo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-volumenes-en-compose">
+<span class="md-ellipsis">
+      
+        7. Volumenes en Compose
+      
+    </span>
+</a>
+<nav aria-label="7. Volumenes en Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-carpeta-local-o-volumen-docker">
+<span class="md-ellipsis">
+      
+        7.1. Carpeta local o volumen Docker
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-regla-practica">
+<span class="md-ellipsis">
+      
+        7.2. Regla practica
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-redes-en-compose">
+<span class="md-ellipsis">
+      
+        8. Redes en Compose
+      
+    </span>
+</a>
+<nav aria-label="8. Redes en Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#81-error-muy-frecuente">
+<span class="md-ellipsis">
+      
+        8.1. Error muy frecuente
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-ejemplo-completo-comentado">
+<span class="md-ellipsis">
+      
+        9. Ejemplo completo comentado
+      
+    </span>
+</a>
+<nav aria-label="9. Ejemplo completo comentado" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-como-estudiarlo-sin-perderse">
+<span class="md-ellipsis">
+      
+        9.1. Como estudiarlo sin perderse
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-comandos-mas-usados-con-compose">
+<span class="md-ellipsis">
+      
+        10. Comandos mas usados con Compose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-linux-y-windows-con-compose">
+<span class="md-ellipsis">
+      
+        11. Linux y Windows con Compose
+      
+    </span>
+</a>
+<nav aria-label="11. Linux y Windows con Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#111-rutas">
+<span class="md-ellipsis">
+      
+        11.1. Rutas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#112-terminal">
+<span class="md-ellipsis">
+      
+        11.2. Terminal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#113-wsl-2">
+<span class="md-ellipsis">
+      
+        11.3. WSL 2
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-errores-frecuentes-al-escribir-composeyaml">
+<span class="md-ellipsis">
+      
+        12. Errores frecuentes al escribir compose.yaml
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-buenas-practicas-iniciales">
+<span class="md-ellipsis">
+      
+        13. Buenas practicas iniciales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-conclusion">
+<span class="md-ellipsis">
+      
+        14. Conclusión
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../blog/">
+<span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tags/">
+<span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-docker-compose">
+<span class="md-ellipsis">
+      
+        3.2. Docker Compose
+      
+    </span>
+</a>
+<nav aria-label="3.2. Docker Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+<span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-que-es-docker-compose">
+<span class="md-ellipsis">
+      
+        1. Que es Docker Compose
+      
+    </span>
+</a>
+<nav aria-label="1. Que es Docker Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-idea-practica">
+<span class="md-ellipsis">
+      
+        1.1. Idea practica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-comando-principal">
+<span class="md-ellipsis">
+      
+        1.2. Comando principal
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-estructura-general-de-un-fichero-composeyaml">
+<span class="md-ellipsis">
+      
+        2. Estructura general de un fichero compose.yaml
+      
+    </span>
+</a>
+<nav aria-label="2. Estructura general de un fichero compose.yaml" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-como-leer-el-fichero-de-arriba-abajo">
+<span class="md-ellipsis">
+      
+        2.1. Como leer el fichero de arriba abajo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-seccion-services">
+<span class="md-ellipsis">
+      
+        3. Seccion services
+      
+    </span>
+</a>
+<nav aria-label="3. Seccion services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-nombre-del-servicio">
+<span class="md-ellipsis">
+      
+        3.1. Nombre del servicio
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-claves-principales-dentro-de-un-servicio">
+<span class="md-ellipsis">
+      
+        4. Claves principales dentro de un servicio
+      
+    </span>
+</a>
+<nav aria-label="4. Claves principales dentro de un servicio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-image">
+<span class="md-ellipsis">
+      
+        4.1. image
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-build">
+<span class="md-ellipsis">
+      
+        4.2. build
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-container_name">
+<span class="md-ellipsis">
+      
+        4.3. container_name
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#44-ports">
+<span class="md-ellipsis">
+      
+        4.4. ports
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#45-volumes">
+<span class="md-ellipsis">
+      
+        4.5. volumes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#46-environment">
+<span class="md-ellipsis">
+      
+        4.6. environment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#47-depends_on">
+<span class="md-ellipsis">
+      
+        4.7. depends_on
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#48-restart">
+<span class="md-ellipsis">
+      
+        4.8. restart
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#49-command">
+<span class="md-ellipsis">
+      
+        4.9. command
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#410-working_dir">
+<span class="md-ellipsis">
+      
+        4.10. working_dir
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#411-stdin_open-y-tty">
+<span class="md-ellipsis">
+      
+        4.11. stdin_open y tty
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-resumen-rapido-de-claves-habituales">
+<span class="md-ellipsis">
+      
+        5. Resumen rapido de claves habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-primer-ejemplo-progresivo">
+<span class="md-ellipsis">
+      
+        6. Primer ejemplo progresivo
+      
+    </span>
+</a>
+<nav aria-label="6. Primer ejemplo progresivo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-un-solo-servicio">
+<span class="md-ellipsis">
+      
+        6.1. Un solo servicio
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-que-aprender-de-este-ejemplo">
+<span class="md-ellipsis">
+      
+        6.2. Que aprender de este ejemplo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-volumenes-en-compose">
+<span class="md-ellipsis">
+      
+        7. Volumenes en Compose
+      
+    </span>
+</a>
+<nav aria-label="7. Volumenes en Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-carpeta-local-o-volumen-docker">
+<span class="md-ellipsis">
+      
+        7.1. Carpeta local o volumen Docker
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-regla-practica">
+<span class="md-ellipsis">
+      
+        7.2. Regla practica
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-redes-en-compose">
+<span class="md-ellipsis">
+      
+        8. Redes en Compose
+      
+    </span>
+</a>
+<nav aria-label="8. Redes en Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#81-error-muy-frecuente">
+<span class="md-ellipsis">
+      
+        8.1. Error muy frecuente
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-ejemplo-completo-comentado">
+<span class="md-ellipsis">
+      
+        9. Ejemplo completo comentado
+      
+    </span>
+</a>
+<nav aria-label="9. Ejemplo completo comentado" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-como-estudiarlo-sin-perderse">
+<span class="md-ellipsis">
+      
+        9.1. Como estudiarlo sin perderse
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-comandos-mas-usados-con-compose">
+<span class="md-ellipsis">
+      
+        10. Comandos mas usados con Compose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-linux-y-windows-con-compose">
+<span class="md-ellipsis">
+      
+        11. Linux y Windows con Compose
+      
+    </span>
+</a>
+<nav aria-label="11. Linux y Windows con Compose" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#111-rutas">
+<span class="md-ellipsis">
+      
+        11.1. Rutas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#112-terminal">
+<span class="md-ellipsis">
+      
+        11.2. Terminal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#113-wsl-2">
+<span class="md-ellipsis">
+      
+        11.3. WSL 2
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-errores-frecuentes-al-escribir-composeyaml">
+<span class="md-ellipsis">
+      
+        12. Errores frecuentes al escribir compose.yaml
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-buenas-practicas-iniciales">
+<span class="md-ellipsis">
+      
+        13. Buenas practicas iniciales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-conclusion">
+<span class="md-ellipsis">
+      
+        14. Conclusión
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:compose">compose</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:contenedores">contenedores</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:docker">docker</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:docker-compose">docker compose</a>
+</nav>
+<h1>SI U03.2. Docker Compose</h1>
+<div class="u03-destacados">
+<h2 id="32-docker-compose">3.2. Docker Compose<a class="headerlink" href="#32-docker-compose" title="Permanent link">¶</a></h2>
+<p>Cuando una aplicacion necesita varios contenedores, trabajar solo con comandos <code>docker run</code> puede resultar poco comodo y dificil de mantener. Docker Compose resuelve este problema permitiendo definir el entorno completo en un solo archivo.</p>
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h3>
+<p>Docker Compose se usa para describir aplicaciones multicontenedor mediante un fichero YAML, normalmente llamado <code>compose.yaml</code>.</p>
+<p>La idea clave es esta:</p>
+<ul>
+<li>Con <code>docker run</code> describes un contenedor cada vez.</li>
+<li>Con <code>docker compose</code> describes una aplicacion completa.</li>
+</ul>
+<p>Esto permite guardar en un archivo:</p>
+<ul>
+<li>Los servicios</li>
+<li>Los puertos</li>
+<li>Los volumenes</li>
+<li>Las variables de entorno</li>
+<li>Las redes</li>
+<li>Las dependencias entre contenedores</li>
+</ul>
+<h3 id="1-que-es-docker-compose">1. Que es Docker Compose<a class="headerlink" href="#1-que-es-docker-compose" title="Permanent link">¶</a></h3>
+<p>Docker Compose es una herramienta que permite <strong>definir y arrancar varios servicios Docker con una sola configuracion</strong>.</p>
+<p>Su ventaja principal es la <strong>reproducibilidad</strong>: el entorno queda escrito en un fichero y no depende de recordar un conjunto largo de comandos.</p>
+<h4 id="11-idea-practica">1.1. Idea practica<a class="headerlink" href="#11-idea-practica" title="Permanent link">¶</a></h4>
+<p>Sin Compose, una aplicacion web con base de datos puede requerir:</p>
+<ul>
+<li>Un comando para el servidor web</li>
+<li>Otro comando para la base de datos</li>
+<li>Otro para la red</li>
+<li>Otro para los volumenes</li>
+</ul>
+<p>Con Compose, todo esto se concentra en un <code>compose.yaml</code>.</p>
+<h4 id="12-comando-principal">1.2. Comando principal<a class="headerlink" href="#12-comando-principal" title="Permanent link">¶</a></h4>
+<p>El comando mas habitual es:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Y para desmontar el entorno:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+</code></pre></div>
+<h3 id="2-estructura-general-de-un-fichero-composeyaml">2. Estructura general de un fichero compose.yaml<a class="headerlink" href="#2-estructura-general-de-un-fichero-composeyaml" title="Permanent link">¶</a></h3>
+<p>Un ejemplo sencillo seria este:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:11</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secreto</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="nt">datos_db</span><span class="p">:</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">  </span><span class="nt">red_app</span><span class="p">:</span>
+</code></pre></div>
+<p>Las secciones mas frecuentes son:</p>
+<ul>
+<li><code>services</code></li>
+<li><code>volumes</code></li>
+<li><code>networks</code></li>
+</ul>
+<pre class="mermaid"><code>flowchart TB
+    A[compose.yaml] --&gt; B[services]
+    A --&gt; C[volumes]
+    A --&gt; D[networks]
+    B --&gt; E[web]
+    B --&gt; F[db]</code></pre>
+<h4 id="21-como-leer-el-fichero-de-arriba-abajo">2.1. Como leer el fichero de arriba abajo<a class="headerlink" href="#21-como-leer-el-fichero-de-arriba-abajo" title="Permanent link">¶</a></h4>
+<p>Una forma practica de leer un <code>compose.yaml</code> es esta:</p>
+<ol>
+<li>Primero mirar <strong>que servicios existen</strong></li>
+<li>Despues revisar <strong>que puertos publica cada servicio</strong></li>
+<li>Luego comprobar <strong>si monta carpetas o volumenes</strong></li>
+<li>Finalmente revisar <strong>redes, variables de entorno y dependencias</strong></li>
+</ol>
+<p>Si el alumnado sigue siempre este orden, el fichero resulta mucho mas facil de entender.</p>
+<h3 id="3-seccion-services">3. Seccion services<a class="headerlink" href="#3-seccion-services" title="Permanent link">¶</a></h3>
+<p>La seccion <code>services</code> es la mas importante del fichero. Define los contenedores que forman la aplicacion.</p>
+<p>Cada servicio representa un contenedor o, de forma mas precisa, la configuracion con la que ese contenedor sera creado.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:11</span>
+</code></pre></div>
+<h4 id="31-nombre-del-servicio">3.1. Nombre del servicio<a class="headerlink" href="#31-nombre-del-servicio" title="Permanent link">¶</a></h4>
+<p>El nombre del servicio, como <code>web</code> o <code>db</code>, es importante porque:</p>
+<ul>
+<li>Identifica el servicio dentro del archivo</li>
+<li>Sirve como nombre de red interno entre contenedores</li>
+</ul>
+<p>Por ejemplo, si un servicio PHP necesita conectarse a MariaDB, normalmente usara <code>db</code> como host si el servicio se llama asi.</p>
+<h3 id="4-claves-principales-dentro-de-un-servicio">4. Claves principales dentro de un servicio<a class="headerlink" href="#4-claves-principales-dentro-de-un-servicio" title="Permanent link">¶</a></h3>
+<p>Dentro de cada servicio pueden aparecer muchas claves. Estas son las mas importantes para empezar.</p>
+<p>Antes de verlas una por una, conviene quedarse con esta idea:</p>
+<ul>
+<li>Algunas claves indican <strong>que imagen usar</strong></li>
+<li>Otras indican <strong>como se ejecuta el contenedor</strong></li>
+<li>Otras indican <strong>como se conecta con el exterior o con otros servicios</strong></li>
+<li>Y otras indican <strong>donde guarda los datos</strong></li>
+</ul>
+<h4 id="41-image">4.1. image<a class="headerlink" href="#41-image" title="Permanent link">¶</a></h4>
+<p>Indica la imagen que se va a utilizar.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+</code></pre></div>
+<p>Se usa cuando no necesitas construir una imagen propia y te basta una imagen ya publicada.</p>
+<h4 id="42-build">4.2. build<a class="headerlink" href="#42-build" title="Permanent link">¶</a></h4>
+<p>Sirve para construir la imagen a partir de un <code>Dockerfile</code>.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+</code></pre></div>
+<p>O de forma mas detallada:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">build</span><span class="p">:</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+</code></pre></div>
+<p>Se usa cuando el proyecto necesita una imagen personalizada.</p>
+<h4 id="43-container_name">4.3. container_name<a class="headerlink" href="#43-container_name" title="Permanent link">¶</a></h4>
+<p>Permite dar un nombre concreto al contenedor.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mi_web</span>
+</code></pre></div>
+<p>Es util para identificarlo mejor, aunque en muchos casos Compose puede generar nombres automaticamente.</p>
+<h4 id="44-ports">4.4. ports<a class="headerlink" href="#44-ports" title="Permanent link">¶</a></h4>
+<p>Publica puertos del contenedor hacia el equipo anfitrion.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+</code></pre></div>
+<p>Aqui:</p>
+<ul>
+<li><code>8080</code> es el puerto del equipo anfitrion</li>
+<li><code>80</code> es el puerto del contenedor</li>
+</ul>
+<h4 id="45-volumes">4.5. volumes<a class="headerlink" href="#45-volumes" title="Permanent link">¶</a></h4>
+<p>Monta carpetas o volumenes persistentes.</p>
+<p>Ejemplo con carpeta local:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./web:/var/www/html</span>
+</code></pre></div>
+<p>Ejemplo con volumen gestionado por Docker:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datos_db:/var/lib/mysql</span>
+</code></pre></div>
+<h4 id="46-environment">4.6. environment<a class="headerlink" href="#46-environment" title="Permanent link">¶</a></h4>
+<p>Define variables de entorno.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">environment</span><span class="p">:</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secreto</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="nt">MARIADB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ejemplo</span>
+</code></pre></div>
+<p>Estas variables permiten configurar el contenedor en el arranque.</p>
+<h4 id="47-depends_on">4.7. depends_on<a class="headerlink" href="#47-depends_on" title="Permanent link">¶</a></h4>
+<p>Indica dependencias entre servicios.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nt">depends_on</span><span class="p">:</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+</code></pre></div>
+<p>Esto expresa que el servicio actual depende de <code>db</code>. Ayuda a ordenar el arranque, aunque no garantiza por si mismo que la aplicacion dependiente ya este completamente lista.</p>
+<h4 id="48-restart">4.8. restart<a class="headerlink" href="#48-restart" title="Permanent link">¶</a></h4>
+<p>Permite indicar una politica de reinicio.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+</code></pre></div>
+<p>Muy util cuando queremos que el contenedor se reinicie automaticamente si se detiene por error.</p>
+<h4 id="49-command">4.9. command<a class="headerlink" href="#49-command" title="Permanent link">¶</a></h4>
+<p>Sobrescribe el comando por defecto del contenedor.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python app.py</span>
+</code></pre></div>
+<h4 id="410-working_dir">4.10. working_dir<a class="headerlink" href="#410-working_dir" title="Permanent link">¶</a></h4>
+<p>Define el directorio de trabajo dentro del contenedor.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nt">working_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app</span>
+</code></pre></div>
+<h4 id="411-stdin_open-y-tty">4.11. stdin_open y tty<a class="headerlink" href="#411-stdin_open-y-tty" title="Permanent link">¶</a></h4>
+<p>Se usan cuando hace falta un comportamiento mas interactivo.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<h3 id="5-resumen-rapido-de-claves-habituales">5. Resumen rapido de claves habituales<a class="headerlink" href="#5-resumen-rapido-de-claves-habituales" title="Permanent link">¶</a></h3>
+<p>La siguiente tabla sirve como chuleta inicial para saber <strong>que clave usar segun lo que se quiere conseguir</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Si quieres...</th>
+<th>Clave habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usar una imagen ya existente</td>
+<td><code>image</code></td>
+</tr>
+<tr>
+<td>Construir una imagen propia</td>
+<td><code>build</code></td>
+</tr>
+<tr>
+<td>Dar nombre al contenedor</td>
+<td><code>container_name</code></td>
+</tr>
+<tr>
+<td>Publicar un puerto</td>
+<td><code>ports</code></td>
+</tr>
+<tr>
+<td>Montar una carpeta o volumen</td>
+<td><code>volumes</code></td>
+</tr>
+<tr>
+<td>Pasar configuracion al contenedor</td>
+<td><code>environment</code></td>
+</tr>
+<tr>
+<td>Indicar que depende de otro servicio</td>
+<td><code>depends_on</code></td>
+</tr>
+<tr>
+<td>Reiniciar automaticamente</td>
+<td><code>restart</code></td>
+</tr>
+<tr>
+<td>Cambiar el comando por defecto</td>
+<td><code>command</code></td>
+</tr>
+<tr>
+<td>Elegir directorio de trabajo</td>
+<td><code>working_dir</code></td>
+</tr>
+<tr>
+<td>Hacer el contenedor mas interactivo</td>
+<td><code>stdin_open</code>, <code>tty</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-primer-ejemplo-progresivo">6. Primer ejemplo progresivo<a class="headerlink" href="#6-primer-ejemplo-progresivo" title="Permanent link">¶</a></h3>
+<p>Antes de ver un entorno completo con web y base de datos, conviene empezar por un caso minimo.</p>
+<h4 id="61-un-solo-servicio">6.1. Un solo servicio<a class="headerlink" href="#61-un-solo-servicio" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+</code></pre></div>
+<p>Este archivo ya describe una aplicacion muy simple:</p>
+<ul>
+<li>Un solo servicio llamado <code>web</code></li>
+<li>Una imagen <code>nginx</code></li>
+<li>Un puerto publicado para acceder desde el navegador</li>
+</ul>
+<p>Para ponerlo en marcha:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h4 id="62-que-aprender-de-este-ejemplo">6.2. Que aprender de este ejemplo<a class="headerlink" href="#62-que-aprender-de-este-ejemplo" title="Permanent link">¶</a></h4>
+<p>Con este caso minimo ya pueden entenderse tres ideas muy importantes:</p>
+<ol>
+<li>Un archivo Compose puede arrancar una aplicacion con muy poca configuracion.</li>
+<li>La seccion <code>services</code> es el centro del fichero.</li>
+<li>El servicio queda definido por sus claves internas.</li>
+</ol>
+<h3 id="7-volumenes-en-compose">7. Volumenes en Compose<a class="headerlink" href="#7-volumenes-en-compose" title="Permanent link">¶</a></h3>
+<p>La seccion superior <code>volumes</code> sirve para declarar volumenes gestionados por Docker.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="nt">datos_db</span><span class="p">:</span>
+</code></pre></div>
+<p>Luego se usan dentro del servicio:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:11</span>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datos_db:/var/lib/mysql</span>
+</code></pre></div>
+<h4 id="71-carpeta-local-o-volumen-docker">7.1. Carpeta local o volumen Docker<a class="headerlink" href="#71-carpeta-local-o-volumen-docker" title="Permanent link">¶</a></h4>
+<p>Conviene distinguir:</p>
+<ul>
+<li><strong>Carpeta local</strong>: buena para desarrollo y edicion directa de archivos</li>
+<li><strong>Volumen Docker</strong>: muy util para datos persistentes de servicios como bases de datos</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    A["Carpeta local web"] --&gt; B["Servicio web"]
+    B --&gt; C["Directorio web del contenedor"]
+    D["Volumen Docker datos_db"] --&gt; E["Servicio db"]
+    E --&gt; F["Directorio de datos de MariaDB"]</code></pre>
+<h4 id="72-regla-practica">7.2. Regla practica<a class="headerlink" href="#72-regla-practica" title="Permanent link">¶</a></h4>
+<p>Como orientacion para clase:</p>
+<ul>
+<li>Si quieres <strong>editar archivos del proyecto</strong>, suele interesar montar una carpeta local.</li>
+<li>Si quieres <strong>guardar datos internos de un servicio</strong>, suele interesar un volumen Docker.</li>
+</ul>
+<h3 id="8-redes-en-compose">8. Redes en Compose<a class="headerlink" href="#8-redes-en-compose" title="Permanent link">¶</a></h3>
+<p>Compose puede crear redes automaticamente, pero tambien permite definirlas de forma explicita.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">  </span><span class="nt">red_app</span><span class="p">:</span>
+</code></pre></div>
+<p>Y luego asociarlas a los servicios:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red_app</span>
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red_app</span>
+</code></pre></div>
+<p>Si dos servicios comparten red, pueden comunicarse entre si usando sus nombres.</p>
+<pre class="mermaid"><code>flowchart LR
+    W[Servicio web]
+    D[Servicio db]
+    N[(red_app)]
+    W --&gt; N
+    D --&gt; N</code></pre>
+<h4 id="81-error-muy-frecuente">8.1. Error muy frecuente<a class="headerlink" href="#81-error-muy-frecuente" title="Permanent link">¶</a></h4>
+<p>Uno de los errores mas habituales al empezar es intentar que un contenedor se conecte a otro usando <code>localhost</code>.</p>
+<p>En Compose, si dos servicios estan en la misma red, normalmente se usa el <strong>nombre del servicio</strong>:</p>
+<ul>
+<li><code>db</code></li>
+<li><code>web</code></li>
+<li><code>phpmyadmin</code></li>
+</ul>
+<h3 id="9-ejemplo-completo-comentado">9. Ejemplo completo comentado<a class="headerlink" href="#9-ejemplo-completo-comentado" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php:8.2-apache</span>
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_web</span>
+<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-23-6" id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+<a href="#__codelineno-23-7" id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-23-8" id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./web:/var/www/html</span>
+<a href="#__codelineno-23-9" id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a href="#__codelineno-23-10" id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<a href="#__codelineno-23-11" id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-23-12" id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red_app</span>
+<a href="#__codelineno-23-13" id="__codelineno-23-13" name="__codelineno-23-13"></a>
+<a href="#__codelineno-23-14" id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a href="#__codelineno-23-15" id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:11</span>
+<a href="#__codelineno-23-16" id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_db</span>
+<a href="#__codelineno-23-17" id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a href="#__codelineno-23-18" id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">      </span><span class="nt">MARIADB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secreto</span>
+<a href="#__codelineno-23-19" id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">      </span><span class="nt">MARIADB_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ejemplo</span>
+<a href="#__codelineno-23-20" id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="w">      </span><span class="nt">MARIADB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alumno</span>
+<a href="#__codelineno-23-21" id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">      </span><span class="nt">MARIADB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alumno123</span>
+<a href="#__codelineno-23-22" id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-23-23" id="__codelineno-23-23" name="__codelineno-23-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datos_db:/var/lib/mysql</span>
+<a href="#__codelineno-23-24" id="__codelineno-23-24" name="__codelineno-23-24"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-23-25" id="__codelineno-23-25" name="__codelineno-23-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">red_app</span>
+<a href="#__codelineno-23-26" id="__codelineno-23-26" name="__codelineno-23-26"></a>
+<a href="#__codelineno-23-27" id="__codelineno-23-27" name="__codelineno-23-27"></a><span class="nt">volumes</span><span class="p">:</span>
+<a href="#__codelineno-23-28" id="__codelineno-23-28" name="__codelineno-23-28"></a><span class="w">  </span><span class="nt">datos_db</span><span class="p">:</span>
+<a href="#__codelineno-23-29" id="__codelineno-23-29" name="__codelineno-23-29"></a>
+<a href="#__codelineno-23-30" id="__codelineno-23-30" name="__codelineno-23-30"></a><span class="nt">networks</span><span class="p">:</span>
+<a href="#__codelineno-23-31" id="__codelineno-23-31" name="__codelineno-23-31"></a><span class="w">  </span><span class="nt">red_app</span><span class="p">:</span>
+</code></pre></div>
+<p>Este fichero define:</p>
+<ol>
+<li>Un servicio web con Apache y PHP</li>
+<li>Un servicio de base de datos MariaDB</li>
+<li>Un volumen persistente para la base de datos</li>
+<li>Una red compartida para que ambos servicios se comuniquen</li>
+</ol>
+<h4 id="91-como-estudiarlo-sin-perderse">9.1. Como estudiarlo sin perderse<a class="headerlink" href="#91-como-estudiarlo-sin-perderse" title="Permanent link">¶</a></h4>
+<p>Para entender un fichero como este, conviene dividirlo en capas:</p>
+<ol>
+<li><strong>Servicios</strong>: que contenedores existen</li>
+<li><strong>Puertos</strong>: que se expone al exterior</li>
+<li><strong>Volumenes</strong>: que datos se guardan</li>
+<li><strong>Redes</strong>: como se comunican entre si</li>
+</ol>
+<pre class="mermaid"><code>flowchart TB
+    U[Usuario navegador]
+    W[Servicio web]
+    DB[Servicio db]
+    V[(Volumen datos_db)]
+    R[(red_app)]
+    U --&gt;|8080| W
+    W --&gt; R
+    DB --&gt; R
+    DB --&gt; V</code></pre>
+<h3 id="10-comandos-mas-usados-con-compose">10. Comandos mas usados con Compose<a class="headerlink" href="#10-comandos-mas-usados-con-compose" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Funcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker compose up -d</code></td>
+<td>Levanta los servicios en segundo plano</td>
+</tr>
+<tr>
+<td><code>docker compose ps</code></td>
+<td>Muestra el estado de los servicios</td>
+</tr>
+<tr>
+<td><code>docker compose logs</code></td>
+<td>Muestra logs</td>
+</tr>
+<tr>
+<td><code>docker compose stop</code></td>
+<td>Detiene servicios</td>
+</tr>
+<tr>
+<td><code>docker compose start</code></td>
+<td>Inicia servicios ya creados</td>
+</tr>
+<tr>
+<td><code>docker compose down</code></td>
+<td>Detiene y elimina contenedores y red</td>
+</tr>
+<tr>
+<td><code>docker compose down -v</code></td>
+<td>Elimina tambien los volumenes</td>
+</tr>
+<tr>
+<td><code>docker compose exec web bash</code></td>
+<td>Entra en un servicio en ejecucion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-linux-y-windows-con-compose">11. Linux y Windows con Compose<a class="headerlink" href="#11-linux-y-windows-con-compose" title="Permanent link">¶</a></h3>
+<p>El concepto de Compose es el mismo en ambos sistemas, pero hay diferencias practicas.</p>
+<h4 id="111-rutas">11.1. Rutas<a class="headerlink" href="#111-rutas" title="Permanent link">¶</a></h4>
+<ul>
+<li>En <strong>Linux</strong> se usan rutas como <code>/home/alumno/proyecto</code></li>
+<li>En <strong>Windows</strong> se usan rutas como <code>C:\\Users\\Alumno\\proyecto</code></li>
+</ul>
+<p>Cuando el montaje se hace con rutas relativas, como <code>./web:/var/www/html</code>, Compose suele resultar mas comodo y portable.</p>
+<h4 id="112-terminal">11.2. Terminal<a class="headerlink" href="#112-terminal" title="Permanent link">¶</a></h4>
+<ul>
+<li>En <strong>Linux</strong> lo normal es usar Bash o Zsh</li>
+<li>En <strong>Windows</strong> se puede usar PowerShell, CMD o terminal WSL</li>
+</ul>
+<h4 id="113-wsl-2">11.3. WSL 2<a class="headerlink" href="#113-wsl-2" title="Permanent link">¶</a></h4>
+<p>En Windows, si se trabaja con contenedores Linux, es muy frecuente que Docker Desktop use <strong>WSL 2</strong> como base de integracion.</p>
+<h3 id="12-errores-frecuentes-al-escribir-composeyaml">12. Errores frecuentes al escribir compose.yaml<a class="headerlink" href="#12-errores-frecuentes-al-escribir-composeyaml" title="Permanent link">¶</a></h3>
+<p>Los errores mas comunes son:</p>
+<ul>
+<li>Confundir espacios y tabuladores en YAML</li>
+<li>Escribir mal la indentacion</li>
+<li>Publicar mal los puertos</li>
+<li>Montar una ruta local incorrecta</li>
+<li>Usar <code>localhost</code> entre contenedores en lugar del nombre del servicio</li>
+<li>Olvidar crear o declarar volumenes y redes cuando son necesarios</li>
+</ul>
+<h3 id="13-buenas-practicas-iniciales">13. Buenas practicas iniciales<a class="headerlink" href="#13-buenas-practicas-iniciales" title="Permanent link">¶</a></h3>
+<ul>
+<li>Usar nombres de servicio claros</li>
+<li>Preferir rutas relativas en proyectos de clase</li>
+<li>Separar los servicios por funcion</li>
+<li>Guardar datos importantes en volumenes</li>
+<li>No meter contraseñas reales en ejemplos compartidos</li>
+<li>Comprobar siempre el estado con <code>docker compose ps</code> y <code>docker compose logs</code></li>
+</ul>
+<h3 id="14-conclusion">14. Conclusión<a class="headerlink" href="#14-conclusion" title="Permanent link">¶</a></h3>
+<p>Docker Compose es una pieza clave cuando Docker deja de usarse con un solo contenedor y pasa a describir una aplicacion completa.</p>
+<p>Si el alumnado entiende bien estas ideas:</p>
+<ul>
+<li>que <code>services</code> define los contenedores</li>
+<li>que <code>volumes</code> sirve para persistencia</li>
+<li>que <code>networks</code> permite comunicacion</li>
+<li>y que claves como <code>image</code>, <code>build</code>, <code>ports</code>, <code>environment</code> o <code>depends_on</code> controlan el comportamiento del servicio</li>
+</ul>
+<p>entonces ya tiene una base muy solida para configurar entornos reales con Docker.</p>
+<p>La idea final que debe quedar clara es esta:</p>
+<blockquote>
+<p>Un fichero <code>compose.yaml</code> describe como se levanta una aplicacion completa formada por uno o varios contenedores.</p>
+</blockquote>
+<p>Si el alumnado sabe leer un Compose por servicios, puertos, volumenes y redes, ya puede interpretar muchos entornos reales sin necesidad de memorizar todas las claves de golpe.</p>
+<h3 id="fuentes-consultadas">Fuentes consultadas<a class="headerlink" href="#fuentes-consultadas" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://docs.docker.com/compose/">Docker Docs. Docker Compose</a></li>
+<li><a href="https://docs.docker.com/reference/compose-file/">Docker Docs. Compose file reference</a></li>
+<li><a href="https://docs.docker.com/compose/intro/features-uses/">Docker Docs. Define and run multi-container applications</a></li>
+</ul>
+<p><strong>Fecha de actualización:</strong> 09/04/2026</p>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="Me ha sido de utilidad." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="La página podría mejorar." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+</body>
+</html>

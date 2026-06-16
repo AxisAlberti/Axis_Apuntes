@@ -1,0 +1,3430 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Periféricos de entrada, sonido, lectura de datos e identificación usados en equipos informáticos" name="description"/>
+<meta content="Jose Manuel Gonzalez Castillo" name="author"/>
+<link href="https://axisalberti.github.io/Axis_Apuntes/section1/u14/teoria/MM-U14.1.-Perifericos-de-entrada-audio-e-identificacion/" rel="canonical"/>
+<link href="../../" rel="prev"/>
+<link href="../../slides/U14-slides.html" rel="next"/>
+<link href="../../../../assets/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>UD 14 - 14.1 Periféricos de entrada, audio e identificación - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#141-perifericos-de-entrada-audio-e-identificacion">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              UD 14 - 14.1 Periféricos de entrada, audio e identificación
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<a aria-label="Compartir" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Compartir">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Pestañas" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../section2/">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../blog/">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tags/">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../recursos/manual-occt-fuente/">
+<span class="md-ellipsis">
+    
+  
+    Recursos - Manual OCCT (PSU)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u00/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u00/teoria/MM-U00.1.-Sistemas-de-numeracion/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u00/slides/U00-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u01/slides/U01-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u02/teoria/MM-U02.1.-Componentes-internos-del-PC/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u02/slides/U02-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u03/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u03/teoria/MM-U03.1.-Chipset/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u03/slides/U03-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u04/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u04/teoria/MM-U04.1.-Conexiones-externas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u04/slides/U04-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u05/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u05/teoria/MM-U05.1.-Memoria-RAM/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u05/slides/U05-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u06/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u06/teoria/MM-U06.1.-CMOS-y-UEFI/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u06/slides/U06-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u07/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u07/teoria/MM-U07.1.-Almacenamiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u07/slides/U07-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_12" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u08/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_12_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u08/teoria/MM-U08.1.-Microprocesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u08/slides/U08-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u09/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_13_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u09/teoria/MM-U09.1.-Tarjetas-graficas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u09/slides/U09-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_14" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u10/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_14_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u10/teoria/MM-U10.1.-Mantenimiento-de-equipos-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U10.1. Mantenimiento de equipos informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u10/slides/U10-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u11/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_15_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_15">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u11/teoria/MM-U11.1.-Utilidades-para-el-mantenimiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U11.1. Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u11/slides/U11-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_16" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u12/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 12 - Impresoras
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_16_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_16">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 12 - Impresoras
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u12/teoria/MM-U12.1.-Impresoras/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U12.1. Impresoras
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u12/slides/U12-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_17" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u13/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_17_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_17">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u13/teoria/MM-U13.1.-Pantallas-Monitores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U13.1. Pantallas y monitores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u13/slides/U13-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_18" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_18_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_18">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U14.1. Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U14.1. Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#141-perifericos-de-entrada-audio-e-identificacion">
+<span class="md-ellipsis">
+      
+        14.1. Periféricos de entrada, audio e identificación
+      
+    </span>
+</a>
+<nav aria-label="14.1. Periféricos de entrada, audio e identificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objetivos-de-aprendizaje">
+<span class="md-ellipsis">
+      
+        Objetivos de aprendizaje
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#0-vocabulario-basico">
+<span class="md-ellipsis">
+      
+        0. Vocabulario básico
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-clasificacion-de-los-perifericos-de-la-unidad">
+<span class="md-ellipsis">
+      
+        1. Clasificación de los periféricos de la unidad
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-teclado">
+<span class="md-ellipsis">
+      
+        2. Teclado
+      
+    </span>
+</a>
+<nav aria-label="2. Teclado" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-tipos-de-teclado">
+<span class="md-ellipsis">
+      
+        2.1. Tipos de teclado
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-caracteristicas-importantes">
+<span class="md-ellipsis">
+      
+        2.2. Características importantes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-fallos-frecuentes">
+<span class="md-ellipsis">
+      
+        2.3. Fallos frecuentes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-raton-y-touchpad">
+<span class="md-ellipsis">
+      
+        3. Ratón y touchpad
+      
+    </span>
+</a>
+<nav aria-label="3. Ratón y touchpad" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-conceptos-clave">
+<span class="md-ellipsis">
+      
+        3.1. Conceptos clave
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-funcionamiento-optico-y-laser-luz-reflexion-y-sensor">
+<span class="md-ellipsis">
+      
+        3.2. Funcionamiento óptico y láser: luz, reflexión y sensor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-touchpad">
+<span class="md-ellipsis">
+      
+        3.3. Touchpad
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-escaneres">
+<span class="md-ellipsis">
+      
+        4. Escáneres
+      
+    </span>
+</a>
+<nav aria-label="4. Escáneres" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-tipos-habituales">
+<span class="md-ellipsis">
+      
+        4.1. Tipos habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-caracteristicas-tecnicas">
+<span class="md-ellipsis">
+      
+        4.2. Características técnicas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-problemas-frecuentes">
+<span class="md-ellipsis">
+      
+        4.3. Problemas frecuentes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-microfonos-y-audio-de-entrada">
+<span class="md-ellipsis">
+      
+        5. Micrófonos y audio de entrada
+      
+    </span>
+</a>
+<nav aria-label="5. Micrófonos y audio de entrada" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-tipos-basicos">
+<span class="md-ellipsis">
+      
+        5.1. Tipos básicos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-ajustes-importantes">
+<span class="md-ellipsis">
+      
+        5.2. Ajustes importantes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-auriculares-y-altavoces">
+<span class="md-ellipsis">
+      
+        6. Auriculares y altavoces
+      
+    </span>
+</a>
+<nav aria-label="6. Auriculares y altavoces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-conexiones-habituales">
+<span class="md-ellipsis">
+      
+        6.1. Conexiones habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-diagnostico-basico-de-audio">
+<span class="md-ellipsis">
+      
+        6.2. Diagnóstico básico de audio
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-lectores-de-tarjetas-y-dnie">
+<span class="md-ellipsis">
+      
+        7. Lectores de tarjetas y DNIe
+      
+    </span>
+</a>
+<nav aria-label="7. Lectores de tarjetas y DNIe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-usos-habituales">
+<span class="md-ellipsis">
+      
+        7.1. Usos habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-elementos-que-deben-funcionar">
+<span class="md-ellipsis">
+      
+        7.2. Elementos que deben funcionar
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-lectores-de-codigos-rfid-y-nfc">
+<span class="md-ellipsis">
+      
+        8. Lectores de códigos, RFID y NFC
+      
+    </span>
+</a>
+<nav aria-label="8. Lectores de códigos, RFID y NFC" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#81-codigo-de-barras-y-qr">
+<span class="md-ellipsis">
+      
+        8.1. Código de barras y QR
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#82-rfid-y-nfc">
+<span class="md-ellipsis">
+      
+        8.2. RFID y NFC
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-biometria">
+<span class="md-ellipsis">
+      
+        9. Biometría
+      
+    </span>
+</a>
+<nav aria-label="9. Biometría" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-identificacion-y-verificacion">
+<span class="md-ellipsis">
+      
+        9.1. Identificación y verificación
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#92-buenas-practicas">
+<span class="md-ellipsis">
+      
+        9.2. Buenas prácticas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-instalacion-controladores-y-compatibilidad">
+<span class="md-ellipsis">
+      
+        10. Instalación, controladores y compatibilidad
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-criterios-para-elegir-perifericos">
+<span class="md-ellipsis">
+      
+        11. Criterios para elegir periféricos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-mantenimiento-y-limpieza">
+<span class="md-ellipsis">
+      
+        12. Mantenimiento y limpieza
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resumen-final">
+<span class="md-ellipsis">
+      
+        Resumen final
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-de-imagenes">
+<span class="md-ellipsis">
+      
+        Fuentes de imágenes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../slides/U14-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_19" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A1/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_19" id="__nav_2_19_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_19_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_19">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A1/teoria/A1-1-Arquitecturas-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A1/slides/A1-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_20" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A2/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_20">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A2/teoria/A2-1-Procesos-e-hilos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A2/slides/A2-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_21" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A3/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_21_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_21">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A3/teoria/A3-1-Prevencion-de-riesgos-laborales/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A3/slides/A3-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_22" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A4/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_22" id="__nav_2_22_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_22_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_22">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A4/teoria/A4-1-Guia-para-elegir-procesador/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A4/slides/A4-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_23" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A5/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_23_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_23">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A5/teoria/A5-1-Nomenclatura-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A5/slides/A5-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_24" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A6/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_24" id="__nav_2_24_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_24_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_24">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A6.1 BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A6/slides/A6-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_25" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../A7/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 7 - Intel vs AMD
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_25" id="__nav_2_25_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_25_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_25">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 7 - Intel vs AMD
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A7/teoria/A7-1-Intel-vs-AMD/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A7.1 Intel vs AMD
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../A7/slides/A7-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section2/">
+<span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section2/u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/u01/teoria/SI-U01.1.-Redes/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section2/u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/u02/teoria/SI-U02.1.-Terminal/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section2/u03/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Docker
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Docker
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/u03/teoria/SI-U03.1.-Docker/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.1. Docker
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/u03/teoria/SI-U03.2.-Docker-Compose/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.2. Docker Compose
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section2/slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../blog/">
+<span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tags/">
+<span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#141-perifericos-de-entrada-audio-e-identificacion">
+<span class="md-ellipsis">
+      
+        14.1. Periféricos de entrada, audio e identificación
+      
+    </span>
+</a>
+<nav aria-label="14.1. Periféricos de entrada, audio e identificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objetivos-de-aprendizaje">
+<span class="md-ellipsis">
+      
+        Objetivos de aprendizaje
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#0-vocabulario-basico">
+<span class="md-ellipsis">
+      
+        0. Vocabulario básico
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-clasificacion-de-los-perifericos-de-la-unidad">
+<span class="md-ellipsis">
+      
+        1. Clasificación de los periféricos de la unidad
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-teclado">
+<span class="md-ellipsis">
+      
+        2. Teclado
+      
+    </span>
+</a>
+<nav aria-label="2. Teclado" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-tipos-de-teclado">
+<span class="md-ellipsis">
+      
+        2.1. Tipos de teclado
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-caracteristicas-importantes">
+<span class="md-ellipsis">
+      
+        2.2. Características importantes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-fallos-frecuentes">
+<span class="md-ellipsis">
+      
+        2.3. Fallos frecuentes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-raton-y-touchpad">
+<span class="md-ellipsis">
+      
+        3. Ratón y touchpad
+      
+    </span>
+</a>
+<nav aria-label="3. Ratón y touchpad" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-conceptos-clave">
+<span class="md-ellipsis">
+      
+        3.1. Conceptos clave
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-funcionamiento-optico-y-laser-luz-reflexion-y-sensor">
+<span class="md-ellipsis">
+      
+        3.2. Funcionamiento óptico y láser: luz, reflexión y sensor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-touchpad">
+<span class="md-ellipsis">
+      
+        3.3. Touchpad
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-escaneres">
+<span class="md-ellipsis">
+      
+        4. Escáneres
+      
+    </span>
+</a>
+<nav aria-label="4. Escáneres" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-tipos-habituales">
+<span class="md-ellipsis">
+      
+        4.1. Tipos habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-caracteristicas-tecnicas">
+<span class="md-ellipsis">
+      
+        4.2. Características técnicas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-problemas-frecuentes">
+<span class="md-ellipsis">
+      
+        4.3. Problemas frecuentes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-microfonos-y-audio-de-entrada">
+<span class="md-ellipsis">
+      
+        5. Micrófonos y audio de entrada
+      
+    </span>
+</a>
+<nav aria-label="5. Micrófonos y audio de entrada" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-tipos-basicos">
+<span class="md-ellipsis">
+      
+        5.1. Tipos básicos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-ajustes-importantes">
+<span class="md-ellipsis">
+      
+        5.2. Ajustes importantes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-auriculares-y-altavoces">
+<span class="md-ellipsis">
+      
+        6. Auriculares y altavoces
+      
+    </span>
+</a>
+<nav aria-label="6. Auriculares y altavoces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-conexiones-habituales">
+<span class="md-ellipsis">
+      
+        6.1. Conexiones habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-diagnostico-basico-de-audio">
+<span class="md-ellipsis">
+      
+        6.2. Diagnóstico básico de audio
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-lectores-de-tarjetas-y-dnie">
+<span class="md-ellipsis">
+      
+        7. Lectores de tarjetas y DNIe
+      
+    </span>
+</a>
+<nav aria-label="7. Lectores de tarjetas y DNIe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-usos-habituales">
+<span class="md-ellipsis">
+      
+        7.1. Usos habituales
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-elementos-que-deben-funcionar">
+<span class="md-ellipsis">
+      
+        7.2. Elementos que deben funcionar
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-lectores-de-codigos-rfid-y-nfc">
+<span class="md-ellipsis">
+      
+        8. Lectores de códigos, RFID y NFC
+      
+    </span>
+</a>
+<nav aria-label="8. Lectores de códigos, RFID y NFC" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#81-codigo-de-barras-y-qr">
+<span class="md-ellipsis">
+      
+        8.1. Código de barras y QR
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#82-rfid-y-nfc">
+<span class="md-ellipsis">
+      
+        8.2. RFID y NFC
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-biometria">
+<span class="md-ellipsis">
+      
+        9. Biometría
+      
+    </span>
+</a>
+<nav aria-label="9. Biometría" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-identificacion-y-verificacion">
+<span class="md-ellipsis">
+      
+        9.1. Identificación y verificación
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#92-buenas-practicas">
+<span class="md-ellipsis">
+      
+        9.2. Buenas prácticas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-instalacion-controladores-y-compatibilidad">
+<span class="md-ellipsis">
+      
+        10. Instalación, controladores y compatibilidad
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-criterios-para-elegir-perifericos">
+<span class="md-ellipsis">
+      
+        11. Criterios para elegir periféricos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-mantenimiento-y-limpieza">
+<span class="md-ellipsis">
+      
+        12. Mantenimiento y limpieza
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resumen-final">
+<span class="md-ellipsis">
+      
+        Resumen final
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-de-imagenes">
+<span class="md-ellipsis">
+      
+        Fuentes de imágenes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:audio">audio</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:identificacion">identificacion</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:perifericos">perifericos</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:raton">raton</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:teclado">teclado</a>
+</nav>
+<h1>MM U14.1. Perifericos de entrada, audio e identificacion</h1>
+<h2 id="141-perifericos-de-entrada-audio-e-identificacion">14.1. Periféricos de entrada, audio e identificación<a class="headerlink" href="#141-perifericos-de-entrada-audio-e-identificacion" title="Permanent link">¶</a></h2>
+<p>Los periféricos amplían las posibilidades de un equipo informático. Algunos permiten introducir datos, otros reproducen sonido, otros capturan documentos y otros identifican personas, tarjetas o productos. En mantenimiento informático interesa conocerlos porque muchos problemas del usuario no están dentro de la torre, sino en los dispositivos que usa a diario.</p>
+<p>Esta unidad se centra en periféricos que no se han tratado como tema principal en unidades anteriores: teclado, ratón, touchpad, escáneres, micrófonos, auriculares, altavoces, lectores de tarjetas, lectores de códigos y biometría.</p>
+<h3 id="objetivos-de-aprendizaje">Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Permanent link">¶</a></h3>
+<ul>
+<li>Diferenciar periféricos de entrada, salida, audio e identificación.</li>
+<li>Interpretar características básicas como distribución de teclado, DPI, resolución de escaneo, tipo de conexión o compatibilidad.</li>
+<li>Reconocer fallos habituales y aplicar comprobaciones sencillas.</li>
+<li>Elegir periféricos adecuados según el puesto de trabajo.</li>
+<li>Valorar aspectos de ergonomía, mantenimiento, privacidad y seguridad.</li>
+</ul>
+<h3 id="0-vocabulario-basico">0. Vocabulario básico<a class="headerlink" href="#0-vocabulario-basico" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Periférico</strong></td>
+<td>Dispositivo conectado al equipo para ampliar sus funciones.</td>
+</tr>
+<tr>
+<td><strong>Entrada</strong></td>
+<td>Dispositivo que envía información al ordenador.</td>
+</tr>
+<tr>
+<td><strong>Salida</strong></td>
+<td>Dispositivo que recibe información del ordenador y la muestra, reproduce o transforma.</td>
+</tr>
+<tr>
+<td><strong>HID</strong></td>
+<td>Clase de dispositivos de interfaz humana, como teclados, ratones o lectores sencillos que actúan como entrada.</td>
+</tr>
+<tr>
+<td><strong>DPI</strong></td>
+<td>Puntos por pulgada. En ratones se asocia a sensibilidad; en escáneres, a resolución de captura.</td>
+</tr>
+<tr>
+<td><strong>Polling rate</strong></td>
+<td>Frecuencia con la que un periférico informa al equipo de su estado.</td>
+</tr>
+<tr>
+<td><strong>OCR</strong></td>
+<td>Reconocimiento óptico de caracteres para convertir imagen escaneada en texto editable.</td>
+</tr>
+<tr>
+<td><strong>ADC</strong></td>
+<td>Conversor analógico-digital, usado para convertir señales como la voz en datos digitales.</td>
+</tr>
+<tr>
+<td><strong>DAC</strong></td>
+<td>Conversor digital-analógico, usado para convertir audio digital en señal reproducible.</td>
+</tr>
+<tr>
+<td><strong>Smart card</strong></td>
+<td>Tarjeta con chip usada para identificación, firma o acceso seguro.</td>
+</tr>
+<tr>
+<td><strong>RFID</strong></td>
+<td>Identificación por radiofrecuencia, normalmente sin contacto directo.</td>
+</tr>
+<tr>
+<td><strong>NFC</strong></td>
+<td>Comunicación de corto alcance usada en tarjetas, móviles y lectores sin contacto.</td>
+</tr>
+<tr>
+<td><strong>Biometría</strong></td>
+<td>Identificación o verificación mediante rasgos físicos, como huella dactilar o rostro.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-clasificacion-de-los-perifericos-de-la-unidad">1. Clasificación de los periféricos de la unidad<a class="headerlink" href="#1-clasificacion-de-los-perifericos-de-la-unidad" title="Permanent link">¶</a></h3>
+<p>Aunque muchos periféricos combinan varias funciones, podemos agruparlos por su uso principal:</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Dispositivos</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada manual</td>
+<td>Teclado, ratón, touchpad</td>
+<td>Introducir órdenes, texto y movimientos.</td>
+</tr>
+<tr>
+<td>Captura documental</td>
+<td>Escáner</td>
+<td>Convertir documentos físicos en archivos digitales.</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Micrófono, auriculares, altavoces</td>
+<td>Capturar o reproducir sonido.</td>
+</tr>
+<tr>
+<td>Identificación y lectura</td>
+<td>Lectores de tarjetas, DNIe, códigos, RFID, NFC, biometría</td>
+<td>Reconocer personas, credenciales, productos o etiquetas.</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    A["Usuario o documento físico"] --&gt; B["Periférico"]
+    B --&gt; C["Controlador o sistema operativo"]
+    C --&gt; D["Aplicación"]
+    D --&gt; E["Acción: escribir, mover, escanear, escuchar o identificar"]</code></pre>
+<h3 id="2-teclado">2. Teclado<a class="headerlink" href="#2-teclado" title="Permanent link">¶</a></h3>
+<p>El <strong>teclado</strong> es un periférico de entrada diseñado para introducir texto, atajos y órdenes. Sigue siendo esencial en ofimática, programación, administración de sistemas y uso general.</p>
+<figure>
+<p><img alt="Distribución española de un teclado de ordenador" src="../assets/teclado-espanol.svg"/>
+</p>
+<figcaption>Distribución española ISO de un teclado de ordenador, con caracteres propios como Ñ, ¿ e ¡. Fuente: Wikimedia Commons, autora original Oona Räisänen (Mysid), obra derivada de PePeEfe, licencia CC0.</figcaption>
+</figure>
+<h4 id="21-tipos-de-teclado">2.1. Tipos de teclado<a class="headerlink" href="#21-tipos-de-teclado" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Características</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Membrana</strong></td>
+<td>Económico, silencioso y ligero.</td>
+<td>Aula, oficina y equipos básicos.</td>
+</tr>
+<tr>
+<td><strong>Mecánico</strong></td>
+<td>Cada tecla usa un interruptor independiente.</td>
+<td>Escritura intensiva, juegos y usuarios exigentes.</td>
+</tr>
+<tr>
+<td><strong>Chiclet</strong></td>
+<td>Teclas bajas y separadas, habitual en portátiles.</td>
+<td>Portátiles y teclados compactos.</td>
+</tr>
+<tr>
+<td><strong>Inalámbrico</strong></td>
+<td>Usa Bluetooth o receptor USB.</td>
+<td>Puestos limpios, movilidad y escritorios compartidos.</td>
+</tr>
+<tr>
+<td><strong>Ergonómico</strong></td>
+<td>Diseño orientado a reducir posturas forzadas.</td>
+<td>Trabajo prolongado con escritura frecuente.</td>
+</tr>
+</tbody>
+</table>
+<p>En un teclado de <strong>membrana</strong>, la pulsación presiona una cúpula de goma o una capa flexible hasta cerrar un contacto eléctrico sobre una membrana. Es una solución barata, ligera y suficiente para muchos puestos, pero suele ofrecer menos precisión táctil y menor facilidad de reparación tecla a tecla.</p>
+<figure>
+<p><img alt="Esquema explotado de un teclado de membrana con cúpula de goma" src="../assets/teclado-membrana-cupula-goma.svg"/>
+</p>
+<figcaption>Esquema explotado de un teclado de membrana con cúpula de goma. Se aprecia cómo la tecla presiona la cúpula hasta cerrar el contacto sobre la membrana. Fuente: Wikimedia Commons, autor Daniel Beardsmore, dominio público.</figcaption>
+</figure>
+<p>En un teclado <strong>mecánico</strong>, cada tecla tiene un interruptor independiente formado por carcasa, muelle, vástago y contactos. Esto permite una sensación de pulsación más definida y facilita sustituir teclas o mecanismos en algunos modelos. También suele aumentar el precio, el peso y el ruido, aunque depende del tipo de interruptor.</p>
+<figure>
+<p><img alt="Interruptor mecánico Cherry MX Brown desmontado" src="../assets/teclado-mecanico-switch-desmontado.jpg"/>
+</p>
+<figcaption>Interruptor mecánico Cherry MX Brown desmontado. Se observan piezas internas como carcasa, muelle, vástago y contactos. Fuente: Wikimedia Commons, autor Multicherry, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+<h4 id="22-caracteristicas-importantes">2.2. Características importantes<a class="headerlink" href="#22-caracteristicas-importantes" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Distribución</strong>: En España es habitual la distribución ISO española, con tecla Ñ y símbolos propios.</li>
+<li><strong>Tamaño</strong>: Puede ser completo, compacto, TKL sin bloque numérico o reducido.</li>
+<li><strong>Conexión</strong>: USB, Bluetooth o receptor inalámbrico.</li>
+<li><strong>Retroiluminación</strong>: Útil en entornos con poca luz, aunque aumenta consumo.</li>
+<li><strong>Teclas multimedia</strong>: Facilitan volumen, reproducción o brillo.</li>
+<li><strong>Anti-ghosting</strong>: Evita pérdidas de pulsaciones simultáneas en determinados usos.</li>
+</ul>
+<p>Al elegir un teclado para un aula o un taller conviene priorizar robustez, facilidad de limpieza, coste de reposición y distribución correcta. Para puestos de administración o programación pesa más la comodidad de escritura y la ergonomía. En equipos compartidos, un teclado sencillo y lavable puede ser mejor elección que uno avanzado pero difícil de mantener.</p>
+<h4 id="23-fallos-frecuentes">2.3. Fallos frecuentes<a class="headerlink" href="#23-fallos-frecuentes" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Posible causa</th>
+<th>Comprobación inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No escribe</td>
+<td>Cable desconectado, receptor USB sin detectar o batería agotada.</td>
+<td>Probar otro puerto, revisar batería o cambiar cable.</td>
+</tr>
+<tr>
+<td>Algunas teclas fallan</td>
+<td>Suciedad, desgaste o líquido derramado.</td>
+<td>Limpiar con cuidado y probar en otro equipo.</td>
+</tr>
+<tr>
+<td>Escribe caracteres incorrectos</td>
+<td>Distribución de idioma mal configurada.</td>
+<td>Revisar idioma del teclado en el sistema operativo.</td>
+</tr>
+<tr>
+<td>Se repiten letras</td>
+<td>Tecla atascada o ajuste de repetición muy sensible.</td>
+<td>Comprobar físicamente la tecla y la configuración.</td>
+</tr>
+</tbody>
+</table>
+<p>En teclados inalámbricos también hay que revisar distancia al receptor, interferencias, estado de las pilas y emparejamiento. En teclados mecánicos pueden aparecer fallos de un interruptor concreto; en teclados de membrana, si falla una zona completa, puede existir daño en la lámina interna o en la matriz de contactos.</p>
+<h3 id="3-raton-y-touchpad">3. Ratón y touchpad<a class="headerlink" href="#3-raton-y-touchpad" title="Permanent link">¶</a></h3>
+<p>El <strong>ratón</strong> permite mover el puntero, seleccionar elementos y ejecutar acciones. El <strong>touchpad</strong> cumple una función similar en portátiles, usando una superficie táctil.</p>
+<figure>
+<p><img alt="Sensor óptico de un ratón de ordenador" src="../assets/raton-sensor-optico.jpg"/>
+</p>
+<figcaption>Sensor óptico de un ratón, con emisor de luz y detector. El dispositivo compara pequeñas variaciones de la superficie para calcular el movimiento. Fuente: Wikimedia Commons, autor Harikrishnanskt, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+<h4 id="31-conceptos-clave">3.1. Conceptos clave<a class="headerlink" href="#31-conceptos-clave" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sensor óptico</strong></td>
+<td>Usa luz y un sensor para detectar movimiento sobre una superficie.</td>
+</tr>
+<tr>
+<td><strong>Sensor láser</strong></td>
+<td>Variante capaz de trabajar en más superficies, aunque depende del modelo.</td>
+</tr>
+<tr>
+<td><strong>DPI</strong></td>
+<td>Indica sensibilidad del movimiento. Más DPI no siempre significa más precisión.</td>
+</tr>
+<tr>
+<td><strong>Polling rate</strong></td>
+<td>Frecuencia con la que el ratón informa al equipo de su posición.</td>
+</tr>
+<tr>
+<td><strong>Ergonomía</strong></td>
+<td>Forma, tamaño y peso adecuados para evitar molestias en uso prolongado.</td>
+</tr>
+</tbody>
+</table>
+<p>El ratón no mide una distancia real como una regla ni funciona como un radar que calcule solo el punto exacto donde vuelve un rayo. Su sensor recibe luz reflejada por la superficie y, a partir de ese reflejo, obtiene patrones de textura que cambian cuando movemos el ratón. Por eso la alfombrilla, el brillo de la mesa, la suciedad del sensor o una superficie transparente pueden provocar saltos o movimientos imprecisos.</p>
+<p>El valor de <strong>DPI</strong> debe interpretarse con cuidado. Un DPI alto permite mover el puntero más distancia con menos movimiento físico, pero no siempre mejora la precisión. Para diseño o trabajo fino puede interesar una sensibilidad moderada y estable; para videojuegos o varios monitores puede ser útil ajustar perfiles.</p>
+<h4 id="32-funcionamiento-optico-y-laser-luz-reflexion-y-sensor">3.2. Funcionamiento óptico y láser: luz, reflexión y sensor<a class="headerlink" href="#32-funcionamiento-optico-y-laser-luz-reflexion-y-sensor" title="Permanent link">¶</a></h4>
+<p>El funcionamiento de un ratón óptico se basa en una idea sencilla de óptica: <strong>emitir luz sobre una superficie y recoger el reflejo con un sensor</strong>. Ese reflejo no se usa solo para saber “dónde ha caído” el haz de luz, sino para formar un patrón de la superficie. El chip interno analiza cómo cambia ese patrón cuando movemos el ratón y, con esos cambios, calcula el desplazamiento.</p>
+<figure>
+<p><img alt="Comparación del funcionamiento de un ratón óptico infrarrojo y un ratón óptico láser" src="../assets/raton-optico-vs-laser.webp"/>
+</p>
+<figcaption>Comparación entre ratón óptico infrarrojo y ratón óptico láser. En ambos casos la luz se emite hacia la superficie, se refleja, atraviesa una lente y llega al sensor. Fuente: Profesional Review, imagen proporcionada para uso educativo en esta unidad.</figcaption>
+</figure>
+<p>La imagen permite relacionar el funcionamiento del ratón con tres conceptos de la teoría de la luz:</p>
+<ul>
+<li><strong>Emisión</strong>: Un LED infrarrojo, LED rojo o láser emite un haz de luz hacia la superficie.</li>
+<li><strong>Reflexión</strong>: La luz rebota en la mesa o alfombrilla. Si la superficie es mate y tiene textura, el sensor recibe patrones claros; si es cristal o muy brillante, puede perder referencias.</li>
+<li><strong>Enfoque</strong>: Una lente concentra la luz reflejada sobre el sensor para que el procesador interno pueda interpretar el patrón recibido.</li>
+</ul>
+<p>El funcionamiento básico puede resumirse así:</p>
+<ol>
+<li>Un LED o láser ilumina la superficie.</li>
+<li>La luz rebota en la superficie y vuelve hacia el interior del ratón.</li>
+<li>Una lente concentra ese reflejo sobre un pequeño sensor.</li>
+<li>El procesador interno analiza cómo cambia el patrón recibido entre lecturas consecutivas.</li>
+<li>El ratón calcula el desplazamiento en los ejes X e Y.</li>
+<li>El sistema operativo transforma ese desplazamiento en movimiento del puntero.</li>
+</ol>
+<p>La diferencia principal entre un ratón óptico infrarrojo y uno láser no está en que uno “mida mejor” por norma general, sino en <strong>cómo ilumina la superficie</strong>. El óptico infrarrojo suele iluminar una zona más amplia y funciona muy bien sobre alfombrillas y superficies mates. El láser concentra más la luz y puede detectar más detalle en superficies lisas o brillantes, pero ese exceso de detalle también puede provocar lecturas menos estables en algunos casos.</p>
+<p>Desde el punto de vista del mantenimiento, esto explica varios síntomas habituales:</p>
+<ul>
+<li>Si el cursor salta, conviene limpiar la lente y probar una alfombrilla mate.</li>
+<li>Si el ratón falla sobre cristal o una mesa brillante, no siempre está averiado: puede ser un problema de reflexión.</li>
+<li>Si un ratón láser parece moverse de forma irregular, puede estar leyendo microdetalles de la superficie que no aportan movimiento útil.</li>
+<li>Si el sensor está tapado por polvo, pelo o grasa, la luz reflejada llega peor al sensor y el seguimiento empeora.</li>
+</ul>
+<p>En un touchpad, el principio es distinto: la superficie detecta cambios eléctricos producidos por el dedo. El controlador interpreta esos cambios como posición, movimiento o gesto. Por eso un touchpad puede detectar varios dedos, pero también puede fallar si hay humedad, grasa o una configuración de sensibilidad inadecuada.</p>
+<h4 id="33-touchpad">3.3. Touchpad<a class="headerlink" href="#33-touchpad" title="Permanent link">¶</a></h4>
+<p>El touchpad detecta el movimiento de los dedos sobre una superficie, normalmente mediante tecnología capacitiva. Permite gestos como desplazamiento con dos dedos, zoom o cambio de escritorio.</p>
+<p>En mantenimiento conviene revisar:</p>
+<ul>
+<li>Si está desactivado por tecla de función.</li>
+<li>Si el controlador está instalado.</li>
+<li>Si hay suciedad o humedad en la superficie.</li>
+<li>Si un ratón externo cambia el comportamiento del touchpad.</li>
+</ul>
+<p>En portátiles modernos, el touchpad puede depender de controladores específicos del fabricante o de controladores de precisión del sistema operativo. Cuando el cursor se mueve solo, se bloquea o no reconoce gestos, no siempre hay avería física: puede haber una configuración de sensibilidad, rechazo de palma, controlador incompleto o humedad en la superficie.</p>
+<h3 id="4-escaneres">4. Escáneres<a class="headerlink" href="#4-escaneres" title="Permanent link">¶</a></h3>
+<p>El <strong>escáner</strong> convierte documentos físicos en archivos digitales. Puede capturar texto, fotografías, formularios, facturas o documentación administrativa.</p>
+<figure>
+<p><img alt="Interior de un escáner plano" src="../assets/escaner-plano-interior.jpg"/>
+</p>
+<figcaption>Interior de un escáner plano. Se aprecia el mecanismo de desplazamiento y el cabezal lector que recorre el documento. Fuente: Wikimedia Commons, autor Jstapko, licencia CC BY-SA 3.0.</figcaption>
+</figure>
+<figure>
+<p><img alt="Barra sensora CIS de un escáner plano" src="../assets/escaner-barra-cis.jpg"/>
+</p>
+<figcaption>Barra sensora CIS de un escáner plano. Este componente integra iluminación y sensores para capturar la línea del documento que se va desplazando durante el escaneo. Fuente: Wikimedia Commons, autor Michele M. F., licencia CC BY-SA 2.0.</figcaption>
+</figure>
+<h4 id="41-tipos-habituales">4.1. Tipos habituales<a class="headerlink" href="#41-tipos-habituales" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Características</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plano</strong></td>
+<td>El documento se coloca sobre un cristal.</td>
+<td>Documentos sueltos, fotos y material delicado.</td>
+</tr>
+<tr>
+<td><strong>ADF</strong></td>
+<td>Alimentador automático de documentos.</td>
+<td>Oficinas con muchas páginas.</td>
+</tr>
+<tr>
+<td><strong>Portátil</strong></td>
+<td>Tamaño reducido y alimentación por USB.</td>
+<td>Movilidad y digitalización ocasional.</td>
+</tr>
+<tr>
+<td><strong>Integrado en multifunción</strong></td>
+<td>Comparte equipo con impresora.</td>
+<td>Aulas, despachos y uso general.</td>
+</tr>
+</tbody>
+</table>
+<p>Un escáner plano desplaza un cabezal lector bajo el cristal. Ese cabezal ilumina el documento y capta la luz reflejada. En documentos sueltos funciona muy bien, pero resulta lento para lotes grandes. Un escáner con <strong>ADF</strong> permite introducir varias páginas de forma automática, aunque exige que el papel esté en buen estado y bien alineado.</p>
+<p>También existen diferencias entre sensores <strong>CCD</strong> y <strong>CIS</strong>. Los CCD suelen ofrecer buena profundidad de campo y calidad, mientras que los CIS permiten equipos más finos y de menor consumo. Para uso general de aula u oficina, lo importante es que el escáner sea fiable, tenga controladores disponibles y permita el flujo de trabajo necesario.</p>
+<p>El funcionamiento básico de un escáner plano es:</p>
+<ol>
+<li>El documento se coloca sobre el cristal.</li>
+<li>Una fuente de luz ilumina una línea del documento.</li>
+<li>El sensor capta la luz reflejada por esa línea.</li>
+<li>El motor desplaza el cabezal o el documento.</li>
+<li>El software reconstruye la imagen línea a línea.</li>
+<li>Si se usa OCR, la imagen se analiza para reconocer caracteres.</li>
+</ol>
+<h4 id="42-caracteristicas-tecnicas">4.2. Características técnicas<a class="headerlink" href="#42-caracteristicas-tecnicas" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Resolución óptica</strong>: Determina el detalle real que puede capturar el sensor.</li>
+<li><strong>Profundidad de color</strong>: Influye en la riqueza de tonos capturados.</li>
+<li><strong>Velocidad</strong>: Importante si se digitalizan muchas páginas.</li>
+<li><strong>ADF dúplex</strong>: Permite escanear ambas caras de forma automática.</li>
+<li><strong>OCR</strong>: Convierte imagen en texto editable, siempre que la calidad del documento sea suficiente.</li>
+</ul>
+<p>La resolución debe elegirse según el objetivo. Para texto administrativo suele bastar una resolución moderada; para fotografías o detalles pequeños puede ser necesario aumentarla. Escanear siempre al máximo no es buena práctica, porque genera archivos más grandes, tarda más y no siempre aporta información útil.</p>
+<p>El <strong>OCR</strong> no “entiende” el documento como una persona. Detecta formas de letras y las convierte en texto. Por eso falla más con documentos torcidos, manchas, fuentes poco claras, baja resolución o mala compresión. Antes de culpar al software, conviene revisar la calidad del escaneo.</p>
+<h4 id="43-problemas-frecuentes">4.3. Problemas frecuentes<a class="headerlink" href="#43-problemas-frecuentes" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Posible causa</th>
+<th>Solución inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rayas en la imagen</td>
+<td>Cristal sucio o sensor con polvo.</td>
+<td>Limpiar el cristal y repetir la prueba.</td>
+</tr>
+<tr>
+<td>Documento torcido</td>
+<td>Guías mal ajustadas o papel doblado.</td>
+<td>Ajustar guías y alisar el documento.</td>
+</tr>
+<tr>
+<td>OCR con errores</td>
+<td>Baja resolución, mala iluminación o texto borroso.</td>
+<td>Aumentar resolución y mejorar el original.</td>
+</tr>
+<tr>
+<td>No detecta el escáner</td>
+<td>Controlador, cable o servicio de escaneo.</td>
+<td>Probar cable, revisar drivers y reiniciar servicio.</td>
+</tr>
+</tbody>
+</table>
+<p>En escáneres de red hay que añadir otras comprobaciones: dirección IP, permisos de carpeta compartida, credenciales, firewall y compatibilidad con el protocolo de escaneo. En equipos multifunción, a veces imprime correctamente pero no escanea porque son funciones con controladores y permisos distintos.</p>
+<h3 id="5-microfonos-y-audio-de-entrada">5. Micrófonos y audio de entrada<a class="headerlink" href="#5-microfonos-y-audio-de-entrada" title="Permanent link">¶</a></h3>
+<p>El <strong>micrófono</strong> transforma ondas sonoras en una señal eléctrica. Si el micrófono es USB, suele integrar su propio conversor analógico-digital. Si usa jack analógico, depende de la tarjeta de sonido del equipo.</p>
+<figure>
+<p><img alt="Micrófono USB conectado a un equipo" src="../assets/microfono-usb.jpg"/>
+</p>
+<figcaption>Micrófono USB. Este tipo de periférico suele integrar electrónica propia para entregar audio digital directamente al sistema operativo. Fuente: Wikimedia Commons, autor Evan-Amos, dominio público.</figcaption>
+</figure>
+<h4 id="51-tipos-basicos">5.1. Tipos básicos<a class="headerlink" href="#51-tipos-basicos" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Características</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Integrado</strong></td>
+<td>Incluido en portátiles, webcams o auriculares.</td>
+<td>Videollamadas y uso básico.</td>
+</tr>
+<tr>
+<td><strong>De condensador</strong></td>
+<td>Sensible y con buena respuesta.</td>
+<td>Grabación de voz, podcast y clases en línea.</td>
+</tr>
+<tr>
+<td><strong>Dinámico</strong></td>
+<td>Robusto y menos sensible al ruido ambiente.</td>
+<td>Voz cercana y entornos menos controlados.</td>
+</tr>
+<tr>
+<td><strong>USB</strong></td>
+<td>Incluye electrónica propia y se instala como dispositivo de audio.</td>
+<td>Uso sencillo en ordenadores.</td>
+</tr>
+<tr>
+<td><strong>Jack analógico</strong></td>
+<td>Depende de la entrada de micrófono del equipo.</td>
+<td>Auriculares con micrófono y equipos básicos.</td>
+</tr>
+</tbody>
+</table>
+<p>Un micrófono analógico entrega una señal eléctrica débil que debe amplificarse y digitalizarse. Esa conversión la hace la tarjeta de sonido del equipo. En cambio, un micrófono USB integra su propia electrónica y aparece ante el sistema como un dispositivo de audio independiente. Esto suele simplificar la instalación y mejorar la estabilidad entre equipos distintos.</p>
+<p>La elección depende del uso. Para videollamadas basta un micrófono integrado o de auriculares. Para grabar explicaciones, podcast o clases, conviene un micrófono con mejor cápsula, soporte estable y control de ganancia. En un aula con ruido, a menudo es mejor acercar el micrófono a la boca que comprar un modelo más caro situado lejos.</p>
+<figure>
+<p><img alt="Diagrama en español de un micrófono dinámico" src="../assets/microfono-dinamico-es.svg"/>
+</p>
+<figcaption>Funcionamiento de un micrófono dinámico. La onda sonora mueve una membrana unida a una bobina situada en un campo magnético, generando una señal eléctrica. Fuente: Wikimedia Commons, obra derivada de Banco, licencia CC BY-SA 3.0.</figcaption>
+</figure>
+<figure>
+<p><img alt="Diagrama en español de un micrófono de condensador" src="../assets/microfono-condensador-es.svg"/>
+</p>
+<figcaption>Funcionamiento de un micrófono de condensador. La vibración modifica la distancia entre placas y produce una variación eléctrica que después se amplifica. Fuente: Wikimedia Commons, autor Kevin, licencia CC BY-SA 3.0.</figcaption>
+</figure>
+<p>El recorrido de la voz hasta la aplicación suele ser:</p>
+<ol>
+<li>La voz mueve una membrana o cápsula.</li>
+<li>El micrófono convierte ese movimiento en señal eléctrica.</li>
+<li>La señal se amplifica si es necesario.</li>
+<li>Un conversor analógico-digital la transforma en datos.</li>
+<li>El sistema operativo entrega esos datos a la aplicación.</li>
+</ol>
+<h4 id="52-ajustes-importantes">5.2. Ajustes importantes<a class="headerlink" href="#52-ajustes-importantes" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Dispositivo predeterminado</strong>: El sistema puede tener varios micrófonos disponibles.</li>
+<li><strong>Ganancia</strong>: Si es muy baja no se escucha; si es muy alta puede distorsionar.</li>
+<li><strong>Permisos</strong>: El navegador o la aplicación deben tener permiso para usar el micrófono.</li>
+<li><strong>Cancelación de ruido</strong>: Puede mejorar la voz, pero también producir artefactos.</li>
+<li><strong>Distancia</strong>: Un micrófono demasiado lejos capta más ruido ambiente.</li>
+</ul>
+<p>Un problema muy común es tener seleccionado el micrófono equivocado. Por ejemplo, el sistema puede estar usando el micrófono del portátil aunque el usuario tenga conectado un micrófono USB. También es frecuente que el navegador tenga permisos bloqueados aunque el sistema operativo detecte bien el dispositivo.</p>
+<h3 id="6-auriculares-y-altavoces">6. Auriculares y altavoces<a class="headerlink" href="#6-auriculares-y-altavoces" title="Permanent link">¶</a></h3>
+<p>Los <strong>auriculares</strong> y <strong>altavoces</strong> son periféricos de salida de audio. Permiten escuchar notificaciones, clases, vídeos, música, llamadas o sistemas de ayuda.</p>
+<figure>
+<p><img alt="Auriculares de diadema conectados a un equipo" src="../assets/auriculares.jpg"/>
+</p>
+<figcaption>Auriculares de diadema. En mantenimiento conviene distinguir entre problemas del periférico, del conector, del controlador y de la aplicación que reproduce el sonido. Fuente: Wikimedia Commons, autor Tony Webster, licencia CC BY 2.0.</figcaption>
+</figure>
+<h4 id="61-conexiones-habituales">6.1. Conexiones habituales<a class="headerlink" href="#61-conexiones-habituales" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Conexión</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Jack 3,5 mm</strong></td>
+<td>Señal analógica. Puede separar auriculares y micrófono o usar un conector combinado.</td>
+</tr>
+<tr>
+<td><strong>USB</strong></td>
+<td>El propio dispositivo actúa como tarjeta de sonido.</td>
+</tr>
+<tr>
+<td><strong>Bluetooth</strong></td>
+<td>Evita cables, pero depende de batería, emparejamiento y códecs.</td>
+</tr>
+<tr>
+<td><strong>HDMI o DisplayPort</strong></td>
+<td>Puede transportar audio hacia monitor, televisor o proyector.</td>
+</tr>
+</tbody>
+</table>
+<p>Los auriculares con jack dependen de la salida analógica del equipo. Si usan USB o Bluetooth, el sistema los trata como un dispositivo de audio independiente. Esta diferencia es importante al diagnosticar: puede que el conector esté bien, pero el sistema esté enviando el sonido al monitor por HDMI, a unos auriculares Bluetooth antiguos o a una salida USB.</p>
+<p>En altavoces externos hay que revisar también alimentación eléctrica, volumen físico, entrada seleccionada y cableado. En muchos modelos, el fallo no está en el ordenador, sino en un mando de volumen, un adaptador, una regleta apagada o un cable jack parcialmente conectado.</p>
+<figure>
+<p><img alt="Esquema en español de un altavoz dinámico" src="../assets/altavoz-dinamico-es.svg"/>
+</p>
+<figcaption>Esquema de un altavoz dinámico. La señal eléctrica atraviesa una bobina, interactúa con un imán y mueve el cono para producir ondas sonoras. Fuente: Wikimedia Commons, obra procedente de Enciclopedia Libre, licencia CC BY-SA 3.0/GFDL.</figcaption>
+</figure>
+<p>El funcionamiento de una salida de audio sigue el camino contrario al micrófono:</p>
+<ol>
+<li>La aplicación genera audio digital.</li>
+<li>El sistema lo envía al dispositivo de salida seleccionado.</li>
+<li>Un conversor digital-analógico transforma los datos en señal eléctrica.</li>
+<li>Un amplificador aumenta la potencia si hace falta.</li>
+<li>El altavoz o auricular mueve una membrana y produce sonido.</li>
+</ol>
+<h4 id="62-diagnostico-basico-de-audio">6.2. Diagnóstico básico de audio<a class="headerlink" href="#62-diagnostico-basico-de-audio" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>flowchart TD
+    A["No se escucha audio"] --&gt; B{"¿El dispositivo correcto está seleccionado?"}
+    B -- "No" --&gt; C["Seleccionar salida o entrada adecuada"]
+    B -- "Sí" --&gt; D{"¿Hay volumen y no está silenciado?"}
+    D -- "No" --&gt; E["Subir volumen y revisar mute"]
+    D -- "Sí" --&gt; F{"¿Funciona en otro puerto o equipo?"}
+    F -- "No" --&gt; G["Revisar cable, batería o periférico"]
+    F -- "Sí" --&gt; H["Revisar controlador, aplicación o configuración del sistema"]</code></pre>
+<p>En equipos compartidos, el audio puede fallar por cambios realizados por otros usuarios: volumen al mínimo, salida cambiada, auriculares emparejados, navegador silenciado o aplicación usando un dispositivo distinto al del sistema. Por eso conviene seguir un orden de comprobación y no empezar reinstalando controladores.</p>
+<h3 id="7-lectores-de-tarjetas-y-dnie">7. Lectores de tarjetas y DNIe<a class="headerlink" href="#7-lectores-de-tarjetas-y-dnie" title="Permanent link">¶</a></h3>
+<p>Los <strong>lectores de tarjetas</strong> permiten acceder a tarjetas con chip o tarjetas de memoria. En esta unidad nos interesan especialmente los lectores de <strong>smart card</strong>, usados con tarjetas de identificación, certificados digitales o control de acceso.</p>
+<figure>
+<p><img alt="Lector USB de tarjeta inteligente" src="../assets/lector-tarjeta-inteligente.png"/>
+</p>
+<figcaption>Lector de tarjeta inteligente. Dispositivos de este tipo pueden usarse para autenticación, firma digital o acceso a servicios que requieren certificado. Fuente: Wikimedia Commons, autora Lenakrapik, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+<figure>
+<p><img alt="Contactos de una tarjeta inteligente" src="../assets/contactos-tarjeta-inteligente.png"/>
+</p>
+<figcaption>Contactos de una tarjeta inteligente según la familia ISO/IEC 7816. El lector usa estos contactos para alimentar la tarjeta e intercambiar datos. Fuente: Wikimedia Commons, autor Prometeo, licencia indicada en Wikimedia Commons.</figcaption>
+</figure>
+<h4 id="71-usos-habituales">7.1. Usos habituales<a class="headerlink" href="#71-usos-habituales" title="Permanent link">¶</a></h4>
+<ul>
+<li>Lectura de DNIe o tarjetas de identificación.</li>
+<li>Firma electrónica con certificado.</li>
+<li>Acceso seguro a aplicaciones corporativas.</li>
+<li>Control de presencia o permisos.</li>
+<li>Lectura de tarjetas de memoria mediante lectores SD o microSD.</li>
+</ul>
+<p>Un lector de <strong>smart card</strong> no solo lee datos como si fuera una memoria. La tarjeta puede contener claves, certificados o información protegida. En operaciones como firma digital o autenticación, el sistema necesita comunicarse con la tarjeta de forma segura y solicitar un PIN o autorización.</p>
+<p>El <strong>DNIe</strong> es un ejemplo cercano: requiere lector compatible, documento válido, certificados operativos, PIN conocido, software adecuado y navegador compatible. Si cualquiera de esos elementos falla, el usuario puede recibir mensajes confusos aunque el lector esté correctamente conectado.</p>
+<p>El funcionamiento básico de una tarjeta inteligente con contacto es:</p>
+<ol>
+<li>El usuario introduce la tarjeta en el lector.</li>
+<li>El lector alimenta el chip a través de los contactos.</li>
+<li>El sistema operativo detecta el lector y la tarjeta.</li>
+<li>El software solicita datos, certificado o autenticación.</li>
+<li>La tarjeta responde sin exponer directamente claves privadas sensibles.</li>
+</ol>
+<h4 id="72-elementos-que-deben-funcionar">7.2. Elementos que deben funcionar<a class="headerlink" href="#72-elementos-que-deben-funcionar" title="Permanent link">¶</a></h4>
+<p>Para que un lector de tarjeta inteligente funcione correctamente suelen intervenir:</p>
+<ol>
+<li>El lector físico.</li>
+<li>El controlador del lector.</li>
+<li>La tarjeta o documento.</li>
+<li>El certificado o middleware necesario.</li>
+<li>El navegador o aplicación que solicita la autenticación.</li>
+</ol>
+<p>Si falla uno de esos elementos, el usuario puede interpretar que “el lector no funciona”, aunque el problema esté en el certificado, el navegador o el PIN.</p>
+<p>En mantenimiento conviene separar el problema en capas. Primero se comprueba si el lector aparece en el sistema. Después, si detecta la tarjeta. Luego, si el software reconoce el certificado. Por último, se prueba la aplicación concreta que necesita usarlo.</p>
+<h3 id="8-lectores-de-codigos-rfid-y-nfc">8. Lectores de códigos, RFID y NFC<a class="headerlink" href="#8-lectores-de-codigos-rfid-y-nfc" title="Permanent link">¶</a></h3>
+<p>Los <strong>lectores de códigos</strong> convierten información visual o inalámbrica en datos que el sistema puede procesar. Son muy frecuentes en comercio, almacenes, bibliotecas, logística y control de inventario.</p>
+<figure>
+<p><img alt="Lector de código de barras CCD" src="../assets/lector-codigo-barras.jpg"/>
+</p>
+<figcaption>Lector de código de barras CCD. Muchos lectores se comportan como un teclado: leen el código y escriben los caracteres en la aplicación activa. Fuente: Wikimedia Commons, autor Network.nt, dominio público.</figcaption>
+</figure>
+<figure>
+<p><img alt="Estructura de un código de barras Code 128" src="../assets/estructura-codigo-barras.svg"/>
+</p>
+<figcaption>Estructura de un código de barras Code 128: zona silenciosa, inicio, datos, control y parada. Fuente: Wikimedia Commons, autor Gringer, dominio público.</figcaption>
+</figure>
+<h4 id="81-codigo-de-barras-y-qr">8.1. Código de barras y QR<a class="headerlink" href="#81-codigo-de-barras-y-qr" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Características</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código de barras 1D</strong></td>
+<td>Líneas verticales que representan números o texto.</td>
+<td>Productos, almacén e inventario.</td>
+</tr>
+<tr>
+<td><strong>Código QR</strong></td>
+<td>Código bidimensional con más capacidad de datos.</td>
+<td>Enlaces, entradas, pagos, identificación rápida.</td>
+</tr>
+<tr>
+<td><strong>Lector tipo teclado</strong></td>
+<td>Envía el código como si se hubiera escrito.</td>
+<td>TPV y aplicaciones sencillas.</td>
+</tr>
+<tr>
+<td><strong>Lector con software propio</strong></td>
+<td>Requiere aplicación o controlador específico.</td>
+<td>Sistemas industriales o corporativos.</td>
+</tr>
+</tbody>
+</table>
+<p>Muchos lectores de códigos funcionan como dispositivos HID, igual que un teclado. Al leer un código, “escriben” el valor en el campo activo y a veces añaden una tecla final, como Intro o Tabulador. Esto facilita su uso en TPV y formularios, pero también puede causar confusión si el cursor no está situado en el campo correcto.</p>
+<p>Los códigos <strong>1D</strong> son adecuados para identificadores sencillos, como productos o referencias. Los códigos <strong>QR</strong> almacenan más información y toleran mejor ciertos daños gracias a corrección de errores. Aun así, si están impresos con poco contraste, deformados o demasiado pequeños, la lectura puede fallar.</p>
+<p>Un lector de código de barras funciona de forma general así:</p>
+<ol>
+<li>Ilumina el código con luz LED o láser.</li>
+<li>Las barras oscuras absorben más luz y los espacios claros reflejan más.</li>
+<li>Un sensor convierte esas variaciones de luz en una señal.</li>
+<li>La electrónica interpreta anchos, patrones y dígitos de control.</li>
+<li>El resultado se envía al ordenador como texto o como dato de una aplicación.</li>
+</ol>
+<h4 id="82-rfid-y-nfc">8.2. RFID y NFC<a class="headerlink" href="#82-rfid-y-nfc" title="Permanent link">¶</a></h4>
+<p>RFID y NFC permiten leer información sin contacto directo. NFC es una tecnología de muy corto alcance, usada en tarjetas, móviles y dispositivos de identificación. Según el NFC Forum, NFC puede trabajar en modos como emulación de tarjeta, lectura/escritura o comunicación entre dispositivos.</p>
+<p>Ejemplos de uso:</p>
+<ul>
+<li>Tarjetas de acceso.</li>
+<li>Etiquetas de inventario.</li>
+<li>Pagos y transporte.</li>
+<li>Identificación de equipamiento.</li>
+<li>Emparejamiento rápido de dispositivos.</li>
+</ul>
+<p>La diferencia práctica más importante es la distancia y el contexto de uso. RFID puede utilizarse en etiquetas de inventario o control de acceso, mientras que NFC está pensado para interacciones muy cercanas, tipo “tocar” o “acercar”. En ambos casos no basta con tener el lector: también se necesita que la etiqueta, tarjeta o dispositivo use una tecnología compatible.</p>
+<figure>
+<p><img alt="Antena RFID" src="../assets/antena-rfid.jpg"/>
+</p>
+<figcaption>Antena RFID. En sistemas RFID/NFC, el lector crea un campo de radiofrecuencia y la etiqueta o tarjeta responde mediante su antena. Fuente: Wikimedia Commons, autora Lvova, dominio público.</figcaption>
+</figure>
+<p>En RFID y NFC, el lector no necesita ver físicamente un código. Genera un campo de radiofrecuencia; la etiqueta recibe energía o señal, responde con sus datos y el sistema interpreta esa respuesta. En NFC, el alcance es muy corto y la experiencia está pensada para acercar voluntariamente tarjeta, móvil o etiqueta.</p>
+<h3 id="9-biometria">9. Biometría<a class="headerlink" href="#9-biometria" title="Permanent link">¶</a></h3>
+<p>La <strong>biometría</strong> usa rasgos físicos o de comportamiento para identificar o verificar a una persona. En informática de usuario, lo más habitual es la huella dactilar o el reconocimiento facial.</p>
+<figure>
+<p><img alt="Icono de lector de huella dactilar" src="../assets/lector-huella.svg"/>
+</p>
+<figcaption>Representación de un lector de huella dactilar. La biometría no guarda simplemente una foto de la huella: el sistema suele trabajar con características extraídas y plantillas biométricas. Fuente: Wikimedia Commons, autor j4p4n / Openclipart, licencia CC0.</figcaption>
+</figure>
+<figure>
+<p><img alt="Sensor óptico de huella dactilar" src="../assets/sensor-huella-optico.png"/>
+</p>
+<figcaption>Sensor óptico de huella dactilar. El lector captura una imagen o patrón de la huella y el sistema extrae características para compararlas con una plantilla registrada. Fuente: Wikimedia Commons, autor Synaptics, licencia CC BY-SA 4.0.</figcaption>
+</figure>
+<h4 id="91-identificacion-y-verificacion">9.1. Identificación y verificación<a class="headerlink" href="#91-identificacion-y-verificacion" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identificación</strong></td>
+<td>El sistema intenta responder quién es una persona dentro de un conjunto de usuarios.</td>
+</tr>
+<tr>
+<td><strong>Verificación</strong></td>
+<td>El sistema comprueba si una persona es quien dice ser.</td>
+</tr>
+<tr>
+<td><strong>Plantilla biométrica</strong></td>
+<td>Representación digital de características biométricas, usada para comparar.</td>
+</tr>
+<tr>
+<td><strong>Falso rechazo</strong></td>
+<td>El sistema rechaza a una persona autorizada.</td>
+</tr>
+<tr>
+<td><strong>Falsa aceptación</strong></td>
+<td>El sistema acepta a una persona no autorizada.</td>
+</tr>
+</tbody>
+</table>
+<p>En biometría hay una diferencia importante entre <strong>identificar</strong> y <strong>verificar</strong>. Identificar consiste en buscar a una persona dentro de una base de datos. Verificar consiste en comprobar si una persona coincide con una identidad concreta. Para desbloquear un portátil, normalmente se verifica: el sistema comprueba si la huella coincide con la cuenta del usuario.</p>
+<p>Los lectores de huella pueden ser ópticos, capacitivos o ultrasónicos. En todos los casos, el sistema no debería guardar simplemente una fotografía de la huella, sino una plantilla biométrica derivada de características relevantes. Aun así, la biometría requiere especial cuidado porque una huella no se puede “cambiar” con la misma facilidad que una contraseña.</p>
+<p>El funcionamiento general de un lector biométrico es:</p>
+<ol>
+<li>El sensor captura una muestra, como una huella o rasgo facial.</li>
+<li>El sistema mejora la muestra y elimina ruido.</li>
+<li>Se extraen características relevantes.</li>
+<li>Se genera o compara una plantilla biométrica.</li>
+<li>El sistema decide si la coincidencia supera el umbral configurado.</li>
+</ol>
+<p>Ese umbral es importante: si es demasiado estricto, habrá muchos rechazos de usuarios legítimos; si es demasiado permisivo, aumenta el riesgo de aceptar a una persona no autorizada.</p>
+<h4 id="92-buenas-practicas">9.2. Buenas prácticas<a class="headerlink" href="#92-buenas-practicas" title="Permanent link">¶</a></h4>
+<ul>
+<li>Usar biometría como parte de un sistema de autenticación bien configurado.</li>
+<li>Mantener siempre un método alternativo de acceso, como PIN o contraseña.</li>
+<li>Evitar registrar biometría en equipos compartidos sin política clara.</li>
+<li>Proteger el equipo con cifrado y bloqueo de sesión.</li>
+<li>Actualizar sistema operativo y firmware para corregir fallos de seguridad.</li>
+</ul>
+<p>También hay que considerar el entorno. Manos mojadas, suciedad, heridas, guantes, iluminación deficiente o cámaras de baja calidad pueden afectar al reconocimiento. Por eso los sistemas bien diseñados combinan comodidad con alternativas seguras de acceso.</p>
+<h3 id="10-instalacion-controladores-y-compatibilidad">10. Instalación, controladores y compatibilidad<a class="headerlink" href="#10-instalacion-controladores-y-compatibilidad" title="Permanent link">¶</a></h3>
+<p>Muchos periféricos actuales se detectan automáticamente, sobre todo si siguen clases estándar como USB HID o audio USB. Aun así, en mantenimiento no conviene confiar solo en “conectar y listo”.</p>
+<p>Comprobaciones recomendadas:</p>
+<ul>
+<li>Revisar si el periférico aparece en el administrador de dispositivos o herramienta equivalente.</li>
+<li>Probar otro puerto USB o cable.</li>
+<li>Comprobar si necesita controlador del fabricante.</li>
+<li>Verificar permisos de cámara, micrófono, Bluetooth o seguridad.</li>
+<li>Revisar batería o emparejamiento en dispositivos inalámbricos.</li>
+<li>Probar el periférico en otro equipo para aislar el fallo.</li>
+</ul>
+<p>La compatibilidad depende de varias capas: conector físico, protocolo, controlador, permisos del sistema y aplicación. Un dispositivo puede encenderse y aun así no funcionar si el controlador no está instalado, si la aplicación no tiene permiso o si el sistema lo detecta como un perfil incorrecto.</p>
+<p>En dispositivos Bluetooth hay que distinguir entre estar emparejado y estar conectado. Un teclado o auricular puede aparecer recordado por el sistema, pero no estar conectado en ese momento. También puede existir conflicto si se emparejó previamente con otro equipo cercano.</p>
+<pre class="mermaid"><code>flowchart TD
+    A["Periférico no funciona"] --&gt; B{"¿Recibe alimentación o batería?"}
+    B -- "No" --&gt; C["Revisar cable, pila, batería o puerto"]
+    B -- "Sí" --&gt; D{"¿El sistema lo detecta?"}
+    D -- "No" --&gt; E["Probar otro puerto, cable o controlador"]
+    D -- "Sí" --&gt; F{"¿La aplicación lo tiene seleccionado?"}
+    F -- "No" --&gt; G["Seleccionar dispositivo correcto"]
+    F -- "Sí" --&gt; H["Revisar configuración, permisos y prueba en otro equipo"]</code></pre>
+<h3 id="11-criterios-para-elegir-perifericos">11. Criterios para elegir periféricos<a class="headerlink" href="#11-criterios-para-elegir-perifericos" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Necesidad</th>
+<th>Periférico recomendado</th>
+<th>Criterio principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escritura frecuente</td>
+<td>Teclado cómodo y duradero</td>
+<td>Distribución, tamaño y ergonomía.</td>
+</tr>
+<tr>
+<td>Trabajo de precisión</td>
+<td>Ratón adecuado o touchpad de calidad</td>
+<td>Sensor, agarre y superficie de uso.</td>
+</tr>
+<tr>
+<td>Digitalizar documentos</td>
+<td>Escáner plano o ADF</td>
+<td>Resolución, velocidad y OCR.</td>
+</tr>
+<tr>
+<td>Videollamadas o grabación de voz</td>
+<td>Micrófono USB o auriculares con micrófono</td>
+<td>Claridad, ruido y facilidad de configuración.</td>
+</tr>
+<tr>
+<td>Aula o puesto compartido</td>
+<td>Auriculares resistentes</td>
+<td>Higiene, cableado y reposición sencilla.</td>
+</tr>
+<tr>
+<td>Firma digital</td>
+<td>Lector de smart card compatible</td>
+<td>Controladores, sistema operativo y navegador.</td>
+</tr>
+<tr>
+<td>Inventario o TPV</td>
+<td>Lector de códigos</td>
+<td>Tipo de código, alcance y modo de entrada.</td>
+</tr>
+<tr>
+<td>Control de acceso</td>
+<td>Biometría o tarjeta</td>
+<td>Seguridad, privacidad y método alternativo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-mantenimiento-y-limpieza">12. Mantenimiento y limpieza<a class="headerlink" href="#12-mantenimiento-y-limpieza" title="Permanent link">¶</a></h3>
+<p>El mantenimiento de periféricos suele ser sencillo, pero evita muchas incidencias:</p>
+<ul>
+<li>Limpiar teclado y ratón con el equipo apagado.</li>
+<li>Evitar líquidos cerca de teclados y dispositivos de audio.</li>
+<li>Limpiar el cristal del escáner con producto adecuado y paño suave.</li>
+<li>Guardar auriculares y micrófonos sin tensión en el cable.</li>
+<li>Revisar conectores USB y jack sin forzarlos.</li>
+<li>Sustituir pilas o recargar baterías antes de diagnosticar fallos complejos.</li>
+<li>Mantener actualizados controladores y software de seguridad.</li>
+<li>Desinfectar periféricos compartidos en aulas o laboratorios.</li>
+</ul>
+<p>En un centro educativo es útil definir un pequeño protocolo: etiquetar periféricos, evitar mezclas de receptores inalámbricos, guardar repuestos básicos, revisar periódicamente cables dañados y retirar dispositivos con fallos intermitentes. Los fallos intermitentes son especialmente problemáticos porque consumen mucho tiempo de diagnóstico.</p>
+<h3 id="resumen-final">Resumen final<a class="headerlink" href="#resumen-final" title="Permanent link">¶</a></h3>
+<ul>
+<li>Los periféricos de entrada permiten al usuario introducir órdenes, texto, movimiento, sonido o documentos.</li>
+<li>Teclado, ratón y touchpad son dispositivos básicos, pero su ergonomía y configuración influyen mucho en la comodidad.</li>
+<li>Escáneres y OCR convierten documentos físicos en información digital, con calidad dependiente del sensor y del original.</li>
+<li>El audio requiere revisar dispositivo seleccionado, volumen, permisos, controlador y tipo de conexión.</li>
+<li>Lectores de tarjetas, códigos, RFID, NFC y biometría conectan el equipo con sistemas de identificación y seguridad.</li>
+</ul>
+<h3 id="fuentes-consultadas">Fuentes consultadas<a class="headerlink" href="#fuentes-consultadas" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://www.usb.org/hid">USB-IF - Human Interface Devices Specifications and Tools</a></li>
+<li><a href="https://twain.org/">TWAIN Working Group</a></li>
+<li><a href="https://www.bluetooth.com/specifications/specs/">Bluetooth SIG - Specifications and documents</a></li>
+<li><a href="https://nfc-forum.org/learn/nfc-technology/">NFC Forum - NFC Technology</a></li>
+<li><a href="https://www.iso.org/standard/50866.html">ISO - ISO/IEC 19794-4:2011 Finger image data</a></li>
+<li><a href="https://www.w3.org/TR/webauthn-2/">W3C - Web Authentication Level 2</a></li>
+</ul>
+<h3 id="fuentes-de-imagenes">Fuentes de imágenes<a class="headerlink" href="#fuentes-de-imagenes" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://commons.wikimedia.org/wiki/File:Computer_keyboard_ES_layout.svg">Computer keyboard ES layout</a>. Autoría: Oona Räisänen (Mysid), obra derivada de PePeEfe. Licencia: CC0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Rubber_dome_over_membrane,_exploded.svg">Rubber dome over membrane, exploded</a>. Autor: Daniel Beardsmore. Licencia: dominio público.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Cherry_MX_Brown_switch_(disassembled).jpg">Cherry MX Brown switch disassembled</a>. Autor: Multicherry. Licencia: CC BY-SA 4.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Optical_mouse_sensor.jpg">Optical mouse sensor</a>. Autor: Harikrishnanskt. Licencia: CC BY-SA 4.0.</li>
+<li><a href="https://www.profesionalreview.com/2019/12/01/como-funciona-un-raton-optico/">Cómo funciona un ratón óptico</a>. Autora: Ana Alejandra Romero. Fuente de la imagen comparativa óptico infrarrojo frente a óptico láser: Profesional Review.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Inside_a_flatbed_scanner.jpg">Inside a flatbed scanner</a>. Autor: Jstapko. Licencia: CC BY-SA 3.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Flatbed_scanner_CIS_sensor_bar.jpg">Flatbed scanner CIS sensor bar</a>. Autor: Michele M. F. Licencia: CC BY-SA 2.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:USB-Microphone.jpg">USB-Microphone</a>. Autor: Evan-Amos. Licencia: dominio público.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Tauchspulenmikrofon-es.svg">Tauchspulenmikrofon-es</a>. Obra derivada de Banco. Licencia: CC BY-SA 3.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Kondensatormikrofon-es.svg">Kondensatormikrofon-es</a>. Autor: Kevin. Licencia: CC BY-SA 3.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Audio-Technica_Headphones_(5360847859).jpg">Audio-Technica Headphones</a>. Autor: Tony Webster. Licencia: CC BY 2.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Loudspeaker_side_es.svg">Loudspeaker side es</a>. Fuente: Enciclopedia Libre. Licencia: CC BY-SA 3.0/GFDL.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Smart_card_reader_JCR721_white.png">Smart card reader JCR721 white</a>. Autora: Lenakrapik. Licencia: CC BY-SA 4.0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Contactos-Chip-Tarjeta-Inteligente.PNG">Contactos-Chip-Tarjeta-Inteligente</a>. Autor: Prometeo. Licencia indicada en Wikimedia Commons.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:CCD_Barcode_Scanner.jpg">CCD Barcode Scanner</a>. Autor: Network.nt. Licencia: dominio público.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Barcode_diagram.svg">Barcode diagram</a>. Autor: Gringer. Licencia: dominio público.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Rfid-antenna.JPG">Rfid-antenna</a>. Autora: Lvova. Licencia: dominio público.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Fingerprint_scanner.svg">Fingerprint scanner</a>. Autor: j4p4n / Openclipart. Licencia: CC0.</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Synaptics_Clear_ID_optical_fingerprint_sensor.png">Synaptics Clear ID optical fingerprint sensor</a>. Autor: Synaptics. Licencia: CC BY-SA 4.0.</li>
+</ul>
+<p><strong>Fecha de actualización:</strong> 30/04/2026</p>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="Me ha sido de utilidad." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="La página podría mejorar." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+</body>
+</html>

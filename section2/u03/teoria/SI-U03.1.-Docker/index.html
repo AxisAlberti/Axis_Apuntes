@@ -1,0 +1,3507 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Introduccion a Docker y al concepto de contenedores" name="description"/>
+<meta content="Jose Manuel Gonzalez Castillo" name="author"/>
+<link href="https://axisalberti.github.io/Axis_Apuntes/section2/u03/teoria/SI-U03.1.-Docker/" rel="canonical"/>
+<link href="../../" rel="prev"/>
+<link href="../SI-U03.2.-Docker-Compose/" rel="next"/>
+<link href="../../../../assets/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>UD 03 - 3.1 Docker - Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<style>:root{.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#31-docker">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              UD 03 - 3.1 Docker
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<a aria-label="Compartir" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Compartir">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Pestañas" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Principal
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../section1/">
+          
+  
+  
+    
+  
+  Montaje y Mantenimiento
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+    
+  
+  Sistemas Informaticos
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../blog/">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tags/">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)">
+<img alt="logo" src="../../../../assets/logo.png"/>
+</a>
+    Apuntes Montaje-Sistemas Informaticos I.E.S. Rafael Alberti (Cádiz)
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/AxisAlberti/Axis_Apuntes" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Principal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/">
+<span class="md-ellipsis">
+    
+  
+    Montaje y Mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Montaje y Mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/recursos/manual-occt-fuente/">
+<span class="md-ellipsis">
+    
+  
+    Recursos - Manual OCCT (PSU)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u00/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 00 - Sistemas de numeracion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u00/teoria/MM-U00.1.-Sistemas-de-numeracion/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U00.1. Sistemas de numeracion
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u00/slides/U00-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Introduccion a los sistemas informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u01/teoria/MM-U01.1.-Introduccion-a-los-sistemas-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U01.1. Introduccion a los sistemas informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u01/slides/U01-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Componentes internos del PC
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u02/teoria/MM-U02.1.-Componentes-internos-del-PC/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U02.1. Componentes internos del PC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u02/slides/U02-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u03/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Chipset
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Chipset
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u03/teoria/MM-U03.1.-Chipset/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U03.1. Chipset
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u03/slides/U03-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u04/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 04 - Conexiones externas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 04 - Conexiones externas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u04/teoria/MM-U04.1.-Conexiones-externas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U04.1. Conexiones externas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u04/slides/U04-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u05/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 05 - Memoria RAM
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 05 - Memoria RAM
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u05/teoria/MM-U05.1.-Memoria-RAM/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U05.1. Memoria RAM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u05/slides/U05-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u06/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 06 - CMOS y UEFI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u06/teoria/MM-U06.1.-CMOS-y-UEFI/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U06.1. CMOS y UEFI
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u06/slides/U06-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u07/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 07 - Almacenamiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 07 - Almacenamiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u07/teoria/MM-U07.1.-Almacenamiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U07.1. Almacenamiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u07/slides/U07-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_12" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u08/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 08 - Microprocesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_12_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 08 - Microprocesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u08/teoria/MM-U08.1.-Microprocesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U08.1. Microprocesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u08/slides/U08-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u09/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_13_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 09 - Tarjetas gráficas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u09/teoria/MM-U09.1.-Tarjetas-graficas/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U09.1. Tarjetas gráficas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u09/slides/U09-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_14" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u10/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_14_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 10 - Mantenimiento de Equipos Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u10/teoria/MM-U10.1.-Mantenimiento-de-equipos-informaticos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U10.1. Mantenimiento de equipos informaticos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u10/slides/U10-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u11/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_15_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_15">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 11 - Utilidades para el mantenimiento
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u11/teoria/MM-U11.1.-Utilidades-para-el-mantenimiento/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U11.1. Utilidades para el mantenimiento
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u11/slides/U11-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_16" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u12/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 12 - Impresoras
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_16_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_16">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 12 - Impresoras
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u12/teoria/MM-U12.1.-Impresoras/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U12.1. Impresoras
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u12/slides/U12-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_17" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u13/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_17" id="__nav_2_17_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_17_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_17">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 13 - Pantallas-Monitores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u13/teoria/MM-U13.1.-Pantallas-Monitores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U13.1. Pantallas y monitores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u13/slides/U13-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_18" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/u14/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_18_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_18">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 14 - Perifericos de entrada, audio e identificacion
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u14/teoria/MM-U14.1.-Perifericos-de-entrada-audio-e-identificacion/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    MM U14.1. Perifericos de entrada, audio e identificacion
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/u14/slides/U14-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_19" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A1/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_19" id="__nav_2_19_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_19_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_19">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 1 - Arquitecturas de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A1/teoria/A1-1-Arquitecturas-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A1.1 Arquitecturas de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A1/slides/A1-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_20" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A2/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 2 - Procesos e hilos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_20">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 2 - Procesos e hilos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A2/teoria/A2-1-Procesos-e-hilos/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A2.1 Procesos e hilos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A2/slides/A2-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_21" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A3/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_21_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_21">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 3 - Prevencion de riesgos laborales
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A3/teoria/A3-1-Prevencion-de-riesgos-laborales/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A3.1 Prevencion de riesgos laborales
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A3/slides/A3-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_22" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A4/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_22" id="__nav_2_22_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_22_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_22">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 4 - Guia para elegir procesador
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A4/teoria/A4-1-Guia-para-elegir-procesador/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A4.1 Guia para elegir procesador
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A4/slides/A4-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_23" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A5/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_23_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_23">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 5 - Nomenclatura de procesadores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A5/teoria/A5-1-Nomenclatura-de-procesadores/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A5.1 Nomenclatura de procesadores
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A5/slides/A5-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_24" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A6/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_24" id="__nav_2_24_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_24_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_24">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 6 - BIOS, UEFI y proceso de encendido
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A6/teoria/A6-1-BIOS-UEFI-y-proceso-de-encendido/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A6.1 BIOS, UEFI y proceso de encendido
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A6/slides/A6-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_25" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../section1/A7/">
+<span class="md-ellipsis">
+    
+  
+    Anexo 7 - Intel vs AMD
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_25" id="__nav_2_25_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_25_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_25">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexo 7 - Intel vs AMD
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A7/teoria/A7-1-Intel-vs-AMD/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    A7.1 Intel vs AMD
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../section1/A7/slides/A7-slides.html">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Sistemas Informaticos
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Informaticos
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Slides (Modulo)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u01/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 01 - Redes
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 01 - Redes
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u01/teoria/SI-U01.1.-Redes/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U01.1. Redes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../u02/">
+<span class="md-ellipsis">
+    
+  
+    Unidad 02 - Terminal
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 02 - Terminal
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../u02/teoria/SI-U02.1.-Terminal/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U02.1. Terminal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Unidad 03 - Docker
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 03 - Docker
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.1. Docker
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.1. Docker
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-docker">
+<span class="md-ellipsis">
+      
+        3.1. Docker
+      
+    </span>
+</a>
+<nav aria-label="3.1. Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+<span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-que-es-docker">
+<span class="md-ellipsis">
+      
+        1. Que es Docker
+      
+    </span>
+</a>
+<nav aria-label="1. Que es Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-una-comparacion-sencilla">
+<span class="md-ellipsis">
+      
+        1.1. Una comparacion sencilla
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-por-que-se-usa-tanto">
+<span class="md-ellipsis">
+      
+        1.2. Por que se usa tanto
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-que-es-un-contenedor">
+<span class="md-ellipsis">
+      
+        2. Que es un contenedor
+      
+    </span>
+</a>
+<nav aria-label="2. Que es un contenedor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-idea-fundamental">
+<span class="md-ellipsis">
+      
+        2.1. Idea fundamental
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-caracteristicas-de-un-contenedor">
+<span class="md-ellipsis">
+      
+        2.2. Caracteristicas de un contenedor
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-que-es-una-imagen">
+<span class="md-ellipsis">
+      
+        3. Que es una imagen
+      
+    </span>
+</a>
+<nav aria-label="3. Que es una imagen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-imagen-y-contenedor-no-son-lo-mismo">
+<span class="md-ellipsis">
+      
+        3.1. Imagen y contenedor no son lo mismo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-ejemplo-sencillo">
+<span class="md-ellipsis">
+      
+        3.2. Ejemplo sencillo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-docker-imagen-contenedor-y-registro">
+<span class="md-ellipsis">
+      
+        4. Docker, imagen, contenedor y registro
+      
+    </span>
+</a>
+<nav aria-label="4. Docker, imagen, contenedor y registro" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-que-es-un-registro">
+<span class="md-ellipsis">
+      
+        4.1. Que es un registro
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-flujo-normal-de-trabajo">
+<span class="md-ellipsis">
+      
+        4.2. Flujo normal de trabajo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-docker-y-maquinas-virtuales">
+<span class="md-ellipsis">
+      
+        5. Docker y maquinas virtuales
+      
+    </span>
+</a>
+<nav aria-label="5. Docker y maquinas virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-maquina-virtual">
+<span class="md-ellipsis">
+      
+        5.1. Maquina virtual
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-contenedor">
+<span class="md-ellipsis">
+      
+        5.2. Contenedor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#53-comparacion-clara">
+<span class="md-ellipsis">
+      
+        5.3. Comparacion clara
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-arquitectura-basica-de-docker">
+<span class="md-ellipsis">
+      
+        6. Arquitectura basica de Docker
+      
+    </span>
+</a>
+<nav aria-label="6. Arquitectura basica de Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-docker-engine">
+<span class="md-ellipsis">
+      
+        6.1. Docker Engine
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-docker-cli">
+<span class="md-ellipsis">
+      
+        6.2. Docker CLI
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#63-docker-daemon">
+<span class="md-ellipsis">
+      
+        6.3. Docker daemon
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#64-docker-desktop">
+<span class="md-ellipsis">
+      
+        6.4. Docker Desktop
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#65-linux-y-windows-en-docker">
+<span class="md-ellipsis">
+      
+        6.5. Linux y Windows en Docker
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-instalacion-de-docker-en-linux-y-windows">
+<span class="md-ellipsis">
+      
+        7. Instalacion de Docker en Linux y Windows
+      
+    </span>
+</a>
+<nav aria-label="7. Instalacion de Docker en Linux y Windows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-instalacion-en-linux">
+<span class="md-ellipsis">
+      
+        7.1. Instalacion en Linux
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-instalacion-en-windows">
+<span class="md-ellipsis">
+      
+        7.2. Instalacion en Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#73-comprobacion-inicial">
+<span class="md-ellipsis">
+      
+        7.3. Comprobacion inicial
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-primer-contacto-hello-world">
+<span class="md-ellipsis">
+      
+        8. Primer contacto: hello-world
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-comandos-basicos-para-empezar">
+<span class="md-ellipsis">
+      
+        9. Comandos basicos para empezar
+      
+    </span>
+</a>
+<nav aria-label="9. Comandos basicos para empezar" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-primer-ejemplo-real">
+<span class="md-ellipsis">
+      
+        9.1. Primer ejemplo real
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#92-ver-contenedores-e-imagenes">
+<span class="md-ellipsis">
+      
+        9.2. Ver contenedores e imagenes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#93-contenedores-interactivos">
+<span class="md-ellipsis">
+      
+        9.3. Contenedores interactivos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#94-contenedores-en-segundo-plano">
+<span class="md-ellipsis">
+      
+        9.4. Contenedores en segundo plano
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#95-variables-de-entorno">
+<span class="md-ellipsis">
+      
+        9.5. Variables de entorno
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#96-ciclo-de-vida-de-un-contenedor">
+<span class="md-ellipsis">
+      
+        9.6. Ciclo de vida de un contenedor
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-dockerfile">
+<span class="md-ellipsis">
+      
+        10. Dockerfile
+      
+    </span>
+</a>
+<nav aria-label="10. Dockerfile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#101-que-es-un-dockerfile">
+<span class="md-ellipsis">
+      
+        10.1. Que es un Dockerfile
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#102-ejemplo-sencillo">
+<span class="md-ellipsis">
+      
+        10.2. Ejemplo sencillo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#103-idea-importante">
+<span class="md-ellipsis">
+      
+        10.3. Idea importante
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-volumenes-y-persistencia">
+<span class="md-ellipsis">
+      
+        11. Volumenes y persistencia
+      
+    </span>
+</a>
+<nav aria-label="11. Volumenes y persistencia" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#111-que-es-un-volumen">
+<span class="md-ellipsis">
+      
+        11.1. Que es un volumen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#112-ejemplo-basico">
+<span class="md-ellipsis">
+      
+        11.2. Ejemplo basico
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#113-linux-y-windows-con-volumenes">
+<span class="md-ellipsis">
+      
+        11.3. Linux y Windows con volumenes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-redes-en-docker">
+<span class="md-ellipsis">
+      
+        12. Redes en Docker
+      
+    </span>
+</a>
+<nav aria-label="12. Redes en Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#121-idea-basica">
+<span class="md-ellipsis">
+      
+        12.1. Idea basica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#122-publicacion-de-puertos">
+<span class="md-ellipsis">
+      
+        12.2. Publicacion de puertos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#123-redes-entre-contenedores">
+<span class="md-ellipsis">
+      
+        12.3. Redes entre contenedores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#124-linux-y-windows-en-red">
+<span class="md-ellipsis">
+      
+        12.4. Linux y Windows en red
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-introduccion-a-docker-compose">
+<span class="md-ellipsis">
+      
+        13. Introduccion a Docker Compose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-ideas-clave-para-no-confundirse">
+<span class="md-ellipsis">
+      
+        14. Ideas clave para no confundirse
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-conclusion">
+<span class="md-ellipsis">
+      
+        15. Conclusion
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-practicas-recomendadas">
+<span class="md-ellipsis">
+      
+        16. Practicas recomendadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SI-U03.2.-Docker-Compose/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg>
+<span class="md-ellipsis">
+    
+  
+    SI U03.2. Docker Compose
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../slides/no-disponible/">
+<span class="md-ellipsis">
+    
+  
+    Presentacion
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../blog/">
+<span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tags/">
+<span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-docker">
+<span class="md-ellipsis">
+      
+        3.1. Docker
+      
+    </span>
+</a>
+<nav aria-label="3.1. Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+<span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-que-es-docker">
+<span class="md-ellipsis">
+      
+        1. Que es Docker
+      
+    </span>
+</a>
+<nav aria-label="1. Que es Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-una-comparacion-sencilla">
+<span class="md-ellipsis">
+      
+        1.1. Una comparacion sencilla
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-por-que-se-usa-tanto">
+<span class="md-ellipsis">
+      
+        1.2. Por que se usa tanto
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-que-es-un-contenedor">
+<span class="md-ellipsis">
+      
+        2. Que es un contenedor
+      
+    </span>
+</a>
+<nav aria-label="2. Que es un contenedor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-idea-fundamental">
+<span class="md-ellipsis">
+      
+        2.1. Idea fundamental
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-caracteristicas-de-un-contenedor">
+<span class="md-ellipsis">
+      
+        2.2. Caracteristicas de un contenedor
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-que-es-una-imagen">
+<span class="md-ellipsis">
+      
+        3. Que es una imagen
+      
+    </span>
+</a>
+<nav aria-label="3. Que es una imagen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-imagen-y-contenedor-no-son-lo-mismo">
+<span class="md-ellipsis">
+      
+        3.1. Imagen y contenedor no son lo mismo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-ejemplo-sencillo">
+<span class="md-ellipsis">
+      
+        3.2. Ejemplo sencillo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-docker-imagen-contenedor-y-registro">
+<span class="md-ellipsis">
+      
+        4. Docker, imagen, contenedor y registro
+      
+    </span>
+</a>
+<nav aria-label="4. Docker, imagen, contenedor y registro" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-que-es-un-registro">
+<span class="md-ellipsis">
+      
+        4.1. Que es un registro
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-flujo-normal-de-trabajo">
+<span class="md-ellipsis">
+      
+        4.2. Flujo normal de trabajo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-docker-y-maquinas-virtuales">
+<span class="md-ellipsis">
+      
+        5. Docker y maquinas virtuales
+      
+    </span>
+</a>
+<nav aria-label="5. Docker y maquinas virtuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-maquina-virtual">
+<span class="md-ellipsis">
+      
+        5.1. Maquina virtual
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-contenedor">
+<span class="md-ellipsis">
+      
+        5.2. Contenedor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#53-comparacion-clara">
+<span class="md-ellipsis">
+      
+        5.3. Comparacion clara
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-arquitectura-basica-de-docker">
+<span class="md-ellipsis">
+      
+        6. Arquitectura basica de Docker
+      
+    </span>
+</a>
+<nav aria-label="6. Arquitectura basica de Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61-docker-engine">
+<span class="md-ellipsis">
+      
+        6.1. Docker Engine
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62-docker-cli">
+<span class="md-ellipsis">
+      
+        6.2. Docker CLI
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#63-docker-daemon">
+<span class="md-ellipsis">
+      
+        6.3. Docker daemon
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#64-docker-desktop">
+<span class="md-ellipsis">
+      
+        6.4. Docker Desktop
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#65-linux-y-windows-en-docker">
+<span class="md-ellipsis">
+      
+        6.5. Linux y Windows en Docker
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-instalacion-de-docker-en-linux-y-windows">
+<span class="md-ellipsis">
+      
+        7. Instalacion de Docker en Linux y Windows
+      
+    </span>
+</a>
+<nav aria-label="7. Instalacion de Docker en Linux y Windows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#71-instalacion-en-linux">
+<span class="md-ellipsis">
+      
+        7.1. Instalacion en Linux
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72-instalacion-en-windows">
+<span class="md-ellipsis">
+      
+        7.2. Instalacion en Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#73-comprobacion-inicial">
+<span class="md-ellipsis">
+      
+        7.3. Comprobacion inicial
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-primer-contacto-hello-world">
+<span class="md-ellipsis">
+      
+        8. Primer contacto: hello-world
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-comandos-basicos-para-empezar">
+<span class="md-ellipsis">
+      
+        9. Comandos basicos para empezar
+      
+    </span>
+</a>
+<nav aria-label="9. Comandos basicos para empezar" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#91-primer-ejemplo-real">
+<span class="md-ellipsis">
+      
+        9.1. Primer ejemplo real
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#92-ver-contenedores-e-imagenes">
+<span class="md-ellipsis">
+      
+        9.2. Ver contenedores e imagenes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#93-contenedores-interactivos">
+<span class="md-ellipsis">
+      
+        9.3. Contenedores interactivos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#94-contenedores-en-segundo-plano">
+<span class="md-ellipsis">
+      
+        9.4. Contenedores en segundo plano
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#95-variables-de-entorno">
+<span class="md-ellipsis">
+      
+        9.5. Variables de entorno
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#96-ciclo-de-vida-de-un-contenedor">
+<span class="md-ellipsis">
+      
+        9.6. Ciclo de vida de un contenedor
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-dockerfile">
+<span class="md-ellipsis">
+      
+        10. Dockerfile
+      
+    </span>
+</a>
+<nav aria-label="10. Dockerfile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#101-que-es-un-dockerfile">
+<span class="md-ellipsis">
+      
+        10.1. Que es un Dockerfile
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#102-ejemplo-sencillo">
+<span class="md-ellipsis">
+      
+        10.2. Ejemplo sencillo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#103-idea-importante">
+<span class="md-ellipsis">
+      
+        10.3. Idea importante
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-volumenes-y-persistencia">
+<span class="md-ellipsis">
+      
+        11. Volumenes y persistencia
+      
+    </span>
+</a>
+<nav aria-label="11. Volumenes y persistencia" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#111-que-es-un-volumen">
+<span class="md-ellipsis">
+      
+        11.1. Que es un volumen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#112-ejemplo-basico">
+<span class="md-ellipsis">
+      
+        11.2. Ejemplo basico
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#113-linux-y-windows-con-volumenes">
+<span class="md-ellipsis">
+      
+        11.3. Linux y Windows con volumenes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-redes-en-docker">
+<span class="md-ellipsis">
+      
+        12. Redes en Docker
+      
+    </span>
+</a>
+<nav aria-label="12. Redes en Docker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#121-idea-basica">
+<span class="md-ellipsis">
+      
+        12.1. Idea basica
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#122-publicacion-de-puertos">
+<span class="md-ellipsis">
+      
+        12.2. Publicacion de puertos
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#123-redes-entre-contenedores">
+<span class="md-ellipsis">
+      
+        12.3. Redes entre contenedores
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#124-linux-y-windows-en-red">
+<span class="md-ellipsis">
+      
+        12.4. Linux y Windows en red
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-introduccion-a-docker-compose">
+<span class="md-ellipsis">
+      
+        13. Introduccion a Docker Compose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-ideas-clave-para-no-confundirse">
+<span class="md-ellipsis">
+      
+        14. Ideas clave para no confundirse
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-conclusion">
+<span class="md-ellipsis">
+      
+        15. Conclusion
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-practicas-recomendadas">
+<span class="md-ellipsis">
+      
+        16. Practicas recomendadas
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuentes-consultadas">
+<span class="md-ellipsis">
+      
+        Fuentes consultadas
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:contenedores">contenedores</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:docker">docker</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:virtualizacion">virtualizacion</a>
+</nav>
+<h1>SI U03.1. Docker</h1>
+<div class="u03-destacados">
+<h2 id="31-docker">3.1. Docker<a class="headerlink" href="#31-docker" title="Permanent link">¶</a></h2>
+<p>Docker es una tecnologia muy usada en administracion de sistemas, desarrollo de aplicaciones y despliegue de servicios. Su importancia no esta solo en los comandos, sino en la idea que hay detras: <strong>empaquetar una aplicacion con todo lo necesario para ejecutarse siempre de forma parecida</strong>.</p>
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h3>
+<p>Cuando una aplicacion funciona en un equipo, pero falla en otro, suele deberse a diferencias de versiones, librerias, configuraciones o servicios instalados. Docker intenta reducir ese problema usando <strong>contenedores</strong>.</p>
+<blockquote>
+<p>Docker es una plataforma para desarrollar, distribuir y ejecutar aplicaciones en contenedores.</p>
+</blockquote>
+<p>Dicho de forma sencilla:</p>
+<ul>
+<li><strong>Docker</strong> es la herramienta o plataforma.</li>
+<li><strong>La imagen</strong> es la plantilla.</li>
+<li><strong>El contenedor</strong> es la ejecucion real de esa plantilla.</li>
+</ul>
+<p>En esta unidad tendremos presentes dos plataformas:</p>
+<ul>
+<li><strong>Linux</strong>, donde Docker trabaja de forma muy natural porque los contenedores comparten el kernel Linux del sistema anfitrion.</li>
+<li><strong>Windows</strong>, donde en la practica suele usarse <strong>Docker Desktop</strong> y, muy a menudo, <strong>WSL 2</strong> para trabajar con contenedores Linux de forma comoda.</li>
+</ul>
+<h3 id="1-que-es-docker">1. Que es Docker<a class="headerlink" href="#1-que-es-docker" title="Permanent link">¶</a></h3>
+<p>Docker es una plataforma que permite <strong>crear, descargar, compartir y ejecutar contenedores</strong>. Un contenedor es un entorno aislado que incluye una aplicacion y los archivos necesarios para que funcione.</p>
+<p>La idea clave es esta:</p>
+<ul>
+<li>La aplicacion no depende tanto de lo que haya instalado en el sistema anfitrion.</li>
+<li>El entorno de ejecucion queda mas controlado.</li>
+<li>Es mas facil repetir el mismo comportamiento en desarrollo, pruebas y produccion.</li>
+</ul>
+<h4 id="11-una-comparacion-sencilla">1.1. Una comparacion sencilla<a class="headerlink" href="#11-una-comparacion-sencilla" title="Permanent link">¶</a></h4>
+<p>Una forma util de entender Docker es pensar en una <strong>fiambrera</strong>:</p>
+<ul>
+<li>La aplicacion es la comida.</li>
+<li>Las librerias y dependencias son los cubiertos y complementos.</li>
+<li>El contenedor es la fiambrera cerrada.</li>
+</ul>
+<p>Mientras la fiambrera este bien preparada, puedes llevarla a distintos sitios y el contenido seguira siendo el mismo.</p>
+<h4 id="12-por-que-se-usa-tanto">1.2. Por que se usa tanto<a class="headerlink" href="#12-por-que-se-usa-tanto" title="Permanent link">¶</a></h4>
+<p>Docker se usa mucho porque ayuda a:</p>
+<ul>
+<li>Evitar diferencias entre equipos.</li>
+<li>Probar aplicaciones de forma rapida.</li>
+<li>Levantar servicios en pocos segundos.</li>
+<li>Separar componentes, por ejemplo web, base de datos y cache.</li>
+<li>Desplegar aplicaciones con mas orden y repetibilidad.</li>
+</ul>
+<h3 id="2-que-es-un-contenedor">2. Que es un contenedor<a class="headerlink" href="#2-que-es-un-contenedor" title="Permanent link">¶</a></h3>
+<p>Un contenedor es una <strong>instancia en ejecucion</strong> de una imagen. Se comporta como un proceso aislado que tiene sus propios archivos, su red y, en parte, su entorno.</p>
+<h4 id="21-idea-fundamental">2.1. Idea fundamental<a class="headerlink" href="#21-idea-fundamental" title="Permanent link">¶</a></h4>
+<p>Un contenedor <strong>no es una maquina completa</strong>, sino un entorno aislado para ejecutar una aplicacion o servicio concreto.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Un contenedor puede ejecutar <strong>Nginx</strong>.</li>
+<li>Otro contenedor puede ejecutar <strong>MySQL</strong>.</li>
+<li>Otro contenedor puede ejecutar una <strong>API en Python</strong>.</li>
+</ul>
+<p>Cada uno hace su tarea y puede comunicarse con los demas si lo configuramos.</p>
+<h4 id="22-caracteristicas-de-un-contenedor">2.2. Caracteristicas de un contenedor<a class="headerlink" href="#22-caracteristicas-de-un-contenedor" title="Permanent link">¶</a></h4>
+<ul>
+<li>Es ligero comparado con una maquina virtual.</li>
+<li>Se puede crear y eliminar con rapidez.</li>
+<li>Comparte el kernel del sistema anfitrion.</li>
+<li>Suele encargarse de una funcion concreta.</li>
+</ul>
+<h3 id="3-que-es-una-imagen">3. Que es una imagen<a class="headerlink" href="#3-que-es-una-imagen" title="Permanent link">¶</a></h3>
+<p>Una imagen es una <strong>plantilla inmutable</strong> que contiene lo necesario para crear contenedores.</p>
+<p>Incluye, por ejemplo:</p>
+<ul>
+<li>El sistema base o parte de el.</li>
+<li>Archivos de la aplicacion.</li>
+<li>Librerias y dependencias.</li>
+<li>Configuracion inicial.</li>
+</ul>
+<h4 id="31-imagen-y-contenedor-no-son-lo-mismo">3.1. Imagen y contenedor no son lo mismo<a class="headerlink" href="#31-imagen-y-contenedor-no-son-lo-mismo" title="Permanent link">¶</a></h4>
+<p>La diferencia mas importante de toda la unidad es esta:</p>
+<ul>
+<li><strong>Imagen</strong>: plantilla preparada, pero sin ejecutar.</li>
+<li><strong>Contenedor</strong>: imagen funcionando en ese momento.</li>
+</ul>
+<p>Una misma imagen puede servir para lanzar varios contenedores.</p>
+<pre class="mermaid"><code>flowchart LR
+    I[Imagen Docker] --&gt; C1[Contenedor 1]
+    I --&gt; C2[Contenedor 2]
+    I --&gt; C3[Contenedor 3]</code></pre>
+<h4 id="32-ejemplo-sencillo">3.2. Ejemplo sencillo<a class="headerlink" href="#32-ejemplo-sencillo" title="Permanent link">¶</a></h4>
+<p>Si descargas una imagen de <code>nginx</code>, esa imagen contiene lo necesario para arrancar un servidor web. Cuando ejecutas:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>nginx
+</code></pre></div>
+<p>no estas creando la aplicacion desde cero, sino <strong>levantando un contenedor a partir de la imagen <code>nginx</code></strong>.</p>
+<h3 id="4-docker-imagen-contenedor-y-registro">4. Docker, imagen, contenedor y registro<a class="headerlink" href="#4-docker-imagen-contenedor-y-registro" title="Permanent link">¶</a></h3>
+<p>Estos cuatro conceptos suelen confundirse, asi que conviene separarlos muy bien:</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Idea clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>Plataforma y herramientas para trabajar con contenedores</td>
+</tr>
+<tr>
+<td>Imagen</td>
+<td>Plantilla lista para crear contenedores</td>
+</tr>
+<tr>
+<td>Contenedor</td>
+<td>Instancia en ejecucion de una imagen</td>
+</tr>
+<tr>
+<td>Registro</td>
+<td>Lugar donde se almacenan y comparten imagenes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="41-que-es-un-registro">4.1. Que es un registro<a class="headerlink" href="#41-que-es-un-registro" title="Permanent link">¶</a></h4>
+<p>Un <strong>registro</strong> es un servicio donde se guardan imagenes. El ejemplo mas conocido es <strong>Docker Hub</strong>.</p>
+<p>Su funcion es parecida a la de un almacen:</p>
+<ul>
+<li>Alli se publican imagenes.</li>
+<li>Desde alli se descargan.</li>
+<li>Alli se pueden compartir con otros usuarios o equipos.</li>
+</ul>
+<h4 id="42-flujo-normal-de-trabajo">4.2. Flujo normal de trabajo<a class="headerlink" href="#42-flujo-normal-de-trabajo" title="Permanent link">¶</a></h4>
+<p>El flujo mas habitual es este:</p>
+<ol>
+<li>Buscar o crear una imagen.</li>
+<li>Guardarla en un registro o descargarla desde uno.</li>
+<li>Ejecutarla como contenedor.</li>
+<li>Parar, borrar o volver a lanzar el contenedor cuando sea necesario.</li>
+</ol>
+<pre class="mermaid"><code>flowchart LR
+    R[Registro&lt;br&gt;Docker Hub] --&gt; I[Imagen]
+    I --&gt; C[Contenedor]
+    C --&gt; U[Aplicacion en uso]</code></pre>
+<h3 id="5-docker-y-maquinas-virtuales">5. Docker y maquinas virtuales<a class="headerlink" href="#5-docker-y-maquinas-virtuales" title="Permanent link">¶</a></h3>
+<p>Docker y las maquinas virtuales no son exactamente lo mismo.</p>
+<h4 id="51-maquina-virtual">5.1. Maquina virtual<a class="headerlink" href="#51-maquina-virtual" title="Permanent link">¶</a></h4>
+<p>Una maquina virtual simula un equipo completo:</p>
+<ul>
+<li>Tiene su propio sistema operativo.</li>
+<li>Tiene su propio kernel.</li>
+<li>Necesita mas recursos.</li>
+</ul>
+<h4 id="52-contenedor">5.2. Contenedor<a class="headerlink" href="#52-contenedor" title="Permanent link">¶</a></h4>
+<p>Un contenedor:</p>
+<ul>
+<li>Comparte el kernel del sistema anfitrion.</li>
+<li>No necesita arrancar un sistema operativo completo.</li>
+<li>Suele iniciar mucho mas rapido.</li>
+<li>Consume menos recursos en muchos casos.</li>
+</ul>
+<h4 id="53-comparacion-clara">5.3. Comparacion clara<a class="headerlink" href="#53-comparacion-clara" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Maquina virtual</th>
+<th>Contenedor Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sistema operativo completo</td>
+<td>Si</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Kernel propio</td>
+<td>Si</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Peso y consumo</td>
+<td>Mayor</td>
+<td>Menor</td>
+</tr>
+<tr>
+<td>Arranque</td>
+<td>Mas lento</td>
+<td>Mas rapido</td>
+</tr>
+<tr>
+<td>Uso habitual</td>
+<td>Aislamiento de sistemas completos</td>
+<td>Aislamiento de aplicaciones</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TB
+    subgraph VM["Maquina virtual"]
+        H1[Hardware]
+        H2[Hipervisor]
+        G1[SO invitado]
+        A1[Aplicacion]
+        H1 --&gt; H2 --&gt; G1 --&gt; A1
+    end
+
+    subgraph CT["Contenedor Docker"]
+        H3[Hardware]
+        O1[SO anfitrion]
+        D1[Docker Engine]
+        C1[Contenedor]
+        A2[Aplicacion]
+        H3 --&gt; O1 --&gt; D1 --&gt; C1 --&gt; A2
+    end</code></pre>
+<h3 id="6-arquitectura-basica-de-docker">6. Arquitectura basica de Docker<a class="headerlink" href="#6-arquitectura-basica-de-docker" title="Permanent link">¶</a></h3>
+<p>Docker no es solo el comando <code>docker</code>. Internamente intervienen varios elementos.</p>
+<h4 id="61-docker-engine">6.1. Docker Engine<a class="headerlink" href="#61-docker-engine" title="Permanent link">¶</a></h4>
+<p>Docker Engine es el motor que crea y gestiona imagenes, contenedores, redes y volumenes.</p>
+<h4 id="62-docker-cli">6.2. Docker CLI<a class="headerlink" href="#62-docker-cli" title="Permanent link">¶</a></h4>
+<p>Es la herramienta de linea de comandos que usamos al escribir instrucciones como:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>docker<span class="w"> </span>ps
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>docker<span class="w"> </span>images
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<h4 id="63-docker-daemon">6.3. Docker daemon<a class="headerlink" href="#63-docker-daemon" title="Permanent link">¶</a></h4>
+<p>Es el servicio que realiza el trabajo real en segundo plano.</p>
+<h4 id="64-docker-desktop">6.4. Docker Desktop<a class="headerlink" href="#64-docker-desktop" title="Permanent link">¶</a></h4>
+<p>En muchos equipos de escritorio se usa Docker Desktop, que ofrece interfaz grafica y herramientas adicionales para trabajar con Docker.</p>
+<h4 id="65-linux-y-windows-en-docker">6.5. Linux y Windows en Docker<a class="headerlink" href="#65-linux-y-windows-en-docker" title="Permanent link">¶</a></h4>
+<p>Aunque los conceptos de imagen y contenedor son los mismos, el entorno de uso cambia segun la plataforma:</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Linux</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forma habitual de uso</td>
+<td>Docker Engine y terminal</td>
+<td>Docker Desktop y terminal</td>
+</tr>
+<tr>
+<td>Integracion natural con contenedores Linux</td>
+<td>Muy alta</td>
+<td>Normalmente mediante WSL 2</td>
+</tr>
+<tr>
+<td>Terminal frecuente</td>
+<td>Bash, Zsh</td>
+<td>PowerShell, CMD o terminal WSL</td>
+</tr>
+<tr>
+<td>Rutas de ejemplo</td>
+<td><code>/home/alumno/proyecto</code></td>
+<td><code>C:\\Users\\Alumno\\proyecto</code> o rutas de WSL</td>
+</tr>
+</tbody>
+</table>
+<p>La idea clave es que <strong>Docker funciona en ambas plataformas</strong>, pero en Windows suele haber una capa adicional de integracion para ejecutar contenedores Linux de forma comoda.</p>
+<h3 id="7-instalacion-de-docker-en-linux-y-windows">7. Instalacion de Docker en Linux y Windows<a class="headerlink" href="#7-instalacion-de-docker-en-linux-y-windows" title="Permanent link">¶</a></h3>
+<p>No todos los equipos se preparan igual. Conviene distinguir:</p>
+<h4 id="71-instalacion-en-linux">7.1. Instalacion en Linux<a class="headerlink" href="#71-instalacion-en-linux" title="Permanent link">¶</a></h4>
+<p>En Linux se suele instalar <strong>Docker Engine</strong> desde los repositorios oficiales del proyecto o desde los repositorios de la distribucion.</p>
+<p>En distribuciones Debian o Ubuntu, el proceso habitual incluye:</p>
+<ol>
+<li>Actualizar repositorios.</li>
+<li>Instalar prerequisitos.</li>
+<li>Añadir la clave del repositorio oficial de Docker.</li>
+<li>Añadir el repositorio de Docker.</li>
+<li>Instalar Docker Engine y sus complementos.</li>
+</ol>
+<p>Ejemplo orientativo:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
+</code></pre></div>
+<p>Despues es habitual añadir el usuario al grupo <code>docker</code> para no depender siempre de <code>sudo</code>.</p>
+<h4 id="72-instalacion-en-windows">7.2. Instalacion en Windows<a class="headerlink" href="#72-instalacion-en-windows" title="Permanent link">¶</a></h4>
+<p>En Windows, la opcion mas comun es <strong>Docker Desktop</strong>.</p>
+<p>De forma general:</p>
+<ol>
+<li>Se instala Docker Desktop.</li>
+<li>Se habilita la virtualizacion si el equipo la necesita.</li>
+<li>Se configura el uso de <strong>WSL 2</strong> cuando se van a usar contenedores Linux.</li>
+<li>Se comprueba desde PowerShell, CMD o una terminal WSL que Docker responde.</li>
+</ol>
+<p>En Windows es importante entender esto:</p>
+<ul>
+<li>Docker Desktop ofrece la interfaz y el entorno de integracion.</li>
+<li>WSL 2 permite trabajar mejor con contenedores Linux.</li>
+<li>Muchos materiales de clase usan comandos identicos, pero cambian las rutas, el terminal y algunos detalles de permisos.</li>
+</ul>
+<h4 id="73-comprobacion-inicial">7.3. Comprobacion inicial<a class="headerlink" href="#73-comprobacion-inicial" title="Permanent link">¶</a></h4>
+<p>Tanto en Linux como en Windows, una comprobacion basica es:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>docker<span class="w"> </span>--version
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>docker<span class="w"> </span>info
+</code></pre></div>
+<p>Si estos comandos responden correctamente, Docker esta instalado y accesible.</p>
+<h3 id="8-primer-contacto-hello-world">8. Primer contacto: hello-world<a class="headerlink" href="#8-primer-contacto-hello-world" title="Permanent link">¶</a></h3>
+<p>Uno de los ejemplos clasicos para verificar Docker consiste en ejecutar la imagen <code>hello-world</code>.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<p>Cuando se ejecuta este comando, Docker hace varias cosas:</p>
+<ol>
+<li>Comprueba si la imagen existe en el equipo.</li>
+<li>Si no existe, la descarga desde un registro.</li>
+<li>Crea un contenedor a partir de la imagen.</li>
+<li>Ejecuta el proceso definido por esa imagen.</li>
+<li>Muestra el resultado y el contenedor termina.</li>
+</ol>
+<p>Este ejemplo es muy util porque deja clara una idea esencial:</p>
+<ul>
+<li>La <strong>imagen</strong> es el recurso descargado.</li>
+<li>El <strong>contenedor</strong> es la ejecucion temporal de esa imagen.</li>
+</ul>
+<h3 id="9-comandos-basicos-para-empezar">9. Comandos basicos para empezar<a class="headerlink" href="#9-comandos-basicos-para-empezar" title="Permanent link">¶</a></h3>
+<p>Estos comandos ayudan a entender el flujo inicial:</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Funcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker pull nginx</code></td>
+<td>Descarga una imagen</td>
+</tr>
+<tr>
+<td><code>docker images</code></td>
+<td>Muestra las imagenes locales</td>
+</tr>
+<tr>
+<td><code>docker run nginx</code></td>
+<td>Crea y arranca un contenedor</td>
+</tr>
+<tr>
+<td><code>docker ps</code></td>
+<td>Lista contenedores en ejecucion</td>
+</tr>
+<tr>
+<td><code>docker ps -a</code></td>
+<td>Lista todos los contenedores</td>
+</tr>
+<tr>
+<td><code>docker stop nombre</code></td>
+<td>Detiene un contenedor</td>
+</tr>
+<tr>
+<td><code>docker rm nombre</code></td>
+<td>Elimina un contenedor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="91-primer-ejemplo-real">9.1. Primer ejemplo real<a class="headerlink" href="#91-primer-ejemplo-real" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>nginx
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>--name<span class="w"> </span>mi_nginx<span class="w"> </span>nginx
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>Que ocurre aqui:</p>
+<ol>
+<li>Se descarga la imagen <code>nginx</code>.</li>
+<li>Se crea un contenedor llamado <code>mi_nginx</code>.</li>
+<li>Se publica el puerto <code>80</code> del contenedor en el <code>8080</code> del equipo.</li>
+<li>El servicio web queda accesible en <code>http://localhost:8080</code>.</li>
+</ol>
+<h4 id="92-ver-contenedores-e-imagenes">9.2. Ver contenedores e imagenes<a class="headerlink" href="#92-ver-contenedores-e-imagenes" title="Permanent link">¶</a></h4>
+<p>Dos comandos basicos para orientarse son:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>docker<span class="w"> </span>ps<span class="w"> </span>-a
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>docker<span class="w"> </span>images
+</code></pre></div>
+<p>El primero muestra contenedores y su estado. El segundo muestra las imagenes descargadas en el equipo.</p>
+<h4 id="93-contenedores-interactivos">9.3. Contenedores interactivos<a class="headerlink" href="#93-contenedores-interactivos" title="Permanent link">¶</a></h4>
+<p>Algunos contenedores se usan de forma interactiva, es decir, entrando en una terminal dentro del propio contenedor.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu<span class="w"> </span>bash
+</code></pre></div>
+<p>Que hace este comando:</p>
+<ul>
+<li><code>-i</code> mantiene la entrada interactiva.</li>
+<li><code>-t</code> crea una terminal.</li>
+<li><code>ubuntu</code> es la imagen base.</li>
+<li><code>bash</code> es el proceso que queremos arrancar.</li>
+</ul>
+<p>Esto es util tanto en Linux como en Windows. La diferencia real suele estar en la terminal desde la que lo lanzas:</p>
+<ul>
+<li>En <strong>Linux</strong>, normalmente Bash o Zsh.</li>
+<li>En <strong>Windows</strong>, PowerShell, CMD o una terminal WSL.</li>
+</ul>
+<h4 id="94-contenedores-en-segundo-plano">9.4. Contenedores en segundo plano<a class="headerlink" href="#94-contenedores-en-segundo-plano" title="Permanent link">¶</a></h4>
+<p>Muchos servicios no se ejecutan de forma interactiva, sino en segundo plano.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>nginx
+</code></pre></div>
+<p>Aqui <code>-d</code> significa que el contenedor se queda funcionando como servicio.</p>
+<p>Para comprobarlo:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>docker<span class="w"> </span>ps
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>docker<span class="w"> </span>logs<span class="w"> </span>web
+</code></pre></div>
+<h4 id="95-variables-de-entorno">9.5. Variables de entorno<a class="headerlink" href="#95-variables-de-entorno" title="Permanent link">¶</a></h4>
+<p>Las variables de entorno permiten configurar contenedores sin modificar la imagen.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_mysql<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>midb<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span>mysql:8
+</code></pre></div>
+<p>La misma idea sirve en Linux y Windows, aunque en Windows puede cambiar la forma de escribir comandos largos segun el terminal utilizado.</p>
+<p>Lo importante es comprender que:</p>
+<ul>
+<li>La imagen define que variables acepta.</li>
+<li>El contenedor usa esas variables al arrancar.</li>
+<li>Asi se personaliza el comportamiento sin reconstruir la imagen.</li>
+</ul>
+<h4 id="96-ciclo-de-vida-de-un-contenedor">9.6. Ciclo de vida de un contenedor<a class="headerlink" href="#96-ciclo-de-vida-de-un-contenedor" title="Permanent link">¶</a></h4>
+<p>Un contenedor pasa por distintas fases:</p>
+<ol>
+<li><strong>Crear</strong>: <code>docker create</code></li>
+<li><strong>Iniciar</strong>: <code>docker start</code></li>
+<li><strong>Ejecutar creando</strong>: <code>docker run</code></li>
+<li><strong>Pausar</strong>: <code>docker pause</code></li>
+<li><strong>Reanudar</strong>: <code>docker unpause</code></li>
+<li><strong>Detener</strong>: <code>docker stop</code></li>
+<li><strong>Eliminar</strong>: <code>docker rm</code></li>
+</ol>
+<p>Entender este ciclo ayuda a no pensar que los contenedores son permanentes por defecto. En muchos casos se crean, se prueban, se detienen y se eliminan con rapidez.</p>
+<h3 id="10-dockerfile">10. Dockerfile<a class="headerlink" href="#10-dockerfile" title="Permanent link">¶</a></h3>
+<p>Hasta ahora hemos trabajado sobre todo con imagenes ya hechas, como <code>nginx</code>, <code>ubuntu</code> o <code>mysql</code>. Pero en muchos proyectos necesitamos <strong>crear nuestra propia imagen</strong>. Para eso se usa el archivo <code>Dockerfile</code>.</p>
+<h4 id="101-que-es-un-dockerfile">10.1. Que es un Dockerfile<a class="headerlink" href="#101-que-es-un-dockerfile" title="Permanent link">¶</a></h4>
+<p>Un <code>Dockerfile</code> es un archivo de texto con instrucciones que indican como construir una imagen.</p>
+<p>Permite definir:</p>
+<ul>
+<li>La imagen base.</li>
+<li>Los archivos que se copian al contenedor.</li>
+<li>Las dependencias que se instalan.</li>
+<li>El comando con el que arrancara la aplicacion.</li>
+</ul>
+<h4 id="102-ejemplo-sencillo">10.2. Ejemplo sencillo<a class="headerlink" href="#102-ejemplo-sencillo" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:latest</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">COPY</span><span class="w"> </span>./web<span class="w"> </span>/usr/share/nginx/html
+</code></pre></div>
+<p>Este ejemplo indica:</p>
+<ol>
+<li>Partir de la imagen <code>nginx</code>.</li>
+<li>Copiar los archivos de una carpeta local al directorio web del contenedor.</li>
+</ol>
+<p>Para construir la imagen:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>mi_web<span class="w"> </span>.
+</code></pre></div>
+<h4 id="103-idea-importante">10.3. Idea importante<a class="headerlink" href="#103-idea-importante" title="Permanent link">¶</a></h4>
+<p>Un <code>Dockerfile</code> <strong>no es un contenedor</strong> ni una imagen. Es la receta para construir la imagen.</p>
+<p>El flujo correcto es:</p>
+<pre class="mermaid"><code>flowchart LR
+    D[Dockerfile] --&gt; I[Imagen]
+    I --&gt; C[Contenedor]</code></pre>
+<h3 id="11-volumenes-y-persistencia">11. Volumenes y persistencia<a class="headerlink" href="#11-volumenes-y-persistencia" title="Permanent link">¶</a></h3>
+<p>Uno de los errores mas comunes al empezar con Docker es pensar que todo lo que hay dentro de un contenedor permanece para siempre. No es asi. Si el contenedor se elimina, sus datos internos pueden perderse.</p>
+<p>Para evitarlo se usan los <strong>volumenes</strong>.</p>
+<h4 id="111-que-es-un-volumen">11.1. Que es un volumen<a class="headerlink" href="#111-que-es-un-volumen" title="Permanent link">¶</a></h4>
+<p>Un volumen es un mecanismo de Docker para guardar datos de forma persistente fuera del ciclo de vida normal del contenedor.</p>
+<p>Esto es muy util en servicios como:</p>
+<ul>
+<li>Bases de datos</li>
+<li>Servidores web</li>
+<li>Aplicaciones que generan archivos</li>
+<li>Herramientas que guardan configuracion</li>
+</ul>
+<h4 id="112-ejemplo-basico">11.2. Ejemplo basico<a class="headerlink" href="#112-ejemplo-basico" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>datos_mysql
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>bd<span class="w"> </span>-v<span class="w"> </span>datos_mysql:/var/lib/mysql<span class="w"> </span>mysql:8
+</code></pre></div>
+<p>En este caso, aunque el contenedor se elimine, los datos almacenados en el volumen pueden mantenerse.</p>
+<h4 id="113-linux-y-windows-con-volumenes">11.3. Linux y Windows con volumenes<a class="headerlink" href="#113-linux-y-windows-con-volumenes" title="Permanent link">¶</a></h4>
+<p>La idea del volumen es la misma en ambos sistemas, pero al montar carpetas del equipo anfitrion hay diferencias de rutas:</p>
+<ul>
+<li>En <strong>Linux</strong> es habitual usar rutas como <code>/home/alumno/proyecto</code>.</li>
+<li>En <strong>Windows</strong> es habitual usar rutas como <code>C:\\Users\\Alumno\\proyecto</code>.</li>
+</ul>
+<p>Cuando se trabaja con Docker Desktop y WSL 2, conviene tener claro desde que entorno se lanza el comando, porque eso afecta a las rutas que se van a montar.</p>
+<h3 id="12-redes-en-docker">12. Redes en Docker<a class="headerlink" href="#12-redes-en-docker" title="Permanent link">¶</a></h3>
+<p>Los contenedores pueden comunicarse entre si y tambien con el exterior. Para ello Docker gestiona redes.</p>
+<h4 id="121-idea-basica">12.1. Idea basica<a class="headerlink" href="#121-idea-basica" title="Permanent link">¶</a></h4>
+<p>Cada contenedor puede:</p>
+<ul>
+<li>Estar aislado.</li>
+<li>Publicar puertos hacia el equipo anfitrion.</li>
+<li>Compartir una red con otros contenedores.</li>
+</ul>
+<p>Por eso es posible tener, por ejemplo:</p>
+<ul>
+<li>Un contenedor con una aplicacion web.</li>
+<li>Otro con una base de datos.</li>
+<li>Otro con un proxy.</li>
+</ul>
+<h4 id="122-publicacion-de-puertos">12.2. Publicacion de puertos<a class="headerlink" href="#122-publicacion-de-puertos" title="Permanent link">¶</a></h4>
+<p>Cuando usamos algo como:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>nginx
+</code></pre></div>
+<p>estamos diciendo que el puerto <code>80</code> del contenedor se hace accesible desde el <code>8080</code> del equipo anfitrion.</p>
+<h4 id="123-redes-entre-contenedores">12.3. Redes entre contenedores<a class="headerlink" href="#123-redes-entre-contenedores" title="Permanent link">¶</a></h4>
+<p>Docker puede crear redes para que varios contenedores se comuniquen por nombre.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mi_red
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span>--network<span class="w"> </span>mi_red<span class="w"> </span>nginx
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>bd<span class="w"> </span>--network<span class="w"> </span>mi_red<span class="w"> </span>mysql:8
+</code></pre></div>
+<p>Si estan en la misma red, un contenedor puede localizar al otro usando su nombre.</p>
+<h4 id="124-linux-y-windows-en-red">12.4. Linux y Windows en red<a class="headerlink" href="#124-linux-y-windows-en-red" title="Permanent link">¶</a></h4>
+<p>Los conceptos de red son comunes, pero en <strong>Windows con Docker Desktop</strong> hay que recordar que parte del trafico pasa por la capa de integracion de Docker Desktop y su maquina virtual Linux ligera. Esto no cambia el concepto, pero ayuda a entender por que algunas configuraciones de red o firewall pueden comportarse de forma distinta respecto a Linux.</p>
+<h3 id="13-introduccion-a-docker-compose">13. Introduccion a Docker Compose<a class="headerlink" href="#13-introduccion-a-docker-compose" title="Permanent link">¶</a></h3>
+<p>Cuando una aplicacion necesita varios contenedores, escribir comandos <code>docker run</code> uno a uno puede resultar incomodo. Para eso existe <strong>Docker Compose</strong>.</p>
+<p>Docker Compose permite definir servicios, redes, volumenes y variables dentro de un archivo <code>compose.yaml</code>, de forma que el entorno quede guardado como configuracion y pueda levantarse de manera repetible.</p>
+<p>Ejemplo minimo:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+</code></pre></div>
+<p>Con esta configuracion el servicio se levanta con:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Como este tema merece una explicacion detallada, el desarrollo completo se ha separado en:</p>
+<ul>
+<li><a href="../SI-U03.2.-Docker-Compose/">SI U03.2. Docker Compose</a></li>
+</ul>
+<h3 id="14-ideas-clave-para-no-confundirse">14. Ideas clave para no confundirse<a class="headerlink" href="#14-ideas-clave-para-no-confundirse" title="Permanent link">¶</a></h3>
+<ul>
+<li>Docker <strong>no es</strong> el contenedor.</li>
+<li>Una imagen <strong>no se ejecuta sola</strong>.</li>
+<li>Un contenedor <strong>nace de una imagen</strong>.</li>
+<li>Un registro <strong>guarda imagenes</strong>, no contenedores en ejecucion.</li>
+<li>Docker <strong>no sustituye siempre</strong> a las maquinas virtuales, pero resuelve muy bien el despliegue de aplicaciones.</li>
+<li>En <strong>Linux</strong> y <strong>Windows</strong> los conceptos son los mismos, aunque cambien la instalacion, el terminal y algunas rutas.</li>
+<li>Un <code>Dockerfile</code> sirve para <strong>construir imagenes</strong>.</li>
+<li>Los <strong>volumenes</strong> permiten guardar datos persistentes.</li>
+<li>Las <strong>redes</strong> permiten comunicar contenedores.</li>
+<li><code>docker compose</code> ayuda a gestionar varios servicios a la vez y se apoya en un fichero <code>compose.yaml</code>.</li>
+</ul>
+<h3 id="15-conclusion">15. Conclusion<a class="headerlink" href="#15-conclusion" title="Permanent link">¶</a></h3>
+<p>Si tuviera que resumirse Docker en una sola idea, seria esta:</p>
+<blockquote>
+<p>Docker permite empaquetar una aplicacion con lo necesario para ejecutarla de manera consistente en distintos equipos.</p>
+</blockquote>
+<p>Comprender esta idea es mas importante que memorizar comandos. Cuando queda claro que una <strong>imagen es la plantilla</strong> y que un <strong>contenedor es la ejecucion de esa plantilla</strong>, el resto de conceptos encajan con mucha mas facilidad.</p>
+<p>Ademas, al trabajar con Docker conviene recordar siempre en que plataforma estamos:</p>
+<ul>
+<li>En <strong>Linux</strong>, Docker suele integrarse de forma mas directa con el sistema.</li>
+<li>En <strong>Windows</strong>, Docker Desktop y WSL 2 suelen ser piezas importantes del entorno de trabajo.</li>
+</ul>
+<p>Pero en ambos casos el concepto esencial no cambia: <strong>Docker ayuda a ejecutar aplicaciones de forma consistente usando contenedores</strong>.</p>
+<h3 id="16-practicas-recomendadas">16. Practicas recomendadas<a class="headerlink" href="#16-practicas-recomendadas" title="Permanent link">¶</a></h3>
+<p>Para reforzar los contenidos de esta unidad, se proponen estas practicas:</p>
+<ol>
+<li><a href="../../practicas/SI-U03.-Practica001/">Practica 1 - Docker con Apache y carpeta compartida</a></li>
+<li><a href="../../practicas/SI-U03.-Practica002/">Practica 2 - Docker Compose con Apache y carpeta compartida</a></li>
+<li><a href="../../practicas/SI-U03.-Practica003/">Practica 3 - Docker Compose con Apache, PHP y MariaDB</a></li>
+</ol>
+<p>Estas practicas permiten avanzar de forma gradual:</p>
+<ul>
+<li>Primero, un contenedor Apache sencillo con carpeta compartida.</li>
+<li>Despues, el mismo caso usando <code>docker compose</code>.</li>
+<li>Finalmente, un entorno multicontenedor mas cercano a un caso real.</li>
+</ul>
+<h3 id="fuentes-consultadas">Fuentes consultadas<a class="headerlink" href="#fuentes-consultadas" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/docker-overview/">Docker Docs. What is Docker?</a></li>
+<li><a href="https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/">Docker Docs. What is a container?</a></li>
+<li><a href="https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/">Docker Docs. What is an image?</a></li>
+<li><a href="https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/">Docker Docs. What is a registry?</a></li>
+<li><a href="https://docs.docker.com/engine/">Docker Docs. Docker Engine</a></li>
+<li><a href="https://docs.docker.com/build/concepts/dockerfile/">Docker Docs. Dockerfile overview</a></li>
+<li><a href="https://docs.docker.com/engine/storage/volumes/">Docker Docs. Volumes</a></li>
+<li><a href="https://docs.docker.com/desktop/features/networking/">Docker Docs. Networking</a></li>
+<li><a href="https://revilofe.github.io/section4/u02/teoria/DAW-U2.1.-IntroduccionDocker/">R Z O. UD 2 - 2.1 Introducción a los contenedores Docker</a>
+<strong>Fecha de actualización:</strong> 09/04/2026</li>
+</ul>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        ¿Te ha sido útil la página?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="Me ha sido de utilidad." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="La página podría mejorar." type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Gracias por tu feedback! Ayúdame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      2026 Jose Manuel Gonzalez Castillo - Licencia CC BY-NC-SA
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+</body>
+</html>
