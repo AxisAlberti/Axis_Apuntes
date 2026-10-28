@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="625"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47pre4 "
+   sodipodi:docname="Northsouthbridge2.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   style="display: inline;">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3182"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="302.82812"
+     inkscape:cy="210.98246"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     inkscape:window-width="1279"
+     inkscape:window-height="780"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3219"
+       visible="true"
+       enabled="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:date>15 July 2008</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>David Futcher (bobbo) &lt;bobbocanfly@gmail.com&gt;</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>http://en.wikipedia.org/wiki/Image:Northsouthbridge.png</dc:source>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:description>Diagram of the Northbridge/Southbridge layout in a Computer.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Links"
+     style="display: inline;">
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       d="M 119.643,188.36218 L 119.643,434.36218"
+       id="path3213" />
+    <a
+       id="a3221"
+       transform="translate(4.81357)">
+      <path
+         id="path3217"
+         d="M 154.82843,188.36218 L 154.82843,434.36218"
+         style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+    </a>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Sub-Links"
+     style="display: inline;">
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       d="M 248.90159,290.72218 L 304.05592,290.72218"
+       id="path3351" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 3.99999; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       d="M 248.90199,335.72219 L 304.05601,335.72219"
+       id="path3353" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99998999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 249.90199,572.81452 55.15402,0"
+       id="path4815" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99998999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 248.90199,543.26685 55.15402,0"
+       id="path4817" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 3.99999; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"
+       d="M 248.90199,510.71919 L 304.05601,510.71919"
+       id="path4819" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99998999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 248.90199,481.17152 55.15402,0"
+       id="path4821" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99998999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 248.90199,448.62385 55.15402,0"
+       id="path4823" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Boxes"
+     style="opacity: 1; display: inline;">
+    <path
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"
+       d="M 25,234.86219 L 26,389.86218 L 249,389.86218 L 249,235.86219 L 25,234.86219 z"
+       id="path4915" />
+    <path
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"
+       d="M 25,434.86219 L 26,589.86218 L 249,589.86218 L 249,435.86219 L 25,434.86219 z"
+       id="path4917" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4931"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"><flowRegion
+         id="flowRegion4933"><rect
+           id="rect4935"
+           width="225"
+           height="156"
+           x="24"
+           y="33.362183" /></flowRegion><flowPara
+         id="flowPara4937" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size: 32px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: DejaVu Sans Mono;"
+       x="297"
+       y="31.3622"
+       id="text4969"><tspan
+         sodipodi:role="line"
+         id="tspan4971"
+         x="297"
+         y="31.3622" /></text>
+    <path
+       style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"
+       d="M 25,34.862193 L 26,189.86218 L 249,189.86218 L 249,35.862193 L 25,34.862193 z"
+       id="path4985" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Text"
+     style="display: inline;">
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Bitstream Vera Sans"
+       x="389.44531"
+       y="299.41522"
+       id="text4873"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="389.44531"
+         y="299.41522"
+         id="tspan4877"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">RAM (Memory)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Bitstream Vera Sans"
+       x="137"
+       y="80.362198"
+       id="text4973"><tspan
+         sodipodi:role="line"
+         id="tspan4975"
+         x="137"
+         y="80.362198"
+         style="font-size:34;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">Central</tspan><tspan
+         sodipodi:role="line"
+         x="137"
+         y="125.3622"
+         id="tspan4977"
+         style="font-size:34;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">Processing</tspan><tspan
+         sodipodi:role="line"
+         x="137"
+         y="170.3622"
+         id="tspan4981"
+         style="font-size:34;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">Unit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 32px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Bitstream Vera Sans;"
+       x="135"
+       y="320.362"
+       id="text4991"><tspan
+         sodipodi:role="line"
+         id="tspan4993"
+         x="135"
+         y="320.362"
+         style="-inkscape-font-specification:Segoe UI;font-family:Segoe UI;font-size:34">Northbridge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 32px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Bitstream Vera Sans;"
+       x="138"
+       y="519.362"
+       id="text4995"><tspan
+         sodipodi:role="line"
+         id="tspan4997"
+         x="138"
+         y="519.362"
+         style="-inkscape-font-specification:Segoe UI;font-family:Segoe UI;font-size:34">Southbridge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="318"
+       y="335"
+       id="text3029"><tspan
+         sodipodi:role="line"
+         id="tspan3031"
+         x="318"
+         y="335" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="310.74219"
+       y="344"
+       id="text3033"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3035"
+         x="310.74219"
+         y="344"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">AGP/PCIe (Graphics)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="310.78516"
+       y="455"
+       id="text3037"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3039"
+         x="310.78516"
+         y="455"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"><tspan
+           style="font-size:24"
+           id="tspan3065">APM/ACPI</tspan><tspan
+           style="font-size:14"
+           id="tspan3067"> (Power management)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="309.58203"
+       y="551"
+       id="text3041"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3043"
+         x="309.58203"
+         y="551"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">SATA/USB/LAN ports</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="307"
+       y="519"
+       id="text3045"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3047"
+         x="307"
+         y="519"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="308.79688"
+       y="490"
+       id="text3049"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3051"
+         x="308.79688"
+         y="490"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">PCI/PCIe Bus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="310.74219"
+       y="522"
+       id="text3053"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3055"
+         x="310.74219"
+         y="522"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">AC 97/HDA (audio)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="325"
+       y="511"
+       id="text3057"><tspan
+         sodipodi:role="line"
+         id="tspan3059"
+         x="325"
+         y="511" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="309.89844"
+       y="579"
+       id="text3061"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3063"
+         x="309.89844"
+         y="579"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Segoe UI;-inkscape-font-specification:Segoe UI">Other devices</tspan></text>
+  </g>
+</svg>
