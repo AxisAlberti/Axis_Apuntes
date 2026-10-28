@@ -215,6 +215,12 @@ Usado en OEM y all-in-one, dificultad de actualización e intercambios.
 
 ---
 
+<div style="text-align: center;">
+  <img src="../assets/componentes/chasis.jpg" alt="Interior de un PC con ventana lateral: placa base, disipador de CPU, tarjeta gráfica, fuente de alimentación y ventiladores" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+---
+
 ## 4.2 Factor de Forma y Tipos
 
 | Tipo                  | Fit/Expansión        | Ventajas                  | Limitaciones/Contexto                    |
@@ -366,6 +372,22 @@ Los conectores internos conectan la placa base con todos los componentes crític
 
 ---
 - **USB 2.0/3.x/4 Headers**: Permiten que el frontal o parte superior del chasis tenga puertos modernos.
+
+---
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="../assets/componentes/11.png" alt="Headers internos USB 2.0 (USB1314, USB1112 y USB910) en una placa base" width="45%">
+  <img src="../assets/componentes/10.png" alt="Header interno USB 3.0 de 19 pines (USB3_34) en una placa base" width="45%">
+</div>
+
+---
+
+<div style="text-align: center;">
+  <img src="../assets/componentes/4.png" alt="Header interno JUSB4 de una placa base" style="display: block; margin: 0 auto; max-width: 30%; height: auto;">
+</div>
+
+---
+
 - **HD Audio Header**: Conexión directa a placa para auriculares y micrófono frontal.
 - **RGB/ARGB Headers (5V/12V)**: Control de toda la iluminación inteligente y sincronizable del equipo.
 - **PWM Fan/Pump Headers**: Permiten monitorizar y regular automáticamente todos los ventiladores y bombas de agua (refrigeración líquida).
@@ -615,6 +637,12 @@ El **VRM (Voltage Regulator Module, Módulo Regulador de Voltaje)** es un circui
 
 ---
 
+<div style="text-align: center;">
+  <img src="../assets/componentes/15.png" alt="Placa base con las fases del VRM resaltadas alrededor del socket de la CPU" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+---
+
 ## 10.1. Concepto y función esencial
 
 - Los microprocesadores actuales operan a voltajes muy bajos (entre 1.0V y 1.5V), mientras que la fuente ATX suministra voltajes mucho mayores (12V, 5V, 3.3V).
@@ -690,12 +718,24 @@ Un control térmico adecuado prolonga la vida útil y evita reducciones automát
 
 ---
 
+<div style="text-align: center;">
+  <img src="../assets/componentes/vrm.jpg" alt="Disipadores dorados sobre las fases del VRM junto al socket de la CPU" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+---
+
 ## 11.3 Tecnologías Modernas
 
 - **Fan Curve Control**: permite definir curvas de velocidad del ventilador en función de la temperatura.
 - **Zero RPM Mode**: los ventiladores se detienen completamente cuando el sistema está en reposo.
 - **Thermal Armor / Shields**: cubiertas metálicas sobre VRM o M.2 que disipan y protegen del polvo.
 - **Heatpipes y cámaras de vapor**: presentes en placas de gama alta para distribuir el calor uniformemente.
+
+---
+
+<div style="text-align: center;">
+  <img src="../assets/componentes/heatsink.jpg" alt="Disipador de torre de CPU con heatpipes de cobre y aletas de aluminio" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
 
 ---
 
@@ -732,6 +772,14 @@ Estas descargas pueden **dañar instantáneamente los chips electrónicos**, inc
 - **Manipular la placa base y los módulos por los bordes**, nunca por las zonas de contacto o chips.  
 - **Trabajar sobre una superficie limpia, seca y no conductora** (tapete antiestático o mesa de madera).  
 - Mantener **las bolsas ESD originales** de los componentes hasta el momento de instalarlos.
+
+---
+
+<div style="text-align: center;">
+  <img src="../assets/componentes/esd_wrist_strap.jpg" alt="Pulsera antiestática con cable en espiral y pinza de cocodrilo para conectar a tierra" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+</div>
+
+---
 
 ### Causas comunes de daño ESD:
 
