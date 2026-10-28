@@ -38,13 +38,7 @@ Este repositorio está orientado a la generación de contenido educativo. Solo s
 - Todas las frases y todas las preguntas deben comenzar por mayúscula.
 - Se deben seguir las reglas ortográficas del español (acentuación, puntuación y uso correcto de signos de interrogación y exclamación de apertura y cierre).
 - Cada vez que se edite un fichero `.md`, se añadirá al final una línea con la fecha de actualización, con el formato: `**Fecha de actualización:** 31/01/2026`.
-- Las cuestiones generadas se guardarán en un fichero en la raíz del repositorio. El nombre del fichero debe incluir el nombre del módulo y el nivel de dificultad.
-- Cuando se solicite generar cuestiones, se generará directamente el fichero `.gift` final; no se crearán módulos ni scripts en Python para esa tarea.
-- Siempre se generarán 30 cuestiones de tipo cuestionario en formato GIFT.
-- Al finalizar cada generación de cuestiones, se validará el fichero con las reglas incluidas en este AGENTS.md.
-- En cuestiones tipo test y de desarrollo, no se incluirán preguntas que obliguen a memorizar datos numéricos concretos (por ejemplo, nº de núcleos, tasas, latencias u otros valores específicos de dispositivos o conceptos).
-- En preguntas tipo test y de desarrollo, los enunciados deben empezar por ¿ y terminar en ? y respetar tildes y ortografía correcta.
-- En preguntas tipo test no se incluirán casos de taller. Si excepcionalmente se incluyen, deberán ser menos del 10% del total de preguntas del fichero.
+- Para generar cuestiones, seguir obligatoriamente las normas de [AGENTS_GIFT.md](AGENTS_GIFT.md).
 
 ## Estructura de documentos teóricos (teoria/)
 
@@ -339,103 +333,9 @@ Ejemplo básico (Reveal.js HTML):
 - GitHub Pages publica desde la rama `gh-pages`.
 - El despliegue se realiza con `mkdocs gh-deploy --force`.
 
-## 7. Preguntas tipo test con penalización (formato GIFT)
+## 7. Cuestiones en formato GIFT (Moodle)
 
-Las preguntas tipo test para cuestionarios se generarán en **formato GIFT** de Moodle, con **una única respuesta correcta y varias incorrectas con penalización**.
-
-### 7.0. Fuentes para generar preguntas
-
-- Las preguntas deben basarse en los apuntes indicados.
-- Complementar siempre con información actualizada de Internet.
-
-### 7.1. Estructura básica de la pregunta
-
-Cada pregunta seguirá esta estructura:
-
-```gift
-::Texto corto identificador de la pregunta::
-Texto de la pregunta, lo más descriptiva posible. Puede plantear una situación práctica
-relacionada con el contenido del archivo de teoría al que acompaña. {
-
-=Respuesta correcta #Feedback formativo: explica por qué es correcta.
-~%-33.3333%Respuesta incorrecta 1 #Feedback formativo: explica por qué NO es correcta.
-~%-33.3333%Respuesta incorrecta 2 #Feedback formativo: explica por qué NO es correcta.
-~%-33.3333%Respuesta incorrecta 3 #Feedback formativo: explica por qué NO es correcta.
-}
-```
-
-### 7.2. Categorías Moodle (GIFT)
-
-- Al generar cuestionarios, la **primera línea** del fichero debe ser la categoría correspondiente:
-- Cada vez que se genere una unidad nueva, se deberá crear también su entrada de categoría en `scripts/SMR-categorias.gift` con el nombre normalizado de la unidad para Moodle.
-
-```gift
-$CATEGORY: SMR/Test/Nombre_de_la_unidad/Basico
-```
-
-El nombre de la unidad en la categoría debe estar **normalizado**:
-
-- Sin tildes ni caracteres especiales
-- Espacios reemplazados por `_`
-- Solo letras, números, `_` y `-`
-### 7.3 Obligatorio cuestiones (GIFT)
-
-- Siempre has de generar minimo 30 cuestiones.
-- Cuando se pidan cuestiones, se entregará únicamente el fichero `.gift`; no se generarán scripts ni módulos de apoyo en Python.
-
-- Evita enunciados del tipo ¿Qué describe mejor... y ¿Qué decisión es adecuada...
-
-- Cualquier caracter usado en el formato GIFT que pueda generar conflicto, como los símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
-
-- En la retroalimentacion de las cuestiones si se usan  símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida \ para evitar errores de interpretación.
-
-- Estas dos reglas de escape deben comprobarse siempre al generar un fichero de cuestiones. Es obligatorio validar que se cumplen.
-
-- El fichero con las cuestiones se almacena en el raiz del repositorio.
-
-- Estas autorizado a buscar informacion en fuentes externas como internet.
-
-### 7.4 Notación de bases en preguntas
-
-- En las cuestiones de numeración, usar subíndice para indicar la base (por ejemplo: 1010₂, 3A₁₆, 725₈, 37₁₀).
-
-### 7.5 Checklist de validación obligatoria (GIFT)
-
-- 30 cuestiones exactamente.
-- Primera línea con `$CATEGORY` correcto.
-- Una única respuesta correcta y varias incorrectas con penalización.
-- Fichero en la raíz del repositorio y nombre con módulo + dificultad.
-- Escape de caracteres especiales en enunciados.
-- Escape de caracteres especiales en retroalimentación.
-- Subíndice para bases en numeración.
-
-
-## 8. Preguntas tipo ensayo con editor HTML (formato GIFT Moodle)
-
-Las preguntas de **tipo ensayo** con editor HTML en Moodle se representan en GIFT siguiendo este patrón:
-
-```gift
-$CATEGORY: RUTA/CATEGORIA
-
-// question: ID_INTERNO  name: TÍTULO_VISIBLE_EN_MOODLE
-::TITULO_INTERNO::[html]ENUNCIADO_EN_HTML{}
-```
-
-### 8.1 Categoría en cuestiones de ensayo
-
-- Esta regla se aplicará **a partir de ahora** a todas las nuevas cuestiones de **ensayo** (no aplica a tipo test).
-- La cabecera `$CATEGORY` debe ser siempre: `SMR/Desarrollo/Titulo_del_tema`.
-- El `Titulo_del_tema` debe corresponder al título del tema sobre el que se hacen las cuestiones.
-- Normalizar el título del tema:
-  - Sin tildes ni caracteres especiales.
-  - Espacios reemplazados por `_`.
-  - Solo letras, números, `_` y `-`.
-
-Ejemplo para U10 (Tarjetas Gráficas):
-
-```gift
-$CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
-```
+Las cuestiones tipo test y de ensayo en formato GIFT se generan siguiendo obligatoriamente las normas de [AGENTS_GIFT.md](AGENTS_GIFT.md): estructura, categorías Moodle, escape de caracteres, notación de bases y checklist de validación.
 
 
 
@@ -449,3 +349,5 @@ $CATEGORY: SMR/Desarrollo/Tarjetas_Graficas
 **Fecha de actualización:** 19/02/2026
 
 **Fecha de actualización:** 04/05/2026
+
+**Fecha de actualización:** 23/10/2026

@@ -1,0 +1,211 @@
+$CATEGORY: SMR/Test/Componentes_internos_del_PC/Basico
+
+::CI_01_Funcion_placa_base::¿Qué función principal cumple la placa base dentro del ordenador? {
+=Interconectar y coordinar los componentes del sistema #Correcto: la placa base es el núcleo de interconexión entre procesador, memoria, almacenamiento, periféricos y alimentación.
+~%-33.3333%Almacenar de forma permanente los datos del usuario #Incorrecto: el almacenamiento permanente lo realizan los discos HDD y SSD, no la placa base.
+~%-33.3333%Generar la imagen que se muestra en el monitor #Incorrecto: esa tarea corresponde a la tarjeta gráfica, no a la placa base en sí.
+~%-33.3333%Ejecutar las instrucciones de los programas #Incorrecto: esa tarea corresponde al procesador, que se instala sobre la placa base.
+}
+
+::CI_02_Factor_forma_sobremesa::¿Qué factor de forma es el más utilizado en equipos de sobremesa de uso general? {
+=ATX #Correcto: ATX es el estándar dominante en sobremesa, con gran expansión y compatibilidad con casi cualquier chasis.
+~%-33.3333%Mini-ITX #Incorrecto: Mini-ITX es un formato muy compacto, pensado para equipos pequeños y con poca expansión.
+~%-33.3333%CAMM2 #Incorrecto: CAMM2 es un formato de memoria RAM modular para portátiles premium, no un factor de forma de placa base.
+~%-33.3333%E-ATX #Incorrecto: E-ATX es un formato grande orientado a workstations y gaming extremo, no al uso general.
+}
+
+::CI_03_Factor_forma_compacto::¿Qué factor de forma está pensado para equipos muy pequeños con poca capacidad de expansión? {
+=Mini-ITX #Correcto: su tamaño reducido limita el número de ranuras de expansión y la refrigeración disponible.
+~%-33.3333%E-ATX #Incorrecto: E-ATX es el formato de placa de mayor tamaño, con muchas ranuras de expansión.
+~%-33.3333%ATX #Incorrecto: ATX ofrece una expansión amplia y no está pensado para equipos muy pequeños.
+~%-33.3333%XL-ATX #Incorrecto: XL-ATX es un formato de gran tamaño, orientado a servidores.
+}
+
+::CI_04_Concepto_socket::¿Qué es el socket de la placa base? {
+=El zócalo eléctrico y mecánico donde se instala el procesador #Correcto: el socket define el tipo de procesador compatible y la forma en que se conecta.
+~%-33.3333%El conector donde se instala la memoria RAM #Incorrecto: la memoria RAM se instala en las ranuras DIMM, no en el socket del procesador.
+~%-33.3333%El chip que controla los puertos USB #Incorrecto: esa función la realiza el chipset, no el socket.
+~%-33.3333%La tarjeta donde se conecta la fuente de alimentación #Incorrecto: la fuente se conecta a la placa mediante los conectores de alimentación, no mediante el socket.
+}
+
+::CI_05_Socket_LGA::¿Cómo están formados los contactos de un socket LGA? {
+=Con pines en el socket y contactos planos en el procesador #Correcto: en LGA, los pines van en la placa y el procesador tiene superficies de contacto planas.
+~%-33.3333%Con pines en el procesador y agujeros en el socket #Incorrecto: esa es la disposición de los sockets PGA, no de los LGA.
+~%-33.3333%Con bolas de soldadura bajo el procesador #Incorrecto: las bolas de soldadura son propias de los chips BGA, que van soldados a la placa.
+~%-33.3333%Con un cable que se conecta al disipador #Incorrecto: los sockets no utilizan cables para conectar el procesador.
+}
+
+::CI_06_Procesador_BGA::¿Por qué un procesador soldado directamente a la placa base (BGA) no se puede sustituir por el usuario? {
+=Porque va soldado a la placa y no es intercambiable #Correcto: al estar soldado, no existe un socket que permita cambiarlo sin desoldar.
+~%-33.3333%Porque su socket es demasiado frágil para manipularlo #Incorrecto: en un BGA no hay socket; el problema es que el chip está soldado.
+~%-33.3333%Porque solo funciona con memoria DDR4 #Incorrecto: el tipo de memoria no impide cambiar el procesador; la soldadura sí.
+~%-33.3333%Porque necesita un disipador específico del fabricante #Incorrecto: el disipador no es el motivo por el que un procesador BGA no se puede cambiar.
+}
+
+::CI_07_Funcion_chipset::¿Qué función principal tiene el chipset en la placa base? {
+=Controlar los buses y gestionar los periféricos de menor velocidad, como USB, SATA y red #Correcto: el chipset (PCH) coordina las comunicaciones entre la CPU y el resto de dispositivos.
+~%-33.3333%Convertir la tensión de la fuente para alimentar la CPU #Incorrecto: esa función corresponde al VRM, no al chipset.
+~%-33.3333%Almacenar los datos de los programas en ejecución #Incorrecto: esa función corresponde a la memoria RAM.
+~%-33.3333%Refrigerar el procesador mediante el disipador #Incorrecto: la refrigeración la realizan el disipador y los ventiladores, no el chipset.
+}
+
+::CI_08_Funcion_VRM::¿Qué función cumple el VRM de la placa base? {
+=Convertir y estabilizar la tensión que llega desde la fuente a los niveles que necesitan la CPU y la memoria #Correcto: el VRM adapta la alimentación a los valores precisos que requieren los chips sensibles.
+~%-33.3333%Guardar temporalmente los archivos abiertos por el usuario #Incorrecto: esa función corresponde a la memoria RAM y al almacenamiento.
+~%-33.3333%Conectar las tarjetas de expansión a la placa base #Incorrecto: esa función corresponde a las ranuras de expansión, como PCIe.
+~%-33.3333%Gestionar la conexión de la red inalámbrica #Incorrecto: esa función corresponde a los módulos Wi-Fi y al chipset.
+}
+
+::CI_09_Tipo_RAM_actual::¿Qué tipo de memoria RAM es el estándar actual en equipos de sobremesa nuevos? {
+=DDR5 #Correcto: DDR5 es el estándar actual, con mayor frecuencia y eficiencia que las generaciones anteriores.
+~%-33.3333%DDR4 #Incorrecto: DDR4 fue el estándar predominante hasta hace poco, pero ya ha sido sustituido por DDR5.
+~%-33.3333%SO-DIMM #Incorrecto: SO-DIMM es un formato de tamaño reducido, usado sobre todo en portátiles, no un tipo de memoria.
+~%-33.3333%CAMM2 #Incorrecto: CAMM2 es un formato modular usado en portátiles premium, no el estándar de sobremesa.
+}
+
+::CI_10_Doble_canal::¿Cómo se deben instalar los módulos de memoria para activar la arquitectura de doble canal? {
+=Usando dos módulos idénticos en las ranuras que indica el fabricante #Correcto: los módulos iguales en las ranuras adecuadas permiten que la CPU use dos canales en paralelo.
+~%-33.3333%Usando dos módulos de distinta capacidad para ampliar la memoria #Incorrecto: mezclar capacidades no permite activar el doble canal de forma óptima.
+~%-33.3333%Usando un único módulo en la ranura más alejada del procesador #Incorrecto: con un solo módulo solo existe un canal de memoria.
+~%-33.3333%Usando cualquier ranura libre sin importar el orden #Incorrecto: el orden de las ranuras es importante para activar el doble canal.
+}
+
+::CI_11_Consulta_ranuras::¿Dónde se consulta la distribución correcta de las ranuras de memoria RAM? {
+=En el manual de la placa base #Correcto: el manual indica qué ranuras usar para cada configuración de canales.
+~%-33.3333%En la etiqueta de la caja del procesador #Incorrecto: esa etiqueta informa del procesador, no de la distribución de la memoria.
+~%-33.3333%En el cable de alimentación de la fuente #Incorrecto: el cable de alimentación no contiene información sobre las ranuras de memoria.
+~%-33.3333%En el panel trasero del chasis #Incorrecto: el panel trasero muestra conectores externos, no la configuración de la memoria.
+}
+
+::CI_12_Conector_M2::¿Qué conector se utiliza para instalar directamente sobre la placa base un SSD NVMe de formato compacto? {
+=M.2 #Correcto: el conector M.2 permite instalar SSD compactos sin cables, aprovechando el bus PCIe.
+~%-33.3333%SATA #Incorrecto: SATA se usa para unidades con cable de datos, no para SSD NVMe de formato compacto.
+~%-33.3333%Molex #Incorrecto: Molex es un conector de alimentación antiguo, no un conector de datos.
+~%-33.3333%ATX de 24 pines #Incorrecto: ese conector alimenta la placa base, no sirve para conectar almacenamiento.
+}
+
+::CI_13_Conector_SATA::¿Qué conector se utiliza habitualmente para conectar un disco duro HDD con cable de datos? {
+=SATA #Correcto: SATA es el conector de datos habitual para discos HDD y SSD con cable.
+~%-33.3333%PCIe x16 #Incorrecto: la ranura PCIe x16 se reserva para tarjetas de expansión como la gráfica.
+~%-33.3333%EPS de 8 pines #Incorrecto: el conector EPS aporta alimentación a la CPU, no transmite datos.
+~%-33.3333%Front Panel Header #Incorrecto: ese conector gestiona los botones y los LED del chasis.
+}
+
+::CI_14_Ranura_grafica::¿Qué ranura se utiliza habitualmente para instalar una tarjeta gráfica dedicada? {
+=PCIe x16 #Correcto: la ranura PCIe x16 ofrece el mayor ancho de banda para la tarjeta gráfica.
+~%-33.3333%M.2 #Incorrecto: M.2 está pensado para SSD y módulos compactos, no para tarjetas gráficas.
+~%-33.3333%SATA #Incorrecto: SATA es un conector de almacenamiento, no una ranura de expansión.
+~%-33.3333%RJ-45 #Incorrecto: RJ-45 es un conector de red externo, no una ranura de expansión.
+}
+
+::CI_15_Alimentacion_CPU::¿Qué conector proporciona energía adicional directamente a la CPU? {
+=EPS (CPU Power) #Correcto: el conector EPS alimenta el procesador con energía adicional a la que llega por el conector principal.
+~%-33.3333%SATA Power #Incorrecto: SATA Power alimenta unidades de almacenamiento, no el procesador.
+~%-33.3333%Molex #Incorrecto: Molex es un conector antiguo para dispositivos auxiliares, no para la CPU.
+~%-33.3333%USB 3.2 Header #Incorrecto: ese conector transmite datos de puertos USB frontales y no alimenta la CPU.
+}
+
+::CI_16_Alimentacion_placa::¿Qué conector alimenta la placa base en su conjunto? {
+=ATX de 24 pines #Correcto: es el conector principal que suministra energía a toda la placa base.
+~%-33.3333%SATA Power #Incorrecto: SATA Power alimenta unidades de almacenamiento, no la placa base.
+~%-33.3333%PCIe de 8 pines #Incorrecto: ese conector alimenta tarjetas gráficas, no la placa base.
+~%-33.3333%Front Panel Header #Incorrecto: ese conector gestiona los botones y los LED del chasis, no la alimentación.
+}
+
+::CI_17_Front_panel::¿Qué conector interno de la placa base gestiona los botones de encendido y reinicio del chasis? {
+=Front Panel Header #Correcto: este conector recibe las señales de los botones de encendido y reinicio y de los LED del panel frontal.
+~%-33.3333%PWM Fan Header #Incorrecto: ese conector regula la velocidad de los ventiladores.
+~%-33.3333%HD Audio Header #Incorrecto: ese conector gestiona el audio frontal, no los botones del chasis.
+~%-33.3333%RGB Header #Incorrecto: ese conector controla la iluminación, no los botones de encendido.
+}
+
+::CI_18_Disipador::¿Qué elemento se monta sobre el chipset o el VRM para absorber y disipar el calor? {
+=El disipador #Correcto: los disipadores absorben el calor de estos componentes y lo reparten para que se evacúe mejor.
+~%-33.3333%La fuente de alimentación #Incorrecto: la fuente suministra energía, no absorbe el calor de la placa.
+~%-33.3333%La pila de la placa base #Incorrecto: la pila alimenta el reloj del sistema y no tiene función de refrigeración.
+~%-33.3333%El conector Molex #Incorrecto: Molex es un conector de alimentación y no disipa calor.
+}
+
+::CI_19_Pasta_termica::¿Qué función cumple la pasta térmica entre el procesador y su disipador? {
+=Mejorar la transferencia de calor rellenando las microirregularidades de las superficies #Correcto: la pasta térmica elimina el aire entre ambas superficies y facilita que el calor pase al disipador.
+~%-33.3333%Aislar eléctricamente el procesador de la placa base #Incorrecto: la pasta térmica conduce calor, no aísla eléctricamente.
+~%-33.3333%Fijar el procesador al socket de forma permanente #Incorrecto: la sujeción la realiza el mecanismo de retención del socket, no la pasta.
+~%-33.3333%Proteger el procesador frente al polvo #Incorrecto: esa protección la aportan los filtros y el chasis, no la pasta térmica.
+}
+
+::CI_20_Clear_CMOS::¿Para qué sirve el Clear CMOS de la placa base? {
+=Para restablecer la configuración de la BIOS o UEFI a sus valores por defecto #Correcto: es útil cuando la configuración impide arrancar el equipo.
+~%-33.3333%Para borrar el contenido del disco duro #Incorrecto: el Clear CMOS no actúa sobre el almacenamiento.
+~%-33.3333%Para actualizar los controladores de la tarjeta gráfica #Incorrecto: los controladores se actualizan desde el sistema operativo o el fabricante.
+~%-33.3333%Para reiniciar el sistema operativo sin apagar el equipo #Incorrecto: el Clear CMOS no reinicia el sistema operativo.
+}
+
+::CI_21_BIOS_UEFI::¿Qué software de bajo nivel gestiona la configuración inicial de la placa base y el arranque del equipo? {
+=La BIOS o UEFI #Correcto: es el firmware que se ejecuta al encender el equipo, antes de cargar el sistema operativo.
+~%-33.3333%El sistema operativo instalado #Incorrecto: el sistema operativo se carga después de la BIOS o UEFI.
+~%-33.3333%El controlador de la tarjeta gráfica #Incorrecto: los controladores funcionan dentro del sistema operativo.
+~%-33.3333%El antivirus del equipo #Incorrecto: el antivirus se ejecuta sobre el sistema operativo y no gestiona el arranque.
+}
+
+::CI_22_POST::¿Qué comprueba el POST durante el arranque del equipo? {
+=El funcionamiento básico del hardware antes de cargar el sistema operativo #Correcto: el POST verifica componentes como la CPU, la memoria y el teclado antes de continuar.
+~%-33.3333%La velocidad de conexión a Internet #Incorrecto: el POST no comprueba la red externa.
+~%-33.3333%El estado de la batería de los programas instalados #Incorrecto: el POST no analiza el software instalado.
+~%-33.3333%La versión del navegador web #Incorrecto: el POST se ejecuta antes de cargar cualquier programa.
+}
+
+::CI_23_Pulsera_ESD::¿Qué precaución evita los daños por descarga electrostática al manipular los componentes? {
+=Usar una pulsera antiestática conectada a una superficie metálica o a tierra #Correcto: la pulsera descarga la electricidad acumulada en el cuerpo antes de tocar los componentes.
+~%-33.3333%Trabajar sobre una alfombra de fibra sintética #Incorrecto: las fibras sintéticas generan electricidad estática y aumentan el riesgo.
+~%-33.3333%Tocar los chips para comprobar su temperatura #Incorrecto: tocar los chips puede transmitir descargas que los dañen.
+~%-33.3333%Montar los componentes con el equipo encendido #Incorrecto: trabajar con el equipo encendido aumenta el riesgo de dañar los componentes.
+}
+
+::CI_24_Herramienta_limpieza::¿Qué material es el más adecuado para limpiar los contactos de la placa base? {
+=Alcohol isopropílico #Correcto: se evapora sin dejar residuos y no daña los componentes.
+~%-33.3333%Agua del grifo #Incorrecto: el agua conduce la electricidad y puede dañar la placa base.
+~%-33.3333%Limpiacristales con amoniaco #Incorrecto: el amoniaco puede dañar los materiales y los contactos de la placa.
+~%-33.3333%Lejía diluida #Incorrecto: la lejía es corrosiva y puede dañar los componentes.
+}
+
+::CI_25_Banco_pruebas::¿Qué ventaja tiene montar y verificar los componentes en un banco de pruebas antes de instalarlos en el chasis? {
+=Comprobar la compatibilidad y el funcionamiento del hardware de forma sencilla y segura #Correcto: el banco de pruebas permite detectar errores antes del montaje final.
+~%-33.3333%Reducir el consumo de pasta térmica #Incorrecto: el banco de pruebas no está relacionado con el consumo de pasta térmica.
+~%-33.3333%Evitar la necesidad de una fuente de alimentación #Incorrecto: el banco de pruebas necesita alimentación para verificar el hardware.
+~%-33.3333%Aumentar la capacidad de la memoria RAM #Incorrecto: montar el hardware en el banco no modifica la capacidad de la memoria.
+}
+
+::CI_26_Desmontaje_seguro::¿Qué debe hacerse antes de retirar los cables de un equipo? {
+=Desconectar la fuente de alimentación y esperar unos instantes #Correcto: así se evita dañar los componentes al desconectar cables con el equipo en tensión.
+~%-33.3333%Encender el equipo para comprobar que todo funciona #Incorrecto: encender el equipo durante el desmontaje puede causar daños.
+~%-33.3333%Tirar del cable con fuerza para soltarlo más rápido #Incorrecto: tirar de los cables puede dañar los conectores.
+~%-33.3333%Retirar primero el procesador y la memoria #Incorrecto: primero se desconecta la alimentación y después se retiran los componentes.
+}
+
+::CI_27_Thermal_throttling::¿Qué ocurre cuando un procesador se sobrecalienta de forma prolongada? {
+=Reduce automáticamente su rendimiento para protegerse #Correcto: este mecanismo se conoce como thermal throttling y evita daños en el chip.
+~%-33.3333%Aumenta de forma permanente su capacidad de cálculo #Incorrecto: el calor excesivo reduce el rendimiento, no lo aumenta.
+~%-33.3333%Se conecta automáticamente a la red del equipo #Incorrecto: el calor no provoca conexiones de red.
+~%-33.3333%Se reinicia la memoria RAM sin avisar #Incorrecto: el sobrecalentamiento afecta al procesador, no a la memoria RAM de esa forma.
+}
+
+::CI_28_Ventiladores_PWM::¿Qué permiten los conectores PWM de los ventiladores? {
+=Regular automáticamente la velocidad del ventilador según la temperatura #Correcto: el control PWM adapta la velocidad a la carga térmica del sistema.
+~%-33.3333%Aumentar la capacidad de la memoria RAM #Incorrecto: los ventiladores no influyen en la capacidad de la memoria.
+~%-33.3333%Transmitir datos a una tarjeta de red #Incorrecto: los conectores PWM se usan para el control de ventiladores, no para datos de red.
+~%-33.3333%Cargar la batería de un portátil #Incorrecto: los conectores PWM de la placa no cargan baterías.
+}
+
+::CI_29_Conector_RJ45::¿Qué conector externo permite conectar un equipo a una red cableada? {
+=RJ-45 #Correcto: el conector RJ-45 es el estándar para redes cableadas Ethernet.
+~%-33.3333%HDMI #Incorrecto: HDMI transmite vídeo y audio digital, no datos de red.
+~%-33.3333%TOSLINK #Incorrecto: TOSLINK transmite audio digital óptico.
+~%-33.3333%Jack de 3,5 mm #Incorrecto: el jack de 3,5 mm se usa para audio analógico.
+}
+
+::CI_30_Thunderbolt::¿Qué conector externo permite transmitir datos, vídeo y energía por un único cable? {
+=Thunderbolt 4 #Correcto: Thunderbolt 4 combina datos, vídeo y alimentación en un solo cable USB-C.
+~%-33.3333%Molex #Incorrecto: Molex es un conector interno de alimentación y no transmite datos ni vídeo.
+~%-33.3333%TOSLINK #Incorrecto: TOSLINK transmite audio digital, no vídeo ni energía.
+~%-33.3333%Front Panel Header #Incorrecto: es un conector interno del chasis y no es un puerto externo.
+}
