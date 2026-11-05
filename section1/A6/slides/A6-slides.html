@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="engineering-whiteprint">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A6 · A6.1 BIOS, UEFI y proceso de encendido</title>
+<link rel="stylesheet" href="../../slides/html-ppt-assets/fonts.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/base.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/animations/animations.css">
+<link rel="stylesheet" id="theme-link" href="../../slides/html-ppt-assets/themes/engineering-whiteprint.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/course-module.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/section1-educational.css">
+</head>
+<body class="tpl-course-module" data-themes="engineering-whiteprint,academic-paper,blueprint,corporate-clean,aurora,swiss-grid" data-theme-base="../../slides/html-ppt-assets/themes/">
+<a class="logo-badge" href="../../../"><img src="../../../assets/logo.png" alt="Logo IES Rafael Alberti"><span>IES Rafael Alberti</span></a>
+<a class="return-button" href="../">Volver a la unidad</a>
+<div class="deck">
+
+  <section class="slide full" data-title="Portada">
+    <p class="kicker">MONTAJE Y MANTENIMIENTO · A6</p>
+    <h1 class="h1 mt-s">A6.1 BIOS, UEFI y proceso de encendido</h1>
+    <p class="lede mt-l" style="max-width:64ch">BIOS, UEFI y proceso de encendido del PC</p>
+    <div class="row mt-l" style="gap:16px;flex-wrap:wrap">
+      <span class="pill-academic">apoyo visual de aula</span>
+      <span class="pill-academic">modo presentador</span>
+      <span class="pill-academic">enfoque práctico</span>
+    </div>
+    <div class="deck-footer"><span>Sección 1 · Montaje y mantenimiento</span><span class="slide-number" data-current="1" data-total="9"></span></div>
+    <div class="notes">Abre la unidad conectando el título con una situación real de aula o taller. La presentación resume el mapa mental, no sustituye a los apuntes completos.</div>
+  </section>
+
+  <section class="slide" data-title="Objetivos">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="current">Explicar panorama general del arranque con vocabula...</li><li class="">Explicar secuencia de encendido paso a paso con voc...</li><li class="">Explicar diagrama de flujo del arranque (con decisi...</li><li class="">Explicar el post en detalle con vocabulario técnico...</li><li class="">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">OBJETIVOS</p>
+      <h2 class="h2 mt-s">Al terminar esta unidad podrás…</h2>
+      <div class="stack mt-l">
+        <div class="concept-box"><h4>1. Explicar panorama general del arranque con vocabulario técnico básico</h4><p class="dim">Explicar panorama general del arranque con vocabulario técnico básico.</p></div><div class="concept-box"><h4>2. Explicar secuencia de encendido paso a paso con vocabulario técnico básico</h4><p class="dim">Explicar secuencia de encendido paso a paso con vocabulario técnico básico.</p></div><div class="concept-box"><h4>3. Explicar diagrama de flujo del arranque (con decisiones y errores) con vocabulario técnico básico</h4><p class="dim">Explicar diagrama de flujo del arranque (con decisiones y errores) con vocabulario técnico básico.</p></div><div class="concept-box"><h4>4. Explicar el post en detalle con vocabulario técnico básico</h4><p class="dim">Explicar el post en detalle con vocabulario técnico básico.</p></div>
+      </div>
+    </div>
+    <div class="deck-footer"><span>Objetivos de aprendizaje</span><span class="slide-number" data-current="2" data-total="9"></span></div>
+    <div class="notes">Marca los objetivos como una ruta. Es útil pedir al alumnado que anticipe qué conceptos ya conoce y cuáles espera aclarar durante la explicación.</div>
+  </section>
+
+  <section class="slide" data-title="Vocabulario">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="current">Explicar secuencia de encendido paso a paso con voc...</li><li class="">Explicar diagrama de flujo del arranque (con decisi...</li><li class="">Explicar el post en detalle con vocabulario técnico...</li><li class="">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">VOCABULARIO ESENCIAL</p>
+      <h2 class="h2 mt-s">Palabras que ordenan el tema.</h2>
+      <div class="term-grid mt-l"><div class="term"><b>Señal de encendido (Power On)</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div><div class="term"><b>Ejecucion del firmware (BIOS/UEFI)</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div><div class="term"><b>POST (Power-On Self Test)</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div><div class="term"><b>Inicializacion de dispositivos</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div><div class="term"><b>Seleccion de dispositivo de arranque</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div><div class="term"><b>Carga del sistema operativo</b><span class="dim">Palabra clave que debes reconocer, explicar y conectar con el funcionamiento del equipo.</span></div></div>
+    </div>
+    <div class="deck-footer"><span>Vocabulario</span><span class="slide-number" data-current="3" data-total="9"></span></div>
+    <div class="notes">Usa esta diapositiva para fijar lenguaje. Pide definiciones cortas y corrige solo lo necesario para que el grupo tenga un vocabulario común.</div>
+  </section>
+
+  <section class="slide" data-title="Mapa conceptual">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="current">Explicar secuencia de encendido paso a paso con voc...</li><li class="">Explicar diagrama de flujo del arranque (con decisi...</li><li class="">Explicar el post en detalle con vocabulario técnico...</li><li class="">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">MAPA MENTAL</p>
+      <h2 class="h2 mt-s">De la idea general al detalle técnico.</h2>
+      <div class="flow-row">
+        <div class="step-card"><span class="num">1</span><h4>Reconocer</h4><p class="dim">Identifica los elementos principales y nómbralos con precisión.</p></div>
+        <div class="step-card"><span class="num">2</span><h4>Relacionar</h4><p class="dim">Conecta cada elemento con su función dentro del sistema informático.</p></div>
+        <div class="step-card"><span class="num">3</span><h4>Aplicar</h4><p class="dim">Usa el concepto para elegir, montar, mantener o diagnosticar un equipo.</p></div>
+      </div>
+      <div class="callout"><b>Idea de clase.</b> Si puedes explicar qué ocurre antes, durante y después, ya tienes medio diagnóstico hecho.</div>
+    </div>
+    <div class="deck-footer"><span>Mapa conceptual</span><span class="slide-number" data-current="4" data-total="9"></span></div>
+    <div class="notes">Esta slide funciona como puente: no entrar todavía en detalles finos, sino en cómo pensar la unidad. Reconocer, relacionar y aplicar es la secuencia de trabajo.</div>
+  </section>
+
+  <section class="slide" data-title="Bloque 1">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="done">Explicar secuencia de encendido paso a paso con voc...</li><li class="current">Explicar diagrama de flujo del arranque (con decisi...</li><li class="">Explicar el post en detalle con vocabulario técnico...</li><li class="">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">BLOQUE 1</p>
+      <h2 class="h2 mt-s">Conceptos que debes dominar primero.</h2>
+      <div class="card-grid mt-l"><div class="concept-box compact"><h4>Panorama general del arranque</h4><p class="dim">El proceso de encendido de un PC es una secuencia ordenada de pasos que comienza cuando el usuario pulsa el boton de encendido y termina cuando el sistema operativo toma el control. Esta secuencia esta dirigida por el firmware de la placa base (BIOS o UEFI), que prepara el hardware, comprueba que todo funciona y decide desde que dispositivo se iniciara el sistema.</p></div>
+<div class="concept-box compact"><h4>Secuencia de encendido paso a paso</h4><p class="dim">La fuente de alimentacion entrega energia a la placa base. El chipset y la CPU reciben energia y se activan.</p></div>
+<div class="concept-box compact"><h4>Diagrama de flujo del arranque (con decisiones y errores)</h4><p class="dim">Este apartado ayuda a reconocer y relacionar Diagrama de flujo del arranque (con decisiones y errores) dentro del tema.</p></div></div>
+    </div>
+    <div class="deck-footer"><span>Bloque conceptual 1</span><span class="slide-number" data-current="5" data-total="9"></span></div>
+    <div class="notes">Desarrolla estos conceptos con calma. Conviene acompañarlos con ejemplos cotidianos antes de pasar a la parte más técnica.</div>
+  </section>
+
+  <section class="slide" data-title="Bloque 2">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="done">Explicar secuencia de encendido paso a paso con voc...</li><li class="done">Explicar diagrama de flujo del arranque (con decisi...</li><li class="current">Explicar el post en detalle con vocabulario técnico...</li><li class="">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">BLOQUE 2</p>
+      <h2 class="h2 mt-s">Funcionamiento y relaciones importantes.</h2>
+      <div class="card-grid mt-l"><div class="concept-box compact"><h4>El POST en detalle</h4><p class="dim">El POST es una serie de comprobaciones automaticas que validan componentes esenciales. Su objetivo es confirmar que el hardware minimo necesario para arrancar esta disponible y funciona correctamente antes de continuar.</p></div>
+<div class="concept-box compact"><h4>Fases tipicas dentro del POST</h4><p class="dim">Se comprueba que la CPU responde, se carga el microcodigo y se activan funciones basicas. Se detecta la memoria instalada y se realiza un conteo.</p></div>
+<div class="concept-box compact"><h4>Que indica un POST correcto</h4><p class="dim">Se escucha el pitido corto de inicio (si esta habilitado). Aparece logo o texto de la placa base.</p></div></div>
+    </div>
+    <div class="deck-footer"><span>Bloque conceptual 2</span><span class="slide-number" data-current="6" data-total="9"></span></div>
+    <div class="notes">Aquí interesa que el alumnado no memorice piezas aisladas. Refuerza causas, consecuencias y dependencias entre componentes o conceptos.</div>
+  </section>
+
+  <section class="slide" data-title="Bloque 3">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="done">Explicar secuencia de encendido paso a paso con voc...</li><li class="done">Explicar diagrama de flujo del arranque (con decisi...</li><li class="done">Explicar el post en detalle con vocabulario técnico...</li><li class="current">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">BLOQUE 3</p>
+      <h2 class="h2 mt-s">Criterios para decidir y comprobar.</h2>
+      <div class="card-grid mt-l"><div class="concept-box compact"><h4>Errores tipicos detectados por el POST</h4><p class="dim">RAM mal instalada o defectuosa: pitidos largos repetidos y detencion del arranque. GPU no detectada: pitido largo y varios cortos, pantalla en negro.</p></div>
+<div class="concept-box compact"><h4>Buenas practicas al diagnosticar con POST</h4><p class="dim">Verificar primero la RAM: extraer y volver a colocar los modulos. Probar con otra salida de video o con otra tarjeta grafica.</p></div>
+<div class="concept-box compact"><h4>Pitidos de error y diagnostico</h4><p class="dim">Los pitidos de la BIOS permiten identificar fallos cuando no hay video. El significado exacto depende del fabricante (AMI, Award, Phoenix), pero los patrones mas comunes son: Pitidos largos repetidos: fallo de RAM.</p></div></div>
+      <div class="callout"><b>Pregunta guía.</b> ¿Qué dato necesito mirar para saber si esto es compatible, correcto o seguro?</div>
+    </div>
+    <div class="deck-footer"><span>Bloque conceptual 3</span><span class="slide-number" data-current="7" data-total="9"></span></div>
+    <div class="notes">Haz explícito el criterio técnico. Es mejor que el alumnado aprenda a justificar decisiones que a repetir una lista de características.</div>
+  </section>
+
+  <section class="slide" data-title="Visual">
+    <aside class="sidebar">
+      <div class="brand">A6</div>
+      <h5>Ruta de aprendizaje</h5>
+      <ul class="obj-list"><li class="done">Explicar panorama general del arranque con vocabula...</li><li class="done">Explicar secuencia de encendido paso a paso con voc...</li><li class="done">Explicar diagrama de flujo del arranque (con decisi...</li><li class="done">Explicar el post en detalle con vocabulario técnico...</li><li class="current">Explicar fases tipicas dentro del post con vocabula...</li></ul>
+      <h5>Uso en clase</h5>
+      <p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p>
+    </aside>
+    <div class="main">
+      <p class="kicker">LECTURA VISUAL</p>
+      <h2 class="h2 mt-s">Imágenes para fijar la explicación.</h2>
+      <div class="visual-grid mt-l"><figure class="image-card"><img src="../teoria/assets/grub_boot_menu.png" alt="Grub boot menu"><figcaption>Grub boot menu</figcaption></figure><figure class="image-card"><img src="../teoria/assets/windows_boot_manager.png" alt="Windows boot manager"><figcaption>Windows boot manager</figcaption></figure><figure class="image-card"><img src="../teoria/assets/gpt_partition_table_scheme.png" alt="Gpt partition table scheme"><figcaption>Gpt partition table scheme</figcaption></figure><figure class="image-card"><img src="../teoria/assets/gpt_partition_table_scheme.svg" alt="Gpt partition table scheme"><figcaption>Gpt partition table scheme</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>Apoyo visual</span><span class="slide-number" data-current="8" data-total="9"></span></div>
+    <div class="notes">No describas solo la imagen. Señala relaciones: entradas y salidas, capas, partes móviles, rutas de señal, conectores o puntos de fallo.</div>
+  </section>
+
+  <section class="slide full" data-title="Cierre">
+    <p class="kicker">CIERRE · A6</p>
+    <h1 class="h1 mt-s">Qué debes llevarte.</h1>
+    <div class="summary-strip">
+      <div class="concept-box"><h4>Panorama general del arranque</h4><p class="dim">El proceso de encendido de un PC es una secuencia ordenada de pasos que comienza cuando el usuario pulsa el boton de encendido y termina cuando el sistema operativo toma el control. Esta secuencia esta dirigida por el firmware de la placa base (BIOS o UEFI), que prepara el hardware, comprueba que todo funciona y decide desde que dispositivo se iniciara el sistema.</p></div><div class="concept-box"><h4>Secuencia de encendido paso a paso</h4><p class="dim">La fuente de alimentacion entrega energia a la placa base. El chipset y la CPU reciben energia y se activan.</p></div><div class="concept-box"><h4>Diagrama de flujo del arranque (con decisiones y errores)</h4><p class="dim">Este apartado ayuda a reconocer y relacionar Diagrama de flujo del arranque (con decisiones y errores) dentro del tema.</p></div><div class="concept-box"><h4>El POST en detalle</h4><p class="dim">El POST es una serie de comprobaciones automaticas que validan componentes esenciales. Su objetivo es confirmar que el hardware minimo necesario para arrancar esta disponible y funciona correctamente antes de continuar.</p></div>
+    </div>
+    <div class="callout"><b>Antes de terminar.</b> Explica el tema en voz alta usando tres frases: qué es, cómo funciona y cómo lo comprobarías en un equipo real.</div>
+    <div class="deck-footer"><span>Resumen final</span><span class="slide-number" data-current="9" data-total="9"></span></div>
+    <div class="notes">Cierra con una comprobación oral breve. Si el alumnado puede contestar qué es, cómo funciona y cómo se comprueba, la unidad queda mucho más asentada.</div>
+  </section>
+
+</div>
+<script src="../../slides/html-ppt-assets/runtime.js"></script>
+</body>
+</html>

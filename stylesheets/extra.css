@@ -1,0 +1,84 @@
+.md-grid {
+  max-width: 1440px; 
+}
+
+/* Ajuste de ancho de contenido para mejorar legibilidad en pantallas grandes */
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 88rem;
+  }
+
+  .md-content {
+    max-width: 70rem;
+  }
+
+  .md-typeset {
+    max-width: 68rem;
+  }
+}
+
+/* En pantallas muy grandes, ampliar un poco más sin perder confort de lectura */
+@media screen and (min-width: 120em) {
+  .md-grid {
+    max-width: 96rem;
+  }
+
+  .md-content {
+    max-width: 76rem;
+  }
+
+  .md-typeset {
+    max-width: 72rem;
+  }
+}
+
+/* Mantener márgenes razonables en móvil */
+@media screen and (max-width: 44.9375em) {
+  .md-content__inner {
+    margin: 0 0.6rem;
+  }
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.home-cover {
+  margin: 0 auto 1.8rem;
+  max-width: 56rem;
+  text-align: center;
+}
+
+.home-cover img {
+  display: block;
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.18);
+}
+
+.home-cover figcaption {
+  margin-top: 0.55rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+/* Resalte visual para ejemplos y fragmentos de codigo destacados */
+.u03-destacados .highlight,
+.u03-destacados pre {
+  border: 2px solid #1f6feb;
+  border-left-width: 0.5rem;
+  border-radius: 0.7rem;
+  background: #eef6ff;
+  box-shadow: 0 0.2rem 0.8rem rgba(31, 111, 235, 0.08);
+}
