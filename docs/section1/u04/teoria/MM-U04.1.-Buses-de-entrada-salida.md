@@ -241,7 +241,7 @@ Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe
 |---|---|---|---|
 | **ISA** | Paralelo, compartido | Muy bajo (≈16 MB/s como máximo) | Tarjetas de los primeros PC |
 | **PCI** | Paralelo de 32 bits a 33 MHz, **compartido** | ≈133 MB/s para todas las tarjetas | Tarjetas de sonido, red, etc. |
-| **AGP** | Paralelo, puerto **dedicado** a la gráfica | AGP 8x ≈2,1 GB/s | Tarjeta gráfica (hasta mediados de los 2000) |
+| **AGP** | Paralelo, puerto **dedicado** a la gráfica | AGP 8x ≈2,1 GB/s | Tarjeta gráfica (sustituido por PCIe desde 2004) |
 
 PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la velocidad escala con las versiones y las *lanes*.
 
@@ -600,7 +600,7 @@ Entornos industriales/legado: impresoras antiguas, instrumentación, PLC. Se sac
 
 ### 15.1 Para qué sirven
 Thunderbolt es una interfaz de alta velocidad para la conexión de periféricos. Permite transferir datos, enviar señal de vídeo y suministrar energía a través de un único cable y conector, combinando los protocolos PCI Express y DisplayPort sobre USB‑C (desde Thunderbolt 3).
-Sincronizar/controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER/USB4_HEADER**) **no** lleva datos USB: expone **GPIO/sideband** (p. ej., **FORCE_PWR**, **WAKE#**, señales de seguridad/permiso).
+Sincronizar y controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER**) **no** transporta los datos de Thunderbolt ni de USB: lleva solo **señales de control** (alimentación, estados de reposo, I²C y reset y despertar de PCIe) entre la placa y la tarjeta.
 
 <figure markdown="span">
   ![Dos puertos Thunderbolt 3 con conector USB-C y el símbolo del rayo](../assets/thunderbolt3_puertos.jpg){ style="max-width: 60%; height: auto;" }
@@ -609,15 +609,50 @@ Sincronizar/controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER/USB4_
 
 ### 15.2 Cómo funcionan (no son USB de datos)
 - La AIC se inserta en **PCIe** y puede enlazar **DisplayPort** desde la GPU para *Alt Mode*.  
-- El header establece **presencia**, **alimentación forzada**, **wake** y estados S3/S4; sin AIC, el header **no habilita** USB4 por sí solo.
+- El header transmite la **alimentación forzada**, los **estados de reposo** (S3, S5 y S0 idle), el **I²C** de gestión y el **reset** y el **despertar** de PCIe; sin AIC, el header **no habilita** USB4 por sí solo.
+- Una tarjeta Thunderbolt 4 como la **ASUS ThunderboltEX 4** usa **PCIe 3.0 x4**, el cable del **TB_HEADER** (14‑1 pines), un cable **USB 2.0** (10‑1 pines), una o dos entradas **Mini DisplayPort IN** (desde la GPU o la salida de vídeo de la placa) y un conector de alimentación **PCIe de 6 pines**.
+- Solo funciona en las placas que tengan ese header y figuren en la lista de modelos compatibles del fabricante, y hay que activar la opción Thunderbolt/USB4 en la BIOS.
 
-### 15.3 USB4 v2.0 y requisitos prácticos
+### 15.3 Pinout del header TB_HEADER (14‑1 pines) de la tarjeta Thunderbolt 4
+
+El **TB_HEADER** de 14‑1 pines (13 pines más una clave) es el que usan las tarjetas **Thunderbolt 4**, como la **ASUS ThunderboltEX 4**. Su cable lleva **solo señales de control**: los datos viajan por **PCIe** (la ranura de la tarjeta) y el vídeo, por los cables **DisplayPort IN**.
+
+<figure markdown="span">
+  ![Header Thunderbolt TB_HEADER de 14-1 pines con la señal de cada pin, agrupadas por función](../assets/thunderbolt_header_pinout.svg){ style="max-width: 100%; height: auto;" }
+  <figcaption>Pinout del TB_HEADER (14-1 pines): los pines impares están en la fila inferior y los pares en la superior; el pin 11 es la clave.</figcaption>
+</figure>
+
+| Pin | Señal | Función |
+|---:|---|---|
+| 1 | FORCE_PWR | Fuerza el encendido del controlador Thunderbolt de la tarjeta. En plataformas AMD se activa con el jumper Force_PWR de la tarjeta (posición 1-2); en Intel se deja flotante (2-3). |
+| 2 | I2C_SCL | Reloj del bus I²C de gestión entre la placa y la tarjeta. |
+| 3 | TB_CIO_PLUG_EVENT | Evento de conexión (*hot-plug*) de Thunderbolt: línea auxiliar con la que la tarjeta avisa a la placa de que se ha conectado o retirado un dispositivo, incluso con el controlador apagado. En las placas ASUS para AMD (por ejemplo, la ROG STRIX B550-F) este pin es **GND**. |
+| 4 | I2C_SDA | Datos del bus I²C de gestión. |
+| 5 | SLP_S3# | Señal del chipset, activa en bajo: indica la suspensión a RAM (S3). La tarjeta la usa para saber cuándo reducir su alimentación. |
+| 6 | I2C_IRQ# | Línea de interrupción, activa en bajo, asociada al bus I²C: avisa de un evento que requiere atención. Por equivalencia con la etiqueta de Biostar (3V3_AIC_PD_INT#), procede del controlador de USB Power Delivery de la tarjeta. |
+| 7 | SLP_S5# | Señal del chipset, activa en bajo: indica el apagado suave (S5), en el que se corta la alimentación de lo no esencial. |
+| 8 | RTD3_POWER_EN | Señal de habilitación (*enable*) de la alimentación del controlador cuando se usa RTD3 (*Runtime D3*): el sistema corta la energía de la tarjeta si está inactiva y la devuelve después (en MSI, «PWR EN» del header JRTD3). |
+| 9 | GND | Masa: segundo retorno de las señales. |
+| 10 | S_SLP_S0#_IDLE | Indica el reposo profundo SLP_S0# de la plataforma (estado S0ix), en el que la tarjeta debe consumir lo mínimo. |
+| 11 | — (clave) | Posición sin pin: evita conectar el cable al revés. Por eso el header es de «14-1» pines. |
+| 12 | PERST_N | Reinicio fundamental de PCIe, activo en bajo: mantiene el controlador en reset hasta que la alimentación y el reloj son estables; al subir comienza la inicialización del enlace. |
+| 13 | RTD3_SW | Señal relacionada con RTD3 (*Runtime D3*) que ASUS no documenta; en las tarjetas, el jumper RTD3 define si se usa (por defecto, «sin RTD3»). Su función exacta **no está confirmada en una fuente oficial**. |
+| 14 | WAKE# | Señal de despertar de PCIe, activa en bajo: la tarjeta la activa para sacar al sistema de un estado de bajo consumo, por ejemplo al conectar un dispositivo. |
+
+**Notas importantes**
+
+- Las señales terminadas en **#** son **activas en bajo**.
+- Intel no publica la especificación completa del header: los **nombres y las posiciones** proceden de los manuales de ASUS (PRIME Z590-P para Intel y ROG STRIX B550-F para AMD, que solo difieren en el pin 3), y la **función** de cada señal, de las definiciones estándar de PCIe y del chipset Intel, del kernel de Linux y de los manuales de MSI y Biostar.
+- Otros fabricantes usan **otras distribuciones**: ASRock emplea un header **TBT de 5 pines** (y un **TB1 de 10 pines** en algunas placas) y Gigabyte lo llama **THB_C**. Comprueba siempre el manual de la placa y usa el cable que acompaña a la tarjeta.
+- Las tarjetas de ASRock llevan tres **jumpers**: **Force_PWR** (2-3 flotante en Intel; 1-2 fuerza el encendido en AMD), **PD_RESET** (1-2 fuerza el reset) y **RTD3** (3-4 sin RTD3).
+
+### 15.4 USB4 v2.0 y requisitos prácticos
 USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr hasta 40 Gbps de velocidad con conector USB‑C. Ofrece transmisión simultánea de datos y vídeo, además de carga eléctrica avanzada y compatibilidad con dispositivos Thunderbolt 3/4.
 - Hasta **80 Gb/s** (simétrico) o **120/40** (asimétrico, PAM3).  
 - Requiere **cables** y **retimers** de alta calidad; longitudes internas **mínimas**.
 
 ---
-### 15.4 Tabla comparativa de versiones Thunderbolt y USB4
+### 15.5 Tabla comparativa de versiones Thunderbolt y USB4
 
 | Tecnología       | Año     | Velocidad máxima | Conector                   | Características principales                               |
 |------------------|---------|------------------|----------------------------|-----------------------------------------------------------|
@@ -673,7 +708,7 @@ USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr ha
 - **Sin audio frontal**: conector **AC’97** en vez de **HD Audio**; jack‑detect desactivado; masa mal rutada.  
 - **LED HDD no enciende**: polaridad invertida o mapeo distinto al manual.  
 - **COM mudo**: confusión **RS‑232 vs TTL**; BIOS deshabilitado; necesitabas **null‑modem**.  
-- **TB/USB4 sin funcionar**: no hay **AIC** instalada, falta cable **DP in**, *drivers/firmware* desactualizados.
+- **TB/USB4 sin funcionar**: no hay **AIC** instalada, falta el cable del **TB_HEADER** o el de **DP in**, la opción Thunderbolt/USB4 está desactivada en la **BIOS**, o los *drivers/firmware* están desactualizados.
 
 ---
 
@@ -701,6 +736,7 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 | `com_header_cableado.svg` | [PC MB-COMport wiring](https://commons.wikimedia.org/wiki/File:PC_MB-COMport_wiring.svg) | Hans Haase | CC BY-SA 3.0 |
 | `thunderbolt3_puertos.jpg` | [Thunderbolt 3 interface USB-C ports](https://commons.wikimedia.org/wiki/File:Thunderbolt_3_interface_USB-C_ports.jpg) | Amin | CC BY-SA 4.0 |
 | `usb3_header_pinout.svg`, `aafp_pinout.svg` | Esquemas propios basados en la documentación de Intel | Autor del curso | — |
+| `thunderbolt_header_pinout.svg`, `thunderbolt_header_pinout_slide.svg` | Esquema propio basado en los manuales de ASUS (PRIME Z590-P y ROG STRIX B550-F GAMING WIFI II, header TB_HEADER) | Autor del curso | — |
 | `pci_pcie_ranuras.jpg` | [PCI und PCIe Slots](https://commons.wikimedia.org/wiki/File:PCI_und_PCIe_Slots.jpg) | Smial | CC BY-SA 2.0 DE |
 | `pch_ranuras_pcie.jpg` | [GigabyteH170-HD3-PCH-and-Slots](https://commons.wikimedia.org/wiki/File:GigabyteH170-HD3-PCH-and-Slots.jpg) | TheStriker | CC BY-SA 4.0 |
 | `sata_puertos.jpg` | [SATA ports](https://commons.wikimedia.org/wiki/File:SATA_ports.jpg) | Berkut | CC BY-SA 3.0 |
@@ -722,5 +758,19 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 - [Direct Media Interface (Wikipedia)](https://en.wikipedia.org/wiki/Direct_Media_Interface): velocidades de DMI.
 - [Compute Express Link (Wikipedia)](https://en.wikipedia.org/wiki/Compute_Express_Link): CXL y PCIe.
 - [Socket AM5 (Wikipedia)](https://en.wikipedia.org/wiki/Socket_AM5): enlace de AMD con el chipset.
+- [Manual de la ASUS ROG STRIX B550-F GAMING WIFI II](https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM4/ROG_STRIX_B550-F_GAMING_WIFI_II/E18592_ROG_STRIX_B550-F_GAMING_WI-FI_II_UM_WEB.pdf): nombres y posiciones del TB_HEADER.
+- [Manual de la ASUS PRIME Z590-P](https://dlcdnets.asus.com/pub/ASUS/mb/LGA1200/PRIME_Z590-P/E17604_PRIME_Z590-P_UM_V2_WEB.pdf): TB_HEADER en plataforma Intel (pin 3 = TB_CIO_PLUG_EVENT).
+- [Manual de la MSI MPG Z490 GAMING PLUS (JTBT1 y JRTD3)](https://www.manualslib.com/manual/1967764/Msi-Mpg-Z490-Gaming-Plus.html?page=37): señales FORCE_PWR, SCI_EVENT, SLP_S3#, SLP_S5# y PWR EN.
+- [Controlador RTD3 de coreboot](https://doc.coreboot.org/drivers/rtd3.html): función de las señales de habilitación de energía de RTD3.
+- [ASUS ThunderboltEX 4 (FAQ)](https://www.asus.com/support/faq/1053841/): conexiones y requisitos de la tarjeta.
+- [ASRock Thunderbolt 4 AIC (manual)](https://download.asrock.com/Manual/Thunderbolt%204%20AIC.pdf): jumpers de la tarjeta.
+- [Intel, PCH serie 700: señales y planos de alimentación](https://edc.intel.com/content/www/us/en/design/products-and-solutions/processors-and-chipsets/700-series-chipset-family-platform-controller-hub-datasheet-volume-1-of/system-power-supplies-planes-and-signals): SLP_S3# y SLP_S5#.
+- [Low Power Idle Table (documentación de Linux)](https://docs.kernel.org/firmware-guide/acpi/lpit.html): SLP_S0# y el estado S0ix.
+- [Texas Instruments, señales PERST y WAKE de PCIe](https://www.ti.com/document-viewer/lit/html/SPRADH9/GUID-3CA72D6F-23F5-4BD3-A11B-238F003F62F0): reset y despertar de PCIe.
+- [HyperTransport (Wikipedia)](https://en.wikipedia.org/wiki/HyperTransport): año de introducción y uso en las CPU de AMD.
+- [Intel QuickPath Interconnect (Wikipedia)](https://en.wikipedia.org/wiki/Intel_QuickPath_Interconnect): año y velocidad de QPI.
+- [Conventional PCI (Wikipedia)](https://en.wikipedia.org/wiki/Conventional_PCI): ancho de banda del bus PCI.
+- [Accelerated Graphics Port (Wikipedia)](https://en.wikipedia.org/wiki/Accelerated_Graphics_Port): velocidades y retirada de AGP.
+- [Industry Standard Architecture (Wikipedia)](https://en.wikipedia.org/wiki/Industry_Standard_Architecture): ancho de banda de ISA.
 
 **Fecha de actualización:** 10/11/2026
