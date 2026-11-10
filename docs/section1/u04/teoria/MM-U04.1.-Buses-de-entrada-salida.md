@@ -70,7 +70,7 @@ Los buses clásicos se agrupan por la función de sus líneas:
 - **Bus de control**: señales de **lectura/escritura**, reloj, interrupciones, reset y arbitraje del bus.
 
 <figure markdown="span">
-  ![Esquema de los tres buses clásicos (direcciones, datos y control) entre la CPU, la memoria RAM y los dispositivos de E/S](../assets/bus_direcciones_datos_control.svg){ style="max-width: 100%; height: auto;" }
+  ![Esquema de los tres buses clásicos (direcciones, datos y control) entre la CPU, la memoria RAM y los dispositivos de E/S](assets/bus_direcciones_datos_control.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Los buses de direcciones, de datos y de control conectan la CPU, la memoria y los dispositivos de E/S.</figcaption>
 </figure>
 
@@ -118,7 +118,7 @@ Casi todos los buses tienen un **maestro** (host, controlador) que inicia las tr
 La CPU integra el **controlador de memoria** y las líneas **PCIe principales**; el **chipset** concentra el resto de la E/S y se enlaza con la CPU por un bus dedicado.
 
 <figure markdown="span">
-  ![Mapa de buses de un PC actual: bus de memoria y PCIe de la CPU, enlace CPU-chipset y, desde el chipset, PCIe, SATA, USB, audio, SPI/eSPI e I2C](../assets/mapa_buses_sistema.svg){ style="max-width: 100%; height: auto;" }
+  ![Mapa de buses de un PC actual: bus de memoria y PCIe de la CPU, enlace CPU-chipset y, desde el chipset, PCIe, SATA, USB, audio, SPI/eSPI e I2C](assets/mapa_buses_sistema.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Mapa de buses de un PC actual: lo que cuelga de la CPU y lo que cuelga del chipset.</figcaption>
 </figure>
 
@@ -157,7 +157,7 @@ Lo sustituyeron enlaces **serie punto a punto**, mientras el controlador de memo
 | **PCIe x4** | AMD | CPU ↔ chipset | PCIe 4.0 x4 ≈7,9 GB/s |
 
 <figure markdown="span">
-  ![Comparación entre la arquitectura con FSB y Northbridge y la arquitectura actual, con el controlador de memoria en la CPU y un enlace punto a punto con el chipset](../assets/evolucion_buses_cpu.svg){ style="max-width: 100%; height: auto;" }
+  ![Comparación entre la arquitectura con FSB y Northbridge y la arquitectura actual, con el controlador de memoria en la CPU y un enlace punto a punto con el chipset](assets/evolucion_buses_cpu.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Con el FSB todo pasaba por el Northbridge; hoy la CPU integra la memoria y las líneas PCIe y se enlaza con el chipset por un enlace punto a punto.</figcaption>
 </figure>
 
@@ -198,11 +198,11 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
 - **Retrocompatibilidad**: cada versión funciona con las anteriores; el enlace negocia la mayor versión y anchura que soportan ambos extremos.
 
 <figure markdown="span">
-  ![Enlace PCIe x4 entre dos dispositivos: cuatro lanes, cada una con un par de hilos de ida y otro de vuelta](../assets/pcie_lane_enlace.svg){ style="max-width: 70%; height: auto;" }
+  ![Enlace PCIe x4 entre dos dispositivos: cuatro lanes, cada una con un par de hilos de ida y otro de vuelta](assets/pcie_lane_enlace.svg){ style="max-width: 70%; height: auto;" }
   <figcaption>Un enlace PCIe se forma con varias lanes; cada lane son dos pares de hilos, uno por sentido.</figcaption>
 </figure>
 <figure markdown="span">
-  ![Placa base con una ranura PCIe x1, una ranura PCIe x16 y dos ranuras PCI clásicas](../assets/pci_pcie_ranuras.jpg){ style="max-width: 100%; height: auto;" }
+  ![Placa base con una ranura PCIe x1, una ranura PCIe x16 y dos ranuras PCI clásicas](assets/pci_pcie_ranuras.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Ranuras PCIe x1 y x16 junto a dos ranuras PCI clásicas.</figcaption>
 </figure>
 
@@ -227,7 +227,7 @@ Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe
 - La **bifurcación** divide un enlace, por ejemplo un x16 en **x8/x8** o **x8/x4/x4**, para conectar varios dispositivos (GPU + dos SSD).
 
 <figure markdown="span">
-  ![Placa base con el chipset (PCH) y varias ranuras PCIe x16 y x4, además de conectores SATA](../assets/pch_ranuras_pcie.jpg){ style="max-width: 100%; height: auto;" }
+  ![Placa base con el chipset (PCH) y varias ranuras PCIe x16 y x4, además de conectores SATA](assets/pch_ranuras_pcie.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Placa base con el chipset (PCH), varias ranuras PCIe x16 y x4 y conectores SATA.</figcaption>
 </figure>
 
@@ -265,11 +265,11 @@ PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la vel
 - Soporta **conexión en caliente** y **NCQ** (con el modo AHCI). **eSATA** (2004) es la variante externa, de hasta 2 m.
 
 <figure markdown="span">
-  ![Conector de datos SATA de un cable (arriba) y dos puertos SATA de una placa base (abajo)](../assets/sata_puertos.jpg){ style="max-width: 50%; height: auto;" }
+  ![Conector de datos SATA de un cable (arriba) y dos puertos SATA de una placa base (abajo)](assets/sata_puertos.jpg){ style="max-width: 50%; height: auto;" }
   <figcaption>Conector de datos SATA de un cable (arriba) y dos puertos SATA de una placa base (abajo).</figcaption>
 </figure>
 <figure markdown="span">
-  ![Conector de alimentación SATA de 15 contactos con sus cables de colores](../assets/sata_alimentacion.jpg){ style="max-width: 70%; height: auto;" }
+  ![Conector de alimentación SATA de 15 contactos con sus cables de colores](assets/sata_alimentacion.jpg){ style="max-width: 70%; height: auto;" }
   <figcaption>Conector de alimentación SATA de 15 contactos.</figcaption>
 </figure>
 
@@ -297,15 +297,15 @@ Conviene distinguir tres cosas:
 El **tamaño** se codifica como ancho × largo en milímetros: 2230, 2242, 2260, **2280** (el más habitual) y 22110.
 
 <figure markdown="span">
-  ![Claves del conector M.2: posición de las muescas de las claves M, B, B+M, E y A+E y las interfaces que lleva cada una](../assets/m2_claves.svg){ style="max-width: 100%; height: auto;" }
+  ![Claves del conector M.2: posición de las muescas de las claves M, B, B+M, E y A+E y las interfaces que lleva cada una](assets/m2_claves.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Claves del conector M.2 y las interfaces que lleva cada una.</figcaption>
 </figure>
 <figure markdown="span">
-  ![SSD NVMe M.2 2280 con conector de clave M; se aprecia la muesca junto a los contactos](../assets/nvme_m2_sn850x.jpg){ style="max-width: 80%; height: auto;" }
+  ![SSD NVMe M.2 2280 con conector de clave M; se aprecia la muesca junto a los contactos](assets/nvme_m2_sn850x.jpg){ style="max-width: 80%; height: auto;" }
   <figcaption>SSD NVMe M.2 2280 con clave M: la muesca queda junto a los contactos.</figcaption>
 </figure>
 <figure markdown="span">
-  ![SSD NVMe en formato de tarjeta PCI Express con disipador metálico](../assets/nvme_pcie_tarjeta.jpg){ style="max-width: 70%; height: auto;" }
+  ![SSD NVMe en formato de tarjeta PCI Express con disipador metálico](assets/nvme_pcie_tarjeta.jpg){ style="max-width: 70%; height: auto;" }
   <figcaption>SSD NVMe en formato de tarjeta PCIe con disipador metálico.</figcaption>
 </figure>
 
@@ -338,7 +338,7 @@ Usos típicos en un PC: **SPD** de los módulos de RAM (identifica el módulo), 
 **LPC** (*Low Pin Count*) conectaba al chipset el Super I/O, el controlador embebido (EC) y el TPM; funciona a **33 MHz**. **eSPI** lo está sustituyendo: menos pines, **20–66 MHz**, alimentación de **1,8 V**, modos de datos de 1, 2 o 4 bits y una señal *Alert#*. Además permite compartir la flash SPI con el host. Los chipsets Ryzen de AMD usan eSPI, y el Z170 de Intel puede configurarse con eSPI o con una variante de LPC.
 
 <figure markdown="span">
-  ![Comparación de I2C (dos hilos SDA y SCL compartidos) y SPI (SCLK, MOSI, MISO y una línea CS por esclavo)](../assets/i2c_spi_esquema.svg){ style="max-width: 100%; height: auto;" }
+  ![Comparación de I2C (dos hilos SDA y SCL compartidos) y SPI (SCLK, MOSI, MISO y una línea CS por esclavo)](assets/i2c_spi_esquema.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Comparación entre I²C (dos hilos compartidos) y SPI (una línea CS por esclavo).</figcaption>
 </figure>
 
@@ -385,12 +385,12 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 **Funcionamiento general**: el header actúa como **punto de transición** entre el PCB de la placa y el **cableado** hacia el exterior. En enlaces de **alta velocidad** (USB 3.x/USB4), su diseño conserva **impedancia** y **apantallado**; en enlaces **analógicos** (audio) gestiona **masas** y **retornos** para minimizar ruido; en **control** (F_PANEL) expone **entradas/salidas** de la PCH/EC.
 
 <figure markdown="span">
-  ![Placa base ATX con los conectores numerados: socket, chipset, RAM, PCIe, panel del sistema, alimentación, puertos USB, audio frontal AAFP, SATA y M.2](../assets/placa_conectores_marcados.jpg){ style="max-width: 100%; height: auto;" }
+  ![Placa base ATX con los conectores numerados: socket, chipset, RAM, PCIe, panel del sistema, alimentación, puertos USB, audio frontal AAFP, SATA y M.2](assets/placa_conectores_marcados.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Placa base ATX con los conectores numerados. Leyenda: 1 socket de la CPU, 2 chipset, 3 ranuras de RAM, 4 ranuras PCIe, 5 jumper de RAM, 6 panel del sistema (F_PANEL), 7 alimentación ATX, 8 alimentación de la CPU, 9 conexiones externas (red, USB, PS/2), 10 conectores USB, 11 audio frontal (AAFP), 12 puertos SATA y 13 ranuras M.2.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Placa base con los headers serigrafiados: COM1, USB78, USB910, panel frontal, altavoz, AAFP y SPDIF_OUT](../assets/placa_asus_headers.jpg){ style="max-width: 100%; height: auto;" }
+  ![Placa base con los headers serigrafiados: COM1, USB78, USB910, panel frontal, altavoz, AAFP y SPDIF_OUT](assets/placa_asus_headers.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Headers serigrafiados de una placa base: COM1, USB78, USB910, panel frontal, altavoz, AAFP y SPDIF_OUT.</figcaption>
 </figure>
 
@@ -404,7 +404,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 - **Topología**: **host** (PC) → **hubs** → **dispositivos** (árbol). El host **planifica** el bus.
 
 <figure markdown="span">
-  ![Topología de USB en árbol: el host y su hub raíz, hubs de nivel 2 y 3 y dispositivos conectados](../assets/usb_topologia.svg){ style="max-width: 90%; height: auto;" }
+  ![Topología de USB en árbol: el host y su hub raíz, hubs de nivel 2 y 3 y dispositivos conectados](assets/usb_topologia.svg){ style="max-width: 90%; height: auto;" }
   <figcaption>Topología de USB: el host con su hub raíz, los hubs y los dispositivos.</figcaption>
 </figure>
 
@@ -424,7 +424,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 > USB4 solo funciona con conector USB‑C y permite multitarea y mejor gestión de energía.
 
 <figure markdown="span">
-  ![Conectores USB comparados: Micro-B, Mini-B, Tipo A hembra, Tipo A y Tipo B, junto a una regla](../assets/usb_conectores.jpg){ style="max-width: 100%; height: auto;" }
+  ![Conectores USB comparados: Micro-B, Mini-B, Tipo A hembra, Tipo A y Tipo B, junto a una regla](assets/usb_conectores.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Conectores USB comparados: Micro-B, Mini-B, Tipo A hembra, Tipo A y Tipo B.</figcaption>
 </figure>
 
@@ -443,7 +443,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 - Requiere **cableado blindado** de baja pérdida entre header y módulo frontal.
 
 <figure markdown="span">
-  ![Esquema del header USB 3.x interno de 19 pines con la función de cada pin](../assets/usb3_header_pinout.svg){ style="max-width: 100%; height: auto;" }
+  ![Esquema del header USB 3.x interno de 19 pines con la función de cada pin](assets/usb3_header_pinout.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Header USB 3.x de 19 pines con la función de cada pin.</figcaption>
 </figure>
 
@@ -454,7 +454,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 - El conector **blindado** y el cable **de impedancia controlada** minimizan pérdidas y **diafonía**.
 
 <figure markdown="span">
-  ![Pinout del conector USB-C con los pines A1 a A12 y B1 a B12](../assets/usb_c_pinout.svg){ style="max-width: 100%; height: auto;" }
+  ![Pinout del conector USB-C con los pines A1 a A12 y B1 a B12](assets/usb_c_pinout.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Pinout del conector USB-C (pines A1 a A12 y B1 a B12).</figcaption>
 </figure>
 
@@ -506,7 +506,7 @@ Lleva **micrófono** y **auriculares** al frontal con **detección de jack** y *
 | 10 | SENSE2_RETURN | Retorno de detección de los auriculares |
 
 <figure markdown="span">
-  ![Esquema del header de audio frontal AAFP de 10 pines con la función de cada pin](../assets/aafp_pinout.svg){ style="max-width: 100%; height: auto;" }
+  ![Esquema del header de audio frontal AAFP de 10 pines con la función de cada pin](assets/aafp_pinout.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Header de audio frontal AAFP de 10 pines con la función de cada pin.</figcaption>
 </figure>
 
@@ -520,7 +520,7 @@ Lleva **micrófono** y **auriculares** al frontal con **detección de jack** y *
 Conectar **PWR SW**, **RESET SW**, **HDD LED**, **PWR LED**, **SPEAKER** (beeper) y, a veces, **CHASSIS INTRUSION** al sistema.
 
 <figure markdown="span">
-  ![Header del panel frontal de una placa con los pines etiquetados: SLP, POW LED, ON/OFF, SPK, HLED y RST](../assets/front_panel_placa.jpg){ style="max-width: 100%; height: auto;" }
+  ![Header del panel frontal de una placa con los pines etiquetados: SLP, POW LED, ON/OFF, SPK, HLED y RST](assets/front_panel_placa.jpg){ style="max-width: 100%; height: auto;" }
   <figcaption>Header del panel frontal con los pines etiquetados: SLP, POW LED, ON/OFF, SPK, HLED y RST.</figcaption>
 </figure>
 
@@ -563,12 +563,12 @@ Exponer **DB‑9** en un **bracket** para equipos industriales, consolas serie, 
 Es la distribución habitual de los headers 2×5 (DTK/Intel). Existe otra (AT/Everex) con otro orden de pines, y no son intercambiables: comprueba el manual de la placa y del cable.
 
 <figure markdown="span">
-  ![Cableado entre el header COM de 10 pines de la placa y el conector DB-9: cable recto a la izquierda y cable null-modem a la derecha](../assets/com_header_cableado.svg){ style="max-width: 100%; height: auto;" }
+  ![Cableado entre el header COM de 10 pines de la placa y el conector DB-9: cable recto a la izquierda y cable null-modem a la derecha](assets/com_header_cableado.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Cableado entre el header COM de 10 pines y el conector DB-9: cable recto (izquierda) y cable null-modem (derecha).</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Conector DB-9 macho del PC visto de frente, con la numeración y el nombre de cada señal RS-232](../assets/rs232_db9_pinout.svg){ style="max-width: 100%; height: auto;" }
+  ![Conector DB-9 macho del PC visto de frente, con la numeración y el nombre de cada señal RS-232](assets/rs232_db9_pinout.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Pinout RS-232 del conector DB-9 macho del PC (DTE).</figcaption>
 </figure>
 
@@ -590,7 +590,7 @@ Entornos industriales/legado: impresoras antiguas, instrumentación, PLC. Se sac
 - El header suele ser **2×13** con clave; usa cable plano apantallado.
 
 <figure markdown="span">
-  ![Conector DB-25 del puerto paralelo con la función de cada pin: datos, STROBE, ACK, BUSY, PE, SEL, AUTOFEED, ERROR, INIT, SELECT IN y masas](../assets/lpt_db25_pinout_es.svg){ style="max-width: 100%; height: auto;" }
+  ![Conector DB-25 del puerto paralelo con la función de cada pin: datos, STROBE, ACK, BUSY, PE, SEL, AUTOFEED, ERROR, INIT, SELECT IN y masas](assets/lpt_db25_pinout_es.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Pinout del conector DB-25 del puerto paralelo (LPT).</figcaption>
 </figure>
 
@@ -603,7 +603,7 @@ Thunderbolt es una interfaz de alta velocidad para la conexión de periféricos.
 Sincronizar y controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER**) **no** transporta los datos de Thunderbolt ni de USB: lleva solo **señales de control** (alimentación, estados de reposo, I²C y reset y despertar de PCIe) entre la placa y la tarjeta.
 
 <figure markdown="span">
-  ![Dos puertos Thunderbolt 3 con conector USB-C y el símbolo del rayo](../assets/thunderbolt3_puertos.jpg){ style="max-width: 60%; height: auto;" }
+  ![Dos puertos Thunderbolt 3 con conector USB-C y el símbolo del rayo](assets/thunderbolt3_puertos.jpg){ style="max-width: 60%; height: auto;" }
   <figcaption>Dos puertos Thunderbolt 3 con conector USB-C y el símbolo del rayo.</figcaption>
 </figure>
 
@@ -618,7 +618,7 @@ Sincronizar y controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER**) 
 El **TB_HEADER** de 14‑1 pines (13 pines más una clave) es el que usan las tarjetas **Thunderbolt 4**, como la **ASUS ThunderboltEX 4**. Su cable lleva **solo señales de control**: los datos viajan por **PCIe** (la ranura de la tarjeta) y el vídeo, por los cables **DisplayPort IN**.
 
 <figure markdown="span">
-  ![Header Thunderbolt TB_HEADER de 14-1 pines con la señal de cada pin, agrupadas por función](../assets/thunderbolt_header_pinout.svg){ style="max-width: 100%; height: auto;" }
+  ![Header Thunderbolt TB_HEADER de 14-1 pines con la señal de cada pin, agrupadas por función](assets/thunderbolt_header_pinout.svg){ style="max-width: 100%; height: auto;" }
   <figcaption>Pinout del TB_HEADER (14-1 pines): los pines impares están en la fila inferior y los pares en la superior; el pin 11 es la clave.</figcaption>
 </figure>
 
@@ -759,9 +759,9 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 - [Compute Express Link (Wikipedia)](https://en.wikipedia.org/wiki/Compute_Express_Link): CXL y PCIe.
 - [Socket AM5 (Wikipedia)](https://en.wikipedia.org/wiki/Socket_AM5): enlace de AMD con el chipset.
 - [Manual de la ASUS ROG STRIX B550-F GAMING WIFI II](https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM4/ROG_STRIX_B550-F_GAMING_WIFI_II/E18592_ROG_STRIX_B550-F_GAMING_WI-FI_II_UM_WEB.pdf): nombres y posiciones del TB_HEADER.
-- [Manual de la ASUS PRIME Z590-P](https://dlcdnets.asus.com/pub/ASUS/mb/LGA1200/PRIME_Z590-P/E17604_PRIME_Z590-P_UM_V2_WEB.pdf): TB_HEADER en plataforma Intel (pin 3 = TB_CIO_PLUG_EVENT).
+- [Manual de la ASUS PRIME Z590-P](https://dlcdnets.asus.com/pub/ASUS/mb/LGA1200/PRIME_Z590-P/F17714_PRIME_Z590-P_UM_WEB.pdf): TB_HEADER en plataforma Intel (pin 3 = TB_CIO_PLUG_EVENT).
 - [Manual de la MSI MPG Z490 GAMING PLUS (JTBT1 y JRTD3)](https://www.manualslib.com/manual/1967764/Msi-Mpg-Z490-Gaming-Plus.html?page=37): señales FORCE_PWR, SCI_EVENT, SLP_S3#, SLP_S5# y PWR EN.
-- [Controlador RTD3 de coreboot](https://doc.coreboot.org/drivers/rtd3.html): función de las señales de habilitación de energía de RTD3.
+- [Controlador PCIe RTD3 de coreboot (código fuente)](https://doxygen.coreboot.org/dd/da0/drivers_2pcie_2rtd3_2device_2chip_8c_source.html): función de las señales de habilitación de energía de RTD3.
 - [ASUS ThunderboltEX 4 (FAQ)](https://www.asus.com/support/faq/1053841/): conexiones y requisitos de la tarjeta.
 - [ASRock Thunderbolt 4 AIC (manual)](https://download.asrock.com/Manual/Thunderbolt%204%20AIC.pdf): jumpers de la tarjeta.
 - [Intel, PCH serie 700: señales y planos de alimentación](https://edc.intel.com/content/www/us/en/design/products-and-solutions/processors-and-chipsets/700-series-chipset-family-platform-controller-hub-datasheet-volume-1-of/system-power-supplies-planes-and-signals): SLP_S3# y SLP_S5#.
