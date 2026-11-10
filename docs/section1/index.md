@@ -24,7 +24,7 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 - [U01 - Introducción a los sistemas informáticos](u01/slides/U01-slides.html)
 - [U02 - Componentes internos del PC](u02/slides/U02-slides.html)
 - [U03 - Chipset](u03/slides/U03-slides.html)
-- [U04 - Conexiones externas](u04/slides/U04-slides.html)
+- [U04 - Buses de entrada/salida (E/S)](u04/slides/U04-slides.html)
 - [U05 - Memoria RAM](u05/slides/U05-slides.html)
 - [U06 - CMOS y UEFI](u06/slides/U06-slides.html)
 - [U07 - Almacenamiento](u07/slides/U07-slides.html)
@@ -146,4 +146,4 @@ El objetivo es ofrecer una **base clara y estructurada** para el aprendizaje del
 📅 *Última actualización: Abril 2026*  
 ✍️ *Profesor: José Manuel González Castillo*
 
-**Fecha de actualización:** 30/04/2026
+**Fecha de actualización:** 10/11/2026

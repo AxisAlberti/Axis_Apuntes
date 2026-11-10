@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" font-family="Helvetica, Arial, sans-serif">
+  <rect width="980" height="440" fill="#ffffff"/>
+  <text x="245" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#111">I²C / SMBus: 2 hilos, varios dispositivos</text>
+  <text x="735" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#111">SPI: 4 hilos + 1 CS por dispositivo</text>
+  <text x="245" y="62" text-anchor="middle" font-size="12" fill="#333">Las dos líneas llevan resistencias de pull-up (Rp) a VCC.</text>
+
+  <!-- I2C -->
+  <line x1="30" y1="150" x2="480" y2="150" stroke="#1f5fbf" stroke-width="5"/>
+  <line x1="30" y1="195" x2="480" y2="195" stroke="#c0392b" stroke-width="5"/>
+  <text x="30" y="138" font-size="14" font-weight="bold" fill="#1f5fbf">SDA (datos)</text>
+  <text x="30" y="183" font-size="14" font-weight="bold" fill="#c0392b">SCL (reloj)</text>
+  <g font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">
+    <rect x="130" y="260" width="100" height="60" rx="8" fill="#1f3b73"/><text x="180" y="296">Maestro</text>
+    <rect x="255" y="260" width="100" height="60" rx="8" fill="#4b5563"/><text x="305" y="286">Esclavo 1</text><text x="305" y="304" font-size="11" font-weight="normal">sensor</text>
+    <rect x="380" y="260" width="100" height="60" rx="8" fill="#4b5563"/><text x="430" y="286">Esclavo 2</text><text x="430" y="304" font-size="11" font-weight="normal">SPD de la RAM</text>
+  </g>
+  <g stroke-width="3">
+    <line x1="160" y1="150" x2="160" y2="260" stroke="#1f5fbf"/><line x1="200" y1="195" x2="200" y2="260" stroke="#c0392b"/>
+    <line x1="285" y1="150" x2="285" y2="260" stroke="#1f5fbf"/><line x1="325" y1="195" x2="325" y2="260" stroke="#c0392b"/>
+    <line x1="410" y1="150" x2="410" y2="260" stroke="#1f5fbf"/><line x1="450" y1="195" x2="450" y2="260" stroke="#c0392b"/>
+  </g>
+  <g fill="#1f5fbf"><circle cx="160" cy="150" r="5"/><circle cx="285" cy="150" r="5"/><circle cx="410" cy="150" r="5"/></g>
+  <g fill="#c0392b"><circle cx="200" cy="195" r="5"/><circle cx="325" cy="195" r="5"/><circle cx="450" cy="195" r="5"/></g>
+  <g font-size="12" fill="#333">
+    <text x="30" y="350">· Cada esclavo tiene una dirección (7 bits).</text>
+    <text x="30" y="370">· Velocidades: 100 kHz, 400 kHz, 1 MHz, 3,4 MHz.</text>
+    <text x="30" y="390">· Half-duplex; admite varios maestros.</text>
+    <text x="30" y="410">· SMBus: subconjunto estricto de I²C (sensores, energía).</text>
+  </g>
+
+  <!-- SPI -->
+  <g font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">
+    <rect x="520" y="70" width="440" height="60" rx="8" fill="#1f3b73"/><text x="740" y="107">Maestro (controlador)</text>
+    <rect x="560" y="260" width="160" height="70" rx="8" fill="#4b5563"/><text x="640" y="290">Esclavo 1</text><text x="640" y="310" font-size="11" font-weight="normal">flash del BIOS</text>
+    <rect x="780" y="260" width="160" height="70" rx="8" fill="#4b5563"/><text x="860" y="290">Esclavo 2</text><text x="860" y="310" font-size="11" font-weight="normal">TPM / controlador embebido</text>
+  </g>
+  <g stroke-width="3" fill="none">
+    <polyline points="545,130 545,170 930,170" stroke="#1f5fbf"/>
+    <polyline points="575,130 575,200 930,200" stroke="#c0392b"/>
+    <polyline points="605,130 605,230 930,230" stroke="#1b7f3b"/>
+    <line x1="600" y1="170" x2="600" y2="260" stroke="#1f5fbf"/><line x1="620" y1="200" x2="620" y2="260" stroke="#c0392b"/><line x1="640" y1="230" x2="640" y2="260" stroke="#1b7f3b"/>
+    <line x1="820" y1="170" x2="820" y2="260" stroke="#1f5fbf"/><line x1="840" y1="200" x2="840" y2="260" stroke="#c0392b"/><line x1="860" y1="230" x2="860" y2="260" stroke="#1b7f3b"/>
+    <line x1="680" y1="130" x2="680" y2="260" stroke="#7c3aed"/>
+    <line x1="900" y1="130" x2="900" y2="260" stroke="#d97706"/>
+  </g>
+  <g fill="#1f5fbf"><circle cx="600" cy="170" r="5"/><circle cx="820" cy="170" r="5"/></g>
+  <g fill="#c0392b"><circle cx="620" cy="200" r="5"/><circle cx="840" cy="200" r="5"/></g>
+  <g fill="#1b7f3b"><circle cx="640" cy="230" r="5"/><circle cx="860" cy="230" r="5"/></g>
+  <g font-size="12" font-weight="bold">
+    <text x="935" y="174" fill="#1f5fbf">SCLK</text><text x="935" y="204" fill="#c0392b">MOSI</text><text x="935" y="234" fill="#1b7f3b">MISO</text>
+    <text x="686" y="160" fill="#7c3aed">CS1</text><text x="906" y="160" fill="#d97706">CS2</text>
+  </g>
+  <g font-size="12" fill="#333">
+    <text x="520" y="350">· Full-duplex: MOSI (maestro → esclavo) y MISO (esclavo → maestro).</text>
+    <text x="520" y="370">· Cada esclavo se activa con su propia línea CS.</text>
+    <text x="520" y="390">· Sin direcciones; la velocidad llega a decenas de MHz.</text>
+    <text x="520" y="410">· eSPI (66 MHz, 1,8 V) ha sustituido a LPC en los PC modernos.</text>
+  </g>
+  <line x1="500" y1="50" x2="500" y2="425" stroke="#d1d5db" stroke-dasharray="5 5"/>
+</svg>

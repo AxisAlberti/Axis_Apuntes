@@ -27,9 +27,9 @@ nav:
     - section1/u03/index.md
     - MM U03.1. Chipset: section1/u03/teoria/MM-U03.1.-Chipset.md
     - Presentacion: section1/u03/slides/U03-slides.html
-  - Unidad 04 - Conexiones externas:
+  - Unidad 04 - Buses de entrada/salida (E/S):
     - section1/u04/index.md
-    - MM U04.1. Conexiones externas: section1/u04/teoria/MM-U04.1.-Conexiones-externas.md
+    - MM U04.1. Buses de entrada/salida (E/S): section1/u04/teoria/MM-U04.1.-Buses-de-entrada-salida.md
     - Presentacion: section1/u04/slides/U04-slides.html
   - Unidad 05 - Memoria RAM:
     - section1/u05/index.md

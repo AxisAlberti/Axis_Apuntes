@@ -12,7 +12,7 @@ Contenido orientado a hardware, arquitectura de computadores y montaje de equipo
 - **U01**: Introduccion a los sistemas informaticos
 - **U02**: Componentes internos del PC
 - **U03**: Chipset
-- **U04**: Conexiones externas
+- **U04**: Buses de entrada/salida (E/S)
 - **U05**: Memoria RAM
 - **U06**: CMOS y UEFI
 - **U07**: Almacenamiento
@@ -186,4 +186,4 @@ Para preguntas o sugerencias:
 - Crear un Issue en GitHub
 - Revisar `AGENTS.md` para guias detalladas de colaboracion
 
-**Fecha de actualización:** 04/02/2026
+**Fecha de actualización:** 10/11/2026
