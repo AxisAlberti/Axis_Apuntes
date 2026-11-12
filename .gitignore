@@ -4,3 +4,6 @@ site/
 # Permitir versionado de cuestionarios GIFT
 !*.gift
 !**/*.gift
+/*.py
+*.py
+src/*.py
