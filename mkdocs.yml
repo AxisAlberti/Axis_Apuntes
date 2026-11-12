@@ -71,6 +71,9 @@ nav:
     - section1/u14/index.md
     - MM U14.1. Perifericos de entrada, audio e identificacion: section1/u14/teoria/MM-U14.1.-Perifericos-de-entrada-audio-e-identificacion.md
     - Presentacion: section1/u14/slides/U14-slides.html
+  - Unidad 15 - Limpieza y mantenimiento fisico del PC:
+    - section1/u15/index.md
+    - MM U15.1. Limpieza y mantenimiento fisico del PC: section1/u15/teoria/MM-U15.1.-Limpieza-y-mantenimiento-fisico-del-PC.md
   - Anexo 1 - Arquitecturas de procesadores:
     - section1/A1/index.md
     - A1.1 Arquitecturas de procesadores: section1/A1/teoria/A1-1-Arquitecturas-de-procesadores.md
