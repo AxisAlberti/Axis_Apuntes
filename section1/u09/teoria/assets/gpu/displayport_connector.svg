@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	width="161mm" height="47.6mm" viewBox="0 0 505 185">
+	<style type="text/css">
+		rect { fill: #fe2; stroke: #000; stroke-width: 3; }
+		path { stroke:#000; }
+		#outer {
+			fill: #fff;
+			stroke-width: 12;
+			stroke-linejoin: round;
+		}
+		text, tspan{
+			font-family: "Liberation Sans", sans-serif;
+			fill: #000;
+			text-anchor: middle;
+			font-size: 19px;
+		}
+	</style>
+	<path id="outer"
+		d="m499,6 c7,0 12,5 12,12 v148 c0,7 -5,12 -12,12 h-475 c-6,0 -9,-1 -13,-4 -6,-6 -41,-42 -46,-48 -4,-4 -5,-6 -5,-12 v-96 c0,-7 5,-12 12,-12 0,0 352,0 528,0 z" />
+	<path d="m51,80 v52 h21 v-30 h361 v30 h21 v-52 z" fill="#808080" stroke-width="9"/>
+	<path stroke-width="1"
+		d="m119,10 v13 h36 v-13 z m195,0 v13 h36 v-13 z m0,151 v13 h36 v-13 z m-195,0 v13 h36 v-13 z"/>
+	<rect x="109" y="75" width="16" height="9"/>
+	<text x="117" y="67">19</text>
+	<rect x="143" y="75" width="16" height="9"/>
+	<text x="151" y="67">17</text>
+	<rect x="176" y="75" width="16" height="9"/>
+	<text x="184" y="67">15</text>
+	<rect x="210" y="75" width="16" height="9"/>
+	<text x="218" y="67">13</text>
+	<rect x="244" y="75" width="16" height="9"/>
+	<text x="252" y="67">11</text>
+	<rect x="278" y="75" width="16" height="9"/>
+	<text x="286" y="67">9</text>
+	<rect x="312" y="75" width="16" height="9"/>
+	<text x="320" y="67">7</text>
+	<rect x="346" y="75" width="16" height="9"/>
+	<text x="354" y="67">5</text>
+	<rect x="380" y="75" width="16" height="9"/>
+	<text x="388" y="67">3</text>
+	<rect x="414" y="75" width="16" height="9"/>
+	<text x="422" y="67">1</text>
+	<rect x="92" y="98" width="16" height="9"/>
+	<text x="100" y="129">20</text>
+	<rect x="125" y="98" width="16" height="9"/>
+	<text x="133" y="129">18</text>
+	<rect x="159" y="98" width="16" height="9"/>
+	<text x="167" y="129">16</text>
+	<rect x="193" y="98" width="16" height="9"/>
+	<text x="201" y="129">14</text>
+	<rect x="227" y="98" width="16" height="9"/>
+	<text x="235" y="129">12</text>
+	<rect x="261" y="98" width="16" height="9"/>
+	<text x="269" y="129">10</text>
+	<rect x="295" y="98" width="16" height="9"/>
+	<text x="303" y="129">8</text>
+	<rect x="329" y="98" width="16" height="9"/>
+	<text x="337" y="129">6</text>
+	<rect x="363" y="98" width="16" height="9"/>
+	<text x="371" y="129">4</text>
+	<rect x="397" y="98" width="16" height="9"/>
+	<text x="405" y="129">2</text>
+</svg>

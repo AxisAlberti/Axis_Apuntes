@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="engineering-whiteprint">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U04 · UD 04 · 4.1 Buses de entrada/salida (E/S)</title>
+<link rel="stylesheet" href="../../slides/html-ppt-assets/fonts.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/base.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/animations/animations.css">
+<link rel="stylesheet" id="theme-link" href="../../slides/html-ppt-assets/themes/engineering-whiteprint.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/course-module.css">
+<link rel="stylesheet" href="../../slides/html-ppt-assets/section1-educational.css">
+<style>
+/* U04: imágenes y tablas adaptables (se recalculan en JS al cambiar el tamaño) */
+.tpl-course-module{--img-max-h:44vh;--text-scale:1}
+.tpl-course-module .main{font-size:calc(16px*var(--text-scale))}
+.tpl-course-module .main .h2{font-size:clamp(28px,calc(40px*var(--text-scale)),44px);margin-bottom:6px}
+.tpl-course-module .main .dim,.tpl-course-module .main li,.tpl-course-module .main td,.tpl-course-module .main th{font-size:calc(15px*var(--text-scale));line-height:1.45}
+.tpl-course-module .main .concept-box h4,.tpl-course-module .main .step-card h4{font-size:calc(17px*var(--text-scale));margin-bottom:6px}
+.tpl-course-module .callout{padding:14px 18px;margin-top:14px;font-size:calc(15px*var(--text-scale))}
+.tpl-course-module .bul{margin:12px 0 0;padding-left:20px}
+.tpl-course-module .bul li{margin-bottom:6px}
+.tpl-course-module .small{font-size:calc(13px*var(--text-scale))!important;margin:8px 0 0}
+.tpl-course-module .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:26px;align-items:center}
+.tpl-course-module .split.wide{grid-template-columns:minmax(0,1.8fr) minmax(0,1fr)}
+.tpl-course-module .two-figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:center}
+.tpl-course-module .slide-image{display:flex;justify-content:center}
+.tpl-course-module .slide-image .fig{width:100%}
+.tpl-course-module .fig{margin:0;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}
+.tpl-course-module .fig img{margin:0 auto;width:auto;height:auto;max-width:100%;max-height:min(var(--img-max-h),var(--fig-h,100vh));object-fit:contain}
+.tpl-course-module .fig figcaption{margin-top:6px;font-size:calc(12px*var(--text-scale));color:var(--text-3)}
+.tpl-course-module .mini-table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.tpl-course-module .mini-table th{background:var(--surface-2);color:var(--text-2);text-align:left;font-weight:700}
+.tpl-course-module .mini-table th,.tpl-course-module .mini-table td{padding:7px 12px;border-bottom:1px solid var(--border)}
+.tpl-course-module .term-grid{gap:10px}
+.tpl-course-module .term{padding:9px 14px}
+.tpl-course-module .term b{margin-bottom:2px}
+.tpl-course-module .stack>.concept-box{padding:12px 20px}
+.tpl-course-module .stack>.concept-box h4{margin:0 0 2px}
+.tpl-course-module .stack>.concept-box p{margin:0}
+.tpl-course-module .slide.full .summary-strip{margin-top:16px}
+.tpl-course-module .slide.full .summary-strip .concept-box p{font-size:calc(14px*var(--text-scale))}
+@media (max-width:1100px){
+  .tpl-course-module .slide{grid-template-columns:1fr;padding-left:40px;padding-right:40px}
+  .tpl-course-module .sidebar{display:none}
+}
+@media (max-width:860px){
+  .tpl-course-module .split,.tpl-course-module .split.wide,.tpl-course-module .two-figs{grid-template-columns:1fr}
+  .tpl-course-module .slide{overflow-y:auto}
+  .tpl-course-module .return-button{top:auto;bottom:14px;right:14px;font-size:11px;padding:7px 10px}
+  .tpl-course-module .logo-badge{top:10px;left:12px;padding:5px 8px}
+  .tpl-course-module .logo-badge img{width:22px;height:22px}
+}
+</style>
+</head>
+<body class="tpl-course-module" data-themes="engineering-whiteprint,academic-paper,blueprint,corporate-clean,aurora,swiss-grid" data-theme-base="../../slides/html-ppt-assets/themes/">
+<a class="logo-badge" href="../../../"><img src="../../../assets/logo.png" alt="Logo IES Rafael Alberti"><span>IES Rafael Alberti</span></a>
+<a class="return-button" href="../">Volver a la unidad</a>
+<div class="deck">
+
+  <section class="slide full" data-title="Portada">
+    <p class="kicker">MONTAJE Y MANTENIMIENTO · U04</p>
+    <h1 class="h1 mt-s">UD 04 · Buses de entrada/salida (E/S)</h1>
+    <p class="lede mt-l" style="max-width:64ch">Cómo se comunican la CPU, la memoria, el chipset y los periféricos: PCIe, DMI, SATA, NVMe, USB, Thunderbolt, I²C, SPI y los headers del chasis.</p>
+    <div class="row mt-l" style="gap:16px;flex-wrap:wrap">
+      <span class="pill-academic">apoyo visual de aula</span>
+      <span class="pill-academic">modo presentador</span>
+      <span class="pill-academic">enfoque práctico</span>
+    </div>
+    <div class="deck-footer"><span>Sección 1 · Montaje y mantenimiento</span><span class="slide-number" data-current="1" data-total="27"></span></div>
+    <div class="notes">Abre la unidad con una pregunta: ¿cómo llega al procesador lo que guarda un SSD o lo que escribes en el teclado? La presentación resume el mapa mental y no sustituye a los apuntes completos.</div>
+  </section>
+
+  <section class="slide" data-title="Al terminar esta unidad podrás…">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="current">Qué es un bus</li><li class="">Mapa de buses</li><li class="">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">OBJETIVOS</p>
+      <h2 class="h2 mt-s">Al terminar esta unidad podrás…</h2>
+      <div class="stack mt-l"><div class="concept-box"><h4>1. Explicar qué es un bus</h4><p class="dim">Conocerás sus parámetros (ancho, velocidad y ancho de banda) y sus topologías.</p></div><div class="concept-box"><h4>2. Identificar los buses de un PC</h4><p class="dim">Sabrás qué componentes conecta cada bus: memoria, PCIe, DMI, SATA, USB, I²C, SPI…</p></div><div class="concept-box"><h4>3. Comparar buses por velocidad y uso</h4><p class="dim">PCIe, SATA, NVMe/M.2, USB y Thunderbolt.</p></div><div class="concept-box"><h4>4. Montar los headers del chasis</h4><p class="dim">USB, audio, panel frontal y COM, respetando el pin 1 y la clave.</p></div></div>
+    </div>
+    <div class="deck-footer"><span>Objetivos de aprendizaje</span><span class="slide-number" data-current="2" data-total="27"></span></div>
+    <div class="notes">Marca los objetivos como una ruta. Pide al alumnado que anticipe qué buses conoce ya (USB, SATA…) y cuáles espera aclarar.</div>
+  </section>
+
+  <section class="slide" data-title="Palabras que ordenan el tema.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="current">Qué es un bus</li><li class="">Mapa de buses</li><li class="">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">VOCABULARIO ESENCIAL</p>
+      <h2 class="h2 mt-s">Palabras que ordenan el tema.</h2>
+      <div class="term-grid mt-m"><div class="term"><b>Bus</b><span class="dim">Conjunto de líneas y reglas (protocolo) para transferir datos entre componentes.</span></div><div class="term"><b>Lane</b><span class="dim">En PCIe, un par de hilos de ida y otro de vuelta: 4 hilos, <i>full‑duplex</i>.</span></div><div class="term"><b>GT/s</b><span class="dim">Gigatransferencias por segundo: velocidad de señalización antes de descontar la codificación.</span></div><div class="term"><b>Ancho de banda</b><span class="dim">Datos útiles por segundo (GB/s), normalmente por sentido.</span></div><div class="term"><b>Punto a punto</b><span class="dim">Enlace dedicado entre dos extremos, sin compartir (PCIe, SATA, DMI).</span></div><div class="term"><b>Chipset (PCH)</b><span class="dim">Concentra USB, SATA, red y audio; se enlaza con la CPU por DMI o PCIe.</span></div><div class="term"><b>NVMe</b><span class="dim">Protocolo de los SSD sobre PCIe, con baja latencia y colas profundas.</span></div><div class="term"><b>Header</b><span class="dim">Bloque de pines de la placa que lleva señales al frontal del chasis.</span></div></div>
+    </div>
+    <div class="deck-footer"><span>Vocabulario</span><span class="slide-number" data-current="3" data-total="27"></span></div>
+    <div class="notes">Fija el lenguaje común antes de entrar en los buses. Pide definiciones cortas con las palabras del alumnado.</div>
+  </section>
+
+  <section class="slide" data-title="¿Qué es un bus?">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="current">Qué es un bus</li><li class="">Mapa de buses</li><li class="">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">CONCEPTO</p>
+      <h2 class="h2 mt-s">¿Qué es un bus?</h2>
+      <div class="split mt-l"><div><ul class="bul"><li>Un <b>bus</b> son las <b>líneas</b> y las <b>reglas</b> que mueven datos entre componentes.</li><li>Los tres buses clásicos: <b>direcciones</b> (dónde), <b>datos</b> (qué) y <b>control</b> (cómo).</li><li>Hoy viajan por <b>enlaces serie punto a punto</b>, pero el concepto sigue vigente.</li></ul><div class="callout"><b>Idea clave.</b> Siempre hay que saber con quién se habla, qué se transmite y cómo se coordina.</div></div><figure class="fig"><img src="../teoria/assets/bus_direcciones_datos_control.svg" alt="Buses de direcciones, datos y control entre la CPU, la memoria y los dispositivos de E/S" loading="lazy"><figcaption>Los tres buses clásicos de un sistema.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>Concepto de bus</span><span class="slide-number" data-current="4" data-total="27"></span></div>
+    <div class="notes">Explica los tres buses con un ejemplo: la CPU lee una posición de memoria (dirección), recibe el dato y usa las líneas de control para indicar lectura o escritura.</div>
+  </section>
+
+  <section class="slide" data-title="Cómo se mide y se clasifica un bus.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="current">Qué es un bus</li><li class="">Mapa de buses</li><li class="">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">PARÁMETROS</p>
+      <h2 class="h2 mt-s">Cómo se mide y se clasifica un bus.</h2>
+      <div class="card-grid mt-l"><div class="concept-box compact"><h4>Ancho y velocidad</h4><p class="dim">Bits que viajan a la vez y transferencias por segundo (MT/s o GT/s).</p></div><div class="concept-box compact"><h4>Codificación</h4><p class="dim">Bits extra de control: 8b/10b aprovecha el 80 %; 128b/130b, ≈98,5 %.</p></div><div class="concept-box compact"><h4>Serie frente a paralelo</h4><p class="dim">El paralelo sufre <i>skew</i> y limita la frecuencia; el serie con pares diferenciales llega mucho más lejos.</p></div><div class="concept-box compact"><h4>Topología</h4><p class="dim">Compartido (PCI, I²C), punto a punto (PCIe, SATA, DMI), árbol (USB) o conmutado.</p></div></div><div class="callout"><b>Dos cálculos.</b> DDR5‑6000: 6000 MT/s × 8 bytes = <b>48 GB/s</b> por canal · PCIe 4.0 x4: 16 GT/s × 4 × (128/130) ÷ 8 ≈ <b>7,9 GB/s</b>.</div>
+    </div>
+    <div class="deck-footer"><span>Parámetros de un bus</span><span class="slide-number" data-current="5" data-total="27"></span></div>
+    <div class="notes">Haz que el alumnado repita los dos cálculos con una calculadora. Insiste en que son valores teóricos máximos.</div>
+  </section>
+
+  <section class="slide" data-title="Los buses de un PC actual.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="current">Mapa de buses</li><li class="">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">MAPA DE BUSES</p>
+      <h2 class="h2 mt-s">Los buses de un PC actual.</h2>
+      <div class="split wide mt-m"><figure class="fig" style="--fig-h:58vh"><img src="../teoria/assets/mapa_buses_sistema.svg" alt="Mapa de buses de un PC actual: lo que cuelga de la CPU y lo que cuelga del chipset" loading="lazy"><figcaption>Mapa de buses de un PC de sobremesa actual.</figcaption></figure><div><ul class="bul"><li>La <b>CPU</b> integra el controlador de memoria y las líneas PCIe de la GPU y del SSD M.2 principal.</li><li>El <b>chipset</b> concentra SATA, USB, red, audio, SPI e I²C.</li><li>Lo que cuelga del chipset <b>comparte un único enlace</b> con la CPU.</li></ul></div></div>
+    </div>
+    <div class="deck-footer"><span>Mapa de buses</span><span class="slide-number" data-current="6" data-total="27"></span></div>
+    <div class="notes">Recorre el esquema de arriba abajo: primero lo que va directo a la CPU, después el enlace con el chipset y, por último, los buses que salen del chipset.</div>
+  </section>
+
+  <section class="slide" data-title="Del FSB a los enlaces punto a punto.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="current">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">CPU, MEMORIA Y CHIPSET</p>
+      <h2 class="h2 mt-s">Del FSB a los enlaces punto a punto.</h2>
+      <div class="split wide mt-m"><figure class="fig" style="--fig-h:56vh"><img src="../teoria/assets/evolucion_buses_cpu.svg" alt="Comparación entre la arquitectura con FSB y Northbridge y la arquitectura actual" loading="lazy"><figcaption>Antes todo pasaba por el Northbridge; hoy la CPU integra memoria y PCIe.</figcaption></figure><div><ul class="bul"><li>El <b>FSB</b> era un bus paralelo y compartido de 64 bits, de hasta ≈12,8 GB/s.</li><li>Lo sustituyeron <b>HyperTransport</b> (AMD), <b>QPI</b> y <b>DMI</b> (Intel); hoy, <b>DMI</b> o <b>PCIe x4</b>.</li><li>El <b>controlador de memoria</b> pasó a la CPU: la RAM ya no usa el chipset.</li></ul></div></div>
+    </div>
+    <div class="deck-footer"><span>Del FSB a los enlaces punto a punto</span><span class="slide-number" data-current="7" data-total="27"></span></div>
+    <div class="notes">Compara las dos mitades del esquema. Pregunta: ¿qué ventaja tiene que la GPU y la memoria no dependan del chipset?</div>
+  </section>
+
+  <section class="slide" data-title="Un único camino para todo el chipset.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="current">CPU, memoria y chipset</li><li class="">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">ENLACE CON EL CHIPSET</p>
+      <h2 class="h2 mt-s">Un único camino para todo el chipset.</h2>
+      <div class="card-grid mt-l"><div class="concept-box"><h4>Intel: DMI</h4><p class="dim">Serie 800: Z890 usa <b>DMI 4.0 x8</b> (≈15,8 GB/s por sentido); B860 y H810, <b>DMI 4.0 x4</b> (≈7,9 GB/s).</p></div><div class="concept-box"><h4>AMD: PCIe</h4><p class="dim">Un enlace <b>PCIe 4.0 x4</b> (≈7,9 GB/s). X670, X670E y X870E llevan dos chips Promontory 21 en cadena que comparten ese enlace.</p></div></div><div class="callout"><b>Consecuencia.</b> Un solo SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llenaría el enlace de una plataforma AMD: los SSD más rápidos y la GPU van a las líneas de la <b>CPU</b>.</div>
+    </div>
+    <div class="deck-footer"><span>Enlace CPU ↔ chipset</span><span class="slide-number" data-current="8" data-total="27"></span></div>
+    <div class="notes">Pide al alumnado que sume lo que podrían pedir a la vez USB, SATA y un M.2 del chipset, y lo compare con el enlace.</div>
+  </section>
+
+  <section class="slide" data-title="Lane, enlace y ranura.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="current">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">PCI EXPRESS</p>
+      <h2 class="h2 mt-s">Lane, enlace y ranura.</h2>
+      <div class="split mt-m"><div><ul class="bul"><li>Una <b>lane</b> son dos pares de hilos (uno por sentido): 4 hilos, <i>full‑duplex</i>.</li><li>Un <b>enlace</b> reúne 1, 2, 4, 8 o 16 lanes: <b>x1, x2, x4, x8, x16</b>.</li><li>La <b>ranura</b> es el tamaño mecánico: una ranura x16 puede funcionar a x4.</li><li>Cada versión es <b>retrocompatible</b> con las anteriores.</li></ul></div><figure class="fig"><img src="../teoria/assets/pcie_lane_enlace.svg" alt="Enlace PCIe x4 entre dos dispositivos con cuatro lanes" loading="lazy"><figcaption>Un enlace PCIe x4 está formado por cuatro lanes.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>PCI Express</span><span class="slide-number" data-current="9" data-total="27"></span></div>
+    <div class="notes">Dibuja en la pizarra un enlace x1 y uno x4. Relaciona el número de lanes con el ancho de banda total.</div>
+  </section>
+
+  <section class="slide" data-title="Generaciones y velocidades.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="current">PCI Express</li><li class="">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">PCI EXPRESS</p>
+      <h2 class="h2 mt-s">Generaciones y velocidades.</h2>
+      <div class="split mt-m"><div><table class="mini-table"><thead><tr><th>Versión</th><th>Año</th><th>GT/s</th><th>GB/s por lane</th><th>x16 (GB/s)</th></tr></thead><tbody><tr><td>3.0</td><td>2010</td><td>8</td><td>0,985</td><td>15,75</td></tr><tr><td>4.0</td><td>2017</td><td>16</td><td>1,969</td><td>31,5</td></tr><tr><td>5.0</td><td>2019</td><td>32</td><td>3,938</td><td>63</td></tr><tr><td>6.0</td><td>2022</td><td>64</td><td>7,563</td><td>121</td></tr><tr><td>7.0</td><td>2025</td><td>128</td><td>15,125</td><td>242</td></tr></tbody></table><p class="dim small">Valores por sentido. En consumo se usan hoy PCIe 4.0 y 5.0.</p></div><figure class="fig" style="--fig-h:40vh"><img src="../teoria/assets/pci_pcie_ranuras.jpg" alt="Placa base con ranuras PCIe x1 y x16 junto a dos ranuras PCI clásicas" loading="lazy"><figcaption>Ranuras PCIe x1 y x16 junto a dos ranuras PCI.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>PCIe: generaciones</span><span class="slide-number" data-current="10" data-total="27"></span></div>
+    <div class="notes">Cada generación duplica la velocidad de la anterior. Pregunta: ¿cuánto vale una GPU x16 en PCIe 4.0 y en PCIe 5.0?</div>
+  </section>
+
+  <section class="slide" data-title="SATA: un puerto por dispositivo.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="current">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">ALMACENAMIENTO</p>
+      <h2 class="h2 mt-s">SATA: un puerto por dispositivo.</h2>
+      <div class="two-figs mt-m"><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/sata_puertos.jpg" alt="Conector de datos SATA de un cable y dos puertos SATA de una placa" loading="lazy"><figcaption>Conector de datos SATA y puertos de la placa.</figcaption></figure><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/sata_alimentacion.jpg" alt="Conector de alimentación SATA de 15 contactos" loading="lazy"><figcaption>Conector de alimentación SATA (15 contactos).</figcaption></figure></div><ul class="bul"><li><b>SATA 3.0</b>: 6 Gb/s, unos <b>600 MB/s</b> útiles; cable de datos de hasta 1 m.</li><li>Datos: <b>7 contactos</b> · Alimentación: <b>15 contactos</b> (3,3, 5 y 12 V).</li><li>Admite <b>conexión en caliente</b> y NCQ con el modo AHCI.</li></ul>
+    </div>
+    <div class="deck-footer"><span>SATA</span><span class="slide-number" data-current="11" data-total="27"></span></div>
+    <div class="notes">SATA es punto a punto: cada disco tiene su puerto. Compara con el antiguo IDE, paralelo y compartido.</div>
+  </section>
+
+  <section class="slide" data-title="M.2 es el conector; NVMe, el protocolo.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="current">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">ALMACENAMIENTO</p>
+      <h2 class="h2 mt-s">M.2 es el conector; NVMe, el protocolo.</h2>
+      <div class="two-figs mt-m"><figure class="fig" style="--fig-h:36vh"><img src="../teoria/assets/m2_claves.svg" alt="Claves del conector M.2 y las interfaces que lleva cada una" loading="lazy"><figcaption>Las muescas (claves) del conector M.2.</figcaption></figure><figure class="fig" style="--fig-h:36vh"><img src="../teoria/assets/nvme_m2_sn850x.jpg" alt="SSD NVMe M.2 2280 con clave M" loading="lazy"><figcaption>SSD M.2 2280 de clave M.</figcaption></figure></div><ul class="bul"><li><b>M.2</b>: factor de forma y conector; la <b>clave</b> indica si lleva SATA, PCIe, USB…</li><li><b>NVMe</b>: protocolo del SSD · <b>PCIe</b>: el bus físico (normalmente x4).</li><li>Tamaños 2230, 2242, 2260, <b>2280</b> y 22110 (ancho × largo en mm).</li></ul>
+    </div>
+    <div class="deck-footer"><span>M.2 y NVMe</span><span class="slide-number" data-current="12" data-total="27"></span></div>
+    <div class="notes">Aclara que M.2 no es un bus: un M.2 puede ser SATA o NVMe. La clave M suele indicar NVMe; la B o B+M, SATA o PCIe x2.</div>
+  </section>
+
+  <section class="slide" data-title="SATA frente a NVMe.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="current">Almacenamiento</li><li class="">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">ALMACENAMIENTO</p>
+      <h2 class="h2 mt-s">SATA frente a NVMe.</h2>
+      <div class="split mt-m"><div><table class="mini-table"><thead><tr><th></th><th>SATA (AHCI)</th><th>NVMe (PCIe)</th></tr></thead><tbody><tr><td>Interfaz</td><td>SATA 3.0</td><td>PCIe x4</td></tr><tr><td>Velocidad teórica</td><td>600 MB/s</td><td>≈7,9 GB/s (PCIe 4.0) · ≈15,8 GB/s (PCIe 5.0)</td></tr><tr><td>Protocolo</td><td>AHCI (discos giratorios)</td><td>NVMe (memoria flash)</td></tr><tr><td>Conector típico</td><td>SATA o M.2 B / B+M</td><td>M.2 clave M, U.2 o tarjeta PCIe</td></tr><tr><td>Se conecta a</td><td>Chipset</td><td>CPU (más rápido) o chipset</td></tr></tbody></table></div><figure class="fig" style="--fig-h:28vh"><img src="../teoria/assets/nvme_pcie_tarjeta.jpg" alt="SSD NVMe en formato de tarjeta PCIe con disipador" loading="lazy"><figcaption>SSD NVMe en formato de tarjeta PCIe.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>SATA frente a NVMe</span><span class="slide-number" data-current="13" data-total="27"></span></div>
+    <div class="notes">Un SSD NVMe es mucho más rápido que uno SATA porque usa varias lanes PCIe y un protocolo pensado para flash.</div>
+  </section>
+
+  <section class="slide" data-title="I²C, SPI y eSPI: pocos datos, mucha importancia.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="current">Buses de gestión</li><li class="">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">BUSES DE GESTIÓN</p>
+      <h2 class="h2 mt-s">I²C, SPI y eSPI: pocos datos, mucha importancia.</h2>
+      <div class="slide-image mt-m"><figure class="fig" style="--fig-h:40vh"><img src="../teoria/assets/i2c_spi_esquema.svg" alt="Comparación de I2C (dos hilos compartidos) y SPI (una línea CS por esclavo)" loading="lazy"><figcaption>I²C y SPI: dos formas de conectar chips de baja velocidad.</figcaption></figure></div><ul class="bul"><li><b>I²C</b>: dos hilos (SDA y SCL), direcciones de 7 bits; sensores y SPD de la RAM.</li><li><b>SPI</b>: cuatro hilos más una línea CS por esclavo; flash del BIOS/UEFI.</li><li><b>eSPI</b> (20–66 MHz, 1,8 V) sustituye a LPC para el EC, el TPM y el firmware.</li></ul>
+    </div>
+    <div class="deck-footer"><span>I²C, SPI y eSPI</span><span class="slide-number" data-current="14" data-total="27"></span></div>
+    <div class="notes">Son los buses «invisibles»: sin ellos la placa no arranca. Pregunta: ¿dónde está guardado el BIOS/UEFI?</div>
+  </section>
+
+  <section class="slide" data-title="USB: un árbol con hubs.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="current">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">USB Y THUNDERBOLT</p>
+      <h2 class="h2 mt-s">USB: un árbol con hubs.</h2>
+      <div class="split mt-m"><div><table class="mini-table"><thead><tr><th>Versión</th><th>Velocidad máxima</th></tr></thead><tbody><tr><td>USB 2.0</td><td>480 Mb/s</td></tr><tr><td>USB 3.2 Gen 1</td><td>5 Gb/s</td></tr><tr><td>USB 3.2 Gen 2</td><td>10 Gb/s</td></tr><tr><td>USB 3.2 Gen 2x2</td><td>20 Gb/s</td></tr><tr><td>USB4</td><td>40 Gb/s</td></tr><tr><td>USB4 v2</td><td>80 Gb/s (120 asimétrico)</td></tr></tbody></table><p class="dim small">Velocidades teóricas; dependen del cable y del dispositivo.</p></div><figure class="fig" style="--fig-h:42vh"><img src="../teoria/assets/usb_topologia.svg" alt="Topología de USB: host, hub raíz, hubs y dispositivos" loading="lazy"><figcaption>El host planifica el bus: hasta 127 dispositivos.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>USB</span><span class="slide-number" data-current="15" data-total="27"></span></div>
+    <div class="notes">Aprovecha para aclarar la confusión de nombres: USB 3.0 es hoy USB 3.2 Gen 1. El host inicia todas las transferencias.</div>
+  </section>
+
+  <section class="slide" data-title="Thunderbolt y USB4.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="current">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">USB Y THUNDERBOLT</p>
+      <h2 class="h2 mt-s">Thunderbolt y USB4.</h2>
+      <div class="split mt-m"><div><table class="mini-table"><thead><tr><th>Tecnología</th><th>Año</th><th>Velocidad</th><th>Conector</th></tr></thead><tbody><tr><td>Thunderbolt 1</td><td>2011</td><td>10 Gb/s</td><td>Mini DisplayPort</td></tr><tr><td>Thunderbolt 2</td><td>2013</td><td>20 Gb/s</td><td>Mini DisplayPort</td></tr><tr><td>Thunderbolt 3</td><td>2015</td><td>40 Gb/s</td><td>USB‑C</td></tr><tr><td>Thunderbolt 4</td><td>2020</td><td>40 Gb/s</td><td>USB‑C</td></tr><tr><td>Thunderbolt 5</td><td>2023</td><td>80 (120) Gb/s</td><td>USB‑C</td></tr></tbody></table><p class="dim small">Thunderbolt combina PCIe y DisplayPort por un único cable. El cable del <b>TB_HEADER</b> solo lleva señales de control a la tarjeta; los datos van por PCIe.</p></div><figure class="fig" style="--fig-h:36vh"><img src="../teoria/assets/thunderbolt3_puertos.jpg" alt="Dos puertos Thunderbolt 3 con conector USB-C" loading="lazy"><figcaption>Puertos Thunderbolt 3 con conector USB‑C.</figcaption></figure></div>
+    </div>
+    <div class="deck-footer"><span>Thunderbolt y USB4</span><span class="slide-number" data-current="16" data-total="27"></span></div>
+    <div class="notes">Thunderbolt 4 garantiza 40 Gb/s y requisitos mínimos; USB4 puede variar según el equipo. Recuerda que USB‑C es el conector, no la velocidad.</div>
+  </section>
+
+  <section class="slide" data-title="Pinout del TB_HEADER de Thunderbolt 4.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="current">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">USB Y THUNDERBOLT</p>
+      <h2 class="h2 mt-s">Pinout del TB_HEADER de Thunderbolt 4.</h2>
+      <div class="slide-image mt-m"><figure class="fig" style="--fig-h:46vh"><img src="../teoria/assets/thunderbolt_header_pinout_slide.svg" alt="Header Thunderbolt TB_HEADER de 14-1 pines con la señal de cada pin, agrupadas por función" loading="lazy"><figcaption>TB_HEADER de 14‑1 pines: filas impar (inferior) y par (superior); el pin 11 es la clave.</figcaption></figure></div><ul class="bul"><li>Es el header de las tarjetas <b>Thunderbolt 4</b> como la ASUS ThunderboltEX 4: <b>13 pines más una clave</b>.</li><li>Su cable lleva <b>solo señales de control</b>; los datos van por <b>PCIe</b> y el vídeo, por los cables <b>DisplayPort IN</b>.</li><li>Otros fabricantes usan otras distribuciones (ASRock: 5 y 10 pines; Gigabyte: THB_C): mira siempre el <b>manual</b>.</li></ul>
+    </div>
+    <div class="deck-footer"><span>Pinout del TB_HEADER</span><span class="slide-number" data-current="17" data-total="27"></span></div>
+    <div class="notes">Recorre el esquema por colores: naranja (alimentación y reposo), azul (I²C), morado (PCIe) y gris (masa). Intel no publica la especificación completa: los nombres y posiciones proceden del manual de ASUS.</div>
+  </section>
+
+  <section class="slide" data-title="Función de cada pin (1/2): alimentación y reposo.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="current">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">USB Y THUNDERBOLT</p>
+      <h2 class="h2 mt-s">Función de cada pin (1/2): alimentación y reposo.</h2>
+      <div class="mt-m"><table class="mini-table"><thead><tr><th>Pin</th><th>Señal</th><th>Función</th></tr></thead><tbody><tr><td>1</td><td><b>FORCE_PWR</b></td><td>Fuerza el encendido del controlador Thunderbolt (en AMD, con el jumper Force_PWR de la tarjeta).</td></tr><tr><td>5</td><td><b>SLP_S3#</b></td><td>Del chipset, activa en bajo: suspensión a RAM (S3). La tarjeta reduce su alimentación.</td></tr><tr><td>7</td><td><b>SLP_S5#</b></td><td>Del chipset, activa en bajo: apagado suave (S5); se corta lo no esencial.</td></tr><tr><td>8</td><td><b>RTD3_POWER_EN</b></td><td>Habilita (enable) la alimentación del controlador en RTD3 (<i>Runtime D3</i>).</td></tr><tr><td>10</td><td><b>S_SLP_S0#_IDLE</b></td><td>Indica el reposo profundo SLP_S0# (S0ix): la tarjeta debe consumir lo mínimo.</td></tr><tr><td>13</td><td><b>RTD3_SW</b></td><td>Relacionada con RTD3 (jumper RTD3 de la tarjeta, por defecto sin RTD3); función exacta sin confirmar.</td></tr></tbody></table></div>
+    </div>
+    <div class="deck-footer"><span>Pinout: alimentación y reposo</span><span class="slide-number" data-current="18" data-total="27"></span></div>
+    <div class="notes">Las señales con # son activas en bajo. SLP_S3# y SLP_S5# las genera el chipset y la tarjeta las usa para saber en qué estado de energía está el equipo.</div>
+  </section>
+
+  <section class="slide" data-title="Función de cada pin (2/2): gestión, PCIe, masa y clave.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="current">USB y Thunderbolt</li><li class="">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">USB Y THUNDERBOLT</p>
+      <h2 class="h2 mt-s">Función de cada pin (2/2): gestión, PCIe, masa y clave.</h2>
+      <div class="mt-m"><table class="mini-table"><thead><tr><th>Pin</th><th>Señal</th><th>Función</th></tr></thead><tbody><tr><td>2</td><td><b>I2C_SCL</b></td><td>Reloj del bus I²C de gestión entre la placa y la tarjeta.</td></tr><tr><td>3</td><td><b>TB_CIO_PLUG_EVENT</b></td><td>Evento de conexión (hot-plug) de Thunderbolt; en placas ASUS para AMD este pin es GND.</td></tr><tr><td>4</td><td><b>I2C_SDA</b></td><td>Datos del bus I²C de gestión.</td></tr><tr><td>6</td><td><b>I2C_IRQ#</b></td><td>Interrupción activa en bajo del bus I²C (probable origen: controlador USB-PD de la tarjeta).</td></tr><tr><td>12</td><td><b>PERST_N</b></td><td>Reinicio fundamental de PCIe: el controlador no arranca hasta que alimentación y reloj son estables.</td></tr><tr><td>14</td><td><b>WAKE#</b></td><td>Despertar de PCIe, activa en bajo: la tarjeta saca al sistema del reposo (p. ej., al conectar un dispositivo).</td></tr><tr><td>9</td><td><b>GND</b></td><td>Masa: referencia eléctrica de las señales.</td></tr></tbody></table></div>
+    </div>
+    <div class="deck-footer"><span>Pinout: gestión, PCIe, masa y clave</span><span class="slide-number" data-current="19" data-total="27"></span></div>
+    <div class="notes">PERST# lo genera la placa y WAKE# la tarjeta. El I²C permite que la placa y la tarjeta intercambien información de gestión; su uso exacto depende del diseño de cada fabricante.</div>
+  </section>
+
+  <section class="slide" data-title="Los headers de la placa.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">HEADERS Y MONTAJE</p>
+      <h2 class="h2 mt-s">Los headers de la placa.</h2>
+      <div class="split wide mt-m"><figure class="fig" style="--fig-h:58vh"><img src="../teoria/assets/placa_conectores_marcados.jpg" alt="Placa base ATX con los conectores numerados" loading="lazy"><figcaption>Placa ATX con los conectores numerados.</figcaption></figure><div><ul class="bul"><li><b>6</b> panel del sistema (F_PANEL).</li><li><b>10</b> conectores USB.</li><li><b>11</b> audio frontal (AAFP).</li><li><b>12</b> puertos SATA · <b>13</b> ranuras M.2.</li><li>Un <b>header</b> lleva señales al frontal del chasis y se identifica por su serigrafía, la <b>clave</b> y el <b>pin 1</b>.</li></ul></div></div>
+    </div>
+    <div class="deck-footer"><span>Headers de la placa</span><span class="slide-number" data-current="20" data-total="27"></span></div>
+    <div class="notes">Pide que localicen en una placa real los headers de la imagen. El manual de la placa es la referencia final.</div>
+  </section>
+
+  <section class="slide" data-title="USB frontal: 2.0, 3.x y Type‑E.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">HEADERS Y MONTAJE</p>
+      <h2 class="h2 mt-s">USB frontal: 2.0, 3.x y Type‑E.</h2>
+      <div class="slide-image mt-m"><figure class="fig" style="--fig-h:44vh"><img src="../teoria/assets/usb3_header_pinout.svg" alt="Header USB 3.x interno de 19 pines con la función de cada pin" loading="lazy"><figcaption>Header USB 3.x de 19 pines (pin 20 sin pin, como clave).</figcaption></figure></div><ul class="bul"><li><b>USB 2.0</b>: header de 9 pines (2×5 con guía) para 2 puertos.</li><li><b>USB 3.x</b>: 19 pines, dos puertos SuperSpeed; el cable debe ser apantallado.</li><li><b>Type‑E</b>: 20 pines de clave A para un USB‑C frontal; Type‑C no implica USB4.</li></ul>
+    </div>
+    <div class="deck-footer"><span>USB frontal</span><span class="slide-number" data-current="21" data-total="27"></span></div>
+    <div class="notes">Resalta que cada puerto USB 3.x usa pares TX/RX y además las líneas D+/D− de USB 2.0. El pin 10 figura como ID (algunas placas lo usan como USBOC−).</div>
+  </section>
+
+  <section class="slide" data-title="Audio frontal y panel frontal.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">HEADERS Y MONTAJE</p>
+      <h2 class="h2 mt-s">Audio frontal y panel frontal.</h2>
+      <div class="two-figs mt-m"><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/aafp_pinout.svg" alt="Header de audio frontal AAFP de 10 pines" loading="lazy"><figcaption>Audio frontal AAFP (HD Audio) de 10 pines.</figcaption></figure><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/front_panel_placa.jpg" alt="Header del panel frontal con los pines etiquetados" loading="lazy"><figcaption>Panel frontal: SLP, POW LED, ON/OFF, SPK, HLED y RST.</figcaption></figure></div><ul class="bul"><li>Usa el cable <b>HD Audio</b> (no AC’97): el pin 4 (PRESENCE#) y las líneas SENSE detectan el jack.</li><li>En el <b>panel frontal</b> los LED tienen <b>polaridad</b>: si no lucen, invierte el conector.</li><li>El mapeo exacto varía según la placa: consulta siempre el <b>manual</b>.</li></ul>
+    </div>
+    <div class="deck-footer"><span>Audio y panel frontal</span><span class="slide-number" data-current="22" data-total="27"></span></div>
+    <div class="notes">Los pines 6 y 10 del AAFP son los retornos de detección del micrófono y de los auriculares. El pulsador no tiene polaridad; los LED sí.</div>
+  </section>
+
+  <section class="slide" data-title="Puerto serie COM (RS‑232).">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">HEADERS Y MONTAJE</p>
+      <h2 class="h2 mt-s">Puerto serie COM (RS‑232).</h2>
+      <div class="two-figs mt-m"><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/com_header_cableado.svg" alt="Cableado entre el header COM de 10 pines y el conector DB-9" loading="lazy"><figcaption>Header COM de 10 pines hacia DB‑9: cable recto y null‑modem.</figcaption></figure><figure class="fig" style="--fig-h:34vh"><img src="../teoria/assets/rs232_db9_pinout.svg" alt="Conector DB-9 macho del PC con la numeración y el nombre de cada señal RS-232" loading="lazy"><figcaption>Pinout del DB‑9 macho del PC (DTE).</figcaption></figure></div><ul class="bul"><li>El header 2×5 no sigue el orden del DB‑9: <b>comprueba la tabla de pines</b> de la placa y del cable.</li><li><b>Recto</b>: PC ↔ módem · <b>null‑modem</b>: PC ↔ PC (cruza TX/RX y las líneas de control).</li><li>RS‑232 usa ±3–15 V; no lo conectes a un adaptador <b>TTL</b> de 3,3 V.</li></ul>
+    </div>
+    <div class="deck-footer"><span>Puerto COM</span><span class="slide-number" data-current="23" data-total="27"></span></div>
+    <div class="notes">Recuerda que la distribución más habitual es la de DTK/Intel, pero existe otra (AT/Everex). Velocidades típicas de 9600 a 115200 baudios (8N1).</div>
+  </section>
+
+  <section class="slide" data-title="Procedimiento de montaje y verificación.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">HEADERS Y MONTAJE</p>
+      <h2 class="h2 mt-s">Procedimiento de montaje y verificación.</h2>
+      <div class="flow-row"><div class="step-card"><span class="num">1</span><h4>Planifica</h4><p class="dim">Identifica F_USB, Type‑E, AAFP, F_PANEL, COM y TB_HEADER en el manual.</p></div><div class="step-card"><span class="num">2</span><h4>Orienta y conecta</h4><p class="dim">Localiza el pin 1 o la clave; no fuerces y asegura los cables sin tensiones.</p></div><div class="step-card"><span class="num">3</span><h4>Comprueba</h4><p class="dim">Prueba USB 2.0 y 3.x, audio, encendido, reset y LED, COM a 115200 8N1.</p></div></div><div class="callout"><b>Regla de oro.</b> Si el conector no entra, no se fuerza: se revisa la orientación, la clave y el pin 1.</div>
+    </div>
+    <div class="deck-footer"><span>Montaje y verificación</span><span class="slide-number" data-current="24" data-total="27"></span></div>
+    <div class="notes">Haz el procedimiento sobre una placa de pruebas. Cada fallo del siguiente apartado se evita con una de estas tres fases.</div>
+  </section>
+
+  <section class="slide" data-title="Fallos frecuentes y cómo se resuelven.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">DIAGNÓSTICO</p>
+      <h2 class="h2 mt-s">Fallos frecuentes y cómo se resuelven.</h2>
+      <div class="card-grid mt-l"><div class="concept-box compact"><h4>USB frontal lento</h4><p class="dim">Cable Type‑E incorrecto, header Gen 1, ruta larga o masa floja.</p></div><div class="concept-box compact"><h4>USB‑C sin carga rápida</h4><p class="dim">Falta el conector de alimentación adicional, el cable no es E‑Marker o la placa limita la potencia.</p></div><div class="concept-box compact"><h4>Sin audio frontal</h4><p class="dim">Cable AC’97 en vez de HD Audio, detección de jack desactivada o masa mal rutada.</p></div><div class="concept-box compact"><h4>COM mudo</h4><p class="dim">Confusión RS‑232 y TTL, puerto desactivado en la BIOS o falta un cable null‑modem.</p></div></div>
+    </div>
+    <div class="deck-footer"><span>Diagnóstico de fallos</span><span class="slide-number" data-current="25" data-total="27"></span></div>
+    <div class="notes">Plantea cada fallo como un caso: ¿qué dato miraríais primero para comprobarlo?</div>
+  </section>
+
+  <section class="slide" data-title="Preguntas para comprobar lo aprendido.">
+    <aside class="sidebar"><div class="brand">U04</div><h5>Ruta de aprendizaje</h5><ul class="obj-list"><li class="done">Qué es un bus</li><li class="done">Mapa de buses</li><li class="done">CPU, memoria y chipset</li><li class="done">PCI Express</li><li class="done">Almacenamiento</li><li class="done">Buses de gestión</li><li class="done">USB y Thunderbolt</li><li class="current">Headers y montaje</li></ul><h5>Uso en clase</h5><p class="dim" style="font-size:13px">Presentación de apoyo: conceptos clave, lectura visual y preguntas de taller.</p></aside>
+    <div class="main">
+      <p class="kicker">REPASO</p>
+      <h2 class="h2 mt-s">Preguntas para comprobar lo aprendido.</h2>
+      <div class="stack mt-m"><div class="concept-box compact"><h4>1. ¿Qué diferencia hay entre M.2, NVMe y PCIe?</h4><p class="dim">El conector, el protocolo y el bus físico.</p></div><div class="concept-box compact"><h4>2. ¿Por qué un SSD PCIe 4.0 x4 puede saturar el enlace del chipset AMD?</h4><p class="dim">Los dos ofrecen ≈7,9 GB/s por sentido.</p></div><div class="concept-box compact"><h4>3. ¿Cuánto ancho de banda tiene un canal DDR5‑6000?</h4><p class="dim">6000 MT/s × 8 bytes = 48 GB/s.</p></div><div class="concept-box compact"><h4>4. ¿Cómo se identifica el pin 1 de un header?</h4><p class="dim">Triángulo, pad cuadrado o serigrafía; consulta el manual.</p></div><div class="concept-box compact"><h4>5. ¿Qué diferencia hay entre un cable recto y uno null‑modem?</h4><p class="dim">El null‑modem cruza TX/RX y las líneas de control.</p></div></div>
+    </div>
+    <div class="deck-footer"><span>Repaso</span><span class="slide-number" data-current="26" data-total="27"></span></div>
+    <div class="notes">Las respuestas figuran bajo cada pregunta; ocúltalas si quieres que las contesten en voz alta primero.</div>
+  </section>
+
+  <section class="slide full" data-title="Cierre">
+    <p class="kicker">CIERRE · U04</p>
+    <h1 class="h1 mt-s" style="font-size:clamp(36px,5.2vw,60px)">Qué debes llevarte.</h1>
+    <div class="summary-strip">
+      <div class="concept-box"><h4>Un bus son líneas y reglas</h4><p class="dim">Se describe por ancho, velocidad, codificación y topología.</p></div>
+      <div class="concept-box"><h4>Enlaces punto a punto</h4><p class="dim">PCIe, DMI, SATA y USB sustituyeron a los buses paralelos compartidos.</p></div>
+      <div class="concept-box"><h4>El chipset comparte enlace</h4><p class="dim">DMI en Intel, PCIe 4.0 x4 en AMD: lo rápido va a la CPU.</p></div>
+      <div class="concept-box"><h4>M.2, NVMe y PCIe</h4><p class="dim">Conector, protocolo y bus: no son lo mismo.</p></div>
+    </div>
+    <div class="callout"><b>Antes de terminar.</b> Explica en voz alta qué es un bus, qué buses tiene tu PC y cómo comprobarías un header en un equipo real.</div>
+    <div class="deck-footer"><span>Resumen final · Créditos de las imágenes: apartado 20 de los apuntes de la unidad</span><span class="slide-number" data-current="27" data-total="27"></span></div>
+    <div class="notes">Cierra con una comprobación oral breve. Si el alumnado puede explicar qué es un bus, cuáles hay y cómo se comprueba un header, la unidad queda asentada.</div>
+  </section>
+
+</div>
+<script src="../../slides/html-ppt-assets/runtime.js"></script>
+<script>
+(function () {
+  function ajustar() {
+    var w = window.innerWidth, h = window.innerHeight, r = document.documentElement.style;
+    var escala = Math.max(0.78, Math.min(1, Math.min(w / 1280, h / 720)));
+    r.setProperty('--text-scale', escala.toFixed(3));
+    r.setProperty('--img-max-h', Math.round(h * (w < 860 ? 0.30 : 0.44)) + 'px');
+    r.setProperty('--img-wrap-h', Math.round(h * 0.56) + 'px');
+  }
+  function diferido() { requestAnimationFrame(function () { requestAnimationFrame(ajustar); }); }
+  ['resize', 'orientationchange', 'fullscreenchange', 'visibilitychange'].forEach(function (ev) {
+    window.addEventListener(ev, diferido);
+  });
+  document.addEventListener('fullscreenchange', diferido);
+  ajustar();
+})();
+</script>
+</body>
+</html>

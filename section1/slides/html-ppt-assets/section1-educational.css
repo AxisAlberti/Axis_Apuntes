@@ -1,0 +1,132 @@
+/* Slides educativas section1: capa visual común sobre la plantilla course-module. */
+.tpl-course-module .slide {
+  min-height: 100vh;
+}
+.tpl-course-module .logo-badge {
+  position: fixed;
+  top: 18px;
+  left: 22px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  color: var(--text-2);
+  font: 700 11px/1 var(--font-mono, 'JetBrains Mono', monospace);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.tpl-course-module .logo-badge img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.tpl-course-module .return-button {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 40;
+  padding: 9px 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 84%, transparent);
+  color: var(--text-1);
+  font: 700 12px/1 var(--font-mono, 'JetBrains Mono', monospace);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+.tpl-course-module .return-button:hover { transform: translateY(-1px); }
+.tpl-course-module .concept-box p { line-height: 1.55; }
+.tpl-course-module .concept-box.compact { padding: 18px 20px; }
+.tpl-course-module .term-grid,
+.tpl-course-module .card-grid,
+.tpl-course-module .visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.tpl-course-module .term {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.tpl-course-module .term b { color: var(--accent); display: block; margin-bottom: 6px; }
+.tpl-course-module .flow-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.tpl-course-module .step-card {
+  position: relative;
+  min-height: 145px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+.tpl-course-module .step-card .num {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.tpl-course-module .image-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.tpl-course-module .image-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+.tpl-course-module .image-card figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.tpl-course-module .big-question {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 62px);
+  line-height: 1.05;
+  color: var(--text-1);
+  max-width: 11ch;
+}
+.tpl-course-module .summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+.tpl-course-module .summary-strip .concept-box { padding: 18px; }
+@media (max-width: 860px) {
+  .tpl-course-module .slide { grid-template-columns: 1fr; padding: 92px 24px 48px; gap: 24px; }
+  .tpl-course-module .sidebar { border-right: 0; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 18px; }
+  .tpl-course-module .h1, .tpl-course-module .slide.full .h1 { font-size: clamp(42px, 12vw, 68px); }
+  .tpl-course-module .h2 { font-size: clamp(32px, 9vw, 46px); }
+  .tpl-course-module .term-grid,
+  .tpl-course-module .card-grid,
+  .tpl-course-module .visual-grid,
+  .tpl-course-module .flow-row,
+  .tpl-course-module .summary-strip { grid-template-columns: 1fr; }
+  .tpl-course-module .logo-badge span { display: none; }
+}

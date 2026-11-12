@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#111">Topología de USB: estrella por niveles (árbol)</text>
+
+  <g font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">
+    <rect x="330" y="55" width="240" height="60" rx="10" fill="#1f3b73"/>
+    <text x="450" y="80">Host (PC)</text><text x="450" y="100" font-size="12" font-weight="normal">controlador + hub raíz · planifica el bus</text>
+
+    <rect x="120" y="190" width="150" height="50" rx="10" fill="#b45309"/><text x="195" y="220">Hub (nivel 2)</text>
+    <rect x="375" y="190" width="150" height="50" rx="10" fill="#4b5563"/><text x="450" y="220">Teclado</text>
+    <rect x="630" y="190" width="150" height="50" rx="10" fill="#4b5563"/><text x="705" y="220">Disco USB</text>
+
+    <rect x="30" y="330" width="130" height="50" rx="10" fill="#4b5563"/><text x="95" y="360">Ratón</text>
+    <rect x="175" y="330" width="130" height="50" rx="10" fill="#4b5563"/><text x="240" y="360">Cámara</text>
+    <rect x="320" y="330" width="150" height="50" rx="10" fill="#b45309"/><text x="395" y="360">Hub (nivel 3)</text>
+
+    <rect x="320" y="415" width="70" height="40" rx="8" fill="#4b5563" font-size="12"/><text x="355" y="440" font-size="12">Impresora</text>
+    <rect x="400" y="415" width="70" height="40" rx="8" fill="#4b5563"/><text x="435" y="440" font-size="12">Pendrive</text>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none">
+    <line x1="450" y1="115" x2="195" y2="190"/>
+    <line x1="450" y1="115" x2="450" y2="190"/>
+    <line x1="450" y1="115" x2="705" y2="190"/>
+    <line x1="195" y1="240" x2="95" y2="330"/>
+    <line x1="195" y1="240" x2="240" y2="330"/>
+    <line x1="195" y1="240" x2="395" y2="330"/>
+    <line x1="395" y1="380" x2="355" y2="415"/>
+    <line x1="395" y1="380" x2="435" y2="415"/>
+  </g>
+
+  <g font-size="13" fill="#111">
+    <text x="600" y="320" font-weight="bold">Reglas básicas</text>
+    <text x="600" y="342">· Hasta 127 dispositivos por host.</text>
+    <text x="600" y="362">· Máximo 5 niveles de hubs externos</text>
+    <text x="600" y="380">  (7 niveles contando host y dispositivo).</text>
+    <text x="600" y="400">· El host inicia todas las transferencias;</text>
+    <text x="600" y="418">  los dispositivos solo responden.</text>
+    <text x="600" y="438">· El ancho de banda se reparte entre</text>
+    <text x="600" y="456">  los dispositivos de un mismo hub raíz.</text>
+  </g>
+  <text x="30" y="458" font-size="11" fill="#666">Esquema propio.</text>
+</svg>
