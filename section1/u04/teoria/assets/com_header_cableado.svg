@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="13cm" height="7cm" viewBox="166 49 247 122" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="196" y="136" width="64" height="34"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #ffffff" x="196" y="136" width="64" height="34"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="324" y="136" width="64" height="34"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #ffffff" x="324" y="136" width="64" height="34"/>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 284 92 C 284,95.312 281.315,97.999 278,97.999 L 173.823,97.999 C 170.508,97.999 167.823,95.312 167.823,92 L 167.823,56.337 C 167.823,53.021 170.508,50.337 173.823,50.337 L 278.001,50.337 C 281.316,50.337 284.001,53.021 284.001,56.337 L 284.001,92 L 284,92z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" d="M 284 92 C 284,95.312 281.315,97.999 278,97.999 L 173.823,97.999 C 170.508,97.999 167.823,95.312 167.823,92 L 167.823,56.337 C 167.823,53.021 170.508,50.337 173.823,50.337 L 278.001,50.337 C 281.316,50.337 284.001,53.021 284.001,56.337 L 284.001,92 L 284,92"/>
+  </g>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="203.857" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #008000" cx="214.886" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #800000" cx="225.912" cy="68.599" rx="2.238" ry="2.238"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 236.936 66.358 C 238.174,66.358 239.178,67.362 239.178,68.599 C 239.178,69.836 238.174,70.839 236.936,70.839 C 235.703,70.839 234.699,69.836 234.699,68.599 C 234.699,67.362 235.703,66.358 236.936,66.358"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="247.965" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="209.371" cy="79.739" rx="2.239" ry="2.239"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="220.399" cy="79.739" rx="2.239" ry="2.239"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 231.424 77.5 C 232.661,77.5 233.662,78.503 233.662,79.737 C 233.662,80.974 232.661,81.978 231.424,81.978 C 230.186,81.978 229.182,80.974 229.182,79.737 C 229.182,78.503 230.186,77.5 231.424,77.5"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="242.453" cy="79.739" rx="2.239" ry="2.239"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" d="M 200 58 C 194.391,58 190.6,62.518 191.575,68.042 L 193.929,81.351 C 194.905,86.876 200.295,91.4 205.904,91.4 L 244.095,91.4 C 249.703,91.4 255.091,86.877 256.07,81.351 L 258.424,68.042 C 259.399,62.518 255.611,58 249.999,58 L 200,58"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" cx="179.028" cy="74.17" rx="5.054" ry="5.054"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" cx="272.796" cy="74.17" rx="5.054" ry="5.054"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="200" y1="140" x2="256" y2="140"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="200" y1="166" x2="256" y2="166"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="200" y1="166" x2="200" y2="140"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="256" y1="166" x2="256" y2="140"/>
+  <g>
+    <rect style="fill: #ffffff" x="206" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="206" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="206" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="216" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="216" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="216" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="236" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="236" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="236" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #000000" x="246" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="246" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="246" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="206" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="206" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="206" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="216" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x="216" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x="216" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="226" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x="226" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x="226" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="236" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="236" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="236" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="226" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="226" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="226" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="196" y1="136" x2="260" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="196" y1="170" x2="222" y2="170"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="196" y1="170" x2="196" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="260" y1="170" x2="260" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="234" y1="170" x2="260" y2="170"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="234" y1="170" x2="234" y2="166"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="222" y1="170" x2="222" y2="166"/>
+  <g>
+    <rect style="fill: #ffffff" x="246" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #d0d0d0" x="246" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #d0d0d0" x="246" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 412 92 C 412,95.312 409.315,97.999 406,97.999 L 301.823,97.999 C 298.508,97.999 295.823,95.312 295.823,92 L 295.823,56.337 C 295.823,53.021 298.508,50.337 301.823,50.337 L 406.001,50.337 C 409.316,50.337 412.001,53.021 412.001,56.337 L 412.001,92 L 412,92z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" d="M 412 92 C 412,95.312 409.315,97.999 406,97.999 L 301.823,97.999 C 298.508,97.999 295.823,95.312 295.823,92 L 295.823,56.337 C 295.823,53.021 298.508,50.337 301.823,50.337 L 406.001,50.337 C 409.316,50.337 412.001,53.021 412.001,56.337 L 412.001,92 L 412,92"/>
+  </g>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="331.857" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #008000" cx="342.886" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #800000" cx="353.912" cy="68.599" rx="2.238" ry="2.238"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 364.936 66.358 C 366.174,66.358 367.178,67.362 367.178,68.599 C 367.178,69.836 366.174,70.839 364.936,70.839 C 363.703,70.839 362.699,69.836 362.699,68.599 C 362.699,67.362 363.703,66.358 364.936,66.358"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="375.965" cy="68.599" rx="2.241" ry="2.241"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="337.371" cy="79.739" rx="2.239" ry="2.239"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="348.399" cy="79.739" rx="2.239" ry="2.239"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 359.424 77.5 C 360.661,77.5 361.662,78.503 361.662,79.737 C 361.662,80.974 360.661,81.978 359.424,81.978 C 358.186,81.978 357.182,80.974 357.182,79.737 C 357.182,78.503 358.186,77.5 359.424,77.5"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="370.453" cy="79.739" rx="2.239" ry="2.239"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" d="M 328 58 C 322.391,58 318.6,62.518 319.575,68.042 L 321.929,81.351 C 322.905,86.876 328.295,91.4 333.904,91.4 L 372.095,91.4 C 377.703,91.4 383.091,86.877 384.07,81.351 L 386.424,68.042 C 387.399,62.518 383.611,58 377.999,58 L 328,58"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" cx="307.028" cy="74.17" rx="5.054" ry="5.054"/>
+  <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" cx="400.796" cy="74.17" rx="5.054" ry="5.054"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="203.868" y1="71.8436" x2="204" y2="110"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="209" y1="82" x2="208" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x1="215" y1="72" x2="214" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="220" y1="82" x2="218" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="231" y1="82" x2="228" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="237" y1="72" x2="234" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="248" y1="72" x2="244" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="226" y1="72" x2="224" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="243" y1="82" x2="238" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="204" y1="110" x2="204" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x1="214" y1="112" x2="214" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="224" y1="112" x2="224" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="234" y1="112" x2="234" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="244" y1="112" x2="244" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="204" y1="153" x2="206" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x1="214" y1="153" x2="216" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="224" y1="153" x2="226" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="234" y1="153" x2="236" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="244" y1="153" x2="246" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="208" y1="112" x2="207.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="218" y1="112" x2="217.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="228" y1="112" x2="227.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="238" y1="112" x2="237.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="331.868" y1="71.8436" x2="332" y2="112"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="336.371" y1="81.978" x2="355.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x1="343" y1="72" x2="335.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="347.399" y1="81.978" x2="362" y2="142"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="358.424" y1="81.978" x2="365.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="365" y1="72" x2="345.806" y2="146"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="376" y1="72" x2="352" y2="142"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="354" y1="72" x2="342" y2="142"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="371.036" y1="81.3222" x2="372" y2="154"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="328" y1="140" x2="384" y2="140"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="328" y1="166" x2="384" y2="166"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="328" y1="166" x2="328" y2="140"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #17d29a" x1="384" y1="166" x2="384" y2="140"/>
+  <g>
+    <rect style="fill: #ffffff" x="334" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x="334" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #008000" x="334" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="344" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="344" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="344" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="364" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="364" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="364" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="374" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="374" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="374" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="334" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="334" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="334" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="344" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x="344" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x="344" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #000000" x="354" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="354" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="354" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="364" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="364" y="156" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="364" y="156" width="3.6129" height="3.73333"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="354" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="354" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="354" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="324" y1="136" x2="388" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="324" y1="170" x2="350" y2="170"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="324" y1="170" x2="324" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="388" y1="170" x2="388" y2="136"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="362" y1="170" x2="388" y2="170"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="362" y1="170" x2="362" y2="166"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #7f7f7f" x1="350" y1="170" x2="350" y2="166"/>
+  <g>
+    <rect style="fill: #ffffff" x="374" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #d0d0d0" x="374" y="146" width="3.6129" height="3.73333"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #d0d0d0" x="374" y="146" width="3.6129" height="3.73333"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="332" y1="110" x2="332" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="342" y1="142" x2="342" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="352" y1="142" x2="352" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="362" y1="142" x2="362" y2="153"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="332" y1="153" x2="334" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #800000" x1="342" y1="153" x2="344" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="352" y1="153" x2="354" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="362" y1="153" x2="364" y2="156"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #1a1a1a" x1="372" y1="153" x2="374" y2="156"/>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="200" y="64">
+    <tspan x="200" y="64">1</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="248" y="88">
+    <tspan x="248" y="88">9</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="375.045" y="88.4478">
+    <tspan x="375.045" y="88.4478">9</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="328" y="64">
+    <tspan x="328" y="64">1</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="248" y="64">
+    <tspan x="248" y="64">5</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="376" y="64">
+    <tspan x="376" y="64">5</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="200" y="88">
+    <tspan x="200" y="88">6</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="328" y="88">
+    <tspan x="328" y="88">6</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="202" y="164">
+    <tspan x="202" y="164">1</tspan>
+  </text>
+  <text style="fill: #17d29a;text-anchor:start;font-size:5.64436;font-family:sanserif;font-style:normal;font-weight:normal" x="330" y="164">
+    <tspan x="330" y="164">1</tspan>
+  </text>
+</svg>

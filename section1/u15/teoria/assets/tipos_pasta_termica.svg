@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Helvetica, Arial, sans-serif">
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#111">Tipos de pasta térmica según su conductividad</text>
+  <text x="480" y="58" text-anchor="middle" font-size="13" fill="#444">Valores orientativos en W/mK, tomados de fichas de fabricantes y tiendas: no son comparables entre marcas.</text>
+
+  <!-- escala -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="260" y1="90" x2="260" y2="440"/>
+    <line x1="340" y1="90" x2="340" y2="440" stroke-dasharray="3 4"/>
+    <line x1="420" y1="90" x2="420" y2="440" stroke-dasharray="3 4"/>
+    <line x1="500" y1="90" x2="500" y2="440" stroke-dasharray="3 4"/>
+    <line x1="580" y1="90" x2="580" y2="440" stroke-dasharray="3 4"/>
+    <line x1="660" y1="90" x2="660" y2="440" stroke-dasharray="3 4"/>
+    <line x1="740" y1="90" x2="740" y2="440" stroke-dasharray="3 4"/>
+    <line x1="820" y1="90" x2="820" y2="440" stroke-dasharray="3 4"/>
+  </g>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="260" y="458">0</text>
+    <text x="340" y="458">10</text>
+    <text x="420" y="458">20</text>
+    <text x="500" y="458">30</text>
+    <text x="580" y="458">40</text>
+    <text x="660" y="458">50</text>
+    <text x="740" y="458">60</text>
+    <text x="820" y="458">70</text>
+  </g>
+  <text x="540" y="482" text-anchor="middle" font-size="13" fill="#111">Conductividad térmica (W/mK)</text>
+
+  <!-- filas -->
+  <g font-size="14" font-weight="bold" fill="#111">
+    <text x="30" y="128">Silicona (baja calidad)</text>
+    <text x="30" y="188">Cerámica (blanca)</text>
+    <text x="30" y="248">Metálica (gris)</text>
+    <text x="30" y="308">Carbono (micropartículas)</text>
+    <text x="30" y="368">Metal líquido</text>
+  </g>
+
+  <!-- barras -->
+  <rect x="260" y="112" width="5" height="22" fill="#6b7280"/>
+  <text x="274" y="128" font-size="13" fill="#111">≈ 0,65 (ejemplo de fabricante)</text>
+
+  <rect x="261" y="172" width="63" height="22" rx="3" fill="#1f5fbf"/>
+  <text x="332" y="188" font-size="13" fill="#111">de 2 a 11</text>
+
+  <rect x="288" y="232" width="63" height="22" rx="3" fill="#7c3aed"/>
+  <text x="359" y="248" font-size="13" fill="#111">de 4 a 13 (muchas, de 8 a 11)</text>
+
+  <circle cx="327" cy="319" r="7" fill="#d97706"/>
+  <text x="344" y="324" font-size="13" fill="#111">≈ 8,5 (dato de tiendas)</text>
+
+  <rect x="260" y="352" width="560" height="22" rx="3" fill="#b00020" opacity="0.85"/>
+  <text x="200" y="368" font-size="13" text-anchor="start" fill="#111"></text>
+  <text x="586" y="368" font-size="13" fill="#b00020">hasta unos 80 · conductora</text>
+
+  <!-- notas -->
+  <g font-size="12.5" fill="#333">
+    <text x="30" y="410">Silicona: menor precio y menor rendimiento. Cerámica: aislante y económica.</text>
+    <text x="30" y="428">Metálica: intermedia; algunas conducen la electricidad. Carbono: no conductora según fabricante.</text>
+  </g>
+  <text x="480" y="508" text-anchor="middle" font-size="11" fill="#666">Esquema propio a partir de fichas técnicas de fabricantes y distribuidores. Cifras orientativas.</text>
+</svg>
