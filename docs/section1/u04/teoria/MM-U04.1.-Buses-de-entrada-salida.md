@@ -57,39 +57,11 @@ tags:
 
 ---
 
-## 2. Conectores de vídeo externos
-
-Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o un dispositivo hasta el monitor, el televisor o el proyector. No forman parte de la placa, pero conviene conocerlos porque condicionan la resolución, la frecuencia de refresco y el cable que hay que usar.
-
-<figure markdown="span">
-  ![Infografía con cinco conectores de vídeo, de VGA a USB-C y Thunderbolt, con el tipo de señal, el uso habitual y las ventajas de cada uno](assets/conectores_video_evolucion.jpg){ style="max-width: 100%; height: auto;" }
-  <figcaption>Evolución de los conectores de vídeo, de VGA a USB-C y Thunderbolt: cambian la calidad de imagen, la comodidad y la velocidad.</figcaption>
-</figure>
-
-| Conector | Tipo de señal | Vídeo | Audio | Uso habitual | Observaciones |
-|---|---|---|---|---|---|
-| **VGA** | Analógica (RGB) | Sí | No (cable aparte) | Monitores y proyectores antiguos | Conector de 15 pines en tres filas. La calidad baja al subir la resolución. En desuso. |
-| **DVI** | Digital (DVI‑D), analógica (DVI‑A) o ambas (DVI‑I) | Sí | No | Monitores de transición | Solo transporta vídeo. Las versiones *single‑link* y *dual‑link* tienen distinto ancho de banda. |
-| **HDMI** | Digital | Sí | Sí, en el mismo cable | Televisores, monitores y consolas | Versiones posteriores amplían el ancho de banda. HDMI 2.1 llega a 48 Gbps. |
-| **DisplayPort** | Digital, sin conversión | Sí | Sí | Monitores y equipos modernos, juegos y trabajo profesional | DisplayPort 2.1 (UHBR20) llega a 80 Gbps. El Mini DisplayPort tiene el mismo funcionamiento con otro tamaño de conector. |
-| **USB‑C** (DP Alt Mode o Thunderbolt) | Digital, empaquetada en USB | Sí | Sí | Portátiles, tabletas y monitores USB‑C | El mismo conector puede llevar DisplayPort nativo (DP Alt Mode) o tunelizado (Thunderbolt/USB4). |
-
-**Diferencias clave**
-
-- **Analógico frente a digital:** VGA transmite una señal analógica que hay que muestrear. Los demás conectores transmiten la señal en digital, por lo que no hay pérdida de calidad en el cable.
-- **Vídeo solo frente a vídeo y audio:** DVI y VGA llevan solo imagen. HDMI, DisplayPort y USB‑C pueden llevar también el sonido por el mismo cable.
-- **Conector frente a protocolo:** el USB‑C es la forma del conector. Lo que transporta depende de su controlador: puede ser solo USB, DisplayPort nativo o Thunderbolt. Por eso un conector USB‑C no garantiza salida de vídeo.
-- **Thunderbolt y DisplayPort:** Thunderbolt 1 y 2 usan Mini DisplayPort. Thunderbolt 3, 4 y 5 usan USB‑C y combinan PCIe y DisplayPort (ver apartado 16).
-
-> Antes de comprar un cable o un monitor, comprueba qué salidas tiene la gráfica o el equipo y qué entradas tiene el monitor. Un cable no convierte una salida en otra: para pasar de DisplayPort a HDMI hace falta un adaptador activo.
-
----
-
-## 3. Qué es un bus
+## 2. Qué es un bus
 
 Un **bus** es el conjunto de **líneas eléctricas** y de **reglas de comunicación** (protocolo) que permiten transferir datos entre los componentes de un sistema. Todo lo que hace un ordenador (leer memoria, dibujar en pantalla, guardar un fichero) es mover datos por algún bus.
 
-### 3.1 Los tres buses clásicos
+### 2.1 Los tres buses clásicos
 
 Los buses clásicos se agrupan por la función de sus líneas:
 
@@ -104,7 +76,7 @@ Los buses clásicos se agrupan por la función de sus líneas:
 
 En los PC actuales estas funciones viajan por **enlaces serie punto a punto** (PCIe, DMI, USB, SATA…), pero el concepto sigue siendo válido: siempre hay que decir **con quién se habla**, **qué se transmite** y **cómo se coordina**.
 
-### 3.2 Parámetros de un bus
+### 2.2 Parámetros de un bus
 
 | Parámetro | Qué indica | Ejemplo |
 |---|---|---|
@@ -120,7 +92,7 @@ Dos cálculos de ejemplo:
 - **Memoria**: DDR5‑6000 en un canal de 64 bits → 6000 MT/s × 8 bytes = **48 GB/s** por canal.
 - **PCIe 4.0 x4**: 16 GT/s × 4 *lanes* × (128/130) ÷ 8 ≈ **7,9 GB/s** por sentido.
 
-### 3.3 Serie frente a paralelo
+### 2.3 Serie frente a paralelo
 
 | | Paralelo | Serie |
 |---|---|---|
@@ -130,7 +102,7 @@ Dos cálculos de ejemplo:
 
 La tendencia es clara: los buses paralelos compartidos dieron paso a **enlaces serie punto a punto**, de modo que cada dispositivo dispone de su propio camino.
 
-### 3.4 Topologías y control del bus
+### 2.4 Topologías y control del bus
 
 - **Bus compartido**: varios dispositivos usan las mismas líneas y necesitan **arbitraje** (PCI, FSB, I²C).
 - **Punto a punto**: un enlace dedicado entre dos extremos, sin compartir (PCIe, SATA, DMI, UPI).
@@ -141,7 +113,7 @@ Casi todos los buses tienen un **maestro** (host, controlador) que inicia las tr
 
 ---
 
-## 4. Mapa de buses de un sistema
+## 3. Mapa de buses de un sistema
 
 La CPU integra el **controlador de memoria** y las líneas **PCIe principales**; el **chipset** concentra el resto de la E/S y se enlaza con la CPU por un bus dedicado.
 
@@ -152,23 +124,23 @@ La CPU integra el **controlador de memoria** y las líneas **PCIe principales**;
 
 | Bus | Qué conecta | Tipo y topología | Velocidad de referencia | Dónde se estudia |
 |---|---|---|---|---|
-| **Bus de memoria** (DDR5) | CPU ↔ módulos de RAM | Paralelo de 64 bits por canal; canal dedicado de 1–2 módulos | ≈48 GB/s por canal a DDR5‑6000 | Sección 5.2 |
-| **PCIe de la CPU** | CPU ↔ GPU y SSD M.2 de CPU | Serie, punto a punto | PCIe 5.0 x16 ≈63 GB/s por sentido | Sección 6 |
-| **DMI / PCIe x4** | CPU ↔ chipset | Serie, punto a punto | Intel: DMI 4.0 x8 ≈15,8 GB/s · AMD: PCIe 4.0 x4 ≈7,9 GB/s | Sección 5.3 |
-| **PCIe del chipset** | Chipset ↔ M.2, tarjetas, red | Serie, punto a punto | PCIe 4.0 (x1, x2, x4) | Sección 6.3 |
-| **SATA** | Chipset ↔ discos y SSD de 2,5" | Serie, punto a punto | 6 Gb/s (600 MB/s) | Sección 7.1 |
+| **Bus de memoria** (DDR5) | CPU ↔ módulos de RAM | Paralelo de 64 bits por canal; canal dedicado de 1–2 módulos | ≈48 GB/s por canal a DDR5‑6000 | Sección 4.2 |
+| **PCIe de la CPU** | CPU ↔ GPU y SSD M.2 de CPU | Serie, punto a punto | PCIe 5.0 x16 ≈63 GB/s por sentido | Sección 5 |
+| **DMI / PCIe x4** | CPU ↔ chipset | Serie, punto a punto | Intel: DMI 4.0 x8 ≈15,8 GB/s · AMD: PCIe 4.0 x4 ≈7,9 GB/s | Sección 4.3 |
+| **PCIe del chipset** | Chipset ↔ M.2, tarjetas, red | Serie, punto a punto | PCIe 4.0 (x1, x2, x4) | Sección 5.3 |
+| **SATA** | Chipset ↔ discos y SSD de 2,5" | Serie, punto a punto | 6 Gb/s (600 MB/s) | Sección 6.1 |
 | **USB** | Chipset ↔ periféricos | Serie, árbol con *hubs* | 480 Mb/s a 40 Gb/s (80 Gb/s en USB4 v2) | Sección 11 |
 | **Thunderbolt / USB4** | CPU o chipset ↔ docks, vídeo, datos | Serie, cadena | 40 Gb/s (TB5: 80, con *boost* 120) | Sección 16 |
 | **Audio HD (HDA)** | Chipset ↔ códec de audio | Serie dedicado | — | Sección 12 |
 | **SPI / eSPI** | Chipset ↔ flash del BIOS, EC, TPM | Serie, maestro‑esclavo | 20–66 MHz (eSPI) | Sección 8 |
 | **I²C / SMBus** | Chipset ↔ sensores, SPD de la RAM | Serie de 2 hilos, compartido | 100 kHz a 3,4 MHz | Sección 8 |
-| **Infinity Fabric / anillo** | Interior de la CPU (chiplets y núcleos) | Interconexión interna | — | Sección 5.1 |
+| **Infinity Fabric / anillo** | Interior de la CPU (chiplets y núcleos) | Interconexión interna | — | Sección 4.1 |
 
 ---
 
-## 5. Buses entre la CPU, la memoria y el chipset
+## 4. Buses entre la CPU, la memoria y el chipset
 
-### 5.1 Del FSB a los enlaces punto a punto
+### 4.1 Del FSB a los enlaces punto a punto
 
 Hasta 2008‑2009 la CPU hablaba con el *Northbridge* por el **FSB** (*Front‑Side Bus*): un bus **paralelo y compartido**, normalmente de **64 bits**, con relojes desde 50–66 MHz en los primeros Pentium hasta 400 MHz con *quad pumping* (1600 MT/s) y un ancho de banda máximo de unos **12,8 GB/s**. Todo el tráfico (memoria, gráfica, E/S) competía por él.
 
@@ -189,7 +161,7 @@ Lo sustituyeron enlaces **serie punto a punto**, mientras el controlador de memo
   <figcaption>Con el FSB todo pasaba por el Northbridge; hoy la CPU integra la memoria y las líneas PCIe y se enlaza con el chipset por un enlace punto a punto.</figcaption>
 </figure>
 
-### 5.2 Bus de memoria
+### 4.2 Bus de memoria
 
 El **controlador de memoria** está dentro de la CPU, así que la RAM **no pasa por el chipset**. Cada **canal** es un bus paralelo de **64 bits** (en DDR5, cada módulo se divide en **dos subcanales de 32 bits**). El ancho de banda máximo es:
 
@@ -203,7 +175,7 @@ El **controlador de memoria** está dentro de la CPU, así que la RAM **no pasa 
 
 Son valores teóricos máximos; el rendimiento real depende de latencias y del tipo de carga. En la unidad 2 se detalla la arquitectura multicanal.
 
-### 5.3 Enlace entre la CPU y el chipset
+### 4.3 Enlace entre la CPU y el chipset
 
 Todo lo que cuelga del chipset (USB, SATA, red, M.2 del chipset…) comparte **un único enlace** con la CPU:
 
@@ -214,9 +186,9 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
 
 ---
 
-## 6. PCI Express (PCIe)
+## 5. PCI Express (PCIe)
 
-### 6.1 Concepto: *lane*, enlace y ranura
+### 5.1 Concepto: *lane*, enlace y ranura
 
 **PCI Express** es el bus de expansión de los PC actuales. Es un bus **serie, punto a punto y *full‑duplex***:
 
@@ -234,7 +206,7 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
   <figcaption>Ranuras PCIe x1 y x16 junto a dos ranuras PCI clásicas.</figcaption>
 </figure>
 
-### 6.2 Generaciones y velocidades
+### 5.2 Generaciones y velocidades
 
 | Versión | Año | Codificación | GT/s por lane | GB/s por lane y sentido | x16 (GB/s por sentido) |
 |---|---|---|---|---|---|
@@ -248,7 +220,7 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
 
 Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe 6.0 tuvo su primer hardware en 2025 y PCIe 7.0 se aprobó en junio de 2025. PCIe 8.0 está anunciada para 2028.
 
-### 6.3 Reparto de líneas: CPU y chipset
+### 5.3 Reparto de líneas: CPU y chipset
 
 - La **CPU** aporta las líneas más rápidas: normalmente **x16** para la GPU y **x4** para un SSD M.2.
 - El **chipset** aporta líneas adicionales (x1, x2, x4) para M.2 extra, tarjetas y controladoras; todas comparten el enlace CPU ↔ chipset.
@@ -259,11 +231,11 @@ Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe
   <figcaption>Placa base con el chipset (PCH), varias ranuras PCIe x16 y x4 y conectores SATA.</figcaption>
 </figure>
 
-### 6.4 CXL: PCIe para memoria y aceleradores
+### 5.4 CXL: PCIe para memoria y aceleradores
 
 **CXL** (*Compute Express Link*) es un estándar abierto que usa la **capa física de PCIe** y añade protocolos de **coherencia de caché**. Permite ampliar memoria y conectar aceleradores en servidores. CXL 1.0 (2019) y 2.0 (2020) usan PCIe 5.0; CXL 3.0 (2022) usa PCIe 6.0.
 
-### 6.5 Buses heredados: ISA, PCI y AGP
+### 5.5 Buses heredados: ISA, PCI y AGP
 
 | Bus | Tipo | Ancho de banda de referencia | Uso |
 |---|---|---|---|
@@ -275,9 +247,9 @@ PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la vel
 
 ---
 
-## 7. Buses de almacenamiento
+## 6. Buses de almacenamiento
 
-### 7.1 SATA
+### 6.1 SATA
 
 **SATA** (*Serial ATA*) es un bus **serie punto a punto**: un puerto por dispositivo. Sustituyó al antiguo IDE/PATA paralelo.
 
@@ -301,12 +273,12 @@ PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la vel
   <figcaption>Conector de alimentación SATA de 15 contactos.</figcaption>
 </figure>
 
-### 7.2 SATA Express y U.2
+### 6.2 SATA Express y U.2
 
 - **SATA Express** (SATA 3.2) combina en un mismo conector hasta **dos *lanes* PCIe** (hasta 2 GB/s) y es compatible con los conectores SATA. Apenas se extendió y quedó superado por M.2.
 - **U.2** (SFF‑8639) lleva **PCIe x4** y también admite SATA y SAS; se usa en SSD empresariales de 2,5".
 
-### 7.3 M.2 y NVMe
+### 6.3 M.2 y NVMe
 
 Conviene distinguir tres cosas:
 
@@ -344,6 +316,34 @@ El **tamaño** se codifica como ancho × largo en milímetros: 2230, 2242, 2260,
 | Protocolo | AHCI (pensado para discos giratorios) | NVMe (pensado para flash) |
 | Conector típico | SATA o M.2 clave B / B+M | M.2 clave M, U.2 o tarjeta PCIe |
 | Dónde se conecta | Chipset | CPU (más rápido) o chipset |
+
+---
+
+## 7. Conectores de vídeo externos
+
+Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o un dispositivo hasta el monitor, el televisor o el proyector. No forman parte de la placa, pero conviene conocerlos porque condicionan la resolución, la frecuencia de refresco y el cable que hay que usar.
+
+<figure markdown="span">
+  ![Infografía con cinco conectores de vídeo, de VGA a USB-C y Thunderbolt, con el tipo de señal, el uso habitual y las ventajas de cada uno](assets/conectores_video_evolucion.jpg){ style="max-width: 100%; height: auto;" }
+  <figcaption>Evolución de los conectores de vídeo, de VGA a USB-C y Thunderbolt: cambian la calidad de imagen, la comodidad y la velocidad.</figcaption>
+</figure>
+
+| Conector | Tipo de señal | Vídeo | Audio | Uso habitual | Observaciones |
+|---|---|---|---|---|---|
+| **VGA** | Analógica (RGB) | Sí | No (cable aparte) | Monitores y proyectores antiguos | Conector de 15 pines en tres filas. La calidad baja al subir la resolución. En desuso. |
+| **DVI** | Digital (DVI‑D), analógica (DVI‑A) o ambas (DVI‑I) | Sí | No | Monitores de transición | Solo transporta vídeo. Las versiones *single‑link* y *dual‑link* tienen distinto ancho de banda. |
+| **HDMI** | Digital | Sí | Sí, en el mismo cable | Televisores, monitores y consolas | Versiones posteriores amplían el ancho de banda. HDMI 2.1 llega a 48 Gbps. |
+| **DisplayPort** | Digital, sin conversión | Sí | Sí | Monitores y equipos modernos, juegos y trabajo profesional | DisplayPort 2.1 (UHBR20) llega a 80 Gbps. El Mini DisplayPort tiene el mismo funcionamiento con otro tamaño de conector. |
+| **USB‑C** (DP Alt Mode o Thunderbolt) | Digital, empaquetada en USB | Sí | Sí | Portátiles, tabletas y monitores USB‑C | El mismo conector puede llevar DisplayPort nativo (DP Alt Mode) o tunelizado (Thunderbolt/USB4). |
+
+**Diferencias clave**
+
+- **Analógico frente a digital:** VGA transmite una señal analógica que hay que muestrear. Los demás conectores transmiten la señal en digital, por lo que no hay pérdida de calidad en el cable.
+- **Vídeo solo frente a vídeo y audio:** DVI y VGA llevan solo imagen. HDMI, DisplayPort y USB‑C pueden llevar también el sonido por el mismo cable.
+- **Conector frente a protocolo:** el USB‑C es la forma del conector. Lo que transporta depende de su controlador: puede ser solo USB, DisplayPort nativo o Thunderbolt. Por eso un conector USB‑C no garantiza salida de vídeo.
+- **Thunderbolt y DisplayPort:** Thunderbolt 1 y 2 usan Mini DisplayPort. Thunderbolt 3, 4 y 5 usan USB‑C y combinan PCIe y DisplayPort (ver apartado 16).
+
+> Antes de comprar un cable o un monitor, comprueba qué salidas tiene la gráfica o el equipo y qué entradas tiene el monitor. Un cable no convierte una salida en otra: para pasar de DisplayPort a HDMI hace falta un adaptador activo.
 
 ---
 
