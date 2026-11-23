@@ -57,11 +57,39 @@ tags:
 
 ---
 
-## 2. Qué es un bus
+## 2. Conectores de vídeo externos
+
+Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o un dispositivo hasta el monitor, el televisor o el proyector. No forman parte de la placa, pero conviene conocerlos porque condicionan la resolución, la frecuencia de refresco y el cable que hay que usar.
+
+<figure markdown="span">
+  ![Infografía con cinco conectores de vídeo, de VGA a USB-C y Thunderbolt, con el tipo de señal, el uso habitual y las ventajas de cada uno](assets/conectores_video_evolucion.jpg){ style="max-width: 100%; height: auto;" }
+  <figcaption>Evolución de los conectores de vídeo, de VGA a USB-C y Thunderbolt: cambian la calidad de imagen, la comodidad y la velocidad.</figcaption>
+</figure>
+
+| Conector | Tipo de señal | Vídeo | Audio | Uso habitual | Observaciones |
+|---|---|---|---|---|---|
+| **VGA** | Analógica (RGB) | Sí | No (cable aparte) | Monitores y proyectores antiguos | Conector de 15 pines en tres filas. La calidad baja al subir la resolución. En desuso. |
+| **DVI** | Digital (DVI‑D), analógica (DVI‑A) o ambas (DVI‑I) | Sí | No | Monitores de transición | Solo transporta vídeo. Las versiones *single‑link* y *dual‑link* tienen distinto ancho de banda. |
+| **HDMI** | Digital | Sí | Sí, en el mismo cable | Televisores, monitores y consolas | Versiones posteriores amplían el ancho de banda. HDMI 2.1 llega a 48 Gbps. |
+| **DisplayPort** | Digital, sin conversión | Sí | Sí | Monitores y equipos modernos, juegos y trabajo profesional | DisplayPort 2.1 (UHBR20) llega a 80 Gbps. El Mini DisplayPort tiene el mismo funcionamiento con otro tamaño de conector. |
+| **USB‑C** (DP Alt Mode o Thunderbolt) | Digital, empaquetada en USB | Sí | Sí | Portátiles, tabletas y monitores USB‑C | El mismo conector puede llevar DisplayPort nativo (DP Alt Mode) o tunelizado (Thunderbolt/USB4). |
+
+**Diferencias clave**
+
+- **Analógico frente a digital:** VGA transmite una señal analógica que hay que muestrear. Los demás conectores transmiten la señal en digital, por lo que no hay pérdida de calidad en el cable.
+- **Vídeo solo frente a vídeo y audio:** DVI y VGA llevan solo imagen. HDMI, DisplayPort y USB‑C pueden llevar también el sonido por el mismo cable.
+- **Conector frente a protocolo:** el USB‑C es la forma del conector. Lo que transporta depende de su controlador: puede ser solo USB, DisplayPort nativo o Thunderbolt. Por eso un conector USB‑C no garantiza salida de vídeo.
+- **Thunderbolt y DisplayPort:** Thunderbolt 1 y 2 usan Mini DisplayPort. Thunderbolt 3, 4 y 5 usan USB‑C y combinan PCIe y DisplayPort (ver apartado 16).
+
+> Antes de comprar un cable o un monitor, comprueba qué salidas tiene la gráfica o el equipo y qué entradas tiene el monitor. Un cable no convierte una salida en otra: para pasar de DisplayPort a HDMI hace falta un adaptador activo.
+
+---
+
+## 3. Qué es un bus
 
 Un **bus** es el conjunto de **líneas eléctricas** y de **reglas de comunicación** (protocolo) que permiten transferir datos entre los componentes de un sistema. Todo lo que hace un ordenador (leer memoria, dibujar en pantalla, guardar un fichero) es mover datos por algún bus.
 
-### 2.1 Los tres buses clásicos
+### 3.1 Los tres buses clásicos
 
 Los buses clásicos se agrupan por la función de sus líneas:
 
@@ -76,7 +104,7 @@ Los buses clásicos se agrupan por la función de sus líneas:
 
 En los PC actuales estas funciones viajan por **enlaces serie punto a punto** (PCIe, DMI, USB, SATA…), pero el concepto sigue siendo válido: siempre hay que decir **con quién se habla**, **qué se transmite** y **cómo se coordina**.
 
-### 2.2 Parámetros de un bus
+### 3.2 Parámetros de un bus
 
 | Parámetro | Qué indica | Ejemplo |
 |---|---|---|
@@ -92,7 +120,7 @@ Dos cálculos de ejemplo:
 - **Memoria**: DDR5‑6000 en un canal de 64 bits → 6000 MT/s × 8 bytes = **48 GB/s** por canal.
 - **PCIe 4.0 x4**: 16 GT/s × 4 *lanes* × (128/130) ÷ 8 ≈ **7,9 GB/s** por sentido.
 
-### 2.3 Serie frente a paralelo
+### 3.3 Serie frente a paralelo
 
 | | Paralelo | Serie |
 |---|---|---|
@@ -102,7 +130,7 @@ Dos cálculos de ejemplo:
 
 La tendencia es clara: los buses paralelos compartidos dieron paso a **enlaces serie punto a punto**, de modo que cada dispositivo dispone de su propio camino.
 
-### 2.4 Topologías y control del bus
+### 3.4 Topologías y control del bus
 
 - **Bus compartido**: varios dispositivos usan las mismas líneas y necesitan **arbitraje** (PCI, FSB, I²C).
 - **Punto a punto**: un enlace dedicado entre dos extremos, sin compartir (PCIe, SATA, DMI, UPI).
@@ -113,7 +141,7 @@ Casi todos los buses tienen un **maestro** (host, controlador) que inicia las tr
 
 ---
 
-## 3. Mapa de buses de un sistema
+## 4. Mapa de buses de un sistema
 
 La CPU integra el **controlador de memoria** y las líneas **PCIe principales**; el **chipset** concentra el resto de la E/S y se enlaza con la CPU por un bus dedicado.
 
@@ -124,23 +152,23 @@ La CPU integra el **controlador de memoria** y las líneas **PCIe principales**;
 
 | Bus | Qué conecta | Tipo y topología | Velocidad de referencia | Dónde se estudia |
 |---|---|---|---|---|
-| **Bus de memoria** (DDR5) | CPU ↔ módulos de RAM | Paralelo de 64 bits por canal; canal dedicado de 1–2 módulos | ≈48 GB/s por canal a DDR5‑6000 | Sección 4.2 |
-| **PCIe de la CPU** | CPU ↔ GPU y SSD M.2 de CPU | Serie, punto a punto | PCIe 5.0 x16 ≈63 GB/s por sentido | Sección 5 |
-| **DMI / PCIe x4** | CPU ↔ chipset | Serie, punto a punto | Intel: DMI 4.0 x8 ≈15,8 GB/s · AMD: PCIe 4.0 x4 ≈7,9 GB/s | Sección 4.3 |
-| **PCIe del chipset** | Chipset ↔ M.2, tarjetas, red | Serie, punto a punto | PCIe 4.0 (x1, x2, x4) | Sección 5.3 |
-| **SATA** | Chipset ↔ discos y SSD de 2,5" | Serie, punto a punto | 6 Gb/s (600 MB/s) | Sección 6.1 |
-| **USB** | Chipset ↔ periféricos | Serie, árbol con *hubs* | 480 Mb/s a 40 Gb/s (80 Gb/s en USB4 v2) | Sección 10 |
-| **Thunderbolt / USB4** | CPU o chipset ↔ docks, vídeo, datos | Serie, cadena | 40 Gb/s (TB5: 80, con *boost* 120) | Sección 15 |
-| **Audio HD (HDA)** | Chipset ↔ códec de audio | Serie dedicado | — | Sección 11 |
-| **SPI / eSPI** | Chipset ↔ flash del BIOS, EC, TPM | Serie, maestro‑esclavo | 20–66 MHz (eSPI) | Sección 7 |
-| **I²C / SMBus** | Chipset ↔ sensores, SPD de la RAM | Serie de 2 hilos, compartido | 100 kHz a 3,4 MHz | Sección 7 |
-| **Infinity Fabric / anillo** | Interior de la CPU (chiplets y núcleos) | Interconexión interna | — | Sección 4.1 |
+| **Bus de memoria** (DDR5) | CPU ↔ módulos de RAM | Paralelo de 64 bits por canal; canal dedicado de 1–2 módulos | ≈48 GB/s por canal a DDR5‑6000 | Sección 5.2 |
+| **PCIe de la CPU** | CPU ↔ GPU y SSD M.2 de CPU | Serie, punto a punto | PCIe 5.0 x16 ≈63 GB/s por sentido | Sección 6 |
+| **DMI / PCIe x4** | CPU ↔ chipset | Serie, punto a punto | Intel: DMI 4.0 x8 ≈15,8 GB/s · AMD: PCIe 4.0 x4 ≈7,9 GB/s | Sección 5.3 |
+| **PCIe del chipset** | Chipset ↔ M.2, tarjetas, red | Serie, punto a punto | PCIe 4.0 (x1, x2, x4) | Sección 6.3 |
+| **SATA** | Chipset ↔ discos y SSD de 2,5" | Serie, punto a punto | 6 Gb/s (600 MB/s) | Sección 7.1 |
+| **USB** | Chipset ↔ periféricos | Serie, árbol con *hubs* | 480 Mb/s a 40 Gb/s (80 Gb/s en USB4 v2) | Sección 11 |
+| **Thunderbolt / USB4** | CPU o chipset ↔ docks, vídeo, datos | Serie, cadena | 40 Gb/s (TB5: 80, con *boost* 120) | Sección 16 |
+| **Audio HD (HDA)** | Chipset ↔ códec de audio | Serie dedicado | — | Sección 12 |
+| **SPI / eSPI** | Chipset ↔ flash del BIOS, EC, TPM | Serie, maestro‑esclavo | 20–66 MHz (eSPI) | Sección 8 |
+| **I²C / SMBus** | Chipset ↔ sensores, SPD de la RAM | Serie de 2 hilos, compartido | 100 kHz a 3,4 MHz | Sección 8 |
+| **Infinity Fabric / anillo** | Interior de la CPU (chiplets y núcleos) | Interconexión interna | — | Sección 5.1 |
 
 ---
 
-## 4. Buses entre la CPU, la memoria y el chipset
+## 5. Buses entre la CPU, la memoria y el chipset
 
-### 4.1 Del FSB a los enlaces punto a punto
+### 5.1 Del FSB a los enlaces punto a punto
 
 Hasta 2008‑2009 la CPU hablaba con el *Northbridge* por el **FSB** (*Front‑Side Bus*): un bus **paralelo y compartido**, normalmente de **64 bits**, con relojes desde 50–66 MHz en los primeros Pentium hasta 400 MHz con *quad pumping* (1600 MT/s) y un ancho de banda máximo de unos **12,8 GB/s**. Todo el tráfico (memoria, gráfica, E/S) competía por él.
 
@@ -161,7 +189,7 @@ Lo sustituyeron enlaces **serie punto a punto**, mientras el controlador de memo
   <figcaption>Con el FSB todo pasaba por el Northbridge; hoy la CPU integra la memoria y las líneas PCIe y se enlaza con el chipset por un enlace punto a punto.</figcaption>
 </figure>
 
-### 4.2 Bus de memoria
+### 5.2 Bus de memoria
 
 El **controlador de memoria** está dentro de la CPU, así que la RAM **no pasa por el chipset**. Cada **canal** es un bus paralelo de **64 bits** (en DDR5, cada módulo se divide en **dos subcanales de 32 bits**). El ancho de banda máximo es:
 
@@ -175,7 +203,7 @@ El **controlador de memoria** está dentro de la CPU, así que la RAM **no pasa 
 
 Son valores teóricos máximos; el rendimiento real depende de latencias y del tipo de carga. En la unidad 2 se detalla la arquitectura multicanal.
 
-### 4.3 Enlace entre la CPU y el chipset
+### 5.3 Enlace entre la CPU y el chipset
 
 Todo lo que cuelga del chipset (USB, SATA, red, M.2 del chipset…) comparte **un único enlace** con la CPU:
 
@@ -186,9 +214,9 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
 
 ---
 
-## 5. PCI Express (PCIe)
+## 6. PCI Express (PCIe)
 
-### 5.1 Concepto: *lane*, enlace y ranura
+### 6.1 Concepto: *lane*, enlace y ranura
 
 **PCI Express** es el bus de expansión de los PC actuales. Es un bus **serie, punto a punto y *full‑duplex***:
 
@@ -206,7 +234,7 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
   <figcaption>Ranuras PCIe x1 y x16 junto a dos ranuras PCI clásicas.</figcaption>
 </figure>
 
-### 5.2 Generaciones y velocidades
+### 6.2 Generaciones y velocidades
 
 | Versión | Año | Codificación | GT/s por lane | GB/s por lane y sentido | x16 (GB/s por sentido) |
 |---|---|---|---|---|---|
@@ -220,7 +248,7 @@ Consecuencia práctica: un único SSD PCIe 4.0 x4 al máximo (≈7,9 GB/s) llena
 
 Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe 6.0 tuvo su primer hardware en 2025 y PCIe 7.0 se aprobó en junio de 2025. PCIe 8.0 está anunciada para 2028.
 
-### 5.3 Reparto de líneas: CPU y chipset
+### 6.3 Reparto de líneas: CPU y chipset
 
 - La **CPU** aporta las líneas más rápidas: normalmente **x16** para la GPU y **x4** para un SSD M.2.
 - El **chipset** aporta líneas adicionales (x1, x2, x4) para M.2 extra, tarjetas y controladoras; todas comparten el enlace CPU ↔ chipset.
@@ -231,11 +259,11 @@ Estado en 2026: las plataformas de consumo trabajan con **PCIe 4.0 y 5.0**; PCIe
   <figcaption>Placa base con el chipset (PCH), varias ranuras PCIe x16 y x4 y conectores SATA.</figcaption>
 </figure>
 
-### 5.4 CXL: PCIe para memoria y aceleradores
+### 6.4 CXL: PCIe para memoria y aceleradores
 
 **CXL** (*Compute Express Link*) es un estándar abierto que usa la **capa física de PCIe** y añade protocolos de **coherencia de caché**. Permite ampliar memoria y conectar aceleradores en servidores. CXL 1.0 (2019) y 2.0 (2020) usan PCIe 5.0; CXL 3.0 (2022) usa PCIe 6.0.
 
-### 5.5 Buses heredados: ISA, PCI y AGP
+### 6.5 Buses heredados: ISA, PCI y AGP
 
 | Bus | Tipo | Ancho de banda de referencia | Uso |
 |---|---|---|---|
@@ -247,9 +275,9 @@ PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la vel
 
 ---
 
-## 6. Buses de almacenamiento
+## 7. Buses de almacenamiento
 
-### 6.1 SATA
+### 7.1 SATA
 
 **SATA** (*Serial ATA*) es un bus **serie punto a punto**: un puerto por dispositivo. Sustituyó al antiguo IDE/PATA paralelo.
 
@@ -273,12 +301,12 @@ PCIe los sustituyó porque cada dispositivo dispone de su propio enlace y la vel
   <figcaption>Conector de alimentación SATA de 15 contactos.</figcaption>
 </figure>
 
-### 6.2 SATA Express y U.2
+### 7.2 SATA Express y U.2
 
 - **SATA Express** (SATA 3.2) combina en un mismo conector hasta **dos *lanes* PCIe** (hasta 2 GB/s) y es compatible con los conectores SATA. Apenas se extendió y quedó superado por M.2.
 - **U.2** (SFF‑8639) lleva **PCIe x4** y también admite SATA y SAS; se usa en SSD empresariales de 2,5".
 
-### 6.3 M.2 y NVMe
+### 7.3 M.2 y NVMe
 
 Conviene distinguir tres cosas:
 
@@ -319,21 +347,21 @@ El **tamaño** se codifica como ancho × largo en milímetros: 2230, 2242, 2260,
 
 ---
 
-## 7. Buses de gestión, arranque y periféricos de baja velocidad
+## 8. Buses de gestión, arranque y periféricos de baja velocidad
 
 No mueven grandes cantidades de datos, pero la placa no arrancaría sin ellos.
 
-### 7.1 I²C y SMBus
+### 8.1 I²C y SMBus
 
 **I²C** usa solo **dos hilos**: **SDA** (datos) y **SCL** (reloj), con resistencias de *pull‑up*. Es un bus compartido con **direcciones de 7 bits**, admite **varios maestros** y tiene varios modos de velocidad: **100 kHz** (estándar), **400 kHz** (rápido), **1 MHz**, **3,4 MHz** (alta velocidad) y **5 MHz** en modo ultra‑rápido (unidireccional). **SMBus** es un subconjunto más estricto, definido por Intel y Duracell en 1994.
 
 Usos típicos en un PC: **SPD** de los módulos de RAM (identifica el módulo), lectura de **sensores** y gestión de energía, **EDID** de los monitores y las señales SMBus de las ranuras PCI y PCIe.
 
-### 7.2 SPI
+### 8.2 SPI
 
 **SPI** es un bus serie de **cuatro hilos**: **SCLK** (reloj), **MOSI** (maestro → esclavo), **MISO** (esclavo → maestro) y **CS** (selección de chip, una por esclavo). Es *full‑duplex*, no usa direcciones y alcanza decenas de MHz. En un PC se usa para la **memoria flash del BIOS/UEFI** y otros chips de firmware.
 
-### 7.3 LPC y eSPI
+### 8.3 LPC y eSPI
 
 **LPC** (*Low Pin Count*) conectaba al chipset el Super I/O, el controlador embebido (EC) y el TPM; funciona a **33 MHz**. **eSPI** lo está sustituyendo: menos pines, **20–66 MHz**, alimentación de **1,8 V**, modos de datos de 1, 2 o 4 bits y una señal *Alert#*. Además permite compartir la flash SPI con el host. Los chipsets Ryzen de AMD usan eSPI, y el Z170 de Intel puede configurarse con eSPI o con una variante de LPC.
 
@@ -342,14 +370,14 @@ Usos típicos en un PC: **SPD** de los módulos de RAM (identifica el módulo), 
   <figcaption>Comparación entre I²C (dos hilos compartidos) y SPI (una línea CS por esclavo).</figcaption>
 </figure>
 
-### 7.4 Otros enlaces de la placa
+### 8.4 Otros enlaces de la placa
 
-- **HD Audio (HDA)**: bus serie dedicado entre el chipset y el códec de audio (sección 11).
-- **UART / RS‑232**: comunicación serie clásica y consolas de servicio (secciones 13 y 16).
+- **HD Audio (HDA)**: bus serie dedicado entre el chipset y el códec de audio (sección 12).
+- **UART / RS‑232**: comunicación serie clásica y consolas de servicio (secciones 14 y 17).
 
 ---
 
-## 8. Tabla comparativa de buses
+## 9. Tabla comparativa de buses
 
 | Bus | Tipo | Topología | Velocidad máxima de referencia | Uso principal |
 |---|---|---|---|---|
@@ -375,7 +403,7 @@ Los buses anteriores salen de la placa hacia el exterior del equipo mediante con
 
 ---
 
-## 9. Conceptos básicos: qué es un *header* y qué aporta  
+## 10. Conceptos básicos: qué es un *header* y qué aporta  
 
 Un **header** es un conjunto de **pines** en la placa base que permite llevar **señales y alimentación** hacia el **frontal del chasis** o a **brackets** que salen al exterior (sin usar el panel trasero). Suelen estar:
 - **Claveados** (pin ausente o carcasa con muesca) para evitar inversión.
@@ -396,9 +424,9 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 
 ---
 
-## 10. USB en placa: headers y funcionamiento
+## 11. USB en placa: headers y funcionamiento
 
-### 10.1 Recordatorio rápido: cómo funciona USB  
+### 11.1 Recordatorio rápido: cómo funciona USB  
 
 - **USB** (Universal Serial Bus) es un estándar de conexión para la transmisión de datos y energía entre computadoras y periféricos. Su propósito es simplificar la conectividad y sustituir diversos puertos antiguos por uno universal, facilitando el intercambio y alimentación de dispositivos.
 - **Topología**: **host** (PC) → **hubs** → **dispositivos** (árbol). El host **planifica** el bus.
@@ -408,7 +436,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
   <figcaption>Topología de USB: el host con su hub raíz, los hubs y los dispositivos.</figcaption>
 </figure>
 
-### 10.1.1 Tabla comparativa de versiones USB
+### 11.1.1 Tabla comparativa de versiones USB
 
 | Versión USB      | Año de lanzamiento | Velocidad máxima teórica | Nombre comercial      | Retrocompatible | Características principales                 |
 |------------------|-------------------|-------------------------|----------------------|-----------------|---------------------------------------------|
@@ -428,14 +456,14 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
   <figcaption>Conectores USB comparados: Micro-B, Mini-B, Tipo A hembra, Tipo A y Tipo B.</figcaption>
 </figure>
 
-### 10.2 Header **USB 2.0 (9 pines, 2×5 con guía)**
+### 11.2 Header **USB 2.0 (9 pines, 2×5 con guía)**
 **Para qué sirve**: hasta **2 puertos USB 2.0** (dos USB‑A frontales o un USB interno + lector).  
 **Cómo funciona (detalle)**:
 - Cada puerto usa **VBUS (5 V)** con protección de **sobre‑corriente**, par **D+/D−** (diferencial) y **GND**.  
 - La **guía** (pin ausente) evita inversión; el pinout divide el header en **Puerto 1** y **Puerto 2**.  
 - La placa puede **deshabilitar** un puerto tras eventos OC# o en suspensión S3/S5.
 
-### 10.3 Header **USB 3.x (IDC 19/20 pines)** para 2× USB‑A frontales
+### 11.3 Header **USB 3.x (IDC 19/20 pines)** para 2× USB‑A frontales
 **Para qué sirve**: **dos puertos** frontales **SuperSpeed**.  
 **Cómo funciona (detalle)**:
 - Integra **pares diferenciales SuperSpeed** **TX/RX** por puerto y, además, las líneas **USB 2.0** (D+/D−) para compatibilidad.  
@@ -447,7 +475,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
   <figcaption>Header USB 3.x de 19 pines con la función de cada pin.</figcaption>
 </figure>
 
-### 10.4 Header **Type‑E (clave A) de 20 pines** para **USB‑C** frontal
+### 11.4 Header **Type‑E (clave A) de 20 pines** para **USB‑C** frontal
 **Para qué sirve**: llevar **USB‑C** al frontal preservando integridad de señal.  
 **Funcionamiento**:
 - La **clave A** alimenta **1× USB‑C** (SS 10 Gb/s; algunas placas ofrecen **20 Gb/s** Gen 2×2).  
@@ -460,7 +488,7 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 
 **Aclaración**: **Type‑C ≠ USB4**. Para USB4/Alt Modes (DisplayPort/TB), la placa debe incluir **controlador** y, a menudo, **retimers**; si no, el Type‑C frontal será solo USB 3.x/2.0.
 
-### 10.5 **USB Power Delivery (PD)** en puertos frontales
+### 11.5 **USB Power Delivery (PD)** en puertos frontales
 **Conceptos clave**:
 - En USB‑C sin PD, las resistencias **Rp/Rd** en **CC1/CC2** anuncian **corriente** disponible (Default/1,5 A/3 A a 5 V).
 - Con **PD 3.0/3.1**, *Source* y *Sink* negocian **PDOs** (Power Data Objects): **tensión** (5/9/15/20/28/36/48 V) y **corriente**.  
@@ -470,25 +498,25 @@ Un **header** es un conjunto de **pines** en la placa base que permite llevar **
 - Algunas placas necesitan un **conector de alimentación adicional** (consulta el manual) para sostener la carga rápida del **Type‑C frontal**; los modelos actuales anuncian **30 W (PD 3.0)** o hasta **60 W (Quick Charge 4+)**.
 - El módulo de la caja puede incorporar **controlador PD**; otros dependen del **controlador de la placa**.
 
-### 10.6 Longitud de cableado interno y *signal integrity*
+### 11.6 Longitud de cableado interno y *signal integrity*
 - Mantén los latiguillos **cortos**, **apantallados**, con **radio de curvatura** generoso.  
 - Evita **extensores** sin **redriver/retimer** a 10–20 Gb/s.  
 - Asegura **masa de chasis** y **tornillería** para reducir EMI.
 
 ---
 
-## 11. Audio frontal: header **HD Audio/AAFP**
+## 12. Audio frontal: header **HD Audio/AAFP**
 
-### 11.1 Para qué sirve
+### 12.1 Para qué sirve
 Lleva **micrófono** y **auriculares** al frontal con **detección de jack** y **conmutación** entre salidas frontal/trasera.
 
-### 11.2 Cómo funciona (detección de jack, muteo y rutas)
+### 12.2 Cómo funciona (detección de jack, muteo y rutas)
 - El códec (Realtek/otros) usa **PRESENCE#** y líneas **SENSE_SEND/RETURN** para saber si hay **módulo** y **jack insertado**.  
 - Al detectar inserción, el driver puede **mutear** trasera, **redirigir** flujo a frontal o **duplicar** (según ajuste).  
 - Señales de audio salen **AC‑acopladas** (condensadores) y con cuidado de **masas** para reducir **hum**.  
 - Algunos códecs detectan **impedancia** de auriculares y ajustan **ganancia**.
 
-### 11.3 Pinout típico 10‑1 y recomendaciones de montaje  
+### 12.3 Pinout típico 10‑1 y recomendaciones de montaje  
 
   
 
@@ -514,9 +542,9 @@ Lleva **micrófono** y **auriculares** al frontal con **detección de jack** y *
 
 ---
 
-## 12. **Front Panel** (F_PANEL/SYS_PANEL): botones y LEDs del chasis
+## 13. **Front Panel** (F_PANEL/SYS_PANEL): botones y LEDs del chasis
 
-### 12.1 Para qué sirve
+### 13.1 Para qué sirve
 Conectar **PWR SW**, **RESET SW**, **HDD LED**, **PWR LED**, **SPEAKER** (beeper) y, a veces, **CHASSIS INTRUSION** al sistema.
 
 <figure markdown="span">
@@ -524,28 +552,28 @@ Conectar **PWR SW**, **RESET SW**, **HDD LED**, **PWR LED**, **SPEAKER** (be
   <figcaption>Header del panel frontal con los pines etiquetados: SLP, POW LED, ON/OFF, SPK, HLED y RST.</figcaption>
 </figure>
 
-### 12.2 Cómo funciona (lógica, EC/PCH y polaridad)
+### 13.2 Cómo funciona (lógica, EC/PCH y polaridad)
 - **PWRBTN#** y **RESET#** se leen por el **EC** (Embedded Controller) o la **PCH**; un pulso corto ordena **S0↔S5** o **reset**.  
 - **Debounce** por hardware/firmware evita rebotes.  
 - **LEDs**: respetan **polaridad**; si no lucen, invertir. **HDD LED** suele parpadear por actividad SATA/NVMe vía señal del chipset.
 
-### 12.3 Identificación del pin 1 y orden típico
+### 13.3 Identificación del pin 1 y orden típico
 - Header **2×5** con **pin 10** a veces ausente (clave).  
 - El **pin 1** se marca con triángulo/pad cuadrado; consulta el **manual** para el mapeo exacto (varía por fabricante/modelo).
 
 ---
 
-## 13. **COM** (serial RS‑232) en header interno
+## 14. **COM** (serial RS‑232) en header interno
 
-### 13.1 Para qué sirve
+### 14.1 Para qué sirve
 Exponer **DB‑9** en un **bracket** para equipos industriales, consolas serie, UPS, CNC, routers, etc.
 
-### 13.2 Cómo funciona y niveles eléctricos
+### 14.2 Cómo funciona y niveles eléctricos
 - En placas con **Super I/O**, el header entrega **RS‑232** a ±3–15 V (no TTL).  
 - Velocidades típicas **9600–115200 baudios** (8N1).  
 - Señales de ***handshake*** (RTS/CTS, DTR/DSR) permiten control de flujo por hardware.
 
-### 13.3 Pinout común (2×5, 9 pines activos) y correspondencia DB‑9
+### 14.3 Pinout común (2×5, 9 pines activos) y correspondencia DB‑9
 
 | Pin header | Señal RS‑232 | DB‑9 | Descripción |
 |---:|---|---:|---|
@@ -572,19 +600,19 @@ Es la distribución habitual de los headers 2×5 (DTK/Intel). Existe otra (AT/Ev
   <figcaption>Pinout RS-232 del conector DB-9 macho del PC (DTE).</figcaption>
 </figure>
 
-### 13.4 Cableado **recto** vs **null‑modem** y *handshaking*
+### 14.4 Cableado **recto** vs **null‑modem** y *handshaking*
 - **Recto**: PC ↔ equipo DCE (p. ej., módem).  
 - **Null‑modem**: PC ↔ PC (cruza TX/RX y líneas de control).  
 - Si hay **desbordes**, activa **RTS/CTS** o usa **XON/XOFF** (software).
 
 ---
 
-## 14. **LPT/Parallel** (legado) en header 26 pines
+## 15. **LPT/Parallel** (legado) en header 26 pines
 
-### 14.1 Para qué sirve hoy
+### 15.1 Para qué sirve hoy
 Entornos industriales/legado: impresoras antiguas, instrumentación, PLC. Se saca a **DB‑25** mediante **bracket**.
 
-### 14.2 Cómo funciona (registros y líneas de control)
+### 15.2 Cómo funciona (registros y líneas de control)
 - Tres registros clásicos: **DATA (8 bits)**, **STATUS** y **CONTROL**.  
 - Líneas **STROBE**, **BUSY**, **ACK**, **AUTOFEED**, **INIT**, **SELECTIN** coordinan la transferencia.  
 - El header suele ser **2×13** con clave; usa cable plano apantallado.
@@ -596,9 +624,9 @@ Entornos industriales/legado: impresoras antiguas, instrumentación, PLC. Se sac
 
 ---
 
-## 15. **Thunderbolt/USB4 headers** para tarjetas AIC
+## 16. **Thunderbolt/USB4 headers** para tarjetas AIC
 
-### 15.1 Para qué sirven
+### 16.1 Para qué sirven
 Thunderbolt es una interfaz de alta velocidad para la conexión de periféricos. Permite transferir datos, enviar señal de vídeo y suministrar energía a través de un único cable y conector, combinando los protocolos PCI Express y DisplayPort sobre USB‑C (desde Thunderbolt 3).
 Sincronizar y controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER**) **no** transporta los datos de Thunderbolt ni de USB: lleva solo **señales de control** (alimentación, estados de reposo, I²C y reset y despertar de PCIe) entre la placa y la tarjeta.
 
@@ -607,13 +635,13 @@ Sincronizar y controlar una **AIC Thunderbolt/USB4**. El header (**TB_HEADER**) 
   <figcaption>Dos puertos Thunderbolt 3 con conector USB-C y el símbolo del rayo.</figcaption>
 </figure>
 
-### 15.2 Cómo funcionan (no son USB de datos)
+### 16.2 Cómo funcionan (no son USB de datos)
 - La AIC se inserta en **PCIe** y puede enlazar **DisplayPort** desde la GPU para *Alt Mode*.  
 - El header transmite la **alimentación forzada**, los **estados de reposo** (S3, S5 y S0 idle), el **I²C** de gestión y el **reset** y el **despertar** de PCIe; sin AIC, el header **no habilita** USB4 por sí solo.
 - Una tarjeta Thunderbolt 4 como la **ASUS ThunderboltEX 4** usa **PCIe 3.0 x4**, el cable del **TB_HEADER** (14‑1 pines), un cable **USB 2.0** (10‑1 pines), una o dos entradas **Mini DisplayPort IN** (desde la GPU o la salida de vídeo de la placa) y un conector de alimentación **PCIe de 6 pines**.
 - Solo funciona en las placas que tengan ese header y figuren en la lista de modelos compatibles del fabricante, y hay que activar la opción Thunderbolt/USB4 en la BIOS.
 
-### 15.3 Pinout del header TB_HEADER (14‑1 pines) de la tarjeta Thunderbolt 4
+### 16.3 Pinout del header TB_HEADER (14‑1 pines) de la tarjeta Thunderbolt 4
 
 El **TB_HEADER** de 14‑1 pines (13 pines más una clave) es el que usan las tarjetas **Thunderbolt 4**, como la **ASUS ThunderboltEX 4**. Su cable lleva **solo señales de control**: los datos viajan por **PCIe** (la ranura de la tarjeta) y el vídeo, por los cables **DisplayPort IN**.
 
@@ -646,13 +674,13 @@ El **TB_HEADER** de 14‑1 pines (13 pines más una clave) es el que usan las ta
 - Otros fabricantes usan **otras distribuciones**: ASRock emplea un header **TBT de 5 pines** (y un **TB1 de 10 pines** en algunas placas) y Gigabyte lo llama **THB_C**. Comprueba siempre el manual de la placa y usa el cable que acompaña a la tarjeta.
 - Las tarjetas de ASRock llevan tres **jumpers**: **Force_PWR** (2-3 flotante en Intel; 1-2 fuerza el encendido en AMD), **PD_RESET** (1-2 fuerza el reset) y **RTD3** (3-4 sin RTD3).
 
-### 15.4 USB4 v2.0 y requisitos prácticos
+### 16.4 USB4 v2.0 y requisitos prácticos
 USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr hasta 40 Gbps de velocidad con conector USB‑C. Ofrece transmisión simultánea de datos y vídeo, además de carga eléctrica avanzada y compatibilidad con dispositivos Thunderbolt 3/4.
 - Hasta **80 Gb/s** (simétrico) o **120/40** (asimétrico, PAM3).  
 - Requiere **cables** y **retimers** de alta calidad; longitudes internas **mínimas**.
 
 ---
-### 15.5 Tabla comparativa de versiones Thunderbolt y USB4
+### 16.5 Tabla comparativa de versiones Thunderbolt y USB4
 
 | Tecnología       | Año     | Velocidad máxima | Conector                   | Características principales                               |
 |------------------|---------|------------------|----------------------------|-----------------------------------------------------------|
@@ -672,45 +700,19 @@ USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr ha
 
 ---
 
-## 16. Otros headers que exponen funciones al exterior
+## 17. Otros headers que exponen funciones al exterior
 
-### 16.1 **UART debug** (TTL) y *service headers*
+### 17.1 **UART debug** (TTL) y *service headers*
 - Consola de servicio a **3,3 V**; conectar mediante **adaptador USB‑TTL** (no RS‑232 directo).  
 - Útil para diagnóstico/recuperación en placas industriales/ITX.
 
-### 16.2 **Conectores de alimentación auxiliar** para USB‑C PD alto
+### 17.2 **Conectores de alimentación auxiliar** para USB‑C PD alto
 - Algunas placas añaden un **conector de alimentación adicional** para sostener **30–60 W** en el **Type‑C frontal**.
 - Verifica **calibre del cable**, **protecciones** y **límites** del manual.
 
-### 16.3 Conectores de vídeo externos
-
-Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o un dispositivo hasta el monitor, el televisor o el proyector. No forman parte de la placa, pero conviene conocerlos porque condicionan la resolución, la frecuencia de refresco y el cable que hay que usar.
-
-<figure markdown="span">
-  ![Infografía con cinco conectores de vídeo, de VGA a USB-C y Thunderbolt, con el tipo de señal, el uso habitual y las ventajas de cada uno](assets/conectores_video_evolucion.jpg){ style="max-width: 100%; height: auto;" }
-  <figcaption>Evolución de los conectores de vídeo, de VGA a USB-C y Thunderbolt: cambian la calidad de imagen, la comodidad y la velocidad.</figcaption>
-</figure>
-
-| Conector | Tipo de señal | Vídeo | Audio | Uso habitual | Observaciones |
-|---|---|---|---|---|---|
-| **VGA** | Analógica (RGB) | Sí | No (cable aparte) | Monitores y proyectores antiguos | Conector de 15 pines en tres filas. La calidad baja al subir la resolución. En desuso. |
-| **DVI** | Digital (DVI‑D), analógica (DVI‑A) o ambas (DVI‑I) | Sí | No | Monitores de transición | Solo transporta vídeo. Las versiones *single‑link* y *dual‑link* tienen distinto ancho de banda. |
-| **HDMI** | Digital | Sí | Sí, en el mismo cable | Televisores, monitores y consolas | Versiones posteriores amplían el ancho de banda. HDMI 2.1 llega a 48 Gbps. |
-| **DisplayPort** | Digital, sin conversión | Sí | Sí | Monitores y equipos modernos, juegos y trabajo profesional | DisplayPort 2.1 (UHBR20) llega a 80 Gbps. El Mini DisplayPort tiene el mismo funcionamiento con otro tamaño de conector. |
-| **USB‑C** (DP Alt Mode o Thunderbolt) | Digital, empaquetada en USB | Sí | Sí | Portátiles, tabletas y monitores USB‑C | El mismo conector puede llevar DisplayPort nativo (DP Alt Mode) o tunelizado (Thunderbolt/USB4). |
-
-**Diferencias clave**
-
-- **Analógico frente a digital:** VGA transmite una señal analógica que hay que muestrear. Los demás conectores transmiten la señal en digital, por lo que no hay pérdida de calidad en el cable.
-- **Vídeo solo frente a vídeo y audio:** DVI y VGA llevan solo imagen. HDMI, DisplayPort y USB‑C pueden llevar también el sonido por el mismo cable.
-- **Conector frente a protocolo:** el USB‑C es la forma del conector. Lo que transporta depende de su controlador: puede ser solo USB, DisplayPort nativo o Thunderbolt. Por eso un conector USB‑C no garantiza salida de vídeo.
-- **Thunderbolt y DisplayPort:** Thunderbolt 1 y 2 usan Mini DisplayPort. Thunderbolt 3, 4 y 5 usan USB‑C y combinan PCIe y DisplayPort (ver apartado 15).
-
-> Antes de comprar un cable o un monitor, comprueba qué salidas tiene la gráfica o el equipo y qué entradas tiene el monitor. Un cable no convierte una salida en otra: para pasar de DisplayPort a HDMI hace falta un adaptador activo.
-
 ---
 
-## 17. Procedimiento de montaje y verificación
+## 18. Procedimiento de montaje y verificación
 
 1. **Planifica**: identifica *F_USB*, *TYPE‑E*, *AAFP*, *F_PANEL*, *COM*, *LPT*, *TB_HEADER*.  
 2. **Orientación**: localiza **pin 1** o **clave** en header y conector.  
@@ -727,7 +729,7 @@ Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o 
 
 ---
 
-## 18. Diagnóstico de fallos frecuentes
+## 19. Diagnóstico de fallos frecuentes
 
 - **USB frontal lento/no detecta SuperSpeed**: cable Type‑E incorrecto, conectado a header **Gen 1**; ruta larga; falta **retimer**; interferencias/masa floja.  
 - **USB‑C frontal sin PD/altos W**: falta **alimentación auxiliar** o cable no **E‑Marker**; límite de la placa.
@@ -738,7 +740,7 @@ Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o 
 
 ---
 
-## 19. Resumen final (ideas clave)
+## 20. Resumen final (ideas clave)
 
 - Un **bus** es un conjunto de líneas y reglas para mover datos; se caracteriza por su **ancho**, su **velocidad**, su **codificación** y su **topología**.
 - Los PC actuales usan **enlaces serie punto a punto** (PCIe, DMI, SATA, USB): la CPU conecta directamente la memoria, la GPU y los SSD más rápidos, y el **chipset** concentra el resto de la E/S.
@@ -748,7 +750,7 @@ Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o 
 
 ---
 
-## 20. Créditos de imágenes
+## 21. Créditos de imágenes
 
 Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando la atribución que exige cada licencia. Los esquemas indicados como propios se han elaborado para este tema a partir de la documentación pública de Intel, AMD y de las especificaciones citadas.
 
@@ -774,7 +776,7 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 
 ---
 
-## 21. Fuentes consultadas
+## 22. Fuentes consultadas
 
 - [PCI Express (Wikipedia)](https://en.wikipedia.org/wiki/PCI_Express): versiones, velocidades y terminología.
 - [Serial ATA (Wikipedia)](https://en.wikipedia.org/wiki/Serial_ATA): revisiones, conectores y SATA Express.
