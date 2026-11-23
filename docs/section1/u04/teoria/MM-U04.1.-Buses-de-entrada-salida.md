@@ -682,6 +682,32 @@ USB4 es el estándar más moderno de USB, basado en Thunderbolt 3 para lograr ha
 - Algunas placas añaden un **conector de alimentación adicional** para sostener **30–60 W** en el **Type‑C frontal**.
 - Verifica **calibre del cable**, **protecciones** y **límites** del manual.
 
+### 16.3 Conectores de vídeo externos
+
+Los conectores de vídeo llevan la señal desde la tarjeta gráfica, la placa o un dispositivo hasta el monitor, el televisor o el proyector. No forman parte de la placa, pero conviene conocerlos porque condicionan la resolución, la frecuencia de refresco y el cable que hay que usar.
+
+<figure markdown="span">
+  ![Infografía con cinco conectores de vídeo, de VGA a USB-C y Thunderbolt, con el tipo de señal, el uso habitual y las ventajas de cada uno](assets/conectores_video_evolucion.jpg){ style="max-width: 100%; height: auto;" }
+  <figcaption>Evolución de los conectores de vídeo, de VGA a USB-C y Thunderbolt: cambian la calidad de imagen, la comodidad y la velocidad.</figcaption>
+</figure>
+
+| Conector | Tipo de señal | Vídeo | Audio | Uso habitual | Observaciones |
+|---|---|---|---|---|---|
+| **VGA** | Analógica (RGB) | Sí | No (cable aparte) | Monitores y proyectores antiguos | Conector de 15 pines en tres filas. La calidad baja al subir la resolución. En desuso. |
+| **DVI** | Digital (DVI‑D), analógica (DVI‑A) o ambas (DVI‑I) | Sí | No | Monitores de transición | Solo transporta vídeo. Las versiones *single‑link* y *dual‑link* tienen distinto ancho de banda. |
+| **HDMI** | Digital | Sí | Sí, en el mismo cable | Televisores, monitores y consolas | Versiones posteriores amplían el ancho de banda. HDMI 2.1 llega a 48 Gbps. |
+| **DisplayPort** | Digital, sin conversión | Sí | Sí | Monitores y equipos modernos, juegos y trabajo profesional | DisplayPort 2.1 (UHBR20) llega a 80 Gbps. El Mini DisplayPort tiene el mismo funcionamiento con otro tamaño de conector. |
+| **USB‑C** (DP Alt Mode o Thunderbolt) | Digital, empaquetada en USB | Sí | Sí | Portátiles, tabletas y monitores USB‑C | El mismo conector puede llevar DisplayPort nativo (DP Alt Mode) o tunelizado (Thunderbolt/USB4). |
+
+**Diferencias clave**
+
+- **Analógico frente a digital:** VGA transmite una señal analógica que hay que muestrear. Los demás conectores transmiten la señal en digital, por lo que no hay pérdida de calidad en el cable.
+- **Vídeo solo frente a vídeo y audio:** DVI y VGA llevan solo imagen. HDMI, DisplayPort y USB‑C pueden llevar también el sonido por el mismo cable.
+- **Conector frente a protocolo:** el USB‑C es la forma del conector. Lo que transporta depende de su controlador: puede ser solo USB, DisplayPort nativo o Thunderbolt. Por eso un conector USB‑C no garantiza salida de vídeo.
+- **Thunderbolt y DisplayPort:** Thunderbolt 1 y 2 usan Mini DisplayPort. Thunderbolt 3, 4 y 5 usan USB‑C y combinan PCIe y DisplayPort (ver apartado 15).
+
+> Antes de comprar un cable o un monitor, comprueba qué salidas tiene la gráfica o el equipo y qué entradas tiene el monitor. Un cable no convierte una salida en otra: para pasar de DisplayPort a HDMI hace falta un adaptador activo.
+
 ---
 
 ## 17. Procedimiento de montaje y verificación
@@ -736,6 +762,7 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 | `com_header_cableado.svg` | [PC MB-COMport wiring](https://commons.wikimedia.org/wiki/File:PC_MB-COMport_wiring.svg) | Hans Haase | CC BY-SA 3.0 |
 | `thunderbolt3_puertos.jpg` | [Thunderbolt 3 interface USB-C ports](https://commons.wikimedia.org/wiki/File:Thunderbolt_3_interface_USB-C_ports.jpg) | Amin | CC BY-SA 4.0 |
 | `usb3_header_pinout.svg`, `aafp_pinout.svg` | Esquemas propios basados en la documentación de Intel | Autor del curso | — |
+| `conectores_video_evolucion.jpg` | Infografía «Así evolucionaron los conectores de vídeo» (de VGA a USB-C) | Fuente original no identificada; pendiente de verificar autoría y licencia | Pendiente de verificar |
 | `thunderbolt_header_pinout.svg`, `thunderbolt_header_pinout_slide.svg` | Esquema propio basado en los manuales de ASUS (PRIME Z590-P y ROG STRIX B550-F GAMING WIFI II, header TB_HEADER) | Autor del curso | — |
 | `pci_pcie_ranuras.jpg` | [PCI und PCIe Slots](https://commons.wikimedia.org/wiki/File:PCI_und_PCIe_Slots.jpg) | Smial | CC BY-SA 2.0 DE |
 | `pch_ranuras_pcie.jpg` | [GigabyteH170-HD3-PCH-and-Slots](https://commons.wikimedia.org/wiki/File:GigabyteH170-HD3-PCH-and-Slots.jpg) | TheStriker | CC BY-SA 4.0 |
@@ -772,5 +799,9 @@ Las fotografías y esquemas proceden de Wikimedia Commons y se usan respetando l
 - [Conventional PCI (Wikipedia)](https://en.wikipedia.org/wiki/Conventional_PCI): ancho de banda del bus PCI.
 - [Accelerated Graphics Port (Wikipedia)](https://en.wikipedia.org/wiki/Accelerated_Graphics_Port): velocidades y retirada de AGP.
 - [Industry Standard Architecture (Wikipedia)](https://en.wikipedia.org/wiki/Industry_Standard_Architecture): ancho de banda de ISA.
+- [DVI vs HDMI: qué son y cuáles son las diferencias (Xataka)](https://www.xataka.com/basics/dvi-vs-hdmi-que-cuales-diferencias): variantes de DVI y uso de HDMI.
+- [HDMI vs DisplayPort vs DVI vs VGA: conectores de vídeo bajo la lupa (Guía Hardware)](https://www.guiahardware.es/hdmi-vs-dsplayport-vs-dvi-vs-vga-conectores-de-video-bajo-la-lupa/): comparativa de conectores de vídeo.
+- [A Guide to DisplayPort 2.0 (TFTCentral)](https://tftcentral.co.uk/articles/a-guide-to-displayport-2-0-certifications-standards-cables-and-areas-of-confusion-and-concern): velocidades y certificación de DisplayPort 2.x.
+- [Introducción al USB-C y DP Alt Mode (BenQ)](https://www.benq.eu/es-es/knowledge-center/knowledge/usb-c-introduction-what-is-dp-alt-mode.html): vídeo por USB-C frente a Thunderbolt.
 
-**Fecha de actualización:** 10/11/2026
+**Fecha de actualización:** 23/11/2026
